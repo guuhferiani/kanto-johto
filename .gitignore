@@ -31,6 +31,8 @@ build/
 *.ddump
 .idea/
 porymap.project.cfg
+porymap-windows/
+porymap*.zip
 .vscode/
 *.ss1
 *.ss2
