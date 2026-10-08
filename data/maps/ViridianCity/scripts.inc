@@ -83,11 +83,11 @@ ViridianCity_EventScripts_TeamRocketRumor::
 	end
 
 ViridianCity_Text_InvestigatingTeamRocket:
-	.string "Officer: We're investigating a\n"
-	.string "rumor that Team Rocket was seen\l"
-	.string "in this area.\p"
-	.string "We can't let anyone through until\n"
-	.string "we've completed our search.$"
+	.string "Policial: Estamos investigando o\n"
+	.string "rumor de que a Equipe Rocket foi vista\l"
+	.string "por esta área.\p"
+	.string "Não podemos deixar ninguém passar até\n"
+	.string "concluirmos nossa busca.$"
 
 ViridianCity_EventScripts_ReturnJennyToPosition1::
 	applymovement LOCALID_OFFICER, Movement_JennyStepsRight
@@ -120,37 +120,37 @@ ViridianCity_EventScript_CitySign::
 	end
 
 ViridianCity_Text_CitySign::
-    .string "Viridian City \n"
-    .string "The Eternally Green Paradise$"
+    .string "Viridian City\n"
+    .string "O Paraíso Eternamente Verde$"
 
 ViridianCity_EventScript_GymSign::
 	msgbox ViridianCity_Text_GymSign, MSGBOX_SIGN
 	end
 
 ViridianCity_Text_GymSign::
-    .string "Viridian City Pokémon Gym$"
+    .string "Ginásio Pokémon de Viridian City$"
 
 ViridianCity_EventScript_TrainerTips1::
 	msgbox ViridianCity_Text_CatchMonsForEasierBattles, MSGBOX_SIGN
 	end
 
 ViridianCity_Text_CatchMonsForEasierBattles::
-    .string "Trainer Tips:\p"
-    .string "Catch Pokémon and expand your\n"
-    .string "collection.\p"
-    .string "The more you have, the easier it\n"
-    .string "is to battle.$"
+    .string "Dicas para Treinadores:\p"
+    .string "Capture Pokémon e amplie a\n"
+    .string "sua coleção.\p"
+    .string "Quanto mais você tiver, mais fácil\n"
+    .string "será vencer batalhas.$"
 
 ViridianCity_EventScript_TrainerTips2::
 	msgbox ViridianCity_Text_MovesLimitedByPP, MSGBOX_SIGN
 	end
 
 ViridianCity_Text_MovesLimitedByPP::
-    .string "Trainer Tips:\p"
-    .string "The battle moves of Pokémon are\n"
-    .string "limited by their Power Points (PP).\p"
-    .string "To replenish PP, rest your tired\n"
-    .string "Pokémon at a Pokémon Center.$"
+    .string "Dicas para Treinadores:\p"
+    .string "Os golpes dos Pokémon são limitados\n"
+    .string "pelos seus Pontos de Poder (PP).\p"
+    .string "Para restaurar os PP, descanse seus\n"
+    .string "Pokémon em um Centro Pokémon.$"
 
 ViridianCity_EventScript_GymDoorLocked::
 	lockall
@@ -166,7 +166,8 @@ ViridianCity_EventScript_GymDoorLocked::
 	end
 
 ViridianCity_Text_GymDoorsAreLocked::
-    .string "Viridian Gym's doors are locked…$"
+    .string "As portas do Ginásio de Viridian\n"
+    .string "estão trancadas…$"
 
 ViridianCity_Movement_StepAside::
 	walk_right
@@ -183,8 +184,8 @@ ViridianCity_EventScript_OldMan::
 	end
 
 ViridianCity_Text_GymClosedWonderWhoLeaderIs::
-    .string "This Pokémon Gym is always closed.\p"
-    .string "I wonder who the leader is?$"
+    .string "Este Ginásio Pokémon está sempre fechado.\p"
+    .string "Quem será o Líder daqui?$"
 
 ViridianCity_EventScript_OldManGymLeaderReturned::
 	msgbox ViridianCity_Text_ViridiansGymLeaderReturned, MSGBOX_DEFAULT
@@ -192,7 +193,7 @@ ViridianCity_EventScript_OldManGymLeaderReturned::
 	end
 
 ViridianCity_Text_ViridiansGymLeaderReturned::
-    .string "Virdian Gym's leader returned!$"
+    .string "O Líder do Ginásio de Viridian voltou!$"
 
 ViridianCity_EventScript_Boy::
 	lock
@@ -202,10 +203,10 @@ ViridianCity_EventScript_Boy::
 	end
 
 ViridianCity_Text_CanCarryMonsAnywhere::
-    .string "Those Poké Balls at your waist!\n"
-    .string "You have Pokémon, don't you?\p"
-    .string "It's great that you can carry and\n"
-    .string "use Pokémon anytime, anywhere.$"
+    .string "Essas Pokébolas na sua cintura!\n"
+    .string "Você tem Pokémon, não tem?\p"
+    .string "É ótimo poder levar e usar seus\n"
+    .string "Pokémon a qualquer hora, em qualquer lugar.$"
 
 ViridianCity_EventScript_Woman::
 	lock
@@ -215,10 +216,10 @@ ViridianCity_EventScript_Woman::
 	end
 
 ViridianCity_Text_GoShoppingInPewterOccasionally::
-    .string "I go shopping in Pewter City\n"
-    .string "occasionally.\p"
-    .string "I have to take the winding trail in\n"
-    .string "Viridian Forest when I go.$"
+    .string "De vez em quando vou fazer compras\n"
+    .string "em Pewter City.\p"
+    .string "Preciso atravessar a trilha sinuosa\n"
+    .string "da Floresta de Viridian quando vou.$"
 
 ViridianCity_EventScript_OldMan2::
 	lock
@@ -228,13 +229,12 @@ ViridianCity_EventScript_OldMan2::
 	end
 
 ViridianCity_Text_UsedToGetGrumpy:
-	.string "I used to get very grumpy when\n"
-	.string "I didn't my coffee.\p"
-	.string "I'd block the road and everything!\p"
-	.string "It was a whole thing...\p"
-	.string "So my granddaughter made me give up\n"
-	.string "the stuff.\p"
-	.string "Now I get refreshed by taking walks!$"
+	.string "Eu costumava ficar muito ranzinza\n"
+	.string "quando não tomava o meu café.\p"
+	.string "Eu bloqueava a estrada e tudo mais!\p"
+	.string "Era uma confusão daquelas...\p"
+	.string "Por isso, minha neta me fez largar o café.\p"
+	.string "Agora eu me sinto renovado fazendo caminhadas!$"
 
 ViridianCity_EventScript_Youngster::
 	lock
@@ -247,8 +247,8 @@ ViridianCity_EventScript_Youngster::
 	end
 
 ViridianCity_Text_WantToKnowAboutCaterpillarMons::
-    .string "You want to know about the two\n"
-    .string "kinds of caterpillar Pokémon?$"
+    .string "Quer saber sobre os dois tipos de\n"
+    .string "Pokémon lagarta?$"
 
 ViridianCity_EventScript_YoungsterExplainCaterpillars::
 	lock
@@ -258,10 +258,10 @@ ViridianCity_EventScript_YoungsterExplainCaterpillars::
 	end
 
 ViridianCity_Text_ExplainCaterpieWeedle::
-    .string "Caterpie has no poison,\n"
-    .string "but Weedle does.\p"
-    .string "Watch that your Pokémon aren't\n"
-    .string "stabbed by Weedle's Poison Sting.$"
+    .string "Caterpie não tem veneno,\n"
+    .string "mas o Weedle tem.\p"
+    .string "Cuidado para seu Pokémon não ser ferroado\n"
+    .string "pela Picada Venenosa do Weedle.$"
 
 ViridianCity_EventScript_YoungsterDeclineExplanation::
 	msgbox ViridianCity_Text_OhOkayThen, MSGBOX_DEFAULT
@@ -269,7 +269,7 @@ ViridianCity_EventScript_YoungsterDeclineExplanation::
 	end
 
 ViridianCity_Text_OhOkayThen::
-    .string "Oh, okay then!$"
+    .string "Ah, tudo bem então!$"
 
 ViridianCity_FindItem_Potion::
 	finditem ITEM_POTION, 1
@@ -283,8 +283,8 @@ ViridianCity_EventScript_BerryTreeGuy::
 	end
 
 ViridianCity_Text_PlantingBerries::
-	.string "It looks like a Pokémon was digging\n"
-	.string "in the ground over here.\p"
-	.string "The soil is nice and soft...\n"
-	.string "I should plant something there!$"
+	.string "Parece que um Pokémon andou cavando\n"
+	.string "na terra por aqui.\p"
+	.string "O solo está bem fofinho...\n"
+	.string "Eu devia plantar alguma Fruta aqui!$"
 

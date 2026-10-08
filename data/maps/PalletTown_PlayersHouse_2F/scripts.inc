@@ -251,28 +251,28 @@ MomGoesDownstairs:
 	step_end
 
 PalletTown_PlayersHouse_2F_Text_WeHaveAVisitor:
-	.string "Mom: {PLAYER}! I should have\n"
-	.string "known I'd find you playing\l"
-	.string "games up here again.\p"
-	.string "You should head downstairs.\n"
-	.string "Someone is here to see you!$"
+	.string "Mãe: {PLAYER}! Eu já devia saber\n"
+	.string "que encontraria você jogando\l"
+	.string "videogame aqui de novo.\p"
+	.string "Você deveria descer.\n"
+	.string "Alguém está aqui para te ver!$"
 
 PalletTown_PlayersHouse_2F_Text_LookAtTheTime:
-	.string "Mom: {PLAYER}! There you are!\p"
-	.string "Have you been playing games\n"
-	.string "up here this whole time?\p"
-	.string "Weren't you supposed to meet\n"
-	.string "Professor Oak at his lab today?\p"
-	.string "Do you even know what time it is?$"
+	.string "Mãe: {PLAYER}! Aí está você!\p"
+	.string "Você ficou jogando videogame\n"
+	.string "aqui em cima esse tempo todo?\p"
+	.string "Você não deveria se encontrar com o\n"
+	.string "Professor Carvalho no laboratório hoje?\p"
+	.string "Você sabe que horas são?$"
 
 PalletTown_PlayersHouse_2F_Text_GoingToBeLate:
-	.string "You should hurry over to the lab,\n"
-	.string "you're going to miss the Professor!$"
+	.string "É melhor se apressar até o laboratório,\n"
+	.string "senão você vai perder o Professor!$"
 
 PalletTown_PlayersHouse_2F_Text_FoldedYourLaundry:
-	.string "Oh! If you want to change your\n"
-	.string "clothes before you go out, \l"
-	.string "I put your laundry in your dresser.$"
+	.string "Ah! Se quiser trocar de roupa\n"
+	.string "antes de sair de casa,\l"
+	.string "eu guardei suas roupas na cômoda.$"
 
 
 PlayersHouse_2F_EventScript_PC::
@@ -314,8 +314,8 @@ PlayersHouse_2F_EventScript_Console::
 	end
 
 PlayersHouse_2F_Text_Console:
-	.string "It's an old game console.\p"
-	.string "Retro-gaming is all the rage!$"
+	.string "É um videogame antigo.\p"
+	.string "Jogos retrô estão com tudo!$"
 
 PlayersHouse_2F_EventScript_ChangeClock::
 	lock
@@ -327,8 +327,8 @@ PlayersHouse_2F_EventScript_ChangeClock::
 	end
 	
 PlayersHouse_2F_ChangeClockText:
-	.string "Times are changing.\n"
-	.string "Let's change the time.$"
+	.string "Os tempos estão mudando.\n"
+	.string "Vamos ajustar as horas.$"
 	return
 
 PlayersHouse_2F_EventScript_CheckWallClock2::
@@ -342,8 +342,8 @@ PlayersHouse_2F_EventScript_CheckWallClock2::
 	end
 	
 PlayersHouse_2F_BeautifulView:
-	.string "Pokémon play in the forest.\n"
-	.string "You smile and check the time.$"
+	.string "Pokémon brincam na floresta.\n"
+	.string "Você sorri e confere as horas.$"
 	return
 	
 PlayersHouse_2F_WelcomeNewPlayers::
@@ -352,16 +352,15 @@ PlayersHouse_2F_WelcomeNewPlayers::
 	end
 	
 PlayersHouse_2F_WelcomeNewPlayersText:	
-	.string "Press START to access the Main Menu.\n"
-	.string "Save often as you advance your story.\p"
-	.string "To check the time, you may look out\n"
-	.string "the window on the right. If you find\l"
-	.string "a need to change the time, inspect\l"
-	.string "the magic left curtain.\p"
-	.string "You may change your clothes using\n"
-	.string "the dresser left of your shelves.\p"
-	.string "Finally, sit at your desk any time\n"
-	.string "to enjoy your own PC!$"
+	.string "Aperte START para abrir o Menu.\n"
+	.string "Salve com frequência durante o jogo.\p"
+	.string "Para ver as horas, olhe pela janela\n"
+	.string "à direita. Se precisar ajustar a hora,\l"
+	.string "inspecione a cortina mágica à esquerda.\p"
+	.string "Você pode trocar de roupa usando\n"
+	.string "a cômoda ao lado da estante.\p"
+	.string "Por fim, sente-se na mesa quando quiser\n"
+	.string "para aproveitar o seu próprio PC!$"
 	return
 
 PlayersHouse_2F_LetterFromDad::
@@ -380,66 +379,60 @@ LetterOnTower_PlayerAnsweredNo::
 	end
 
 Text_LetterOnTower:
-	.string "An envelope is taped to the side\n"
-	.string "of your computer tower. It reads\l"
-	.string "'From Dad' on the outside.\p"
-	.string "Would you like to read it?$"
+	.string "Há um envelope colado na lateral\n"
+	.string "do seu computador. Está escrito\l"
+	.string "'Do Papai' do lado de fora.\p"
+	.string "Gostaria de ler?$"
 
 Text_HappyBirthdayLetter:
-	.string "Dad: Hey {PLAYER}!\n"
-	.string "Happy Birthday, kiddo!\p"
-	.string "I can't believe you're old enough to\n"
-	.string "go out on your own Pokémon Journey.\p"
-	.string "It's a scary and thrilling experience.\p"
-	.string "I'm very sorry that due to my business\n"
-	.string "trip in Hoenn I can't be there with\l"
-	.string "your mother to send you off.\p"
-	.string "I left some items for you with Mom and\n"
-	.string "she will put them in your PC storage in\l"
-	.string "time for you to grab before you leave.\p"
-	.string "These items are great when you are\n"
-	.string "first starting out. My Mom gave them\l"
-	.string "to me when I tried to get into Pokémon\l"
-	.string "training at 10 years old.\p"
-	.string "During my journey I found two golden\n"
-	.string "Nuggets and kept them for a rainy day\l"
-	.string "if I was short on money and potions.\p"
-	.string "I've held onto them all these years and\n"
-	.string "now I pass them on to you for your\l"
-	.string "rainy days.\p"
-	.string "Treat your Pokémon with love and\n"
-	.string "kindness for Pokémon will return what\l"
-	.string "they are given.\p"
-	.string "Camping is fun until your clothes get\n"
-	.string "wet, so pick your camping grounds\l"
-	.string "carefully and always use the rain\l"
-	.string "cover on your tent.\p"
-	.string "Hold true to your friends and help\n"
-	.string "others who may be without friends of\l"
-	.string "their own.\p"
-	.string "There will be unexpected things you\n"
-	.string "need to overcome along your journey but\l"
-	.string "be patient with yourself. Give yourself\l"
-	.string "grace as you learn new things.\p" 
-	.string "You cannot control what others will do\n"
-	.string "but you are responsible for how you\l"
-	.string "choose to respond.\p"
-	.string "Don’t waste your time bearing grudges,\n"
-	.string "and live life with love in your heart.\p"
-	.string "A destination is a good goal to have,\n"
-	.string "but don’t forget to enjoy the journey.\p"
-	.string "Never give up chasing your dreams.\p"
-	.string "Understand that your dreams may change,\n"
-	.string "and that’s okay.\p"
-	.string "I am so proud of the person you have\n"
-	.string "become and I know you will go far.\p"
-	.string "With Love,\n"
-	.string "Dad\p"
-	.string "P.S\n"
-	.string "I hope you enjoy the cookies!\p"
-	.string "They are a Hoenn speciality. I got the\n"
-	.string "recipe from a very kind woman when I\l"
-	.string "went hiking up by Lavaridge Town.$"
+	.string "Papai: Olá, {PLAYER}!\n"
+	.string "Feliz Aniversário, filhote!\p"
+	.string "Nem acredito que você já tem idade para\n"
+	.string "sair em sua própria Jornada Pokémon.\p"
+	.string "É uma experiência assustadora e empolgante.\p"
+	.string "Sinto muito que, por conta do meu trabalho\n"
+	.string "em Hoenn, eu não possa estar aí\l"
+	.string "com a sua mãe para a sua despedida.\p"
+	.string "Deixei alguns itens para você com a Mamãe,\n"
+	.string "ela vai colocá-los no PC do seu quarto\l"
+	.string "a tempo de você pegá-los antes de partir.\p"
+	.string "Esses itens são ótimos no começo.\n"
+	.string "Minha mãe me deu eles quando comecei\l"
+	.string "a treinar Pokémon aos 10 anos.\p"
+	.string "Na minha jornada, encontrei duas Pepitas\n"
+	.string "de ouro e guardei para dias difíceis,\l"
+	.string "se faltasse dinheiro para poções.\p"
+	.string "Guardei por todos esses anos e agora\n"
+	.string "passo para você, para seus dias difíceis.\p"
+	.string "Trate seus Pokémon com amor e carinho,\n"
+	.string "pois eles retribuem o que recebem.\p"
+	.string "Acampar é divertido até as roupas\n"
+	.string "molharem, então escolha bem o lugar\l"
+	.string "e use sempre a lona de chuva da barraca.\p"
+	.string "Seja leal aos seus amigos e ajude\n"
+	.string "aqueles que não tiverem amigos por perto.\p"
+	.string "Haverá desafios inesperados na sua\n"
+	.string "jornada, mas seja paciente consigo mesmo.\l"
+	.string "Tenha calma enquanto aprende coisas novas.\p"
+	.string "Você não pode controlar o que os outros\n"
+	.string "fazem, mas é responsável por como\l"
+	.string "escolhe reagir.\p"
+	.string "Não perca tempo guardando rancor,\n"
+	.string "e viva a vida com amor no coração.\p"
+	.string "O destino é uma boa meta, mas não\n"
+	.string "se esqueça de aproveitar o caminho.\p"
+	.string "Nunca desista de perseguir seus sonhos.\p"
+	.string "Entenda que sonhos podem mudar,\n"
+	.string "e tudo bem se isso acontecer.\p"
+	.string "Tenho muito orgulho da pessoa que você\n"
+	.string "se tornou e sei que você irá longe.\p"
+	.string "Com amor,\n"
+	.string "Papai\p"
+	.string "P.S.\n"
+	.string "Espero que goste dos biscoitos!\p"
+	.string "Eles são uma especialidade de Hoenn.\n"
+	.string "Peguei a receita com uma senhora muito gentil\l"
+	.string "quando fiz trilha perto de Lavaridge Town.$"
 	
 Text_NoTimeToRead:
-	.string "Not now, you have places to be!$"
+	.string "Agora não, você tem lugares para ir!$"

@@ -27,9 +27,9 @@ PlayersHouse_1F_EventScript_BillVisiting::
 	end
 
 PalletTown_PlayersHouse_1F_Text_BillVisiting::
-	.string "Mom: I didn't know you knew\n"
-	.string "the famous PokéManiac, honey!\p"
-	.string "He's such a gentleman!$"
+	.string "Mãe: Eu não sabia que você conhecia\n"
+	.string "o famoso PokéManíaco, querido!\p"
+	.string "Ele é um verdadeiro cavalheiro!$"
 
 PlayersHouse_1F_EventScript_AnotherAdventure::
 	msgbox PalletTown_PlayersHouse_1F_Text_AnotherAdventureAwaitsHuzzah, MSGBOX_DEFAULT
@@ -38,9 +38,9 @@ PlayersHouse_1F_EventScript_AnotherAdventure::
 	end
 
 PalletTown_PlayersHouse_1F_Text_AnotherAdventureAwaitsHuzzah:
-	.string "Strange stones? Hidden potential?\p"
-	.string "The adventures never stop for you\n" 
-	.string "Pokémon trainers!$"
+	.string "Pedras estranhas? Potencial oculto?\p"
+	.string "As aventuras nunca acabam para\n" 
+	.string "vocês, Treinadores Pokémon!$"
 
 PalletTown_PlayersHouse_1F_EventScript_BetterHurry::
 	msgbox PalletTown_PlayersHouse_1F_Text_BetterHurry, MSGBOX_DEFAULT
@@ -49,29 +49,29 @@ PalletTown_PlayersHouse_1F_EventScript_BetterHurry::
 	end
 
 PalletTown_PlayersHouse_1F_Text_BetterHurry:
-	.string "Mom: You don't want to miss\n"
-	.string "Professor Oak!\p"
-	.string "You better hurry!$"
+	.string "Mãe: Você não vai querer perder o\n"
+	.string "Professor Carvalho!\p"
+	.string "É melhor se apressar!$"
 
 PlayersHouse_1F_Text_TheresAMovieOnTV:
-    .string "There's a movie on TV.\n"
-    .string "Four boys are walking on railroad\l"
-    .string "tracks.\p"
-    .string "…I better go, too.$"
+    .string "Tem um filme passando na TV.\n"
+    .string "Quatro garotos caminham sobre\l"
+    .string "trilhos de trem.\p"
+    .string "…É melhor eu ir também.$"
 
 EventScript_RunningShoesManual::
 	msgbox PlayersHouse_1F_Text_RunningShoesManual, MSGBOX_SIGN
 	end
 	
 PlayersHouse_1F_Text_RunningShoesManual:
-	.string "It's the instruction booklet for the\n"
-	.string "Running Shoes.\p"
-	.string "“Press the B Button to run while\n"
-	.string "wearing your Running Shoes.\p"
-	.string "Lace up your Running Shoes and hit\n"
-	.string "the road running!\p"
-	.string "If you need to slow down, you can\n"
-	.string "do that too by holding A Button!”$"
+	.string "É o manual de instruções do\n"
+	.string "Tênis de Corrida.\p"
+	.string "“Pressione o Botão B para correr\n"
+	.string "enquanto calça seu Tênis de Corrida.\p"
+	.string "Amarre seus sapatos e caia na\n"
+	.string "estrada correndo!\p"
+	.string "Se precisar andar mais devagar,\n"
+	.string "segure o Botão A!”$"
 
 PlayersHouse_1F_EventScript_PokenavScene::
 	msgbox PalletTown_Text_DidYouMeetOak, MSGBOX_DEFAULT
@@ -103,13 +103,13 @@ PalletTown_PlayersHouse_1F_EventScript_MomHeal::
 	end
 
 PalletTown_PlayersHouse_1F_Text_YouShouldTakeQuickRest::
-    .string "Mom: {PLAYER}!\n"
-    .string "You should take a quick rest.$"
+    .string "Mãe: {PLAYER}!\n"
+    .string "Você devia descansar um pouco.$"
 
 PalletTown_PlayersHouse_1F_Text_LookingGreatTakeCare::
-    .string "Mom: Oh, good! You and your\n"
-    .string "Pokémon are looking great.\l"
-    .string "Take care now!$"
+    .string "Mãe: Ah, que bom! Você e seus\n"
+    .string "Pokémon estão ótimos.\l"
+    .string "Se cuide por aí!$"
 
 PlayersHouse_1F_EventScript_GameclearTrigger1::
 	setvar VAR_TEMP_1, 1
@@ -155,34 +155,31 @@ PlayersHouse_1F_EventScriptChallengeUnlocked::
 	return
 
 PlayersHouse_1F_Text_SomethingAmazing::
-	.string "Hey, {PLAYER}!\n"
-	.string "I've discovered something amazing!\p"
-	.string "I was doing some research for my\n"
-	.string "Pokémon collection, when one of my\l"
-	.string "scanners picked up a strange reading.\p"
-	.string "It seems that some Pokémon may have\n"
-	.string "some hidden potential that we haven't\l"
-	.string "seen yet.\p"
-	.string "And this reading seems to be the key!\p"
-	.string "See, I found the source of the reading\n"
-	.string "near the Sea Cottage\p"
-	.string "It was a strange stone I'd never seen\n"
-	.string "before!\p"
-	.string "I brought it back to my lab, and I built\n"
-	.string "a device to draw out its power!\p"
-	.string "I want you to have it!$"
+	.string "Ei, {PLAYER}!\n"
+	.string "Eu descobri algo impressionante!\p"
+	.string "Eu estava pesquisando para a minha\n"
+	.string "coleção de Pokémon, quando um dos meus\l"
+	.string "aparelhos captou uma leitura estranha.\p"
+	.string "Parece que certos Pokémon têm um\n"
+	.string "potencial oculto que nunca vimos antes.\p"
+	.string "E este sinal parece ser a chave!\p"
+	.string "Encontrei a origem do sinal perto do\n"
+	.string "Chalé do Mar.\p"
+	.string "Era uma pedra rara que nunca vi antes!\p"
+	.string "Trouxe para o laboratório e construí\n"
+	.string "um dispositivo para extrair seu poder!\p"
+	.string "Quero que você fique com ele!$"
 
 PlayersHouse_1F_Text_GetMegaRing::
-	.string "Bill gave you a Mega Ring!$"
+	.string "Bill entregou o Mega Anel!$"
 
 PlayersHouse_1F_Text_FindMegaStones::
-	.string "According to my readings, there\n"
-	.string "are more of those stones hidden\l"
-	.string "across Kanto.\p"
-	.string "Now that you have the Mega Ring,\n"
-	.string "you should be able to see them!\p"
-	.string "We'll need to find a Mega Stone\n"
-	.string "to test my theory!$"
+	.string "De acordo com minhas leituras, há mais\n"
+	.string "dessas pedras escondidas por Kanto.\p"
+	.string "Agora que você tem o Mega Anel,\n"
+	.string "você será capaz de vê-las!\p"
+	.string "Precisamos encontrar uma Mega Pedra\n"
+	.string "para testar minha teoria!$"
 
 PlayersHouse_1F_EventScript_Bill2::
 	msgbox PlayersHouse_1F_Text_MegaStones, MSGBOX_NPC
@@ -190,13 +187,12 @@ PlayersHouse_1F_EventScript_Bill2::
 	end
 
 PlayersHouse_1F_Text_MegaStones::
-	.string "Bill: We'll need to find a\n"
-	.string "Mega Stone to test my theory!$"
+	.string "Bill: Precisamos encontrar uma\n"
+	.string "Mega Pedra para testar minha teoria!$"
 
 PlayersHouse_1F_Text_Visitor::
-	.string "Mom: Where are you going, {PLAYER}?\p"
-	.string "Aren't you going to say hello\n"
-	.string "to our visitor?$"
+	.string "Mãe: Onde você vai, {PLAYER}?\p"
+	.string "Não vai cumprimentar nossa visita?$"
 
 PlayersHouse_1F_EventScript_Gameclear::
 	lockall
@@ -227,31 +223,31 @@ PlayersHouse_1F_EventScript_Gameclear::
 	end
 
 PlayersHouse_1F_Text_Gameclear::
-	.string "Mom: Oh, {PLAYER}!\n"
-	.string "You're already up?\p"
-	.string "After everything you've been doing\n"
-	.string "I thought you'd need more rest.\p"
+	.string "Mãe: Oh, {PLAYER}!\n"
+	.string "Você já acordou?\p"
+	.string "Depois de tudo o que enfrentou,\n"
+	.string "achei que fosse descansar mais.\p"
 	.string "...\p"
-	.string "You've really grown up, {PLAYER}.\p"
-	.string "I think your Pokémon can see that, too.\p"
-	.string "They'll follow you anywhere!$"
+	.string "Você realmente cresceu, {PLAYER}.\p"
+	.string "Acho que seus Pokémon também veem isso.\p"
+	.string "Eles vão te seguir para qualquer lugar!$"
 
 PlayersHouse_1F_Text_FollowerOptions::
-	.string "Your Follower settings in the Options\n"
-	.string "menu can now be set to Any mode!\p"
-	.string "When this is selected, your first\n"
-	.string "Pokémon will follow you around!$"
+	.string "A opção Seguidor no menu de Opções\n"
+	.string "agora pode ser definida como Qualquer!\p"
+	.string "Quando ativada, seu primeiro Pokémon\n"
+	.string "andará ao seu lado pelo mapa!$"
 
 PlayersHouse_1F_Text_Gameclear2::
-	.string "Mom: Just because you're the new\n"
-	.string "champion doesn't mean your story\l"
-	.string "is over!\p"
-	.string "Professor Oak will no doubt have\n"
-	.string "advice for you if you visit.\p"
-	.string "There's a whole world out there\n"
-	.string "for you and your Pokémon to explore!\p"
-	.string "I'm so proud of you, {PLAYER}!\n"
-	.string "Go have fun with your Pokémon!$"
+	.string "Mãe: Só porque você se tornou o novo\n"
+	.string "campeão, não quer dizer que a sua\l"
+	.string "história acabou!\p"
+	.string "O Professor Carvalho com certeza terá\n"
+	.string "novos conselhos se você for visitá-lo.\p"
+	.string "Há um mundo inteiro lá fora esperando\n"
+	.string "por você e seus Pokémon!\p"
+	.string "Tenho tanto orgulho de você, {PLAYER}!\n"
+	.string "Vá e divirta-se com seus Pokémon!$"
 
 PlayersHouse_1F_EventScript_MoveMomToStairs1::
 	applymovement LOCALID_MOM, Movement_MoveMomToStairs1

@@ -67,31 +67,31 @@ PalletTown_ProfessorOaksLab_EventScript_GetStarterScene::
 	end
 
 PalletTown_ProfessorOaksLab_Text_RivalFedUpWithWaiting:
-    .string "{RIVAL}: Gramps!\n"
-    .string "I'm fed up with waiting!$"
+    .string "{RIVAL}: Vovô!\n"
+    .string "Eu cansei de esperar!$"
 
 PalletTown_ProfessorOaksLab_Text_TakeStarter::
-    .string "Oak: {RIVAL}?\n"
-    .string "Let me think…\p"
-    .string "Oh, that's right, I told you to\n"
-    .string "come! Just wait!\p"
-    .string "Here, {PLAYER}.\p"
-    .string "There is a Pokéball on my desk.\p"
-    .string "When I was young, I was a serious\n"
-    .string "Pokémon trainer.\p"
-    .string "But now, in my old age, I study\n"
-    .string "Pokémon more than I battle.\p"
-    .string "I'd like you to raise this\n"
-    .string "Pokémon for me!$"
+    .string "Carvalho: {RIVAL}?\n"
+    .string "Deixe-me ver…\p"
+    .string "Ah, é verdade, eu disse para você\n"
+    .string "vir! Apenas espere!\p"
+    .string "Aqui, {PLAYER}.\p"
+    .string "Tem uma Pokébola na minha mesa.\p"
+    .string "Quando eu era jovem, fui um treinador\n"
+    .string "Pokémon dedicado.\p"
+    .string "Mas agora, na velhice, estudo Pokémon\n"
+    .string "mais do que batalho.\p"
+    .string "Gostaria que você cuidasse deste\n"
+    .string "Pokémon por mim!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalNoFairWhatAboutMe::
-    .string "{RIVAL}: Hey! Gramps! No fair!\n"
-    .string "What about me?$"
+    .string "{RIVAL}: Ei! Vovô! Não vale!\n"
+    .string "E quanto a mim?$"
 
 PalletTown_ProfessorOaksLab_Text_OakBePatientRival::
-    .string "Oak: Be patient, {RIVAL}.\p"
-    .string "I'll take you to catch \n"
-    .string "your own Pokémon later.$"
+    .string "Carvalho: Tenha paciência, {RIVAL}.\p"
+    .string "Eu levarei você para capturar seu\n"
+    .string "próprio Pokémon mais tarde.$"
 
 PalletTown_ProfessorOaksLab_EventScript_ApproachPokeBallBehindDesk::
 	lockall
@@ -135,9 +135,9 @@ Movement_StealEeveeTooSlow::
 	step_end
 
 PalletTown_ProfessorOaksLab_Text_TooSlow::
-	.string "{RIVAL}: Too slow, {PLAYER}!\p"
-	.string "This is what you get for\n"
-	.string "taking the long way around.$"
+	.string "{RIVAL}: Lento demais, {PLAYER}!\p"
+	.string "Isso é o que dá dar a volta\n"
+	.string "pelo caminho mais longo.$"
 
 Movement_PlayerReturnToOakFar::
 	walk_left
@@ -213,10 +213,10 @@ Movement_PlayerReturnToOak::
 	step_end
 
 PalletTown_ProfessorOaksLab_Text_WereGoingToGetOne::
-	.string "Oak: {RIVAL}!\p"
-	.string "Sigh...alright.\n"
-	.string "That Pokémon is yours.\p"
-	.string "{PLAYER}, come over here.$"
+	.string "Carvalho: {RIVAL}!\p"
+	.string "Ai, ai... tudo bem.\n"
+	.string "Aquele Pokémon é seu.\p"
+	.string "{PLAYER}, venha até aqui.$"
 
 PalletTown_ProfessorOaksLab_EventScript_PreventExit::
 	applymovement LOCALID_OAK, Movement_OakStopPlayer
@@ -244,7 +244,7 @@ Movement_OakReturnToPosition::
 	step_end
 
 PalletTown_ProfessorOaksLab_Text_DontWantAPokemon::
-	.string "Oak: Do you not want a\n"
+	.string "Carvalho: Você não quer um\n"
 	.string "Pokémon, {PLAYER}?$"
 
 Movement_CantExitLab::
@@ -291,33 +291,33 @@ Movement_PikachuJoinsParty::
 	step_end
 
 PalletTown_ProfessorOaksLab_Text_PikachuFromEarlier:
-	.string "Oak: Technically, that was\n"
-	.string "not my last Pokémon.\p"
-	.string "I still have the Pikachu\n"
-	.string "I caught earlier...\p"
-	.string "I was going to return it to\n"
-	.string "its natural habitat, but\l"
-	.string "perhaps you should take it.$"
+	.string "Carvalho: Tecnicamente, aquele não\n"
+	.string "era meu último Pokémon.\p"
+	.string "Eu ainda tenho o Pikachu que\n"
+	.string "capturei mais cedo...\p"
+	.string "Eu ia devolvê-lo ao seu habitat\n"
+	.string "natural, mas talvez seja melhor\l"
+	.string "você ficar com ele.$"
 	
 PalletTown_ProfessorOaksLab_Text_PikachuBrokeFree:
-	.string "Oak: Incredible!\p"
-	.string "It broke free of its Pokéball!$"
+	.string "Carvalho: Incrível!\p"
+	.string "Ele escapou da Pokébola!$"
 
 PalletTown_ProfessorOaksLab_Text_PikachuWantsToFollow:
-	.string "Oak: It seems to have taken quite\n"
-	.string "an interest in you, {PLAYER}.\p"
-	.string "It looks like Pikachu has already\n"
-	.string "made its decision!\p"
-	.string "You should absolutely take this\n"
-	.string "Pokémon.$"
+	.string "Carvalho: Ele parece ter gostado\n"
+	.string "muito de você, {PLAYER}.\p"
+	.string "Parece que o Pikachu já tomou\n"
+	.string "a decisão dele!\p"
+	.string "Você sem dúvida deve ficar com\n"
+	.string "este Pokémon.$"
 
 PalletTown_ProfessorOaksLab_Text_PikachuJoinedTeam:
-	.string "Pikachu decided to stay by\n"
-	.string "{PLAYER}'s side!$"
+	.string "Pikachu decidiu ficar ao lado\n"
+	.string "de {PLAYER}!$"
 
 PalletTown_ProfessorOaksLab_Text_WhyNotGiveNicknameToMon:
-	.string "Oak: Say, why don't you give\n"
-	.string "a nickname to your new partner?$"
+	.string "Carvalho: Diga, por que não dá um\n"
+	.string "apelido ao seu novo parceiro?$"
 
 PalletTown_ProfessorOaksLab_EventScript_NicknameStarter::
 	setvar VAR_0x8004, 0
@@ -363,16 +363,16 @@ PalletTown_ProfessorOaksLab_EventScript_RivalWantsToBattle::
 	end
 
 PalletTown_ProfessorOaksLab_Text_RivalLetsCheckOutMons::
-    .string "{RIVAL}: Wait, {PLAYER}!$"
+    .string "{RIVAL}: Espere, {PLAYER}!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalBattleIntro::
-    .string "Let's check out our Pokémon!\p"
-    .string "Come on, I'll take you on!$"
+    .string "Vamos testar nossos Pokémon!\p"
+    .string "Venha, vou te mostrar do que sou capaz!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalDefeated::
-    .string "{RIVAL}: WHAT?\n"
-    .string "Unbelievable!\l"
-    .string "I picked the wrong Pokémon!$"
+    .string "{RIVAL}: O QUÊ?\n"
+    .string "Inacreditável!\l"
+    .string "Eu escolhi o Pokémon errado!$"
 
 PalletTown_ProfessorOaksLab_EventScript_RivalBattleOutcome::
 	specialvar VAR_RESULT, GetBattleOutcome
@@ -386,8 +386,8 @@ PalletTown_ProfessorOaksLab_EventScript_RivalBattleLost::
 	end
 
 PalletTown_ProfessorOaksLab_Text_RivalVictory::
-    .string "{RIVAL}: Yeah!\n"
-    .string "Am I great or what?$"
+    .string "{RIVAL}: É isso aí!\n"
+    .string "Eu sou um gênio ou não sou?$"
 
 PalletTown_ProfessorOaksLab_EventScript_RivalBattleWon::
 	addvar VAR_RIVAL_WINRATE, 1
@@ -396,10 +396,10 @@ PalletTown_ProfessorOaksLab_EventScript_RivalBattleWon::
 	end
 
 PalletTown_ProfessorOaksLab_Text_RivalGoToughenMyMon::
-    .string "{RIVAL}: Okay! I'll make my\n"
-    .string "Pokémon battle to toughen it up!\p"
-    .string "{PLAYER}! Gramps!\n"
-    .string "Smell you later!$"
+    .string "{RIVAL}: Beleza! Vou treinar meu Pokémon\n"
+    .string "em muitas batalhas para deixá-lo forte!\p"
+    .string "{PLAYER}! Vovô!\n"
+    .string "Até mais ver!$"
 
 PalletTown_ProfessorOaksLab_EventScript_PostRivalBattle::
 	closemessage
@@ -629,100 +629,99 @@ Movement_RivalLeavesWithPokedex:
 	step_end
 
 PalletTown_ProfessorOaksLab_Text_OakHaveSomethingForMe::
-    .string "Oak: Oh, {PLAYER}!\n"
-    .string "How is your new Pokémon?\p"
-    .string "Well, it seems to be growing more\n"
-    .string "attached to you.\p"
-    .string "You must be talented as a Pokémon\n"
-    .string "trainer.\p"
-    .string "What's that?\n"
-    .string "You have something for me?$"
+    .string "Carvalho: Oh, {PLAYER}!\n"
+    .string "Como vai o seu novo Pokémon?\p"
+    .string "Bem, parece que ele está cada vez mais\n"
+    .string "apegado a você.\p"
+    .string "Você deve ter um talento natural como\n"
+    .string "treinador de Pokémon.\p"
+    .string "O que é isso?\n"
+    .string "Tem alguma coisa para mim?$"
 
 PalletTown_ProfessorOaksLab_Text_DeliveredOaksParcel::
-    .string "{PLAYER} delivered Oak's Parcel.$"
+    .string "{PLAYER} entregou a Encomenda do Carvalho.$"
 
 PalletTown_ProfessorOaksLab_Text_OakCustomBallIOrdered::
-    .string "Ah! \n"
-    .string "It's the custom Poké Ball!\p"
-    .string "I had it on order.\n"
-    .string "Thank you!$"
+    .string "Ah!\n"
+    .string "É a Pokébola personalizada!\p"
+    .string "Eu a havia encomendado.\n"
+    .string "Muito obrigado!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalGramps::
-    .string "{RIVAL}: Gramps!$"
+    .string "{RIVAL}: Vovô!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalWhatDidYouCallMeFor::
-    .string "{RIVAL}: I almost forgot!\n"
-    .string "What did you call me for?$"
+    .string "{RIVAL}: Quase esqueci!\n"
+    .string "Por que me chamou aqui?$"
 
 PalletTown_ProfessorOaksLab_Text_OakHaveRequestForYouTwo::
-    .string "Oak: Oh, right!\n"
-    .string "I have a request for you two.$"
+    .string "Carvalho: Ah, sim!\n"
+    .string "Tenho um pedido para vocês dois.$"
 
 PalletTown_ProfessorOaksLab_Text_OakPokedexOnDesk::
-    .string "On the desk there is my invention,\n"
-    .string "the Pokédex!\p"
-    .string "It automatically records data on\n"
-    .string "Pokémon you've seen or caught.\p"
-    .string "It's a high-tech encyclopedia!$"
+    .string "Na mesa está a minha invenção,\n"
+    .string "a Pokédex!\p"
+    .string "Ela registra automaticamente os dados dos\n"
+    .string "Pokémon que vocês viram ou capturaram.\p"
+    .string "É uma enciclopédia de alta tecnologia!$"
 
 PalletTown_ProfessorOaksLab_Text_OakTakeTheseWithYou::
-    .string "Oak: {PLAYER} and {RIVAL}.\n"
-    .string "Take these with you.$"
+    .string "Carvalho: {PLAYER} e {RIVAL}.\n"
+    .string "Levem isto com vocês.$"
 
 PalletTown_ProfessorOaksLab_Text_ReceivedPokedexFromOak::
-    .string "{PLAYER} received the Pokédex\n"
-    .string "from Professor Oak!$"
+    .string "{PLAYER} recebeu a Pokédex\n"
+    .string "do Professor Carvalho!$"
 
 PalletTown_ProfessorOaksLab_Text_OakCatchMonsForDataTakeThese::
-    .string "Oak: You can't get detailed data\n"
-    .string "on Pokémon by just seeing them.\p"
-    .string "You must catch them to obtain\n"
-    .string "complete data.\p"
-    .string "So, here are some tools for\n"
-    .string "catching wild Pokémon.$"
+    .string "Carvalho: Vocês não obtêm dados\n"
+    .string "detalhados apenas ao vê-los.\p"
+    .string "É necessário capturá-los para\n"
+    .string "obter informações completas.\p"
+    .string "Portanto, aqui estão algumas ferramentas\n"
+    .string "para capturar Pokémon selvagens.$"
 
 PalletTown_ProfessorOaksLab_Text_ReceivedFivePokeBalls::
-    .string "{PLAYER} received five Poké Balls.$"
+    .string "{PLAYER} recebeu cinco Pokébolas.$"
 
 PalletTown_ProfessorOaksLab_Text_OakExplainCatching::
-    .string "When a wild Pokémon appears,\n"
-    .string "it's fair game.\p"
-    .string "Just throw a Poké Ball at it and\n"
-    .string "try to catch it!\p"
-    .string "This won't always work, however.\p"
-    .string "A healthy Pokémon can escape.\n"
-    .string "You have to be lucky!\p"
-	.string "Consider using moves that will\n"
-	.string "leave a status effect on the Pokémon\l"
-	.string "to increase your chances of catching.\p"
-	.string "During a fight, the Pokédex can help\n"
-	.string "explain the purpose and strengths of\l"
-	.string "the moves by pressing the R Button.$"
+    .string "Quando um Pokémon selvagem aparecer,\n"
+    .string "é a sua chance.\p"
+    .string "Basta arremessar uma Pokébola\n"
+    .string "e tentar capturá-lo!\p"
+    .string "Contudo, nem sempre isso vai dar certo.\p"
+    .string "Um Pokémon saudável pode escapar.\n"
+    .string "É preciso ter um pouco de sorte!\p"
+	.string "Tente usar golpes que causem efeitos de\n"
+	.string "status para aumentar suas chances.\p"
+	.string "Durante uma batalha, a Pokédex pode ajudar\n"
+	.string "a explicar a função e o efeito dos golpes\l"
+	.string "ao pressionar o Botão R.$"
 
 PalletTown_ProfessorOaksLab_Text_OakCompleteMonGuideWasMyDream::
-    .string "To make a complete guide on all\n"
-    .string "the Pokémon in the world…\p"
-    .string "That was my dream!\p"
-    .string "But, I'm too old.\n"
-    .string "I can't get the job done.\p"
-    .string "So, I want you two to fulfill my\n"
-    .string "dream for me.\p"
-    .string "Get moving, you two.\p"
-    .string "This is a great undertaking in\n"
-    .string "Pokémon history!$"
+    .string "Criar um guia completo com todos\n"
+    .string "os Pokémon deste mundo…\p"
+    .string "Esse sempre foi o meu grande sonho!\p"
+    .string "Mas estou velho demais.\n"
+    .string "Não consigo concluir essa tarefa.\p"
+    .string "Por isso, quero que vocês dois realizem\n"
+    .string "esse sonho por mim.\p"
+    .string "Vão em frente, vocês dois.\p"
+    .string "Este é um grande marco na história\n"
+    .string "dos Pokémon!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalLeaveItToMeGramps::
-    .string "{RIVAL}: All right, Gramps!\n"
-    .string "Leave it all to me!$"
+    .string "{RIVAL}: Pode deixar, Vovô!\n"
+    .string "Deixa tudo comigo!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalTellSisNotToGiveYouNumber::
-    .string "{PLAYER}, I hate to say it, but you\n"
-    .string "won't be necessary for this.\p"
-    .string "You're on your own from here, so\n"
-    .string "don't bother calling me!\p"
-    .string "And don't try and get my number from\n"
-    .string "my sister, either.\p"
-    .string "I'll tell her not to give it to you,\n"
+    .string "{PLAYER}, detesto admitir, mas você\n"
+    .string "não vai fazer falta nenhuma nisso.\p"
+    .string "A partir de agora é cada um por si,\n"
+    .string "então nem perca tempo me ligando!\p"
+    .string "E nem pense em pedir meu número para a\n"
+    .string "minha irmã também.\p"
+    .string "Vou dizer para ela não te passar nada,\n"
     .string "{PLAYER}! Hahaha!$"
 
 PalletTown_ProfessorOaksLab_EventScript_Rival::
@@ -739,8 +738,8 @@ PalletTown_ProfessorOaksLab_EventScript_RivalWaiting::
 	end
 
 PalletTown_ProfessorOaksLab_Text_RivalGrampsIsntAround::
-    .string "{RIVAL}: What, it's only {PLAYER}?\n"
-    .string "Gramps isn't around.$"
+    .string "{RIVAL}: O quê, é só o {PLAYER}?\n"
+    .string "O vovô não está aqui.$"
 
 PalletTown_ProfessorOaksLab_EventScript_RivalNotGreedy::
 	lock
@@ -750,9 +749,9 @@ PalletTown_ProfessorOaksLab_EventScript_RivalNotGreedy::
 	end 
 
 PalletTown_ProfessorOaksLab_Text_RivalGoChoosePlayer:
-    .string "{RIVAL}: Heh, I don't need to be\n"
-    .string "greedy like you. I'm mature!\p"
-    .string "Go ahead and take it, {PLAYER}!$"
+    .string "{RIVAL}: Heh, eu não preciso ser\n"
+    .string "ganancioso como você. Sou maduro!\p"
+    .string "Pode ir em frente e pegar, {PLAYER}!$"
 
 PalletTown_ProfessorOaksLab_EventScript_RivalMyMonLooksTough::
 	lock
@@ -762,25 +761,24 @@ PalletTown_ProfessorOaksLab_EventScript_RivalMyMonLooksTough::
 	end 
 
 PalletTown_ProfessorOaksLab_Text_RivalMyMonLooksTougher::
-    .string "{RIVAL}: My Pokémon looks a lot\n"
-    .string "tougher than yours, {PLAYER}.$"
+    .string "{RIVAL}: O meu Pokémon parece bem mais\n"
+    .string "forte que o seu, {PLAYER}.$"
 
 PalletTown_ProfessorOaksLab_EventScript_Computer::
 	msgbox PalletTown_ProfessorOaksLab_Text_EmailMessage, MSGBOX_SIGN
 	end
 
 PalletTown_ProfessorOaksLab_Text_EmailMessage::
-    .string "There's an e-mail message here.\p"
+    .string "Há uma mensagem de e-mail aqui.\p"
     .string "…\p"
-    .string "Finally!\n"
-    .string "The ultimate trainers of the\l"
-    .string "Pokémon League are ready to\l"
-    .string "take on all comers!\p"
-    .string "Bring your best Pokémon and see\n"
-    .string "how you rate as a trainer!\p"
-    .string "Pokémon League HQ\n"
-    .string "Indigo Plateau\p"
-    .string "Prof. Oak, please visit us!\n"
+    .string "Finalmente!\n"
+    .string "Os melhores treinadores da Liga Pokémon\l"
+    .string "estão prontos para novos desafiantes!\p"
+    .string "Traga seus melhores Pokémon e veja\n"
+    .string "o seu nível como treinador!\p"
+    .string "QG da Liga Pokémon\n"
+    .string "Planalto Índigo\p"
+    .string "Prof. Carvalho, venha nos visitar!\n"
     .string "…$"
 
 PalletTown_ProfessorOaksLab_EventScript_LeftSign::
@@ -788,9 +786,9 @@ PalletTown_ProfessorOaksLab_EventScript_LeftSign::
 	end
 
 PalletTown_ProfessorOaksLab_Text_PressStartToOpenMenu::
-    .string "Press START to open the MENU!\p"
-    .string "The SAVE option is on the MENU.\n"
-    .string "Use it regularly.$"
+    .string "Pressione START para abrir o MENU!\p"
+    .string "A opção SALVAR está no MENU.\n"
+    .string "Use com frequência.$"
 
 PalletTown_ProfessorOaksLab_EventScript_RightSign::
 	msgbox PalletTown_ProfessorOaksLab_Text_AllMonTypesHaveStrongAndWeakPoints
@@ -798,8 +796,8 @@ PalletTown_ProfessorOaksLab_EventScript_RightSign::
 	end
 
 PalletTown_ProfessorOaksLab_Text_AllMonTypesHaveStrongAndWeakPoints::
-    .string "All Pokémon types have strong and\n"
-    .string "weak points against others.$"
+    .string "Todos os tipos de Pokémon possuem vantagens\n"
+    .string "e desvantagens uns contra os outros.$"
 
 PalletTown_ProfessorOaksLab_EventScript_Aide1::
 	lock
@@ -823,8 +821,8 @@ PalletTown_ProfessorOaksLab_StudyAsOaksAide::
 	end
 
 PalletTown_ProfessorOaksLab_Text_StudyAsOaksAide:
-    .string "I study Pokémon as Prof. Oak's\n"
-    .string "Aide.$"
+    .string "Eu estudo Pokémon como Ajudante\n"
+    .string "do Prof. Carvalho.$"
 
 PalletTown_ProfessorOaksLab_Text_StudyAsOaksAide2:
     .string "I know what you're going to ask.\n"

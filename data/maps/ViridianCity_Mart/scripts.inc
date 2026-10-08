@@ -44,21 +44,21 @@ Movement_PlayerApproachCounter:
 
 
 ViridianCity_Mart_Text_YouCameFromPallet::
-    .string "Hey!\n"
-    .string "You came from Pallet Town?$"
+    .string "Ei!\n"
+    .string "Você veio de Pallet Town?$"
 
 ViridianCity_Mart_Text_TakeThisToProfOak::
-    .string "You know Professor Oak, right?\p"
-    .string "His order came in.\n"
-    .string "Can I get you to take it to him?$"
+    .string "Você conhece o Professor Carvalho, certo?\p"
+    .string "A encomenda dele chegou.\n"
+    .string "Você poderia levar para ele?$"
 
 ViridianCity_Mart_Text_ReceivedOaksParcelFromClerk::
-    .string "{PLAYER} received Oak's Parcel\n"
-    .string "from the Pokémon Mart clerk.$"
+    .string "{PLAYER} recebeu a Encomenda do Carvalho\n"
+    .string "do balconista do Pokémon Mart.$"
 
 ViridianCity_Mart_Text_SayHiToOakForMe::
-    .string "Okay, thanks! Please say hi to\n"
-    .string "Professor Oak for me, too.$"
+    .string "Muito obrigado! Mande lembranças ao\n"
+    .string "Professor Carvalho por mim também.$"
 
 ViridianCity_Mart_EventScript_Clerk::
 	lock
@@ -94,8 +94,8 @@ ViridianCity_Mart_EventScript_Customer1::
 	end
 
 ViridianCity_Mart_Text_ShopDoesGoodBusinessInAntidotes::
-    .string "This shop does good business in\n"
-    .string "antidotes, I've heard.$"
+    .string "Dizem que esta loja vende muitos\n"
+    .string "antídotos por aqui.$"
 
 ViridianCity_Mart_EventScript_Customer2::
 	lock
@@ -105,6 +105,6 @@ ViridianCity_Mart_EventScript_Customer2::
 	end
 
 ViridianCity_Mart_Text_GotToBuySomePotions::
-    .string "I've got to buy some potions.\p"
-    .string "You never know when your Pokémon\n"
-    .string "will need quick healing.$"
+    .string "Preciso comprar algumas poções.\p"
+    .string "Nunca se sabe quando os seus Pokémon\n"
+    .string "vão precisar de cura rápida.$"

@@ -11,11 +11,11 @@ EventScript_PkmnCenterNurse_NormalHeal::
 	end
 
 gText_WouldYouLikeToRestYourPkmn::
-    .string "Hello, and welcome to\n"
-    .string "the Pokémon Center.\p"
-    .string "We restore your tired Pokémon\n"
-    .string "to full health.\p"
-    .string "Would you like to rest your Pokémon?$"
+    .string "Olá! Bem-vindo ao\n"
+    .string "Centro Pokémon.\p"
+    .string "Nós recuperamos a saúde de seus\n"
+    .string "Pokémon exaustos.\p"
+    .string "Gostaria de descansar seus Pokémon?$"
 
 EventScript_PkmnCenterNurse_GameClearHeal::
 	msgbox gText_YouWantTheUsual, MSGBOX_YESNO
@@ -24,8 +24,8 @@ EventScript_PkmnCenterNurse_GameClearHeal::
 	end
 
 gText_YouWantTheUsual::
-    .string "I'm delighted to see you, {PLAYER}!\n"
-    .string "You want the usual, am I right?$"
+    .string "Que bom ver você, {PLAYER}!\n"
+    .string "Vai querer o de sempre, certo?$"
 
 EventScript_PkmnCenterNurse_ChampionHeal::
 	applymovement VAR_0x800B, Common_Movement_ExclamationMark
@@ -36,8 +36,8 @@ EventScript_PkmnCenterNurse_ChampionHeal::
 	end
 
 gText_ItsTheChampion::
-    .string "Oh! It's the Champion, {PLAYER}!\n"
-    .string "Shall we heal your Pokémon?$"
+    .string "Oh! É o Campeão, {PLAYER}!\n"
+    .string "Vamos cuidar dos seus Pokémon?$"
 
 EventScript_PkmnCenterNurse_HealPkmn::
 	incrementgamestat GAME_STAT_USED_POKECENTER
@@ -57,13 +57,13 @@ EventScript_PkmnCenterNurse_HealPkmn::
 	goto EventScript_PkmnCenterNurse_Goodbye
 
 gText_IllTakeYourPkmn::
-    .string "Okay, I'll take your Pokémon\n"
-    .string "for a few seconds.$"
+    .string "Certo, vou cuidar dos seus\n"
+    .string "Pokémon por alguns segundos.$"
 
 gText_RestoredPkmnToFullHealth::
-    .string "Thank you for waiting.\p"
-    .string "We've restored your Pokémon\n"
-    .string "to full health.$"
+    .string "Obrigada por esperar.\p"
+    .string "Seus Pokémon estão totalmente\n"
+    .string "recuperados.$"
 
 EventScript_PkmnCenterNurse_CheckPokerus::
 	specialvar VAR_RESULT, IsPokerusInParty
@@ -76,16 +76,16 @@ EventScript_PkmnCenterNurse_ExplainPokerus::
 	return
 
 gText_PokerusExplanation::
-	.string "Your Pokémon may be infected with\n"
-	.string "Pokérus.\p"
-	.string "Little is known about the Pokérus\n"
-	.string "except that they are microscopic life-\l"
-	.string "forms that attach to Pokémon.\p"
-	.string "While infected, Pokémon are said to\n"
-	.string "grow exceptionally well.$"
+	.string "Seus Pokémon parecem estar infectados\n"
+	.string "com Pokérus.\p"
+	.string "Pouco se sabe sobre o Pokérus,\n"
+	.string "além de serem formas de vida microscópicas\l"
+	.string "que se fixam aos Pokémon.\p"
+	.string "Enquanto infectados, dizem que os\n"
+	.string "Pokémon se desenvolvem muito melhor.$"
 
 gText_WeHopeToSeeYouAgain::
-    .string "We hope to see you again!$"
+    .string "Esperamos vê-lo novamente!$"
 
 Movement_PkmnCenterNurse_Bow:
 	nurse_joy_bow

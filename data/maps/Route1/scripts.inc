@@ -65,8 +65,8 @@ Movement_OakAppears:
 	step_end
 
 Route1_Text_OakDontGoOut::
-    .string "Oak: Hey! Wait!\n"
-    .string "Don't come out this way!$"
+    .string "Carvalho: Ei! Espere!\n"
+    .string "Não venha por aqui!$"
 
 
 Movement_OakApproaches1:
@@ -83,10 +83,10 @@ Movement_OakApproaches2:
 	step_end
 
 Route1_Text_OakGrassUnsafe::
-    .string "OAK: It's unsafe!\n"
-    .string "Wild Pokémon live in tall grass!\p"
-    .string "You need your own Pokémon for\n"
-    .string "your protection.$"
+    .string "Carvalho: É perigoso!\n"
+    .string "Pokémon selvagens vivem na grama alta!\p"
+    .string "Você precisa do seu próprio Pokémon\n"
+    .string "para a sua proteção.$"
 
 Movement_PikachuApproaches1:
 	walk_down
@@ -128,11 +128,11 @@ Route1_EventScript_PikachuEncounter::
 	return
 
 Route1_Text_ThatWasClose::
-    .string "Oak: That was close!\n"
-    .string "But that's odd...\p"
-    .string "You don't often see Pikachu\n"
-    .string "in this area...\p"
-    .string "Let's head back to my lab!$"
+    .string "Carvalho: Essa foi por pouco!\n"
+    .string "Mas que coisa estranha...\p"
+    .string "Não é comum ver Pikachu\n"
+    .string "por esta área...\p"
+    .string "Vamos voltar para o meu laboratório!$"
 
 Route1_EventScript_MartClerk::
 	lock
@@ -147,13 +147,13 @@ Route1_EventScript_MartClerk::
 	end
 
 Route1_Text_WorkAtPokeMartTakeSample::
-    .string "Hi!\n"
-    .string "I work at a Pokémon Mart.\p"
-    .string "It's part of a convenient chain\n"
-    .string "selling all sorts of items.\p"
-    .string "Please, visit us in Viridian City.\p"
-    .string "I know, I'll give you a sample.\n"
-    .string "Here you go!$"
+    .string "Olá!\n"
+    .string "Eu trabalho no Pokémon Mart.\p"
+    .string "É parte de uma rede conveniente que\n"
+    .string "vende todo tipo de item útil.\p"
+    .string "Por favor, venha nos visitar em Viridian City.\p"
+    .string "Já sei, vou te dar uma amostra.\n"
+    .string "Aqui está!$"
 
 Route1_EventScript_AlreadyGotPotion::
 	msgbox Route1_Text_ComeSeeUsIfYouNeedPokeBalls
@@ -161,26 +161,26 @@ Route1_EventScript_AlreadyGotPotion::
 	end
 
 Route1_Text_ComeSeeUsIfYouNeedPokeBalls::
-    .string "Please come see us if you need\n"
-    .string "Poké Balls for catching Pokémon.$"
+    .string "Venha nos visitar se precisar de\n"
+    .string "Pokébolas para capturar Pokémon.$"
 
 Route1_EventScript_Boy::
 	msgbox Route1_Text_CanJumpFromLedges, MSGBOX_NPC
 	end
 
 Route1_Text_CanJumpFromLedges::
-    .string "See those ledges along the road?\p"
-    .string "It's a bit scary, but you can jump\n"
-    .string "from them.\p"
-    .string "You can get back to Pallet Town\n"
-    .string "quicker that way.$"
+    .string "Viu aqueles desníveis pelo caminho?\p"
+    .string "Dá um friozinho na barriga, mas dá para\n"
+    .string "pular por eles.\p"
+    .string "Assim você consegue voltar para Pallet Town\n"
+    .string "bem mais rápido.$"
 
 Route1_EventScript_RouteSign::
 	msgbox Route1_Text_RouteSign, MSGBOX_SIGN
 	end
 
 Route1_Text_RouteSign::
-    .string "Route 1\n"
+    .string "Rota 1\n"
     .string "Pallet Town - Viridian City$"
 
 Route1_RocketFugitive::
@@ -206,8 +206,8 @@ Route1_EventScript_Pidgeot::
 	end
 
 Route1_Text_Pidgeot:
-	.string "Pidgeot seems tired but determined\n"
-	.string "to hover as fast as it can.$"
+	.string "Pidgeot parece cansado, mas focado\n"
+	.string "em voar o mais rápido possível.$"
 
 Route1_EventScript_CoolTrainerMura::
 	lock
@@ -220,15 +220,15 @@ Route1_EventScript_CoolTrainerMura::
 	end
 
 Route1_Text_MuraIntro:
-	.string "Hey, kid! See any shiny Pokémon\p"
-	.string "around here? Looking for a Pidgey.$"
+	.string "Ei, garoto! Viu algum Pokémon brilhante\p"
+	.string "por aqui? Estou procurando um Pidgey.$"
 
 Route1_Text_MuraDefeat:
-	.string "Hold on, time out!$"
+	.string "Espera aí, tempo!$"
 
 Route1_Text_MuraPostBattle:
-	.string "We've been here all day trying to\n"
-	.string "to find shiny Pokémon!$"
+	.string "Estamos aqui o dia todo tentando\n"
+	.string "encontrar Pokémon brilhantes!$"
 
 Route1_EventScript_MegaHintPidgeot::    
     goto_if_set FLAG_GOT_PIDGEOTITE, Route1_EventScript_MuraDefeated
@@ -238,8 +238,8 @@ Route1_EventScript_MegaHintPidgeot::
     end
     
 Route1_Text_PidgeotMegaHint:
-    .string "I didn't find any shiny Pokémon on\n"
-	.string "Route 2, but there were other goodies!$"
+    .string "Não achei nenhum Pokémon brilhante na\n"
+	.string "Rota 2, mas achei outras coisas boas!$"
 
 Route1_EventScript_MuraDefeated::
     msgbox MuraDefeated_Text MSGBOX_DEFAULT
@@ -247,8 +247,8 @@ Route1_EventScript_MuraDefeated::
 	end
 
 MuraDefeated_Text:	
-	.string "One day I will have a shiny Pidgeot!\n"
-	.string "I'll look cooler when I fly.$"
+	.string "Um dia eu terei um Pidgeot brilhante!\n"
+	.string "Vou ficar tão maneiro voando nele.$"
 
 Route1_EventScript_PidgeotDefeated::
 	msgbox PidgeotDefeated MSGBOX_DEFAULT
@@ -256,5 +256,5 @@ Route1_EventScript_PidgeotDefeated::
 	end
 
 PidgeotDefeated:	
-	.string "Pidgeot is even more determined\n"
-	.string "than before to be the best.$"
+	.string "Pidgeot está ainda mais determinado\n"
+	.string "do que antes a ser o melhor.$"

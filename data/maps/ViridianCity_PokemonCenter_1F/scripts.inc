@@ -20,34 +20,33 @@ ViridianCity_PokemonCenter_1F_EventScript_Gentleman::
 	end
 
 ViridianCity_PokemonCenter_1F_Text_FeelFreeToUsePC::
-    .string "Please feel free to use that PC in\n"
-    .string "the corner.\p"
-    .string "The receptionist told me so.\n"
-    .string "It's so kind of her!$"
+    .string "Sinta-se à vontade para usar aquele PC\n"
+    .string "no canto.\p"
+    .string "A recepcionista me disse isso.\n"
+    .string "Ela é muito gentil!$"
 
 ViridianCity_PokemonCenter_1F_EventScript_Youngster::
 	msgbox ViridianCity_PokemonCenter_1F_Text_PokeCentersHealMons, MSGBOX_NPC
 	end
 
 ViridianCity_PokemonCenter_1F_Text_PokeCentersHealMons::
-    .string "Pokémon Centers heal your tired,\n"
-    .string "hurt, or fainted Pokémon.\p"
-    .string "They make all Pokémon completely\n"
-    .string "healthy.$"
+    .string "Os Centros Pokémon curam seus Pokémon\n"
+    .string "cansados, feridos ou desmaiados.\p"
+    .string "Eles deixam todos os Pokémon com a saúde\n"
+    .string "completamente restaurada.$"
 
 ViridianCity_PokemonCenter_1F_EventScript_Boy::
 	msgbox ViridianCity_PokemonCenter_1F_Text_PokeCenterInEveryTown, MSGBOX_NPC
 	end
 
 ViridianCity_PokemonCenter_1F_Text_PokeCenterInEveryTown::
-    .string "There's a Pokémon Center in every\n"
-    .string "town ahead.\p"
-    .string "They charge no money, so don't\n"
-    .string "be shy about healing Pokémon.\p"
-	.string "The second floor of these centers\n"
-	.string "act as a meet-up place for more\l"
-	.string "serious trainers.\p"
-	.string "You may be surprised what you\n"
-	.string "find, so be sure when you visit\l"
-	.string "a new center to check the second\l"
-	.string "floor and introduce yourself!$"
+    .string "Há um Centro Pokémon em todas as cidades\n"
+    .string "pela frente.\p"
+    .string "Eles não cobram nada, então não tenha vergonha\n"
+    .string "de curar seus Pokémon.\p"
+	.string "O segundo andar desses centros funciona\n"
+	.string "como ponto de encontro para treinadores\l"
+	.string "mais dedicados.\p"
+	.string "Você pode se surpreender com o que vai achar,\n"
+	.string "então sempre que visitar um novo centro,\l"
+	.string "suba ao segundo andar para se apresentar!$"
