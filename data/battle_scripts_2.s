@@ -79,9 +79,6 @@ BattleScript_TryPrintCaughtMonInfo:
 	setbyte gBattleCommunication, 0
 	displaydexinfo
 BattleScript_TryNicknameCaughtMon::
-	printstring STRINGID_GIVENICKNAMECAPTURED
-	waitstate
-	setbyte gBattleCommunication, 0
 	trygivecaughtmonnick BattleScript_GiveCaughtMonEnd
 	givecaughtmon
 	printfromtable gCaughtMonStringIds

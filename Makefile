@@ -429,6 +429,7 @@ $(ELF): $(OBJ_DIR)/ld_script.ld $(OBJS) libagbsyscall
 $(ROM): $(ELF)
 	$(OBJCOPY) -O binary $< $@
 	$(FIX) $@ --silent
+	@cp -f $@ Pokemon_Kanto_Johto.gba
 
 modern: all
 
