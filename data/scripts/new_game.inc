@@ -100,6 +100,7 @@ EventScript_ResetAllMapFlags::
 	setflag FLAG_HIDE_BATTLE_TOWER_OPPONENT
 	call EventScript_ResetAllBerries
 	setflag FLAG_SYS_B_DASH
+	additem ITEM_EXP_SHARE, 1
 	setflag FLAG_HIDE_MOM_PLAYERS_ROOM
 	setflag FLAG_HIDE_MOM_PALLET_TOWN
 	setflag FLAG_HIDE_OAK_ROUTE1
