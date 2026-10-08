@@ -48,6 +48,7 @@ porymap*.zip
 .ccls-cache/*
 .ropeproject/
 overworld/
+editors/
 *.sna
 *.diff
 *.sym
