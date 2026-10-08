@@ -1,17 +1,19 @@
-name: CI
+name: Build ROM
 
 on:
   push:
     branches:
+      - main
       - master
-      - battle_engine
-      - pokemon_expansion
-      - item_expansion
   pull_request:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     env:
       GAME_VERSION: EMERALD
       GAME_REVISION: 0
@@ -20,19 +22,18 @@ jobs:
       COMPARE: 0
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Checkout agbcc
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           path: agbcc
           repository: pret/agbcc
 
-      - name: Install binutils
-        run: sudo apt install gcc-arm-none-eabi binutils-arm-none-eabi
-        # build-essential, git, and libpng-dev are already installed
-        # gcc-arm-none-eabi is only needed for the modern build
-        # as an alternative to dkP
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gcc-arm-none-eabi binutils-arm-none-eabi libpng-dev
 
       - name: Install agbcc
         run: |
@@ -40,11 +41,14 @@ jobs:
           ./install.sh ../
         working-directory: agbcc
 
-      - name: Agbcc
-        run: make -j${nproc} all
+      - name: Compile ROM
+        run: make -j$(nproc) all
 
-      - name: Modern
-        env:
-          MODERN: 1
-          COMPARE: 0
-        run: make -j${nproc} all
+      - name: Upload GBA ROM
+        uses: actions/upload-artifact@v4
+        with:
+          name: Pokemon_Kanto_Johto_ROM
+          path: |
+            Pokemon_Kanto_Johto.gba
+            pokeClassic.gba
+          if-no-files-found: error
