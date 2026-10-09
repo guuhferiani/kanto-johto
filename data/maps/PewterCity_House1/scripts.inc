@@ -8,13 +8,13 @@ PewterCity_House1_EventScript_BaldingMan::
 	end
 
 PewterCity_House1_Text_TradeMonsAreFinicky::
-    .string "Our Pokémon's an outsider, so it's\n"
-    .string "finicky and hard to handle.\p"
-    .string "An outsider is a Pokémon that you\n"
-    .string "get in a trade.\p"
-    .string "It grows fast, but it may ignore an\n"
-    .string "unskilled trainer in battle.\p"
-    .string "If only we had some Badges…$"
+    .string "Nosso Pokémon veio de fora, então ele\n"
+    .string "é teimoso e difícil de controlar.\p"
+    .string "Um Pokémon de fora é aquele que você\n"
+    .string "recebe através de uma troca.\p"
+    .string "Ele cresce rápido, mas pode ignorar\n"
+    .string "um treinador novato em batalha.\p"
+    .string "Se ao menos tivéssemos Insígnias…$"
 
 PewterCity_House1_EventScript_LittleBoy::
 	lock
@@ -33,7 +33,7 @@ PewterCity_House1_EventScript_Nidoran::
 	end
 
 PewterCity_House1_Text_NidoranSit::
-    .string "Nidoran, sit!$"
+    .string "Nidoran, senta!$"
 
 PewterCity_House1_EventScript_DoNidoranCry::
 	waitse

@@ -69,12 +69,12 @@ PewterCity_EventScript_FatMan::
 	end
 
 PewterCity_Text_BrockOnlySeriousTrainerHere::
-    .string "There aren't many serious Pokémon\n"
-    .string "Trainers here.\p"
-    .string "They're all like Bug Catchers,\n"
-    .string "you know, just hobbyists.\p"
-    .string "But Pewter Gym's Brock isn't like\n"
-    .string "that, not one bit.$"
+    .string "Não há muitos Treinadores Pokémon\n"
+    .string "sérios por aqui.\p"
+    .string "Eles são todos como Caçadores de Insetos,\n"
+    .string "sabe, apenas por passatempo.\p"
+    .string "Mas o Brock do Ginásio de Pewter não é\n"
+    .string "nada disso, nem um pouco.$"
 
 
 PewterCity_EventScript_MuseumGuide::
@@ -93,11 +93,11 @@ PewterCity_EventScript_MuseumGuide::
 	end
 
 PewterCity_Text_DidYouCheckOutMuseum::
-    .string "Did you check out the Museum?$"
+    .string "Você já deu uma olhada no Museu?$"
 
 PewterCity_Text_ReallyYouHaveToGo::
-    .string "Really?\n"
-    .string "You absolutely have to go!$"
+    .string "Sério?\n"
+    .string "Você tem que ir lá agora mesmo!$"
 
 PewterCity_EventScript_LeadToMuseumNorth::
 	applymovement LOCALID_MUSEUM_GUIDE, PewterCity_Movement_GuideWalkToMuseumNorth
@@ -413,9 +413,9 @@ PewterCity_Movement_MuseumGuideExit::
 	step_end
 
 PewterCity_Text_ThisIsTheMuseum::
-    .string "This is it, the Museum.\p"
-    .string "You have to pay to get in, but it's\n"
-    .string "worth it. See you around!$"
+    .string "Aqui está, o Museu.\p"
+    .string "Você tem que pagar para entrar, mas\n"
+    .string "vale muito a pena. A gente se vê!$"
 
 PewterCity_EventScript_CheckedOutMuseum::
 	msgbox PewterCity_Text_WerentThoseFossilsAmazing, MSGBOX_DEFAULT
@@ -423,8 +423,8 @@ PewterCity_EventScript_CheckedOutMuseum::
 	end
 
 PewterCity_Text_WerentThoseFossilsAmazing::
-    .string "Weren't those fossils from Mt. Moon\n"
-    .string "amazing?$"
+    .string "Aqueles fósseis do Monte Moon não são\n"
+    .string "simplesmente incríveis?$"
 
 PewterCity_EventScript_BugCatcher::
 	lock
@@ -436,12 +436,12 @@ PewterCity_EventScript_BugCatcher::
 	end
 
 PewterCity_Text_DoYouKnowWhatImDoing::
-    .string "Psssst!\n"
-    .string "Do you know what I'm doing?$"
+    .string "Psiuuu!\n"
+    .string "Você sabe o que eu estou fazendo?$"
 
 PewterCity_Text_SprayingRepelToKeepWildMonsOut::
-    .string "I'm spraying Repel to keep wild\n"
-    .string "Pokémon out of my garden!$"
+    .string "Estou borrifando Repelente para manter\n"
+    .string "Pokémon selvagens longe do meu jardim!$"
 
 PewterCity_EventScript_KnowWhatTheyreDoing::
 	msgbox PewterCity_Text_ThatsRightItsHardWork, MSGBOX_DEFAULT
@@ -449,18 +449,18 @@ PewterCity_EventScript_KnowWhatTheyreDoing::
 	end
 
 PewterCity_Text_ThatsRightItsHardWork::
-    .string "That's right!\n"
-    .string "It's hard work!$"
+    .string "É isso aí!\n"
+    .string "Dá o maior trabalho!$"
 
 PewterCity_EventScript_Lass::
 	msgbox PewterCity_Text_ClefairyCameFromMoon, MSGBOX_NPC
 	end
 
 PewterCity_Text_ClefairyCameFromMoon::
-    .string "Clefairy came from the moon.\n"
-    .string "That's what the rumor is.\p"
-    .string "They appeared after Moon Stones\n"
-    .string "fell on Mt. Moon.$"
+    .string "Os Clefairy vieram da lua.\n"
+    .string "É isso que dizem os boatos.\p"
+    .string "Eles surgiram depois que as Pedras\n"
+    .string "da Lua caíram no Monte Moon.$"
 
 
 PewterCity_EventScript_GymGuide::
@@ -1140,22 +1140,22 @@ PewterCity_Movement_GymGuideExit::
 	step_end
 
 PewterCity_Text_GoTakeOnBrock::
-    .string "If you have the right stuff,\n"
-    .string "go take on Brock!$"
+    .string "Se você tem o que é preciso,\n"
+    .string "vá desafiar o Brock!$"
 
 PewterCity_Text_BrocksLookingForChallengersFollowMe::
-    .string "You're a Trainer, right?\p"
-    .string "Brock's looking for new\n"
-    .string "challengers. Follow me!$"
+    .string "Você é um Treinador, certo?\p"
+    .string "Brock está procurando novos\n"
+    .string "desafiantes. Siga-me!$"
 
 PewterCity_EventScript_TrainerTips::
 	msgbox PewterCity_Text_TrainerTipsEarningEXP, MSGBOX_SIGN
 	end
 
 PewterCity_Text_TrainerTipsEarningEXP::
-    .string "Trainer Tips:\p"
-    .string "All Pokémon that appear in battle,\n"
-    .string "however briefly, earn Exp Points.$"
+    .string "Dicas para Treinadores:\p"
+    .string "Todos os Pokémon que entram em batalha,\n"
+    .string "mesmo que brevemente, ganham Pontos de Exp.$"
 
 
 PewterCity_EventScript_CitySign::
@@ -1163,26 +1163,26 @@ PewterCity_EventScript_CitySign::
 	end
 
 PewterCity_Text_CitySign::
-    .string "Pewter City\n"
-    .string "A Stone Gray City$"
+    .string "Cidade de Pewter\n"
+    .string "A Cidade Cinzenta como Pedra$"
 
 PewterCity_EventScript_PoliceNotice::
 	msgbox PewterCity_Text_CallPoliceIfInfoOnThieves, MSGBOX_SIGN
 	end
 
 PewterCity_Text_CallPoliceIfInfoOnThieves::
-    .string "NOTICE!\p"
-    .string "Thieves have been stealing Pokémon\n"
-    .string "fossils from Mt. Moon.\p"
-    .string "Please call the Pewter Police if\n"
-    .string "you have any information.$"
+    .string "AVISO!\p"
+    .string "Ladrões têm roubado fósseis de\n"
+    .string "Pokémon no Monte Moon.\p"
+    .string "Por favor, acione a Polícia de Pewter\n"
+    .string "se tiver qualquer informação.$"
 
 PewterCity_EventScript_MuseumSign::
 	msgbox PewterCity_Text_MuseumOfScience, MSGBOX_SIGN
 	end
 
 PewterCity_Text_MuseumOfScience::
-    .string "Pewter City Science Museum$"
+    .string "Museu de Ciências da Cidade de Pewter$"
 
 PewterCity_EventScript_GymSign::
 	lockall
@@ -1191,9 +1191,9 @@ PewterCity_EventScript_GymSign::
 	end
 
 PewterCity_Text_GymSign::
-    .string "Pewter City Pokémon GYM\n"
-    .string "Leader: Brock\l"
-    .string "The Rock-Solid Pokémon Trainer!$"
+    .string "Ginásio Pokémon da Cidade de Pewter\n"
+    .string "Líder: Brock\l"
+    .string "O Treinador Sólido como Rocha!$"
 
 
 PewterCity_EventScript_SlowpokeLady::
@@ -1207,17 +1207,17 @@ PewterCity_EventScript_SlowpokeLady::
 	end
 
 PewterCity_Text_RunAnErrand::
-	.string "Oh, hello there.\p"
-	.string "My Slowpoke likes to come here and\n"
-	.string "look at the berries with me.\p"
-	.string "It's usually quite nice, but I need\n"
-	.string "to run an errand today...\p"
-	.string "Could you stay here with Slowpoke for\n"
-	.string "a moment so I could run my errand?$"
+	.string "Oh, olá.\p"
+	.string "Meu Slowpoke adora vir aqui para ver\n"
+	.string "as Frutas comigo.\p"
+	.string "Normalmente é uma delícia, mas preciso\n"
+	.string "resolver um compromisso hoje...\p"
+	.string "Poderia ficar aqui com o Slowpoke por um\n"
+	.string "momento para que eu possa sair?$"
 
 PewterCity_Text_MaybeLater::
-	.string "Oh, I guess I could run my errand\n"
-	.string "later then...$"
+	.string "Ah, acho que posso resolver isso mais\n"
+	.string "tarde, então...$"
 
 
 PewterCity_EventScript_WatchSlowpoke::
@@ -1272,11 +1272,10 @@ PewterCity_EventScript_WatchedSlowpoke::
 	end
 
 PewterCity_Text_SlowpokeLovesPokeblocks::
-	.string "My Slowpoke here loves the\n"
-	.string "PokéBlocks that are made with\l"
-	.string "those berries.\p"
-	.string "If only I had a way to make my\n"
-	.string "my own at home!$"
+	.string "Meu Slowpoke aqui adora os Pokéblocos\n"
+	.string "que são feitos com essas Frutas.\p"
+	.string "Quem me dera poder fazer os meus\n"
+	.string "próprios em casa!$"
 
 PewterCity_EventScript_GiveBelueBerry::
 	giveitem ITEM_BELUE_BERRY, 1
@@ -1335,13 +1334,13 @@ PewterCity_EventScript_GiveRazzBerry::
 	return
 
 PewterCity_Text_ThankYouForWatchingSlowpoke::
-	.string "Sorry that took so long!\p"
-	.string "Let me give you something\n"
-	.string "for your trouble.$"
+	.string "Desculpe pela demora!\p"
+	.string "Deixe-me dar isto a você por ter\n"
+	.string "me ajudado.$"
 
 PewterCity_Text_WatchSlowpoke::
-	.string "Oh, thank you!\n"
-	.string "This won't take long at all!$"
+	.string "Oh, muito obrigada!\n"
+	.string "Não vou demorar quase nada!$"
 
 
 PewterCity_EventScript_LadyLeave1:

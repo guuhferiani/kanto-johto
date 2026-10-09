@@ -20,11 +20,11 @@ PewterCity_PokemonCenter_1F_EventScript_Gentleman::
 	end
 
 PewterCity_PokemonCenter_1F_Text_TeamRocketMtMoonImOnPhone::
-    .string "What!?\p"
-    .string "Team Rocket is at Mt. Moon?\n"
-    .string "Huh?\p"
-    .string "I'm on the phone!\n"
-    .string "Scram!$"
+    .string "O quê!?\p"
+    .string "A Equipe Rocket está no Monte Moon?\n"
+    .string "Hã?\p"
+    .string "Eu estou no telefone!\n"
+    .string "Cai fora!$"
 
 PewterCity_PokemonCenter_1F_EventScript_Jigglypuff::
 	lock
@@ -47,11 +47,11 @@ PewterCity_PokemonCenter_1F_EventScript_Youngster::
 	end
 
 PewterCity_PokemonCenter_1F_Text_WhenJiggylypuffSingsMonsGetDrowsy::
-    .string "Yawn!\p"
-    .string "When Jigglypuff sings, Pokémon get\n"
-    .string "drowsy…\p"
-    .string "…Me, too…\n"
-    .string "Snore…$"
+    .string "Bocejo…\p"
+    .string "Quando Jigglypuff canta, os Pokémon\n"
+    .string "ficam cheios de sono…\p"
+    .string "…Eu também…\n"
+    .string "Zzzzz…$"
 
 PewterCity_PokemonCenter_1F_EventScript_GBAKid1::
 	lock
@@ -60,15 +60,15 @@ PewterCity_PokemonCenter_1F_EventScript_GBAKid1::
 	end
 
 PewterCity_PokemonCenter_1F_Text_TradingMyClefairyForPikachu::
-    .string "I really want a Pikachu, so I'm\n"
-    .string "trading my Clefairy for one.$"
+    .string "Eu queria muito um Pikachu, então\n"
+    .string "estou trocando meu Clefairy por um.$"
 
 PewterCity_PokemonCenter_1F_EventScript_GBAKid2::
 	msgbox PewterCity_PokemonCenter_1F_Text_TradingPikachuWithKid, MSGBOX_NPC
 	end
 
 PewterCity_PokemonCenter_1F_Text_TradingPikachuWithKid::
-    .string "I'm trading Pokémon with that kid\n"
-    .string "there.\p"
-    .string "I had two Pikachu, so I figured\n"
-    .string "I might as well trade one.$"
+    .string "Estou trocando Pokémon com aquele\n"
+    .string "garoto ali.\p"
+    .string "Eu tinha dois Pikachu, então achei\n"
+    .string "que valia a pena trocar um.$"
