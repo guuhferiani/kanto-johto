@@ -6,10 +6,10 @@ Route2_House_EventScript_Scientist::
 	end
 
 Route2_House_Text_FaintedMonsCanUseFieldMoves::
-    .string "A fainted Pokémon just has no\n"
-    .string "energy left to battle.\p"
-    .string "It can still use moves like Cut\n"
-    .string "outside of battle.$"
+    .string "Um Pokémon desmaiado só está\n"
+    .string "sem energia para batalhar.\p"
+    .string "Ele ainda pode usar golpes como\n"
+    .string "Corte fora da batalha.$"
 
 Route2_House_EventScript_Reyley::
 	lock
@@ -40,12 +40,12 @@ Route2_House_EventScript_Reyley::
 	end
 
 Route2_House_Text_HeyThanks::
-	.string "Hey, thanks!$"
+	.string "Ei, muito obrigado!$"
 
 Route2_House_Text_LookingForMonWannaTradeForMon::
-	.string "I'm looking for the Pokémon\n"
+	.string "Estou procurando pelo Pokémon\n"
 	.string "{STR_VAR_1}!\p"
-	.string "Wanna trade one for my\n"
+	.string "Quer trocar um pelo meu\n"
 	.string "{STR_VAR_2}?$"
 
 Route2_House_EventScript_DeclineTrade::
@@ -54,8 +54,8 @@ Route2_House_EventScript_DeclineTrade::
 	end
 
 Route2_House_Text_AwwOhWell::
-	.string "Awww!\n"
-	.string "Oh, well…$"
+	.string "Aaaah!\n"
+	.string "Que pena, fazer o quê…$"
 
 Route2_House_EventScript_NotRequestedMon::
 	bufferspeciesname STR_VAR_1, VAR_0x8009
@@ -64,8 +64,8 @@ Route2_House_EventScript_NotRequestedMon::
 	end
 
 Route2_House_Text_WhatThatsNoMon::
-	.string "What?\n"
-	.string "That's no {STR_VAR_1}!$"
+	.string "O quê?\n"
+	.string "Esse não é um {STR_VAR_1}!$"
 
 Route2_House_EventScript_AlreadyTraded::
 	msgbox Route2_House_Text_IsntMyOldMonGreat
@@ -73,5 +73,6 @@ Route2_House_EventScript_AlreadyTraded::
 	end
 
 Route2_House_Text_IsntMyOldMonGreat::
-	.string "Isn't my old {STR_VAR_2} great?$"
+	.string "O meu antigo {STR_VAR_2}\n"
+	.string "não é incrível?$"
 

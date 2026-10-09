@@ -45,23 +45,23 @@ ViridianForest_Erin_House_EventScript_CoolTrainerErin::
 	end
 
 ViridianForest_Erin_House_Text_ErinIntro:
-	.string "Oh, hello again {PLAYER}!\p"
-	.string "Congrats on becoming the Champion!\p"
-	.string "Hard to believe that new trainer\n"
-	.string "I met a while back is now the new\l"
-	.string "Champion of Kanto.\p"
+	.string "Oh, olá novamente, {PLAYER}!\p"
+	.string "Parabéns por se tornar o Campeão!\p"
+	.string "É difícil acreditar que aquele jovem\n"
+	.string "treinador que conheci há um tempo\l"
+	.string "é agora o Campeão de Kanto.\p"
 	.string "...\p"
-	.string "Champion {PLAYER}, I challenge\n"
-	.string "you to a Pokémon battle!$"
+	.string "Campeão {PLAYER}, eu te desafio\n"
+	.string "para uma batalha Pokémon!$"
 
 ViridianForest_Erin_House_Text_ErinDefeat:
-	.string "Wow, Champion indeed!$"
+	.string "Uau, digno de um Campeão!$"
 
 ViridianForest_Erin_House_Text_ErinPostBattle:
-	.string "I'm very impressed with your\n"
-	.string "team and the growth you all have\l"
-	.string "achieved. Clefairy and I have\l"
-	.string "always believed you would go far.$"
+	.string "Estou muito impressionada com sua\n"
+	.string "equipe e a evolução de vocês.\l"
+	.string "Clefairy e eu sempre soubemos\l"
+	.string "que você iria longe.$"
 	
 ViridianForest_Erin_House_ChampionCheck::
 	lock
@@ -72,15 +72,14 @@ ViridianForest_Erin_House_ChampionCheck::
 	end
 
 ViridianForest_Erin_House_Greetings:
-	.string "Hello! Welcome to my home.\p"
-	.string "My name is Erin. I live here with\n"
-	.string "the friends I made along the way.\p"
-	.string "Did you recently start traveling\n"
-	.string "with your Pokémon?\p"
-	.string "... I see. Go introduce yourself\n"
-	.string "to my Clefairy! They have some\l"
-	.string "Oran Berries that your Pokémon\l"
-	.string "will love.$"
+	.string "Olá! Boas-vindas à minha casa.\p"
+	.string "Meu nome é Erin. Eu moro aqui com\n"
+	.string "os amigos que fiz pelo caminho.\p"
+	.string "Você começou a viajar recentemente\n"
+	.string "com seus Pokémon?\p"
+	.string "... Entendo. Vá dar um alô para o\n"
+	.string "meu Clefairy! Ele tem Frutas Oran\l"
+	.string "que seus Pokémon vão adorar.$"
 
 ViridianForest_Erin_House_Defeated::
 	msgbox ViridianForest_Erin_House_DefeatedText MSGBOX_DEFAULT
@@ -88,8 +87,8 @@ ViridianForest_Erin_House_Defeated::
 	end
 
 ViridianForest_Erin_House_DefeatedText:	
-	.string "I'm very impressed with your\n"
-	.string "team and the growth you all have\l"
-	.string "achieved. Clefairy and I have\l"
-	.string "always believed you would go far.$"
+	.string "Estou muito impressionada com sua\n"
+	.string "equipe e a evolução de vocês.\l"
+	.string "Clefairy e eu sempre soubemos\l"
+	.string "que você iria longe.$"
 

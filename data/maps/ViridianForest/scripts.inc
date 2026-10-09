@@ -16,20 +16,20 @@ ViridianForest_EventScript_Youngster::
 	end
 
 ViridianForest_Text_FriendsItchingToBattle::
-    .string "I came here with some friends to\n"
-    .string "catch us some Bug Pokémon!\p"
-    .string "They're all itching to get into\n"
-    .string "some Pokémon battles!$"
+    .string "Vim aqui com alguns amigos para\n"
+    .string "pegar uns Pokémon Inseto!\p"
+    .string "Eles estão loucos para entrar em\n"
+    .string "uma batalha Pokémon!$"
 
 ViridianForest_EventScript_Boy::
 	msgbox ViridianForest_Text_RanOutOfPokeBalls, MSGBOX_NPC
 	end
 
 ViridianForest_Text_RanOutOfPokeBalls::
-    .string "I was throwing Poké Balls to\n"
-    .string "catch Pokémon, and I ran out.\p"
-    .string "That's why you can never have too\n"
-    .string "many Poké Balls.$"
+    .string "Eu estava jogando Pokébolas para\n"
+    .string "capturar Pokémon, e acabaram.\p"
+    .string "Por isso você nunca deve ter\n"
+    .string "poucas Pokébolas.$"
 
 ViridianForest_EventScript_Rick::
 	trainerbattle_single TRAINER_BUG_CATCHER_RICK, ViridianForest_Text_RickIntro, ViridianForest_Text_RickDefeat
@@ -37,16 +37,17 @@ ViridianForest_EventScript_Rick::
 	end
 
 ViridianForest_Text_RickIntro::
-    .string "Hey! You have Pokémon!\n"
-    .string "Come on!\l"
-    .string "Let's battle 'em!$"
+    .string "Ei! Você tem Pokémon!\n"
+    .string "Venha!\l"
+    .string "Vamos batalhar!$"
 
 ViridianForest_Text_RickDefeat::
-    .string "No!\nCaterpie can't hack it!$"
+    .string "Não!\n"
+    .string "Caterpie não aguentou!$"
 
 ViridianForest_Text_RickPostBattle::
-    .string "Ssh! You'll scare the bugs away.\n"
-    .string "Another time, okay?$"
+    .string "Shiu! Vai espantar os insetos.\n"
+    .string "Outra hora, tá bom?$"
 
 ViridianForest_EventScript_Doug::
 	trainerbattle_single TRAINER_BUG_CATCHER_DOUG, ViridianForest_Text_DougIntro, ViridianForest_Text_DougDefeat
@@ -54,17 +55,17 @@ ViridianForest_EventScript_Doug::
 	end
 
 ViridianForest_Text_DougIntro::
-    .string "Yo!\n"
-    .string "You can't jam out if you're a\l"
-    .string "Pokémon Trainer!$"
+    .string "E aí!\n"
+    .string "Você não pode amarelar se for\l"
+    .string "um Treinador Pokémon!$"
 
 ViridianForest_Text_DougDefeat::
-    .string "Huh?\n"
-    .string "I ran out of Pokémon!$"
+    .string "O quê?\n"
+    .string "Fiquei sem Pokémon!$"
 
 ViridianForest_Text_DougPostBattle::
-    .string "That totally stinks! I'm going to\n"
-    .string "catch some stronger ones!$"
+    .string "Que droga! Eu vou pegar uns\n"
+    .string "mais fortes agora!$"
 
 
 ViridianForest_EventScript_Sammy::
@@ -73,18 +74,18 @@ ViridianForest_EventScript_Sammy::
 	end
 
 ViridianForest_Text_SammyIntro::
-    .string "Hey, wait up!\n"
-    .string "What's the hurry? Why the rush?$"
+    .string "Ei, espere aí!\n"
+    .string "Qual a pressa? Por que correr?$"
 
 ViridianForest_Text_SammyDefeat::
-    .string "I give!\n"
-    .string "You're good at this!$"
+    .string "Eu me rendo!\n"
+    .string "Você manda bem nisso!$"
 
 ViridianForest_Text_SammyPostBattle::
-    .string "Sometimes, you can find stuff on\n"
-    .string "the ground.\p"
-    .string "I'm looking for the stuff I\n"
-    .string "dropped. Can you help me?$"
+    .string "Às vezes, você encontra coisas\n"
+    .string "no chão.\p"
+    .string "Estou procurando as coisas que\n"
+    .string "eu deixei cair. Pode me ajudar?$"
 
 ViridianForest_EventScript_Anthony::
 	trainerbattle_single TRAINER_BUG_CATCHER_ANTHONY, ViridianForest_Text_AnthonyIntro, ViridianForest_Text_AnthonyDefeat
@@ -92,15 +93,15 @@ ViridianForest_EventScript_Anthony::
 	end
 
 ViridianForest_Text_AnthonyIntro::
-    .string "I might be little, but I won't like\n"
-    .string "it if you go easy on me!$"
+    .string "Posso ser pequeno, mas não vou\n"
+    .string "gostar se você pegar leve!$"
 
 ViridianForest_Text_AnthonyDefeat::
-    .string "Oh, boo.\n"
-    .string "Nothing went right.$"
+    .string "Ah, droga.\n"
+    .string "Nada deu certo.$"
 
 ViridianForest_Text_AnthonyPostBattle::
-    .string "I lost some of my allowance…$"
+    .string "Perdi parte da minha mesada…$"
 
 ViridianForest_EventScript_Charlie::
 	trainerbattle_single TRAINER_BUG_CATCHER_CHARLIE, ViridianForest_Text_CharlieIntro, ViridianForest_Text_CharlieDefeat
@@ -108,15 +109,15 @@ ViridianForest_EventScript_Charlie::
 	end
 
 ViridianForest_Text_CharlieIntro::
-    .string "Did you know that Pokémon evolve?$"
+    .string "Você sabia que Pokémon evoluem?$"
 
 ViridianForest_Text_CharlieDefeat::
-    .string "Oh!\n"
-    .string "I lost!$"
+    .string "Ah!\n"
+    .string "Eu perdi!$"
 
 ViridianForest_Text_CharliePostBattle::
-    .string "Bug Pokémon evolve quickly.\n"
-    .string "They're a lot of fun!$"
+    .string "Pokémon Inseto evoluem rápido.\n"
+    .string "Eles são muito divertidos!$"
 
 ViridianForest_EventScript_Lottie::
 	trainerbattle_single TRAINER_LASS_LOTTIE, ViridianForest_Text_LottieIntro, ViridianForest_Text_LottieDefeat
@@ -124,73 +125,74 @@ ViridianForest_EventScript_Lottie::
 	end
 
 ViridianForest_Text_LottieIntro::
-    .string "Hi, I'm Lottie!\n"
-    .string "Do you have a Pikachu?$"
+    .string "Oi, sou a Lottie!\n"
+    .string "Você tem um Pikachu?$"
 
 ViridianForest_Text_LottieDefeat::
-    .string "Oh no, really?$"
+    .string "Ah não, sério?$"
 
 ViridianForest_Text_LottiePostBattle::
-    .string "I looked forever, but I never\n"
-    .string "found a Pikachu here.$"
+    .string "Procurei por horas, mas nunca\n"
+    .string "achei um Pikachu por aqui.$"
 
 ViridianForest_EventScript_TrainerTips1::
 	msgbox ViridianForest_Text_AvoidGrassyAreasWhenWeak, MSGBOX_SIGN
 	end
 
 ViridianForest_Text_AvoidGrassyAreasWhenWeak::
-    .string "Trainer Tips:\p"
-    .string "If your Pokémon are weak and you\n"
-    .string "want to avoid battles, stay away\l"
-    .string "from grassy areas!$"
+    .string "Dicas para Treinadores:\p"
+    .string "Se seus Pokémon estiverem fracos e\n"
+    .string "você quiser evitar batalhas, fique\l"
+    .string "longe das áreas de grama alta!$"
 
 ViridianForest_EventScript_TrainerTips2::
 	msgbox ViridianForest_Text_UseAntidoteForPoison, MSGBOX_SIGN
 	end
 
 ViridianForest_Text_UseAntidoteForPoison::
-    .string "Trainer Tips:\p"
-    .string "For poison, use Antidote!\n"
-    .string "Get it at Pokémon Marts!$"
+    .string "Dicas para Treinadores:\p"
+    .string "Contra envenenamento, use Antídoto!\n"
+    .string "Compre em Pokémon Marts!$"
 
 ViridianForest_EventScript_TrainerTips3::
 	msgbox ViridianForest_Text_ContactOakViaPCToRatePokedex, MSGBOX_SIGN
 	end
 
 ViridianForest_Text_ContactOakViaPCToRatePokedex::
-    .string "Trainer Tips:\p"
-    .string "You can call Prof. Oak with\n"
-    .string "your Cell Phone to get your\l"
-    .string "Pokédex evaluated!$"
+    .string "Dicas para Treinadores:\p"
+    .string "Você pode ligar para o Prof. Carvalho\n"
+    .string "pelo Celular para ter sua Pokédex\l"
+    .string "avaliada!$"
 
 ViridianForest_EventScript_TrainerTips4::
 	msgbox ViridianForest_Text_CantCatchOwnedMons, MSGBOX_SIGN
 	end
 
 ViridianForest_Text_CantCatchOwnedMons::
-    .string "Trainer Tips:\p"
-    .string "You can't catch a Pokémon that\n"
-    .string "belongs to someone else.\p"
-    .string "Throw Poké Balls only at wild\n"
-    .string "Pokémon to catch them!$"
+    .string "Dicas para Treinadores:\p"
+    .string "Você não pode capturar um Pokémon\n"
+    .string "que pertence a outra pessoa.\p"
+    .string "Jogue Pokébolas apenas em Pokémon\n"
+    .string "selvagens para capturá-los!$"
 
 ViridianForest_EventScript_TrainerTips5::
 	msgbox ViridianForest_Text_WeakenMonsBeforeCapture, MSGBOX_SIGN
 	end
 
 ViridianForest_Text_WeakenMonsBeforeCapture::
-    .string "Trainer Tips:\p"
-    .string "Weaken Pokémon before attempting\n"
-    .string "capture!\p"
-    .string "When healthy, they may escape!$"
+    .string "Dicas para Treinadores:\p"
+    .string "Enfraqueça os Pokémon antes de\n"
+    .string "tentar a captura!\p"
+    .string "Se estiverem saudáveis, eles podem\n"
+    .string "escapar com facilidade!$"
 
 ViridianForest_EventScript_ExitSign::
 	msgbox ViridianForest_Text_LeavingViridianForest, MSGBOX_SIGN
 	end
 
 ViridianForest_Text_LeavingViridianForest::
-    .string "Leaving Viridian Forest\n"
-    .string "Pewter City Ahead$"
+    .string "Saindo da Floresta de Viridian\n"
+    .string "Cidade de Pewter à frente$"
 
 ViridianForest_EventScript_ItemPotion::
 	finditem ITEM_POTION, 1
@@ -235,8 +237,8 @@ ViridianForest_EventScript_Venusaur::
 
 ViridianForest_Text_Venusaur:
 	.string "CHARLES: Sarrrr...\p"
-    .string "Venusaur is enjoying the smell of\n"
-	.string "the grass and pollen on the wind.$"
+    .string "Venusaur está aproveitando o cheiro\n"
+	.string "da grama e o pólen no vento.$"
 
 ViridianForest_EventScript_BugCatcherDani::
 	lock
@@ -249,19 +251,20 @@ ViridianForest_EventScript_BugCatcherDani::
 	end
 
 ViridianForest_Text_DaniIntro:
-	.string "Hey there!\p"
-	.string "Can I ask a favor? Charles over\n"
-	.string "there needs a bit of exercise.\p"
-	.string "Can you give us a good battle?$"
+	.string "Olá!\p"
+	.string "Posso pedir um favor? O Charles ali\n"
+	.string "precisa de um pouco de exercício.\p"
+	.string "Pode nos dar uma boa batalha?$"
 
 ViridianForest_Text_DaniDefeat:
-	.string "You did great, Charles!$"
+	.string "Você foi ótimo, Charles!$"
 
 ViridianForest_Text_DaniPostBattle:
-	.string "Thank you for that. He's older\n"
-    .string "but the best Venasaur I know.\p"
-    .string "Today's battle will help keep\n"
-    .string "the pep in his step!$"
+	.string "Muito obrigado por isso. Ele é mais\n"
+    .string "velho, mas é o melhor Venusaur\l"
+    .string "que conheço.\p"
+    .string "A batalha de hoje vai ajudá-lo a\n"
+    .string "manter a energia em dia!$"
 
 ViridianForest_EventScript_MegaHintVenusaur::    
     goto_if_set FLAG_GOT_VENUSAURITE, ViridianForest_EventScript_DaniDefeated
@@ -271,14 +274,14 @@ ViridianForest_EventScript_MegaHintVenusaur::
     end
     
 ViridianForest_Text_VenusaurMegaHint:
-    .string "Hmm? You're looking for the\n"
-    .string "Mega Stones?\p"
-    .string "I can tell you where to find the\n"
-    .string "Venusaurite, no problem!\p"
-    .string "I have some Pokémon Breeder pals\n"
-    .string "in Cerulean City. Their backyard\l"
-    .string "had two last I visited. They\l"
-    .string "let me have one, so go ask them!$"
+    .string "Hmm? Você está procurando pelas\n"
+    .string "Mega Pedras?\p"
+    .string "Eu posso te dizer onde encontrar a\n"
+    .string "Venusaurita, sem problemas!\p"
+    .string "Tenho amigos Criadores Pokémon na\n"
+    .string "Cidade de Cerulean. O quintal deles\l"
+    .string "tinha duas na última vez que visitei.\l"
+    .string "Eles me deram uma, vá perguntar a eles!$"
 
 ViridianForest_EventScript_DaniDefeated::
     msgbox DaniDefeated_Text MSGBOX_DEFAULT
@@ -286,10 +289,10 @@ ViridianForest_EventScript_DaniDefeated::
 	end
 
 DaniDefeated_Text:	
-	.string "Have you met Erin, the trainer\n"
-	.string "who lives in the cabin?\p"
-    .string "Her Clefairy gives me berries\n"
-    .string "whenever Charles wants.$"
+	.string "Você já conheceu a Erin, a treinadora\n"
+	.string "que mora na cabana?\p"
+    .string "O Clefairy dela me dá Frutas\n"
+    .string "sempre que o Charles quer.$"
 
 ViridianForest_EventScript_VenusaurDefeated::
 	msgbox VenusaurDefeated MSGBOX_DEFAULT
@@ -297,5 +300,5 @@ ViridianForest_EventScript_VenusaurDefeated::
 	end
 
 VenusaurDefeated:	
-	.string "Charles is breathing heavily,\n"
-	.string "but his eyes are full of wonder.$"
+	.string "Charles está respirando fundo,\n"
+	.string "mas seus olhos estão cheios de encanto.$"

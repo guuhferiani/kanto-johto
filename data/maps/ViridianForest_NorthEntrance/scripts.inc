@@ -6,29 +6,30 @@ Route2_ViridianForest_NorthEntrance_EventScript_Youngster::
     end
 	
 Route2_ViridianForest_NorthEntrance_Text_ManyMonsOnlyInForests::
-    .string "Many Pokémon live only in forests \n"
-    .string "and caves.\p"
-    .string "You need to be persistent and look\n"
-    .string "everywhere to get different kinds.$"
+    .string "Muitos Pokémon vivem apenas em\n"
+    .string "florestas e cavernas.\p"
+    .string "Você precisa ser persistente e\n"
+    .string "procurar por toda parte para\l"
+    .string "encontrar espécies diferentes.$"
 
 Route2_ViridianForest_NorthEntrance_EventScript_OldMan::
 	msgbox Route2_ViridianForest_NorthEntrance_Text_CanCutSkinnyTrees, MSGBOX_NPC
 	end
 
 Route2_ViridianForest_NorthEntrance_Text_CanCutSkinnyTrees::
-    .string "Have you noticed the skinny trees\n"
-    .string "on the roadside?\p"
-    .string "They can be cut down by a special\n"
-    .string "Pokémon move, I hear.$"
+    .string "Você reparou nas arvorezinhas finas\n"
+    .string "na beira da estrada?\p"
+    .string "Elas podem ser cortadas com um golpe\n"
+    .string "Pokémon especial, ouvi dizer.$"
 
 Route2_ViridianForest_NorthEntrance_EventScript_CooltrainerF::
 	msgbox Route2_ViridianForest_NorthEntrance_Text_CanCancelEvolution, MSGBOX_NPC
 	end
 
 Route2_ViridianForest_NorthEntrance_Text_CanCancelEvolution::
-    .string "Do you know the evolution-cancel\n"
-    .string "technique?\p"
-    .string "When a Pokémon is evolving, you\n"
-    .string "can stop the process.\p"
-    .string "It's a technique for raising\n"
-    .string "Pokémon the way they are.$"
+    .string "Você conhece a técnica de cancelar\n"
+    .string "a evolução?\p"
+    .string "Quando um Pokémon estiver evoluindo,\n"
+    .string "você pode interromper o processo.\p"
+    .string "É uma técnica para criar seus Pokémon\n"
+    .string "do jeitinho que eles são.$"

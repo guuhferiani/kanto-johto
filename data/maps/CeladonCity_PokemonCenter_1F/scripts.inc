@@ -588,14 +588,14 @@ Looker_Text_RocketFugitives::
 	.string "trainers like you!$"
 
 RocketFugitive_Text_Intro::
-	.string "Fugitive: You'll never take\n"
-	.string "me alive!$"
+	.string "Fugitivo: Você nunca vai me\n"
+	.string "pegar com vida!$"
 
 RocketFugitive_Text_Defeat::
-	.string "Fugitive: Okay! Okay!\n"
-	.string "I give up!$"
+	.string "Fugitivo: Está bem! Está bem!\n"
+	.string "Eu me rendo!$"
 
 RocketFugitive_Text_PostBattle::
-	.string "Fugitive: Fine!\p"
-	.string "I'll turn myself in.$"
+	.string "Fugitivo: Tá legal!\p"
+	.string "Eu vou me entregar.$"
 
