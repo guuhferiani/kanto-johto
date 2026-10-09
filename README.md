@@ -1,58 +1,85 @@
-# PokéClassic
-## Status: Version 1.5.1 released!
-### DaniRainbow's fork: In maintance mode. Enjoy the v1.5.1 release!
+# Pokémon Kanto & Johto (PokéClassic)
 
-PokéClassic is a recreation of Pokémon Yellow, recreated in the Pokémon Emerald engine. Revisit your classic adventures through Kanto with new features, questlines, and post game content!
-This fork was created to address the unfixed issues with the original repository and accomplished unofficial PokéClassic 1.4 and 1.5 releases. v1.5 will close out this chapter.
-# Getting PokeClassic
-This repository builds the following ROM:
+<div align="center">
 
-* pokeClassic.gba `sha1: 7E27A7878D6AEB3B798757F98E60D1064D762DBB`
+![GBA](https://img.shields.io/badge/Platform-GBA-red?style=for-the-badge&logo=nintendo)
+![Engine](https://img.shields.io/badge/Engine-pokeemerald-green?style=for-the-badge)
+![Language](https://img.shields.io/badge/Idioma-Portugu%C3%AAs%20(PT--BR)-blue?style=for-the-badge)
+![Build](https://img.shields.io/github/actions/workflow/status/guuhferiani/kanto-johto/build.yml?branch=main&style=for-the-badge)
 
-**updated 8/16/2026**
+**Uma recriação fiel da jornada de Pokémon Yellow construída sobre a avançada engine de Pokémon Emerald (`pokeemerald`) para o Game Boy Advance, com tradução completa em Português do Brasil e novos recursos!**
 
-To compile this ROM yourself, see [Pret's Installation Guide](https://github.com/pret/pokeemerald/blob/master/INSTALL.md) on how to get started with the decompilations. Then, clone this branch and build the ROM by changing "pokeemerald" to "pokeclassic" in the instructions.
-
-Otherwise, patch files will occasionally be released here. These will be slower to release than pulling updates yourself. To patch this game, you will need to provide your own ROM.
-## Interested in bug testing or have a bug you wish to report?
-
-Please use the following template when you submit a new issue: 
+</div>
 
 ---
-1) Issue: **Summary of the issue**
 
-2) Platform: (GBA, PC, Android, iPhone, Emulation Handheld)
-3) Emulator or Flashcart: (Name and Version)
-4) Version or Commit of Pokeclassic: (ie. 9c3a49a)
-4) Error Code (if applicable):
-5) Steps to reproduce the issue: 
-6) Link to screenshots or videos of the issue (file sharing service, ie Google Drive or Imgur preferred):
-7) Do you have a save file you can share if requested? : 
-8) Any cheats or save file editing? :
+## 📖 Sobre o Jogo
+
+**Pokémon Kanto & Johto (PokéClassic)** une a nostalgia e os eventos inesquecíveis da clássica versão **Amarela (Pokémon Yellow)** com toda a robustez, física de batalha e gráficos da 3ª geração do GBA:
+
+* **Enredo Fiel ao Pokémon Yellow:**
+  * Início em Pallet Town recebendo o **Pikachu** especial do Professor Carvalho.
+  * O rival Blue assume o **Eevee** como seu Pokémon inicial.
+  * Presença da dupla **Jessie e James** (Equipe Rocket) com Meowth, Arbok e Weezing em batalhas exclusivas (Torre Pokémon, Esconderijo de Celadon e Silph Co.).
+  * Os três iniciais de Kanto (**Bulbasaur**, **Charmander** e **Squirtle**) podem ser recebidos gratuitamente por NPCs de eventos clássicos.
+* **Sistema de Pokémon Companheiro (*Follower Pokémon*):**
+  * O Pikachu (ou qualquer outro membro da sua equipe) anda fora da Pokébola acompanhando seus passos no mapa, com direito a interações e expressões de humor.
+* **Mecânicas da Geração 3 & Modernizações:**
+  * Sistema de combate de *Pokémon Emerald* com Habilidades (*Abilities*), 25 Naturezas, sistema avançado de IVs/EVs.
+  * Ciclo de **Dia e Noite**.
+  * Ferramenta de busca **DexNav**.
+  * Sistema de **Mega Evoluções** e pedras evolutivas espalhadas pelo mapa.
+  * Novos recursos de pós-jogo e missões secundárias.
+
 ---
-All individuals who submit relevant issues or have their pull request merged will be credited below.
-# Credits
-Original developer: 
-    danenders/LazyDev
 
-Playtester, 1.4+ developer: 
-    DaniRainbow
+## 🇧🇷 Projeto de Tradução (PT-BR)
 
-Designers:
-    Headlocker03 ,
-    Liquid Justice
+Este repositório conta com um projeto ativo de localização para o **Português do Brasil**:
 
-Special Thanks:
-danenders: Special thanks to Hyo Oppa, Wolf, Solo993, Bushbugger, PokeMerp, Lunos, TheXaman, Ghoulslash, citrusbolt, asparaguseduardo, exposeed, surskitty, GriffinR, & the Pret Discord.
+* **Menus de Batalha & Combate:** 100% traduzidos (*Lutar, Mochila, Pokémon, Fugir*, mensagens de golpes, super efetivo, acertos críticos, status, EXP e captura).
+* **Mochila & Bolsos:** Bolsos organizados em PT-BR (*Itens, Remédios, Poké Bolas, Itens Batalha, Frutas, Tesouros, TMs & HMs, Itens-Chave*) com nomes dos itens traduzidos.
+* **Menu da Equipe & Sumário:** Abas e estatísticas traduzidas com todas as 25 naturezas em português (*Firme, Modesta, Tímida, Alegre, etc.*).
+* **Sistema de Salvar & Menu de Opções:** Mensagens de gravação e todas as configurações traduzidas.
+* **Serviços Essenciais:** Diálogos da Enfermeira Joy, Atendentes do Poké Mart e PC do Bill em português.
+* **Diálogos de NPCs:** Tradução em progressão contínua mapa a mapa (Pallet Town, Rota 1 e Viridian City concluídas).
 
-DaniRainbow: I would like to say thank you to ShadowXeen, Jaizu, Dani96sp, MrMazzone, Rorydaredking, khurram1192, Bamboozaler, voloved, Eduardo Quezada D'Ottone, Fyreire, and Hiroshi Sotomura for previous contributions that allowed me to create a firm foundation to start from. 
+---
 
-Thank you to PRET Discord members redspoon, Kurausukun, melody, GriffinR, FiascoFinn, MeekRhino, Josh, and Ketsuban. 
+## 🛠️ Como Compilar o Projeto
 
-Thank you to RHH (Rom Hacking Hideout) and RHH Discord members Jasper 3, surskitty, Alex, RavePossum, Katy, Viridian, RWXO, and hedara. Thank you to Team Aqua's Hideout Discord members Lhea and hedara.
+O projeto utiliza o toolchain bare-metal **devkitARM** e a ferramenta **agbcc**:
 
-Bug Catchers: Fantom6464, JaxterHawk, Nadamari, CodeKairos, raoul_duke1337, Vazromi92, faithmhui, Headlocker03, Liquid Justice, RiftyBusiness, Lil Dill
+### Pré-requisitos (Linux ou Windows com WSL2 - Ubuntu)
+1. Instale as dependências essenciais:
+   ```bash
+   sudo apt update
+   sudo apt install build-essential gcc-arm-none-eabi binutils-arm-none-eabi libpng-dev
+   ```
+2. Instale o compilador C compatível com GBA (`agbcc`):
+   ```bash
+   git clone https://github.com/pret/agbcc.git
+   cd agbcc
+   ./build.sh
+   ./install.sh /caminho/para/kanto-johto
+   cd ..
+   ```
 
-Special thanks to Lil Dill for always being happy to consult on my projects. Special thanks to Meara, Marzi, Mayu, Lhea, and Exclsior. Special thanks to Black Belt Jiraiya for helping with Hex Maniac Camran. :D
+### Compilando a ROM
+No diretório raiz do projeto:
+```bash
+make -j$(nproc)
+```
+O arquivo binário executável será gerado na raiz:
+* `Pokemon_Kanto_Johto.gba` / `pokeClassic.gba`
 
-Shiny indicator by InfiniteBacon42.
+---
+
+## 👥 Créditos & Agradecimentos
+
+* **Desenvolvedor Original:** danenders / LazyDev
+* **Desenvolvedor da v1.4 / v1.5 & Playtester:** DaniRainbow
+* **Designers:** Headlocker03, Liquid Justice
+* **Localização PT-BR:** Gustavo Feriani & Comunidade Antigravity
+* **Equipe PRET & RHH:** Pret Discord, Rom Hacking Hideout (RHH) e Team Aqua's Hideout por fornecerem a base de descompilação `pokeemerald` e bibliotecas de expansão.
+* **Agradecimentos Especiais:** Hyo Oppa, Wolf, Solo993, Bushbugger, PokeMerp, Lunos, TheXaman, Ghoulslash, citrusbolt, asparaguseduardo, exposeed, surskitty, GriffinR, ShadowXeen, Jaizu, Dani96sp, MrMazzone, Rorydaredking, khurram1192, Bamboozaler, voloved, Eduardo Quezada D'Ottone, Fyreire, Hiroshi Sotomura, Lil Dill, InfiniteBacon42 (indicador Shiny).
