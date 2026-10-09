@@ -47,16 +47,16 @@ EventScript_CancelCut::
 	end
 
 Text_WantToCut:
-	.string "This tree looks like it can be\n"
-	.string "Cut down!\p"
-	.string "Would you like to Cut it?$"
+	.string "Esta árvore parece poder ser\n"
+	.string "cortada!\p"
+	.string "Deseja usar o Corte?$"
 
 Text_MonUsedFieldMove:
-	.string "{STR_VAR_1} used {STR_VAR_2}!$"
+	.string "{STR_VAR_1} usou {STR_VAR_2}!$"
 
 Text_CantCut:
-	.string "This tree looks like it can be\n"
-	.string "Cut down!$"
+	.string "Esta árvore parece poder ser\n"
+	.string "cortada!$"
 
 @ Interact with smashable rock
 EventScript_RockSmash::
@@ -210,12 +210,12 @@ EventScript_CancelSmash::
 	end
 
 Text_WantToSmash:
-	.string "This rock appears to be breakable.\n"
-	.string "Would you like to use Rock Smash?$"
+	.string "Esta rocha parece quebrável.\n"
+	.string "Deseja usar o Quebra-Pedra?$"
 
 Text_CantSmash:
-	.string "It's a rugged rock, but a Pokémon\n"
-	.string "may be able to smash it.$"
+	.string "É uma rocha resistente, mas um\n"
+	.string "Pokémon pode conseguir quebrá-la.$"
 
 EventScript_StrengthBoulder::
 	lockall
@@ -261,22 +261,22 @@ EventScript_CancelStrength::
 	end
 
 Text_WantToStrength:
-	.string "It's a big boulder, but a Pokémon\n"
-	.string "may be able to push it aside.\p"
-	.string "Would you like to use Strength?$"
+	.string "É uma grande rocha, mas um Pokémon\n"
+	.string "pode conseguir empurrá-la.\p"
+	.string "Deseja usar a Força?$"
 
 Text_MonUsedStrength:
-	.string "{STR_VAR_1} used Strength!\p"
-	.string "{STR_VAR_1}'s Strength made it\n"
-	.string "possible to move boulders around!$"
+	.string "{STR_VAR_1} usou a Força!\p"
+	.string "A Força de {STR_VAR_1} tornou\n"
+	.string "possível mover pedras grandes!$"
 
 Text_CantStrength:
-	.string "It's a big boulder, but a Pokémon\n"
-	.string "may be able to push it aside.$"
+	.string "É uma grande rocha, mas um Pokémon\n"
+	.string "pode conseguir empurrá-la.$"
 
 Text_StrengthActivated:
-	.string "Strength made it possible to move\n"
-	.string "boulders around.$"
+	.string "A Força tornou possível mover\n"
+	.string "pedras grandes.$"
 
 EventScript_UseWaterfall::
 	lockall
@@ -301,15 +301,15 @@ EventScript_EndWaterfall::
 	end
 
 Text_CantWaterfall:
-	.string "A wall of water is crashing down with\n"
-	.string "a mighty roar.$"
+	.string "Uma enorme parede de água está\n"
+	.string "despencando com força.$"
 
 Text_WantToWaterfall:
-	.string "It's a large waterfall.\n"
-	.string "Would you like to use Waterfall?$"
+	.string "É uma grande cachoeira.\n"
+	.string "Deseja usar a Cachoeira?$"
 
 Text_MonUsedWaterfall:
-	.string "{STR_VAR_1} used Waterfall.$"
+	.string "{STR_VAR_1} usou a Cachoeira.$"
 
 EventScript_UseDive::
 	lockall
@@ -359,27 +359,27 @@ EventScript_EndSurface::
 	end
 
 Text_CantDive:
-	.string "The sea is deep here. A Pokémon\n"
-	.string "may be able to go underwater.$"
+	.string "O mar é muito profundo aqui. Um\n"
+	.string "Pokémon pode ser capaz de mergulhar.$"
 
 Text_WantToDive:
-	.string "The sea is deep here.\n"
-	.string "Would you like to use Dive?$"
+	.string "O mar é muito profundo aqui.\n"
+	.string "Deseja usar o Mergulho?$"
 
 Text_MonUsedDive:
-	.string "{STR_VAR_1} used Dive.$"
+	.string "{STR_VAR_1} usou o Mergulho.$"
 
 Text_CantSurface:
-	.string "Light is filtering down from above.\n"
-	.string "A Pokémon may be able to surface.$"
+	.string "A luz está filtrando lá de cima.\n"
+	.string "Um Pokémon pode ser capaz de emergir.$"
 
 Text_WantToSurface:
-	.string "Light is filtering down from above.\n"
-	.string "Would you like to use Dive?$"
+	.string "A luz está filtrando lá de cima.\n"
+	.string "Deseja usar o Mergulho para subir?$"
 
 EventScript_FailSweetScent::
 	msgbox Text_FailSweetScent, MSGBOX_SIGN
 	end
 
 Text_FailSweetScent:
-	.string "Looks like there's nothing here…$"
+	.string "Parece que não há nada por aqui…$"

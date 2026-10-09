@@ -843,8 +843,8 @@ gText_UnusedNicknameReceivedPokemon::
 	.string "the {STR_VAR_2} you received?$"
 
 gText_PlayerWhitedOut::
-	.string "{PLAYER} is out of usable\n"
-	.string "Pokémon!\p{PLAYER} whited out!$"
+	.string "{PLAYER} não tem mais\n"
+	.string "Pokémon utilizáveis!\p{PLAYER} foi derrotado!$"
 
 gText_RegisteredTrainerinPokeNav::
 	.string "{STR_VAR_1} {STR_VAR_2} gave you\n"
