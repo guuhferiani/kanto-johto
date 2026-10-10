@@ -20,26 +20,26 @@ Route10_PokemonCenter_1F_EventScript_FatMan::
 	end
 
 Route10_PokemonCenter_1F_Text_NuggetUselessSoldFor5000::
-    .string "A nugget is totally useless.\n"
-    .string "So I sold it for ¥5000.$"
+    .string "Uma pepita de ouro não serve para nada.\n"
+    .string "Então eu vendi por ¥5000.$"
 
 Route10_PokemonCenter_1F_EventScript_Gentleman::
 	msgbox Route10_PokemonCenter_1F_Text_EveryTypeStrongerThanOthers, MSGBOX_NPC
 	end
 
 Route10_PokemonCenter_1F_Text_EveryTypeStrongerThanOthers::
-    .string "The types of Pokémon match up\n"
-    .string "differently with each other.\p"
-    .string "Every type is stronger than some\n"
-    .string "types and weaker than others.$"
+    .string "Os tipos de Pokémon se combinam\n"
+    .string "de maneiras diferentes entre si.\p"
+    .string "Cada tipo é mais forte que alguns tipos\n"
+    .string "e mais fraco que outros.$"
 
 Route10_PokemonCenter_1F_EventScript_Youngster::
 	msgbox Route10_PokemonCenter_1F_Text_HeardGhostsHauntLavender, MSGBOX_NPC
 	end
 
 Route10_PokemonCenter_1F_Text_HeardGhostsHauntLavender::
-    .string "I heard that ghosts haunt\n"
-    .string "Lavender Town.$"
+    .string "Ouvi dizer que fantasmas assombram o\n"
+    .string "Vilarejo de Lavender.$"
 
 @Aide Gift 2
 Route10_PokemonCenter_1F_EventScript_Aide::
@@ -63,15 +63,15 @@ Route10_PokemonCenter_1F_EventScript_Aide::
 
 Route10_PokemonCenter_1F_Text_GiveReward::
     .string "Oh… {PLAYER}!\n"
-    .string "I've been looking for you!\p"
-    .string "It's me, Cedar, the ever-present\n"
-    .string "aide to Prof. Oak.\p"
-    .string "How's your Pokédex coming along?\p"
-    .string "Give Prof. Oak a call sometime to\n"
-    .string "review your progress!\p"
-    .string "Anyway, he entrusted me with this\n"
-    .string "Everstone.\p"
-    .string "So, {PLAYER}, here you go!$"
+    .string "Estava procurando por você!\p"
+    .string "Sou eu, Cedar, o dedicado assistente\n"
+    .string "do Prof. Carvalho.\p"
+    .string "Como anda a sua Pokédex?\p"
+    .string "Ligue para o Prof. Carvalho qualquer hora\n"
+    .string "para avaliar o seu progresso!\p"
+    .string "De qualquer forma, ele me confiou esta\n"
+    .string "Pedra Eterna.\p"
+    .string "Então, {PLAYER}, aqui está!$"
 
 Route10_PokemonCenter_1F_EventScript_AlreadyGotReward::
     msgbox Route10_PokemonCenter_1F_Text_ExplainReward, MSGBOX_DEFAULT
@@ -79,14 +79,14 @@ Route10_PokemonCenter_1F_EventScript_AlreadyGotReward::
     end
 
 Route10_PokemonCenter_1F_Text_ExplainReward::
-    .string "Making Pokémon evolve certainly\n"
-    .string "can add to the Pokédex.\p"
-    .string "However, at times, you may not\n"
-    .string "want a certain Pokémon to evolve.\p"
-    .string "In that case, give the Everstone\n"
-    .string "to that Pokémon.\p"
-    .string "It will prevent evolution according\n"
-    .string "to the Professor.$"
+    .string "Fazer Pokémon evoluírem com certeza\n"
+    .string "ajuda a completar a Pokédex.\p"
+    .string "Porém, às vezes, você pode não querer\n"
+    .string "que certo Pokémon evolua.\p"
+    .string "Nesse caso, dê a Pedra Eterna\n"
+    .string "para esse Pokémon segurar.\p"
+    .string "Ela impedirá a evolução, de acordo\n"
+    .string "com o Professor.$"
 
 Route10_PokemonCenter_1F_EventScript_AideNextLocation::
     setflag FLAG_QUEUE_AIDE_CALL

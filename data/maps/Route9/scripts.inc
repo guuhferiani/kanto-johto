@@ -20,17 +20,17 @@ Route9_EventScript_Alicia::
 	end
 
 Route9_Text_AliciaIntro::
-    .string "You have Pokémon with you!\n"
-    .string "You're mine!$"
+    .string "Você tem Pokémon com você!\n"
+    .string "Você é meu!$"
 
 Route9_Text_AliciaDefeat::
-    .string "You deceived me…$"
+    .string "Você me enganou…$"
 
 Route9_Text_AliciaPostBattle::
-    .string "The tunnel coming up is pitch-black\n"
-    .string "inside.\p"
-    .string "You'll need Flash to get through\n"
-    .string "there.$"
+    .string "O túnel logo adiante é um breu total\n"
+    .string "lá dentro.\p"
+    .string "Você vai precisar do Flash para passar\n"
+    .string "por lá.$"
 
 Route9_EventScript_RegisterAliciaAfterBattle::
 	special PlayerFaceTrainerAfterBattle
@@ -41,9 +41,9 @@ Route9_EventScript_RegisterAliciaAfterBattle::
 	end
 
 Route9_Text_AliciaRegister:
-	.string "Tricking me was mean, but I'll\n"
-	.string "forgive you if you give me your\l"
-	.string "Cell Phone number.$"
+	.string "Foi maldade me enganar, mas eu te\n"
+	.string "perdoo se me der o número do seu\l"
+	.string "Celular.$"
 
 Route9_EventScript_AliciaRematch::
 	trainerbattle_rematch REMATCHABLE_TRAINER_PICNICKER_ALICIA_1, Route9_Text_AliciaRematchIntro, Route9_Text_AliciaDefeat
@@ -51,11 +51,11 @@ Route9_EventScript_AliciaRematch::
 	end
 
 Route9_Text_AliciaRematchIntro::
-	.string "We're to battle again?\n"
-	.string "This time, you're mine!$"
+	.string "Vamos batalhar de novo?\n"
+	.string "Desta vez você é meu!$"
 
 Route9_Text_AliciaRematchPostBattle::
-	.string "You tricked me again!$"
+	.string "Você me enganou de novo!$"
 
 
 Route9_EventScript_Brent::
@@ -64,16 +64,16 @@ Route9_EventScript_Brent::
 	end
 
 Route9_Text_BrentIntro::
-    .string "I got up early every day to raise\n"
-    .string "my Pokémon from cocoons!$"
+    .string "Acordei cedo todo dia para criar\n"
+    .string "meus Pokémon desde os casulos!$"
 
 Route9_Text_BrentDefeat::
-    .string "WHAT?\p"
-    .string "What a total waste of time!$"
+    .string "O QUÊ?\p"
+    .string "Que perda de tempo total!$"
 
 Route9_Text_BrentPostBattle::
-    .string "I have to collect more than bugs\n"
-    .string "to get stronger…$"
+    .string "Preciso colecionar mais do que insetos\n"
+    .string "para ficar mais forte…$"
 
 Route9_EventScript_Conner::
     trainerbattle_single TRAINER_BUG_CATCHER_CONNER, Route9_Text_ConnerIntro, Route9_Text_ConnerDefeat
@@ -81,14 +81,14 @@ Route9_EventScript_Conner::
     end
     
 Route9_Text_ConnerIntro::
-    .string "Go, my super bug Pokémon!$"
+    .string "Vão, meus super Pokémon inseto!$"
 
 Route9_Text_ConnerDefeat::
-    .string "My bugs…$"
+    .string "Meus insetos…$"
 
 Route9_Text_ConnerPostBattle::
-    .string "If you don't like bug Pokémon,\n"
-    .string "you bug me!$"
+    .string "Se você não gosta de Pokémon inseto,\n"
+    .string "você me irrita!$"
 
 Route9_EventScript_Chris::
     trainerbattle_single TRAINER_CAMPER_CHRIS, Route9_Text_ChrisIntro, Route9_Text_ChrisDefeat
@@ -96,14 +96,14 @@ Route9_EventScript_Chris::
     end
 
 Route9_Text_ChrisIntro::
-    .string "Who's that walking there with those\n"
-    .string "good-looking Pokémon?$"
+    .string "Quem é que vem andando ali com esses\n"
+    .string "Pokémon bonitões?$"
 
 Route9_Text_ChrisDefeat::
-    .string "Out like a light!$"
+    .string "Apagou feito uma lâmpada!$"
 
 Route9_Text_ChrisPostBattle::
-    .string "Keep walking!$"
+    .string "Continue andando!$"
 
 Route9_EventScript_Drew::
     trainerbattle_single TRAINER_CAMPER_DREW, Route9_Text_DrewIntro, Route9_Text_DrewDefeat
@@ -111,14 +111,14 @@ Route9_EventScript_Drew::
     end
 
 Route9_Text_DrewIntro::
-    .string "I'm taking the Rock Tunnel to\n"
-    .string "go to Lavender…$"
+    .string "Estou pegando o Túnel de Rocha para\n"
+    .string "ir a Lavender…$"
 
 Route9_Text_DrewDefeat::
-    .string "Can't measure up…$"
+    .string "Não dou conta…$"
 
 Route9_Text_DrewPostBattle::
-    .string "Are you off to Rock Tunnel, too?$"
+    .string "Você também está indo ao Túnel de Rocha?$"
 
 Route9_EventScript_Caitlin::
     trainerbattle_single TRAINER_PICNICKER_CAITLIN, Route9_Text_CaitlinIntro, Route9_Text_CaitlinDefeat
@@ -126,15 +126,15 @@ Route9_EventScript_Caitlin::
     end
 
 Route9_Text_CaitlinIntro::
-    .string "Don't you dare patronize me!$"
+    .string "Nem ouse me subestimar!$"
 
 Route9_Text_CaitlinDefeat::
-    .string "No!\n"
-    .string "You're too much.$"
+    .string "Não!\n"
+    .string "Você é demais.$"
 
 Route9_Text_CaitlinPostBattle::
-    .string "You're obviously talented.\n"
-    .string "Good luck to you!$"
+    .string "Você tem muito talento, com certeza.\n"
+    .string "Boa sorte para você!$"
 
 Route9_EventScript_Alan::
     trainerbattle_single TRAINER_HIKER_ALAN, Route9_Text_AlanIntro, Route9_Text_AlanDefeat
@@ -143,15 +143,15 @@ Route9_EventScript_Alan::
 
 Route9_Text_AlanIntro::
     .string "Hahahaha!\n"
-    .string "Bring it on!$"
+    .string "Pode vir com tudo!$"
 
 Route9_Text_AlanDefeat::
     .string "Hahahaha!\n"
-    .string "You beat me fair!$"
+    .string "Você me venceu na lealdade!$"
 
 Route9_Text_AlanPostBattle::
     .string "Hahahaha!\n"
-    .string "Us hearty guys always laugh!$"
+    .string "Nós, brutamontes, sempre rimos!$"
 
 Route9_EventScript_Brice::
     trainerbattle_single TRAINER_HIKER_BRICE, Route9_Text_BriceIntro, Route9_Text_BriceDefeat
@@ -160,14 +160,14 @@ Route9_EventScript_Brice::
     
 Route9_Text_BriceIntro::
     .string "Hahaha!\n"
-    .string "Aren't you a little toughie!$"
+    .string "Mas que sujeito durão você é!$"
 
 Route9_Text_BriceDefeat::
-    .string "What's that?$"
+    .string "O que foi isso?$"
 
 Route9_Text_BricePostBattle::
     .string "Hahaha!\n"
-    .string "Kids should be tough!$"
+    .string "Crianças têm que ser fortes mesmo!$"
 
 Route9_EventScript_Jeremy::
     trainerbattle_single TRAINER_HIKER_JEREMY, Route9_Text_JeremyIntro, Route9_Text_JeremyDefeat
@@ -176,24 +176,24 @@ Route9_EventScript_Jeremy::
 
 Route9_Text_JeremyIntro::
     .string "Bwahaha!\n"
-    .string "Great! I was bored, eh!$"
+    .string "Ótimo! Eu estava entediado, uai!$"
 
 Route9_Text_JeremyDefeat::
-    .string "Keep it coming, eh!\p"
-    .string "Oh wait.\n"
-    .string "I'm out of Pokémon!$"
+    .string "Manda mais, uai!\p"
+    .string "Opa, peraí.\n"
+    .string "Acabaram os meus Pokémon!$"
 
 Route9_Text_JeremyPostBattle::
-    .string "You sure had guts standing up to\n"
-    .string "me there, eh?$"
+    .string "Você teve muita coragem de me peitar\n"
+    .string "ali, hein?$"
 
 Route9_EventScript_RouteSign::
 	msgbox Route9_Text_RouteSign, MSGBOX_SIGN
 	end
 
 Route9_Text_RouteSign::
-    .string "Route 9\n"
-    .string "Cerulean City - Rock Tunnel$"
+    .string "Rota 9\n"
+    .string "Cidade de Cerulean - Túnel de Rocha$"
 
 Route9_EventScript_ItemBurnHeal::
 	finditem ITEM_BURN_HEAL, 1

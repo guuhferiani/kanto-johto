@@ -9,4 +9,4 @@ Route10_PokemonCenter_2F_Hiker::
 	end
 
 Route10_PokemonCenter_2F_Darkness::
-	.string "Rock Tunnel is too dark to get through!$"
+	.string "O Túnel de Rocha é escuro demais para conseguir passar!$"

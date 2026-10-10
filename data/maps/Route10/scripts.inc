@@ -20,22 +20,22 @@ Route10_EventScript_NorthRockTunnelSign::
 	end
 
 Route10_Text_RockTunnelDetourToLavender::
-    .string "Rock Tunnel\n"
-    .string "Detour to Lavender Town$"
+    .string "Túnel de Rocha\n"
+    .string "Desvio para o Vilarejo de Lavender$"
 
 Route10_EventScript_SouthRockTunnelSign::
 	msgbox Route10_Text_RockTunnel, MSGBOX_SIGN
 	end
 
 Route10_Text_RockTunnel::
-    .string "Rock Tunnel$"
+    .string "Túnel de Rocha$"
 
 Route10_EventScript_PowerPlantSign::
 	msgbox Route10_Text_PowerPlant, MSGBOX_SIGN
 	end
 
 Route10_Text_PowerPlant::
-    .string "Power Plant$"
+    .string "Usina de Energia$"
 
 Route10_EventScript_Mark::
 	trainerbattle_single REMATCHABLE_TRAINER_POKEMANIAC_MARK_1, Route10_Text_MarkIntro, Route10_Text_MarkDefeat, Route10_EventScript_RegisterMarkAfterBattle
@@ -46,16 +46,16 @@ Route10_EventScript_Mark::
 	end
 
 Route10_Text_MarkIntro::
-    .string "Wow, you came all the way here?\n"
-    .string "Maybe you're a PokéManiac, too?\l"
-    .string "Want to see my collection?$"
+    .string "Nossa, você veio até aqui?\n"
+    .string "Será que você também é um PokéManíaco?\l"
+    .string "Quer ver a minha coleção?$"
 
 Route10_Text_MarkDefeat::
     .string "Humph.\n"
-    .string "I'm not angry!$"
+    .string "Eu não estou bravo!$"
 
 Route10_Text_MarkPostBattle::
-    .string "I have more rare Pokémon at home!$"
+    .string "Tenho Pokémon ainda mais raros em casa!$"
 
 Route10_EventScript_RegisterMarkAfterBattle::
 	special PlayerFaceTrainerAfterBattle
@@ -66,9 +66,9 @@ Route10_EventScript_RegisterMarkAfterBattle::
 	end
 
 Route10_Text_MarkRegister:
-	.string "If you give me your number,\n"
-	.string "I'll show you my Pokémon\l"
-	.string "collection sometime.$"
+	.string "Se você me passar seu número,\n"
+	.string "eu te mostro a minha coleção de\l"
+	.string "Pokémon qualquer hora dessas.$"
 
 Route10_EventScript_MarkRematch::
 	trainerbattle_rematch REMATCHABLE_TRAINER_POKEMANIAC_MARK_1, Route10_Text_MarkRematchIntro, Route10_Text_MarkDefeat
@@ -76,11 +76,11 @@ Route10_EventScript_MarkRematch::
 	end
 
 Route10_Text_MarkRematchIntro::
-	.string "My Pokémon!\n"
-	.string "Let me show you them!$"
+	.string "Meus Pokémon!\n"
+	.string "Deixe-me mostrá-los a você!$"
 
 Route10_Text_MarkRematchPostBattle::
-	.string "You're the real PokéManiac!$"
+	.string "Você é o verdadeiro PokéManíaco!$"
 
 
 Route10_EventScript_Herman::
@@ -89,16 +89,16 @@ Route10_EventScript_Herman::
 	end
 
 Route10_Text_HermanIntro::
-    .string "Hi, kid!\n"
-    .string "Want to see my Pokémon?$"
+    .string "Oi, garoto!\n"
+    .string "Quer ver meus Pokémon?$"
 
 Route10_Text_HermanDefeat::
-    .string "Oh, no!\n"
-    .string "My Pokémon!$"
+    .string "Oh, não!\n"
+    .string "Meus Pokémon!$"
 
 Route10_Text_HermanPostBattle::
-    .string "I don't like you.\n"
-    .string "I don't like anyone better than me!$"
+    .string "Não gostei de você.\n"
+    .string "Não gosto de ninguém melhor que eu!$"
 
 Route10_EventScript_Heidi::
 	trainerbattle_single TRAINER_PICNICKER_HEIDI, Route10_Text_HeidiIntro, Route10_Text_HeidiDefeat
@@ -106,19 +106,19 @@ Route10_EventScript_Heidi::
 	end
 
 Route10_Text_HeidiIntro::
-    .string "I've been out at a Pokémon Gym\n"
-    .string "a few times.\p"
-    .string "…But I always lose.$"
+    .string "Já fui a um Ginásio Pokémon\n"
+    .string "algumas vezes.\p"
+    .string "…Mas eu sempre perco.$"
 
 Route10_Text_HeidiDefeat::
-    .string "Ohh!\n"
-    .string "After all my training!$"
+    .string "Aaah!\n"
+    .string "Depois de todo o meu treino!$"
 
 Route10_Text_HeidiPostBattle::
-    .string "I noticed some PokéManiacs\n"
-    .string "prowling around.\p"
-    .string "Can you imagine? Them?\n"
-    .string "Up here in the mountains?$"
+    .string "Notei alguns PokéManíacos rondando\n"
+    .string "por aí.\p"
+    .string "Dá para acreditar? Eles?\n"
+    .string "Aqui em cima nas montanhas?$"
 
 Route10_EventScript_Carol::
 	trainerbattle_single TRAINER_PICNICKER_CAROL, Route10_Text_CarolIntro, Route10_Text_CarolDefeat
@@ -126,18 +126,18 @@ Route10_EventScript_Carol::
 	end
 
 Route10_Text_CarolIntro::
-    .string "I'm feeling a bit faint.\n"
-    .string "I haven't hiked in some time.$"
+    .string "Estou me sentindo meio tonta.\n"
+    .string "Faz tempo que não faço trilha.$"
 
 Route10_Text_CarolDefeat::
-    .string "I'm too tired.\n"
-    .string "I wasn't up for it.$"
+    .string "Estou muito cansada.\n"
+    .string "Eu não estava no clima.$"
 
 Route10_Text_CarolPostBattle::
-    .string "The Pokémon here in the mountains\n"
-    .string "are so chunky…\p"
-    .string "I wish there were pink Pokémon\n"
-    .string "with a floral pattern!$"
+    .string "Os Pokémon aqui nas montanhas\n"
+    .string "são tão rechonchudos…\p"
+    .string "Quem dera houvesse Pokémon cor-de-rosa\n"
+    .string "com estampas florais!$"
 
 Route10_EventScript_Clark::
 	trainerbattle_single TRAINER_HIKER_CLARK, Route10_Text_ClarkIntro, Route10_Text_ClarkDefeat
@@ -149,13 +149,13 @@ Route10_Text_ClarkIntro::
 
 Route10_Text_ClarkDefeat::
     .string "Ha-haha!\n"
-    .string "Not laughing!\l"
-    .string "Ha-hay fever! Haha-ha-choo!$"
+    .string "Não tô rindo!\l"
+    .string "É al-alergia! Haha-ha-atchim!$"
 
 Route10_Text_ClarkPostBattle::
-    .string "Haha-ha-choo!\n"
-    .string "Ha-choo!\l"
-    .string "Snort! Snivel!$"
+    .string "Haha-ha-atchim!\n"
+    .string "Ha-atchim!\l"
+    .string "Fung! Snif!$"
 
 Route10_EventScript_Trent::
 	trainerbattle_single TRAINER_HIKER_TRENT, Route10_Text_TrentIntro, Route10_Text_TrentDefeat
@@ -164,13 +164,13 @@ Route10_EventScript_Trent::
 
 Route10_Text_TrentIntro::
     .string "Ah!\n"
-    .string "This mountain air is delicious!$"
+    .string "Este ar da montanha é uma delícia!$"
 
 Route10_Text_TrentDefeat::
-    .string "That cleared my head!$"
+    .string "Isso clareou a minha mente!$"
 
 Route10_Text_TrentPostBattle::
-    .string "I feel bloated on mountain air!$"
+    .string "Sinto-me empanturrado de ar da montanha!$"
 
 Route10_EventScript_LightBall::
 	finditem ITEM_LIGHT_BALL, 1
@@ -223,10 +223,9 @@ Route10_EventScript_GiveIapapaBerry::
 	return
 
 Route10_Text_BerryLass::
-	.string "You never know how long it may\n"
-	.string "be before you find the next Pokémon\l"
-	.string "Center.\p"
-	.string "Berries can help you out in a pinch.$"
+	.string "Nunca se sabe quanto tempo vai levar\n"
+	.string "até encontrar o próximo Centro Pokémon.\p"
+	.string "Frutas podem te salvar num aperto.$"
 
 Route10_EventScript_GotDailyBerry::
 	msgbox Route10_Text_BerryPrepared, MSGBOX_NPC
@@ -234,11 +233,11 @@ Route10_EventScript_GotDailyBerry::
 	end
 
 Route10_Text_BerryPrepared::
-	.string "I always make sure to have some\n"
-	.string "Berries with me when I go out.\p"
-	.string "You could say I'm berry prepared.\p"
+	.string "Eu sempre garanto levar algumas\n"
+	.string "Frutas comigo quando saio.\p"
+	.string "Dá para dizer que sou super pre-frutada.\p"
 	.string "...\p"
-	.string "Get it?$"
+	.string "Entendeu o trocadilho?$"
 
 Route10_RocketFugitive::
 	trainerbattle_single TRAINER_FUGITIVE_F, RocketFugitive_Text_Intro, RocketFugitive_Text_Defeat
