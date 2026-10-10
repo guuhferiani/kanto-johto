@@ -136,17 +136,17 @@ Route25_SeaCottage_EventScript_BillAskForHelp::
 	end
 
 Route25_SeaCottage_Text_ImBillHelpMeOutPal::
-    .string "Hiya! I'm a Pokémon…\n"
-    .string "…No I'm not!\p"
-    .string "Call me Bill!\n"
-    .string "I'm a true-blue PokéManiac!\p"
-    .string "Hey!\n"
-    .string "What's with that skeptical look?\p"
-    .string "I'm not joshing you, pal.\p"
-    .string "I screwed up an experiment and got\n"
-    .string "combined with a Pokémon!\p"
-    .string "So, how about it?\n"
-    .string "Help me out here!$"
+    .string "Opa! Eu sou um Pokémon…\n"
+    .string "…Não, não sou!\p"
+    .string "Me chame de Bill!\n"
+    .string "Sou um PokéManíaco de verdade!\p"
+    .string "Ei!\n"
+    .string "Que cara de desconfiança é essa?\p"
+    .string "Não estou brincando com você, amigo.\p"
+    .string "Eu errei feio num experimento e fui\n"
+    .string "fundido com um Pokémon!\p"
+    .string "E então, o que acha?\n"
+    .string "Me dá uma força aqui!$"
 
 Route25_SeaCottage_EventScript_DeclineHelpBill::
 	setflag FLAG_SAFE_FOLLOWER_MOVEMENT
@@ -156,20 +156,20 @@ Route25_SeaCottage_EventScript_DeclineHelpBill::
 	return
 
 Route25_SeaCottage_Text_NoPlease::
-    .string "No!?\n"
-    .string "Now don't be so cold!\p"
-    .string "Come on, you gotta help a guy in\n"
-    .string "deep, deep trouble!\p"
-    .string "What do you say?\n"
-    .string "Please?\l"
-    .string "Okay?\l"
-    .string "All right!$"
+    .string "Não!?\n"
+    .string "Não seja tão frio assim!\p"
+    .string "Qual é, você precisa ajudar um cara\n"
+    .string "em apuros gravíssimos!\p"
+    .string "O que me diz?\n"
+    .string "Por favor?\l"
+    .string "Beleza?\l"
+    .string "Tudo bem!$"
 
 Route25_SeaCottage_Text_RunCellSeparationOnPC::
-    .string "Wait till I get inside the\n"
-    .string "teleporter.\p"
-    .string "When I do, go to my PC and run\n"
-    .string "the Cell Separation System.$"
+    .string "Espere até eu entrar no\n"
+    .string "teletransportador.\p"
+    .string "Quando eu entrar, vá ao meu PC e rode\n"
+    .string "o Sistema de Separação Celular.$"
 
 Route25_SeaCottage_EventScript_BillWalkToTeleporterSouth::
 	applymovement LOCALID_BILL_CLEFAIRY, Route25_SeaCottage_Movement_BillWalkToTeleporterSouth
@@ -208,8 +208,8 @@ Route25_SeaCottage_EventScript_Computer::
 	end
 
 Route25_SeaCottage_Text_TeleporterIsDisplayed::
-    .string "Teleporter.exe is displayed on the\n"
-    .string "PC's monitor.$"
+    .string "Teleporter.exe está aberto na tela\n"
+    .string "do monitor do computador.$"
 
 Route25_SeaCottage_EventScript_RunCellSeparator::
 	fadeoutbgm 0
@@ -266,8 +266,8 @@ Route25_SeaCottage_EventScript_RunCellSeparator::
 	end
 
 Route25_SeaCottage_Text_InitiatedTeleportersCellSeparator::
-    .string "{PLAYER} opened Teleporter.exe!\n"
-    .string "It initiated the Cell Separator.$"
+    .string "{PLAYER} abriu Teleporter.exe!\n"
+    .string "Iniciou o Separador Celular.$"
 
 Route25_SeaCottage_Movement_CameraPanToTeleporters::
 	walk_up
@@ -320,18 +320,18 @@ Route25_SeaCottage_EventScript_BillGiveSSTicket::
 	end
 
 Route25_SeaCottage_Text_ThanksTakeThis::
-    .string "Bill: Yeehah!\n"
-    .string "Thanks, bud! I owe you one!\p"
-    .string "So, did you come to see my\n"
-    .string "Pokémon collection?\p"
-    .string "You didn't?\n"
-    .string "That's a bummer.\p"
-    .string "I've got to thank you…\n"
-    .string "Oh, here, maybe this'll do.$"
+    .string "Bill: Iuuu-huuu!\n"
+    .string "Valeu, amigo! Te devo essa!\p"
+    .string "Então, você veio ver a minha\n"
+    .string "coleção de Pokémon?\p"
+    .string "Não veio?\n"
+    .string "Que pena.\p"
+    .string "Mas preciso te agradecer…\n"
+    .string "Ah, tome, talvez isto sirva.$"
 
 Route25_SeaCottage_Text_ReceivedSSTicketFromBill::
-    .string "{PLAYER} received an S.S. Anne\n"
-    .string "ticket from Bill.$"
+    .string "{PLAYER} recebeu o Bilhete do\n"
+    .string "S.S. Anne de Bill.$"
 
 Route25_SeaCottage_EventScript_NoRoomForSSTicket::
 	msgbox Route25_SeaCottage_Text_YouveGotTooMuchStuff
@@ -339,7 +339,7 @@ Route25_SeaCottage_EventScript_NoRoomForSSTicket::
 	end
 	
 Route25_SeaCottage_Text_YouveGotTooMuchStuff::
-    .string "You've got too much stuff!$"
+    .string "Você está carregando coisas demais!$"
 
 
 Route25_SeaCottage_EventScript_GetDexNavOrSmallTalk::
@@ -358,14 +358,14 @@ Route25_SeaCottage_EventScript_BillGoToSSAnne::
 	end
 
 Route25_SeaCottage_Text_SSAnnePartyYouGoInstead::
-    .string "Bill: That cruise ship S.S. Anne\n"
-    .string "is in Vermilion City.\p"
-    .string "I hear there are lots of trainers\n"
-    .string "on board, too.\p"
-    .string "They invited me to their party, but\n"
-    .string "I can't stand fancy do's.\p"
-    .string "Why don't you go instead of me?\n"
-    .string "Go on and have a good time.$"
+    .string "Bill: Aquele navio de cruzeiro,\n"
+    .string "o S.S. Anne, está em Vermilion.\p"
+    .string "Ouvi dizer que há muitos treinadores\n"
+    .string "a bordo também.\p"
+    .string "Eles me convidaram para a festa deles,\n"
+    .string "mas não suporto eventos chiques.\p"
+    .string "Por que não vai no meu lugar?\n"
+    .string "Vá lá e divirta-se bastante!$"
 
 Route25_SeaCottage_EventScript_RegisterBill::
 	msgbox Route25_SeaCottage_Text_ReallyOweYouOne, MSGBOX_DEFAULT
@@ -390,36 +390,35 @@ Route25_SeaCottage_EventScript_RegisterBill::
 	end
 	
 Route25_SeaCottage_Text_ReallyOweYouOne::
-	.string "Bill: You know, I really owe you\n"
-	.string "for helping with my teleporter\l"
-	.string "accident.\p"
-	.string "I wish I could repay the favor\n"
-	.string "with something more than that\l"
-	.string "S.S. Ticket...$"
+	.string "Bill: Sabe, eu realmente te devo uma\n"
+	.string "por me salvar daquele acidente\l"
+	.string "no teletransportador.\p"
+	.string "Queria poder retribuir o favor\n"
+	.string "com algo a mais além daquele\l"
+	.string "Bilhete do S.S. Anne...$"
 
 Route25_SeaCottage_Text_IsThatAPokedex::
-	.string "Oh! Is that a Pokédex?\p"
-	.string "The other guy that came by\n"
-	.string "earlier had one of those, too.\p"
-	.string "You've got a PokéGear, right?\p"
-	.string "Let me hook you up with an app\n"
-	.string "I've been developing.$"
+	.string "Ah! Isso aí é uma Pokédex?\p"
+	.string "O outro garoto que passou por aqui\n"
+	.string "mais cedo também tinha uma.\p"
+	.string "Você tem um PokéGear, né?\p"
+	.string "Deixe-me instalar um aplicativo\n"
+	.string "que andei desenvolvendo!$"
 
 Route25_SeaCottage_Text_GetDexNav::
-	.string "Bill added the DexNav app to\n"
-	.string "{PLAYER}'s PokéGear!$"
+	.string "Bill adicionou o aplicativo DexNav\n"
+	.string "ao PokéGear de {PLAYER}!$"
 
 Route25_SeaCottage_Text_StillABeta::
-	.string "Bill: It's still technically in\n"
-	.string "its Beta stages, I guess.\p"
-	.string "There are a few more features I'd\n"
-	.string "like to add, but it might take some\l"
-	.string "time.\p"
-	.string "I know! I'll give you my Cell Phone\n"
-	.string "number.\p"
-	.string "You can keep me updated on how the\n"
-	.string "DexNav is working, and I can let you\l"
-	.string "know if I have any new updates!$"
+	.string "Bill: Ele ainda está na fase Beta,\n"
+	.string "tecnicamente falando.\p"
+	.string "Tem mais alguns recursos que eu quero\n"
+	.string "adicionar, mas isso pode levar um tempo.\p"
+	.string "Já sei! Vou te passar o número do\n"
+	.string "meu telefone celular.\p"
+	.string "Assim você me avisa como o DexNav\n"
+	.string "está funcionando, e eu te aviso se tiver\l"
+	.string "novas atualizações!$"
 
 Route25_SeaCottage_EventScript_ExplainDexNav::
 	msgbox Route25_SeaCottage_Text_ExplainDexNav, MSGBOX_DEFAULT
@@ -427,14 +426,14 @@ Route25_SeaCottage_EventScript_ExplainDexNav::
 	end
 
 Route25_SeaCottage_Text_ExplainDexNav::
-	.string "I learned about the PokéDex while\n"
-	.string "emailing with Prof. Oak!\p"
-	.string "The DexNav should make finding rare\n"
-	.string "Pokémon more interesting!\p"
-	.string "You can track all sorts of Pokémon\n"
-	.string "with it, but it works best when it\l"
-	.string "has data from the PokéDex to learn\l"
-	.string "from! Try catching lots of Pokémon!$"
+	.string "Eu aprendi sobre a Pokédex trocando\n"
+	.string "e-mails com o Prof. Carvalho!\p"
+	.string "O DexNav deve tornar a busca por\n"
+	.string "Pokémon raros muito mais interessante!\p"
+	.string "Você pode rastrear vários tipos de\n"
+	.string "Pokémon com ele, mas funciona melhor\l"
+	.string "quando tem dados da Pokédex para aprender!\l"
+	.string "Tente capturar muitos Pokémon!$"
 
 Route25_SeaCottage_EventScript_DontLeaveMe::
 	lock
@@ -451,10 +450,10 @@ Route25_SeaCottage_EventScript_DontLeaveMe::
 	end
 
 Route25_SeaCottage_Text_DontLeaveMe::
-	.string "Bill: Hey! Did you run the program?\p"
-	.string "Hello?\n"
-	.string "Hello!?\p"
-	.string "Don't leave me in here!$"
+	.string "Bill: Ei! Você rodou o programa?\p"
+	.string "Alô?\n"
+	.string "Tem alguém aí!?\p"
+	.string "Não me deixe preso aqui dentro!$"
 
 Movement_DontLeaveBills:
 	walk_up
@@ -467,9 +466,9 @@ Route25_SeaCottage_EventScript_BillGoLookAtPC::
 	end
 
 Route25_SeaCottage_Text_CheckOutRareMonsOnPC::
-    .string "Bill: Feel like checking out some\n"
-    .string "of my rare Pokémon on my PC?\p"
-    .string "Go on, check out my PC.$"
+    .string "Bill: Que tal dar uma olhada em alguns\n"
+    .string "dos meus Pokémon raros no meu PC?\p"
+    .string "Vá em frente, dê uma olhada no meu PC.$"
 
 Route25_SeaCottage_EventScript_OpenBillsMonList::
 	msgbox Route25_SeaCottage_Text_BillsFavoriteMonList
@@ -477,7 +476,7 @@ Route25_SeaCottage_EventScript_OpenBillsMonList::
 	end
 
 Route25_SeaCottage_Text_BillsFavoriteMonList::
-    .string "Bill's favorite Pokémon list!$"
+    .string "Lista de Pokémon favoritos do Bill!$"
 
 Route25_SeaCottage_EventScript_BillsMonList::
 	message Route25_SeaCottage_Text_SeeWhichMon
@@ -493,7 +492,7 @@ Route25_SeaCottage_EventScript_BillsMonList::
 	end
 
 Route25_SeaCottage_Text_SeeWhichMon::
-    .string "Which Pokémon do you want to see?$"
+    .string "Qual Pokémon você deseja ver?$"
 
 Route25_SeaCottage_EventScript_ViewEevee::
 	showmonpic SPECIES_EEVEE, 10, 3
@@ -550,52 +549,52 @@ Route25_SeaCottage_EventScript_GetDexNavUpgrade::
 	end
 
 Route25_SeaCottage_Text_HeyPlayerBeatGiovanni::
-	.string "Bill: Hey, {PLAYER}!\n"
-	.string "Thanks for coming by.\p"
-	.string "I've been seeing a lot of buzz about\n"
-	.string "you online!\p"
-	.string "So, are all the rumors I was reading\n"
-	.string "on the net true?\p"
-	.string "Did you really take down Team Rocket's\n"
-	.string "Boss?\p"
-	.string "Wow. That's incredible.$"
+	.string "Bill: Ei, {PLAYER}!\n"
+	.string "Que bom que você veio.\p"
+	.string "Estou vendo muita comoção sobre\n"
+	.string "você na internet!\p"
+	.string "Então, todos os boatos que li na\n"
+	.string "rede são verdade?\p"
+	.string "Você realmente derrotou o Líder\n"
+	.string "da Equipe Rocket?\p"
+	.string "Nossa. Isso é incrível.$"
 
 Route25_SeaCottage_EventScript_GaveBillIdea::
 	msgbox Route25_SeaCottage_Text_YourIdea, MSGBOX_DEFAULT
 	return
 
 Route25_SeaCottage_Text_YourIdea::
-	.string "I'm glad you called earlier.\n"
-	.string "You gave me a great idea!\p"
-	.string "All this talk about Giovanni and his\n"
-	.string "hidden base... it got me thinking about\l"
-	.string "what else could be hiding all around us.\p"
-	.string "Maybe there's rare Pokémon right under\n"
-	.string "our noses!\p"
-	.string "I think this upgrade will help us find\n"
-	.string "out if I'm right!$"
+	.string "Que bom que você ligou mais cedo.\n"
+	.string "Você me deu uma ótima ideia!\p"
+	.string "Toda essa conversa sobre o Giovanni e a\n"
+	.string "base secreta dele... me fez pensar sobre\l"
+	.string "o que mais pode estar escondido por aí.\p"
+	.string "Talvez existam Pokémon raros bem debaixo\n"
+	.string "dos nossos narizes!\p"
+	.string "Acho que essa melhoria vai nos ajudar\n"
+	.string "a descobrir se eu estou certo!$"
 
 Route25_SeaCottage_EventScript_BillHadIdea::
 	msgbox Route25_SeaCottage_Text_MyIdea, MSGBOX_DEFAULT
 	return
 
 Route25_SeaCottage_Text_MyIdea::
-	.string "Anyway, I'm glad you came by.\n"
-	.string "I've been working on some upgrades for\l"
-	.string "the DexNav.\p"
-	.string "I think this upgrade will be realy useful!$"
+	.string "Enfim, que bom que você veio.\n"
+	.string "Estive trabalhando em melhorias para\l"
+	.string "o DexNav.\p"
+	.string "Acho que este upgrade será super útil!$"
 
 Route25_SeaCottage_Text_GetDetectorMode::
-	.string "Bill upgraded your DexNav!\n"
-	.string "Detector Mode has been enabled!$"
+	.string "Bill atualizou o seu DexNav!\n"
+	.string "O Modo Detector foi ativado!$"
 
 Route25_SeaCottage_Text_DetectorMode::
-	.string "Bill: Detector Mode helps you find\n"
-	.string "hidden Pokémon all across Kanto!\p"
-	.string "Hidden Pokémon may know new moves\n"
-	.string "or even have rare abilities.\p"
-	.string "It's truly amazing!\n"
-	.string "Go try it out!$"
+	.string "Bill: O Modo Detector ajuda a encontrar\n"
+	.string "Pokémon ocultos por toda Kanto!\p"
+	.string "Pokémon ocultos podem conhecer novos\n"
+	.string "golpes ou ter habilidades raras.\p"
+	.string "É realmente incrível!\n"
+	.string "Vá lá experimentar!$"
 
 Route25_SeaCottage_EventScript_MegaStoneAcquired::
 	goto_if_unset FLAG_SYS_DETECTOR_MODE, Route25_SeaCottage_EventScript_GetDexNavUpgrade
@@ -606,21 +605,21 @@ Route25_SeaCottage_EventScript_MegaStoneAcquired::
 	end
 
 Route25_SeaCottage_Text_MegaStoneAcquired:
-	.string "Hey, {PLAYER}!\n"
-	.string "Thanks for coming by.\p"
-	.string "So, you've found a Mega Stone!\p"
-	.string "I've found that if a Pokémon holding\n"
-	.string "their Mega Stone in battle may\l"
-	.string "unlock a form of inner strength,\l"
-	.string "temporarily evolving!\p"
-	.string "Amazing, right?\p"
-	.string "To try this for yourself in battle,\n"
-	.string "press the START button as you\l"
-	.string "select your next move. The Mega\l"
-	.string "Ring should light up!\p"
-	.string "Go out there and try Mega Evolution\n"
-	.string "for yourself, and don't hesitate\l"
-	.string "to come back if you have questions.$"
+	.string "Ei, {PLAYER}!\n"
+	.string "Que bom que você veio.\p"
+	.string "Então, você encontrou uma Mega Pedra!\p"
+	.string "Descobri que se um Pokémon segurar a sua\n"
+	.string "Mega Pedra em batalha, ele pode liberar\l"
+	.string "uma força interior oculta,\l"
+	.string "evoluindo temporariamente!\p"
+	.string "Incrível, não é?\p"
+	.string "Para testar isso em batalha, aperte o\n"
+	.string "botão START enquanto seleciona o seu\l"
+	.string "próximo golpe. O Mega Anel\l"
+	.string "deverá brilhar!\p"
+	.string "Vá em frente e experimente a\n"
+	.string "Megaevolução, e não hesite em voltar\l"
+	.string "se tiver qualquer dúvida.$"
 
 Route25_SeaCottage_EventScript_CollectionOrMega::
 	msgbox ROUTE25_SeaCottage_Text_CollectionOrMegaHelp MSGBOX_YESNO
@@ -631,27 +630,27 @@ Route25_SeaCottage_EventScript_CollectionOrMega::
 	end
 
 ROUTE25_SeaCottage_Text_CollectionOrMegaHelp:
-	.string "Hey, did you have questions about\n"
-	.string "how to use your Mega Ring and Stones?$"
+	.string "Ei, você tem dúvidas sobre como usar\n"
+	.string "o Mega Anel e as Mega Pedras?$"
 
 Route25_SeaCottage_Text_MegaHelp:
-	.string "Okay, no problem!\p"
-	.string "As you've noticed, the Mega Ring is a\n"
-	.string "bracelet with a huge gem on it.\p"
-	.string "This gem when near a Mega Stone will\n"
-	.string "allow the connection a trainer has\l"
-	.string "with their Pokémon to manifest as\l"
-	.string "a new form of evolution.\p"
-	.string "While temporary, this Mega Evolution\n"
-	.string "changes the appearance and stats of\l"
-	.string "the Pokémon holding the Mega Stone.\p"
-	.string "Please be advised that Mega Stones\n"
-	.string "are specific to a Pokémon species\l"
-	.string "and not all Pokémon have a Mega form.\p"
-	.string "To try this for yourself in battle,\n"
-	.string "press the START button as you\l"
-	.string "select your next move. The Mega\l"
-	.string "Ring should light up!$"
+	.string "Certo, sem problemas!\p"
+	.string "Como deve ter reparado, o Mega Anel é um\n"
+	.string "bracelete com uma gema enorme incrustada.\p"
+	.string "Essa gema, quando próxima a uma Mega Pedra,\n"
+	.string "permite que a conexão do treinador com o\l"
+	.string "seu Pokémon se manifeste em uma nova\l"
+	.string "forma de evolução.\p"
+	.string "Embora temporária, essa Megaevolução\n"
+	.string "muda a aparência e os atributos do\l"
+	.string "Pokémon segurando a Mega Pedra.\p"
+	.string "Lembre-se de que as Mega Pedras são\n"
+	.string "específicas para cada espécie e nem todo\l"
+	.string "Pokémon possui uma Mega forma.\p"
+	.string "Para testar isso em batalha, aperte o\n"
+	.string "botão START enquanto seleciona o seu\l"
+	.string "próximo golpe. O Mega Anel\l"
+	.string "deverá brilhar!$"
 
 Route25_SeaCottage_EventScript_PlayerAnsweredNo::
 	msgbox Route25_SeaCottage_Text_Collection, MSGBOX_DEFAULT
@@ -659,6 +658,6 @@ Route25_SeaCottage_EventScript_PlayerAnsweredNo::
 	end
 
 Route25_SeaCottage_Text_Collection:
-	.string "Okay! Feel like checking out some\n"
-    .string "of my rare Pokémon on my PC?\p"
-    .string "Go on, check out my PC.$"
+	.string "Tudo bem! Que tal dar uma olhada em\n"
+    .string "alguns dos meus Pokémon raros no PC?\p"
+    .string "Vá em frente, dê uma olhada no meu PC.$"

@@ -74,14 +74,14 @@ Route24_EventScript_HowsCharmander::
 	end
 
 Route24_Text_HowsCharmander::
-	.string "How's Charmander doing?$"
+	.string "Como o Charmander está se saindo?$"
 
 Route24_Text_NotCutOutToBeATrainer::
-	.string "I'm not good at raising Pokémon.\p" 
-	.string "I should release my Charmander\n"
-	.string "because I haven't raised it well...\p" 
-	.string "If you promise me you'll take\n"
-	.string "good care of it, it's yours.$"
+	.string "Eu não levo jeito para criar Pokémon.\p"
+	.string "Eu devia libertar meu Charmander,\n"
+	.string "já que não cuidei bem dele...\p"
+	.string "Se me prometer que vai cuidar\n"
+	.string "muito bem dele, ele é seu.$"
 
 Route24_EventScript_BetterReleaseIt::
 	msgbox Route24_Text_BetterReleaseIt, MSGBOX_NPC
@@ -89,7 +89,7 @@ Route24_EventScript_BetterReleaseIt::
 	end
 
 Route24_Text_BetterReleaseIt::
-	.string "Oh...I better release it then...$"
+	.string "Ah... Então é melhor eu libertá-lo...$"
 
 
 Route24_EventScript_CharmanderParty::
@@ -110,8 +110,8 @@ Route24_EventScript_GetCharmander::
 	return
 
 Route24_EventScript_Text_TakeCareOfCharmander::
-	.string "{PLAYER} promised to take good care\n"
-	.string "of the trainer's Charmander!$"
+	.string "{PLAYER} prometeu cuidar muito bem\n"
+	.string "do Charmander do treinador!$"
 
 Route24_EventScript_GotCharmander::
 	setflag FLAG_GOT_CHARMANDER
@@ -138,8 +138,8 @@ Route24_EventScript_NoRoomForCharmander::
 	end
 
 Route24_Text_NoRoomForMorePokemon::
-    .string "Oh! You don't have room\n"
-    .string "for any more Pokémon!$"
+    .string "Ah! Você não tem espaço\n"
+    .string "para mais Pokémon!$"
 
 @Rocket Scene
 
@@ -205,8 +205,8 @@ Movement_CenterPlayerRight:
 	step_end
 
 Route24_Text_GetYourReward:
-	.string "Excuse me!\n"
-	.string "Don't you want your reward?$"
+	.string "Com licença!\n"
+	.string "Não quer a sua recompensa?$"
 
 Route24_EventScript_DisguisedRocket::
 	lock
@@ -233,22 +233,21 @@ Route24_EventScript_DisguisedRocket::
 	end
 
 Route24_Text_JustEarnedFabulousPrize::
-    .string "Congratulations! You beat our\n"
-    .string "five contest Trainers!\p"
-    .string "You just earned a fabulous prize!$"
+    .string "Parabéns! Você derrotou nossos\n"
+    .string "cinco Treinadores do desafio!\p"
+    .string "Você acabou de ganhar um prêmio fabuloso!$"
 
 Route24_Text_ReceivedNuggetFromMysteryTrainer::
-    .string "{PLAYER} received a Nugget\n"
-    .string "from the mystery Trainer!$"
+    .string "{PLAYER} recebeu uma Pepita\n"
+    .string "do Treinador misterioso!$"
 
 Route24_Text_SecretPrize::
-	.string "You know kid, I've never\n"
-	.string "seen anyone battle like that\l"
-	.string "before...\p"
-	.string "I think you qualify for the\n"
-	.string "Secret Prize!\p"
-	.string "So, what do you say...\n"
-	.string "Would you like the Secret Prize?$"
+	.string "Sabe, garoto, eu nunca vi\n"
+	.string "ninguém batalhar assim antes...\p"
+	.string "Acho que você se qualificou para\n"
+	.string "o Prêmio Secreto!\p"
+	.string "E aí, o que me diz?...\n"
+	.string "Gostaria do Prêmio Secreto?$"
 
 Movement_LookSuspicious:
 	face_left
@@ -263,10 +262,10 @@ Movement_LookSuspicious:
 	step_end
 
 Route24_Text_WasntReallyAQuestion::
-	.string "Maybe I wasn't very clear.\p"
-	.string "That wasn't really a question.\p"
-	.string "See, Nugget Bridge is funded\n"
-	.string "by none other than Team Rocket!$"
+	.string "Talvez eu não tenha sido muito claro.\p"
+	.string "Não era bem uma pergunta.\p"
+	.string "Veja bem, a Ponte Pepita é financiada\n"
+	.string "por ninguém menos que a Equipe Rocket!$"
 
 Movement_RocketReveal::
 	walk_in_place_fast_down
@@ -281,20 +280,19 @@ Route24_EventScript_DisguisedRocketBattle::
 	end
 
 Route24_Text_RocketGruntIntro:
-	.string "We're a group of professional\n"
-    .string "criminals specializing in POKéMON!\p"
-    .string "A stronger trainer like you, well\n"
-    .string "my bosses would be pretty upset if\l"
-    .string "if I missed my chance to recruit you!\p"
-    .string "That's the secret prize - you get to\n"
-    .string "join the one and only Team Rocket!\p"
-    .string "…Okay, you need convincing!\p"
-    .string "I'll make you an offer you can't\n"
-    .string "refuse!$"
+	.string "Somos um grupo de criminosos\n"
+    .string "profissionais especialistas em Pokémon!\p"
+    .string "Um treinador forte como você, bem,\n"
+    .string "meus chefes ficariam furiosos se\l"
+    .string "eu perdesse a chance de recrutar!\p"
+    .string "Esse é o prêmio secreto: entrar para\n"
+    .string "a única e incomparável Equipe Rocket!\p"
+    .string "…Certo, você precisa ser convencido!\p"
+    .string "Vou fazer uma oferta irrecusável!$"
 
 Route24_Text_RocketGruntDefeat::
     .string "Arrgh!\n"
-    .string "You are good!$"
+    .string "Você é bom mesmo!$"
 
 Route24_EventScript_DisguisedRocketDefeated::
 	msgbox Route24_Text_BossesAreGonnaKillMe, MSGBOX_DEFAULT
@@ -308,8 +306,8 @@ Route24_EventScript_DisguisedRocketDefeated::
 	end
 
 Route24_Text_BossesAreGonnaKillMe::
-	.string "My bosses are gonna kill me!\n"
-	.string "I gotta bail!$"
+	.string "Meus chefes vão me matar!\n"
+	.string "Tenho que dar o fora!$"
 
 Route24_EventScript_SecretPrize::
 	applymovement LOCALID_DISGUISED_ROCKET, Common_Movement_ExclamationMark
@@ -364,22 +362,22 @@ Movement_JessieJamesEnter:
 	step_end
 
 Route24_Text_ThisIsTheKid::
-	.string "Jessie, James, this is the\n"
-	.string "kid I was telling you about!\p"
-	.string "They earned the Secret Prize.\p"
-    .string "With their ability, they'd become\n"
-    .string "a top leader in Team Rocket.\p"
-    .string "I'm sure of it!\p"
-    .string "So, what do you say!\n"
-    .string "Should we let them join up?$"
+	.string "Jessie, James, este é o moleque\n"
+	.string "de quem eu estava falando!\p"
+	.string "Ele ganhou o Prêmio Secreto.\p"
+    .string "Com a força que tem, viraria\n"
+    .string "um dos líderes da Equipe Rocket.\p"
+    .string "Tenho certeza disso!\p"
+    .string "E então, o que me dizem?\n"
+    .string "Devemos deixar ele entrar?$"
 
 Route24_Text_OhWowThatsGreat::
-	.string "Wow! Really?\p"
-	.string "It usually takes some more\n"
-	.string "convincing...\p"
-	.string "Well that's great! Let me\n"
-	.string "get my bosses, and then we\l"
-	.string "get ready for your Secret Prize!$"
+	.string "Nossa! Sério?\p"
+	.string "Geralmente é preciso insistir\n"
+	.string "um pouco mais...\p"
+	.string "Que ótimo! Deixe-me chamar meus\n"
+	.string "chefes e vamos preparar o seu\l"
+	.string "Prêmio Secreto!$"
 
 Movement_GetJessieJames::
 	walk_up
@@ -448,34 +446,34 @@ Movement_JamesApproach:
 	step_end
 
 Route24_Text_YouFool:
-	.string "Jessie: You fool!\p"
-	.string "James: You imbecile!\p"
-	.string "Jessie: This is the brat that\n"
-	.string "ruined our plans at Mt. Moon!\p"
-	.string "James: They've probably led the\n"
-	.string "International Police right to us!$"
+	.string "Jessie: Seu tolo!\p"
+	.string "James: Seu imbecil!\p"
+	.string "Jessie: Este é o pirralho que\n"
+	.string "arruinou nossos planos no Monte Lua!\p"
+	.string "James: Ele provavelmente guiou a\n"
+	.string "Polícia Internacional direto a nós!$"
 
 Route24_Text_YourProblemNow:
-	.string "Rocket: Yikes!\p"
-	.string "Well...erm...that means\n"
-	.string "you both want a rematch, right?\p"
-	.string "Yeah! Um, I'll go warn the others!$"
+	.string "Rocket: Eita!\p"
+	.string "Bem... hum... isso quer dizer que\n"
+	.string "vocês dois querem uma revanche, né?\p"
+	.string "É isso! Hum, vou avisar os outros!$"
 
 Route24_EventScript_BattleJessieJames::
 	trainerbattle_double TRAINER_ROCKET_DUO_NB, Route24_Text_RocketDuoIntro, Route24_Text_RocketDuoDefeat, Text_NeedTwoMons, Route24_EventScript_RocketDuoDefeated, NO_MUSIC
 	end
 
 Route24_Text_RocketDuoIntro:
-	.string "Jessie: For beating us in\n"
-	.string "Mt. Moon...\p"
-	.string "James: We'll make you look\n"
-	.string "like a buffoon!\p"
-	.string "Jessie: Prepare for trouble!\n"
-	.string "James: And make it double!$"
+	.string "Jessie: Por nos derrotar no\n"
+	.string "Monte Lua...\p"
+	.string "James: Faremos você parecer\n"
+	.string "uma gazua!\p"
+	.string "Jessie: Prepare-se para a encrenca!\n"
+	.string "James: Encrenca em dobro!$"
 
 Route24_Text_RocketDuoDefeat:
-	.string "You brat! How could you\n"
-	.string "do this to us again!$"
+	.string "Pirralho! Como você pôde fazer\n"
+	.string "isso com a gente de novo?!$"
 
 Route24_EventScript_RocketDuoDefeated::
 	playbgm MUS_RG_ENCOUNTER_ROCKET, 0
@@ -493,11 +491,10 @@ Route24_EventScript_RocketDuoDefeated::
 	goto Route24_EventScript_LookerConclusion
 
 Route24_Text_WontBeTheLastTime::
-	.string "This won't be the last time\n"
-	.string "you face off against Team\l"
-	.string "Rocket!\p"
-	.string "So just be happy we're letting\n"
-	.string "you off so easy!$"
+	.string "Esta não será a última vez que\n"
+	.string "você enfrentará a Equipe Rocket!\p"
+	.string "Então agradeça por termos deixado\n"
+	.string "você escapar tão fácil!$"
 
 Route24_EventScript_LookerConclusion::
 	closemessage
@@ -522,10 +519,10 @@ Route24_EventScript_LookerConclusion::
 	end
 
 Route25_Text_ComingWithUs::
-	.string "Looker: Not so fast.\n"
-	.string "You'll be coming with us.\p"
-	.string "I can't wait to hear more\n"
-	.string "about this Secret Prize...$"
+	.string "Looker: Nada disso.\n"
+	.string "Você vem com a gente.\p"
+	.string "Mal posso esperar para ouvir mais\n"
+	.string "sobre esse tal Prêmio Secreto...$"
 
 Movement_MoveToLooker::
 	walk_up
@@ -574,11 +571,10 @@ Route24_EventScript_NoRoomForNugget::
 	end
 
 Route24_Text_YouDontHaveAnyRoom::
-    .string "You don't have any room!\p"
-    .string "My boss would hate it if\n"
-    .string "I didn't give you your\l"
-    .string "prize, so please come\l"
-    .string "back when you have room!$"
+    .string "Você não tem espaço!\p"
+    .string "Meu chefe me mataria se eu não\n"
+    .string "lhe entregasse o seu prêmio,\l"
+    .string "então volte quando tiver espaço!$"
 
 Route24_EventScript_ItemTM45::
 	finditem ITEM_TM45, 1
@@ -593,15 +589,15 @@ Route24_EventScript_Shane::
 	end
 
 Route24_Text_ShaneIntro::
-    .string "I was watching your battles\n"
-    .string "on Nugget Bridge from over here!$"
+    .string "Eu estava assistindo às suas batalhas\n"
+    .string "na Ponte Pepita daqui de longe!$"
 
 Route24_Text_ShaneDefeat::
-    .string "I thought not!$"
+    .string "Como imaginei!$"
 
 Route24_Text_ShanePostBattle::
-    .string "I hid because the people on the\n"
-    .string "bridge frightened me.$"
+    .string "Eu me escondi porque o pessoal\n"
+    .string "da ponte me dava medo.$"
 
 Route24_EventScript_RegisterShaneAfterBattle::
 	special PlayerFaceTrainerAfterBattle
@@ -612,9 +608,9 @@ Route24_EventScript_RegisterShaneAfterBattle::
 	end
 
 Route24_Text_ShaneRegister:
-	.string "Wow! You're strong!\p"
-	.string "If you were my friend, I\n"
-	.string "won't have to be frightened!$"
+	.string "Uau! Você é forte!\p"
+	.string "Se você fosse meu amigo, eu não\n"
+	.string "precisaria ter medo de nada!$"
 
 Route24_EventScript_ShaneRematch::
 	trainerbattle_rematch REMATCHABLE_TRAINER_CAMPER_SHANE_1, Route24_Text_ShaneRematchIntro, Route24_Text_ShaneDefeat
@@ -622,12 +618,12 @@ Route24_EventScript_ShaneRematch::
 	end
 
 Route24_Text_ShaneRematchIntro::
-	.string "Hey {PLAYER}!\n"
-	.string "Teach me to be strong like you!$"
+	.string "Ei, {PLAYER}!\n"
+	.string "Me ensine a ser forte como você!$"
 
 Route24_Text_ShaneRematchPostBattle::
-	.string "I'll keep watching you from\n"
-	.string "over here!$"
+	.string "Vou continuar assistindo você\n"
+	.string "daqui de longe!$"
 
 
 @Normal Nugget Bridge Trainers
@@ -653,18 +649,18 @@ Route24_EventScript_CalePostBattle::
 	end
 
 Route24_Text_CaleIntro::
-    .string "People call this the Nugget\n"
-    .string "Bridge!\p"
-    .string "Beat us five Trainers and win\n"
-    .string "a fabulous prize!\p"
-    .string "Think you got what it takes?$"
+    .string "As pessoas chamam esta ponte de\n"
+    .string "Ponte Pepita!\p"
+    .string "Derrote nós cinco Treinadores e vença\n"
+    .string "um prêmio fabuloso!\p"
+    .string "Acha que dá conta do recado?$"
 
 Route24_Text_CaleDefeat::
-    .string "Whoo!\n"
-    .string "Good stuff!$"
+    .string "Uau!\n"
+    .string "Mandou muito bem!$"
 
 Route24_Text_CalePostBattle::
-    .string "I did my best. I have no regrets!$"
+    .string "Dei o meu melhor. Não me arrependo!$"
 
 Route24_EventScript_Ali::
 	trainerbattle_single TRAINER_LASS_ALI, Route24_Text_AliIntro, Route24_Text_AliDefeat, Route24_EventScript_AliPostBattle
@@ -679,14 +675,14 @@ Route24_EventScript_AliPostBattle::
 	end
 
 Route24_Text_AliIntro::
-    .string "I'm second!\n"
-    .string "Now it's serious!$"
+    .string "Eu sou a número 2!\n"
+    .string "Agora a coisa ficou séria!$"
 
 Route24_Text_AliDefeat::
-    .string "How could I lose?$"
+    .string "Como eu pude perder?$"
 
 Route24_Text_AliPostBattle::
-    .string "I did my best. I have no regrets!$"
+    .string "Dei o meu melhor. Não me arrependo!$"
 
 Route24_EventScript_Timmy::
 	trainerbattle_single TRAINER_YOUNGSTER_TIMMY, Route24_Text_TimmyIntro, Route24_Text_TimmyDefeat, Route24_EventSript_TimmyPostBattle
@@ -702,15 +698,15 @@ Route24_EventSript_TimmyPostBattle::
 	end
 
 Route24_Text_TimmyIntro::
-    .string "Here's No. 3!\n"
-    .string "I won't be easy!$"
+    .string "Aqui vem o número 3!\n"
+    .string "Eu não serei fácil!$"
 
 Route24_Text_TimmyDefeat::
-    .string "Ow!\n"
-    .string "Stomped flat!$"
+    .string "Ai!\n"
+    .string "Fui esmagado!$"
 
 Route24_Text_TimmyPostBattle::
-    .string "I did my best. I have no regrets!$"
+    .string "Dei o meu melhor. Não me arrependo!$"
 
 Route24_EventScript_Reli::
 	trainerbattle_single TRAINER_LASS_RELI, Route24_Text_ReliIntro, Route24_Text_ReliDefeat, Route24_EventScript_ReliPostBattle
@@ -726,14 +722,14 @@ Route24_EventScript_ReliPostBattle::
 	end
 
 Route24_Text_ReliIntro::
-    .string "I'm No. 4!\n"
-    .string "Getting tired?$"
+    .string "Eu sou a número 4!\n"
+    .string "Já está cansando?$"
 
 Route24_Text_ReliDefeat::
-    .string "I lost, too!$"
+    .string "Eu perdi também!$"
 
 Route24_Text_ReliPostBattle::
-    .string "I did my best, so I've no regrets!$"
+    .string "Dei o meu melhor, não me arrependo!$"
 
 Route24_EventScript_Ethan::
 	trainerbattle_single TRAINER_CAMPER_ETHAN, Route24_Text_EthanIntro, Route24_Text_EthanDefeat, Route24_EventScript_EthanPostBattle
@@ -749,15 +745,15 @@ Route24_EventScript_EthanPostBattle::
 	end
 
 Route24_Text_EthanIntro::
-    .string "Okay! I'm No. 5!\n"
-    .string "I'll stomp you!$"
+    .string "Muito bem! Eu sou o número 5!\n"
+    .string "Vou acabar com você!$"
 
 Route24_Text_EthanDefeat::
-    .string "Whoa!\n"
-    .string "Too much!$"
+    .string "Uau!\n"
+    .string "Forte demais!$"
 
 Route24_Text_EthanPostBattle::
-    .string "I did my best. I have no regrets!$"
+    .string "Dei o meu melhor. Não me arrependo!$"
 
 @TODO: Postgame Nugget Bridge
 

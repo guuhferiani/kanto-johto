@@ -16,17 +16,17 @@ Route25_EventScript_SeaCottageSign::
 	end
 
 Route25_Text_SeaCottageSign::
-    .string "Sea Cottage\n"
-    .string "Bill lives here!$"
+    .string "Cabana Costeira\n"
+    .string "O Bill mora aqui!$"
 
 Route25_EventScript_Man::
 	msgbox Route25_Text_AreYouHereAlone, MSGBOX_NPC
 	end
 
 Route25_Text_AreYouHereAlone::
-    .string "Hello, are you here alone?\p"
-    .string "If you're out at Cerulean's cape…\n"
-    .string "Well, it should be as a couple.$"
+    .string "Olá, você está aqui sozinho?\p"
+    .string "Se você está no cabo de Cerulean…\n"
+    .string "Bem, devia ser em casal.$"
 
 Route25_EventScript_Beauty::
 	msgbox Route25_Text_MistyHighHopesAboutThisPlace, MSGBOX_NPC
@@ -34,9 +34,9 @@ Route25_EventScript_Beauty::
 	end
 
 Route25_Text_MistyHighHopesAboutThisPlace::
-    .string "This cape is a famous date spot.\p"
-    .string "Misty, the Gym Leader, has high\n"
-    .string "hopes about this place.$"
+    .string "Este cabo é um lugar famoso para encontros.\p"
+    .string "Misty, a Líder do Ginásio, tem grandes\n"
+    .string "expectativas sobre este lugar.$"
 
 Route25_EventScript_Franklin::
 	trainerbattle_single REMATCHABLE_TRAINER_HIKER_FRANKLIN_1, Route25_Text_FranklinIntro, Route25_Text_FranklinDefeat, Route25_EventScript_RegisterFranklinAfterBattle
@@ -47,15 +47,15 @@ Route25_EventScript_Franklin::
 	end
 
 Route25_Text_FranklinIntro::
-    .string "I just got down from Mt. Moon,\n"
-    .string "but I've still got gas in the tank!$"
+    .string "Acabei de descer do Monte Lua,\n"
+    .string "mas ainda tenho energia para dar e vender!$"
 
 Route25_Text_FranklinDefeat::
-    .string "You worked hard!$"
+    .string "Você lutou muito bem!$"
 
 Route25_Text_FranklinPostBattle::
-    .string "Drat!\n"
-    .string "A Zubat bit me back in that cave.$"
+    .string "Droga!\n"
+    .string "Um Zubat me mordeu lá naquela caverna.$"
 
 Route25_EventScript_RegisterFranklinAfterBattle::
 	special PlayerFaceTrainerAfterBattle
@@ -67,9 +67,9 @@ Route25_EventScript_RegisterFranklinAfterBattle::
 
 Route25_Text_FranklinRegister:
 	.string "Hmm...\p"
-	.string "Maybe I'm not as rested as\n"
-	.string "I thought...\p"
-	.string "Let's have a rematch sometime!$"
+	.string "Talvez eu não esteja tão descansado\n"
+	.string "quanto imaginei...\p"
+	.string "Vamos ter uma revanche outra hora!$"
 
 Route25_EventScript_FranklinRematch::
 	trainerbattle_rematch REMATCHABLE_TRAINER_HIKER_FRANKLIN_1, Route25_Text_FranklinRematchIntro, Route25_Text_FranklinDefeat
@@ -77,13 +77,13 @@ Route25_EventScript_FranklinRematch::
 	end
 
 Route25_Text_FranklinRematchIntro::
-	.string "Hey {PLAYER}!\n"
-	.string "I've still got gas in the tank!\p"
-	.string "Let's go another round!$"
+	.string "Ei, {PLAYER}!\n"
+	.string "Ainda tenho energia no tanque!\p"
+	.string "Vamos para mais um round!$"
 
 Route25_Text_FranklinRematchPostBattle::
-	.string "Maybe I'm still woozy from\n"
-	.string "that Zubat bite!$"
+	.string "Talvez eu ainda esteja meio tonto\n"
+	.string "daquela mordida de Zubat!$"
 
 
 Route25_EventScript_Joey::
@@ -92,17 +92,17 @@ Route25_EventScript_Joey::
 	end
 
 Route25_Text_JoeyIntro::
-    .string "Local trainers come here to\n"
-    .string "practice.$"
+    .string "Os treinadores daqui vêm praticar\n"
+    .string "neste lugar.$"
 
 Route25_Text_JoeyDefeat::
-    .string "You're decent.$"
+    .string "Você é decente.$"
 
 Route25_Text_JoeyPostBattle::
-    .string "All Pokémon have weaknesses.\n"
-    .string "Even the strongest ones.\p"
-    .string "That's why it's best to raise\n"
-    .string "Pokémon of different types.$"
+    .string "Todos os Pokémon têm fraquezas.\n"
+    .string "Até mesmo os mais fortes.\p"
+    .string "Por isso o melhor é criar\n"
+    .string "Pokémon de tipos diferentes.$"
 
 
 Route25_EventScript_Wayne::
@@ -111,15 +111,15 @@ Route25_EventScript_Wayne::
 	end
 
 Route25_Text_WayneIntro::
-    .string "You're going to see Bill?\n"
-    .string "First, we battle!$"
+    .string "Você vai ver o Bill?\n"
+    .string "Primeiro, vamos batalhar!$"
 
 Route25_Text_WayneDefeat::
-    .string "You're something.$"
+    .string "Você manda bem.$"
 
 Route25_Text_WaynePostBattle::
-    .string "The trail below is a shortcut to\n"
-    .string "Cerulean City.$"
+    .string "A trilha logo abaixo é um atalho para\n"
+    .string "a Cidade de Cerulean.$"
 
 Route25_EventScript_Dan::
 	trainerbattle_single TRAINER_YOUNGSTER_DAN, Route25_Text_DanIntro, Route25_Text_DanDefeat
@@ -127,15 +127,15 @@ Route25_EventScript_Dan::
 	end
 
 Route25_Text_DanIntro::
-    .string "Dad took me to a great party on\n"
-    .string "the S.S. Anne at Vermilion City.$"
+    .string "Papai me levou para uma grande festa\n"
+    .string "no S.S. Anne, na Cidade de Vermilion.$"
 
 Route25_Text_DanDefeat::
-    .string "I'm not mad!$"
+    .string "Não estou chateado!$"
 
 Route25_Text_DanPostBattle::
-    .string "On the S.S. Anne, I saw trainers\n"
-    .string "from around the world.$"
+    .string "No S.S. Anne, vi treinadores\n"
+    .string "do mundo inteiro.$"
 
 Route25_EventScript_Kelsey::
 	trainerbattle_single TRAINER_PICNICKER_KELSEY, Route25_Text_KelseyIntro, Route25_Text_KelseyDefeat
@@ -143,15 +143,15 @@ Route25_EventScript_Kelsey::
 	end
 
 Route25_Text_KelseyIntro::
-    .string "Hi!\n"
-    .string "My boyfriend is cool!$"
+    .string "Oi!\n"
+    .string "Meu namorado é demais!$"
 
 Route25_Text_KelseyDefeat::
-    .string "My conditioning isn't the best…$"
+    .string "Minha preparação não foi das melhores…$"
 
 Route25_Text_KelseyPostBattle::
-    .string "I wish my boyfriend was as good\n"
-    .string "as you.$"
+    .string "Queria que meu namorado fosse\n"
+    .string "tão bom quanto você.$"
 
 Route25_EventScript_Nob::
 	trainerbattle_single TRAINER_HIKER_NOB, Route25_Text_NobIntro, Route25_Text_NobDefeat
@@ -159,18 +159,18 @@ Route25_EventScript_Nob::
 	end
 
 Route25_Text_NobIntro::
-    .string "I'm off to see a Pokémaniac's\n"
-    .string "collection at the cape.$"
+    .string "Estou indo ver a coleção de um\n"
+    .string "Pokémaníaco lá no cabo.$"
 
 Route25_Text_NobDefeat::
-    .string "You done got me, and real good,\n"
-    .string "too!$"
+    .string "Você me pegou de jeito,\n"
+    .string "e mandou muito bem!$"
 
 Route25_Text_NobPostBattle::
-    .string "The Pokémaniac sure lives up to\n"
-    .string "his name.\p"
-    .string "His collection includes many rare\n"
-    .string "species of Pokémon.$"
+    .string "O Pokémaníaco realmente faz jus\n"
+    .string "ao apelido.\p"
+    .string "A coleção dele inclui muitas espécies\n"
+    .string "raras de Pokémon.$"
 
 Route25_EventScript_Flint::
 	trainerbattle_single TRAINER_CAMPER_FLINT, Route25_Text_FlintIntro, Route25_Text_FlintDefeat
@@ -178,15 +178,15 @@ Route25_EventScript_Flint::
 	end
 
 Route25_Text_FlintIntro::
-    .string "I'm a cool guy.\n"
-    .string "I've got a girlfriend!$"
+    .string "Eu sou um cara legal.\n"
+    .string "Eu tenho uma namorada!$"
 
 Route25_Text_FlintDefeat::
-    .string "Aww, darn…$"
+    .string "Ah, que droga…$"
 
 Route25_Text_FlintPostBattle::
-    .string "Oh, well.\n"
-    .string "My girlfriend will cheer me up.$"
+    .string "Ah, tanto faz.\n"
+    .string "Minha namorada vai me animar.$"
 
 Route25_EventScript_Chad::
 	trainerbattle_single TRAINER_YOUNGSTER_CHAD, Route25_Text_ChadIntro, Route25_Text_ChadDefeat
@@ -194,16 +194,16 @@ Route25_EventScript_Chad::
 	end
 
 Route25_Text_ChadIntro::
-    .string "I had this feeling…\n"
-    .string "I knew I had to battle you!$"
+    .string "Tive um pressentimento…\n"
+    .string "Sabia que tinha que batalhar com você!$"
 
 Route25_Text_ChadDefeat::
-    .string "I knew I'd lose, too!$"
+    .string "Eu sabia que ia perder também!$"
 
 Route25_Text_ChadPostBattle::
-    .string "If your Pokémon gets confused,\n"
-    .string "switch it out.\p"
-    .string "That's a good tactic.$"
+    .string "Se o seu Pokémon ficar confuso,\n"
+    .string "troque por outro.\p"
+    .string "Essa é uma boa tática.$"
 
 Route25_EventScript_Haley::
 	trainerbattle_single TRAINER_LASS_HALEY, Route25_Text_HaleyIntro, Route25_Text_HaleyDefeat
@@ -211,15 +211,15 @@ Route25_EventScript_Haley::
 	end
 
 Route25_Text_HaleyIntro::
-    .string "My friend has many cute Pokémon.\n"
-    .string "I'm so jealous!$"
+    .string "Minha amiga tem muitos Pokémon fofos.\n"
+    .string "Tenho tanta inveja!$"
 
 Route25_Text_HaleyDefeat::
-    .string "I'm not so jealous!$"
+    .string "Nem tenho tanta inveja assim!$"
 
 Route25_Text_HaleyPostBattle::
-    .string "You came from Mt. Moon?\n"
-    .string "May I have a Clefairy?$"
+    .string "Você veio do Monte Lua?\n"
+    .string "Poderia me dar uma Clefairy?$"
 
 Route25_FindItem_ToxicOrb::
 	finditem ITEM_TOXIC_ORB, 1
