@@ -53,5 +53,10 @@ editors/
 *.diff
 *.sym
 *.js
-README.md
 porymap.user.cfg
+
+# Google Drive credentials
+credentials.json
+token.json
+scripts/credentials.json
+scripts/token.json
