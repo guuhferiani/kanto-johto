@@ -9,6 +9,15 @@ import sys
 import argparse
 from pathlib import Path
 
+# Garante saida imediata (unbuffered) no terminal e nos arquivos de log
+try:
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(line_buffering=True)
+    if hasattr(sys.stderr, "reconfigure"):
+        sys.stderr.reconfigure(line_buffering=True)
+except Exception:
+    pass
+
 try:
     from google.auth.transport.requests import Request
     from google.oauth2.credentials import Credentials
@@ -16,8 +25,8 @@ try:
     from googleapiclient.discovery import build
     from googleapiclient.http import MediaFileUpload
 except ImportError:
-    print("[ERRO] Bibliotecas do Google Drive não instaladas.")
-    print("Execute: pip install google-api-python-client google-auth-httplib2 google-auth-oauthlib")
+    print("[ERRO] Bibliotecas do Google Drive não instaladas.", flush=True)
+    print("Execute: pip install google-api-python-client google-auth-httplib2 google-auth-oauthlib", flush=True)
     sys.exit(1)
 
 SCOPES = ["https://www.googleapis.com/auth/drive.file"]
@@ -103,16 +112,20 @@ def get_drive_service():
                 print_setup_instructions()
                 sys.exit(1)
 
-            print(f"[INFO] Usando credenciais de: {creds_file}")
-            print("[INFO] Abrindo o navegador para autorizar acesso ao Google Drive...")
+            print(f"[INFO] Usando credenciais de: {creds_file}", flush=True)
+            print("[INFO] Iniciando servidor local para autenticacao...", flush=True)
             flow = InstalledAppFlow.from_client_secrets_file(str(creds_file), SCOPES)
-            creds = flow.run_local_server(port=0)
+            creds = flow.run_local_server(
+                port=0,
+                open_browser=True,
+                authorization_prompt_message="\n[AÇÃO NECESSÁRIA] Acesse o link abaixo no seu navegador para autorizar:\n\n{url}\n\n"
+            )
 
             # Salva token para as próximas execuções
             save_path = SCRIPTS_DIR / "token.json"
             with open(save_path, "w", encoding="utf-8") as token:
                 token.write(creds.to_json())
-            print(f"[SUCESSO] Token salvo com sucesso em: {save_path}")
+            print(f"[SUCESSO] Token salvo com sucesso em: {save_path}", flush=True)
 
     return build("drive", "v3", credentials=creds)
 
