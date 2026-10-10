@@ -20,17 +20,17 @@ Route15_EventScript_Olivia::
 	end
 
 Route15_Text_OliviaIntro::
-    .string "I raise Pokémon for protection\n"
-    .string "because I live alone.$"
+    .string "Eu treino Pokémon para proteção\n"
+    .string "porque moro sozinha.$"
 
 Route15_Text_OliviaDefeat::
-    .string "Pokémon isn't about winning or\n"
-    .string "losing for me.$"
+    .string "Para mim, Pokémon não é uma questão\n"
+    .string "de ganhar ou perder.$"
 
 Route15_Text_OliviaPostBattle::
-    .string "I love having my Pokémon greet me\n"
-    .string "when I get home.\p"
-    .string "It's so reassuring.$"
+    .string "Adoro quando meus Pokémon me recebem\n"
+    .string "quando chego em casa.\p"
+    .string "É tão reconfortante.$"
 
 Route15_EventScript_RegisterOliviaAfterBattle::
 	special PlayerFaceTrainerAfterBattle
@@ -41,9 +41,9 @@ Route15_EventScript_RegisterOliviaAfterBattle::
 	end
 
 Route15_Text_OliviaRegister:
-	.string "Can I get your number?\p"
-	.string "I could call you if I need\n"
-	.string "more protection.$"
+	.string "Pode me passar seu número?\p"
+	.string "Eu poderia te ligar se precisar\n"
+	.string "de mais proteção.$"
 
 Route15_EventScript_OliviaRematch::
 	trainerbattle_rematch REMATCHABLE_TRAINER_BEAUTY_OLIVIA_1, Route15_Text_OliviaRematchIntro, Route15_Text_OliviaDefeat
@@ -51,11 +51,11 @@ Route15_EventScript_OliviaRematch::
 	end
 
 Route15_Text_OliviaRematchIntro::
-	.string "I still live alone, so I need\n"
-	.string "to train my Pokémon to protect me.$"
+	.string "Ainda moro sozinha, então preciso\n"
+	.string "treinar meus Pokémon para me protegerem.$"
 
 Route15_Text_OliviaRematchPostBattle::
-	.string "Maybe I should find a new place...$"
+	.string "Talvez eu deva procurar outro lugar...$"
 
 Route15_EventScript_Grace::
 	trainerbattle_single TRAINER_BEAUTY_GRACE, Route15_Text_GraceIntro, Route15_Text_GraceDefeat
@@ -63,16 +63,16 @@ Route15_EventScript_Grace::
 	end
 
 Route15_Text_GraceIntro::
-    .string "Oh, you're a little cutie!\n"
-    .string "So like a darling Pokémon!$"
+    .string "Ah, você é uma fofura!\n"
+    .string "Igualzinho a um lindo Pokémon!$"
 
 Route15_Text_GraceDefeat::
-    .string "You looked so cute, too!$"
+    .string "Você parecia tão fofinho também!$"
 
 Route15_Text_GracePostBattle::
-    .string "I forgive you.\n"
-    .string "I can take it.\l"
-    .string "I'm a big girl now.$"
+    .string "Eu te perdoo.\n"
+    .string "Eu aguento firme.\l"
+    .string "Já sou uma garota crescida.$"
 
 Route15_EventScript_Ernest::
 	trainerbattle_single TRAINER_BIKER_ERNEST, Route15_Text_ErnestIntro, Route15_Text_ErnestDefeat
@@ -80,16 +80,16 @@ Route15_EventScript_Ernest::
 	end
 
 Route15_Text_ErnestIntro::
-    .string "Hey, kid! C'mon!\n"
-    .string "I just got these off some loser!$"
+    .string "Ei, pirralho! Vamos lá!\n"
+    .string "Acabei de surrupiar estes de um perdedor!$"
 
 Route15_Text_ErnestDefeat::
-    .string "Why not?$"
+    .string "Por que não?!$"
 
 Route15_Text_ErnestPostBattle::
-    .string "Life's too short.\n"
-    .string "It's cool to live as an outlaw.\l"
-    .string "Team Rocket Rules!$"
+    .string "A vida é curta demais.\n"
+    .string "É maneiro viver como um fora da lei.\l"
+    .string "A Equipe Rocket manda ver!$"
 
 Route15_EventScript_Alex::
 	trainerbattle_single TRAINER_BIKER_ALEX, Route15_Text_AlexIntro, Route15_Text_AlexDefeat
@@ -97,15 +97,15 @@ Route15_EventScript_Alex::
 	end
 
 Route15_Text_AlexIntro::
-    .string "Fork over all your cash when you\n"
-    .string "lose to me, kid!$"
+    .string "Passe toda a sua grana quando\n"
+    .string "perder para mim, pirralho!$"
 
 Route15_Text_AlexDefeat::
-    .string "That can't be true!$"
+    .string "Não pode ser verdade!$"
 
 Route15_Text_AlexPostBattle::
-    .string "I was just joking about the money.\n"
-    .string "Don't take me all serious.$"
+    .string "Eu estava só brincando sobre a grana.\n"
+    .string "Não me leve tão a sério.$"
 
 Route15_EventScript_Edwin::
 	trainerbattle_single TRAINER_BIRD_KEEPER_EDWIN, Route15_Text_EdwinIntro, Route15_Text_EdwinDefeat
@@ -113,16 +113,16 @@ Route15_EventScript_Edwin::
 	end
 
 Route15_Text_EdwinIntro::
-    .string "When I whistle, I can summon bird\n"
-    .string "Pokémon.$"
+    .string "Quando assobio, consigo chamar\n"
+    .string "Pokémon pássaro.$"
 
 Route15_Text_EdwinDefeat::
-    .string "Ow!\n"
-    .string "That's tragic!$"
+    .string "Ai!\n"
+    .string "Que tragédia!$"
 
 Route15_Text_EdwinPostBattle::
-    .string "Maybe I'm not cut out for battles.\n"
-    .string "I'm not the right type, I guess.$"
+    .string "Talvez eu não tenha nascido para batalhas.\n"
+    .string "Acho que não faço o tipo certo.$"
 
 Route15_EventScript_Chester::
 	trainerbattle_single TRAINER_BIRD_KEEPER_CHESTER, Route15_Text_ChesterIntro, Route15_Text_ChesterDefeat
@@ -130,17 +130,17 @@ Route15_EventScript_Chester::
 	end
 
 Route15_Text_ChesterIntro::
-    .string "Hmm? My birds are shivering!\n"
-    .string "You're good, aren't you?$"
+    .string "Hmm? Meus pássaros estão tremendo!\n"
+    .string "Você é bom mesmo, não é?$"
 
 Route15_Text_ChesterDefeat::
-    .string "Just as I thought!$"
+    .string "Exatamente como imaginei!$"
 
 Route15_Text_ChesterPostBattle::
-    .string "This is so obvious, you should know\n"
-    .string "this, but…\p"
-    .string "Moves like Earthquake and Fissure\n"
-    .string "have no effect on bird Pokémon.$"
+    .string "Isso é óbvio, você já deve saber,\n"
+    .string "mas mesmo assim…\p"
+    .string "Golpes como Terremoto e Fissura\n"
+    .string "não têm efeito em Pokémon pássaro.$"
 
 Route15_EventScript_Yazmin::
 	trainerbattle_single TRAINER_PICNICKER_YAZMIN, Route15_Text_YazminIntro, Route15_Text_YazminDefeat
@@ -148,13 +148,13 @@ Route15_EventScript_Yazmin::
 	end
 
 Route15_Text_YazminIntro::
-    .string "Want to play with my Pokémon?$"
+    .string "Quer brincar com meus Pokémon?$"
 
 Route15_Text_YazminDefeat::
-    .string "I was too impatient!$"
+    .string "Fui impaciente demais!$"
 
 Route15_Text_YazminPostBattle::
-    .string "I'll go train with weaker people.$"
+    .string "Vou treinar com pessoas mais fracas.$"
 
 Route15_EventScript_Kindra::
 	trainerbattle_single TRAINER_PICNICKER_KINDRA, Route15_Text_KindraIntro, Route15_Text_KindraDefeat
@@ -162,17 +162,17 @@ Route15_EventScript_Kindra::
 	end
 
 Route15_Text_KindraIntro::
-    .string "I just got some Pokémon in trades.\n"
-    .string "Can I try them out on you?$"
+    .string "Acabei de receber alguns Pokémon por troca.\n"
+    .string "Posso testá-los em você?$"
 
 Route15_Text_KindraDefeat::
-    .string "Not good enough!$"
+    .string "Não foi bom o bastante!$"
 
 Route15_Text_KindraPostBattle::
-    .string "You can't change the nickname of\n"
-    .string "any Pokémon you get in a trade.\p"
-    .string "Only the Original Trainer can get\n"
-    .string "the nickname changed.$"
+    .string "Você não pode mudar o apelido de\n"
+    .string "um Pokémon recebido por troca.\p"
+    .string "Apenas o Treinador Original consegue\n"
+    .string "mudar o apelido dele.$"
 
 Route15_EventScript_Becky::
 	trainerbattle_single TRAINER_PICNICKER_BECKY, Route15_Text_BeckyIntro, Route15_Text_BeckyDefeat
@@ -180,16 +180,16 @@ Route15_EventScript_Becky::
 	end
 
 Route15_Text_BeckyIntro::
-    .string "You look gentle, so I think I can\n"
-    .string "beat you.\p"
-    .string "I'll give it a go!$"
+    .string "Você parece dócil, então acho que\n"
+    .string "consigo te vencer.\p"
+    .string "Vou tentar!$"
 
 Route15_Text_BeckyDefeat::
-    .string "No, wrong!$"
+    .string "Não, deu tudo errado!$"
 
 Route15_Text_BeckyPostBattle::
-    .string "I'm afraid of Bikers. They look so\n"
-    .string "ugly and mean!$"
+    .string "Tenho medo de Motoqueiros. Eles são\n"
+    .string "tão feios e malvados!$"
 
 Route15_EventScript_Celia::
 	trainerbattle_single TRAINER_PICNICKER_CELIA, Route15_Text_CeliaIntro, Route15_Text_CeliaDefeat
@@ -197,15 +197,15 @@ Route15_EventScript_Celia::
 	end
 
 Route15_Text_CeliaIntro::
-    .string "What's cool and happening?\n"
-    .string "Trading Pokémon!$"
+    .string "O que está na moda e bombando?\n"
+    .string "Trocar Pokémon!$"
 
 Route15_Text_CeliaDefeat::
-    .string "I said trade!$"
+    .string "Eu falei troca!$"
 
 Route15_Text_CeliaPostBattle::
-    .string "I trade Pokémon with my friends\n"
-    .string "all the time.$"
+    .string "Eu troco Pokémon com meus amigos\n"
+    .string "o tempo todo.$"
 
 Route15_EventScript_Mya::
 	trainerbattle_double TRAINER_CRUSH_KIN_RON_MYA, Route15_Text_MyaIntro, Route15_Text_MyaDefeat, Route15_Text_MyaNotEnoughMons
@@ -213,20 +213,20 @@ Route15_EventScript_Mya::
 	end
 
 Route15_Text_MyaIntro::
-    .string "Mya: You're perfect.\n"
-    .string "Help me train my little brother?$"
+    .string "Mya: Você é perfeito.\n"
+    .string "Ajude-me a treinar meu irmãozinho?$"
 
 Route15_Text_MyaDefeat::
-    .string "Mya: Ron, you have to focus!\n"
-    .string "Concentrate on what you're doing!$"
+    .string "Mya: Ron, você tem que focar!\n"
+    .string "Concentre-se no que está fazendo!$"
 
 Route15_Text_MyaPostBattle::
-    .string "Mya: Okay, we'll turn it up.\n"
-    .string "I'll add to our training menu!$"
+    .string "Mya: Certo, vamos pegar mais pesado.\n"
+    .string "Vou adicionar exercícios à nossa rotina!$"
 
 Route15_Text_MyaNotEnoughMons::
-    .string "Mya: Do you want to challenge us?\n"
-    .string "You'll need two Pokémon, though.$"
+    .string "Mya: Quer nos desafiar?\n"
+    .string "Você vai precisar de dois Pokémon, no entanto.$"
 
 Route15_EventScript_Ron::
 	trainerbattle_double TRAINER_CRUSH_KIN_RON_MYA, Route15_Text_RonIntro, Route15_Text_RonDefeat, Route15_Text_RonNotEnoughMons
@@ -234,29 +234,29 @@ Route15_EventScript_Ron::
 	end
 
 Route15_Text_RonIntro::
-    .string "Ron: My sister gets scary when we\n"
-    .string "lose.$"
+    .string "Ron: Minha irmã fica assustadora\n"
+    .string "quando nós perdemos.$"
 
 Route15_Text_RonDefeat::
-    .string "Ron: Oh, no, no…\n"
-    .string "Sis, I'm sorry!$"
+    .string "Ron: Ah, não, não…\n"
+    .string "Maninha, me desculpa!$"
 
 Route15_Text_RonPostBattle::
-    .string "Ron: Oh, bleah…\n"
-    .string "I wish I had a nice sister…$"
+    .string "Ron: Ah, droga…\n"
+    .string "Queria ter uma irmã boazinha…$"
 
 Route15_Text_RonNotEnoughMons::
-    .string "Ron: Did you want to battle with\n"
-    .string "my sister and me?\p"
-    .string "You need two Pokémon, then.$"
+    .string "Ron: Você queria batalhar contra a\n"
+    .string "minha irmã e eu?\p"
+    .string "Então você precisa de dois Pokémon.$"
 
 Route15_EventScript_RouteSign::
 	msgbox Route15_Text_RouteSign, MSGBOX_SIGN
 	end
 
 Route15_Text_RouteSign::
-    .string "Route 15\n"
-    .string "West to Fuchsia City$"
+    .string "Rota 15\n"
+    .string "Oeste para Cidade de Fuchsia$"
 
 Route15_EventScript_ItemTM18::
 	finditem ITEM_TM18, 1
@@ -276,12 +276,12 @@ Route15_EventScript_SchoolKidConan::
 	end
 
 Route15_Text_ConanIntro:
-	.string "I hope you're ready!$"
+	.string "Espero que você esteja pronto!$"
 
 Route15_Text_ConanDefeat:
-	.string "Woah!$"
+	.string "Uau!$"
 
 Route15_Text_ConanPostBattle:
-	.string "Thanks for playing with us!$"
+	.string "Obrigado por brincar com a gente!$"
     
 

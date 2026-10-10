@@ -19,16 +19,16 @@ Route15_WestEntrance_2F_EventScript_RightBinoculars::
 	end
 
 Route15_WestEntrance_2F_Text_LargeShiningBird::
-    .string "Let's see what the binoculars have\n"
-    .string "to show…\p"
-    .string "A large, shining bird is flying\n"
-    .string "toward the sea.$"
+    .string "Vejamos o que os binóculos têm\n"
+    .string "a mostrar…\p"
+    .string "Um grande pássaro brilhante está voando\n"
+    .string "em direção ao mar.$"
 
 Route15_WestEntrance_2F_Text_SmallIslandOnHorizon::
-    .string "Let's see what the binoculars have\n"
-    .string "to show…\p"
-    .string "It looks like a small island on\n"
-    .string "the horizon!$"
+    .string "Vejamos o que os binóculos têm\n"
+    .string "a mostrar…\p"
+    .string "Parece uma pequena ilha no\n"
+    .string "horizonte!$"
 
 @Aide Gift 5
 Route15_WestEntrance_2F_EventScript_Aide::
@@ -52,12 +52,12 @@ Route15_WestEntrance_2F_EventScript_Aide::
 
 Route15_WestEntrance_2F_Text_GiveReward::
     .string "{PLAYER}!\p"
-    .string "You're really on a roll.\p"
-    .string "As your journey continues, \n"
-    .string "raising Pokémon may get harder,\l"
-    .string "especially if your team changes!\p"
-    .string "So we came up with a device that\n"
-    .string "might make raising Pokémon easier.$"
+    .string "Você está com a corda toda!\p"
+    .string "Conforme a sua jornada continua,\n"
+    .string "treinar Pokémon pode ficar mais difícil,\l"
+    .string "especialmente se sua equipe mudar!\p"
+    .string "Então criamos um dispositivo que pode\n"
+    .string "facilitar o treinamento de Pokémon.$"
 
 Route15_WestEntrance_2F_EventScript_AlreadyGotReward::
     msgbox Route15_WestEntrance_2F_Text_ExplainReward, MSGBOX_DEFAULT
@@ -65,9 +65,9 @@ Route15_WestEntrance_2F_EventScript_AlreadyGotReward::
     end
 
 Route15_WestEntrance_2F_Text_ExplainReward::
-    .string "You can turn Exp. Share on in your\n"
-    .string "Key Items bag.\p"
-    .string "It spreads EXP. Points to Pokémon\n"
-    .string "in your party, even if they didn't\l"
-    .string "participate in the battle.\p"
-    .string "You can turn it off at any time, too!$"
+    .string "Você pode ativar o Repartir Exp no seu\n"
+    .string "bolso de Itens Chave.\p"
+    .string "Ele distribui Pontos de EXP para os\n"
+    .string "Pokémon da sua equipe, mesmo se eles não\l"
+    .string "participarem da batalha.\p"
+    .string "Você também pode desativá-lo quando quiser!$"
