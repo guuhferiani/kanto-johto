@@ -6,16 +6,16 @@ SafariZone_Center_RestHouse_EventScript_Sara::
 	end
 
 SafariZone_Center_Text_WhereDidErikGo::
-    .string "Sara: Where did my boyfriend,\n"
-    .string "Erik, go?$"
+    .string "Sara: Para onde foi o meu namorado,\n"
+    .string "o Erik?$"
 
 SafariZone_Center_RestHouse_EventScript_Scientist::
 	msgbox SafariZone_Center_Text_CatchingMonsAsGifts, MSGBOX_NPC
 	end
 
 SafariZone_Center_Text_CatchingMonsAsGifts::
-    .string "I'm catching Pokémon to take home\n"
-    .string "as gifts.$"
+    .string "Estou capturando Pokémon para levar\n"
+    .string "para casa de presente.$"
 
 
 SafariZone_Center_RestHouse_EventScript_RangerF::
@@ -23,7 +23,7 @@ SafariZone_Center_RestHouse_EventScript_RangerF::
 	end
 
 SafariZone_Center_RestHouse_Text_RangerF:
-	.string "If you use {POKEBLOCK}s, wild Pokémon won't\n"
-	.string "be so quick to run away.\p"
-	.string "It's not much use to give {POKEBLOCK}s to\n"
-	.string "Pokémon that don't flee easily.$"
+	.string "Se você usar {POKEBLOCK}s, os Pokémon selvagens\n"
+	.string "não vão fugir tão rápido.\p"
+	.string "Mas não adianta muito dar {POKEBLOCK}s para\n"
+	.string "Pokémon que não fogem com facilidade.$"

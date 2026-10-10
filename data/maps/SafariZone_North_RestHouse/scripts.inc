@@ -6,37 +6,37 @@ SafariZone_North_RestHouse_EventScript_Fisher::
 	end
 
 SafariZone_East_Text_PrizeInDeepestPartOfSafariZone::
-    .string "Go to the deepest part of the\n"
-    .string "Safari Zone. You will win a prize!$"
+    .string "Vá até a parte mais profunda da\n"
+    .string "Zona do Safári. Você vai ganhar um prêmio!$"
 
 SafariZone_North_RestHouse_EventScript_Scientist::
 	msgbox SafariZone_East_Text_KeepAnyItemFoundOnSafari, MSGBOX_NPC
 	end
 
 SafariZone_East_Text_KeepAnyItemFoundOnSafari::
-    .string "You can keep any item you find in\n"
-    .string "the Safari Zone.\p"
-    .string "But, you'll run out of time if you\n"
-    .string "try for all of them at once.$"
+    .string "Você pode ficar com qualquer item que\n"
+    .string "encontrar na Zona do Safári.\p"
+    .string "Mas seu tempo vai acabar se você tentar\n"
+    .string "pegar todos de uma vez só.$"
 
 SafariZone_North_RestHouse_EventScript_Gentleman::
 	msgbox SafariZone_East_Text_MyEeveeEvolvedIntoFlareon, MSGBOX_NPC
 	end
 
 SafariZone_East_Text_MyEeveeEvolvedIntoFlareon::
-    .string "My Eevee evolved into Flareon.\p"
-    .string "But, a friend's Eevee turned into a\n"
-    .string "Vaporeon. I wonder why?$"
+    .string "Meu Eevee evoluiu para Flareon.\p"
+    .string "Mas o Eevee de um amigo virou um\n"
+    .string "Vaporeon. Por que será?$"
 
 SafariZone_North_RestHouse_EventScript_Woman::
 	msgbox SafariZone_North_RestHouse_Text_Woman, MSGBOX_NPC
 	end
 
 SafariZone_North_RestHouse_Text_Woman:
-	.string "Sometimes, when I toss a {POKEBLOCK} at \n"
-	.string "Pokémon, it gets ignored.\p"
-	.string "Do Pokémon have likes and dislikes\n"
-	.string "about what they eat?$"
+	.string "Às vezes, quando jogo um {POKEBLOCK} para\n"
+	.string "um Pokémon, ele simplesmente ignora.\p"
+	.string "Será que os Pokémon têm preferências\n"
+	.string "sobre o que comem?$"
 
 SafariZone_North_RestHouse_EventScript_BaldingMan::
 	lock
@@ -46,9 +46,8 @@ SafariZone_North_RestHouse_EventScript_BaldingMan::
 	end
 
 SafariZone_North_RestHouse_Text_KogaPatrolsSafariEverySoOften::
-    .string "The Safari Zone's huge, wouldn't\n"
-    .string "you say?\p"
-    .string "Fuchsia's Gym Leader, Koga, \n"
-    .string "patrols the grounds every so often.\p"
-    .string "Thanks to him, we can play here\n"
-    .string "knowing that we're safe.$"
+    .string "A Zona do Safári é enorme, não acha?\p"
+    .string "O Líder de Ginásio de Fuchsia, Koga,\n"
+    .string "patrulha a área com frequência.\p"
+    .string "Graças a ele, podemos nos divertir aqui\n"
+    .string "sabendo que estamos seguros.$"

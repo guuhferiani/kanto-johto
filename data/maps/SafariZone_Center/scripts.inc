@@ -6,23 +6,23 @@ SafariZone_Center_EventScript_RestHouseSign::
 	end
 
 SafariZone_Center_Text_RestHouse::
-    .string "Rest House$"
+    .string "Casa de Repouso$"
 
 SafariZone_Center_EventScript_TrainerTips::
 	msgbox SafariZone_Center_Text_PressStartToCheckTime, MSGBOX_SIGN
 	end
 
 SafariZone_Center_Text_PressStartToCheckTime::
-    .string "Trainer Tips:\p"
-	.string "If you put a {POKEBLOCK} in a Feeder,\n"
-	.string "Pokémon will gather around.$"
+    .string "Dicas para Treinadores:\p"
+	.string "Se você colocar um {POKEBLOCK} em um Alimentador,\n"
+	.string "os Pokémon vão se reunir ao redor.$"
 
 SafariZone_Center_EventScript_AreaSign::
 	msgbox SafariZone_Center_Text_CenterArea, MSGBOX_SIGN
 	end
 
 SafariZone_Center_Text_CenterArea::
-    .string "Center Area$"
+    .string "Área Central$"
 
 
 SafariZone_Center_EventScript_ItemNugget::

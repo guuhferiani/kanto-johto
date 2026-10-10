@@ -7,21 +7,21 @@ SafariZone_West_RestHouse_EventScript_Man::
 	end
 
 SafariZone_West_Text_BaitMakesMonStickAround::
-	.string "I don't have any {POKEBLOCK}s, but I caught\n"
-	.string "a good number of Pokémon.\p"
-	.string "You can improve your chances of making\n"
-	.string "a catch by getting closer to them\l"
-	.string "before throwing a Safari Ball.$"
+	.string "Eu não tenho nenhum {POKEBLOCK}, mas capturei\n"
+	.string "uma boa quantidade de Pokémon.\p"
+	.string "Você pode aumentar suas chances de captura\n"
+	.string "se aproximando mais deles antes de\l"
+	.string "lançar uma Bola Safári.$"
 
 SafariZone_West_RestHouse_EventScript_Scientist::
 	msgbox SafariZone_West_Text_RocksMakeMonRunButEasierCatch, MSGBOX_NPC
 	end
 
 SafariZone_West_Text_RocksMakeMonRunButEasierCatch::
-	.string "I put a {POKEBLOCK} on the {POKEBLOCK} Feeder.\n"
-	.string "But it seems to have disappeared.\p"
-	.string "I guess Pokémon must have eaten it\n"
-	.string "without me noticing.$"
+	.string "Coloquei um {POKEBLOCK} no Alimentador.\n"
+	.string "Mas parece que ele sumiu.\p"
+	.string "Acho que algum Pokémon comeu sem\n"
+	.string "eu nem perceber.$"
 
 
 SafariZone_West_RestHouse_EventScript_CooltrainerF::
@@ -29,5 +29,5 @@ SafariZone_West_RestHouse_EventScript_CooltrainerF::
 	end
 
 SafariZone_West_Text_HikedLotsDidntSeeMonIWanted::
-    .string "I hiked a lot, but I didn't see any\n"
-    .string "Pokémon I wanted.$"
+    .string "Eu andei um montão, mas não vi nenhum\n"
+    .string "dos Pokémon que eu queria.$"
