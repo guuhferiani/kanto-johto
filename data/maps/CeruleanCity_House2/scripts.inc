@@ -12,14 +12,14 @@ CeruleanCity_House2_EventScript_Hiker::
 	end
 
 CeruleanCity_House2_Text_RocketsStoleTMForDig::
-    .string "Those miserable Rockets!\p"
-    .string "Look what they've done to my\n"
-    .string "house!\p"
-    .string "They stole a TM for teaching\n"
-    .string "Pokémon how to dig holes!\p"
-    .string "I was going to use it on a\n"
-    .string "Mankey or a Sandshrew…\p"
-    .string "That cost me a bundle, it did!$"
+    .string "Aqueles miseráveis da Equipe Rocket!\p"
+    .string "Olhe o que eles fizeram com a\n"
+    .string "minha casa!\p"
+    .string "Eles roubaram um MT que ensina\n"
+    .string "os Pokémon a cavar buracos!\p"
+    .string "Eu ia usá-lo em um Mankey ou\n"
+    .string "em um Sandshrew…\p"
+    .string "Aquilo me custou uma fortuna!$"
 
 CeruleanCity_House2_EventScript_HikerGotTM28::
 	msgbox CeruleanCity_House2_Text_TeachDiglettDigWithoutTM
@@ -27,22 +27,22 @@ CeruleanCity_House2_EventScript_HikerGotTM28::
 	end
 
 CeruleanCity_House2_Text_TeachDiglettDigWithoutTM::
-    .string "I figure what's lost is lost.\p"
-    .string "I decided to teach Diglett how to\n"
-    .string "Dig without a TM.$"
+    .string "Acho que o que se foi, já era.\p"
+    .string "Decidi ensinar meu Diglett a Cavar\n"
+    .string "sem precisar de nenhum MT.$"
 
 CeruleanCity_House2_EventScript_Lass::
 	msgbox CeruleanCity_House2_Text_TeamRocketTryingToDigIntoNoGood, MSGBOX_NPC
 	end
 
 CeruleanCity_House2_Text_TeamRocketTryingToDigIntoNoGood::
-    .string "Team Rocket must be trying to Dig\n"
-    .string "their way into no good!$"
+    .string "A Equipe Rocket deve estar cavando\n"
+    .string "para aprontar alguma maldade!$"
 
 CeruleanCity_House2_EventScript_WallHole::
 	msgbox CeruleanCity_House2_Text_TeamRocketLeftWayOut, MSGBOX_SIGN
 	end
 
 CeruleanCity_House2_Text_TeamRocketLeftWayOut::
-    .string "Team Rocket left a way out!$"
+    .string "A Equipe Rocket abriu um buraco de fuga!$"
 

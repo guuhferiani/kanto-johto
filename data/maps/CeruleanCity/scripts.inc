@@ -44,26 +44,25 @@ CeruleanCity_EventScript_CitySign::
 
 CeruleanCity_Text_CitySign::
     .string "Cerulean City\n"
-    .string "A Mysterious, Blue Aura Surrounds It.$"
+    .string "Uma Misteriosa Aura Azulada a Envolve.$"
 
 CeruleanCity_EventScript_TrainerTips::
 	msgbox CeruleanCity_Text_TrainerTipsHeldItems, MSGBOX_SIGN
 	end
 
 CeruleanCity_Text_TrainerTipsHeldItems::
-    .string "Trainer Tips:\p"
-    .string "A Pokémon can be made to hold\n"
-    .string "an item.\p"
-    .string "Some items can even be used by\n"
-    .string "the holding Pokémon in battle.$"
+    .string "Dicas para Treinadores:\p"
+    .string "Um Pokémon pode segurar um item.\p"
+    .string "Alguns itens podem até ser usados pelo\n"
+    .string "Pokémon segurador durante a batalha.$"
 
 CeruleanCity_EventScript_BikeShopSign::
 	msgbox CeruleanCity_Text_BikeShopSign, MSGBOX_SIGN
 	end
 
 CeruleanCity_Text_BikeShopSign::
-    .string "Grass and caves handled easily!\n"
-    .string "Bike Shop$"
+    .string "Gramados e cavernas fáceis de encarar!\n"
+    .string "Loja de Bicicletas$"
 
 CeruleanCity_EventScript_GymSign::
 	lockall
@@ -72,9 +71,9 @@ CeruleanCity_EventScript_GymSign::
 	end
 
 CeruleanCity_Text_GymSign::
-    .string "Cerulean City Pokémon Gym\n"
-    .string "Leader: Misty\l"
-    .string "The Tomboyish Mermaid!$"
+    .string "Ginásio Pokémon de Cerulean City\n"
+    .string "Líder: Misty\l"
+    .string "A Sereia Moleca!$"
 
 CeruleanCity_EventScript_Police::
 	lock
@@ -86,13 +85,12 @@ CeruleanCity_EventScript_Police::
 	end
 
 CeruleanCity_Text_PeopleHereWereRobbed::
-    .string "The people here were robbed.\p"
-    .string "It's obvious that Team Rocket is\n"
-    .string "behind this most heinous crime!\p"
-    .string "Our Police Force is having\n"
-    .string "trouble with the Rockets, so\l"
-    .string "we asked for help from the\l"
-    .string "International Police!$"
+    .string "As pessoas daqui foram assaltadas.\p"
+    .string "É óbvio que a Equipe Rocket está por trás\n"
+    .string "desse crime hediondo!\p"
+    .string "Nossa força policial está tendo problemas\n"
+    .string "com os Rockets, então pedimos ajuda à\l"
+    .string "Polícia Internacional!$"
 
 CeruleanCity_EventScript_LittleBoy::
 	lock
@@ -103,12 +101,11 @@ CeruleanCity_EventScript_LittleBoy::
 	end
 
 CeruleanCity_Text_IfSlowbroWasntThereCouldCutTree::
-    .string "If that Slowbro wasn't there, you\n"
-    .string "could Cut down the small tree.\p"
-    .string "That way, you could get to the\n"
-    .string "other side.\p"
-    .string "I think there's a way around it,\n"
-    .string "though.$"
+    .string "Se aquele Slowbro não estivesse ali, daria\n"
+    .string "para Cortar a pequena árvore.\p"
+    .string "Assim, daria para passar para o outro lado.\p"
+    .string "Mas acho que tem outro caminho para dar a\n"
+    .string "volta.$"
 
 CeruleanCity_EventScript_LittleBoySlowbroMoved::
 	msgbox CeruleanCity_Text_YouCanCutDownSmallTrees, MSGBOX_DEFAULT
@@ -116,29 +113,29 @@ CeruleanCity_EventScript_LittleBoySlowbroMoved::
 	end
 
 CeruleanCity_Text_YouCanCutDownSmallTrees::
-    .string "Did you know that you can Cut down\n"
-    .string "small trees?\p"
-    .string "Even that small tree in front of\n"
-    .string "the shop can be Cut down.\p"
-    .string "I think there's a way around it,\n"
-    .string "though.$"
+    .string "Você sabia que pode Cortar árvores\n"
+    .string "pequenas?\p"
+    .string "Até mesmo aquela arvorezinha em frente à\n"
+    .string "loja pode ser Cortada.\p"
+    .string "Mas acho que tem outro caminho para dar a\n"
+    .string "volta.$"
 
 CeruleanCity_EventScript_BaldingMan::
 	msgbox CeruleanCity_Text_PokemonEncyclopediaAmusing, MSGBOX_NPC
 	end
 
 CeruleanCity_Text_PokemonEncyclopediaAmusing::
-    .string "You're making an encyclopedia on\n"
-    .string "Pokémon? That sounds amusing.$"
+    .string "Você está criando uma enciclopédia sobre\n"
+    .string "Pokémon? Parece divertido.$"
 
 CeruleanCity_EventScript_Youngster::
 	msgbox CeruleanCity_Text_TrainerLifeIsToughIsntIt, MSGBOX_NPC
 	end
 
 CeruleanCity_Text_TrainerLifeIsToughIsntIt::
-    .string "You're a Trainer, too?\p"
-    .string "Collecting, battling…\n"
-    .string "It's a tough life, isn't it?$"
+    .string "Você também é um Treinador?\p"
+    .string "Colecionar, batalhar…\n"
+    .string "É uma vida dura, não é?$"
 
 CeruleanCity_EventScript_Woman::
 	lock
@@ -150,25 +147,25 @@ CeruleanCity_EventScript_Woman::
 	end
 
 CeruleanCity_Text_WantBrightRedBicycle::
-    .string "I want a bright red bicycle.\p"
-    .string "I'll keep it at home, so it won't\n"
-    .string "get dirty.$"
+    .string "Eu quero uma bicicleta vermelho-brilhante.\p"
+    .string "Vou guardá-la em casa, assim ela nunca vai\n"
+    .string "se sujar.$"
 
 CeruleanCity_EventScript_CeruleanCaveGuard::
 	msgbox CeruleanCity_Text_ThisIsCeruleanCave, MSGBOX_NPC
 	end
 
 CeruleanCity_Text_ThisIsCeruleanCave::
-    .string "This is Cerluean Cave.\p"
-    .string "Very strong Pokémon live inside\n"
-    .string "there.\p"
-    .string "It takes a very special Trainer to\n"
-    .string "be allowed inside there.\p"
-    .string "How strong?\n"
+    .string "Esta é a Cerulean Cave.\p"
+    .string "Pokémon extremamente fortes vivem lá\n"
+    .string "dentro.\p"
+    .string "É preciso ser um Treinador muito especial\n"
+    .string "para ter permissão de entrar lá.\p"
+    .string "Quão forte?\n"
     .string "Hmm....\p"
-    .string "I'd say only someone could\n"
-    .string "become the Pokémon League\l"
-    .string "Champion could handle it.$"
+    .string "Eu diria que apenas quem se tornar o\n"
+    .string "Campeão da Liga Pokémon conseguiria dar\l"
+    .string "conta.$"
 
 CeruleanCity_EventScript_Lass::
 	lock
@@ -196,11 +193,11 @@ CeruleanCity_EventScript_SlowbroLass1::
 	end
 
 CeruleanCity_Text_SlowbroUseSonicboom::
-    .string "Okay! Slowbro!\n"
-    .string "Use Sonic Boom!$"
+    .string "Muito bem! Slowbro!\n"
+    .string "Use o Boom Sônico!$"
 
 CeruleanCity_Text_SlowbroPayAttention::
-    .string "Come on, Slowbro, pay attention!$"
+    .string "Qual é, Slowbro, preste atenção!$"
 
 CeruleanCity_EventScript_SlowbroLass2::
 	msgbox CeruleanCity_Text_SlowbroPunch, MSGBOX_DEFAULT
@@ -210,11 +207,11 @@ CeruleanCity_EventScript_SlowbroLass2::
 	end
 
 CeruleanCity_Text_SlowbroPunch::
-    .string "Slowbro, punch!$"
+    .string "Slowbro, dê um soco!$"
 
 CeruleanCity_Text_NoYouBlewItAgain::
-    .string "No!\n"
-    .string "You blew it again!$"
+    .string "Não!\n"
+    .string "Você errou de novo!$"
 
 CeruleanCity_EventScript_SlowbroLass3::
 	msgbox CeruleanCity_Text_SlowbroWithdraw, MSGBOX_DEFAULT
@@ -224,13 +221,13 @@ CeruleanCity_EventScript_SlowbroLass3::
 	end
 
 CeruleanCity_Text_SlowbroWithdraw::
-    .string "Slowbro, WITHDRAW!$"
+    .string "Slowbro, ENCOLHER!$"
 
 CeruleanCity_Text_HardToControlMonsObedience::
-    .string "No! That's wrong!\n"
-    .string "It's so hard to control Pokémon!\p"
-    .string "Your Pokémon's obedience depends\n"
-    .string "on your abilities as a trainer.$"
+    .string "Não! Está tudo errado!\n"
+    .string "É tão difícil controlar Pokémon!\p"
+    .string "A obediência do seu Pokémon depende das\n"
+    .string "suas habilidades como treinador.$"
 
 CeruleanCity_EventScript_Slowbro::
 	lock
@@ -247,7 +244,7 @@ CeruleanCity_EventScript_Slowbro1::
 	end
 
 CeruleanCity_Text_SlowbroTookSnooze::
-    .string "Slowbro took a snooze…$"
+    .string "Slowbro tirou uma soneca…$"
 
 CeruleanCity_EventScript_Slowbro2::
 	msgbox CeruleanCity_Text_SlowbroLoafingAround, MSGBOX_DEFAULT
@@ -255,7 +252,7 @@ CeruleanCity_EventScript_Slowbro2::
 	end
 
 CeruleanCity_Text_SlowbroLoafingAround::
-    .string "Slowbro is loafing around…$"
+    .string "Slowbro está vadiando por aí…$"
 
 CeruleanCity_EventScript_Slowbro3::
 	msgbox CeruleanCity_Text_SlowbroTurnedAway, MSGBOX_DEFAULT
@@ -263,7 +260,7 @@ CeruleanCity_EventScript_Slowbro3::
 	end
 
 CeruleanCity_Text_SlowbroTurnedAway::
-    .string "Slowbro turned away…$"
+    .string "Slowbro virou a cara…$"
 
 CeruleanCity_EventScript_Slowbro4::
 	msgbox CeruleanCity_Text_SlowbroIgnoredOrders, MSGBOX_DEFAULT
@@ -271,7 +268,7 @@ CeruleanCity_EventScript_Slowbro4::
 	end
 
 CeruleanCity_Text_SlowbroIgnoredOrders::
-    .string "Slowbro ignored orders…$"
+    .string "Slowbro ignorou as ordens…$"
 
 CeruleanCity_EventScript_RivalTriggerLeft::
 	lockall
@@ -329,59 +326,58 @@ CeruleanCity_EventScript_RivalDefeated::
 	end
 
 CeruleanCity_Text_RivalAppears::
-    .string "{RIVAL}: Yo! {PLAYER}!\p"
-    .string "You're still struggling along back\n"
-    .string "here?\p"
-    .string "I'm doing great! I caught a bunch\n"
-    .string "of strong and smart Pokémon!$"
+    .string "{RIVAL}: E aí, {PLAYER}!\p"
+    .string "Você ainda está patinando aqui\n"
+    .string "atrás?\p"
+    .string "Eu estou indo super bem! Capturei um monte\n"
+    .string "de Pokémon fortes e espertos!$"
 
 CeruleanCity_Text_RivalIntro::
-    .string "Here, let me see what you caught,\n"
+    .string "Deixa eu ver o que você capturou,\n"
     .string "{PLAYER}!$"
 
 CeruleanCity_Text_RivalDefeat::
-    .string "Hey!\n"
-    .string "Take it easy!\l"
-    .string "You won already!$"
+    .string "Ei!\n"
+    .string "Pega leve!\l"
+    .string "Você já ganhou!$"
 
 CeruleanCity_Text_RivalPostBattle::
-    .string "{RIVAL}: Hey, guess what?\p"
-    .string "I went to Bill's and got him to\n"
-    .string "show me his latest invention.\p"
-    .string "It's really going to help add\n" 
-    .string "a lot of pages to my Pokédex!\p"
-    .string "After all, Bill's world famous as a\n"
-    .string "PokéManiac.\p"
-    .string "He invented the Pokémon Storage\n"
-    .string "System on PC, too.\p"
-    .string "Since you're using his system,\n"
-    .string "you should go thank him.\p"
-    .string "Well, I better get rolling!\n"
-    .string "Smell ya later!$"
+    .string "{RIVAL}: Ei, adivinha só!\p"
+    .string "Eu fui até a casa do Bill e pedi para ele\n"
+    .string "me mostrar a sua mais nova invenção.\p"
+    .string "Isso vai me ajudar a adicionar muitas\n" 
+    .string "páginas à minha Pokédex!\p"
+    .string "Afinal, o Bill é famoso no mundo todo como\n"
+    .string "um PokéManíaco.\p"
+    .string "Ele inventou o Sistema de Armazenamento de\n"
+    .string "Pokémon no PC também.\p"
+    .string "Já que você usa o sistema dele,\n"
+    .string "deveria ir lá agradecer.\p"
+    .string "Bom, é melhor eu dar no pé!\n"
+    .string "Até mais, perdedor!$"
 
 CeruleanCity_Text_OhRightLittlePresentAsFavor::
-    .string "Oh, yeah, right.\p"
-    .string "My sister sent me a present, but\n"
-    .string "she accidentally put two of these\l"
-    .string "in the box.\p"
-    .string "I don't need them both, so you can\n"
-    .string "have one.\p"
-    .string "No, really.\p"
-    .string "I'll give it to you as a favor, since\n"
-    .string "you're always plodding behind me.$"
+    .string "Ah, é verdade.\p"
+    .string "Minha irmã me mandou um presente, mas ela\n"
+    .string "acidentalmente colocou dois desses na caixa.\p"
+    .string "Eu não preciso dos dois, então pode ficar\n"
+    .string "com um.\p"
+    .string "Sério mesmo.\p"
+    .string "Vou te dar como um favor, já que você vive\n"
+    .string "se arrastando atrás de mim.$"
 
 CeruleanCity_Text_ObtainedPokeblockCase::
-	.string "Obtained a PokéBlock Case!\p"
-	.string "{PLAYER} put the PokéBlock Case\n"
-	.string "in the Key Items pocket.$"
+	.string "Você obteve o Porta-Pokéblocos!\p"
+	.string "{PLAYER} guardou o Porta-Pokéblocos\n"
+	.string "no bolso de Itens Chave.$"
 
 CeruleanCity_Text_ExplainPokeblockSmellYa::
-    .string "A weakling like you…\n"
-    .string "That thing's perfect.\p"
-    .string "I don't need it because I don't\n"
-    .string "give a hoot about Pokémon Contests.\p"
-    .string "All right, this time I really am\n"
-    .string "gone. Smell ya!$"
+    .string "Para um fracote como você…\n"
+    .string "Essa coisa é perfeita.\p"
+    .string "Eu não preciso disso porque não dou a mínima\n"
+    .string "para Concursos Pokémon.\p"
+    .string "Beleza, dessa vez eu fui de verdade.\n"
+    .string "Fui!$"
 
 CeruleanCity_EventScript_RivalStartExit::
 	applymovement OBJ_EVENT_ID_PLAYER, CeruleanCity_Movement_PlayerWatchRivalExit
@@ -480,16 +476,16 @@ CeruleanCity_EventScript_Grunt::
 	end
 
 CeruleanCity_Text_GruntIntro::
-    .string "Hey! Stay out!\n"
-    .string "It's not your yard!\p"
-    .string "…Huh?\n"
-    .string "Me?\p"
-    .string "I'm an innocent bystander!\n"
-    .string "Don't you believe me?$"
+    .string "Ei! Fique longe!\n"
+    .string "Esse quintal não é seu!\p"
+    .string "…Hã?\n"
+    .string "Eu?\p"
+    .string "Sou apenas um cidadão inocente!\n"
+    .string "Não acredita em mim?$"
 
 CeruleanCity_Text_GruntDefeat::
-    .string "Grunt: Stop! I give up!\n"
-    .string "I'll leave quietly!$"
+    .string "Recruta: Pare! Eu desisto!\n"
+    .string "Vou sair de fininho!$"
 
 CeruleanCity_EventScript_GruntDefeated::
 	setvar VAR_CERULEAN_CITY_ROCKETS, 2
@@ -506,9 +502,9 @@ CeruleanCity_EventScript_GruntDefeated::
 	return
 
 CeruleanCity_Text_OkayIllReturnStolenTM::
-    .string "…Fine! Here!\p"
-    .string "I'm not going to prison\n"
-    .string "over some TM!$"
+    .string "…Está bem! Tome aqui!\p"
+    .string "Eu não vou para a cadeia por\n"
+    .string "causa de um mísero TM!$"
 
 CeruleanCity_EventScript_StolenTM::
 	lock
@@ -524,8 +520,8 @@ CeruleanCity_EventScript_StolenTM::
 	end
 
 CeruleanCity_Text_RecoveredStolenTM::
-	.string "{PLAYER} recovered the stolen\n"
-	.string "TM28!$"
+	.string "{PLAYER} recuperou o TM28\n"
+	.string "roubado!$"
 
 CeruleanCity_EventScript_NoRoomForTM28::
 	msgbox CeruleanCity_Text_MakeRoomForThis, MSGBOX_DEFAULT
@@ -533,8 +529,8 @@ CeruleanCity_EventScript_NoRoomForTM28::
 	end
 
 CeruleanCity_Text_MakeRoomForThis::
-	.string "You don't have enough room.\n"
-	.string "Better make some space!$"
+	.string "Você não tem espaço suficiente.\n"
+	.string "É melhor liberar espaço na mochila!$"
 
 CeruleanCity_EventScript_GruntTriggerTop::
 	lockall
@@ -670,7 +666,7 @@ CeruleanCity_EventScript_GetBulbasaur::
 	return
 
 CeruleanCity_EventScript_Text_BefriendedBulbasaur::
-	.string "{PLAYER} befriended the Bulbasaur!$"
+	.string "{PLAYER} fez amizade com o Bulbasaur!$"
 
 CeruleanCity_EventScript_GotBulbasaur::
 	setflag FLAG_GOT_BULBASAUR
@@ -698,24 +694,24 @@ CeruleanCity_EventScript_NoRoomForBulbasaur::
 	end
 
 CeruleanCity_Text_NoRoomForMorePokemon::
-    .string "Oh! You don't have room\n"
-    .string "for any more Pokémon!$"
+    .string "Oh! Você não tem espaço para\n"
+    .string "mais nenhum Pokémon!$"
 
 CeruleanCity_Text_BulbasaurDoesntTrustPeople::
-	.string "This Bulbasaur was hurt trying\n"
-	.string "to stop Team Rocket from\l"
-	.string "kidnapping other Pokémon...\p"
-	.string "I'm trying to get it to trust\n"
-	.string "people again.$"
+	.string "Este Bulbasaur se machucou tentando\n"
+	.string "impedir a Equipe Rocket de raptar\l"
+	.string "outros Pokémon...\p"
+	.string "Estou tentando fazer com que ele confie\n"
+	.string "nas pessoas novamente.$"
 
 CeruleanCity_Text_BulbasaurTrustsYou::
-	.string "Amazing! Wonderful!\p"
-	.string "This Bulbasaur trusts you!\p"
-	.string "Its opened its heart to\n"
-	.string "people again...\p"
-	.string "I think it wants to go with you.\p"
-	.string "Alright! I trust you too!\p"
-	.string "Please take good care of it!$"
+	.string "Incrível! Maravilhoso!\p"
+	.string "Este Bulbasaur confia em você!\p"
+	.string "Ele abriu o coração para as pessoas de\n"
+	.string "novo...\p"
+	.string "Acho que ele quer ir com você.\p"
+	.string "Tudo bem! Eu também confio em você!\p"
+	.string "Por favor, cuide muito bem dele!$"
 
 CeruleanCity_EventScript_BulbasaurStillNeedsTime::
 	turnobject LOCALID_BREEDER, DIR_WEST
@@ -724,10 +720,9 @@ CeruleanCity_EventScript_BulbasaurStillNeedsTime::
 	end
 
 CeruleanCity_Text_BulbasaurNeedsTime::
-	.string "It still needs time, though.\p"
-	.string "I don't blame it for holding\n"
-	.string "a grudge. What Team Rocket did\l"
-	.string "is unforgivable!$"
+	.string "Ele ainda precisa de um tempo, porém.\p"
+	.string "Não o culpo por guardar rancor. O que\n"
+	.string "a Equipe Rocket fez é imperdoável!$"
 
 CeruleanCity_EventScript_ProudOfBulbasaur::
 	msgbox CeruleanCity_Text_ProudOfBulbasaur, MSGBOX_DEFAULT
@@ -735,9 +730,9 @@ CeruleanCity_EventScript_ProudOfBulbasaur::
 	end
 
 CeruleanCity_Text_ProudOfBulbasaur::
-	.string "I'm very proud of Bulbasaur.\p"
-	.string "It takes a lot of courage to\n"
-	.string "trust others.$"
+	.string "Estou muito orgulhosa do Bulbasaur.\p"
+	.string "É preciso muita coragem para confiar\n"
+	.string "nos outros novamente.$"
 
 CeruleanCity_EventScript_BillCallsPlayer::
 	lockall
@@ -748,16 +743,17 @@ CeruleanCity_EventScript_BillCallsPlayer::
 	end
 
 CeruleanCity_Text_DexNavCall::
-	.string "???: Hey, is this {PLAYER}?\p"
-	.string "Bill: Yeah, it's Bill!\p"
-	.string "I had to email Prof. Oak for your\n"
-	.string "number, I hope that's OK!\p"
-	.string "My brain must have been a little\n"
-	.string "scrambled from the teleporter\l"
-	.string "after you rescued me - I totally\l"
-	.string "forgot to show you something!\p"
-	.string "Come back to the Sea Cottage\n"
-	.string "sometime and I'll show you!$"
+	.string "???: Alô, é o {PLAYER}?\p"
+	.string "Bill: Sim, é o Bill!\p"
+	.string "Tive que mandar um e-mail pro\n"
+	.string "Prof. Carvalho para pegar o seu número,\l"
+	.string "espero que não se importe!\p"
+	.string "Meu cérebro devia estar meio bagunçado\n"
+	.string "do teletransportador depois que você me\l"
+	.string "salvou — esqueci completamente de te\l"
+	.string "mostrar uma coisa!\p"
+	.string "Volte à Casa do Mar qualquer hora que\n"
+	.string "eu te mostro!$"
 
 CeruleanCity_EventScript_Venusaurite::
 	finditem ITEM_VENUSAURITE, 1

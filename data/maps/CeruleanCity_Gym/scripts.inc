@@ -26,20 +26,20 @@ CeruleanCity_Gym_EventScript_ChallengeMisty::
 	end
 
 CeruleanCity_Gym_Text_MistySpeech::
-    .string "Hi, you're a new face!\p"
-    .string "Only those Trainers who have a\n"
-    .string "policy about Pokémon can turn pro.\p"
-    .string "What is your approach when you\n"
-    .string "catch and train Pokémon?$"
+    .string "Olá, você é um rosto novo!\p"
+    .string "Apenas aqueles Treinadores que têm uma\n"
+    .string "filosofia sobre Pokémon podem virar pro.\p"
+    .string "Qual é a sua abordagem ao capturar e\n"
+    .string "treinar Pokémon?$"
 
 CeruleanCity_Gym_Text_MistyIntro::
-    .string "My policy is an all-out offensive\n"
-    .string "with Water-type Pokémon!$"
+    .string "A minha filosofia é um ataque total\n"
+    .string "com Pokémon do tipo Água!$"
 
 CeruleanCity_Gym_Text_MistyDefeat::
-	.string "Wow!\n"
-    .string "You're too much!\p"
-    .string "All right!$"
+	.string "Uau!\n"
+    .string "Você é demais!\p"
+    .string "Muito bem!$"
 
 CeruleanCity_Gym_EventScript_DefeatedMistyGetBadge::
 	msgbox CeruleanCity_Gym_Text_GetBadge, MSGBOX_DEFAULT
@@ -58,22 +58,22 @@ CeruleanCity_Gym_EventScript_DefeatedMistyGetBadge::
 	end
 
 CeruleanCity_Gym_Text_GetBadge::
-    .string "You can have the Cascade Badge\n"
-    .string "to show you beat me.$"
+    .string "Você pode ficar com a Insígnia da\n"
+    .string "Cascata para provar que me venceu.$"
 
 CeruleanCity_Gym_Text_ReceivedBadge::
-	.string "{PLAYER} received the Cascade\n"
-    .string "Badge from Misty!$"
+	.string "{PLAYER} recebeu a Insígnia da\n"
+    .string "Cascata de Misty!$"
 
 CeruleanCity_Gym_Text_ExplainBadge::
-	.string "The Cascade Badge makes all\n"
-    .string "Pokémon up to Lv. 30 obey.\p"
-    .string "That includes even outsiders you\n"
-    .string "got in trades.\p"
-    .string "There's more. You can now use Cut\n"
-    .string "anytime, even out of battle.\p"
-    .string "You can Cut down small trees to\n"
-    .string "open new pathways.$"
+	.string "A Insígnia da Cascata faz com que todos\n"
+    .string "os Pokémon até o Nv. 30 obedeçam.\p"
+    .string "Isso inclui até aqueles obtidos em trocas\n"
+    .string "com outros treinadores.\p"
+    .string "E tem mais. Agora você pode usar Cortar\n"
+    .string "a qualquer momento, fora de batalha.\p"
+    .string "Você pode Cortar pequenas árvores para\n"
+    .string "abrir novos caminhos.$"
 
 CeruleanCity_Gym_EventScript_GetTM::
 	msgbox CeruleanCity_Gym_Text_TakeThisWithYou, MSGBOX_DEFAULT
@@ -90,15 +90,15 @@ CeruleanCity_Gym_EventScript_GetTM::
 	end
 
 CeruleanCity_Gym_Text_TakeThisWithYou::
-	 .string "You can also have my favorite TM.$"
+	 .string "Você também pode ficar com o meu TM favorito.$"
 
 CeruleanCity_Gym_Text_ReceivedTM::
-    .string "{PLAYER} received TM03\n"
-    .string "from Misty.$"
+    .string "{PLAYER} recebeu o TM03\n"
+    .string "de Misty.$"
 
 CeruleanCity_Gym_Text_ExplainTM::
-    .string "TM03 teaches Water Pulse.\p"
-    .string "Use it on an aquatic Pokémon!$"
+    .string "O TM03 ensina Pulso d'Água.\p"
+    .string "Use-o em um Pokémon aquático!$"
 
 CeruleanCity_Gym_EventScript_NoRoomForTM::
 	msgbox CeruleanCity_Gym_Text_NoRoomForTM, MSGBOX_DEFAULT
@@ -106,7 +106,7 @@ CeruleanCity_Gym_EventScript_NoRoomForTM::
 	end
 
 CeruleanCity_Gym_Text_NoRoomForTM::
-    .string "You better make room for this!$"
+    .string "É melhor você abrir espaço para isso!$"
 
 CeruleanCity_Gym_EventScript_LeaderPostBattle::
 	lock
@@ -117,9 +117,9 @@ CeruleanCity_Gym_EventScript_LeaderPostBattle::
 	end
 
 CeruleanCity_Gym_Text_LeaderPostBattle::
-	.string "Misty: There are times when I want\n"
-	.string "to just break free from a puny\l" 
-	.string "little pool and swim in the big blue!$"
+	.string "Misty: Há momentos em que só quero me\n"
+	.string "libertar de uma piscina minúscula e nadar no\l" 
+	.string "grande azul do oceano!$"
 
 CeruleanCity_Gym_EventScript_LeaderPostBattleGameClear::
 	msgbox CeruleanCity_Gym_Text_PostBattleGameClear, MSGBOX_DEFAULT
@@ -127,11 +127,11 @@ CeruleanCity_Gym_EventScript_LeaderPostBattleGameClear::
 	end
 
 CeruleanCity_Gym_Text_PostBattleGameClear::
-	.string "Know what?\p"
-    .string "My dream was to battle powerful\n" 
-    .string "Trainers and become a Gym Leader...\p"
-    .string "I made my dream come true, and now \n"
-    .string "my next dream is to defeat you!$"
+	.string "Sabe de uma coisa?\p"
+    .string "Meu sonho era enfrentar Treinadores\n" 
+    .string "poderosos e me tornar uma Líder de Ginásio...\p"
+    .string "Eu realizei meu sonho, e agora meu\n"
+    .string "próximo sonho é derrotar você!$"
 
 CeruleanCity_Gym_EventScript_RematchLeader::
 	msgbox CeruleanCity_Gym_Text_RematchLeader, MSGBOX_YESNO
@@ -141,14 +141,14 @@ CeruleanCity_Gym_EventScript_RematchLeader::
 	end
 
 CeruleanCity_Gym_Text_RematchLeader::
-	.string "I heard an interesting rumor!\p" 
-	.string "You and that other kid have been\n" 
-	.string "taking on those Team Rocket guys.\p" 
-	.string "Is that true?\p" 
-	.string "Argh! I just can't take it anymore!\p" 
-	.string "You've gotten so strong that I just\n" 
-	.string "absolutely have to battle you again!\p" 
-	.string "You got that? No refusing!$"
+	.string "Ouvi um boato interessante!\p" 
+	.string "Você e aquele outro garoto andaram\n" 
+	.string "enfrentando aqueles caras da Equipe Rocket.\p" 
+	.string "Isso é verdade?\p" 
+	.string "Argh! Eu simplesmente não aguento mais!\p" 
+	.string "Você ficou tão forte que eu simplesmente\n" 
+	.string "preciso batalhar com você de novo!\p" 
+	.string "Entendeu bem? Nada de recusar!$"
 
 CeruleanCity_Gym_EventScript_DeclineRematch::
 	msgbox CeruleanCity_Gym_Text_DeclineRematch, MSGBOX_DEFAULT
@@ -156,7 +156,7 @@ CeruleanCity_Gym_EventScript_DeclineRematch::
 	end
 
 CeruleanCity_Gym_Text_DeclineRematch::
-	.string "Argh! C'mon! Battle me!$"
+	.string "Argh! Qual é! Batalha comigo!$"
 
 CeruleanCity_Gym_EventScript_PostgameRematch::
 	msgbox CeruleanCity_Gym_Text_RematchMode, MSGBOX_YESNO
@@ -165,16 +165,16 @@ CeruleanCity_Gym_EventScript_PostgameRematch::
 	end
 
 CeruleanCity_Gym_Text_RematchMode::
-	.string "Now that you're the champion,\n"
-	.string "would you like to go all out?$"
+	.string "Agora que você é o campeão,\n"
+	.string "gostaria de ir com força total?$"
 
 CeruleanCity_Gym_EventScript_LeaderRematch_OriginalTeam::
 	trainerbattle_single LEADER_REMATCH_MISTY_ORIGINAL, CeruleanCity_Gym_Text_RematchOriginal, CeruleanCity_Gym_Text_RematchDefeat, CeruleanCity_Gym_EventScript_DefeatedLeaderRematch
 	end
 
 CeruleanCity_Gym_Text_RematchOriginal::
-	.string "Okay, {PLAYER}!\n"
-	.string "Let's go!$"
+	.string "Beleza, {PLAYER}!\n"
+	.string "Vamos lá!$"
 
 CeruleanCity_Gym_EventScript_LeaderRematch_PostGameTeam::
 	setvar VAR_0x8003, 1
@@ -183,11 +183,11 @@ CeruleanCity_Gym_EventScript_LeaderRematch_PostGameTeam::
 	end
 
 CeruleanCity_Gym_Text_RematchPostgame::
-	.string "My adorable Pokémon are ready\n" 
-	.string "to take you on!\p" 
-	.string "The ultimate offense of\n" 
-	.string "Water-type Pokémon!\p" 
-	.string "I hope you're ready!$"
+	.string "Meus adoráveis Pokémon estão prontos\n" 
+	.string "para te enfrentar!\p" 
+	.string "A ofensiva definitiva dos Pokémon do\n" 
+	.string "tipo Água!\p" 
+	.string "Espero que você esteja pronto!$"
 
 CeruleanCity_Gym_EventScript_DefeatedLeaderRematch::
 	setflag FLAG_DAILY_MISTY_REMATCH
@@ -195,7 +195,7 @@ CeruleanCity_Gym_EventScript_DefeatedLeaderRematch::
 	end
 
 CeruleanCity_Gym_Text_RematchDefeat::
-	.string "Hmph! How annoying!$"
+	.string "Hmph! Que irritante!$"
 
 
 CeruleanCity_Gym_EventScript_PrepDexNavCall::
@@ -208,16 +208,16 @@ CeruleanCity_Gym_EventScript_Diana::
 	end
 
 CeruleanCity_Gym_Text_DianaIntro::
-    .string "What? You?\n"
-    .string "I'm more than good enough for you!\p"
-    .string "Misty won't have to be bothered.$"
+    .string "O quê? Você?\n"
+    .string "Eu sou mais do que suficiente para você!\p"
+    .string "A Misty nem vai precisar se incomodar.$"
 
 CeruleanCity_Gym_Text_DianaDefeat::
-    .string "You overwhelmed me!$"
+    .string "Você me superou completamente!$"
 
 CeruleanCity_Gym_Text_DianaPostBattle::
-    .string "You have to face other Trainers\n"
-    .string "to see how good you really are.$"
+    .string "Você precisa enfrentar outros Treinadores\n"
+    .string "para ver quão bom você realmente é.$"
 
 CeruleanCity_Gym_EventScript_Luis::
 	trainerbattle_single TRAINER_SWIMMER_MALE_LUIS, CeruleanCity_Gym_Text_LuisIntro, CeruleanCity_Gym_Text_LuisDefeat
@@ -225,17 +225,17 @@ CeruleanCity_Gym_EventScript_Luis::
 	end
 
 CeruleanCity_Gym_Text_LuisIntro::
-    .string "Splash!\p"
-    .string "I'm first up!\n"
-    .string "Let's do it!$"
+    .string "Tchibum!\p"
+    .string "Eu sou o primeiro!\n"
+    .string "Vamos nessa!$"
 
 CeruleanCity_Gym_Text_LuisDefeat::
-    .string "That can't be!$"
+    .string "Não pode ser!$"
 
 CeruleanCity_Gym_Text_LuisPostBattle::
-    .string "Misty is a Trainer who's going to\n"
-    .string "keep improving.\p"
-    .string "She won't lose to someone like you!$"
+    .string "A Misty é uma Treinadora que vai\n"
+    .string "continuar evoluindo sempre.\p"
+    .string "Ela não vai perder para alguém como você!$"
 
 CeruleanCity_Gym_EventScript_GymGuy::
 	lock
@@ -246,15 +246,15 @@ CeruleanCity_Gym_EventScript_GymGuy::
 	end
 
 CeruleanCity_Gym_Text_GymGuyAdvice::
-    .string "Yo!\n"
-    .string "Champ in the making!\p"
-    .string "Let me give you some advice!\p"
-    .string "The Leader, Misty, is a pro who\n"
-    .string "uses Water-type Pokémon.\p"
-    .string "You can drain all their water with\n"
-    .string "Grass-type Pokémon.\p"
-    .string "Or, you might use Electric-type\n"
-    .string "Pokémon and zap them!$"
+    .string "E aí!\n"
+    .string "Futuro campeão!\p"
+    .string "Deixe-me dar um conselho!\p"
+    .string "A Líder, Misty, é uma fera que usa\n"
+    .string "Pokémon do tipo Água.\p"
+    .string "Você pode sugar toda a água deles com\n"
+    .string "Pokémon do tipo Planta.\p"
+    .string "Ou pode usar Pokémon do tipo Elétrico e\n"
+    .string "dar um belo choque neles!$"
 
 CeruleanCity_Gym_EventScript_GymGuyPostVictory::
 	msgbox CeruleanCity_Gym_Text_WeMakePrettyGoodTeam, MSGBOX_DEFAULT
@@ -262,10 +262,10 @@ CeruleanCity_Gym_EventScript_GymGuyPostVictory::
 	end
 
 CeruleanCity_Gym_Text_WeMakePrettyGoodTeam::
-    .string "You beat Misty!\n"
-    .string "See, what'd I tell ya?\p"
-    .string "You and me, kid, we make a pretty\n"
-    .string "darn-good team!$"
+    .string "Você venceu a Misty!\n"
+    .string "Viu só o que eu te falei?\p"
+    .string "Você e eu, garoto, formamos uma\n"
+    .string "baita equipe!$"
 
 CeruleanCity_Gym_EventScript_GymStatue::
 	lockall
@@ -275,9 +275,9 @@ CeruleanCity_Gym_EventScript_GymStatue::
 	end
 
 CeruleanCity_Gym_Text_GymStatue::
-    .string "Cerulean Pokémon Gym\n"
-    .string "Leader: Misty\p"
-    .string "Winning Trainers:\n"
+    .string "Ginásio Pokémon de Cerulean\n"
+    .string "Líder: Misty\p"
+    .string "Treinadores Vencedores:\n"
     .string "{RIVAL}$"
 
 CeruleanCity_Gym_EventScript_GymStatuePostVictory::
@@ -286,7 +286,7 @@ CeruleanCity_Gym_EventScript_GymStatuePostVictory::
 	end
 
 CeruleanCity_Gym_Text_GymStatuePlayerWon::
-    .string "Cerulean Pokémon Gym\n"
-    .string "Leader: Misty\p"
-    .string "Winning Trainers:\n"
+    .string "Ginásio Pokémon de Cerulean\n"
+    .string "Líder: Misty\p"
+    .string "Treinadores Vencedores:\n"
     .string "{RIVAL}, {PLAYER}$"

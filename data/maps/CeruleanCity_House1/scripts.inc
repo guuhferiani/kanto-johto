@@ -7,9 +7,9 @@ CeruleanCity_House1_EventScript_BulbasaurBreeder::
 	end
 
 CeruleanCity_House1_Text_HowsThatBulbasaur::
-	.string "How is that Bulbasaur getting\n"
-	.string "along with your Pokémon?\p"
-	.string "I hope you're treating it well!$"
+	.string "Como aquele Bulbasaur está se dando\n"
+	.string "com os seus Pokémon?\p"
+	.string "Espero que esteja cuidando bem dele!$"
 
 CeruleanCity_House1_EventScript_BerryGuy::
 	lock
@@ -33,12 +33,11 @@ CeruleanCity_House1_EventScript_GetDailyBerry::
 
 
 CeruleanCity_House1_Text_PokemonLoveBerries::
-	.string "Pokémon love berries!\p"
-	.string "Feeding your Pokémon is a\n"
-	.string "great way to strengthen your\l"
-	.string "bond.\p"
-	.string "Here, why don't you see for\n"
-	.string "yourself!$"
+	.string "Os Pokémon adoram Frutas!\p"
+	.string "Alimentar seus Pokémon é uma ótima\n"
+	.string "maneira de fortalecer seus laços.\p"
+	.string "Tome, por que você não experimenta\n"
+	.string "você mesmo!$"
 
 CeruleanCity_House1_EventScript_GiveGrepaBerry::
 	giveitem ITEM_GREPA_BERRY, 1
@@ -70,10 +69,10 @@ CeruleanCity_House1_EventScript_GrowAVariety::
 	end
 
 CeruleanCity_House1_Text_GrowAVariety::
-	.string "There are all kinds of berries.\p"
-	.string "And they don't all have the\n"
-	.string "same effects!\p"
-	.string "Try growing a variety!$"
+	.string "Existem todos os tipos de Frutas.\p"
+	.string "E elas não têm todas os mesmos\n"
+	.string "efeitos!\p"
+	.string "Tente cultivar uma variedade!$"
 
 CeruleanCity_House1_EventScript_GetWailmerPail::
 	msgbox CeruleanCity_House1_Text_WifeAndIGrowBerries, MSGBOX_DEFAULT
@@ -88,27 +87,27 @@ CeruleanCity_House1_EventScript_GetWailmerPail::
 	end
 
 CeruleanCity_House1_Text_GetWailmerPail::
-	.string "{PLAYER} received the Watering Can\n"
-	.string "from the Berry Guy!\p"
-	.string "{PLAYER} put the Watering Can into\n"
-	.string "the Key Items pocket.$"
+	.string "{PLAYER} recebeu o Regador\n"
+	.string "do Homem das Frutas!\p"
+	.string "{PLAYER} guardou o Regador no\n"
+	.string "bolso de Itens-Chave.$"
 
 CeruleanCity_House1_Text_WifeAndIGrowBerries::
-	.string "You may not know this, but Kanto\n"
-	.string "didn't always have Berries!\p"
-	.string "They can be really hard to grow\n"
-	.string "and people didn't really know\l"
-	.string "about berries back then.\p"
-	.string "So, my wife and I traveled across\n"
-	.string "Kanto planting Berry Trees!\p"
-	.string "If you see any of them, please\n"
-	.string "help yourself.\p"
-	.string "We want everyone to take better\n"
-	.string "care of the land, for both people\l"
-	.string "and Pokémon!\p"
-	.string "So if you pick a berry, please plant\n"
-	.string "another! And if you have a moment,\l"
-	.string "you can water them with this!$"
+	.string "Talvez você não saiba, mas Kanto\n"
+	.string "nem sempre teve Frutas!\p"
+	.string "Elas podem ser bem difíceis de plantar\n"
+	.string "e as pessoas não sabiam quase nada\l"
+	.string "sobre Frutas naquela época.\p"
+	.string "Por isso, minha esposa e eu viajamos\n"
+	.string "por toda Kanto plantando árvores!\p"
+	.string "Se encontrar alguma delas por aí,\n"
+	.string "por favor, sinta-se à vontade.\p"
+	.string "Queremos que todos cuidem melhor da\n"
+	.string "terra, tanto para as pessoas quanto\l"
+	.string "para os Pokémon!\p"
+	.string "Então, se colher uma Fruta, plante\n"
+	.string "outra! E se tiver um tempinho,\l"
+	.string "você pode regá-las com isto!$"
 
 CeruleanCity_House1_EventScript_BagFull::
 	msgbox CeruleanCity_House1_Text_MaybeLater, MSGBOX_DEFAULT
@@ -116,7 +115,7 @@ CeruleanCity_House1_EventScript_BagFull::
 	end
 
 CeruleanCity_House1_Text_MaybeLater::
- .string "Oops - your bag is full.\p"
- .string "Maybe come back later?$"
+	.string "Opa... Sua Mochila está cheia.\p"
+	.string "Quem sabe volte mais tarde?$"
 
 

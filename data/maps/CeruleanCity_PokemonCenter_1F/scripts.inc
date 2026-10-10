@@ -21,12 +21,12 @@ CeruleanCity_PokemonCenter_1F_EventScript_Gentleman::
 	end
 
 CeruleanCity_PokemonCenter_1F_Text_EveryoneCallsBillPokemaniac::
-    .string "Have you heard about Bill?\p"
-    .string "Everyone calls him a PokéManiac!\p"
-    .string "I think people are just jealous of\n"
-    .string "Bill, though.\p"
-    .string "Who wouldn't want to boast about\n"
-    .string "their Pokémon?$"
+    .string "Já ouviu falar do Bill?\p"
+    .string "Todo mundo chama ele de PokéManíaco!\p"
+    .string "Mas acho que o pessoal só tem inveja\n"
+    .string "dele, isso sim.\p"
+    .string "Quem não gostaria de se gabar\n"
+    .string "dos seus Pokémon?$"
 
 CeruleanCity_PokemonCenter_1F_EventScript_MetBill:
 	msgbox CeruleanCity_PokemonCenter_1F_Text_BillNumber, MSGBOX_NPC
@@ -34,10 +34,10 @@ CeruleanCity_PokemonCenter_1F_EventScript_MetBill:
 	end
 
 CeruleanCity_PokemonCenter_1F_Text_BillNumber::
-	.string "Oh, so you've met Bill\n"
-	.string "And he even gave you his\l"
-	.string "Cell Phone number!\p"
-	.string "Wow, he's so approachable!$"
+	.string "Ah, então você conheceu o Bill!\n"
+	.string "E ele até te deu o número\l"
+	.string "de telefone dele!\p"
+	.string "Nossa, ele é tão acessível!$"
 
 CeruleanCity_PokemonCenter_1F_EventScript_Rocker::
 	goto_if_set FLAG_REGISTERED_BILL, CeruleanCity_PokemonCenter_1F_EventScript_IsItTrueAboutBill
@@ -45,11 +45,11 @@ CeruleanCity_PokemonCenter_1F_EventScript_Rocker::
 	end
 
 CeruleanCity_PokemonCenter_1F_Text_BillDoesWhateverForRareMons::
-    .string "That Bill!\p"
-    .string "I heard that he'll do whatever it\n"
-    .string "takes to get rare Pokémon.\p"
-    .string "He's not above doing all sorts\n"
-    .string "of things, I've heard.$"
+    .string "Aquele Bill!\p"
+    .string "Ouvi dizer que ele faz de tudo\n"
+    .string "para conseguir Pokémon raros.\p"
+    .string "Dizem que ele é capaz de qualquer\n"
+    .string "coisa, foi o que ouvi falar.$"
 
 CeruleanCity_PokemonCenter_1F_EventScript_IsItTrueAboutBill::
 	msgbox CeruleanCity_PokemonCenter_1F_Text_IsItTrue, MSGBOX_NPC
@@ -57,10 +57,10 @@ CeruleanCity_PokemonCenter_1F_EventScript_IsItTrueAboutBill::
 	end
 
 CeruleanCity_PokemonCenter_1F_Text_IsItTrue::
-	.string "Oh, you've met Bill?\p"
-	.string "Is it true what they say?\n"
-	.string "Will he do anything to get\l"
-	.string "rare Pokémon?$"
+	.string "Ah, você conheceu o Bill?\p"
+	.string "É verdade o que dizem por aí?\n"
+	.string "Ele realmente faz qualquer coisa\l"
+	.string "por Pokémon raros?$"
 
 
 CeruleanCity_PokemonCenter_1F_EventScript_Youngster::
@@ -69,20 +69,20 @@ CeruleanCity_PokemonCenter_1F_EventScript_Youngster::
 	end
 
 CeruleanCity_PokemonCenter_1F_Text_BillCollectsRareMons::
-    .string "Bill has lots of Pokémon!\n"
-    .string "He collects rare ones, too!$"
+    .string "O Bill tem um montão de Pokémon!\n"
+    .string "Ele coleciona os mais raros também!$"
 
 CeruleanCity_PokemonCenter_1F_EventScript_Lass::
 	msgbox CeruleanCity_PokemonCenter_1F_Text_TryTradingUpstairs, MSGBOX_NPC
 	end
 
 CeruleanCity_PokemonCenter_1F_Text_TryTradingUpstairs::
-    .string "Back in my day, we would go upstairs\n"
-    .string "and trade Pokémon with our friends.\p"
-    .string "You could get a lot more variety\n"
-    .string "by trading.\p"
-    .string "But nobody seems to trade POKéMON\n"
-    .string "these days.$"
+    .string "Na minha época, a gente subia as\n"
+    .string "escadas e trocava Pokémon com amigos.\p"
+    .string "Dava para conseguir muito mais variedade\n"
+    .string "fazendo trocas.\p"
+    .string "Mas ninguém parece trocar Pokémon\n"
+    .string "hoje em dia.$"
 
 CeruleanCity_PokemonCenter_1F_EventScript_PokemonJournalMisty::
 	msgbox PokemonJournal_Text_SpecialFeatureMisty, MSGBOX_SIGN
@@ -90,8 +90,8 @@ CeruleanCity_PokemonCenter_1F_EventScript_PokemonJournalMisty::
 	end
 
 PokemonJournal_Text_SpecialFeatureMisty::
-	.string "Pokémon Journal:\p"
-	.string "Special Feature: Cerulean Gym\n"
-	.string "Leader Misty!\p"
-	.string "Misty is said to worship Lorelei\n"
-	.string "of the Elite Four.$"
+	.string "Jornal Pokémon:\p"
+	.string "Edição Especial: Misty, a Líder do\n"
+	.string "Ginásio de Cerulean!\p"
+	.string "Dizem que a Misty admira muito\n"
+	.string "Lorelei, da Elite dos Quatro.$"

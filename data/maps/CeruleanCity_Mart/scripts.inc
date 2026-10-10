@@ -6,22 +6,22 @@ CeruleanCity_Mart_EventScript_Youngster::
 	end
 
 CeruleanCity_Mart_Text_RepelWorksOnWeakMons::
-    .string "Repel not only keeps bugs away,\n"
-    .string "it also works on weak Pokémon.\p"
-    .string "Put your strongest Pokémon at the\n"
-    .string "left of the Pokémon LIST.\p"
-    .string "If your first Pokémon is strong,\n"
-    .string "REPEL's effect is boosted.$"
+    .string "O Repelente não apenas afasta insetos,\n"
+    .string "ele também afasta Pokémon fracos.\p"
+    .string "Coloque seu Pokémon mais forte na\n"
+    .string "primeira posição da sua equipe.\p"
+    .string "Se seu primeiro Pokémon for forte,\n"
+    .string "o efeito do REPELENTE é ampliado.$"
 
 CeruleanCity_Mart_EventScript_Woman::
 	msgbox CeruleanCity_Mart_Text_DoYouKnowAboutRareCandy, MSGBOX_NPC
 	end
 
 CeruleanCity_Mart_Text_DoYouKnowAboutRareCandy::
-    .string "Do you know about Rare Candy?\n"
-    .string "They don't sell it in shops.\p"
-    .string "I think it makes Pokémon grow\n"
-    .string "very quickly all of a sudden.$"
+    .string "Você conhece o Doce Raro?\n"
+    .string "Eles não vendem isso em lojas.\p"
+    .string "Acho que faz o Pokémon crescer\n"
+    .string "muito rápido, num piscar de olhos.$"
 
 CeruleanCity_Mart_EventScript_Clerk::
 	lock

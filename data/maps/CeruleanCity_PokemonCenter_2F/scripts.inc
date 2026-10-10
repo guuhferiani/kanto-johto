@@ -12,11 +12,11 @@ CeruleanCity_PokemonCenter_2F_Girl::
 	end
 
 CeruleanCity_PokemonCenter_2F_Text_Eviolite::
-	.string "Have you heard about Evioltie?\p"
-	.string "It's an item that boosts\n"
-	.string "the stats of a Pokémon that\l"
-	.string "hasn't evolved yet!\p"
-	.string "Here, you should take one!$"
+	.string "Já ouviu falar do Mineral Evolutivo?\p"
+	.string "É um item que aumenta as defesas\n"
+	.string "de um Pokémon que ainda pode\l"
+	.string "evoluir!\p"
+	.string "Tome, fique com um!$"
 
 CeruleanCity_PokemonCenter_2F_Girl2::
 	msgbox CeruleanCity_PokemonCenter_2F_Oddish, MSGBOX_DEFAULT
@@ -24,5 +24,5 @@ CeruleanCity_PokemonCenter_2F_Girl2::
 	end
 
 CeruleanCity_PokemonCenter_2F_Oddish::
-	.string "I never want my Oddish to evolve!\n"
-	.string "It's just too cute!$"
+	.string "Eu nunca vou deixar meu Oddish evoluir!\n"
+	.string "Ele é fofo demais!$"

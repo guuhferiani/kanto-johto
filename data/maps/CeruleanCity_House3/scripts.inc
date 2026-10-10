@@ -6,10 +6,10 @@ CeruleanCity_House3_EventScript_OldWoman::
 	end
 
 CeruleanCity_House3_Text_PleaseTradeWithMyHusband::
-    .string "My husband likes trading Pokémon.\p"
-    .string "You're collecting Pokémon for your\n"
-    .string "Pokédex, aren't you?\p"
-    .string "Would you please trade with him?$"
+    .string "Meu marido adora trocar Pokémon.\p"
+    .string "Você está colecionando Pokémon para\n"
+    .string "a sua Pokédex, não está?\p"
+    .string "Poderia fazer uma troca com ele?$"
 
 CeruleanCity_House3_EventScript_Dontae::
 	lock
@@ -40,13 +40,13 @@ CeruleanCity_House3_EventScript_Dontae::
 	end
 
 CeruleanCity_House3_Text_ThanksForTrading::
-	.string "Thanks!$"
+	.string "Obrigado!$"
 
 CeruleanCity_House3_Text_LookingForMonWannaTradeForMon::
-	.string "Hello, there! Do you happen to\n"
-	.string "have a {STR_VAR_1}?\p"
-	.string "Would you agree to a trade for\n"
-	.string "my {STR_VAR_2}?$"
+	.string "Olá! Por acaso você tem um\n"
+	.string "{STR_VAR_1}?\p"
+	.string "Aceitaria trocar pelo meu\n"
+	.string "{STR_VAR_2}?$"
 
 CeruleanCity_House3_EventScript_DeclineTrade::
 	msgbox CeruleanCity_House3_Text_DeclinedTrade
@@ -54,7 +54,7 @@ CeruleanCity_House3_EventScript_DeclineTrade::
 	end
 
 CeruleanCity_House3_Text_DeclinedTrade::
-	.string "Well, if you don't want to…$"
+	.string "Bem, se você não quer...$"
 
 CeruleanCity_House3_EventScript_NotRequestedMon::
 	bufferspeciesname STR_VAR_1, VAR_0x8009
@@ -63,9 +63,9 @@ CeruleanCity_House3_EventScript_NotRequestedMon::
 	end
 
 CeruleanCity_House3_Text_WhatThatsNoMon::
-	.string "Hmmm?\n"
-	.string "This isn't a {STR_VAR_1}.\p"
-	.string "Think of me if you get one.$"
+	.string "Hummm?\n"
+	.string "Isto não é um {STR_VAR_1}.\p"
+	.string "Lembre-se de mim se conseguir um.$"
 
 CeruleanCity_House3_EventScript_AlreadyTraded::
 	msgbox CeruleanCity_House3_Text_IsntMyOldMonGreat
@@ -73,6 +73,6 @@ CeruleanCity_House3_EventScript_AlreadyTraded::
 	end
 
 CeruleanCity_House3_Text_IsntMyOldMonGreat::
-	.string "The {STR_VAR_2} that I traded you,\n"
-	.string "has it grown stronger?$"
+	.string "O {STR_VAR_2} que troquei com você,\n"
+	.string "ficou mais forte?$"
 

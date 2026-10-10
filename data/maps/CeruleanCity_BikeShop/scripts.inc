@@ -23,11 +23,11 @@ CeruleanCity_BikeShop_EventScript_GetAcroBike::
 	end
 
 CeruleanCity_BikeShop_Text_BonusBike:
-	.string "{PLAYER} claimed the\n"
-    .string "missing Acro Bike!$"
+	.string "{PLAYER} resgatou a\n"
+    .string "Bicicleta Acro restante!$"
 
 CeruleanCity_BikeShop_Text_ShinyNewBicycle::
-    .string "A shiny new Bicycle!$"
+    .string "Uma Bicicleta novinha em folha!$"
 
 CeruleanCity_BikeShop_EventScript_Clerk::
 	lock
@@ -45,10 +45,10 @@ CeruleanCity_BikeShop_EventScript_Clerk::
 	end
 
 CeruleanCity_BikeShop_Text_WelcomeToBikeShop::
-    .string "Hi!\n"
-    .string "Welcome to our Bike Shop.\p"
-    .string "Have we got just the Bike for\n"
-    .string "you!$"
+    .string "Olá!\n"
+    .string "Bem-vindo à nossa Loja de Bicicletas.\p"
+    .string "Temos a bicicleta perfeita para\n"
+    .string "você!$"
 
 @ The Bicycle price / players money is never actually checked
 CeruleanCity_BikeShop_EventScript_TryPurchaseBicycle::
@@ -57,8 +57,8 @@ CeruleanCity_BikeShop_EventScript_TryPurchaseBicycle::
 	end
 
 CeruleanCity_BikeShop_Text_SorryYouCantAffordIt::
-    .string "Sorry!\n"
-    .string "You can't afford it!$"
+    .string "Desculpe!\n"
+    .string "Você não tem dinheiro suficiente!$"
 
 CeruleanCity_BikeShop_EventScript_ClerkGoodbye::
 	msgbox CeruleanCity_BikeShop_Text_ThankYouComeAgain
@@ -67,8 +67,8 @@ CeruleanCity_BikeShop_EventScript_ClerkGoodbye::
 	end
 
 CeruleanCity_BikeShop_Text_ThankYouComeAgain::
-    .string "Thank you!\n"
-    .string "Come back again sometime!$"
+    .string "Obrigado!\n"
+    .string "Volte sempre!$"
 
 CeruleanCity_BikeShop_EventScript_AlreadyGotBicycle::
 	msgbox CeruleanCity_BikeShop_Text_HowDoYouLikeNewBicycle, MSGBOX_DEFAULT
@@ -76,10 +76,10 @@ CeruleanCity_BikeShop_EventScript_AlreadyGotBicycle::
 	end
 
 CeruleanCity_BikeShop_Text_HowDoYouLikeNewBicycle::
-    .string "How do you like your new bikes?\n"
-    .string "Do you like how it rides?\p"
-    .string "You can take it out on Cycling\n"
-    .string "Road and even into caves!$"
+    .string "O que está achando das suas novas bikes?\n"
+    .string "Gosta de como elas andam?\p"
+    .string "Você pode passear com elas pela Rodovia\n"
+    .string "dos Ciclistas e até dentro de cavernas!$"
 
 CeruleanCity_BikeShop_EventScript_ExchangeBikeVoucher::
 	checkitem ITEM_BIKE_VOUCHER, 1
@@ -99,14 +99,14 @@ CeruleanCity_BikeShop_EventScript_ExchangeBikeVoucher::
 	end
 
 CeruleanCity_BikeShop_Text_OhBikeVoucherHereYouGo::
-    .string "Oh, that's…\p"
-    .string "A Bike Voucher!\p"
-    .string "Okay!\n"
-    .string "Here you go!$"
+    .string "Oh, isso é…\p"
+    .string "Um Vale-Bicicleta!\p"
+    .string "Muito bem!\n"
+    .string "Aqui estão elas!$"
 
 CeruleanCity_BikeShop_Text_ExchangedVoucherForBicycle::
-    .string "{PLAYER} exchanged the\n"
-    .string "Bike Voucher for two bikes!$"
+    .string "{PLAYER} trocou o Vale-Bicicleta\n"
+    .string "por duas bicicletas!$"
 
 CeruleanCity_BikeShop_EventScript_BringBikeVoucher::
 	msgbox CeruleanCity_BikeShop_Text_MakeRoomForBicycle, MSGBOX_DEFAULT
@@ -114,21 +114,21 @@ CeruleanCity_BikeShop_EventScript_BringBikeVoucher::
 	end
 
 CeruleanCity_BikeShop_Text_MakeRoomForBicycle::
-    .string "What's that, kid?\p"
-    .string "You can't just tell me you have\n"
-    .string "a Bike Voucher, you gotta bring\l"
-    .string "it to me!$"
+    .string "Como assim, garoto?\p"
+    .string "Não adianta só me dizer que tem um\n"
+    .string "Vale-Bicicleta, você precisa trazê-lo\l"
+    .string "aqui comigo!$"
 
 CeruleanCity_BikeShop_EventScript_Woman::
 	msgbox CeruleanCity_BikeShop_Text_CityBikeGoodEnoughForMe, MSGBOX_NPC
 	end
 
 CeruleanCity_BikeShop_Text_CityBikeGoodEnoughForMe::
-    .string "A plain city bike is good enough\n"
-    .string "for me.\p"
-    .string "I don't need to do any tricks.\p"
-    .string "After all, you can't do a wheelie\n"
-    .string "when you have a shopping basket!$"
+    .string "Uma bicicleta urbana comum já é boa\n"
+    .string "o bastante para mim.\p"
+    .string "Não preciso fazer manobras.\p"
+    .string "Afinal, não dá para empinar a roda quando\n"
+    .string "se tem uma cesta de compras!$"
 
 CeruleanCity_BikeShop_EventScript_Youngster::
 	lock
@@ -139,8 +139,8 @@ CeruleanCity_BikeShop_EventScript_Youngster::
 	end
 
 CeruleanCity_BikeShop_Text_BikesCoolButExpensive::
-    .string "These bikes are cool, but they're\n"
-    .string "way expensive!$"
+    .string "Essas bicicletas são incríveis, mas são\n"
+    .string "caras demais!$"
 
 CeruleanCity_BikeShop_EventScript_YoungsterHaveBike::
 	msgbox CeruleanCity_BikeShop_Text_WowYourBikeIsCool
@@ -148,8 +148,8 @@ CeruleanCity_BikeShop_EventScript_YoungsterHaveBike::
 	end
 	
 CeruleanCity_BikeShop_Text_WowYourBikeIsCool::
-    .string "Wow.\n"
-    .string "You got two bikes?!$"
+    .string "Uau.\n"
+    .string "Você conseguiu duas bicicletas?!$"
 
 
 
