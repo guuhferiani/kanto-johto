@@ -16,14 +16,14 @@ CeladonCity_Condominiums_1F_EventScript_TeaWoman::
 	end
 
 CeladonCity_Condominiums_1F_Text_TryThisDrinkInstead::
-    .string "You shouldn't spend all your money\n"
-    .string "on drinks.\p"
-    .string "Try this instead.$"
+    .string "Você não deveria gastar todo o seu\n"
+    .string "dinheiro com bebidas.\p"
+    .string "Experimente isto aqui.$"
 
 CeladonCity_Condominiums_1F_Text_NothingBeatsThirstLikeTea::
-    .string "Nothing beats thirst like some hot\n"
-    .string "Tea.\p"
-    .string "It really is the best.$"
+    .string "Nada mata a sede como um bom\n"
+    .string "Chá quente.\p"
+    .string "É realmente o melhor que há.$"
 
 CeladonCity_Condominiums_1F_EventScript_TeaWomanAfterTea::
 	msgbox CeladonCity_Condominiums_1F_Text_MyDearMonsKeepMeCompany
@@ -31,8 +31,8 @@ CeladonCity_Condominiums_1F_EventScript_TeaWomanAfterTea::
 	end
 
 CeladonCity_Condominiums_1F_Text_MyDearMonsKeepMeCompany::
-    .string "My dear Pokémon keep me company.\n"
-    .string "Meowth even brings money home!$"
+    .string "Meus queridos Pokémon me fazem companhia.\n"
+    .string "Meowth até traz dinheiro para casa!$"
 
 CeladonCity_Condominiums_1F_EventScript_TeaWomanMentionDaisy::
 	setflag FLAG_TALKED_TO_TEA_LADY_POSTGAME
@@ -56,17 +56,17 @@ CeladonCity_Condominiums_1F_EventScript_GetDailyTea::
 	return
 
 CeladonCity_Condominiums_1F_Text_TakeThisDear::
-	.string "Come for some Tea, dear?"
+	.string "Veio buscar um pouco de Chá, anjo?$"
 
 CeladonCity_Condominiums_1F_Text_DaisyComesToBuyTea::
-    .string "Oh, hello, dearie.\n"
-    .string "Did you enjoy my Tea?\p"
-    .string "By the way, dear. Are you, by any\n"
-    .string "chance, from Pallet Town?\p"
-    .string "A girl from Pallet Town, Daisy,\n"
-    .string "she enjoys my Tea every day.\p"
-    .string "If you ever want some tea,\n"
-    .string "just come visit me.$"
+    .string "Ah, olá, benzinho.\n"
+    .string "Gostou do meu Chá?\p"
+    .string "A propósito, anjo. Você é, por acaso,\n"
+    .string "do Vilarejo de Pallet?\p"
+    .string "Uma garota do Vilarejo de Pallet, Daisy,\n"
+    .string "ela adora o meu Chá todos os dias.\p"
+    .string "Se algum dia quiser mais chá,\n"
+    .string "é só vir me visitar.$"
 
 CeladonCity_Condominiums_1F_EventScript_Meowth::
 	lock
@@ -112,5 +112,5 @@ CeladonCity_Condominiums_1F_EventScript_SuiteSign::
 	end
 
 CeladonCity_Condominiums_1F_Text_ManagersSuite::
-    .string "Celadon Mansion\n"
-    .string "Manager's Suite$"
+    .string "Mansão Celadon\n"
+    .string "Suíte da Gerente$"

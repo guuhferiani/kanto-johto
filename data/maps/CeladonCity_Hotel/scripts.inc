@@ -7,30 +7,30 @@ CeladonCity_Hotel_EventScript_Receptionist::
 
 CeladonCity_Hotel_Text_ThisHotelIsForPeople::
     .string "Pokémon?\n"
-    .string "No, this is a hotel for people.\p"
-    .string "We're full up, unfortunately.$"
+    .string "Não, este é um hotel para pessoas.\p"
+    .string "Infelizmente estamos lotados.$"
 
 CeladonCity_Hotel_EventScript_Beauty::
 	msgbox CeladonCity_Hotel_Text_OnVacationWithBrotherAndBoyfriend, MSGBOX_NPC
 	end
 
 CeladonCity_Hotel_Text_OnVacationWithBrotherAndBoyfriend::
-    .string "I'm on vacation with my brother and\n"
-    .string "boyfriend.\p"
-    .string "Celadon is such a pretty city!$"
+    .string "Estou de férias com meu irmão e\n"
+    .string "meu namorado.\p"
+    .string "Celadon é uma cidade tão linda!$"
 
 CeladonCity_Hotel_EventScript_BeautyBoyfriend::
 	msgbox CeladonCity_Hotel_Text_WhyDidSheBringBrother, MSGBOX_NPC
 	end
 
 CeladonCity_Hotel_Text_WhyDidSheBringBrother::
-    .string "Why?\n"
-    .string "Why did she bring her brother?$"
+    .string "Por quê?\n"
+    .string "Por que ela trouxe o irmão dela?$"
 
 CeladonCity_Hotel_EventScript_BeautyBrother::
 	msgbox CeladonCity_Hotel_Text_SisBroughtMeOnVacation, MSGBOX_NPC
 	end
 
 CeladonCity_Hotel_Text_SisBroughtMeOnVacation::
-    .string "Yippee! I'm on vacation!\n"
-    .string "My sis brought me along! Awesome!$"
+    .string "Oba! Estou de férias!\n"
+    .string "Minha irmã me trouxe junto! Demais!$"

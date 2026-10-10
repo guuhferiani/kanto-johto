@@ -28,27 +28,27 @@ CeladonCity_PokemonCenter_1F_EventScript_Gentleman::
 	end
 
 CeladonCity_PokemonCenter_1F_Text_PokeFluteAwakensSleepingMons::
-    .string "A Poké Flute awakens sleeping\n"
-    .string "Pokémon. You know that.\p"
-    .string "It does so with a sound that only\n"
-    .string "they can hear.$"
+    .string "A Flauta Pokémon acorda Pokémon\n"
+    .string "adormecidos. Você sabe disso.\p"
+    .string "Ela faz isso com um som que apenas\n"
+    .string "eles podem ouvir.$"
 
 CeladonCity_PokemonCenter_1F_EventScript_CooltrainerF::
 	msgbox CeladonCity_PokemonCenter_1F_Text_RodeHereFromFuchsia, MSGBOX_NPC
 	end
 
 CeladonCity_PokemonCenter_1F_Text_RodeHereFromFuchsia::
-    .string "I rode here from Fuchsia.\p"
-    .string "It's an uphill ride on Cycling\n"
-    .string "Road, so I'm exhausted.$"
+    .string "Vim pedalando desde Fuchsia.\p"
+    .string "É uma subida e tanto na Rodovia dos\n"
+    .string "Ciclistas, então estou exausta.$"
 
 CeladonCity_PokemonCenter_1F_EventScript_Youngster::
 	msgbox CeladonCity_PokemonCenter_1F_Text_GoToCyclingRoadIfIHadBike, MSGBOX_NPC
 	end
 
 CeladonCity_PokemonCenter_1F_Text_GoToCyclingRoadIfIHadBike::
-    .string "If I had a Bike, I would go to\n"
-    .string "Cycling Road!$"
+    .string "Se eu tivesse uma Bicicleta, eu iria\n"
+    .string "para a Rodovia dos Ciclistas!$"
 
 CeladonCity_Looker::
 	lock
@@ -116,15 +116,15 @@ Saffron_Fugitive_1::
 	end
 
 Looker_Text_SaffronCity::
-	.string "Bad news, {PLAYER}.\p"
-	.string "That was HQ.\p"
-	.string "There's been reports of another\n"
-	.string "Rocket Fugitive in Kanto.\p"
-	.string "Intel suggests they're somewhere\n"
-	.string "near Saffron City.\p"
-	.string "I'll send out my squad, but if\n"
-	.string "you're in the area, I'd appreciate\l"
-	.string "it if you could help us out.$"
+	.string "Más notícias, {PLAYER}.\p"
+	.string "Era o QG.\p"
+	.string "Recebemos relatos de outro\n"
+	.string "Fugitivo Rocket em Kanto.\p"
+	.string "As informações indicam que ele está\n"
+	.string "perto da Cidade de Saffron.\p"
+	.string "Vou enviar meu esquadrão, mas se você\n"
+	.string "estiver na área, eu agradeceria muito\l"
+	.string "se pudesse nos dar uma força.$"
 
 Looker_Fugitive_Cinnabar::
 	msgbox Looker_Text_CinnabarIsland, MSGBOX_NPC
@@ -149,15 +149,15 @@ Cinnabar_Fugitive_1::
 	end
 
 Looker_Text_CinnabarIsland::
-	.string "Bad news, {PLAYER}.\p"
-	.string "That was HQ.\p"
-	.string "There's been reports of another\n"
-	.string "Rocket Fugitive in Kanto.\p"
-	.string "Intel suggests they're somewhere\n"
-	.string "near Cinnabar Island.\p"
-	.string "I'll send out my squad, but if\n"
-	.string "you're in the area, I'd appreciate\l"
-	.string "it if you could help us out.$"
+	.string "Más notícias, {PLAYER}.\p"
+	.string "Era o QG.\p"
+	.string "Recebemos relatos de outro\n"
+	.string "Fugitivo Rocket em Kanto.\p"
+	.string "As informações indicam que ele está\n"
+	.string "perto da Ilha de Cinnabar.\p"
+	.string "Vou enviar meu esquadrão, mas se você\n"
+	.string "estiver na área, eu agradeceria muito\l"
+	.string "se pudesse nos dar uma força.$"
 
 Looker_Fugitive_Fuchsia::
 	msgbox Looker_Text_FuchsiaCity, MSGBOX_NPC
@@ -188,15 +188,15 @@ Fuchsia_Fugitive_1::
 	end
 
 Looker_Text_FuchsiaCity::
-	.string "Bad news, {PLAYER}.\p"
-	.string "That was HQ.\p"
-	.string "There's been reports of another\n"
-	.string "Rocket Fugitive in Kanto.\p"
-	.string "Intel suggests they're somewhere\n"
-	.string "near Fuchsia City.\p"
-	.string "I'll send out my squad, but if\n"
-	.string "you're in the area, I'd appreciate\l"
-	.string "it if you could help us out.$"
+	.string "Más notícias, {PLAYER}.\p"
+	.string "Era o QG.\p"
+	.string "Recebemos relatos de outro\n"
+	.string "Fugitivo Rocket em Kanto.\p"
+	.string "As informações indicam que ele está\n"
+	.string "perto da Cidade de Fuchsia.\p"
+	.string "Vou enviar meu esquadrão, mas se você\n"
+	.string "estiver na área, eu agradeceria muito\l"
+	.string "se pudesse nos dar uma força.$"
 
 Looker_Fugitive_Celadon::
 	msgbox Looker_Text_CeladonCity, MSGBOX_NPC
@@ -221,15 +221,15 @@ Celadon_Fugitive_1::
 	end
 
 Looker_Text_CeladonCity::
-	.string "Bad news, {PLAYER}.\p"
-	.string "That was HQ.\p"
-	.string "There's been reports of another\n"
-	.string "Rocket Fugitive in Kanto.\p"
-	.string "Intel suggests they're somewhere\n"
-	.string "near Celadon City.\p"
-	.string "I'll send out my squad, but if\n"
-	.string "you're in the area, I'd appreciate\l"
-	.string "it if you could help us out.$"
+	.string "Más notícias, {PLAYER}.\p"
+	.string "Era o QG.\p"
+	.string "Recebemos relatos de outro\n"
+	.string "Fugitivo Rocket em Kanto.\p"
+	.string "As informações indicam que ele está\n"
+	.string "perto da Cidade de Celadon.\p"
+	.string "Vou enviar meu esquadrão, mas se você\n"
+	.string "estiver na área, eu agradeceria muito\l"
+	.string "se pudesse nos dar uma força.$"
 
 Looker_Fugitive_Vermilion::
 	msgbox Looker_Text_VermilionCity, MSGBOX_NPC
@@ -260,15 +260,15 @@ Vermilion_Fugitive_1::
 	end
 
 Looker_Text_VermilionCity::
-	.string "Bad news, {PLAYER}.\p"
-	.string "That was HQ.\p"
-	.string "There's been reports of another\n"
-	.string "Rocket Fugitive in Kanto.\p"
-	.string "Intel suggests they're somewhere\n"
-	.string "near Vermilion City.\p"
-	.string "I'll send out my squad, but if\n"
-	.string "you're in the area, I'd appreciate\l"
-	.string "it if you could help us out.$"
+	.string "Más notícias, {PLAYER}.\p"
+	.string "Era o QG.\p"
+	.string "Recebemos relatos de outro\n"
+	.string "Fugitivo Rocket em Kanto.\p"
+	.string "As informações indicam que ele está\n"
+	.string "perto da Cidade de Vermilion.\p"
+	.string "Vou enviar meu esquadrão, mas se você\n"
+	.string "estiver na área, eu agradeceria muito\l"
+	.string "se pudesse nos dar uma força.$"
 
 Looker_Fugitive_Lavender::
 	msgbox Looker_Text_LavenderTown, MSGBOX_NPC
@@ -293,15 +293,15 @@ Lavender_Fugitive_1::
 	end
 
 Looker_Text_LavenderTown::
-	.string "Bad news, {PLAYER}.\p"
-	.string "That was HQ.\p"
-	.string "There's been reports of another\n"
-	.string "Rocket Fugitive in Kanto.\p"
-	.string "Intel suggests they're somewhere\n"
-	.string "near Lavender Town.\p"
-	.string "I'll send out my squad, but if\n"
-	.string "you're in the area, I'd appreciate\l"
-	.string "it if you could help us out.$"
+	.string "Más notícias, {PLAYER}.\p"
+	.string "Era o QG.\p"
+	.string "Recebemos relatos de outro\n"
+	.string "Fugitivo Rocket em Kanto.\p"
+	.string "As informações indicam que ele está\n"
+	.string "perto do Vilarejo de Lavender.\p"
+	.string "Vou enviar meu esquadrão, mas se você\n"
+	.string "estiver na área, eu agradeceria muito\l"
+	.string "se pudesse nos dar uma força.$"
 
 Looker_Fugitive_Cerulean::
 	msgbox Looker_Text_CeruleanCity, MSGBOX_NPC
@@ -332,15 +332,15 @@ Cerulean_Fugitive_1::
 	end
 
 Looker_Text_CeruleanCity::
-	.string "Bad news, {PLAYER}.\p"
-	.string "That was HQ.\p"
-	.string "There's been reports of another\n"
-	.string "Rocket Fugitive in Kanto.\p"
-	.string "Intel suggests they're somewhere\n"
-	.string "near Cerulean City.\p"
-	.string "I'll send out my squad, but if\n"
-	.string "you're in the area, I'd appreciate\l"
-	.string "it if you could help us out.$"
+	.string "Más notícias, {PLAYER}.\p"
+	.string "Era o QG.\p"
+	.string "Recebemos relatos de outro\n"
+	.string "Fugitivo Rocket em Kanto.\p"
+	.string "As informações indicam que ele está\n"
+	.string "perto da Cidade de Cerulean.\p"
+	.string "Vou enviar meu esquadrão, mas se você\n"
+	.string "estiver na área, eu agradeceria muito\l"
+	.string "se pudesse nos dar uma força.$"
 
 Looker_Fugitive_Pewter::
 	msgbox Looker_Text_PewterCity, MSGBOX_NPC
@@ -365,15 +365,15 @@ Pewter_Fugitive_1::
 	end
 
 Looker_Text_PewterCity::
-	.string "Bad news, {PLAYER}.\p"
-	.string "That was HQ.\p"
-	.string "There's been reports of another\n"
-	.string "Rocket Fugitive in Kanto.\p"
-	.string "Intel suggests they're somewhere\n"
-	.string "near Pewter City.\p"
-	.string "I'll send out my squad, but if\n"
-	.string "you're in the area, I'd appreciate\l"
-	.string "it if you could help us out.$"
+	.string "Más notícias, {PLAYER}.\p"
+	.string "Era o QG.\p"
+	.string "Recebemos relatos de outro\n"
+	.string "Fugitivo Rocket em Kanto.\p"
+	.string "As informações indicam que ele está\n"
+	.string "perto da Cidade de Pewter.\p"
+	.string "Vou enviar meu esquadrão, mas se você\n"
+	.string "estiver na área, eu agradeceria muito\l"
+	.string "se pudesse nos dar uma força.$"
 
 Looker_Fugitive_Viridian::
 	msgbox Looker_Text_ViridianCity, MSGBOX_NPC
@@ -398,15 +398,15 @@ Viridian_Fugitive_1::
 	end
 
 Looker_Text_ViridianCity::
-	.string "Bad news, {PLAYER}.\p"
-	.string "That was HQ.\p"
-	.string "There's been reports of another\n"
-	.string "Rocket Fugitive in Kanto.\p"
-	.string "Intel suggests they're somewhere\n"
-	.string "near Viridian City.\p"
-	.string "I'll send out my squad, but if\n"
-	.string "you're in the area, I'd appreciate\l"
-	.string "it if you could help us out.$"
+	.string "Más notícias, {PLAYER}.\p"
+	.string "Era o QG.\p"
+	.string "Recebemos relatos de outro\n"
+	.string "Fugitivo Rocket em Kanto.\p"
+	.string "As informações indicam que ele está\n"
+	.string "perto da Cidade de Viridian.\p"
+	.string "Vou enviar meu esquadrão, mas se você\n"
+	.string "estiver na área, eu agradeceria muito\l"
+	.string "se pudesse nos dar uma força.$"
 
 Looker_Fugitive_Pallet::
 	msgbox Looker_Text_PalletTown, MSGBOX_NPC
@@ -431,15 +431,15 @@ Pallet_Fugitive_1::
 	end
 
 Looker_Text_PalletTown::
-	.string "Bad news, {PLAYER}.\p"
-	.string "That was HQ.\p"
-	.string "There's been reports of another\n"
-	.string "Rocket Fugitive in Kanto.\p"
-	.string "Intel suggests they're somewhere\n"
-	.string "near Pallet Town.\p"
-	.string "I'll send out my squad, but if\n"
-	.string "you're in the area, I'd appreciate\l"
-	.string "it if you could help us out.$"
+	.string "Más notícias, {PLAYER}.\p"
+	.string "Era o QG.\p"
+	.string "Recebemos relatos de outro\n"
+	.string "Fugitivo Rocket em Kanto.\p"
+	.string "As informações indicam que ele está\n"
+	.string "perto do Vilarejo de Pallet.\p"
+	.string "Vou enviar meu esquadrão, mas se você\n"
+	.string "estiver na área, eu agradeceria muito\l"
+	.string "se pudesse nos dar uma força.$"
 
 Looker_FaceLeft::
 	turnobject LOCALID_LOOKER, DIR_WEST
@@ -454,11 +454,11 @@ Looker_FaceDown::
 	return
 
 Looker_Text_PhoneCall::
-	.string "This is Looker.\p"
+	.string "Aqui é o Looker.\p"
 	.string "...\n"
-	.string "Yes...\l"
-	.string "What?!....\l"
-	.string "Understood.$"
+	.string "Sim...\l"
+	.string "O quê?!....\l"
+	.string "Entendido.$"
 
 
 Looker_QuestBegin::
@@ -504,22 +504,21 @@ Looker_Reward_Candies::
 	goto Looker_DailyCompleted
 
 Looker_Text_Victory::
-	.string "Looker: You did it, {PLAYER}!\p"
-	.string "That's one less member of Team\n"
-	.string "Rocket on the loose!\p"
-	.string "The people of Kanto are in your\n"
-	.string "debt.\p"
-	.string "Here, take this as a reward!$"
+	.string "Looker: Você conseguiu, {PLAYER}!\p"
+	.string "É um membro a menos da Equipe\n"
+	.string "Rocket à solta!\p"
+	.string "O povo de Kanto está em dívida com você.\p"
+	.string "Aqui, pegue isto como recompensa!$"
 
 Looker_Text_NeverStop::
-	.string "Team Rocket will never stop.\p"
-	.string "We have to work together to\n"
-	.string "achieve true peace!$"
+	.string "A Equipe Rocket nunca vai parar.\p"
+	.string "Temos que trabalhar juntos para\n"
+	.string "alcançar a verdadeira paz!$"
 
 Looker_Text_OnTheLoose::
-	.string "Looker: That fugitive is still on\n"
-	.string "the loose, {PLAYER}!\p"
-	.string "We can't let Team Rocket get away!$"
+	.string "Looker: Aquele fugitivo ainda está\n"
+	.string "à solta, {PLAYER}!\p"
+	.string "Não podemos deixar a Equipe Rocket escapar!$"
 	
 
 Looker_QuestFailed::
@@ -530,12 +529,11 @@ Looker_QuestFailed::
 
 Looker_Text_TheyGotAway:
 	.string "Looker: {PLAYER}!\p"
-	.string "I received some new intel from HQ!\n"
-	.string "It seems that our fugitive has fled\l"
-	.string "the region.\p"
-	.string "I wonder if Team Rocket is building\n"
-	.string "a new hideout somewhere else...\p"
-	.string "Well, we'll get them next time.$"
+	.string "Recebi novas informações do QG!\n"
+	.string "Parece que o fugitivo fugiu da região.\p"
+	.string "Fico imaginando se a Equipe Rocket está\n"
+	.string "construindo um novo esconderijo em outro lugar...\p"
+	.string "Bem, vamos pegá-los na próxima vez.$"
 
 Looker_ResetFugitives::
 	clearflag FLAG_LOOKER_ASSIGNMENT_ACTIVE
@@ -577,15 +575,15 @@ CeladonCity_Looker_ExplainDaily::
 
 Looker_Text_RocketFugitives::
 	.string "Looker: {PLAYER}!\p"
-	.string "Thanks to you, Team Rocket is\n"
-	.string "on the run!\p"
-	.string "We've cracked down on every major\n"
-	.string "operation they have, but there\l"
-	.string "are still many grunts on the run.\p"
-	.string "I'm going to remain in Kanto to try\n"
-	.string "and apprehend these fugitives.\p"
-	.string "I'm hoping I can still count on\n"
-	.string "trainers like you!$"
+	.string "Graças a você, a Equipe Rocket\n"
+	.string "está em fuga!\p"
+	.string "Nós desmantelamos todas as grandes\n"
+	.string "operações deles, mas ainda há muitos\l"
+	.string "recrutas foragidos.\p"
+	.string "Vou permanecer em Kanto para tentar\n"
+	.string "capturar esses fugitivos.\p"
+	.string "Espero que eu ainda possa contar com\n"
+	.string "treinadores como você!$"
 
 RocketFugitive_Text_Intro::
 	.string "Fugitivo: Você nunca vai me\n"

@@ -9,15 +9,15 @@ CeladonCity_Condominiums_RoofRoom_EventScript_Maniac::
 	end
 
 CeladonCity_Condominiums_RoofRoom_Text_CreatedMyOwnPokemon::
-	.string "If Pokémon can be turned into\n"
-	.string "data and stored in a PC, then\l"
-	.string "we should be able to artifically\l"
-	.string "create Pokémon, right?\p"
-	.string "That was my hypothesis - and I\n"
-	.string "proved it by creating Porygon!\p"
-	.string "Don't believe me?\p"
-	.string "Take the Poké Ball over there,\n"
-	.string "you can have my Porygon!$"
+	.string "Se Pokémon podem ser transformados em\n"
+	.string "dados e guardados no PC, então\l"
+	.string "devemos ser capazes de criar Pokémon\l"
+	.string "artificialmente, certo?\p"
+	.string "Essa era a minha hipótese — e eu\n"
+	.string "provei isso criando o Porygon!\p"
+	.string "Não acredita em mim?\p"
+	.string "Pegue a Poké Bola ali na mesa,\n"
+	.string "você pode ficar com o meu Porygon!$"
 
 CeladonCity_Condominiums_RoofRoom_EventScript_AlreadyGotPorygon::
 	msgbox CeladonCity_Condominiums_RoofRoom_Text_CanAPokemonBeHacked, MSGBOX_NPC
@@ -25,21 +25,21 @@ CeladonCity_Condominiums_RoofRoom_EventScript_AlreadyGotPorygon::
 	end
 
 CeladonCity_Condominiums_RoofRoom_Text_CanAPokemonBeHacked::
-	.string "If we can turn Pokémon into\n"
-	.string "data, does that mean a Pokémon  \l"
-	.string "can be hacked?$"
+	.string "Se podemos transformar Pokémon em\n"
+	.string "dados, será que um Pokémon pode\l"
+	.string "ser hackeado?$"
 
 CeladonCity_Condominiums_RoofRoom_EventScript_TMsPamphlet::
 	msgbox CeladonCity_Condominiums_RoofRoom_Text_PamphletOnTMs, MSGBOX_SIGN
 	end
 
 CeladonCity_Condominiums_RoofRoom_Text_PamphletOnTMs::
-    .string "It's an email about TMs.\p"
+    .string "É um e-mail sobre MTs.\p"
     .string "… …\p"
-    .string "There are fifty TMs in all.\p"
-    .string "There are also eight HMs that\n"
-    .string "can be used in the field!\p"
-    .string "SILPH CO.$"
+    .string "Existem cinquenta MTs no total.\p"
+    .string "Também há oito MOs que podem\n"
+    .string "ser usadas no campo afora!\p"
+    .string "SILPH S.A.$"
 
 CeladonCity_Condominiums_RoofRoom_EventScript_PorygonBall::
     setvar VAR_TEMP_1, SPECIES_PORYGON
@@ -67,8 +67,8 @@ CeladonCity_Condominiums_RoofRoom_EventScript_GetPorygon::
     return
 
 CeladonCity_Condominiums_RoofRoom_EventScript_Text_FoundPorygon::
-    .string "{PLAYER} found a Poké Ball.\n"
-    .string "It contained a Porygon!$"
+    .string "{PLAYER} encontrou uma Poké Bola.\n"
+    .string "Ela continha um Porygon!$"
 
 CeladonCity_Condominiums_RoofRoom_EventScript_GotPorygon::
     setflag FLAG_GOT_PORYGON
@@ -95,5 +95,5 @@ CeladonCity_Condominiums_RoofRoom_EventScript_NoRoomForPorygon::
     end
 
 CeladonCity_Condominiums_RoofRoom_Text_NoRoomForMorePokemon::
-    .string "Oh! You don't have room\n"
-    .string "for any more Pokémon!$"
+    .string "Ah! Você não tem espaço\n"
+    .string "para mais nenhum Pokémon!$"

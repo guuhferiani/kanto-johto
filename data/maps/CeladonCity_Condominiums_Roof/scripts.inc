@@ -11,7 +11,7 @@ CeladonCity_Condominiums_Roof_EventScript_Sign::
 	end
 
 CeladonCity_Condominiums_Roof_Text_IKnowEverything::
-    .string "I Know EVERYTHING!$"
+    .string "Eu Sei de TUDO!$"
 
 CeladonCity_Condominiums_Roof_EventScript_Girl::
 	goto_if_set FLAG_GOT_ROCKET_PLANS, CeladonCity_Condominiums_Roof_EventScript_SpyMovie
@@ -19,17 +19,17 @@ CeladonCity_Condominiums_Roof_EventScript_Girl::
 	end
 
 CeladonCity_Condominiums_Roof_Text_SawAStrangeMan::
-	.string "I saw a strange man drop something\n"
-	.string "in the bushes back there.\p"
-	.string "He looked like one of those Rockets!$"
+	.string "Vi um homem estranho largar alguma\n"
+	.string "coisa nos arbustos ali atrás.\p"
+	.string "Ele parecia ser um daqueles Rockets!$"
 
 CeladonCity_Condominiums_Roof_EventScript_SpyMovie::
 	msgbox CeladonCity_Condominiums_Roof_Text_SpyMovie, MSGBOX_NPC
 	end
 
 CeladonCity_Condominiums_Roof_Text_SpyMovie::
-	.string "Whoa, it really was a Rocket dropoff?\p"
-	.string "I feel like I'm in a spy movie!$"
+	.string "Nossa, era mesmo um ponto de entrega dos Rockets?\p"
+	.string "Sinto como se estivesse num filme de espionagem!$"
 
 CeladonCity_Condominiums_Roof_EventScript_RocketTrigger1::
 	lock
@@ -72,15 +72,15 @@ Movement_ApproachPlayerRooftop:
 	step_end
 
 RooftopRocket_Intro::
-	.string "Rocket: Hey, Kid.\p"
-	.string "I'm just enjoying a smoke break.\n"
-	.string "Definitely not doing anything shady.\p"
-	.string "What? You don't believe me?\n"
-	.string "Fine, I'll make you believe me!$"
+	.string "Rocket: Ei, pirralho.\p"
+	.string "Só estou fazendo uma pausa para fumar.\n"
+	.string "Com certeza não estou fazendo nada suspeito.\p"
+	.string "O quê? Não acredita em mim?\n"
+	.string "Beleza, vou fazer você acreditar!$"
 
 RooftopRocket_Defeat::
-	.string "I didn't do anything wrong!\n"
-	.string "You don't have any proof!$"
+	.string "Eu não fiz nada de errado!\n"
+	.string "Você não tem provas!$"
 
 CeladonCity_Condominiums_Roof_EventScript_RocketFlee::
 	msgbox RooftopRocket_PostBattle, MSGBOX_AUTOCLOSE
@@ -96,11 +96,11 @@ CeladonCity_Condominiums_Roof_EventScript_RocketFlee::
 	end
 
 RooftopRocket_PostBattle::
-	.string "I don't have time to be messing\n"
-	.string "around battling kids.\p"
-	.string "You didn't see anything, got that?\p"
-	.string "And don't go poking around those\n"
-	.string "bushes back there.$"
+	.string "Não tenho tempo a perder batalhando\n"
+	.string "com crianças.\p"
+	.string "Você não viu nada, ouviu bem?\p"
+	.string "E não vá bisbilhotar aqueles arbustos\n"
+	.string "ali atrás.$"
 
 CeladonCity_Condominiums_Roof_EventScript_RocketPlans::
 	msgbox CeladonCity_Condominiums_Roof_Text_RocketPlans
@@ -116,12 +116,12 @@ CeladonCity_Condominiums_Roof_EventScript_RocketPlans::
 	end
 
 CeladonCity_Condominiums_Roof_Text_RocketPlans::
-	.string "It's a suspicious looking bag...\p"
-	.string "It's full of messages from Team\n"
-	.string "Rocket!$"
+	.string "É uma sacola muito suspeita...\p"
+	.string "Está cheia de mensagens da\n"
+	.string "Equipe Rocket!$"
 
 CeladonCity_Condominiums_Roof_Text_ObtainRocketPlans::
-	.string "{PLAYER} found the Rocket Plans!$"
+	.string "{PLAYER} encontrou os Planos Rocket!$"
 
 CeladonCity_Condominiums_Roof_EventScript_JessieJamesBattle2::
 	setflag FLAG_SAFE_FOLLOWER_MOVEMENT
@@ -143,8 +143,8 @@ CeladonCity_Condominiums_Roof_EventScript_JessieJamesBattle::
 	end
 
 CeladonCity_Condominiums_Roof_Text_LookWhoItIs::
-	.string "James: Well, look who it is.\n"
-	.string "Jessie: Of course it's this twerp.$"
+	.string "James: Ora, ora, veja só quem está aqui.\n"
+	.string "Jessie: Tinha que ser este pivete.$"
 
 Movement_BlockPlayerEscape:
 	walk_left
@@ -164,18 +164,18 @@ Movement_BlockPlayerEscape:
 	.string ""
 
 CeladonCity_Condominiums_Roof_Text_RocketDuoIntro::
-	.string "Jessie: How did you know about our\n"
-	.string "secret drop off point?\p"
-	.string "James: Yeah, the point of it is that\n"
-	.string "it's a secret!\p"
-	.string "Jessie: Well, I guess we'll just have\n"
-	.string "to make sure it stays a secret!$"
+	.string "Jessie: Como você descobriu nosso\n"
+	.string "ponto de entrega secreto?\p"
+	.string "James: Pois é, a graça é justamente\n"
+	.string "ser segredo!\p"
+	.string "Jessie: Bem, acho que teremos que\n"
+	.string "garantir que continue em segredo!$"
 
 
 CeladonCity_Condominiums_Roof_Text_RocketDuoDefeat::
-	.string "Jessie: You're really starting\n"
-	.string "to annoy me, twerp!\p"
-	.string "James: How does this keep happening!?$"
+	.string "Jessie: Você já está começando\n"
+	.string "a me irritar, pivete!\p"
+	.string "James: Como isso continua acontecendo?!$"
 
 CeladonCity_Condominiums_Roof_EventScript_RocketDuoDefeated::
 	msgbox CeladonCity_Condominiums_Roof_Text_RocketDuoDefeated, MSGBOX_AUTOCLOSE
@@ -192,5 +192,5 @@ CeladonCity_Condominiums_Roof_EventScript_RocketDuoDefeated::
 	end
 
 CeladonCity_Condominiums_Roof_Text_RocketDuoDefeated::
-	.string "Jessie: Looks like we're blasting off!\n"
-	.string "James: Looks like we're blasting off!$"
+	.string "Jessie: Estamos decolando de novoooo!\n"
+	.string "James: Estamos decolando de novoooo!$"

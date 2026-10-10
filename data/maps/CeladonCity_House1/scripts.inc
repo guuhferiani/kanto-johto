@@ -7,50 +7,50 @@ CeladonCity_House1_EventScript_RocketChief::
 
 CeladonCity_House1_Text_SlotsReelInTheDough::
     .string "Hehehe!\p"
-    .string "The slots just reel in the dough,\n"
-    .string "big-time!$"
+    .string "Os caça-níqueis faturam uma grana\n"
+    .string "pesada, e como!$"
 
 CeladonCity_House1_EventScript_Rocket1::
 	msgbox CeladonCity_House1_Text_ShippedMonsAsSlotPrizes, MSGBOX_NPC
 	end
 
 CeladonCity_House1_Text_ShippedMonsAsSlotPrizes::
-    .string "Chief!\p"
-    .string "We just shipped two thousand\n"
-    .string "more Pokémon Dolls as slot prizes\l"
-    .string "again today!\p"
-    .string "And we're arranging buyers for the\n"
-    .string "Pokémon we kidnapped, too.$"
+    .string "Chefe!\p"
+    .string "Acabamos de enviar mais dois mil\n"
+    .string "Bonecos de Pokémon como prêmios\l"
+    .string "dos caça-níqueis hoje de novo!\p"
+    .string "E também estamos arranjando compradores\n"
+    .string "para os Pokémon que sequestramos.$"
 
 CeladonCity_House1_EventScript_Rocket2::
 	msgbox CeladonCity_House1_Text_DontTouchGameCornerPoster, MSGBOX_NPC
 	end
 
 CeladonCity_House1_Text_DontTouchGameCornerPoster::
-    .string "Don't touch the poster at the Game\n"
-    .string "Corner!\p"
-    .string "There's no secret switch behind it!$"
+    .string "Não toque no pôster lá no\n"
+    .string "Cassino!\p"
+    .string "Não tem nenhum botão secreto atrás dele!$"
 
 CeladonCity_House1_EventScript_PoliceChief::
     msgbox CeladonCity_House1_Text_BustedTheseRockets, MSGBOX_NPC
     end
 
 CeladonCity_House1_Text_BustedTheseRockets::
-    .string "We've finally busted the leaders\n"
-    .string "of this operation.$"
+    .string "Finalmente prendemos os líderes\n"
+    .string "desta operação.$"
 
 CeladonCity_House1_EventScript_Police1::
     msgbox CeladonCity_House1_Text_DontStepOnEvidence, MSGBOX_NPC
     end
 
 CeladonCity_House1_Text_DontStepOnEvidence::
-    .string "Hey! Watch it, kid!\n"
-    .string "We're collecting evidence.$"
+    .string "Ei! Cuidado aí, jovem!\n"
+    .string "Estamos recolhendo evidências.$"
 
 CeladonCity_House1_EventScript_Police2::
     msgbox CeladonCity_House1_Text_WhoDoesThat, MSGBOX_NPC
     end
 
 CeladonCity_House1_Text_WhoDoesThat::
-    .string "Kidnapping and selling Pokémon?\n"
-    .string "What kind of menace does that!$"
+    .string "Sequestrar e vender Pokémon?\n"
+    .string "Que tipo de monstro faz uma coisa dessas?!$"

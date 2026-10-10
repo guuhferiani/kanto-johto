@@ -6,7 +6,7 @@ CeladonCity_Condominiums_2F_EventScript_MeetingRoomSign::
 	end
 
 CeladonCity_Condominiums_2F_Text_GameFreakMeetingRoom::
-    .string "Pokémon Journal Meeting Room$"
+    .string "Sala de Reuniões da Revista Pokémon$"
 
 CeladonCity_Condominiums_2F_EventScript_PokemonJournalErika::
 	msgbox PokemonJournal_Text_SpecialFeatureErika, MSGBOX_SIGN
@@ -14,12 +14,12 @@ CeladonCity_Condominiums_2F_EventScript_PokemonJournalErika::
 	end
 
 PokemonJournal_Text_SpecialFeatureErika::
-	.string "Pokémon Journal:\p"
-	.string "Special Feature: Celadon Gym\n"
-	.string "Leader Erika!\p"
-	.string "Rumor has it that if you peek into\n"
-	.string "Celadon Gym, you can often\l"
-	.string "see Erika snoozing.$"
+	.string "Revista Pokémon:\p"
+	.string "Edição Especial: Líder do Ginásio\n"
+	.string "de Celadon, Erika!\p"
+	.string "Diz o boato que, se você der uma espiada\n"
+	.string "no Ginásio de Celadon, muitas vezes\l"
+	.string "verá a Erika tirando um cochilo.$"
 
 CeladonCity_Condominiums_2F_EventScript_danenders::
 	lock
@@ -31,10 +31,10 @@ CeladonCity_Condominiums_2F_EventScript_danenders::
 	end
 
 CeladonCity_Condominiums_2F_Text_danenders:
-	.string "Hi there, I'm danenders.\p"
-	.string "I created the game you are playing!\p"
-	.string "I'm working on other projects now,\n"
-	.string "but thanks for saying hi.$"
+	.string "Olá, eu sou o danenders.\p"
+	.string "Eu criei o jogo que você está jogando!\p"
+	.string "Estou trabalhando em outros projetos agora,\n"
+	.string "mas obrigado por vir dar um alô.$"
 
 CeladonCity_Condominiums_2F_EventScript_DaniRainbow::
 	lock
@@ -53,32 +53,32 @@ CeladonCity_Condominiums_2F_EventScript_DaniRainbowAlreadyMet::
 	end
 
 CeladonCity_Condominiums_2F_Text_DaniRainbowIntroduction:
-	.string "Is it time for our interview?\p"
+	.string "Já é hora da nossa entrevista?\p"
 	.string "...\p"
-	.string "Oh, you're not an employee of\n"
-	.string "the publication upstairs.\p"
-	.string "My bad!\n"
-	.string "I'm Dani, aka the bug reporter\l"
-	.string "turned developer.\p"
-	.string "I'm sure poor danenders is absolutely\n"
-	.string "sick of me by this point.\p"
-	.string "I began to work on this game when\n"
-	.string "he went on to other projects.\p"
-	.string "I am more of an editor than an\n"
-	.string "actual developer, but I hope you\l"
-	.string "are enjoying your time in Classic!$"
+	.string "Ah, você não trabalha na editora\n"
+	.string "do andar de cima.\p"
+	.string "Foi mal!\n"
+	.string "Eu sou a Dani, ou melhor, a repórter de\l"
+	.string "bugs que virou desenvolvedora.\p"
+	.string "Tenho certeza de que o pobre danenders\n"
+	.string "já está de saco cheio de mim a essa altura.\p"
+	.string "Comecei a trabalhar neste jogo quando\n"
+	.string "ele foi para outros projetos.\p"
+	.string "Sou mais uma editora do que uma\n"
+	.string "desenvolvedora de fato, mas espero que\l"
+	.string "esteja curtindo seu tempo no Classic!$"
 
 CeladonCity_Condominiums_2F_Text_DaniRainbowAlreadyMet:
-	.string "Hello again!\n"
-	.string "I'm Dani, aka the bug reporter\l"
-	.string "turned developer.\p"
-	.string "I'm sure poor danenders is absolutely\n"
-	.string "sick of me by this point.\p"
-	.string "I began to work on this game when\n"
-	.string "he went on to other projects.\p"
-	.string "I am more of an editor than an\n"
-	.string "actual developer, but I hope you\l"
-	.string "are enjoying your time in Classic!$"
+	.string "Olá de novo!\n"
+	.string "Eu sou a Dani, a repórter de bugs\l"
+	.string "que virou desenvolvedora.\p"
+	.string "Tenho certeza de que o pobre danenders\n"
+	.string "já está de saco cheio de mim a essa altura.\p"
+	.string "Comecei a trabalhar neste jogo quando\n"
+	.string "ele foi para outros projetos.\p"
+	.string "Sou mais uma editora do que uma\n"
+	.string "desenvolvedora de fato, mas espero que\l"
+	.string "esteja curtindo seu tempo no Classic!$"
 
 CeladonCity_Condominiums_2F_EventScript_LiquidJustice::
 	lock
@@ -90,13 +90,13 @@ CeladonCity_Condominiums_2F_EventScript_LiquidJustice::
 	end
 
 CeladonCity_Condominiums_2F_Text_LiquidJustice:
-	.string "How's it going?\p"
-	.string "I'm LiquidJustice, one of\n"
-	.string "the designers for the game.\p"
+	.string "Como vão as coisas?\p"
+	.string "Eu sou o LiquidJustice, um dos\n"
+	.string "designers do jogo.\p"
 	.string "Kanto.\n"
-	.string "Every time I get out,\l"
-	.string "they drag me back in.\p"
-	.string "Have you beat the Mega trainers yet?$"
+	.string "Toda vez que consigo sair,\l"
+	.string "eles me puxam de volta para cá.\p"
+	.string "Você já derrotou os Megatreinadores?$"
 
 CeladonCity_Condominiums_2F_EventScript_Headlocker::
 	lock
@@ -108,13 +108,13 @@ CeladonCity_Condominiums_2F_EventScript_Headlocker::
 	end
 
 CeladonCity_Condominiums_2F_Text_Headlocker:
-	.string "I'm Headlocker03, a humble\n"
-	.string "designer for this game!\p"
-	.string "I just lucked into soul-linking\n"
-	.string "with these guys.\p"
-	.string "Shout out to danenders and\n"
-	.string "DaniRainbow for their hard work\l"
-	.string "on this trip through Kanto!$"
+	.string "Eu sou o Headlocker03, um humilde\n"
+	.string "designer deste jogo!\p"
+	.string "Tive a sorte de fazer um soul-link\n"
+	.string "com esse pessoal.\p"
+	.string "Um salve para o danenders e para a\n"
+	.string "DaniRainbow pelo trabalho duro deles\l"
+	.string "nessa jornada por Kanto!$"
 
 CeladonCity_Condominiums_2F_EventScript_THEWALL::
 	lock
@@ -127,9 +127,8 @@ CeladonCity_Condominiums_2F_EventScript_THEWALL::
 	end
 
 CeladonCity_Condominiums_2F_Text_THEWALL:
-	.string "THE WALL has zero disregard\n"
-	.string "for the rules and will do\l"
-	.string "as he pleases.$"
+	.string "THE WALL ignora completamente as\n"
+	.string "regras e faz o que bem entender.$"
 
 CeladonCity_Condominiums_2F_EventScript_CherryPie::
 	lock
@@ -142,7 +141,7 @@ CeladonCity_Condominiums_2F_EventScript_CherryPie::
 	end
 
 CeladonCity_Condominiums_2F_Text_CherryPie:
-	.string "Cherry Pie gives you the blankest stare.$"
+	.string "Cherry Pie olha para você com o olhar mais vazio possível.$"
 
 CeladonCity_Condominiums_2F_EventScript_danPikachu::
 	lock

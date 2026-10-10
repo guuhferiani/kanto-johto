@@ -5,17 +5,17 @@ CeladonCity_Restaurant_EventScript_Chef::
 	end
 
 CeladonCity_Restaurant_Text_TakingBreakRightNow::
-    .string "Hi!\p"
-    .string "Sorry, but we're taking a break\n"
-    .string "right now.$"
+    .string "Olá!\p"
+    .string "Desculpe, mas estamos no nosso\n"
+    .string "intervalo agora.$"
 
 CeladonCity_Restaurant_EventScript_Woman::
 	msgbox CeladonCity_Restaurant_Text_OftenGoToDrugstore, MSGBOX_NPC
 	end
 
 CeladonCity_Restaurant_Text_OftenGoToDrugstore::
-    .string "My Pokémon are weak, so I often\n"
-    .string "have to go to the Drugstore.$"
+    .string "Meus Pokémon são fraquinhos, então\n"
+    .string "tenho que ir com frequência à Farmácia.$"
 
 CeladonCity_Restaurant_EventScript_CoinCaseMan::
 	lock
@@ -34,16 +34,16 @@ CeladonCity_Restaurant_EventScript_CoinCaseMan::
 	end
 
 CeladonCity_Restaurant_Text_TakeThisImBusted::
-    .string "Go ahead! Laugh!\n"
-    .string "I'm flat-out busted!\p"
-    .string "No more slots for me!\n"
-    .string "I'm going straight!\p"
-    .string "Here!\n"
-    .string "I won't be needing this anymore!$"
+    .string "Vai em frente! Pode rir!\n"
+    .string "Estou completamente falido!\p"
+    .string "Chega de caça-níqueis para mim!\n"
+    .string "Vou andar na linha!\p"
+    .string "Tome!\n"
+    .string "Não vou mais precisar disto!$"
 
 CeladonCity_Restaurant_Text_ReceivedCoinCaseFromMan::
-    .string "{PLAYER} received a Coin Case\n"
-    .string "from the man.$"
+    .string "{PLAYER} recebeu um Porta-Fichas\n"
+    .string "do homem.$"
 
 CeladonCity_Restaurant_EventScript_NoRoomForCoinCase::
 	msgbox CeladonCity_Restaurant_Text_MakeRoomForThis
@@ -51,7 +51,7 @@ CeladonCity_Restaurant_EventScript_NoRoomForCoinCase::
 	end
 
 CeladonCity_Restaurant_Text_MakeRoomForThis::
-    .string "Make room for this!$"
+    .string "Abra espaço para isto!$"
 
 CeladonCity_Restaurant_EventScript_AlreadyGotCoinCase::
 	msgbox CeladonCity_Restaurant_Text_ThoughtIdWinItBack
@@ -59,22 +59,22 @@ CeladonCity_Restaurant_EventScript_AlreadyGotCoinCase::
 	end
 
 CeladonCity_Restaurant_Text_ThoughtIdWinItBack::
-    .string "I always thought I was going to\n"
-    .string "win it back…$"
+    .string "Eu sempre achei que ia recuperar\n"
+    .string "o que perdi…$"
 
 CeladonCity_Restaurant_EventScript_WorkerM::
 	msgbox CeladonCity_Restaurant_Text_PsstBasementUnderGameCorner, MSGBOX_NPC
 	end
 
 CeladonCity_Restaurant_Text_PsstBasementUnderGameCorner::
-    .string "Psst! There's a secret basement \n"
-    .string "under the Game Corner, I hear.$"
+    .string "Psiu! Ouvi dizer que tem um porão\n"
+    .string "secreto sob o Cassino.$"
 
 CeladonCity_Restaurant_EventScript_FatMan::
 	msgbox CeladonCity_Restaurant_Text_ManLostItAllAtSlots, MSGBOX_NPC
 	end
 
 CeladonCity_Restaurant_Text_ManLostItAllAtSlots::
-    .string "Munch…\p"
-    .string "The man at that table lost it all\n"
-    .string "at the slots.$"
+    .string "Nhom, nhom…\p"
+    .string "O homem naquela mesa perdeu tudo\n"
+    .string "nos caça-níqueis.$"
