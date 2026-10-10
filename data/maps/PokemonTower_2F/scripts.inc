@@ -8,8 +8,8 @@ PokemonTower_2F_EventScript_Channeler::
 	end
 
 PokemonTower_2F_Text_SilphScopeCouldUnmaskGhosts::
-    .string "Even we could not calm the\n"
-    .string "enraged spirit.$"
+    .string "Nem mesmo nós conseguimos acalmar\n"
+    .string "o espírito enfurecido.$"
 
 PokemonTower_2F_EventScript_RivalTriggerRight::
 	lockall
@@ -108,25 +108,25 @@ PokemonTower_2F_Movement_RivalExitDown::
 	step_end
 
 PokemonTower_2F_Text_RivalIntro::
-    .string "{RIVAL}: Hey, {PLAYER}!\n"
-    .string "What brings you here?\l"
-    .string "Is your Pokémon dead?\p"
-    .string "Hey! It's alive!\p"
-    .string "I can at least make them faint!\n"
-    .string "Let's go!$"
+    .string "{RIVAL}: Ei, {PLAYER}!\n"
+    .string "O que faz por aqui?\l"
+    .string "O seu Pokémon morreu?\p"
+    .string "Ei! Eles continuam vivos!\p"
+    .string "Bem, pelo menos posso fazê-los\n"
+    .string "desmaiar! Vamos nessa!$"
 
 PokemonTower_2F_Text_RivalDefeat::
-    .string "What?\n"
-    .string "You stinker!\p"
-    .string "I took it easy on you, too!$"
+    .string "O quê?\n"
+    .string "Seu peste!\p"
+    .string "E eu ainda peguei leve com você!$"
 
 PokemonTower_2F_Text_RivalPostBattle::
-    .string "How's your Pokédex coming?\n"
-    .string "I just caught a Cubone!\p"
-    .string "I can't find the bigger Marowak.\n"
-    .string "Where could they be?\p"
-    .string "I bet there aren't any left!\p"
-    .string "Well, I better get going.\n"
-    .string "I've got a lot to accomplish,\l"
-    .string "unlike you.\p"
-    .string "Smell ya later!$"
+    .string "Como anda a sua Pokédex?\n"
+    .string "Acabei de capturar um Cubone!\p"
+    .string "Não consigo encontrar o Marowak grandalhão.\n"
+    .string "Onde é que eles foram parar?\p"
+    .string "Aposto que já não restou nenhum!\p"
+    .string "Bem, é melhor eu ir andando.\n"
+    .string "Tenho muito o que conquistar,\l"
+    .string "ao contrário de você.\p"
+    .string "Fui nessa!$"

@@ -16,9 +16,9 @@ PokemonTower_5F_EventScript_Channeler::
 	end
 
 PokemonTower_5F_Text_RestHereInPurifiedSpace::
-    .string "Come, child!\n"
-    .string "I have purified this space.\l"
-    .string "You can rest here.$"
+    .string "Venha, jovem!\n"
+    .string "Purifiquei este local.\l"
+    .string "Você pode descansar aqui.$"
 
 PokemonTower_5F_EventScript_PurifiedZone::
 	lockall
@@ -31,10 +31,10 @@ PokemonTower_5F_EventScript_PurifiedZone::
 	end
 
 PokemonTower_5F_Text_PurifiedZoneMonsFullyHealed::
-    .string "Entered the purified and protected\n"
-    .string "zone.\p"
-    .string "{PLAYER}'s Pokémon were fully\n"
-    .string "healed.$"
+    .string "Entrou na área purificada e\n"
+    .string "protegida.\p"
+    .string "Os Pokémon de {PLAYER} foram\n"
+    .string "totalmente curados.$"
 
 PokemonTower_5F_EventScript_ExitPurifiedZone::
 	lockall
@@ -48,14 +48,14 @@ PokemonTower_5F_EventScript_Tammy::
 	end
 
 PokemonTower_5F_Text_TammyIntro::
-    .string "Give…me…\n"
-    .string "your…all…$"
+    .string "Dê…me…\n"
+    .string "tudo…de…você…$"
 
 PokemonTower_5F_Text_TammyDefeat::
-    .string "Gasp!$"
+    .string "Ahhh!$"
 
 PokemonTower_5F_Text_TammyPostBattle::
-    .string "I was under possession.$"
+    .string "Eu estava sob possessão.$"
 
 PokemonTower_5F_EventScript_Ruth::
 	trainerbattle_single TRAINER_CHANNELER_RUTH, PokemonTower_5F_Text_RuthIntro, PokemonTower_5F_Text_RuthDefeat
@@ -63,14 +63,14 @@ PokemonTower_5F_EventScript_Ruth::
 	end
 
 PokemonTower_5F_Text_RuthIntro::
-    .string "You…shall…\n"
-    .string "join…us…$"
+    .string "Você…irá…\n"
+    .string "se…juntar…a…nós…$"
 
 PokemonTower_5F_Text_RuthDefeat::
-    .string "What a nightmare!$"
+    .string "Que pesadelo!$"
 
 PokemonTower_5F_Text_RuthPostBattle::
-    .string "I was possessed.$"
+    .string "Eu estava possuída.$"
 
 PokemonTower_5F_EventScript_Karina::
 	trainerbattle_single TRAINER_CHANNELER_KARINA, PokemonTower_5F_Text_KarinaIntro, PokemonTower_5F_Text_KarinaDefeat
@@ -78,13 +78,13 @@ PokemonTower_5F_EventScript_Karina::
 	end
 
 PokemonTower_5F_Text_KarinaIntro::
-    .string "Zombies!$"
+    .string "Zumbis!$"
 
 PokemonTower_5F_Text_KarinaDefeat::
-    .string "Ha?$"
+    .string "Hã?$"
 
 PokemonTower_5F_Text_KarinaPostBattle::
-    .string "I regained my senses.$"
+    .string "Recuperei meus sentidos.$"
 
 PokemonTower_5F_EventScript_Janae::
 	trainerbattle_single TRAINER_CHANNELER_JANAE, PokemonTower_5F_Text_JanaeIntro, PokemonTower_5F_Text_JanaeDefeat
@@ -96,8 +96,8 @@ PokemonTower_5F_Text_JanaeIntro::
     .string "Urff…$"
 
 PokemonTower_5F_Text_JanaeDefeat::
-    .string "Whoo!$"
+    .string "Ufa!$"
 
 PokemonTower_5F_Text_JanaePostBattle::
-    .string "I fell to evil spirits despite my\n"
-    .string "training in the mountains…$"
+    .string "Fui dominada por espíritos malignos\n"
+    .string "apesar do meu treino nas montanhas…$"

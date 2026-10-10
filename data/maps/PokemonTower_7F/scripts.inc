@@ -20,18 +20,18 @@ PokemonTower_7F_EventScript_MrFuji::
     end
 
 PokemonTower_7F_Text_MrFujiThankYouFollowMe::
-    .string "Mr. Fuji: Heh?\n"
-    .string "You came to save me?\p"
-    .string "Thank you. But, I came here of my\n"
-    .string "own free will.\p"
-    .string "I came to calm the spirit of\n"
-    .string "Cubone's mother.\p"
-    .string "I think Marowak's spirit has\n"
-    .string "finally left us.\p"
-    .string "I must thank you for your kind\n"
-    .string "concern.\p"
-    .string "Follow me to my home, Pokémon\n"
-    .string "House, at the foot of this tower.$"
+    .string "Sr. Fuji: Hã?\n"
+    .string "Você veio me salvar?\p"
+    .string "Obrigado. Mas eu vim aqui por\n"
+    .string "minha própria vontade.\p"
+    .string "Vim para acalmar o espírito da\n"
+    .string "mãe de Cubone.\p"
+    .string "Acredito que o espírito de Marowak\n"
+    .string "finalmente encontrou a paz.\p"
+    .string "Agradeço imensamente pela sua nobre\n"
+    .string "preocupação.\p"
+    .string "Venha comigo até a minha casa, a\n"
+    .string "Casa Pokémon, aos pés desta torre.$"
 
 PokemonTower_7F_EventScript_MrFujiExit::
 	clearflag FLAG_SAFE_FOLLOWER_MOVEMENT
@@ -63,7 +63,7 @@ PokemonTower_7F_EventScript_JessieJamesBattle::
 	end
 
 PokemonTower_7F_Text_HoldItKid::
-	.string "Jessie: Stop right there, twerp.$"
+	.string "Jessie: Pare bem aí, pivete.$"
 
 Movement_RocketDuoEnters:
 	walk_up
@@ -76,16 +76,16 @@ Movement_RocketDuoEnters:
 	step_end
 
 PokemonTower_7F_RocketDuoIntro::
-	.string "James: We chased you all the way\n"
-	.string "from Celadon to get those plans back!\p"
-	.string "Jessie: You should have turned them\n"
-	.string "to the International Police while you\l"
-	.string "had the chance.\p"
-	.string "James: We'll be taking those back now!$"
+	.string "James: Nós viemos correndo desde Celadon\n"
+	.string "para recuperar esses planos!\p"
+	.string "Jessie: Você devia tê-los entregado à\n"
+	.string "Polícia Internacional enquanto ainda\l"
+	.string "tinha chance.\p"
+	.string "James: Mas agora nós vamos pegá-los de volta!$"
 
 PokemonTower_7F_RocketDuoDefeat::
-    .string "Jessie: You brat!\n"
-    .string "James: You'll regret this!$"
+    .string "Jessie: Seu fedelho!\n"
+    .string "James: Você vai se arrepender disso!$"
 
 PokemonTower_7F_EventScript_RocketDuoDefeated::
 	msgbox PokemonTower_7F_Text_RocketDuoDefeated, MSGBOX_AUTOCLOSE
@@ -101,22 +101,22 @@ PokemonTower_7F_EventScript_RocketDuoDefeated::
 	end
 
 PokemonTower_7F_Text_RocketDuoDefeated::
-    .string "Jessie: Ugh! Seriously? Again?\p"
-    .string "James: Looks like our chance to\n"
-    .string "retrieve the plans is a bust, then...\p"
-    .string "Jessie: Don't you think I know that?\n"
-    .string "Whatever, if this twerp hasn't turned\l"
-    .string "the plans into the International Police\l"
-    .string "yet, that means we still have time to go\l"
-    .string "help with the take-over in Saffron City.\p"
-    .string "Jessie & James: Looks like Team Rocket's\n"
-    .string "blasting off again!$"
+    .string "Jessie: Eca! Sério? De novo?\p"
+    .string "James: Parece que a nossa chance de\n"
+    .string "recuperar os planos foi por água abaixo...\p"
+    .string "Jessie: E você acha que eu não sei?\n"
+    .string "Tanto faz, se esse pivete ainda não\l"
+    .string "entregou os planos para a Polícia\l"
+    .string "Internacional, significa que ainda temos\l"
+    .string "tempo de ajudar na invasão de Saffron.\p"
+    .string "Jessie & James: A Equipe Rocket está\n"
+    .string "decolando de novoooo!$"
 
 PokemonTower_7F_Text_LetsGoToHouse::
-	.string "Mr. Fuji: Well, that was certainly\n"
-	.string "unexpected.\p"
-	.string "Let's get back to my house before\n"
-	.string "any more Rockets show up...$"
+	.string "Sr. Fuji: Bem, isso certamente foi\n"
+	.string "inesperado.\p"
+	.string "Vamos voltar para a minha casa antes\n"
+	.string "que mais Rockets apareçam...$"
 
 PokemonTower_7F_EventScript_Grunt1::
 	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_19, PokemonTower_7F_Text_Grunt1Intro, PokemonTower_7F_Text_Grunt1Defeat, PokemonTower_7F_EventScript_DefeatedGrunt1
@@ -159,14 +159,14 @@ PokemonTower_7F_EventScript_Grunt1ExitLeft::
 	end
 
 PokemonTower_7F_Text_Grunt1Intro::
-    .string "What do you want?\n"
-    .string "Why are you here?$"
+    .string "O que você quer?\n"
+    .string "Por que está aqui?$"
 
 PokemonTower_7F_Text_Grunt1Defeat::
-    .string "I give up!$"
+    .string "Eu desisto!$"
 
 PokemonTower_7F_Text_Grunt1PostBattle::
-    .string "I'm not going to forget this!$"
+    .string "Não vou esquecer disso!$"
 
 PokemonTower_7F_EventScript_RemoveGrunt1::
 	removeobject LOCALID_GRUNT1
@@ -221,21 +221,21 @@ PokemonTower_7F_EventScript_Grunt2::
 	end
 
 PokemonTower_7F_Text_Grunt2Intro::
-    .string "This old guy marched right up to\n"
-    .string "our Hideout.\p"
-    .string "Then, he starts ranting about how\n"
-    .string "Team Rocket's abusing Pokémon.\p"
-    .string "So, we're just talking it over as\n"
-    .string "adults.$"
+    .string "Esse velho marchou direto até o\n"
+    .string "nosso Esconderijo.\p"
+    .string "Depois, começou a reclamar que a\n"
+    .string "Equipe Rocket maltrata os Pokémon.\p"
+    .string "Então, estamos apenas conversando\n"
+    .string "como adultos.$"
 
 PokemonTower_7F_Text_Grunt2Defeat::
-    .string "Please!\n"
-    .string "No more!$"
+    .string "Por favor!\n"
+    .string "Chega!$"
 
 PokemonTower_7F_Text_Grunt2PostBattle::
-    .string "Pokémon are only good for making\n"
-    .string "money. Why not use them?\p"
-    .string "You stay out of our business!$"
+    .string "Pokémon só servem para ganhar dinheiro.\n"
+    .string "Por que não usá-los?\p"
+    .string "Fique fora dos nossos negócios!$"
 
 PokemonTower_7F_EventScript_DefeatedGrunt2::
 	msgbox PokemonTower_7F_Text_Grunt2PostBattle
@@ -303,13 +303,13 @@ PokemonTower_7F_EventScript_Grunt3::
 	end
 
 PokemonTower_7F_Text_Grunt3Intro::
-    .string "You're not saving anyone, kid!$"
+    .string "Você não vai salvar ninguém, pirralho!$"
 
 PokemonTower_7F_Text_Grunt3Defeat::
-    .string "Don't fight us Rockets!$"
+    .string "Não lute contra nós, os Rockets!$"
 
 PokemonTower_7F_Text_Grunt3PostBattle::
-    .string "You're not getting away with this!$"
+    .string "Você não vai se safar dessa!$"
 
 PokemonTower_7F_EventScript_DefeatedGrunt3::
 	msgbox PokemonTower_7F_Text_Grunt3PostBattle

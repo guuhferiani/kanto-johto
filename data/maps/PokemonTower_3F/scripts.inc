@@ -12,16 +12,16 @@ PokemonTower_3F_EventScript_Patricia::
 	end
 
 PokemonTower_3F_Text_PatriciaIntro::
-    .string "Be gone!\n"
-    .string "Malevolent spirit!$"
+    .string "Vá embora!\n"
+    .string "Espírito maligno!$"
 
 PokemonTower_3F_Text_PatriciaDefeat::
-    .string "Whew!\n"
-    .string "The spirit left!$"
+    .string "Ufa!\n"
+    .string "O espírito se foi!$"
 
 PokemonTower_3F_Text_PatriciaPostBattle::
-    .string "The others above…\n"
-    .string "They must have been possessed.$"
+    .string "As outras lá em cima…\n"
+    .string "Elas devem ter sido possuídas.$"
 
 PokemonTower_3F_EventScript_Carly::
 	trainerbattle_single TRAINER_CHANNELER_CARLY, PokemonTower_3F_Text_CarlyIntro, PokemonTower_3F_Text_CarlyDefeat
@@ -33,12 +33,12 @@ PokemonTower_3F_Text_CarlyIntro::
     .string "Kwaaah!$"
 
 PokemonTower_3F_Text_CarlyDefeat::
-    .string "Hmm?\n"
-    .string "What am I doing?$"
+    .string "Hum?\n"
+    .string "O que estou fazendo?$"
 
 PokemonTower_3F_Text_CarlyPostBattle::
-    .string "Sorry!\n"
-    .string "I was possessed!$"
+    .string "Desculpe!\n"
+    .string "Eu estava possuída!$"
 
 PokemonTower_3F_EventScript_Hope::
 	trainerbattle_single TRAINER_CHANNELER_HOPE, PokemonTower_3F_Text_HopeIntro, PokemonTower_3F_Text_HopeDefeat
@@ -50,10 +50,10 @@ PokemonTower_3F_Text_HopeIntro::
     .string "Huhu… Graa…$"
 
 PokemonTower_3F_Text_HopeDefeat::
-    .string "Hwa!\n"
-    .string "I'm saved!$"
+    .string "Ah!\n"
+    .string "Estou salva!$"
 
 PokemonTower_3F_Text_HopePostBattle::
-    .string "I will be forever changed\n"
-    .string "by this experience.$"
+    .string "Serei para sempre transformada\n"
+    .string "por esta experiência.$"
 

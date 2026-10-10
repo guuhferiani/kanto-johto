@@ -6,9 +6,9 @@ PokemonTower_1F_EventScript_Channeler::
 	end
 
 PokemonTower_1F_Text_SenseSpiritsUpToMischief::
-    .string "I am a Channeler.\p"
-    .string "There are spirits up to mischief.\n"
-    .string "I sense them high in the tower.$"
+    .string "Eu sou uma Médium.\p"
+    .string "Há espíritos tramando travessuras.\n"
+    .string "Posso senti-los no topo da torre.$"
 
 PokemonTower_1F_EventScript_Woman1::
 	msgbox PokemonTower_1F_Text_GrowlitheWhyDidYouDie, MSGBOX_NPC
@@ -26,9 +26,9 @@ PokemonTower_1F_EventScript_CueBall::
 	end
 
 PokemonTower_1F_Text_IDontNeedThis::
-	.string "Oh...sniff...\n"
-	.string "Nuffle...I miss you!\p"
-	.string "Here...I don't need this...$"
+	.string "Oh... snif...\n"
+	.string "Nuffle... sinto tanta sua falta!\p"
+	.string "Tome... eu não preciso disto...$"
 
 PokemonTower_1F_EventScript_CueBall2::
 	msgbox PokemonTower_1F_Text_BraveFace, MSGBOX_NPC
@@ -36,15 +36,15 @@ PokemonTower_1F_EventScript_CueBall2::
 	end
 
 PokemonTower_1F_Text_BraveFace::
-	.string "Whenever we battled, I was\n"
-	.string "always able to put on a brave\l"
-	.string "face for my Pokémon.\p"
-	.string "But now, I can't keep up the\n"
-	.string "the facade...$"
+	.string "Sempre que batalhávamos, eu\n"
+	.string "conseguia mostrar coragem\l"
+	.string "pelo meu Pokémon.\p"
+	.string "Mas agora, não consigo mais\n"
+	.string "manter as aparências...$"
 
 PokemonTower_1F_Text_GrowlitheWhyDidYouDie::
-    .string "My Growlithe…\n"
-    .string "Why did you die?$"
+    .string "Meu Growlithe…\n"
+    .string "Por que você morreu?$"
 
 
 PokemonTower_1F_EventScript_BaldingMan::
@@ -57,19 +57,20 @@ PokemonTower_1F_EventScript_Woman2::
 	end
 
 PokemonTower_1F_Text_CameToPrayForDepartedClefairy::
-    .string "I came to pray for my dearly\n"
-    .string "departed Clefairy.\p"
-    .string "Sniff!\n"
-    .string "I'm awash in tears…$"
+    .string "Vim rezar pela minha querida\n"
+    .string "Clefairy que se foi.\p"
+    .string "Snif!\n"
+    .string "Estou em lágrimas…$"
 
 PokemonTower_1F_Text_ComeToPayRespects::
-    .string "Did you come to pay respects?\p"
-    .string "Bless your Pokémon-loving heart.$"
+    .string "Você veio prestar homenagens?\p"
+    .string "Que coração bondoso você tem por amar\n"
+    .string "tanto os Pokémon.$"
 
 PokemonTower_1F_EventScript_WorkerF::
 	msgbox PokemonTower_1F_Text_ErectedInMemoryOfDeadMons, MSGBOX_NPC
 	end
 
 PokemonTower_1F_Text_ErectedInMemoryOfDeadMons::
-    .string "Pokémon Tower was erected in the\n"
-    .string "memory of Pokémon that died.$"
+    .string "A Torre Pokémon foi erguida em memória\n"
+    .string "dos Pokémon que faleceram.$"
