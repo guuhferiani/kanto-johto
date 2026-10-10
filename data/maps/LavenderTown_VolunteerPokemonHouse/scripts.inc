@@ -23,23 +23,23 @@ LavenderTown_VolunteerPokemonHouse_EventScript_MrFuji::
 	end
 
 LavenderTown_VolunteerPokemonHouse_Text_IdLikeYouToHaveThis::
-    .string "Mr. Fuji: {PLAYER}…\p"
-    .string "Your Pokédex quest is one that\n"
-    .string "requires strong dedication.\p"
-    .string "Without deep love for Pokémon,\n"
-    .string "your quest may fail.\p"
-    .string "I'm not sure if this will help you,\n"
-    .string "but I'd like you to have it.$"
+    .string "Sr. Fuji: {PLAYER}…\p"
+    .string "Sua jornada com a Pokédex requer\n"
+    .string "uma imensa dedicação.\p"
+    .string "Sem um profundo amor pelos Pokémon,\n"
+    .string "sua busca pode falhar.\p"
+    .string "Não sei se isso irá ajudar,\n"
+    .string "mas gostaria que ficasse com isto.$"
 
 LavenderTown_VolunteerPokemonHouse_Text_ReceivedPokeFluteFromMrFuji::
-    .string "{PLAYER} received a Poké Flute\n"
-    .string "from Mr. Fuji.$"
+    .string "{PLAYER} recebeu uma Flauta Pokémon\n"
+    .string "do Sr. Fuji.$"
 
 LavenderTown_VolunteerPokemonHouse_Text_ExplainPokeFlute::
-    .string "Upon hearing the Poké Flute,\n"
-    .string "sleeping Pokémon will spring awake.\p"
-    .string "Try using it on Pokémon that are\n"
-    .string "sleeping obstacles.$"
+    .string "Ao ouvir a Flauta Pokémon,\n"
+    .string "Pokémon adormecidos vão despertar.\p"
+    .string "Tente usá-la em Pokémon que estiverem\n"
+    .string "dormindo e bloqueando o caminho.$"
 
 LavenderTown_VolunteerPokemonHouse_EventScript_AlreadyHavePokeFlute::
 	msgbox LavenderTown_VolunteerPokemonHouse_Text_HasPokeFluteHelpedYou
@@ -47,8 +47,8 @@ LavenderTown_VolunteerPokemonHouse_EventScript_AlreadyHavePokeFlute::
 	end
 
 LavenderTown_VolunteerPokemonHouse_Text_HasPokeFluteHelpedYou::
-    .string "Mr. Fuji: Has my Poké Flute\n"
-    .string "helped you?$"
+    .string "Sr. Fuji: A minha Flauta Pokémon\n"
+    .string "tem sido útil para você?$"
 
 LavenderTown_VolunteerPokemonHouse_EventScript_NoRoomForPokeFlute::
 	msgbox LavenderTown_VolunteerPokemonHouse_Text_MustMakeRoomForThis
@@ -56,25 +56,25 @@ LavenderTown_VolunteerPokemonHouse_EventScript_NoRoomForPokeFlute::
 	end
 
 LavenderTown_VolunteerPokemonHouse_Text_MustMakeRoomForThis::
-    .string "You must make room for this!$"
+    .string "Você precisa abrir espaço para isto!$"
 
 LavenderTown_VolunteerPokemonHouse_EventScript_LittleGirl::
 	msgbox LavenderTown_VolunteerPokemonHouse_Text_MrFujiLooksAfterOrphanedMons, MSGBOX_NPC
 	end
 
 LavenderTown_VolunteerPokemonHouse_Text_MrFujiLooksAfterOrphanedMons::
-    .string "This is really Mr. Fuji's house.\p"
-    .string "He's really kind.\p"
-    .string "He looks after abandoned and\n"
-    .string "orphaned Pokémon.$"
+    .string "Esta é a casa do Sr. Fuji.\p"
+    .string "Ele é muito bondoso.\p"
+    .string "Ele cuida de Pokémon abandonados\n"
+    .string "e órfãos.$"
 
 LavenderTown_VolunteerPokemonHouse_EventScript_LittleBoy::
 	msgbox LavenderTown_VolunteerPokemonHouse_Text_MonsNiceToHug, MSGBOX_NPC
 	end
 
 LavenderTown_VolunteerPokemonHouse_Text_MonsNiceToHug::
-    .string "It's so warm!\n"
-    .string "Pokémon are so nice to hug.$"
+    .string "É tão quentinho!\n"
+    .string "É tão bom abraçar os Pokémon.$"
 
 LavenderTown_VolunteerPokemonHouse_EventScript_Youngster::
 	goto_if_set FLAG_RESCUED_MR_FUJI, LavenderTown_VolunteerPokemonHouse_EventScript_YoungsterFujiBack
@@ -82,16 +82,16 @@ LavenderTown_VolunteerPokemonHouse_EventScript_Youngster::
 	end
 
 LavenderTown_VolunteerPokemonHouse_Text_WhereDidMrFujiGo::
-    .string "That's odd, Mr. Fuji isn't here.\n"
-    .string "Where'd he go?$"
+    .string "Que estranho, o Sr. Fuji não está aqui.\n"
+    .string "Para onde ele foi?$"
 
 LavenderTown_VolunteerPokemonHouse_EventScript_YoungsterFujiBack::
 	msgbox LavenderTown_VolunteerPokemonHouse_Text_MrFujiWasPrayingForCubonesMother, MSGBOX_NPC
 	end
 
 LavenderTown_VolunteerPokemonHouse_Text_MrFujiWasPrayingForCubonesMother::
-    .string "Mr. Fuji had been praying alone\n"
-    .string "for Cubone's mother.$"
+    .string "O Sr. Fuji estava rezando sozinho\n"
+    .string "pela mãe de Cubone.$"
 
 LavenderTown_VolunteerPokemonHouse_EventScript_Nidorino::
 	lock
@@ -125,18 +125,18 @@ LavenderTown_VolunteerPokemonHouse_EventScript_PokemonFanMagazine::
 	end
 
 LavenderTown_VolunteerPokemonHouse_Text_GrandPrizeDrawingClipped::
-    .string "Pokémon Fan Magazine\n"
-    .string "Monthly Grand Prize Drawing!\p"
-    .string "The application form is…\p"
-    .string "Gone! It's been clipped out.\n"
-    .string "Someone must have applied already.$"
+    .string "Revista dos Fãs de Pokémon\n"
+    .string "Sorteio Mensal do Grande Prêmio!\p"
+    .string "O formulário de inscrição está…\p"
+    .string "Faltando! Foi recortado.\n"
+    .string "Alguém já deve ter se inscrito.$"
 
 LavenderTown_VolunteerPokemonHouse_EventScript_Bookshelf::
 	msgbox LavenderTown_VolunteerPokemonHouse_Text_PokemonMagazinesLineShelf, MSGBOX_SIGN
 	end
 
 LavenderTown_VolunteerPokemonHouse_Text_PokemonMagazinesLineShelf::
-    .string "Pokémon magazines line the shelf.\p"
+    .string "Revistas de Pokémon enchem a estante.\p"
     .string "Pokémon Insider…\p"
     .string "Pokémon Fan…$"
 
@@ -153,9 +153,9 @@ LavenderTown_VolunteerPokemonHouse_EventScript_GetReward::
 	end
 
 LavenderTown_VolunteerPokemonHouse_Text_GetReward::
-	.string "Mr. Fuji: Oh, {PLAYER}, I have\n"
-	.string "something for you.\p"
-	.string "Come here for a moment.$"
+	.string "Sr. Fuji: Ah, {PLAYER}, eu tenho\n"
+	.string "algo para você.\p"
+	.string "Venha até aqui por um instante.$"
 
  Movement_ApproachFuji::
  	walk_up

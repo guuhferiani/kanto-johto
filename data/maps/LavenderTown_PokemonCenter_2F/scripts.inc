@@ -14,10 +14,10 @@ LavenderTown_PokemonCenter_2F_EventScript_OldWoman::
 	end
 
 LavenderTown_PokemonCenter_2F_Text_SilkScarf::
-	.string "This was my Meowth's...\n"
-	.string "It always looked so fancy...\p"
-	.string "I think they would like you to\n"
-	.string "have it...$"
+	.string "Isto era do meu Meowth...\n"
+	.string "Ele sempre ficava tão elegante...\p"
+	.string "Acho que ele gostaria que ficasse\n"
+	.string "com você...$"
 
 LavenderTown_PokemonCenter_2F_EventScript_OldWoman2::
 	lock
@@ -27,5 +27,5 @@ LavenderTown_PokemonCenter_2F_EventScript_OldWoman2::
 	end
 
 LavenderTown_PokemonCenter_2F_Text_FancyPants::
-	.string "Pokémon are more than pets.\n"
-	.string "They're friends and family.$"
+	.string "Pokémon são mais que animais de estimação.\n"
+	.string "Eles são amigos e família.$"

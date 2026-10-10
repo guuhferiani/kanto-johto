@@ -39,21 +39,21 @@ LavenderTown_Mart_EventScript_Youngster::
 	end
 
 LavenderTown_Mart_Text_SearchingForStatRaiseItems::
-    .string "I'm searching for items that raise\n"
-    .string "the stats of Pokémon.\p"
-    .string "They're effective over the course\n"
-    .string "of a single battle.\p"
-    .string "X Attack, X Defend, X Speed, \n"
-    .string "and X Special are what I'm after.\p"
-    .string "Do you know where I can get them?$"
+    .string "Estou procurando por itens que aumentam\n"
+    .string "os atributos dos Pokémon.\p"
+    .string "Eles fazem efeito durante o decorrer\n"
+    .string "de uma única batalha.\p"
+    .string "Ataque X, Defesa X, Velocidade X\n"
+    .string "e Especial X são os que eu procuro.\p"
+    .string "Você sabe onde posso encontrá-los?$"
 
 LavenderTown_Mart_Text_DidYouBuyRevives::
-    .string "Did you buy some Revives?\n"
-    .string "They revive any fainted Pokémon!$"
+    .string "Você comprou alguns Reviver?\n"
+    .string "Eles revivem qualquer Pokémon desmaiado!$"
 
 LavenderTown_Mart_Text_TrainerDuosCanChallengeYou::
-    .string "Sometimes, a trainer duo will\n"
-    .string "challenge you with two Pokémon\l"
-    .string "at the same time.\p"
-    .string "If that happens, you have to send\n"
-    .string "out two Pokémon to battle, too.$"
+    .string "Às vezes, uma dupla de treinadores vai\n"
+    .string "te desafiar com dois Pokémon\l"
+    .string "ao mesmo tempo.\p"
+    .string "Se isso acontecer, você precisará mandar\n"
+    .string "dois Pokémon para a batalha também.$"

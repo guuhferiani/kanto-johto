@@ -17,12 +17,12 @@ LavenderTown_EventScript_LittleGirl::
 	end
 
 LavenderTown_Text_DoYouBelieveInGhosts::
-    .string "Do you believe in ghosts?$"
+    .string "Você acredita em fantasmas?$"
 
 LavenderTown_Text_JustImaginingWhiteHand::
-    .string "Hahaha, I guess not.\p"
-    .string "That white hand on your shoulder…\n"
-    .string "I'm just imagining it.$"
+    .string "Hahaha, acho que não.\p"
+    .string "Aquela mão branca no seu ombro…\n"
+    .string "É só coisa da minha imaginação.$"
 
 
 LavenderTown_EventScript_LittleGirlBelieve::
@@ -31,31 +31,31 @@ LavenderTown_EventScript_LittleGirlBelieve::
 	end
 
 LavenderTown_Text_SoThereAreBelievers::
-    .string "Really?\n"
-    .string "So there are believers…$"
+    .string "Sério?\n"
+    .string "Então ainda há quem acredite…$"
 
 LavenderTown_EventScript_WorkerM::
 	msgbox LavenderTown_Text_TownKnownAsMonGraveSite, MSGBOX_NPC
 	end
 
 LavenderTown_Text_TownKnownAsMonGraveSite::
-    .string "This town is known as the grave\n"
-    .string "site of Pokémon.\p"
-    .string "Memorial services are held in\n"
-    .string "Pokémon Tower.$"
+    .string "Este vilarejo é conhecido como o cemitério\n"
+    .string "dos Pokémon.\p"
+    .string "Serviços fúnebres são realizados na\n"
+    .string "Torre Pokémon.$"
 
 LavenderTown_EventScript_Boy::
 	msgbox LavenderTown_Text_GhostsAppearedInTower, MSGBOX_NPC
 	end
 
 LavenderTown_Text_GhostsAppearedInTower::
-    .string "Ghosts appeared in Pokémon Tower.\p"
-    .string "I think they're the spirits of\n"
-    .string "Pokémon that the Rockets killed.$"
+    .string "Fantasmas apareceram na Torre Pokémon.\p"
+    .string "Acho que são os espíritos de Pokémon\n"
+    .string "que os Rockets mataram.$"
 
 LavenderTown_Text_TownSign::
-    .string "Lavender Town\n"
-    .string "The Noble Purple Town$"
+    .string "Vilarejo de Lavender\n"
+    .string "O Nobre Vilarejo Roxo$"
 
 LavenderTown_EventScript_TownSign::
 	msgbox LavenderTown_Text_TownSign, MSGBOX_SIGN
@@ -66,25 +66,25 @@ LavenderTown_EventScript_TrainerTips::
 	end
 
 LavenderTown_Text_TrainerTips::
-    .string "Trainer Tips!\n"
-    .string "Hold the A Button to walk quietly\n"
-    .string "when using your PokéNav!$"
+    .string "Dicas para Treinadores!\n"
+    .string "Segure o Botão A para andar em silêncio\n"
+    .string "ao usar o seu PokéNav!$"
 
 LavenderTown_EventScript_VolunteerHouseSign::
 	msgbox LavenderTown_Text_VolunteerPokemonHouse, MSGBOX_SIGN
 	end
 
 LavenderTown_Text_VolunteerPokemonHouse::
-    .string "Lavender Volunteer\n"
-    .string "Pokémon House$"
+    .string "Casa Voluntária dos\n"
+    .string "Pokémon de Lavender$"
 
 LavenderTown_EventScript_PokemonTowerSign::
 	msgbox LavenderTown_Text_PokemonTowerSign, MSGBOX_SIGN
 	end
 
 LavenderTown_Text_PokemonTowerSign::
-    .string "Pokémon Tower\n"
-    .string "Becalm the Spirits of Pokémon$"
+    .string "Torre Pokémon\n"
+    .string "Acalme os Espíritos dos Pokémon$"
 
 LavenderTown_EventScript_Gengar::
 	lock
@@ -98,9 +98,9 @@ LavenderTown_EventScript_Gengar::
 	end
 
 LavenderTown_Text_Gengar:
-	.string "You hear the sound of a squeaky carousel\n"
-	.string "spinning in an empty playground.\p"
-	.string "Gengar chuckles as the noise fades.$"
+	.string "Você ouve o som de um carrossel rangendo\n"
+	.string "girando em um parquinho vazio.\p"
+	.string "Gengar dá uma risadinha enquanto o som some.$"
 
 LavenderTown_EventScript_BeautyKishi::
 	lock
@@ -112,8 +112,8 @@ LavenderTown_EventScript_BeautyKishi::
 	end
 
 LavenderTown_Text_KishiDoYouBelieve:
-	.string "Tell me, young one.\n"
-	.string "Do you believe in ghosts?$"
+	.string "Diga-me, jovem.\n"
+	.string "Você acredita em fantasmas?$"
 
 LavenderTown_EventScript_BeautyKishiBattle::
 	trainerbattle_single TRAINER_BEAUTY_KISHI, LavenderTown_Text_KishiIntro, LavenderTown_Text_KishiDefeat
@@ -123,18 +123,18 @@ LavenderTown_EventScript_BeautyKishiBattle::
 	end
 
 LavenderTown_Text_KishiIntro:
-	.string "Tell me, young one.\n"
-	.string "Do you believe in ghosts?\p"
-	.string "Seeing is believing. Now that\n"
-	.string "you can see, we can begin.$"
+	.string "Diga-me, jovem.\n"
+	.string "Você acredita em fantasmas?\p"
+	.string "Ver para crer. Agora que você pode\n"
+	.string "ver, nós podemos começar.$"
 
 LavenderTown_Text_KishiDefeat:
-	.string "All is well that ends well.$"
+	.string "Tudo está bem quando termina bem.$"
 
 LavenderTown_Text_KishiPostBattle:
-	.string "What you choose to believe in\n"
-	.string "will haunt the world when you\l"
-	.string "depart from this life.$"
+	.string "Aquilo em que você escolhe acreditar\n"
+	.string "assombrará o mundo quando você\l"
+	.string "partir desta vida.$"
 
 LavenderTown_EventScript_MegaHintGengar::    
     goto_if_set FLAG_GOT_GENGARITE, LavenderTown_EventScript_KishiDefeated
@@ -144,9 +144,9 @@ LavenderTown_EventScript_MegaHintGengar::
     end
     
 LavenderTown_Text_GengarMegaHint:
-    .string "Marowak and I believe you are\n"
-	.string "a kind trainer, so please\l"
-	.string "climb to the top of the Tower.$"
+    .string "Marowak e eu acreditamos que você é\n"
+	.string "um treinador bondoso, então, por favor,\l"
+	.string "suba até o topo da Torre.$"
 
 LavenderTown_EventScript_KishiDefeated::
     msgbox KishiDefeated_Text MSGBOX_DEFAULT
@@ -154,11 +154,11 @@ LavenderTown_EventScript_KishiDefeated::
 	end
 
 KishiDefeated_Text:	
-	.string "What you choose to believe in\n"
-	.string "will haunt the world when you\l"
-	.string "depart from this life.\p"
-	.string "Believe there is good to be\n"
-	.string "found in this world.$"
+	.string "Aquilo em que você escolhe acreditar\n"
+	.string "assombrará o mundo quando você\l"
+	.string "partir desta vida.\p"
+	.string "Acredite que ainda há bondade para\n"
+	.string "ser encontrada neste mundo.$"
 
 LavenderTown_EventScript_GengarDefeated::
 	msgbox GengarDefeated MSGBOX_DEFAULT
@@ -166,5 +166,5 @@ LavenderTown_EventScript_GengarDefeated::
 	end
 
 GengarDefeated:	
-	.string "Gengar rolls its eyes and sticks\n"
-	.string "out its tongue in good fun.$"
+	.string "Gengar revira os olhos e coloca a\n"
+	.string "língua para fora de brincadeira.$"

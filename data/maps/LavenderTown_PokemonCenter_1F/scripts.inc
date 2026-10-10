@@ -20,28 +20,28 @@ LavenderTown_PokemonCenter_1F_EventScript_Gentleman::
 	end
 
 LavenderTown_PokemonCenter_1F_Text_RocketsDoAnythingForMoney::
-    .string "Team Rocket will do anything for\n"
-    .string "the sake of money!\p"
-    .string "There is no job too dirty, no deed\n"
-    .string "too heinous, no crime too wicked!$"
+    .string "A Equipe Rocket faz qualquer coisa por\n"
+    .string "dinheiro!\p"
+    .string "Não há trabalho sujo demais, nenhum ato\n"
+    .string "hediondo demais, nenhum crime perverso demais!$"
 
 LavenderTown_PokemonCenter_1F_EventScript_Lass::
 	msgbox LavenderTown_PokemonCenter_1F_Text_CubonesMotherKilledByRockets, MSGBOX_NPC
 	end
 
 LavenderTown_PokemonCenter_1F_Text_CubonesMotherKilledByRockets::
-    .string "I saw a Cubone's mother trying to\n"
-    .string "escape from Team Rocket.\p"
-    .string "She was killed trying to get away…$"
+    .string "Eu vi a mãe do Cubone tentando escapar\n"
+    .string "da Equipe Rocket.\p"
+    .string "Ela foi morta tentando fugir…$"
 
 LavenderTown_PokemonCenter_1F_EventScript_Youngster::
 	msgbox LavenderTown_PokemonCenter_1F_Text_PeoplePayForCuboneSkulls, MSGBOX_NPC
 	end
 
 LavenderTown_PokemonCenter_1F_Text_PeoplePayForCuboneSkulls::
-    .string "You know how the Cubone species\n"
-    .string "wears skulls, right?\p"
-    .string "People will pay a lot for one.$"
+    .string "Você sabe que a espécie dos Cubone\n"
+    .string "usa crânios, né?\p"
+    .string "As pessoas pagam uma fortuna por um.$"
 
 LavenderTown_PokemonCenter_1F_EventScript_BaldingMan::
 	msgbox LavenderTown_PokemonCenter_1F_Text_HearMrFujiNotFromAroundHere, MSGBOX_NPC
@@ -49,6 +49,6 @@ LavenderTown_PokemonCenter_1F_EventScript_BaldingMan::
 	end
 
 LavenderTown_PokemonCenter_1F_Text_HearMrFujiNotFromAroundHere::
-    .string "I recently moved to this town.\p"
-    .string "I hear that Mr. Fuji's not from\n"
-    .string "these parts originally, either.$"
+    .string "Eu me mudei recentemente para este vilarejo.\p"
+    .string "Ouvi dizer que o Sr. Fuji também não é\n"
+    .string "originalmente daqui.$"
