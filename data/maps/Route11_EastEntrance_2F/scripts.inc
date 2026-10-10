@@ -9,9 +9,9 @@ Route11_EastEntrance_2F_EventScript_LeftBinoculars::
 	end
 
 Route11_EastEntrance_2F_Text_BigMonAsleepOnRoad::
-    .string "Let's see what the binoculars have\n"
-    .string "to show…\p"
-    .string "A big Pokémon is asleep on a road!$"
+    .string "Vejamos o que os binóculos mostram…\p"
+    .string "Um Pokémon grandalhão está dormindo\n"
+    .string "no meio da estrada!$"
 
 Route11_EastEntrance_2F_EventScript_LeftBinocularsSnorlaxGone::
 	msgbox Route11_EastEntrance_2F_Text_WhatABreathtakingView
@@ -19,21 +19,19 @@ Route11_EastEntrance_2F_EventScript_LeftBinocularsSnorlaxGone::
 	end
 
 Route11_EastEntrance_2F_Text_WhatABreathtakingView::
-    .string "Let's see what the binoculars have\n"
-    .string "to show…\p"
-    .string "What a breathtaking view!$"
+    .string "Vejamos o que os binóculos mostram…\p"
+    .string "Que vista de tirar o fôlego!$"
 
 Route11_EastEntrance_2F_EventScript_RightBinoculars::
 	msgbox Route11_EastEntrance_2F_Text_RockTunnelGoodRouteToLavender, MSGBOX_SIGN
 	end
 
 Route11_EastEntrance_2F_Text_RockTunnelGoodRouteToLavender::
-    .string "Let's see what the binoculars have\n"
-    .string "to show…\p"
-    .string "To get to Lavender Town from\n"
-    .string "Cerulean City…\p"
-    .string "Rock Tunnel appears to be a good\n"
-    .string "route to take.$"
+    .string "Vejamos o que os binóculos mostram…\p"
+    .string "Para ir da Cidade de Cerulean até o\n"
+    .string "Vilarejo de Lavender…\p"
+    .string "O Túnel de Rocha parece ser um bom\n"
+    .string "caminho a seguir.$"
 
 Route11_EastEntrance_2F_EventScript_Turner::
 	lock
@@ -64,12 +62,12 @@ Route11_EastEntrance_2F_EventScript_Turner::
 	end
 
 Route11_EastEntrance_2F_Text_HeyThanks::
-	.string "Hey, thanks!$"
+	.string "Ei, muito obrigado!$"
 
 Route11_EastEntrance_2F_Text_LookingForMonWannaTradeForMon::
-	.string "Hi!\n"
-	.string "Do you have a {STR_VAR_1}?\p"
-	.string "Want to trade it for my\n"
+	.string "Oi!\n"
+	.string "Você tem um {STR_VAR_1}?\p"
+	.string "Quer trocar pelo meu\n"
 	.string "{STR_VAR_2}?$"
 
 Route11_EastEntrance_2F_EventScript_DeclineTrade::
@@ -78,7 +76,7 @@ Route11_EastEntrance_2F_EventScript_DeclineTrade::
 	end
 
 Route11_EastEntrance_2F_Text_DeclinedTrade::
-	.string "That's too bad.$"
+	.string "Que pena.$"
 
 Route11_EastEntrance_2F_EventScript_NotRequestedMon::
 	bufferspeciesname STR_VAR_1, VAR_0x8009
@@ -87,8 +85,8 @@ Route11_EastEntrance_2F_EventScript_NotRequestedMon::
 	end
 
 Route11_EastEntrance_2F_Text_WhatThatsNotMon::
-	.string "What?\n"
-	.string "That's no {STR_VAR_1}!$"
+	.string "O quê?\n"
+	.string "Esse não é um {STR_VAR_1}!$"
 
 Route11_EastEntrance_2F_EventScript_AlreadyTraded::
 	msgbox Route11_EastEntrance_2F_Text_IsntMyOldMonGreat
@@ -96,8 +94,8 @@ Route11_EastEntrance_2F_EventScript_AlreadyTraded::
 	end
 
 Route11_EastEntrance_2F_Text_IsntMyOldMonGreat::
-	.string "How is my old {STR_VAR_2}?\n"
-	.string "My {STR_VAR_1} is doing great!$"
+	.string "Como está o meu antigo {STR_VAR_2}?\n"
+	.string "Meu {STR_VAR_1} está indo muito bem!$"
 
 @Aide Gift 3
 Route11_EastEntrance_2F_EventScript_Aide::
@@ -120,10 +118,10 @@ Route11_EastEntrance_2F_EventScript_Aide::
     end
 
 Route11_EastEntrance_2F_Text_GiveReward::
-    .string "Hi, {PLAYER}!\p"
-    .string "Prof. Oak says you're doing quite\n" 
-    .string "well, so I'm supposed to give you\l"
-    .string "this reward.$"
+    .string "Olá, {PLAYER}!\p"
+    .string "O Prof. Carvalho disse que você está\n"
+    .string "indo muito bem, então devo lhe entregar\l"
+    .string "esta recompensa.$"
 
 Route11_EastEntrance_2F_EventScript_AlreadyGotReward::
     msgbox Route11_EastEntrance_2F_Text_ExplainReward, MSGBOX_DEFAULT
@@ -131,16 +129,16 @@ Route11_EastEntrance_2F_EventScript_AlreadyGotReward::
     end
 
 Route11_EastEntrance_2F_Text_ExplainReward::
-    .string "There are items on the ground that\n"
-    .string "may be hidden from view.\p"
-    .string "Use the Item Finder to detect any\n"
-    .string "hidden items close to you.\p"
-    .string "The machine is a bit limited.\n"
-    .string "It can't pinpoint item locations.\p"
-    .string "What it does is show the direction\n"
-    .string "where the item is.\p"
-    .string "Use it to get your bearings, then\n"
-    .string "search the suspect area by hand.$"
+    .string "Há itens no chão que podem estar\n"
+    .string "ocultos da sua visão.\p"
+    .string "Use o Detector de Itens para encontrar\n"
+    .string "itens escondidos perto de você.\p"
+    .string "A máquina é um pouco limitada.\n"
+    .string "Ela não aponta a localização exata.\p"
+    .string "O que ela faz é mostrar a direção\n"
+    .string "em que o item está.\p"
+    .string "Use-o para se orientar e depois\n"
+    .string "procure na área suspeita manualmente.$"
 
 Route11_EastEntrance_2F_EventScript_AideNextLocation::
     setflag FLAG_QUEUE_AIDE_CALL

@@ -6,21 +6,21 @@ Route11_EastEntrance_1F_EventScript_TopGuard::
 	end
 
 Route11_EastEntrance_1F_Text_ManInLavenderRatesNames::
-    .string "Don't you think it's hard to think\n"
-    .string "up good names for Pokémon?\p"
-    .string "Especially if you've caught a\n"
-    .string "whole bunch?\p"
-    .string "In Lavender Town, there's a man\n"
-    .string "who rates Pokémon nicknames.\p"
-    .string "He can even help you rename your\n"
-    .string "Pokémon, too.$"
+    .string "Você não acha difícil inventar nomes\n"
+    .string "bons para seus Pokémon?\p"
+    .string "Especialmente se você capturou\n"
+    .string "um montão deles?\p"
+    .string "No Vilarejo de Lavender, há um homem\n"
+    .string "que avalia os apelidos dos Pokémon.\p"
+    .string "Ele pode até te ajudar a renomear seus\n"
+    .string "Pokémon também.$"
 
 Route11_EastEntrance_1F_EventScript_BottomGuard::
 	msgbox Route11_EastEntrance_1F_Text_RockTunnelToReachLavender, MSGBOX_NPC
 	end
 
 Route11_EastEntrance_1F_Text_RockTunnelToReachLavender::
-    .string "If you're aiming to reach Lavender\n"
-    .string "Town, take Rock Tunnel.\p"
-    .string "You can get to Rock Tunnel from\n"
-    .string "Cerulean City.$"
+    .string "Se o seu objetivo é chegar ao Vilarejo\n"
+    .string "de Lavender, atravesse o Túnel de Rocha.\p"
+    .string "Você pode chegar ao Túnel de Rocha a\n"
+    .string "partir da Cidade de Cerulean.$"

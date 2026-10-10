@@ -6,7 +6,7 @@ DiglettsCave_SouthEntrance_EventScript_OldMan::
 	end
 
 DiglettsCave_SouthEntrance_Text_DiglettDugThisTunnel::
-    .string "Well, isn't this a surprise!\n"
-    .string "Diglett dug this long tunnel!\p"
-    .string "It goes right to Viridian City,\n"
-    .string "they tell me.$"
+    .string "Ora, vejam só que surpresa!\n"
+    .string "Diglett cavou este túnel enorme!\p"
+    .string "Ele vai direto para a Cidade de Viridian,\n"
+    .string "foi o que me disseram.$"

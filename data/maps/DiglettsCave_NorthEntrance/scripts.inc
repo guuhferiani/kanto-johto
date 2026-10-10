@@ -6,7 +6,7 @@ DiglettsCave_NorthEntrance_EventScript_Hiker::
 	end
 
 DiglettsCave_NorthEntrance_RockTunnelPitchBlack::
-    .string "I went inside Rock Tunnel, but it's\n"
-    .string "pitch-black and scary in there.\p"
-    .string "If I could get a Pokémon to use\n"
-    .string "Flash and light it up…$"
+    .string "Eu fui no Túnel de Rocha, mas é um breu\n"
+    .string "total e muito assustador lá dentro.\p"
+    .string "Se eu pudesse fazer um Pokémon usar\n"
+    .string "o Flash para iluminar tudo…$"
