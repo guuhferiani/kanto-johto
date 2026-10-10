@@ -61,7 +61,7 @@ SafariZone_SecretHouse_EventScript_CheckDailyPrize::
 
 SafariZone_SecretHouse_Text_WinDailyPrize::
 	.string "Parabéns!\n"
-    .string "Você conseguiu chegar à Casa Secreta—\p"
+    .string "Você conseguiu chegar à Casa Secreta...\p"
     .string "Oh! Ei, você é o vencedor do Grande\n"
     .string "Prêmio. Já sabia o caminho até aqui,\n"
     .string "não é?\p"

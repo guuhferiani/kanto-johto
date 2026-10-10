@@ -750,7 +750,7 @@ CeruleanCity_Text_DexNavCall::
 	.string "espero que não se importe!\p"
 	.string "Meu cérebro devia estar meio bagunçado\n"
 	.string "do teletransportador depois que você me\l"
-	.string "salvou — esqueci completamente de te\l"
+	.string "salvou - esqueci completamente de te\l"
 	.string "mostrar uma coisa!\p"
 	.string "Volte à Casa do Mar qualquer hora que\n"
 	.string "eu te mostro!$"

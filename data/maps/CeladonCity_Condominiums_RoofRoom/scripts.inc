@@ -13,7 +13,7 @@ CeladonCity_Condominiums_RoofRoom_Text_CreatedMyOwnPokemon::
 	.string "dados e guardados no PC, então\l"
 	.string "devemos ser capazes de criar Pokémon\l"
 	.string "artificialmente, certo?\p"
-	.string "Essa era a minha hipótese — e eu\n"
+	.string "Essa era a minha hipótese - e eu\n"
 	.string "provei isso criando o Porygon!\p"
 	.string "Não acredita em mim?\p"
 	.string "Pegue a Poké Bola ali na mesa,\n"
