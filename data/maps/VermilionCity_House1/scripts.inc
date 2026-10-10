@@ -12,14 +12,14 @@ VermilionCity_House1_EventScript_FishingGuru::
 	end
 
 VermilionCity_House1_Text_ImFishingGuruDoYouLikeToFish::
-    .string "I'm the Fishing Guru!\p"
-    .string "I simply looove fishing!\n"
-    .string "I can't bear to go without.\p"
-    .string "Tell me, do you like to fish?$"
+    .string "Eu sou o Guru da Pesca!\p"
+    .string "Eu simplesmente amoo pescar!\n"
+    .string "Não consigo viver sem isso.\p"
+    .string "Me diga, você gosta de pescar?$"
 
 VermilionCity_House1_Text_OhThatsSoDisappointing::
     .string "Oh…\n"
-    .string "That's so disappointing…$"
+    .string "Que decepcionante…$"
 
 VermilionCity_House1_EventScript_AlreadyGotOldRod::
 	msgbox VermilionCity_House1_Text_HowAreTheFishBiting
@@ -27,8 +27,8 @@ VermilionCity_House1_EventScript_AlreadyGotOldRod::
 	end
 
 VermilionCity_House1_Text_HowAreTheFishBiting::
-    .string "Hello there, {PLAYER}!\p"
-    .string "How are the fish biting?$"
+    .string "Olá, {PLAYER}!\p"
+    .string "Os peixes estão mordendo a isca?$"
 
 VermilionCity_House1_EventScript_GiveOldRod::
 	checkitemspace ITEM_OLD_ROD, 1
@@ -45,15 +45,15 @@ VermilionCity_House1_EventScript_GiveOldRod::
 	end
 
 VermilionCity_House1_Text_TakeThisAndFish::
-    .string "Grand! I like your style.\n"
-    .string "I think we can be friends.\p"
-    .string "Take this and fish, young friend!$"
+    .string "Excelente! Gostei do seu estilo.\n"
+    .string "Acho que podemos ser amigos.\p"
+    .string "Pegue isto e pesque, jovem amigo!$"
 
 VermilionCity_House1_Text_FishingIsAWayOfLife::
-    .string "Fishing is a way of life!\n"
-    .string "It is like the finest poetry.\p"
-    .string "From the seas to rivers, go out\n"
-    .string "and land the big one, my friend.$"
+    .string "Pescar é um estilo de vida!\n"
+    .string "É como a mais bela poesia.\p"
+    .string "Dos mares aos rios, vá lá fora e\n"
+    .string "pesque o grandalhão, meu amigo!$"
 
 
 VermilionCity_House1_EventScript_NoRoomForOldRod::
@@ -62,13 +62,13 @@ VermilionCity_House1_EventScript_NoRoomForOldRod::
 	end
 
 VermilionCity_House1_Text_NoRoomForNiceGift::
-    .string "Oh, no!\p"
-    .string "I had a nice gift for you, but you\n"
-    .string "have no room for it!$"
+    .string "Oh, não!\p"
+    .string "Eu tinha um belo presente para você,\n"
+    .string "mas você não tem espaço para ele!$"
 
 VermilionCity_House1_Text_ReceivedOldRodFromFishingGuru::
-    .string "{PLAYER} received an Old Rod from\n"
-    .string "the Fishing Guru.$"
+    .string "{PLAYER} recebeu uma Vara Velha do\n"
+    .string "Guru da Pesca.$"
 
 
 

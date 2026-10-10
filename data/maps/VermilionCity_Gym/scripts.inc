@@ -210,23 +210,23 @@ VermilionCity_Gym_EventScript_LocksAlreadyOpen::
 	end
 
 VermilionCity_Gym_Text_NopeOnlyTrashHere::
-    .string "Nope!\n"
-    .string "There's only trash here.$"
+    .string "Nada feito!\n"
+    .string "Só tem lixo aqui dentro.$"
 
 VermilionCity_Gym_Text_SwitchUnderTrashFirstLockOpened::
-    .string "Hey! There's a switch under the\n"
-    .string "trash! Turn it on!\p"
-    .string "The first electric lock opened!$"
+    .string "Ei! Há um botão sob o lixo!\n"
+    .string "Você o ativou!\p"
+    .string "A primeira trava elétrica se abriu!$"
 
 VermilionCity_Gym_Text_SecondLockOpened::
-    .string "The second electric lock opened!\n"
-    .string "The motorized door opened!$"
+    .string "A segunda trava elétrica se abriu!\n"
+    .string "A porta motorizada foi destrancada!$"
 
 VermilionCity_Gym_Text_OnlyTrashLocksWereReset::
-    .string "Nope!\n"
-    .string "There's only trash here.\p"
-    .string "Hey!\n"
-    .string "The electric locks were reset!$"
+    .string "Nada feito!\n"
+    .string "Só tem lixo aqui dentro.\p"
+    .string "Ei!\n"
+    .string "As travas elétricas foram rearmadas!$"
 
 
 VermilionCity_Gym_EventScript_Surge::
@@ -244,21 +244,21 @@ VermilionCity_Gym_EventScript_ChallengeLeader::
 	end
 
 VermilionCity_Gym_Text_LeaderSpeech::
-    .string "Hey, kid! What do you think you're\n"
-    .string "doing here?\p"
-    .string "You won't live long in combat!\n"
-    .string "Not with your puny power!\p"
-    .string "I tell you, kid, electric Pokémon\n"
-    .string "saved me during the war!$"
+    .string "Ei, pirralho! O que pensa que está\n"
+    .string "fazendo aqui?\p"
+    .string "Você não duraria um minuto em combate!\n"
+    .string "Não com esse seu poderzinho minúsculo!\p"
+    .string "Vou te contar, garoto, Pokémon elétricos\n"
+    .string "salvaram a minha vida na guerra!$"
 
 VermilionCity_Gym_Text_LeaderIntro::
- 	.string "They zapped my enemies into\n"
-    .string "paralysis!\p"
-    .string "The same as I'll do to you!$"
+    .string "Eles eletrocutavam meus inimigos até\n"
+    .string "a paralisia total!\p"
+    .string "E é exatamente isso que farei com você!$"
 
 VermilionCity_Gym_Text_LeaderDefeat::
-    .string "Now that's a shocker!\p"
-    .string "You're the real deal, kid!$"
+    .string "Agora isso sim foi um choque!\p"
+    .string "Você é casca-grossa de verdade, garoto!$"
 
 VermilionCity_Gym_EventScript_DefeatedLeaderGetBadge::
 	msgbox VermilionCity_Gym_Text_GetBadge, MSGBOX_DEFAULT
@@ -282,18 +282,18 @@ VermilionCity_Gym_EventScript_QueueNextAideCall::
 	return
 
 VermilionCity_Gym_Text_GetBadge::
-    .string "Fine, then, take the Thunder Badge!$"
+    .string "Muito bem, tome a Insígnia do Trovão!$"
 
 VermilionCity_Gym_Text_ReceivedBadge::
-	.string "{PLAYER} received the Thunder\n"
-    .string "Badge from Lt. Surge!$"
+	.string "{PLAYER} recebeu a Insígnia do Trovão\n"
+    .string "do Tenente Surge!$"
 
 VermilionCity_Gym_Text_ExplainBadge::
-    .string "The Thunder Badge certifies your\n"
-    .string "Pokémon to use Fly out of battle.\p"
-    .string "If they know the move, they can get\n" 
-    .string "around lightning-quick anytime!\p"
-    .string "You're special, kid!$"
+    .string "A Insígnia do Trovão autoriza seus\n"
+    .string "Pokémon a usarem Voar fora de batalha.\p"
+    .string "Se eles souberem o golpe, podem te levar\n"
+    .string "a qualquer lugar num piscar de olhos!\p"
+    .string "Você é especial, garoto!$"
 
 VermilionCity_Gym_EventScript_GetTM::
 	msgbox VermilionCity_Gym_Text_TakeThisWithYou, MSGBOX_DEFAULT
@@ -309,15 +309,15 @@ VermilionCity_Gym_EventScript_GetTM::
 	end
 
 VermilionCity_Gym_Text_TakeThisWithYou::
-    .string "Take this!$"
+    .string "Fique com isto!$"
 
 VermilionCity_Gym_Text_ReceivedTM::
-    .string "{PLAYER} received TM34\n"
-    .string "from Lt. Surge.$"
+    .string "{PLAYER} recebeu o MT34\n"
+    .string "do Tenente Surge.$"
 
 VermilionCity_Gym_Text_ExplainTM::
-    .string "TM34 contains Shock Wave!\p"
-    .string "Teach it to an Electric Pokémon!$"
+    .string "O MT34 contém Onda de Choque!\p"
+    .string "Ensine a um Pokémon Elétrico!$"
 
 VermilionCity_Gym_EventScript_NoRoomForTM::
 	msgbox VermilionCity_Gym_Text_NoRoomForTM, MSGBOX_DEFAULT
@@ -325,7 +325,7 @@ VermilionCity_Gym_EventScript_NoRoomForTM::
 	end
 
 VermilionCity_Gym_Text_NoRoomForTM::
-    .string "Yo, kid, make room in your bag!$"
+    .string "Ei, garoto, abra espaço na sua mochila!$"
 
 VermilionCity_Gym_EventScript_LeaderPostBattle::
 	lock
@@ -336,10 +336,10 @@ VermilionCity_Gym_EventScript_LeaderPostBattle::
 	end
 
 VermilionCity_Gym_Text_LeaderPostBattle::
-    .string "A little word of advice, kid!\p"
-    .string "Electricity is sure powerful!\p"
-    .string "But, it's useless against Ground-\n"
-    .string "type Pokémon!$"
+    .string "Um conselhinho, garoto!\p"
+    .string "A eletricidade com certeza é poderosa!\p"
+    .string "Mas não serve de nada contra\n"
+    .string "Pokémon do tipo Terra!$"
 
 VermilionCity_Gym_EventScript_LeaderPostBattleGameClear::
 	msgbox VermilionCity_Gym_Text_PostBattleGameClear, MSGBOX_DEFAULT
@@ -347,12 +347,12 @@ VermilionCity_Gym_EventScript_LeaderPostBattleGameClear::
 	end
 
 VermilionCity_Gym_Text_PostBattleGameClear::
-	.string "Looks like there's still a gap\n"
-	.string "between our skill levels I need\l"
-	.string "to close, kid!\p" 
-	.string "This is the first time I've felt\n"
-	.string "like this since I first became\l"
-	.string "Vermilion's Gym Leader.$"
+	.string "Parece que ainda há uma distância\n"
+	.string "entre as nossas habilidades que eu\l"
+	.string "preciso diminuir, garoto!\p"
+	.string "Esta é a primeira vez que me sinto\n"
+	.string "assim desde que me tornei o Líder\l"
+	.string "do Ginásio de Vermilion.$"
 
 VermilionCity_Gym_EventScript_RematchLeader::
 	msgbox VermilionCity_Gym_Text_RematchLeader, MSGBOX_YESNO
@@ -362,13 +362,13 @@ VermilionCity_Gym_EventScript_RematchLeader::
 	end
 
 VermilionCity_Gym_Text_RematchLeader::
-	.string "Hey there, kid! Pretty shocking you\n"
-	.string "made it this far in your journey!\p"
-	.string "No doubt some Electric-type Pokémon\n"
-	.string "had a pretty big hand in that, right?\p"
-	.string "All right, then.\p" 
-	.string "How about a rematch to show me what\n"
-	.string "kind of Pokémon you've raised?$"
+	.string "E aí, garoto! É bem chocante ver\n"
+	.string "que chegou tão longe na sua jornada!\p"
+	.string "Sem dúvida algum Pokémon Elétrico\n"
+	.string "teve um grande papel nisso, certo?\p"
+	.string "Muito bem, então.\p"
+	.string "Que tal uma revanche para me mostrar\n"
+	.string "que tipo de Pokémon você treinou?$"
 
 VermilionCity_Gym_EventScript_DeclineRematch::
 	msgbox VermilionCity_Gym_Text_DeclineRematch, MSGBOX_DEFAULT
@@ -376,7 +376,7 @@ VermilionCity_Gym_EventScript_DeclineRematch::
 	end
 
 VermilionCity_Gym_Text_DeclineRematch::
-	.string "Huh. Coward!$"
+	.string "Hmph. Covarde!$"
 
 VermilionCity_Gym_EventScript_PostgameRematch::
 	msgbox VermilionCity_Gym_Text_RematchMode, MSGBOX_YESNO
@@ -385,17 +385,17 @@ VermilionCity_Gym_EventScript_PostgameRematch::
 	end
 
 VermilionCity_Gym_Text_RematchMode::
-	.string "Now that you're the champion,\n"
-	.string "would you like to go all out?$"
+	.string "Agora que você é o Campeão,\n"
+	.string "gostaria de ir com tudo?$"
 
 VermilionCity_Gym_EventScript_LeaderRematch_OriginalTeam::
 	trainerbattle_single LEADER_REMATCH_SURGE_ORIGINAL, VermilionCity_Gym_Text_RematchOriginal, VermilionCity_Gym_Text_RematchDefeat, VermilionCity_Gym_EventScript_DefeatedLeaderRematch
 	end
 
 VermilionCity_Gym_Text_RematchOriginal::
-	.string "Ten-hut!\n" 
-	.string "Remember, a Pokémon battle is a war!\p" 
-	.string "Let's go, kid!$"
+	.string "Sentido!\n"
+	.string "Lembre-se, uma batalha Pokémon é guerra!\p"
+	.string "Vamos lá, garoto!$"
 
 VermilionCity_Gym_EventScript_LeaderRematch_PostGameTeam::
 	setvar VAR_0x8003, 1
@@ -404,9 +404,9 @@ VermilionCity_Gym_EventScript_LeaderRematch_PostGameTeam::
 	end
 
 VermilionCity_Gym_Text_RematchPostgame::
-	.string "No need for introductions this time!\n" 
-	.string "Champions have no need for words!\p" 
-	.string "Let's go, kid!$"
+	.string "Não há necessidade de apresentações!\n"
+	.string "Campeões não precisam de palavras!\p"
+	.string "Vamos lá, garoto!$"
 
 VermilionCity_Gym_EventScript_DefeatedLeaderRematch::
 	setflag FLAG_DAILY_SURGE_REMATCH
@@ -414,7 +414,7 @@ VermilionCity_Gym_EventScript_DefeatedLeaderRematch::
 	end
 
 VermilionCity_Gym_Text_RematchDefeat::
-	.string "Absolutely shocking!$"
+	.string "Absolutamente chocante!$"
 
 VermilionCity_Gym_EventScript_Dwayne::
 	trainerbattle_single TRAINER_SAILOR_DWAYNE, VermilionCity_Gym_Text_DwayneIntro, VermilionCity_Gym_Text_DwayneDefeat
@@ -422,20 +422,20 @@ VermilionCity_Gym_EventScript_Dwayne::
 	end
 
 VermilionCity_Gym_Text_DwayneIntro::
-    .string "This is no place for kids!\n"
-    .string "Not even if you're good!$"
+    .string "Este não é lugar para crianças!\n"
+    .string "Nem mesmo se você for bom!$"
 
 VermilionCity_Gym_Text_DwayneDefeat::
-    .string "Wow!\n"
-    .string "Surprised me!$"
+    .string "Uau!\n"
+    .string "Me pegou de surpresa!$"
 
 VermilionCity_Gym_Text_DwaynePostBattle::
-    .string "Lt. Surge installed the traps in\n"
-    .string "the gym himself.\p"
-    .string "He set up double locks everywhere.\n"
-    .string "Let me give you a hint.\p"
-    .string "When you open the first lock, the\n"
-    .string "second lock is right next to it.$"
+    .string "O Ten. Surge instalou as armadilhas\n"
+    .string "no ginásio pessoalmente.\p"
+    .string "Ele colocou travas duplas por toda parte.\n"
+    .string "Vou te dar uma dica.\p"
+    .string "Ao abrir a primeira trava, a segunda\n"
+    .string "estará bem ao lado dela.$"
 
 VermilionCity_Gym_EventScript_Baily::
 	trainerbattle_single TRAINER_ENGINEER_BAILY, VermilionCity_Gym_Text_BailyIntro, VermilionCity_Gym_Text_BailyDefeat
@@ -443,17 +443,17 @@ VermilionCity_Gym_EventScript_Baily::
 	end
 
 VermilionCity_Gym_Text_BailyIntro::
-    .string "I'm a lightweight, but I'm good\n"
-    .string "with electricity!\p"
-    .string "That's why I joined this gym.$"
+    .string "Sou um peso-pena, mas sou muito\n"
+    .string "bom com eletricidade!\p"
+    .string "Foi por isso que entrei neste ginásio.$"
 
 VermilionCity_Gym_Text_BailyDefeat::
-    .string "Fried!$"
+    .string "Frito!$"
 
 VermilionCity_Gym_Text_BailyPostBattle::
-    .string "Okay, I'll talk!\p"
-    .string "Lt. Surge said he hid door\n"
-    .string "switches inside something.$"
+    .string "Tudo bem, eu falo!\p"
+    .string "O Ten. Surge disse que escondeu\n"
+    .string "os botões da porta dentro de algo.$"
 
 VermilionCity_Gym_EventScript_Tucker::
 	trainerbattle_single TRAINER_GENTLEMAN_TUCKER, VermilionCity_Gym_Text_TuckerIntro, VermilionCity_Gym_Text_TuckerDefeat
@@ -461,18 +461,18 @@ VermilionCity_Gym_EventScript_Tucker::
 	end
 
 VermilionCity_Gym_Text_TuckerIntro::
-    .string "When I was in the Army, LT. Surge\n"
-    .string "was my strict CO.\p"
-    .string "He was a hard taskmaster.$"
+    .string "Quando eu estava no Exército, o Ten.\n"
+    .string "Surge era o meu comandante rigoroso.\p"
+    .string "Ele era um líder implacável.$"
 
 VermilionCity_Gym_Text_TuckerDefeat::
-    .string "Stop!\n"
-    .string "You're very good!$"
+    .string "Pare!\n"
+    .string "Você é muito bom!$"
 
 VermilionCity_Gym_Text_TuckerPostBattle::
-    .string "It's not easy opening that door.\p"
-    .string "Lt. Surge was always famous for\n"
-    .string "his cautious nature in the Army.$"
+    .string "Não é fácil abrir aquela porta.\p"
+    .string "O Ten. Surge sempre foi famoso por\n"
+    .string "sua cautela no Exército.$"
 
 
 VermilionCity_Gym_EventScript_GymGuy::
@@ -484,18 +484,18 @@ VermilionCity_Gym_EventScript_GymGuy::
 	end
 
 VermilionCity_Gym_Text_GymGuyAdvice::
-    .string "Yo!\n"
-    .string "Champ in the making!\p"
-    .string "Lt. Surge has a nickname.\p"
-    .string "People refer to him as the\n"
-    .string "Lightning Lieutenant!\p"
-    .string "He's an expert on electric Pokémon.\p"
-    .string "Bird and Water-type Pokémon better\n"
-    .string "watch out against Electric attacks!\p"
-    .string "Beware of paralysis, too.\p"
-    .string "Lt. Surge is very cautious.\p"
-    .string "He's locked himself in, so it won't\n"
-    .string "be easy getting to him.$"
+    .string "E aí!\n"
+    .string "Futuro Campeão!\p"
+    .string "O Ten. Surge tem um apelido.\p"
+    .string "As pessoas o chamam de o\n"
+    .string "Tenente Relâmpago!\p"
+    .string "Ele é um especialista em Pokémon Elétricos.\p"
+    .string "Pokémon Pássaro e do tipo Água devem\n"
+    .string "tomar cuidado com ataques Elétricos!\p"
+    .string "Cuidado com paralisia também.\p"
+    .string "O Ten. Surge é muito cauteloso.\p"
+    .string "Ele se trancou lá dentro, então não\n"
+    .string "será fácil chegar até ele.$"
 
 VermilionCity_Gym_EventScript_GymGuyPostVictory::
 	msgbox VermilionCity_Gym_Text_GymGuyPostVictory
@@ -503,8 +503,8 @@ VermilionCity_Gym_EventScript_GymGuyPostVictory::
 	end
 
 VermilionCity_Gym_Text_GymGuyPostVictory::
-    .string "Whew!\n"
-    .string "That match was electric!$"
+    .string "Ufa!\n"
+    .string "Aquela batalha foi eletrizante!$"
 
 VermilionCity_Gym_EventScript_GymStatue::
 	lockall
@@ -514,9 +514,9 @@ VermilionCity_Gym_EventScript_GymStatue::
 	end
 
 VermilionCity_Gym_Text_GymStatue::
-    .string "Vermilion Pokémon Gym\n"
-    .string "Leader: Lt. Surge\p"
-    .string "Winning Trainers:\n"
+    .string "Ginásio Pokémon de Vermilion\n"
+    .string "Líder: Ten. Surge\p"
+    .string "Treinadores Vencedores:\n"
     .string "{RIVAL}$"
 
 VermilionCity_Gym_EventScript_GymStatuePostVictory::
@@ -525,7 +525,7 @@ VermilionCity_Gym_EventScript_GymStatuePostVictory::
 	end
 
 VermilionCity_Gym_Text_GymStatuePlayerWon::
-    .string "Vermilion Pokémon Gym\n"
-    .string "Leader: Lt. Surge\p"
-    .string "Winning Trainers:\n"
+    .string "Ginásio Pokémon de Vermilion\n"
+    .string "Líder: Ten. Surge\p"
+    .string "Treinadores Vencedores:\n"
     .string "{RIVAL}, {PLAYER}$"

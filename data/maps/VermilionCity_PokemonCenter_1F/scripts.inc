@@ -20,31 +20,31 @@ VermilionCity_PokemonCenter_1F_EventScript_Man::
 	end
 
 VermilionCity_PokemonCenter_1F_Text_PoisonedMonFaintedWhileWalking::
-    .string "My Pokémon was poisoned!\n"
-    .string "It fainted while we were walking!$"
+    .string "Meu Pokémon foi envenenado!\n"
+    .string "Ele desmaiou enquanto andávamos!$"
 
 VermilionCity_PokemonCenter_1F_EventScript_Hiker::
 	msgbox VermilionCity_PokemonCenter_1F_Text_TrainerMonsStrongerThanWild, MSGBOX_NPC
 	end
 
 VermilionCity_PokemonCenter_1F_Text_TrainerMonsStrongerThanWild::
-    .string "Even if they are the same level,\n"
-    .string "Pokémon can have very different\l"
-    .string "stats and abilities.\p"
-    .string "A Pokémon raised by a trainer is\n"
-    .string "stronger than one in the wild.$"
+    .string "Mesmo se estiverem no mesmo nível,\n"
+    .string "os Pokémon podem ter atributos e\l"
+    .string "habilidades bem diferentes.\p"
+    .string "Um Pokémon criado por um treinador é\n"
+    .string "mais forte do que um na natureza.$"
 
 VermilionCity_PokemonCenter_1F_EventScript_Youngster::
 	msgbox VermilionCity_PokemonCenter_1F_Text_AllMonWeakToSpecificTypes, MSGBOX_NPC
 	end
 
 VermilionCity_PokemonCenter_1F_Text_AllMonWeakToSpecificTypes::
-    .string "It is true that a higher-level\n"
-    .string "Pokémon will be more powerful…\p"
-    .string "But, all Pokémon will have weak\n"
-    .string "points against specific types.\p"
-    .string "So, there appears to be no\n"
-    .string "universally strong Pokémon.$"
+    .string "É verdade que um Pokémon de nível mais\n"
+    .string "alto será mais poderoso…\p"
+    .string "Mas todos os Pokémon têm pontos fracos\n"
+    .string "contra determinados tipos.\p"
+    .string "Por isso, parece não existir um Pokémon\n"
+    .string "que seja universalmente invencível.$"
 
 VermilionCity_PokemonCenter_1F_EventScript_RematchWoman::
 	msgbox VermilionCity_PokemonCenter_1F_Text_UrgeToBattleSomeoneAgain, MSGBOX_NPC
@@ -52,11 +52,11 @@ VermilionCity_PokemonCenter_1F_EventScript_RematchWoman::
 	end
 
 VermilionCity_PokemonCenter_1F_Text_UrgeToBattleSomeoneAgain::
-    .string "The urge to battle with someone\n"
-    .string "you've tangled with before…\p"
-    .string "Have you ever had that urge?\n"
-    .string "I'm sure you have.\p"
-    .string "I wanted to battle certain people\n"
-    .string "again over and over, too.\p"
-    .string "I should give some trainers a call\n"
-    .string "on my Cell Phone!$"
+    .string "A vontade de batalhar com alguém com\n"
+    .string "quem você já disputou antes…\p"
+    .string "Já sentiu essa vontade?\n"
+    .string "Tenho certeza de que sim.\p"
+    .string "Eu também quero batalhar de novo e\n"
+    .string "de novo contra certas pessoas.\p"
+    .string "Vou ligar para alguns treinadores\n"
+    .string "pelo meu Celular!$"

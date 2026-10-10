@@ -6,17 +6,17 @@ VermilionCity_House3_EventScript_Boy::
 	end
 
 VermilionCity_House3_Text_PidgeyFlyLetterToSaffron::
-    .string "I'm getting my Pidgey to fly a\n"
-    .string "letter to Saffron in the north.$"
+    .string "Estou fazendo meu Pidgey levar uma\n"
+    .string "carta voando para Saffron, ao norte.$"
 
 VermilionCity_House3_EventScript_Lass::
 	msgbox VermilionCity_House3_Text_SendMyPidgeyToUnionRoom, MSGBOX_NPC
 	end
 
 VermilionCity_House3_Text_SendMyPidgeyToUnionRoom::
-    .string "Most people like to use e-mail, but\n"
-    .string "I prefer an old-fashioned letter!\p"
-    .string "I trained my Pidgey to deliver mail!$"
+    .string "A maioria das pessoas prefere e-mail,\n"
+    .string "mas eu prefiro uma carta à moda antiga!\p"
+    .string "Treinei meu Pidgey para entregar cartas!$"
 
 VermilionCity_House3_EventScript_Pidgey::
 	lock
@@ -36,8 +36,8 @@ VermilionCity_House3_EventScript_Letter::
 	end
 
 VermilionCity_House3_Text_DearPippiLetter::
-    .string "Dear Pippi,\n"
-    .string "I hope to see you soon.\p"
-    .string "I heard a rumor that Team Rocket\n"
-    .string "was headed to Saffron City.\p"
-    .string "Vermilion appears to be safe.$"
+    .string "Querida Pippi,\n"
+    .string "Espero ver você em breve.\p"
+    .string "Ouvi um boato de que a Equipe Rocket\n"
+    .string "estava indo para a Cidade de Saffron.\p"
+    .string "Vermilion parece estar segura.$"

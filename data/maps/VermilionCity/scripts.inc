@@ -28,8 +28,8 @@ VermilionCity_EventScript_CitySign::
 	end
 
 VermilionCity_Text_CitySign::
-    .string "Vermilion City\n"
-    .string "The Port of Exquisite Sunsets$"
+    .string "Cidade de Vermilion\n"
+    .string "O Porto de Pores do Sol Deslumbrantes$"
 
 @TODO: Change text depending on Snorlax State
 VermilionCity_EventScript_SnorlaxNotice::
@@ -37,20 +37,20 @@ VermilionCity_EventScript_SnorlaxNotice::
 	end
 
 VermilionCity_Text_SnorlaxBlockingRoute12::
-    .string "NOTICE!\p"
-    .string "Route 12 may be blocked off by a\n"
-    .string "sleeping Pokémon.\p"
-    .string "Detour through Rock Tunnel to\n"
-    .string "Lavender Town.\p"
-    .string "Vermilion Police$"
+    .string "AVISO!\p"
+    .string "A Rota 12 pode estar bloqueada por um\n"
+    .string "Pokémon adormecido.\p"
+    .string "Faça um desvio pelo Túnel de Pedra até\n"
+    .string "o Vilarejo de Lavender.\p"
+    .string "Polícia de Vermilion$"
 
 VermilionCity_EventScript_PokemonFanClubSign::
 	msgbox VermilionCity_Text_PokemonFanClubSign, MSGBOX_SIGN
 	end
 
 VermilionCity_Text_PokemonFanClubSign::
-    .string "Pokémon Fan Club\n"
-    .string "All Pokémon fans welcome!$"
+    .string "Fã-Clube Pokémon\n"
+    .string "Todos os fãs de Pokémon são bem-vindos!$"
 
 VermilionCity_EventScript_GymSign::
 	lockall
@@ -59,16 +59,16 @@ VermilionCity_EventScript_GymSign::
 	end
 
 VermilionCity_Text_GymSign::
-    .string "Vermilion City Pokémon Gym\n"
-    .string "Leader: Lt. Surge\l"
-    .string "The Lightning Lieutenant!$"
+    .string "Ginásio Pokémon da Cidade de Vermilion\n"
+    .string "Líder: Tenente Surge\l"
+    .string "O Tenente Relâmpago!$"
 
 VermilionCity_EventScript_HarborSign::
 	msgbox VermilionCity_Text_VermilionHarbor, MSGBOX_SIGN
 	end
 
 VermilionCity_Text_VermilionHarbor::
-    .string "Vermilion Harbor$"
+    .string "Porto de Vermilion$"
 
 VermilionCity_EventScript_ProfOakTrigger1::
 	lockall
@@ -128,26 +128,25 @@ Movement_OakDockApproach::
 	step_end
 
 VermilionCity_Text_VisitedSSAnne::
-	.string "Oak: Oh! {PLAYER}! Were you headed\n"
-	.string "to visit the S.S. Anne?\p"
-	.string "I'm afraid you just missed my\n"
-	.string "presentation about the Pokédex!\p"
-	.string "What, you didn't know I was going\n"
-	.string "to be there? That's a shame...\p"
-	.string "Oh! I know! You have a Cell Phone,\n"
-	.string "right? I'll give you my number!\p"
-	.string "That way, I could contact you if\n"
-	.string "anything comes up again. And if\l"
-	.string "you'd like, you can call me to rate\l"
-	.string "your Pokédex even while you're\l"
-	.string "out in the field.$"
+	.string "Carvalho: Ah! {PLAYER}! Você estava indo\n"
+	.string "visitar o S.S. Anne?\p"
+	.string "Receio que você acabou de perder a minha\n"
+	.string "apresentação sobre a Pokédex!\p"
+	.string "Como assim, não sabia que eu estaria\n"
+	.string "aqui? Que lástima...\p"
+	.string "Ah! Já sei! Você tem um Celular,\n"
+	.string "não tem? Vou te dar o meu número!\p"
+	.string "Assim, posso entrar em contato se surgir\n"
+	.string "qualquer novidade. E se quiser, pode\l"
+	.string "me ligar para avaliar a sua Pokédex\l"
+	.string "mesmo enquanto estiver explorando!$"
 
 VermilionCity_Text_EnjoySSAnne::
-	.string "Oak: It was good to see you!\n"
-	.string "Enjoy your time on the S.S. Anne.\p"
-	.string "There are a lot of strong trainers\n"
-	.string "gathering there, but don't get\l"
-	.string "too distracted from your Pokédex!$"
+	.string "Carvalho: Foi ótimo ver você!\n"
+	.string "Aproveite o seu tempo no S.S. Anne.\p"
+	.string "Muitos treinadores fortes estão reunidos\n"
+	.string "por lá, mas não se distraia demais da\l"
+	.string "sua missão com a Pokédex!$"
 
 VermilionCity_EventScript_OakApproachPlayer1::
 	applymovement LOCALID_OAK, Movement_OakDockEntrance1
@@ -229,8 +228,8 @@ VermilionCity_EventScript_OldMan1::
 	end
 
 VermilionCity_Text_DidYouSeeSSAnneInHarbor::
-    .string "Did you see the S.S. Anne moored\n"
-    .string "in the harbor?$"
+    .string "Você viu o S.S. Anne ancorado\n"
+    .string "aqui no porto?$"
 
 VermilionCity_EventScript_OldMan1SSAnneLeft::
 	msgbox VermilionCity_Text_SSAnneHasDepartedForYear
@@ -238,28 +237,28 @@ VermilionCity_EventScript_OldMan1SSAnneLeft::
 	end
 
 VermilionCity_Text_SSAnneHasDepartedForYear::
-    .string "So, the S.S. Anne has departed?\p"
-    .string "She'll be back in Vermilion about\n"
-    .string "this time next year.$"
+    .string "Então o S.S. Anne já zarpou?\p"
+    .string "Ele voltará para Vermilion mais ou\n"
+    .string "menos nesta mesma época no ano que vem.$"
 
 VermilionCity_EventScript_Woman::
 	msgbox VermilionCity_Text_GrimerMultipliesInSludge, MSGBOX_NPC
 	end
 
 VermilionCity_Text_GrimerMultipliesInSludge::
-    .string "We're careful about pollution here.\p"
-    .string "We've heard Grimer multiplies in\n"
-    .string "toxic sludge.$"
+    .string "Tomamos muito cuidado com a poluição aqui.\p"
+    .string "Ouvimos dizer que Grimer se multiplica\n"
+    .string "em lodo tóxico.$"
 
 VermilionCity_EventScript_OldMan2::
 	msgbox VermilionCity_Text_BuildingOnThisLand, MSGBOX_NPC
 	end
 
 VermilionCity_Text_BuildingOnThisLand::
-    .string "I'm putting up a building on this\n"
-    .string "plot of land. I own it all.\p"
-    .string "My Pokémon is tamping the land\n"
-    .string "to lay the foundation.$"
+    .string "Estou construindo um prédio neste\n"
+    .string "terreno. Sou o dono de tudo.\p"
+    .string "Meu Pokémon está compactando a terra\n"
+    .string "para preparar as fundações.$"
 
 VermilionCity_EventScript_Machop::
 	lock
@@ -276,16 +275,15 @@ VermilionCity_Text_Machop::
     .string "Machop: Guoh! Gogogoh!$"
 
 VermilionCity_Text_MachopStompingLandFlat::
-    .string "A Machop is stomping the land flat.$"
+    .string "Um Machop está pisoteando o solo para nivelá-lo.$"
 
 VermilionCity_EventScript_Sailor::
 	msgbox VermilionCity_Text_SSAnneVisitsOnceAYear, MSGBOX_NPC
 	end
 
 VermilionCity_Text_SSAnneVisitsOnceAYear::
-    .string "The S.S. Anne is a famous luxury\n"
-    .string "cruise ship.\p"
-    .string "It visits Vermilion once a year.$"
+    .string "O S.S. Anne é um famoso navio de luxo.\p"
+    .string "Ele visita Vermilion uma vez por ano.$"
 
 VermilionCity_EventScript_FerrySailor::
 	lock
@@ -296,7 +294,7 @@ VermilionCity_EventScript_FerrySailor::
 	end
 
 VermilionCity_Text_WelcomeToTheSSAnne::
-    .string "Sailor: Welcome to the S.S. Anne!$"
+    .string "Marinheiro: Bem-vindo ao S.S. Anne!$"
 
 VermilionCity_EventScript_CheckSSTidal::
 	goto_if_unset FLAG_HIDE_SS_TIDAL, VermilionCity_EventScript_SSTidalArrived
@@ -305,12 +303,12 @@ VermilionCity_EventScript_CheckSSTidal::
 	end
 
 VermilionCity_Text_TheShipSetSail::
-    .string "The ship set sail.$"
+    .string "O navio partiu.$"
 
 VermilionCity_EventScript_SSTidalArrived::
-	.string "Have you heard?\p"
-	.string "A new ship, the S.S. Tidal, has\n"
-	.string "arrived in the harbor!$"
+	.string "Já ouviu as novidades?\p"
+	.string "Um navio novinho, o S.S. Tidal,\n"
+	.string "acabou de atracar no porto!$"
 
 VermilionCity_EventScript_TicketCheckTrigger1::
 	lock
@@ -342,15 +340,15 @@ VermilionCity_EventScript_TicketCheck::
 	end
 
 VermilionCity_Text_DoYouHaveATicket::
-    .string "Sailor: Welcome to the S.S. Anne!\p"
-    .string "Excuse me, do you have a ticket?$"
+    .string "Marinheiro: Bem-vindo ao S.S. Anne!\p"
+    .string "Com licença, você tem um bilhete?$"
 
 VermilionCity_Text_FlashedSSTicket::
-    .string "{PLAYER} flashed the S.S. TICKET!$"
+    .string "{PLAYER} mostrou o BILHETE do S.S. Anne!$"
 
 VermilionCity_Text_SailorGreat:: 
-    .string "Sailor: Great!\n"
-    .string "Welcome to the S.S. Anne!$"
+    .string "Marinheiro: Maravilha!\n"
+    .string "Seja bem-vindo a bordo do S.S. Anne!$"
 
 VermilionCity_EventScript_TicketCheck1::
 	applymovement LOCALID_SAILOR, Movement_TicketCheck1
@@ -387,8 +385,9 @@ VermilionCity_EventScript_NoTicket::
 	end
 
 VermilionCity_Text_DontHaveNeededSSTicket::
-    .string "Sorry!\p"
-    .string "You need an S.S. Ticket to board.$"
+    .string "Desculpe!\p"
+    .string "Você precisa de um Bilhete do S.S. Anne\n"
+    .string "para poder embarcar.$"
 
 VermilionCity_EventScript_MoveSailor1::
 	applymovement LOCALID_SAILOR, Movement_MoveSailor1
@@ -485,7 +484,7 @@ VermilionCity_EventScript_GetSquirtle::
 	return
 
 VermilionCity_EventScript_Text_BailedOutSquirtle::
-	.string "{PLAYER} bailed out the Squirtle!$"
+	.string "{PLAYER} pagou a fiança do Squirtle!$"
 
 VermilionCity_EventScript_GotSquirtle::
 	setflag FLAG_GOT_SQUIRTLE
@@ -525,8 +524,8 @@ Movement_SquirtleReturn::
 	step_end
 
 VermilionCity_Text_NoRoomForMorePokemon::
-    .string "Officer: You don't have room?\n"
-    .string "Guess it's off to jail then!$"
+    .string "Oficial: Não tem espaço na equipe?\n"
+    .string "Então é direto para o xilindró!$"
 
 VermilionCity_EventScript_Sidestep::
 	applymovement OBJ_EVENT_ID_PLAYER, Movement_Sidestep
@@ -543,22 +542,22 @@ Movement_MoveToPlayer::
 	step_end
 
 VermilionCity_Text_PlayerFlashedBadge::
-	.string "{PLAYER} flashed their Thunder Badge.$"
+	.string "{PLAYER} mostrou a Insígnia do Trovão.$"
 
 VermilionCity_Text_AStrongTrainer::
-	.string "Officer: Oh! You have a Thunder Badge?\p"
-	.string "You must be quite a strong trainer.\p"
-	.string "What's that?\p"
-	.string "You're saying you'll vouch for this\n"
-	.string "Pokémon?\p"
+	.string "Oficial: Ah! Você tem uma Insígnia do Trovão?\p"
+	.string "Você deve ser um treinador bem forte.\p"
+	.string "Como é que é?\p"
+	.string "Está dizendo que você se responsabiliza\n"
+	.string "por este Pokémon?\p"
 	.string "...\p"
-	.string "I'm not sure what my boss will say\n"
-	.string "about this, but I have a good feeling\l"
-	.string "about you.\p"
-	.string "You've proven your skills as a Pokémon\n"
-	.string "trainer, after all.\p"
-	.string "Maybe a good role model is what this\n"
-	.string "Pokémon needs!$"
+	.string "Não tenho certeza do que meu chefe vai\n"
+	.string "achar disso, mas tenho um bom pressentimento\l"
+	.string "sobre você.\p"
+	.string "Afinal de contas, provou suas habilidades\n"
+	.string "como treinador Pokémon.\p"
+	.string "Talvez um bom exemplo a seguir seja\n"
+	.string "justamente o que este Pokémon precisa!$"
 
 
 VermilionCity_EventScript_DontGiveSquirtle::
@@ -573,12 +572,12 @@ VermilionCity_EventScript_DontGiveSquirtle::
  	step_end
 
 VermilionCity_Text_SquirtleIsAMenace::
-	.string "Officer: Stand back, citizen!\p"
-	.string "This Squirtle is a menace!\p"
-	.string "It's been committing crimes all\n"
-	.string "over Vermilion City!\p"
-	.string "I've got it cornered, but I'm\n"
-	.string "waiting for backup to take it in!$"
+	.string "Oficial: Afaste-se, cidadão!\p"
+	.string "Este Squirtle é uma verdadeira ameaça!\p"
+	.string "Ele anda cometendo delitos por toda\n"
+	.string "a Cidade de Vermilion!\p"
+	.string "Eu o encurralei, mas estou aguardando\n"
+	.string "reforços para levá-lo detido!$"
 
 VermilionCity_EventScript_Jenny::
 	lock
@@ -594,10 +593,10 @@ VermilionCity_EventScript_JennyGaveSquirtle::
 	end
 
 VermilionCity_Text_JennyGaveSquirtle::
-	.string "First it was Bikers and Burglars,\n"
-	.string "and then it was Team Rocket.\p"
-	.string "This job is hard enough without\n"
-	.string "Pokémon resorting to crime, too!$"
+	.string "Primeiro eram motoqueiros e ladrões,\n"
+	.string "depois foi a Equipe Rocket.\p"
+	.string "Este trabalho já é difícil o suficiente\n"
+	.string "sem Pokémon entrando para o crime também!$"
 
 VermilionCity_EventScript_Squirtle::
 	lock
@@ -608,7 +607,7 @@ VermilionCity_EventScript_Squirtle::
 	end
 
 VermilionCity_Text_SquirtleGlasses::
-	.string "Is that Squirtle wearing sunglasses?$"
+	.string "Aquele Squirtle está usando óculos escuros?$"
 	
 VermilionCity_EventScript_Blastoisinite::
 	finditem ITEM_BLASTOISINITE, 1

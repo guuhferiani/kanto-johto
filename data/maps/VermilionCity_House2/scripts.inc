@@ -30,12 +30,12 @@ VermilionCity_House2_EventScript_Elyssa::
 	end
 
 VermilionCity_House2_Text_HeyThanks::
-	.string "Hey, thanks!$"
+	.string "Ei, muito obrigada!$"
 
 VermilionCity_House2_Text_LookingForMonWannaTradeForMon::
-	.string "Hi!\n"
-	.string "Do you have a {STR_VAR_1}?\p"
-	.string "Want to trade it for my\n"
+	.string "Oi!\n"
+	.string "Você tem um {STR_VAR_1}?\p"
+	.string "Gostaria de trocar pelo meu\n"
 	.string "{STR_VAR_2}?$"
 
 VermilionCity_House2_EventScript_DeclineTrade::
@@ -44,7 +44,7 @@ VermilionCity_House2_EventScript_DeclineTrade::
 	end
 
 VermilionCity_House2_Text_DeclinedTrade::
-	.string "That's too bad.$"
+	.string "Que pena.$"
 
 VermilionCity_House2_EventScript_NotRequestedMon::
 	bufferspeciesname STR_VAR_1, VAR_0x8009
@@ -53,9 +53,9 @@ VermilionCity_House2_EventScript_NotRequestedMon::
 	end
 
 VermilionCity_House2_Text_WhatThatsNotMon::
-	.string "…This is no {STR_VAR_1}.\p"
-	.string "If you get one, please trade it\n"
-	.string "to me!$"
+	.string "…Esse não é um {STR_VAR_1}.\p"
+	.string "Se conseguir um, por favor troque\n"
+	.string "comigo!$"
 
 VermilionCity_House2_EventScript_AlreadyTraded::
 	msgbox VermilionCity_House2_Text_IsntMyOldMonGreat
@@ -63,5 +63,5 @@ VermilionCity_House2_EventScript_AlreadyTraded::
 	end
 
 VermilionCity_House2_Text_IsntMyOldMonGreat::
-	.string "How is my old {STR_VAR_2}?\n"
-	.string "My {STR_VAR_1} is doing great!$"
+	.string "Como está o meu antigo {STR_VAR_2}?\n"
+	.string "Meu {STR_VAR_1} está indo muito bem!$"
