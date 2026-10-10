@@ -11,35 +11,33 @@ CeladonCity_DepartmentStore_5F_EventScript_Gentleman::
 	end
 
 CeladonCity_DepartmentStore_5F_Text_ExplainStatEnhancers::
-    .string "Pokémon stat enhancers can be\n"
-    .string "bought only here.\p"
-    .string "HP Up increases the base HP of a\n"
-    .string "Pokémon.\p"
-    .string "Calcium raises the base SP. ATK\n"
-    .string "stat of one Pokémon.\p"
-    .string "Zinc boosts the base SP. DEF stat\n"
-    .string "of one Pokémon.\p"
-    .string "Carbos enhances the base Speed\n"
-    .string "stat.$"
+    .string "Potencializadores de atributos de\n"
+    .string "Pokémon só podem ser comprados aqui.\p"
+    .string "Mais HP aumenta os pontos de PS\n"
+    .string "base de um Pokémon.\p"
+    .string "Cálcio aumenta o ATQ. ESP. base\n"
+    .string "de um Pokémon.\p"
+    .string "Zinco aumenta a DEF. ESP. base\n"
+    .string "de um Pokémon.\p"
+    .string "Carboidrato aprimora a Velocidade\n"
+    .string "base.$"
 
 CeladonCity_DepartmentStore_5F_EventScript_Sailor::
 	msgbox CeladonCity_DepartmentStore_5F_Text_HereForStatEnhancers, MSGBOX_NPC
 	end
 
 CeladonCity_DepartmentStore_5F_Text_HereForStatEnhancers::
-    .string "I'm here for Pokémon stat\n"
-    .string "enhancers.\p"
-    .string "Protein increases the base Attack\n"
-    .string "power.\p"
-    .string "Iron increases the base Defense\n"
-    .string "stat.$"
+    .string "Estou aqui pelos potencializadores\n"
+    .string "de atributos de Pokémon.\p"
+    .string "Proteína aumenta o Ataque base.\p"
+    .string "Ferro aumenta a Defesa base.$"
 
 CeladonCity_DepartmentStore_5F_EventScript_FloorSign::
 	msgbox CeladonCity_DepartmentStore_5F_Text_Drugstore, MSGBOX_SIGN
 	end
 
 CeladonCity_DepartmentStore_5F_Text_Drugstore::
-    .string "5F: Drugstore$"
+    .string "5º Andar: Farmácia$"
 
 CeladonCity_DepartmentStore_5F_EventScript_ClerkXItems::
 	lock

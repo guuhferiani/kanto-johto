@@ -11,25 +11,26 @@ CeladonCity_DepartmentStore_2F_EventScript_UnusedNPC::
 	end
 
 CeladonCity_DepartmentStore_2F_Text_SuperRepelMorePowerfulRepel::
-    .string "Super Repel keeps weak Pokémon at\n"
-    .string "bay…\p"
-    .string "Hmm, it's a more powerful Repel.$"
+    .string "O Super Repelente afasta Pokémon\n"
+    .string "fracos…\p"
+    .string "Hmm, é uma versão mais potente\n"
+    .string "do Repelente comum.$"
 
 CeladonCity_DepartmentStore_2F_EventScript_Lass::
 	msgbox CeladonCity_DepartmentStore_2F_Text_BuyReviveForLongOutings, MSGBOX_NPC
 	end
 
 CeladonCity_DepartmentStore_2F_Text_BuyReviveForLongOutings::
-    .string "For long outings, you should buy\n"
-    .string "Revive.$"
+    .string "Para viagens longas, você deveria\n"
+    .string "comprar Reviver.$"
 
 CeladonCity_DepartmentStore_2F_EventScript_FloorSign::
 	msgbox CeladonCity_DepartmentStore_2F_Text_FloorSign, MSGBOX_SIGN
 	end
 
 CeladonCity_DepartmentStore_2F_Text_FloorSign::
-    .string "Top-Grade Items for Trainers!\p"
-    .string "2F: Trainer's Market$"
+    .string "Itens de Primeira Linha para Treinadores!\p"
+    .string "2º Andar: Mercado do Treinador$"
 
 CeladonCity_DepartmentStore_2F_EventScript_ClerkItems::
 	lock
@@ -86,8 +87,8 @@ CeladonCity_DepartmentStore_2F_EventScript_Woman::
     end
 
 CeladonCity_DepartmentStore_2F_Text_LanceComesToBuyCapes::
-    .string "We have a customer, Lance, who\n"
-    .string "occasionally comes.\p"
-    .string "He always buys capes.\p"
-    .string "I wonder… Does he have many\n"
-    .string "identical capes at home?$"
+    .string "Temos um cliente, o Lance, que vem\n"
+    .string "aqui de vez em quando.\p"
+    .string "Ele sempre compra capas.\p"
+    .string "Fico pensando… Será que ele tem um\n"
+    .string "monte de capas iguais em casa?$"

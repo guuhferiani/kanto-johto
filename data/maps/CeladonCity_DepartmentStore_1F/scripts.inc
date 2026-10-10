@@ -11,26 +11,26 @@ CeladonCity_DepartmentStore_1F_EventScript_Receptionist::
 	end
 
 CeladonCity_DepartmentStore_1F_Text_WelcomeToDeptStore::
-    .string "Hello! Welcome to the Celadon\n"
-    .string "Department Store.\p"
-    .string "The board on the right describes\n"
-    .string "the store layout.$"
+    .string "Olá! Boas-vindas à Loja de\n"
+    .string "Departamentos de Celadon.\p"
+    .string "O quadro à direita descreve a\n"
+    .string "organização dos andares da loja.$"
 
 CeladonCity_DepartmentStore_1F_EventScript_LayoutSign::
 	msgbox CeladonCity_DepartmentStore_1F_Text_FloorDescriptions, MSGBOX_SIGN
 	end
 
 CeladonCity_DepartmentStore_1F_Text_FloorDescriptions::
-    .string "1F: Service Counter \p"
-    .string "2F: Trainer's Market\p"
-    .string "3F: TV Game Shop\p"
-    .string "4F: Wise Man Gifts\p"
-    .string "5F: Drugstore\p"
-    .string "Rooftop Square: Vending Machines$"
+    .string "1º A: Balcão de Atendimento\p"
+    .string "2º A: Mercado do Treinador\p"
+    .string "3º A: Loja de Videogames\p"
+    .string "4º A: Presentes do Sábio\p"
+    .string "5º A: Farmácia\p"
+    .string "Cobertura: Máquinas de Bebidas$"
 
 CeladonCity_DepartmentStore_1F_EventScript_FloorSign::
 	msgbox CeladonCity_DepartmentStore_1F_Text_ServiceCounter, MSGBOX_SIGN
 	end
 
 CeladonCity_DepartmentStore_1F_Text_ServiceCounter::
-    .string "1F: Service Counter$"
+    .string "1º Andar: Balcão de Atendimento$"

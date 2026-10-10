@@ -20,7 +20,7 @@ CeladonCity_DepartmentStore_Elevator_EventScript_FloorSelect::
 	end
 
 Text_DepartmentWhichFloorWillYouPick::
-	.string "Which floor will you pick?$"
+	.string "Qual andar você deseja?$"
 
 @ Below scripts ensure the cursor for floor select always starts on the current floor
 CeladonCity_DepartmentStore_Elevator_EventScript_ChooseFloorFrom5th::

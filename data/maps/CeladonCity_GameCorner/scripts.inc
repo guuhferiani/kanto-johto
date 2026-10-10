@@ -48,7 +48,8 @@ GameCorner_EventScript_Engineer::
 	end
 
 GameCorner_Text_ServiceDay::
-	.string "I'm servicing the machines today!$"
+	.string "Hoje estou fazendo a manutenção\n"
+	.string "das máquinas!$"
 
 
 GameCorner_RefreshCoins::
@@ -130,12 +131,12 @@ GameCorner_EventScript_CoinsClerk::
 	goto GameCorner_EventScript_ChooseCoinsDefault50
 
 GameCorner_Text_ThisIsGameCorner:
-	.string "Welcome to the Game Corner.$"
+	.string "Boas-vindas ao Cassino.$"
 
 GameCorner_Text_WereYouLookingForCoins:
-	.string "Were you looking for Coins?\p"
-	.string "It's ¥1000 for 50 Coins.\n"
-	.string "Would you like some?$"
+	.string "Você estava procurando por Fichas?\p"
+	.string "São ¥1.000 por 50 Fichas.\n"
+	.string "Gostaria de comprar algumas?$"
 
 GameCorner_EventScript_NeedCoinCase::
 	msgbox GameCorner_Text_NeedCoinCaseForCoins, MSGBOX_DEFAULT
@@ -143,10 +144,10 @@ GameCorner_EventScript_NeedCoinCase::
 	end
 
 GameCorner_Text_NeedCoinCaseForCoins:
-	.string "Okay, you wanted some Coins for\n"
-	.string "the games?\p"
-	.string "Oh! You don't have a Coin Case for\n"
-	.string "holding your Coins.$"
+	.string "Certo, você queria Fichas para\n"
+	.string "os jogos?\p"
+	.string "Oh! Você não tem um Porta-Fichas\n"
+	.string "para guardá-las.$"
 
 GameCorner_EventScript_ChooseCoinsDefault50::
 	multichoicedefault 15, 0, MULTI_GAME_CORNER_COINS, 0, FALSE
@@ -197,7 +198,7 @@ GameCorner_EventScript_NoRoomForCoins::
 
 GameCorner_Text_CoinCaseIsFull:
 	.string "Oh?\n"
-	.string "Your Coin Case is full.$"
+	.string "Seu Porta-Fichas está cheio.$"
 
 GameCorner_EventScript_NotEnoughMoney::
 	msgbox GameCorner_Text_DontHaveEnoughMoney, MSGBOX_DEFAULT
@@ -207,12 +208,12 @@ GameCorner_EventScript_NotEnoughMoney::
 	end
 
 GameCorner_Text_DontHaveEnoughMoney:
-	.string "Um… You don't appear to have\n"
-	.string "enough money…$"
+	.string "Hum… Parece que você não tem\n"
+	.string "dinheiro suficiente…$"
 
 GameCorner_Text_ThankYouHereAreYourCoins:
-	.string "Thank you very much!\n"
-	.string "Here are your Coins!$"
+	.string "Muito obrigado!\n"
+	.string "Aqui estão as suas Fichas!$"
 
 GameCorner_EventScript_CancelBuyCoins::
 	msgbox GameCorner_Text_DontNeedCoinsThen, MSGBOX_DEFAULT
@@ -222,7 +223,8 @@ GameCorner_EventScript_CancelBuyCoins::
 	end
 
 GameCorner_Text_DontNeedCoinsThen:
-	.string "Oh… You don't need Coins, then?$"
+	.string "Oh… Você não precisa de Fichas,\n"
+	.string "então?$"
 
 GameCorner_EventScript_SlotMachine0::
 	lockall
@@ -410,41 +412,41 @@ GameCorner_EventScript_NoCoinCase::
 	end
 
 GameCorner_Text_CantPlayWithNoCoinCase:
-	.string "You can't play if you don't have\n"
-	.string "a Coin Case.$"
+	.string "Você não pode jogar se não tiver\n"
+	.string "um Porta-Fichas.$"
 
 GameCorner_EventScript_InfoClerk::
 	msgbox GameCorner_Text_CanExchangeCoinsNextDoor, MSGBOX_NPC
 	end
 
 GameCorner_Text_CanExchangeCoinsNextDoor::
-    .string "Welcome!\p"
-    .string "You can exchange your Coins for\n"
-    .string "fabulous prizes next door.$"
+    .string "Boas-vindas!\p"
+    .string "Você pode trocar suas Fichas por\n"
+    .string "prêmios fabulosos na casa ao lado.$"
 
 GameCorner_EventScript_UnusableSlotMachine1::
 	msgbox GameCorner_Text_OutOfOrder, MSGBOX_SIGN
 	end
 
 GameCorner_Text_OutOfOrder::
-    .string "OUT OF ORDER\n"
-    .string "This is broken.$"
+    .string "FORA DE SERVIÇO\n"
+    .string "Esta máquina está quebrada.$"
 
 GameCorner_EventScript_UnusableSlotMachine2::
 	msgbox GameCorner_Text_OutToLunch, MSGBOX_SIGN
 	end
 
 GameCorner_Text_OutToLunch::
-    .string "Out To Lunch\n"
-    .string "This is reserved.$"
+    .string "Horário de Almoço\n"
+    .string "Esta máquina está reservada.$"
 
 GameCorner_EventScript_UnusableSlotMachine3::
 	msgbox GameCorner_Text_SomeonesKeys, MSGBOX_SIGN
 	end
 
 GameCorner_Text_SomeonesKeys::
-    .string "Someone's keys!\n"
-    .string "They'll be back.$"
+    .string "As chaves de alguém!\n"
+    .string "Eles devem voltar logo.$"
 
 GameCorner_EventScript_UnusableSlotMachine4::
 	goto_if_set FLAG_GAME_CORNER_SERVICE_DAY, GameCorner_EventScript_WorkedOn
@@ -452,17 +454,17 @@ GameCorner_EventScript_UnusableSlotMachine4::
 	end
 
 GameCorner_Text_Hacked::
-    .string "The Pokémon on this one are all\n"
-    .string "scrambled. It was hacked!\p"
-    .string "Better find a different one.$"
+    .string "Os Pokémon nesta aqui estão todos\n"
+    .string "embaralhados. Foi hackeada!\p"
+    .string "É melhor encontrar outra.$"
 
 GameCorner_EventScript_WorkedOn::
 	msgbox GameCorner_Text_Console, MSGBOX_SIGN
 	end
 
 GameCorner_Text_Console::
-    .string "The Engineer has the terminal pulled\n"
-    .string "up. Better not mess with it!$"
+    .string "O Engenheiro está com o terminal\n"
+    .string "aberto. Melhor não mexer nisso!$"
 
 GameCorner_EventScript_FaceSlotMachine::
 	closemessage
@@ -481,9 +483,9 @@ GameCorner_EventScript_BaldingMan::
 	end
 
 GameCorner_Text_RumoredTeamRocketRunsThisPlace::
-    .string "Keep this quiet.\p"
-    .string "It's rumored that this place is run\n"
-    .string "by Team Rocket.$"
+    .string "Fale baixo…\p"
+    .string "Dizem os boatos que este lugar é\n"
+    .string "controlado pela Equipe Rocket.$"
 
 GameCorner_EventScript_Woman1::
 	lock
@@ -493,8 +495,8 @@ GameCorner_EventScript_Woman1::
 	end
 
 GameCorner_Text_ThinkMachinesHaveDifferentOdds::
-    .string "I think these machines have\n"
-    .string "different odds.$"
+    .string "Eu acho que essas máquinas têm\n"
+    .string "probabilidades diferentes.$"
 
 GameCorner_EventScript_Woman2::
 	lock
@@ -504,8 +506,8 @@ GameCorner_EventScript_Woman2::
 	end
 
 GameCorner_Text_WinOrLoseItsOnlyLuck::
-    .string "These slot games…\n"
-    .string "Win or lose, it's only by luck.$"
+    .string "Esses caça-níqueis…\n"
+    .string "Ganhar ou perder, é pura sorte.$"
 
 GameCorner_EventScript_Maniac::
 	msgbox GameCorner_Text_RareMonsForCoins
@@ -513,9 +515,9 @@ GameCorner_EventScript_Maniac::
 	end
 
 GameCorner_Text_RareMonsForCoins::
-    .string "They offer rare Pokémon that can\n"
-    .string "be exchanged for your Coins.\p"
-    .string "But, I just can't seem to win!$"
+    .string "Eles oferecem Pokémon raros que\n"
+    .string "podem ser trocados por suas Fichas.\p"
+    .string "Mas eu simplesmente não consigo ganhar!$"
 
 GameCorner_EventScript_OldMan::
 	lock
@@ -525,8 +527,8 @@ GameCorner_EventScript_OldMan::
 	end
 
 GameCorner_Text_SoEasyToGetHooked::
-    .string "Games are scary!\n"
-    .string "It's so easy to get hooked!$"
+    .string "Jogos de azar assustam!\n"
+    .string "É tão fácil ficar viciado!$"
 
 GameCorner_EventScript_Fisher::
 	lock
@@ -547,11 +549,11 @@ GameCorner_EventScript_Fisher::
 	end
 
 GameCorner_Text_DoYouWantToPlay::
-    .string "Kid, do you want to play?$"
+    .string "Ei, jovem, você quer jogar?$"
 
 GameCorner_Text_Received10CoinsFromMan::
-    .string "{PLAYER} received 10 COINS\n"
-    .string "from the man.$"
+    .string "{PLAYER} recebeu 10 FICHAS\n"
+    .string "do homem.$"
 
 GameCorner_EventScript_FisherAlreadyGotCoins::
 	msgbox GameCorner_Text_WinsComeAndGo
@@ -559,8 +561,8 @@ GameCorner_EventScript_FisherAlreadyGotCoins::
 	end
 
 GameCorner_Text_WinsComeAndGo::
-    .string "Wins seem to come and go.\n"
-    .string "Nothing's a sure thing.$"
+    .string "Vitórias vêm e vão.\n"
+    .string "Nada aqui é garantido.$"
 
 GameCorner_EventScript_Scientist::
 	lock
@@ -581,12 +583,12 @@ GameCorner_EventScript_Scientist::
 	end
 
 GameCorner_Text_WantSomeCoins::
-    .string "What's up?\n"
-    .string "Want some coins?$"
+    .string "E aí, beleza?\n"
+    .string "Quer algumas fichas?$"
 
 GameCorner_Text_Received20CoinsFromNiceGuy::
-    .string "{PLAYER} received 20 coins\n"
-    .string "from the nice guy.$"
+    .string "{PLAYER} recebeu 20 fichas\n"
+    .string "do cara legal.$"
 
 GameCorner_EventScript_ScientistAlreadyGotCoins::
 	msgbox GameCorner_Text_NeedMoreCoinsForMonIWant
@@ -594,8 +596,8 @@ GameCorner_EventScript_ScientistAlreadyGotCoins::
 	end
 
 GameCorner_Text_NeedMoreCoinsForMonIWant::
-    .string "Darn! I need more coins for the\n"
-    .string "Pokémon Plush I want!$"
+    .string "Droga! Preciso de mais fichas para\n"
+    .string "a Pelúcia Pokémon que eu quero!$"
 
 GameCorner_EventScript_Gentleman::
 	lock
@@ -616,12 +618,12 @@ GameCorner_EventScript_Gentleman::
 	end
 
 GameCorner_Text_HereAreSomeCoinsShoo::
-    .string "Hey, what? You're throwing me off!\n"
-    .string "Here are some coins, so shoo!$"
+    .string "Ei, o quê? Você está me desconcentrando!\n"
+    .string "Tome algumas fichas e dê o fora!$"
 
 GameCorner_Text_Received20CoinsFromMan::
-    .string "{PLAYER} received 20 coins\n"
-    .string "from the man.$"
+    .string "{PLAYER} recebeu 20 fichas\n"
+    .string "do homem.$"
 
 GameCorner_EventScript_GentlemanAlreadyGotCoins::
 	msgbox GameCorner_Text_WatchReelsClosely
@@ -629,8 +631,8 @@ GameCorner_EventScript_GentlemanAlreadyGotCoins::
 	end
 
 GameCorner_Text_WatchReelsClosely::
-    .string "The trick is to watch the reels\n"
-    .string "closely.$"
+    .string "O segredo é observar os rolos\n"
+    .string "com muita atenção.$"
 
 GameCorner_EventScript_GamblerNoRoomForCoins::
 	msgbox GameCorner_Text_DontNeedMyCoins
@@ -638,7 +640,7 @@ GameCorner_EventScript_GamblerNoRoomForCoins::
 	end
 
 GameCorner_Text_DontNeedMyCoins::
-    .string "Hmm, you have plenty of coins.$"
+    .string "Hmm, você já tem fichas de sobra.$"
 
 GameCorner_EventScript_GamblerNoCoinCase::
 	msgbox GameCorner_Text_DontHaveCoinCase
@@ -646,8 +648,8 @@ GameCorner_EventScript_GamblerNoCoinCase::
 	end
 
 GameCorner_Text_DontHaveCoinCase::
-    .string "Hey! Go grab your Coin Case\n"
-    .string "so you can hold these!$"
+    .string "Ei! Vá buscar o seu Porta-Fichas\n"
+    .string "para poder guardar isso!$"
 
 
 GameCorner_EventScript_Poster::
@@ -664,13 +666,13 @@ GameCorner_EventScript_PosterButton::
 	end
 
 GameCorner_Text_SwitchBehindPosterPushIt::
-    .string "Hey!\p"
-    .string "A switch behind the poster!?\n"
-    .string "Let's push it!$"
+    .string "Ei!\p"
+    .string "Um botão atrás do cartaz?!\n"
+    .string "Vamos apertar!$"
 
 GameCorner_Text_LeaveItAlone::
-    .string "On second thought, better leave it\pn"
-    .string "alone...$"
+    .string "Pensando bem, é melhor deixar\n"
+    .string "isso quieto…$"
 
 GameCorner_EventScript_OpenRocketHideout::
 	playse SE_UNLOCK
@@ -718,12 +720,12 @@ GameCorner_EventScript_RocketBattle::
 	end
 
 GameCorner_Text_GruntIntro::
-    .string "Hey! What gives!?\n"
-    .string "You're not supposed to press that!\p"
-    .string "Go away, or else!$"
+    .string "Ei! Qual é a sua?!\n"
+    .string "Você não devia ter apertado aquilo!\p"
+    .string "Dê o fora agora, ou vai ver só!$"
 
 GameCorner_Text_GruntDefeat::
-    .string "Dang!$"
+    .string "Droga!$"
 
 GameCorner_EventScript_DefeatedGrunt::
 	msgbox GameCorner_Text_GruntPostBattle, MSGBOX_AUTOCLOSE
@@ -735,9 +737,9 @@ GameCorner_EventScript_DefeatedGrunt::
 	end
 
 GameCorner_Text_GruntPostBattle::
-    .string "The Team Rocket Hideout might\n"
-    .string "be discovered!\p"
-    .string "I better tell Boss!$"
+    .string "O Esconderijo da Equipe Rocket pode\n"
+    .string "ser descoberto!\p"
+    .string "É melhor eu avisar o Chefe!$"
 
 Movement_GCGruntExit::
 	walk_right
@@ -888,9 +890,9 @@ HiddenCoins_NoSpace::
 	end
 
 HiddenCoins_FoundCoinsNoSpace::
-	.string "{PLAYER} found some coins scattered\n"
-	.string "on the floor...\p"
-	.string "Too bad your Coin Case is full!$"
+	.string "{PLAYER} encontrou algumas fichas\n"
+	.string "espalhadas pelo chão…\p"
+	.string "Que pena, seu Porta-Fichas está cheio!$"
 
 HiddenCoins_NoCase::
 	msgbox HiddenCoins_FoundCoinsNoCase, MSGBOX_AUTOCLOSE
@@ -898,25 +900,25 @@ HiddenCoins_NoCase::
 	end
 
 HiddenCoins_FoundCoinsNoCase::
-	.string "{PLAYER} found some coins scattered\n"
-	.string "on the floor...\p"
-	.string "Too bad you don't have a Coin Case!$"
+	.string "{PLAYER} encontrou algumas fichas\n"
+	.string "espalhadas pelo chão…\p"
+	.string "Que pena que você não tem um Porta-Fichas!$"
 
 HiddenCoins_Found10Coins::
-	.string "{PLAYER} found 10 coins scattered\n"
-	.string "on the floor!$"
+	.string "{PLAYER} encontrou 10 fichas\n"
+	.string "espalhadas pelo chão!$"
 
 HiddenCoins_Found20Coins::
-	.string "{PLAYER} found 20 coins scattered\n"
-	.string "on the floor!$"
+	.string "{PLAYER} encontrou 20 fichas\n"
+	.string "espalhadas pelo chão!$"
 
 HiddenCoins_Found40Coins::
-	.string "{PLAYER} found 40 coins scattered\n"
-	.string "on the floor!$"
+	.string "{PLAYER} encontrou 40 fichas\n"
+	.string "espalhadas pelo chão!$"
 
 HiddenCoins_Found100Coins::
-	.string "{PLAYER} found 100 coins scattered\n"
-	.string "on the floor!$"
+	.string "{PLAYER} encontrou 100 fichas\n"
+	.string "espalhadas pelo chão!$"
 
 GameCorner_EventScript_Scott::
 	lock
@@ -926,9 +928,9 @@ GameCorner_EventScript_Scott::
 	end
 
 GameCorner_Text_GymGuide::
-	.string "Hey! You have better things to do,\n" 
-	.string "champ in making!\p" 
-	.string "Celadon Gym's Leader is Erika!\n"
-	.string "She uses grass-type Pokémon!\p" 
-	.string "She might appear docile, but don't\n" 
-	.string "be fooled!$"
+	.string "Ei! Você tem coisas melhores para\n"
+	.string "fazer, futuro campeão!\p"
+	.string "A Líder do Ginásio de Celadon é a Erika!\n"
+	.string "Ela usa Pokémon do tipo Planta!\p"
+	.string "Ela pode parecer dócil, mas não se\n"
+	.string "deixe enganar!$"

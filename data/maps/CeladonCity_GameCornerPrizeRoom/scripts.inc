@@ -15,20 +15,20 @@ CeladonCity_GameCorner_PrizeRoom_EventScript_BaldingMan::
 	end
 
 CeladonCity_GameCorner_PrizeRoom_Text_FancyThatPorygon::
-    .string "I sure do fancy those big plushies!\n"
-	.string "Cute plushies are the best thing on\l"
-	.string "the rewards list now that vending\l"
-	.string "TMs isn't possible.\p"
-    .string "But, it's hard to win at slots!$"
+    .string "Eu adoro mesmo essas pelúcias gigantes!\n"
+    .string "Pelúcias fofas são o melhor prêmio da\l"
+    .string "lista de recompensas agora que trocar\l"
+    .string "por MTs não é mais possível.\p"
+    .string "Mas é tão difícil vencer nos caça-níqueis!$"
 
 CeladonCity_GameCorner_PrizeRoom_EventScript_OldMan::
 	msgbox CeladonCity_GameCorner_PrizeRoom_Text_RakedItInToday, MSGBOX_NPC
 	end
 
 CeladonCity_GameCorner_PrizeRoom_Text_RakedItInToday::
-    .string "Gahaha! I raked it in today!\p"
-    .string "If only they still had a few\n"
-	.string "Porygons I could exchange for…$"
+    .string "Gahaha! Hoje eu faturei alto!\p"
+    .string "Se ao menos eles ainda tivessem alguns\n"
+    .string "Porygon pelos quais eu pudesse trocar…$"
 
 
 CeladonCity_GameCorner_EventScript_PrizeCornerBigDolls::
@@ -41,14 +41,14 @@ CeladonCity_GameCorner_EventScript_PrizeCornerBigDolls::
 	end
 
 CeladonCity_GameCorner_Text_ExchangeCoinsForPrizes:
-	.string "Welcome.\p"
-	.string "You can exchange your Coins for\n"
-	.string "decorative Pokémon prizes here.\p"
-	.string "Please note that due to previous\n"
-	.string "incidents and new Pokémon League\l"
-	.string "restrictions, Game Corners are\l"
-	.string "no longer permitted to issue TM\l"
-	.string "or live Pokémon rewards.$"
+	.string "Boas-vindas.\p"
+	.string "Você pode trocar suas Fichas por prêmios\n"
+	.string "decorativos de Pokémon aqui.\p"
+	.string "Por favor, observe que, devido a incidentes\n"
+	.string "anteriores e novas restrições da Liga\l"
+	.string "Pokémon, os Cassinos não têm mais\l"
+	.string "permissão para oferecer MTs ou Pokémon\l"
+	.string "vivos como prêmios.$"
 
 CeladonCity_GameCorner_EventScript_ChooseBigDollPrizeMessage::
 	message CeladonCity_GameCorner_Text_WhichPrize
@@ -58,7 +58,7 @@ CeladonCity_GameCorner_EventScript_ChooseBigDollPrizeMessage::
 	goto CeladonCity_GameCorner_EventScript_ChooseBigDollPrize
 
 CeladonCity_GameCorner_Text_WhichPrize:
-	.string "Which prize would you like?$"
+	.string "Qual prêmio você gostaria?$"
 
 CeladonCity_GameCorner_EventScript_ChooseBigDollPrize::
 	multichoice 12, 0, MULTI_GAME_CORNER_BIG_DOLLS, FALSE
@@ -205,7 +205,7 @@ CeladonCity_GameCorner_EventScript_ConfirmBigDollPrize::
 
 
 CeladonCity_GameCorner_Text_SoYourChoiceIsX:
-	.string "So your choice is {STR_VAR_1}?$"
+	.string "Então sua escolha é {STR_VAR_1}?$"
 
 CeladonCity_GameCorner_EventScript_NotEnoughCoinsForBigDoll::
 	msgbox CeladonCity_GameCorner_Text_NotEnoughCoins, MSGBOX_DEFAULT
@@ -224,14 +224,14 @@ CeladonCity_GameCorner_EventScript_CancelBigDollSelect::
 	end
 
 CeladonCity_GameCorner_Text_SendToYourHomePC:
-	.string "Thank you!\n"
-	.string "We'll send it to your PC at home.$"
+	.string "Muito obrigado!\n"
+	.string "Nós o enviaremos ao PC do seu quarto.$"
 
 CeladonCity_GameCorner_Text_NotEnoughCoins:
-	.string "You don't have enough coins.$"
+	.string "Você não tem fichas suficientes.$"
 
 CeladonCity_GameCorner_Text_SeeYouAgain:
-	.string "See you again!$"
+	.string "Volte sempre!$"
 
 CeladonCity_GameCorner_EventScript_PrizeCornerDolls::
 	lock
