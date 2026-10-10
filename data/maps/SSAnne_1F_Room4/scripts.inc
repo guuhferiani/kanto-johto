@@ -9,5 +9,5 @@ SSAnne_1F_Room4_EventScript_Woman::
 	end
 
 SSAnne_1F_Room4_Text_CherryPiePlease::
-    .string "Excuse me, I would like a cherry\n"
-    .string "pie, please!$"
+    .string "Com licença, eu gostaria de uma torta\n"
+    .string "de cereja, por favor!$"

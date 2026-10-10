@@ -13,12 +13,12 @@ SSAnne_1F_Room6_EventScript_Woman::
 	end
 
 SSAnne_1F_Room6_Text_TakeAShortRest::
-    .string "You look tired. Would you like to\n"
-    .string "take a short rest?$"
+    .string "Você parece cansado. Gostaria de\n"
+    .string "descansar um pouco?$"
 
 SSAnne_1F_Room6_Text_GladEveryoneIsRefreshed::
-    .string "I'm glad to see that everyone is\n"
-    .string "looking refreshed and chipper.$"
+    .string "Fico feliz em ver que todos parecem\n"
+    .string "renovados e cheios de energia.$"
 
 SSAnne_1F_Room6_EventScript_DeclineHeal::
 	msgbox SSAnne_1F_Room6_Text_SorryYouLookLikeSomeone
@@ -26,5 +26,5 @@ SSAnne_1F_Room6_EventScript_DeclineHeal::
 	end
 
 SSAnne_1F_Room6_Text_SorryYouLookLikeSomeone::
-    .string "Oh, I'm sorry for fussing over you.\n"
-    .string "You just remind me of my grandchild…$"
+    .string "Oh, me desculpe por ser tão intrometida.\n"
+    .string "Você me lembra tanto o meu neto…$"

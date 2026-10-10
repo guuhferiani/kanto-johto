@@ -29,37 +29,37 @@ SSAnne_CaptainsOffice_EventScript_Captain::
 	end
 
 SSAnne_CaptainsOffice_Text_CaptainIFeelSeasick::
-    .string "Captain: Ooargh…\n"
-    .string "I feel hideous…\l"
-    .string "Urrp! Seasick…$"
+    .string "Capitão: Ooargh…\n"
+    .string "Estou me sentindo horrível…\l"
+    .string "Urrp! Enjoado do mar…$"
 
 SSAnne_CaptainsOffice_Text_RubbedCaptainsBack::
-    .string "{PLAYER} rubbed the Captain's\n"
-    .string "back!\p"
-    .string "Rub-rub…\n"
-    .string "Rub-rub-rub…$"
+    .string "{PLAYER} massageou as costas\n"
+    .string "do Capitão!\p"
+    .string "Esfrega, esfrega…\n"
+    .string "Esfrega, esfrega, esfrega…$"
 
 SSAnne_CaptainsOffice_Text_ThankYouHaveHMForCut::
-    .string "Captain: Whew! Thank you!\n"
-    .string "I'm feeling much better now.\p"
-    .string "You want to see my hidden cut\n"
-    .string "technique?\p"
-    .string "I could show you my prized cut\n"
-    .string "technique if I weren't so ill…\p"
-    .string "I know! You can have this!\n"
-    .string "This Hidden Machine!\p"
-    .string "Teach cut to your Pokémon, and\n"
-    .string "you can see it cut anytime!$"
+    .string "Capitão: Ufa! Muito obrigado!\n"
+    .string "Estou me sentindo bem melhor agora.\p"
+    .string "Você quer ver a minha técnica secreta\n"
+    .string "de cortar?\p"
+    .string "Eu poderia lhe mostrar a minha técnica\n"
+    .string "especial de corte se não estivesse tão mal…\p"
+    .string "Já sei! Você pode ficar com isto!\n"
+    .string "Esta Máquina Oculta!\p"
+    .string "Ensine Cortar aos seus Pokémon e\n"
+    .string "você poderá vê-los cortar quando quiser!$"
 
 SSAnne_CaptainsOffice_Text_ObtainedHM01FromCaptain::
-    .string "{PLAYER} obtained HM01\n"
-    .string "from the Captain!$"
+    .string "{PLAYER} obteve o HM01\n"
+    .string "do Capitão!$"
 
 SSAnne_CaptainsOffice_Text_ExplainCut::
-    .string "Using cut, you can chop down\n"
-    .string "small trees.\p"
-    .string "Why not try it with the trees\n"
-    .string "around Vermilion City?$"
+    .string "Usando o Cortar, você pode derrubar\n"
+    .string "árvores pequenas.\p"
+    .string "Por que não tenta com as árvores\n"
+    .string "ao redor de Vermilion?$"
 
 SSAnne_CaptainsOffice_EventScript_NoRoomForCut::
 	msgbox SSAnne_CaptainsOffice_Text_YouHaveNoRoomForThis
@@ -70,10 +70,10 @@ SSAnne_CaptainsOffice_EventScript_NoRoomForCut::
 	end
 
 SSAnne_CaptainsOffice_Text_YouHaveNoRoomForThis::
-    .string "Oh, no!\n"
-    .string "You have no room for this!\p"
-    .string "Oh no, I feel another wave\n"
-    .string "coming on --- HURGH!!$"
+    .string "Oh, não!\n"
+    .string "Você não tem espaço para isto!\p"
+    .string "Ai não, estou sentindo outra ânsia\n"
+    .string "chegando --- HURGH!!$"
 
 SSAnne_CaptainsOffice_EventScript_AlreadyGotCut::
 	applymovement LOCALID_CAPTAIN, Common_Movement_FacePlayer
@@ -83,25 +83,25 @@ SSAnne_CaptainsOffice_EventScript_AlreadyGotCut::
 	end
 
 SSAnne_CaptainsOffice_Text_SSAnneWillSetSailSoon::
-    .string "Captain: …Whew!\p"
-    .string "Now that I'm not sick anymore,\n"
-    .string "I guess it's time.\p"
-    .string "The S.S. Anne will set sail soon!\p"
-    .string "Farewell, until our return to\n"
-    .string "Vermilion City!$"
+    .string "Capitão: …Ufa!\p"
+    .string "Agora que não estou mais enjoado,\n"
+    .string "acho que chegou a hora.\p"
+    .string "O S.S. Anne zarpará em breve!\p"
+    .string "Até logo, até o nosso retorno\n"
+    .string "à Cidade de Vermilion!$"
 
 SSAnne_CaptainsOffice_EventScript_TrashCan::
 	msgbox SSAnne_CaptainsOffice_Text_YuckShouldntHaveLooked, MSGBOX_SIGN
 	end
 
 SSAnne_CaptainsOffice_Text_YuckShouldntHaveLooked::
-    .string "Yuck!\n"
-    .string "Shouldn't have looked!$"
+    .string "Eca!\n"
+    .string "Não deveria ter olhado!$"
 
 SSAnne_CaptainsOffice_EventScript_Book::
 	msgbox SSAnne_CaptainsOffice_Text_HowToConquerSeasickness, MSGBOX_SIGN
 	end
 
 SSAnne_CaptainsOffice_Text_HowToConquerSeasickness::
-    .string "How to Conquer Seasickness…\n"
-    .string "The Captain's reading this!$"
+    .string "Como Vencer o Enjoo Marítimo…\n"
+    .string "O Capitão está lendo isto!$"

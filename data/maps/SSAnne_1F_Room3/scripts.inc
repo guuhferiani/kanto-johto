@@ -6,16 +6,16 @@ SSAnne_1F_Room3_EventScript_LittleGirl::
 	end
 
 SSAnne_1F_Room3_Text_AlwaysTravelWithJigglypuff::
-    .string "I always travel with Jigglypuff.\n"
-    .string "I never leave home without it.$"
+    .string "Eu sempre viajo com meu Jigglypuff.\n"
+    .string "Nunca saio de casa sem ele.$"
 
 SSAnne_1F_Room3_EventScript_BaldingMan::
 	msgbox SSAnne_1F_Room3_Text_CruiseIsElegantAndCozy, MSGBOX_NPC
 	end
 
 SSAnne_1F_Room3_Text_CruiseIsElegantAndCozy::
-    .string "A world cruise is so elegant yet\n"
-    .string "cozy!$"
+    .string "Um cruzeiro mundial é tão elegante e\n"
+    .string "ao mesmo tempo tão aconchegante!$"
 
 SSAnne_1F_Room3_EventScript_Jigglypuff::
 	lock

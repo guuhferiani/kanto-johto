@@ -7,16 +7,16 @@ SSAnne_B1F_Room4_EventScript_Leonard::
 	end
 
 SSAnne_B1F_Room4_Text_LeonardIntro::
-    .string "You know what they say about\n"
-    .string "sailors and battling!$"
+    .string "Você sabe o que dizem sobre marinheiros\n"
+    .string "e batalhas!$"
 
 SSAnne_B1F_Room4_Text_LeonardDefeat::
-    .string "Right!\n"
-    .string "Good battle, mate!$"
+    .string "Isso aí!\n"
+    .string "Bela batalha, marujo!$"
 
 SSAnne_B1F_Room4_Text_LeonardPostBattle::
     .string "Hahaha!\n"
-    .string "Want to be a sailor, mate?$"
+    .string "Quer virar um marinheiro, marujo?$"
 
 SSAnne_B1F_Room4_EventScript_Duncan::
 	trainerbattle_single TRAINER_SAILOR_DUNCAN, SSAnne_B1F_Room4_Text_DuncanIntro, SSAnne_B1F_Room4_Text_DuncanDefeat
@@ -24,12 +24,12 @@ SSAnne_B1F_Room4_EventScript_Duncan::
 	end
 
 SSAnne_B1F_Room4_Text_DuncanIntro::
-    .string "Come on, then!\n"
-    .string "My sailor's pride is at stake!$"
+    .string "Venha com tudo, então!\n"
+    .string "Meu orgulho de marinheiro está em jogo!$"
 
 SSAnne_B1F_Room4_Text_DuncanDefeat::
-    .string "Your spirit sank me!$"
+    .string "Sua garra afundou o meu navio!$"
 
 SSAnne_B1F_Room4_Text_DuncanPostBattle::
-    .string "Did you see the Fishing Guru in\n"
-    .string "Vermilion City?$"
+    .string "Você viu o Guru da Pesca na\n"
+    .string "Cidade de Vermilion?$"

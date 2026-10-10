@@ -8,10 +8,10 @@ SSAnne_2F_Corridor_EventScript_Sailor::
 	end
 
 SSAnne_2F_Corridor_Text_ThisShipIsLuxuryLiner::
-    .string "This ship, she is a luxury liner for\n"
-    .string "trainers of the world!\p"
-    .string "At every port, we hold parties with\n"
-    .string "invited trainers.$"
+    .string "Este navio é um transatlântico de luxo\n"
+    .string "para treinadores de todo o mundo!\p"
+    .string "A cada porto, damos festas com\n"
+    .string "treinadores convidados.$"
 
 SSAnne_2F_Corridor_EventScript_RivalTriggerLeft::
 	lockall
@@ -64,27 +64,27 @@ SSAnne_2F_Corridor_EventScript_RivalTrigger::
 SSAnne_2F_Corridor_Text_RivalIntro::
     .string "{RIVAL}: Bonjour!\n"
     .string "{PLAYER}!\p"
-    .string "Imagine seeing you here!\n"
-    .string "{PLAYER}, were you really invited?\p"
-    .string "So how's your Pokédex coming?\p"
-    .string "I already caught 40 kinds, pal.\n"
-    .string "Different kinds are everywhere.\p"
-    .string "Crawl around in grassy areas, and\n"
-    .string "look hard for them.$"
+    .string "Quem diria te ver por aqui!\n"
+    .string "{PLAYER}, você foi mesmo convidado?\p"
+    .string "E como vai a sua Pokédex?\p"
+    .string "Eu já peguei 40 espécies, amigão.\n"
+    .string "Há tipos diferentes por toda parte.\p"
+    .string "Fique rastejando pela grama alta e\n"
+    .string "procure bem por eles.$"
 
 SSAnne_2F_Corridor_Text_RivalDefeat::
     .string "Humph!\p"
-    .string "At least you're raising your\n"
-    .string "Pokémon!$"
+    .string "Pelo menos você anda treinando\n"
+    .string "seus Pokémon!$"
 
 SSAnne_2F_Corridor_Text_RivalPostBattle::
-    .string "{RIVAL}: I heard there was a cut\n"
-    .string "master on board.\p"
-    .string "But he was just a seasick old man!\p"
-    .string "Cut itself is really useful.\n"
-    .string "Yup, it'll be handy.\p"
-    .string "You should go see him, too.\n"
-    .string "Smell ya!$"
+    .string "{RIVAL}: Ouvi falar que havia um\n"
+    .string "mestre do Cortar a bordo.\p"
+    .string "Mas não passava de um velho enjoado!\p"
+    .string "Mas o Cortar em si é muito útil.\n"
+    .string "É, vai quebrar um galho danado.\p"
+    .string "Você deveria ir vê-lo também.\n"
+    .string "Fui nessa!$"
 
 SSAnne_2F_Corridor_EventScript_RivalApproachLeft::
 	applymovement LOCALID_RIVAL, SSAnne_2F_Corridor_Movement_RivalApproachLeft

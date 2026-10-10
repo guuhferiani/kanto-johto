@@ -6,17 +6,17 @@ SSAnne_2F_Room3_EventScript_Gentleman::
 	end
 
 SSAnne_2F_Room3_Text_SeenMonsFerryPeople::
-    .string "Ah, yes, I have seen some Pokémon\n"
-    .string "ferry people across the water!$"
+    .string "Ah, sim, já vi alguns Pokémon\n"
+    .string "transportando pessoas pela água!$"
 
 SSAnne_2F_Room3_EventScript_OldMan::
 	msgbox SSAnne_2F_Room3_Text_SomeTreesCanBeCutDown, MSGBOX_NPC
 	end
 
 SSAnne_2F_Room3_Text_SomeTreesCanBeCutDown::
-    .string "Small trees can be chopped down\n"
-    .string "using the move Cut.\p"
-    .string "But remember this!\n"
-    .string "Cut is a HM technique.\p"
-    .string "Once learned, it is not so easily\n"
-    .string "discarded.$"
+    .string "Árvores pequenas podem ser cortadas\n"
+    .string "usando o golpe Cortar.\p"
+    .string "Mas lembre-se disto!\n"
+    .string "Cortar é uma técnica de HM.\p"
+    .string "Uma vez aprendida, não é tão fácil\n"
+    .string "de esquecer.$"

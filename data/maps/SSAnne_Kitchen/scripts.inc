@@ -6,25 +6,25 @@ SSAnne_Kitchen_EventScript_Chef1::
 	end
 
 SSAnne_Kitchen_Text_BusyOutOfTheWay::
-    .string "You, mon petit!\n"
-    .string "We're busy here!\l"
-    .string "Out of the way!$"
+    .string "Você aí, mon petit!\n"
+    .string "Estamos ocupados aqui!\l"
+    .string "Saia do caminho!$"
 
 SSAnne_Kitchen_EventScript_Chef2::
 	msgbox SSAnne_Kitchen_Text_SawOddBerryInTrash, MSGBOX_NPC
 	end
 
 SSAnne_Kitchen_Text_SawOddBerryInTrash::
-    .string "I saw an odd berry in the trash.\n"
-    .string "I wonder what that was?$"
+    .string "Eu vi uma fruta estranha no lixo.\n"
+    .string "O que será que era?$"
 
 SSAnne_Kitchen_EventScript_Chef3::
 	msgbox SSAnne_Kitchen_Text_SoBusyImDizzy, MSGBOX_NPC
 	end
 
 SSAnne_Kitchen_Text_SoBusyImDizzy::
-    .string "I'm so busy I'm getting dizzy!\n"
-    .string "You have to give me room here!$"
+    .string "Estou tão ocupado que estou até tonto!\n"
+    .string "Você precisa me dar espaço aqui!$"
 
 SSAnne_Kitchen_EventScript_Chef4::
 	lock
@@ -38,35 +38,35 @@ SSAnne_Kitchen_EventScript_Chef4::
 	end
 
 SSAnne_Kitchen_Text_IAmLeChefMainCourseIs::
-    .string "Er-hem!\n"
-    .string "Indeed I am le Chef!\p"
-    .string "Le main course is$"
+    .string "Aham!\n"
+    .string "De fato, eu sou le Chef!\p"
+    .string "Le prato principal é$"
 
 SSAnne_Kitchen_EventScript_SalmonDuSalad::
 	msgbox SSAnne_Kitchen_Text_SalmonDuSalad
 	return
 
 SSAnne_Kitchen_Text_SalmonDuSalad::
-    .string "Salmon du Salad!\p"
-    .string "Les guests may gripe it's fish\n"
-    .string "again, however!$"
+    .string "Salmão du Salad!\p"
+    .string "Les convidados podem reclamar que é\n"
+    .string "peixe de novo, no entanto!$"
 
 SSAnne_Kitchen_EventScript_EelsAuBarbecue::
 	msgbox SSAnne_Kitchen_Text_EelsAuBarbecue
 	return
 
 SSAnne_Kitchen_Text_EelsAuBarbecue::
-    .string "Eels au Barbecue!\p"
-    .string "Les guests will mutiny, I fear.$"
+    .string "Enguias au Barbecue!\p"
+    .string "Les convidados vão se amotinar, temo eu.$"
 
 SSAnne_Kitchen_EventScript_PrimeBeefsteak::
 	msgbox SSAnne_Kitchen_Text_PrimeBeefsteak
 	return
 
 SSAnne_Kitchen_Text_PrimeBeefsteak::
-    .string "Prime Beefsteak!\p"
-    .string "But, have I enough fillets du\n"
-    .string "beef?$"
+    .string "Filé Bovino de Primeira!\p"
+    .string "Mas será que tenho filés du\n"
+    .string "bife suficientes?$"
 
 SSAnne_Kitchen_EventScript_Chef5::
 	msgbox SSAnne_Kitchen_Text_PeelSpudsEveryDay, MSGBOX_NPC
@@ -74,7 +74,7 @@ SSAnne_Kitchen_EventScript_Chef5::
 
 SSAnne_Kitchen_Text_PeelSpudsEveryDay::
     .string "Hum-de-hum-de-ho…\p"
-    .string "I peel spuds every day!\n"
+    .string "Descasco batatas todo santo dia!\n"
     .string "Hum-hum…$"
 
 SSAnne_Kitchen_EventScript_Chef6::
@@ -82,19 +82,19 @@ SSAnne_Kitchen_EventScript_Chef6::
 	end
 
 SSAnne_Kitchen_Text_HearAboutSnorlaxItsAGlutton::
-    .string "Did you hear about Snorlax?\n"
-    .string "It's a glutton.\p"
-    .string "No other Pokémon eats and sleeps\n"
-    .string "the way Snorlax can and does!$"
+    .string "Você já ouviu falar do Snorlax?\n"
+    .string "Ele é um comilão.\p"
+    .string "Nenhum outro Pokémon come e dorme\n"
+    .string "tanto quanto o Snorlax!$"
 
 SSAnne_Kitchen_EventScript_Chef7::
 	msgbox SSAnne_Kitchen_Text_OnlyGetToPeelOnions, MSGBOX_NPC
 	end
 
 SSAnne_Kitchen_Text_OnlyGetToPeelOnions::
-    .string "Snivel… Sniff…\p"
-    .string "I only get to peel onions…\n"
-    .string "Snivel…$"
+    .string "Fung… Snif…\p"
+    .string "Eu só fico descascando cebolas…\n"
+    .string "Snif…$"
 
 SSAnne_Kitchen_EventScript_ItemGreatBall::
 	finditem ITEM_GREAT_BALL, 1

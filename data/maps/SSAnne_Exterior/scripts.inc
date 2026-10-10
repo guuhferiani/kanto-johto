@@ -71,7 +71,7 @@ SSAnne_Exterior_EventScript_Sailor::
 	end
 
 SSAnne_Exterior_Text_MissedTheBoat::
-	.string "Oh no! I missed the boat!$"
+	.string "Oh não! Eu perdi o navio!$"
 
 SSAnne_Exterior_EventScript_MewUnderTruck::
 	goto_if_set FLAG_CHECKED_UNDER_TRUCK, SSAnne_Exterior_EventScript_MewNotUnderTruck
@@ -121,7 +121,7 @@ SSAnne_Exterior_EventScript_MewNotUnderTruck::
 	end
 
 SSAnne_Exterior_Text_MewNotUnderTruck::
-	.string "There's nothing there...$"
+	.string "Não há nada aqui...$"
 
 SSAnneExterior_RocketFugitive::
     trainerbattle_single TRAINER_FUGITIVE_F, RocketFugitive_Text_Intro, RocketFugitive_Text_Defeat
@@ -160,17 +160,17 @@ SSAnneExterior_EventScript_GentlemanDiamond::
 	end
 
 SSAnneExterior_Text_DiamondIntro:
-	.string "Ah, hello there. I'm on vacation with\n"
-	.string "my Slowbro and my other friends.\p"
-	.string "Care for a Pokémon match?$"
+	.string "Ah, olá. Estou de férias com\n"
+	.string "meu Slowbro e outros amigos.\p"
+	.string "Gostaria de uma batalha Pokémon?$"
 
 SSAnneExterior_Text_DiamondDefeat:
-	.string "I'm impressed!$"
+	.string "Estou impressionado!$"
 
 SSAnneExterior_Text_DiamondPostBattle:
-	.string "Thank you so much for the good match!\p"
-	.string "I think we will watch the ocean a bit\n"
-	.string "more before surfing back to our city.$"
+	.string "Muito obrigado pela boa batalha!\p"
+	.string "Acho que vamos contemplar o oceano mais\n"
+	.string "um pouco antes de surfar de volta para casa.$"
 
 SSAnneExterior_EventScript_MegaHintSlowbro::    
     goto_if_set FLAG_GOT_SLOWBRONITE, SSAnneExterior_EventScript_DiamondDefeated
@@ -180,10 +180,10 @@ SSAnneExterior_EventScript_MegaHintSlowbro::
     end
     
 SSAnneExterior_Text_SlowbroMegaHint:
-    .string "There is some really lovely surfing\n"
-	.string "to be found on your Route 20.\p"
-	.string "Come to think of it, that is also the\n"
-	.string "place I picked up our Slowbronite!$"
+    .string "Há ótimas ondas para surfar\n"
+	.string "na sua Rota 20.\p"
+	.string "Pensando bem, foi lá também que\n"
+	.string "eu encontrei a nossa Slowbronite!$"
 
 SSAnneExterior_EventScript_DiamondDefeated::
     msgbox DiamondDefeated_Text MSGBOX_DEFAULT
@@ -191,10 +191,10 @@ SSAnneExterior_EventScript_DiamondDefeated::
 	end
 
 DiamondDefeated_Text:	
-	.string "You only get one life and no one\n"
-	.string "but yourself gets to live it.\p"
-	.string "It's okay to work hard, but you\n"
-	.string "must take time for play and rest.$"
+	.string "Você só tem uma vida e ninguém pode\n"
+	.string "vivê-la por você.\p"
+	.string "Não há problema em dar duro, mas você\n"
+	.string "precisa tirar um tempo para brincar e descansar.$"
 
 SSAnneExterior_EventScript_SlowbroDefeated::
 	msgbox SlowbroDefeated MSGBOX_DEFAULT
