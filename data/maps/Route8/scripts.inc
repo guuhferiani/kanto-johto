@@ -18,8 +18,8 @@ Route8_EventScript_UndergroundPathSign::
 	end
 
 Route8_Text_UndergroundPathSign::
-    .string "Underground Path\n"
-    .string "Celadon City - Lavender Town$"
+    .string "Via Subterrânea\n"
+    .string "Cidade de Celadon - Vilarejo de Lavender$"
 
 Route8_EventScript_Aidan::
 	trainerbattle_single REMATCHABLE_TRAINER_SUPER_NERD_AIDAN_1, Route8_Text_AidanIntro, Route8_Text_AidanDefeat, Route8_EventScript_RegisterAidanAfterBattle
@@ -30,15 +30,15 @@ Route8_EventScript_Aidan::
 	end
 
 Route8_Text_AidanIntro::
-    .string "You look good at Pokémon, but how\n"
-    .string "is your chemistry grade?$"
+    .string "Você parece entender de Pokémon,\n"
+    .string "mas como anda sua nota de química?$"
 
 Route8_Text_AidanDefeat::
-    .string "Ow!\n"
-    .string "Meltdown!$"
+    .string "Ai!\n"
+    .string "Colapso total!$"
 
 Route8_Text_AidanPostBattle::
-    .string "I am better at school than this!$"
+    .string "Eu sou bem melhor na escola do que nisso!$"
 
 Route8_EventScript_RegisterAidanAfterBattle::
 	special PlayerFaceTrainerAfterBattle
@@ -49,8 +49,8 @@ Route8_EventScript_RegisterAidanAfterBattle::
 	end
 
 Route8_Text_AidanRegister:
-	.string "I'll tutor you in chemistry if\n"
-	.string "you tutor me in Pokémon battles.$"
+	.string "Eu te dou aulas de química se você\n"
+	.string "me der aulas de batalhas Pokémon.$"
 
 Route8_EventScript_AidanRematch::
 	trainerbattle_rematch REMATCHABLE_TRAINER_SUPER_NERD_AIDAN_1, Route8_Text_AidanRematchIntro, Route8_Text_AidanDefeat
@@ -58,12 +58,12 @@ Route8_EventScript_AidanRematch::
 	end
 
 Route8_Text_AidanRematchIntro::
-	.string "Hey {PLAYER}!\n"
-	.string "Have your grades improved?$"
+	.string "Ei, {PLAYER}!\n"
+	.string "Suas notas melhoraram?$"
 
 Route8_Text_AidanRematchPostBattle::
-	.string "I should be studying instead\n"
-	.string "of playing with Pokémon!$"
+	.string "Eu devia estar estudando em vez de\n"
+	.string "brincar com Pokémon!$"
 
 Route8_EventScript_Julia::
 	trainerbattle_single TRAINER_LASS_JULIA, Route8_Text_JuliaIntro, Route8_Text_JuliaDefeat
@@ -71,18 +71,18 @@ Route8_EventScript_Julia::
 	end
 
 Route8_Text_JuliaIntro::
-    .string "What's a cute, round, and fluffy\n"
-    .string "Pokémon?$"
+    .string "Qual é o Pokémon fofo, redondo\n"
+    .string "e macio?$"
 
 Route8_Text_JuliaDefeat::
-    .string "Stop!\p"
-    .string "Don't be so mean to my Clefairy!$"
+    .string "Pare!\p"
+    .string "Não seja tão cruel com minha Clefairy!$"
 
 Route8_Text_JuliaPostBattle::
-    .string "I read that Clefairy evolves when\n"
-    .string "it's exposed to a Moon Stone.\p"
-    .string "I read that in a Pokémon Journal.\n"
-    .string "I wonder if it's true?$"
+    .string "Li que Clefairy evolui quando é\n"
+    .string "exposta a uma Pedra da Lua.\p"
+    .string "Li isso em uma Revista Pokémon.\n"
+    .string "Será que é verdade?$"
 
 
 Route8_EventScript_Paige::
@@ -91,15 +91,15 @@ Route8_EventScript_Paige::
 	end
 
 Route8_Text_PaigeIntro::
-    .string "I like Nidoran, so I collect them!$"
+    .string "Eu gosto de Nidoran, por isso coleciono!$"
 
 Route8_Text_PaigeDefeat::
-    .string "Why?\n"
-    .string "Why??$"
+    .string "Por quê?\n"
+    .string "Por quê??$"
 
 Route8_Text_PaigePostBattle::
-    .string "When Pokémon grow up, they get\n"
-    .string "ugly! They shouldn't evolve.$"
+    .string "Quando os Pokémon crescem, eles ficam\n"
+    .string "feios! Eles não deviam evoluir.$"
 
 Route8_EventScript_Andrea::
 	trainerbattle_single TRAINER_LASS_ANDREA, Route8_Text_AndreaIntro, Route8_Text_AndreaDefeat
@@ -107,15 +107,15 @@ Route8_EventScript_Andrea::
 	end
 
 Route8_Text_AndreaIntro::
-    .string "Meowth is so cute, meow, meow,\n"
-    .string "meow!$"
+    .string "Meowth é tão fofo, miau, miau,\n"
+    .string "miau!$"
 
 Route8_Text_AndreaDefeat::
-    .string "Meeeeyow!$"
+    .string "Miaaaau!$"
 
 Route8_Text_AndreaPostBattle::
-    .string "I think Pidgey and Rattata are\n"
-    .string "cute, too!$"
+    .string "Eu acho que Pidgey e Rattata\n"
+    .string "também são fofos!$"
 
 Route8_EventScript_Megan::
 	trainerbattle_single TRAINER_LASS_MEGAN, Route8_Text_MeganIntro, Route8_Text_MeganDefeat
@@ -123,18 +123,18 @@ Route8_EventScript_Megan::
 	end
 
 Route8_Text_MeganIntro::
-    .string "We must look silly standing here\n"
-    .string "like this.$"
+    .string "A gente deve parecer boba parada\n"
+    .string "aqui desse jeito.$"
 
 Route8_Text_MeganDefeat::
-    .string "Look what you did to my poor, cute\n"
-    .string "Pokémon!$"
+    .string "Olhe o que você fez com o meu pobre\n"
+    .string "e fofinho Pokémon!$"
 
 Route8_Text_MeganPostBattle::
-    .string "The Police in Saffron won't let us\n"
-    .string "go through.\p"
-    .string "I know they're doing their job, but\n"
-    .string "I think that's mean.$"
+    .string "A Polícia em Saffron não nos deixa\n"
+    .string "passar.\p"
+    .string "Eu sei que estão fazendo o trabalho deles,\n"
+    .string "mas acho uma maldade.$"
 
 Route8_EventScript_Glenn::
 	trainerbattle_single TRAINER_SUPER_NERD_GLENN, Route8_Text_GlennIntro, Route8_Text_GlennDefeat
@@ -142,15 +142,15 @@ Route8_EventScript_Glenn::
 	end
 
 Route8_Text_GlennIntro::
-    .string "You should be informed.\n"
-    .string "You need strategy to win at this!$"
+    .string "Fique sabendo:\n"
+    .string "é preciso estratégia para vencer nisto!$"
 
 Route8_Text_GlennDefeat::
-    .string "It's not logical!$"
+    .string "Não é lógico!$"
 
 Route8_Text_GlennPostBattle::
-    .string "Go with Grimer first…and…\n"
-    .string "…and…then…$"
+    .string "Começar com Grimer primeiro… e…\n"
+    .string "… e… depois…$"
 
 Route8_EventScript_Leslie::
 	trainerbattle_single TRAINER_SUPER_NERD_LESLIE, Route8_Text_LeslieIntro, Route8_Text_LeslieDefeat
@@ -158,17 +158,18 @@ Route8_EventScript_Leslie::
 	end
 
 Route8_Text_LeslieIntro::
-    .string "School is fun, but so are Pokémon.$"
+    .string "A escola é divertida, mas Pokémon\n"
+    .string "também são.$"
 
 Route8_Text_LeslieDefeat::
-    .string "You made it clear to me that\n"
-    .string "I should stick with school.$"
+    .string "Você deixou claro para mim que\n"
+    .string "eu devia me concentrar na escola.$"
 
 Route8_Text_LesliePostBattle::
-    .string "I was planning on getting some\n"
-    .string "fresh air for a change, but…\p"
-    .string "We're stuck here because of the\n"
-    .string "gates at Saffron.$"
+    .string "Eu estava planejando tomar um ar\n"
+    .string "fresco para variar, mas…\p"
+    .string "Estamos presos aqui por causa dos\n"
+    .string "portões de Saffron.$"
 
 Route8_EventScript_Stan::
 	trainerbattle_single TRAINER_GAMBLER_STAN, Route8_Text_StanIntro, Route8_Text_StanDefeat
@@ -176,15 +177,15 @@ Route8_EventScript_Stan::
 	end
 
 Route8_Text_StanIntro::
-    .string "All right!\n"
-    .string "Let's play a game!$"
+    .string "Muito bem!\n"
+    .string "Vamos jogar!$"
 
 Route8_Text_StanDefeat::
-    .string "Drat!\n"
-    .string "Came up short!$"
+    .string "Droga!\n"
+    .string "Deu azar!$"
 
 Route8_Text_StanPostBattle::
-    .string "Things didn't work today.$"
+    .string "As coisas não deram certo hoje.$"
 
 Route8_EventScript_Rich::
 	trainerbattle_single TRAINER_GAMBLER_RICH, Route8_Text_RichIntro, Route8_Text_RichDefeat
@@ -192,14 +193,14 @@ Route8_EventScript_Rich::
 	end
 
 Route8_Text_RichIntro::
-    .string "I'm a rambling, gambling dude!$"
+    .string "Sou um cara que adora uma boa aposta!$"
 
 Route8_Text_RichDefeat::
-    .string "Missed the big chance!$"
+    .string "Perdi a grande chance!$"
 
 Route8_Text_RichPostBattle::
-    .string "Playing games and Pokémon are like\n"
-    .string "eating peanuts! I just can't stop!$"
+    .string "Jogar e batalhar com Pokémon é como comer\n"
+    .string "amendoim! Simplesmente não consigo parar!$"
 
 Route8_EventScript_Eli::
 	trainerbattle_double TRAINER_TWINS_ELI_ANNE, Route8_Text_EliIntro, Route8_Text_EliDefeat, Route8_Text_EliNotEnoughMons
@@ -207,20 +208,20 @@ Route8_EventScript_Eli::
 	end
 
 Route8_Text_EliIntro::
-    .string "Eli: Twin power is fantastic.\n"
-    .string "Did you know?$"
+    .string "Eli: O poder dos gêmeos é fantástico.\n"
+    .string "Você sabia?$"
 
 Route8_Text_EliDefeat::
-    .string "Eli: But…\n"
-    .string "We used our twin power…$"
+    .string "Eli: Mas…\n"
+    .string "Nós usamos nosso poder de gêmeos…$"
 
 Route8_Text_EliPostBattle::
-    .string "Eli: I caught my Pokémon with\n"
-    .string "Anne!$"
+    .string "Eli: Eu capturei meu Pokémon com\n"
+    .string "a Anne!$"
 
 Route8_Text_EliNotEnoughMons::
-    .string "Eli: We can't battle if you don't\n"
-    .string "have two Pokémon.$"
+    .string "Eli: Não podemos batalhar se você não\n"
+    .string "tiver dois Pokémon.$"
 
 Route8_EventScript_Anne::
 	trainerbattle_double TRAINER_TWINS_ELI_ANNE, Route8_Text_AnneIntro, Route8_Text_AnneDefeat, Route8_Text_AnneNotEnoughMons
@@ -228,19 +229,19 @@ Route8_EventScript_Anne::
 	end
 
 Route8_Text_AnneIntro::
-    .string "Anne: We'll shock you with our twin\n"
-    .string "power!$"
+    .string "Anne: Vamos te chocar com nosso poder\n"
+    .string "de gêmeos!$"
 
 Route8_Text_AnneDefeat::
-    .string "Anne: Our twin power…$"
+    .string "Anne: Nosso poder de gêmeos…$"
 
 Route8_Text_AnnePostBattle::
-    .string "Anne: I'm raising Pokémon with\n"
-    .string "Eli.$"
+    .string "Anne: Estou criando Pokémon com\n"
+    .string "o Eli.$"
 
 Route8_Text_AnneNotEnoughMons::
-    .string "Anne: Hi, hi! Let's battle!\n"
-    .string "But bring two Pokémon.$"
+    .string "Anne: Oi, oi! Vamos batalhar!\n"
+    .string "Mas traga dois Pokémon.$"
 
 Route8_EventScript_Ricardo::
 	trainerbattle_single TRAINER_BIKER_RICARDO, Route8_Text_RicardoIntro, Route8_Text_RicardoDefeat
@@ -248,15 +249,15 @@ Route8_EventScript_Ricardo::
 	end
 
 Route8_Text_RicardoIntro::
-    .string "My bike's acting up, man.$"
+    .string "Minha moto tá falhando, cara.$"
 
 Route8_Text_RicardoDefeat::
-    .string "Aww, man.\n"
-    .string "I'm not into this.$"
+    .string "Pô, cara.\n"
+    .string "Não tô a fim disso.$"
 
 Route8_Text_RicardoPostBattle::
-    .string "I got grass caught up in my\n"
-    .string "spokes, man.$"
+    .string "Enroscou grama nos meus raios,\n"
+    .string "cara.$"
 
 Route8_EventScript_Jaren::
 	trainerbattle_single TRAINER_BIKER_JAREN, Route8_Text_JarenIntro, Route8_Text_JarenDefeat
@@ -264,15 +265,15 @@ Route8_EventScript_Jaren::
 	end
 
 Route8_Text_JarenIntro::
-    .string "Clear the way, or I'll run you\n"
-    .string "down!$"
+    .string "Saia da frente, ou vou passar por\n"
+    .string "cima de você!$"
 
 Route8_Text_JarenDefeat::
-    .string "You for real, kid?$"
+    .string "É sério mesmo, pivete?$"
 
 Route8_Text_JarenPostBattle::
-    .string "Don't think you're all special and\n"
-    .string "all just because of this.$"
+    .string "Não vá pensando que você é grande coisa\n"
+    .string "só por causa disso.$"
 
 Route8_RocketFugitive::
     trainerbattle_single TRAINER_FUGITIVE_M, RocketFugitive_Text_Intro, RocketFugitive_Text_Defeat
@@ -297,8 +298,8 @@ Route8_EventScript_Beedrill::
 	end
 
 Route8_Text_Beedrill:
-	.string "The Beedrill was spinning on a dime.\n"
-    .string "Now it is stopped and stares at you.$"
+	.string "O Beedrill estava girando em círculos.\n"
+    .string "Agora parou e encara você.$"
 
 Route8_EventScript_AromaLadyPhoebe::
 	lock
@@ -311,17 +312,17 @@ Route8_EventScript_AromaLadyPhoebe::
 	end
 
 Route8_Text_PhoebeIntro:
-	.string "Round and round and round I go.\n"
-	.string "A trainer approaches! I'll take\l"
-	.string "them for a spin.$"
+	.string "Gira, gira e gira sem parar!\n"
+	.string "Um treinador se aproxima! Vou levá-lo\l"
+	.string "para dar uma volta!$"
 
 Route8_Text_PhoebeDefeat:
-	.string "You spun me right round!$"
+	.string "Você me fez rodar em círculos!$"
 
 Route8_Text_PhoebePostBattle:
-	.string "You spin me right round, baby\n"
-    .string "right round. Like a record, baby,\l"
-    .string "right round, round, round.$"
+	.string "Você me faz girar em círculos, amor,\n"
+    .string "em círculos. Como um disco, querido,\l"
+    .string "rodando, rodando, rodando.$"
 
 Route8_EventScript_MegaHintBeedrill::    
     goto_if_set FLAG_GOT_BEEDRILLITE, Route8_EventScript_PhoebeDefeated
@@ -331,11 +332,11 @@ Route8_EventScript_MegaHintBeedrill::
     end
     
 Route8_Text_BeedrillMegaHint:
-    .string "What was that? You wish to know\n"
-    .string "where I found the Mega Stone?\p"
-    .string "Go round and round in Viridian\n"
-    .string "Forest to a humble cabin. That\l"
-    .string "is where life's turns lead me.$"
+    .string "O que foi? Quer saber onde foi que\n"
+    .string "eu encontrei a Megapedra?\p"
+    .string "Dê voltas e voltas na Floresta de\n"
+    .string "Viridian até uma cabana humilde. Foi\l"
+    .string "para onde as voltas da vida me levaram.$"
 
 Route8_EventScript_PhoebeDefeated::
     msgbox PhoebeDefeated_Text MSGBOX_DEFAULT
@@ -343,10 +344,10 @@ Route8_EventScript_PhoebeDefeated::
 	end
 
 PhoebeDefeated_Text:	
-    .string "Life is too short to not give\n"
-    .string "things a chance. Take the wheel\l"
-    .string "of your life and do doughnuts\l"
-    .string "in the parking lot of your life!$"
+    .string "A vida é curta demais para não dar\n"
+    .string "uma chance às coisas. Assuma o volante\l"
+    .string "da sua vida e faça zerinhos no\l"
+    .string "estacionamento do seu destino!$"
 
 Route8_EventScript_BeedrillDefeated::
 	msgbox BeedrillDefeated MSGBOX_DEFAULT
@@ -354,7 +355,7 @@ Route8_EventScript_BeedrillDefeated::
 	end
 
 BeedrillDefeated:	
-	.string "Watching the Beedrill and its\n"
-	.string "trainer spin on a dime reminds\l"
-    .string "you of that movie with dancing\l"
-    .string "dorks at a gas station.$"
+	.string "Ver o Beedrill e sua treinadora\n"
+	.string "rodopiando sem parar faz você se\l"
+    .string "lembrar daquele filme com idiotas\l"
+    .string "dançando em um posto de gasolina.$"

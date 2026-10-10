@@ -6,5 +6,5 @@ UndergroundPath_WestEntrance_EventScript_BaldingMan::
 	end
 
 UndergroundPath_WestEntrance_Text_SleepyMonNearCeladon::
-    .string "I heard a sleepy Pokémon appeared\n"
-    .string "out near Celadon City, too.$"
+    .string "Ouvi dizer que um Pokémon sonolento\n"
+    .string "apareceu perto da Cidade de Celadon também.$"

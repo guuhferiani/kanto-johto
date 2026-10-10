@@ -5,6 +5,6 @@ UndergroundPath_EastEntrance_EventScript_Woman::
 	end
 
 UndergroundPath_EastEntrance_Text_DoYouGoToCeladonDeptStore::
-    .string "The Department Store in Celadon\n"
-    .string "has a great selection.\p"
-    .string "Do you go there very often?$"
+    .string "A Loja de Departamentos em Celadon\n"
+    .string "tem uma variedade incrível.\p"
+    .string "Você costuma ir muito lá?$"

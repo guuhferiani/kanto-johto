@@ -18,8 +18,8 @@ Route7_EventScript_UndergroundPathSign::
 	end
 
 Route7_Text_UndergroundPathSign::
-    .string "Underground Path\n"
-    .string "Celadon City - Lavender Town$"
+    .string "Via Subterrânea\n"
+    .string "Cidade de Celadon - Vilarejo de Lavender$"
 
 Route7_RocketFugitive::
     trainerbattle_single TRAINER_FUGITIVE_F, RocketFugitive_Text_Intro, RocketFugitive_Text_Defeat
