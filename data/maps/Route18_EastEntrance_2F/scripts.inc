@@ -19,10 +19,10 @@ Route18_EastEntrance_2F_EventScript_LittleGirl::
 	end
 
 Route18_EastEntrance_2F_Text_TakeThesePads::
-	.string "People ride their bikes really fast\n"
-	.string "on the Cycling Road.\p"
-	.string "You should take these in case you\n"
-	.string "wipe out!$"
+	.string "As pessoas andam muito rápido de bike\n"
+	.string "na Rodovia dos Ciclistas.\p"
+	.string "Você devia levar isto caso leve\n"
+	.string "um tombo!$"
 
 Route18_EastEntrance_2F_EventScript_LittleGirl2::
 	msgbox Route18_EastEntrance_2F_Text_Safety, MSGBOX_NPC
@@ -30,17 +30,15 @@ Route18_EastEntrance_2F_EventScript_LittleGirl2::
 	end
 
 Route18_EastEntrance_2F_Text_Safety::
-	.string "Safety is important!$"
+	.string "Segurança é fundamental!$"
 
 Route18_EastEntrance_2F_Text_PalletTownInWest::
-    .string "Let's see what the binoculars have\n"
-    .string "to show…\p"
-    .string "Pallet Town is in the west.$"
+    .string "Vejamos o que os binóculos mostram…\p"
+    .string "Pallet fica a oeste daqui.$"
 
 Route18_EastEntrance_2F_Text_PeopleSwimming::
-    .string "Let's see what the binoculars have\n"
-    .string "to show…\p"
-    .string "There are people swimming.$"
+    .string "Vejamos o que os binóculos mostram…\p"
+    .string "Há pessoas nadando.$"
 
 Route18_EastEntrance_2F_EventScript_Haden::
 	lock
@@ -71,12 +69,12 @@ Route18_EastEntrance_2F_EventScript_Haden::
 	end
 
 Route18_EastEntrance_2F_Text_HeyThanks::
-	.string "Hey, thanks!$"
+	.string "Ei, muito obrigado!$"
 
 Route18_EastEntrance_2F_Text_LookingForMonWannaTradeForMon::
-	.string "Hi!\n"
-	.string "Do you have a {STR_VAR_1}?\p"
-	.string "Want to trade it for my\n"
+	.string "Oi!\n"
+	.string "Você tem um {STR_VAR_1}?\p"
+	.string "Quer trocá-lo pelo meu\n"
 	.string "{STR_VAR_2}?$"
 
 Route18_EastEntrance_2F_EventScript_DeclineTrade::
@@ -85,7 +83,7 @@ Route18_EastEntrance_2F_EventScript_DeclineTrade::
 	end
 
 Route18_EastEntrance_2F_Text_DeclinedTrade::
-	.string "That's too bad.$"
+	.string "Que pena.$"
 
 Route18_EastEntrance_2F_EventScript_NotRequestedMon::
 	bufferspeciesname STR_VAR_1, VAR_0x8009
@@ -94,9 +92,9 @@ Route18_EastEntrance_2F_EventScript_NotRequestedMon::
 	end
 
 Route18_EastEntrance_2F_Text_WhatThatsNotMon::
-	.string "…This is no {STR_VAR_1}.\p"
-	.string "If you get one, please trade it\n"
-	.string "to me!$"
+	.string "…Isto não é um {STR_VAR_1}.\p"
+	.string "Se conseguir um, por favor, troque\n"
+	.string "comigo!$"
 
 Route18_EastEntrance_2F_EventScript_AlreadyTraded::
 	msgbox Route18_EastEntrance_2F_Text_IsntMyOldMonGreat
@@ -104,5 +102,5 @@ Route18_EastEntrance_2F_EventScript_AlreadyTraded::
 	end
 
 Route18_EastEntrance_2F_Text_IsntMyOldMonGreat::
-	.string "How is my old {STR_VAR_2}?\n"
-	.string "My {STR_VAR_1} is doing great!$"
+	.string "Como está meu antigo {STR_VAR_2}?\n"
+	.string "Meu {STR_VAR_1} está indo muito bem!$"

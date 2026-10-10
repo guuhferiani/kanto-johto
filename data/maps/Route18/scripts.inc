@@ -42,14 +42,14 @@ Route18_EventScript_Ramiro::
 
 Route18_Text_RamiroIntro::
     .string "Kurukkoo!\n"
-    .string "How do you like my birdcall?$"
+    .string "O que achou do meu canto de pássaro?$"
 
 Route18_Text_RamiroDefeat::
-    .string "I had to bug you!$"
+    .string "Tive que incomodar você!$"
 
 Route18_Text_RamiroPostBattle::
-    .string "I collect sea POKéMON on weekends\n"
-    .string "because the sea is so close.$"
+    .string "Eu coleciono Pokémon marinhos aos\n"
+    .string "fins de semana porque o mar é muito perto.$"
 
 Route18_EventScript_Jacob::
 	trainerbattle_single TRAINER_BIRD_KEEPER_JACOB, Route18_Text_JacobIntro, Route18_Text_JacobDefeat
@@ -57,23 +57,23 @@ Route18_EventScript_Jacob::
 	end
 
 Route18_Text_JacobIntro::
-    .string "This is my turf!\n"
-    .string "Get out of here!$"
+    .string "Este é o meu território!\n"
+    .string "Saia daqui!$"
 
 Route18_Text_JacobDefeat::
-    .string "Darn!$"
+    .string "Droga!$"
 
 Route18_Text_JacobPostBattle::
-    .string "This is my fave area for catching\n"
-    .string "Pokémon.$"
+    .string "Esta é a minha área favorita para\n"
+    .string "capturar Pokémon.$"
 
 Route18_Text_RouteSign::
-    .string "Route 18\n"
-    .string "Celadon City - Fuchsia City $"
+    .string "Rota 18\n"
+    .string "Celadon - Fuchsia$"
 
 Route18_Text_CyclingRoadSign::
-    .string "Cycling Road\n"
-    .string "No pedestrians permitted!$"
+    .string "Rodovia dos Ciclistas\n"
+    .string "Proibida a entrada de pedestres!$"
 
 Route18_EventScript_Wilton::
 	trainerbattle_single REMATCHABLE_TRAINER_BIRD_KEEPER_WILTON_1, Route18_Text_WiltonIntro, Route18_Text_WiltonDefeat, Route18_EventScript_RegisterWiltonAfterBattle
@@ -84,14 +84,14 @@ Route18_EventScript_Wilton::
 	end
 
 Route18_Text_WiltonIntro::
-    .string "I always check every grassy area\n"
-    .string "for new Pokémon.$"
+    .string "Eu sempre vasculho cada área de mato\n"
+    .string "em busca de novos Pokémon.$"
 
 Route18_Text_WiltonDefeat::
-    .string "Tch!$"
+    .string "Tsc!$"
 
 Route18_Text_WiltonPostBattle::
-    .string "I wish I had a bike!$"
+    .string "Como eu queria ter uma bicicleta!$"
 
 Route18_EventScript_RegisterWiltonAfterBattle::
 	special PlayerFaceTrainerAfterBattle
@@ -102,9 +102,9 @@ Route18_EventScript_RegisterWiltonAfterBattle::
 	end
 
 Route18_Text_WiltonRegister:
-	.string "You're working on a PokéDex?\p"
-	.string "Call me if you find any good\n"
-	.string "spots to catch Pokémon!$"
+	.string "Você está completando a Pokédex?\p"
+	.string "Me ligue se encontrar bons lugares\n"
+	.string "para capturar Pokémon!$"
 
 Route18_EventScript_WiltonRematch::
 	trainerbattle_rematch REMATCHABLE_TRAINER_BIRD_KEEPER_WILTON_1, Route18_Text_WiltonRematchIntro, Route18_Text_WiltonDefeat
@@ -112,12 +112,12 @@ Route18_EventScript_WiltonRematch::
 	end
 
 Route18_Text_WiltonRematchIntro::
-	.string "Hey {PLAYER}!\n"
-	.string "Catch any rare Pokémon?$"
+	.string "Ei, {PLAYER}!\n"
+	.string "Capturou algum Pokémon raro?$"
 
 Route18_Text_WiltonRematchPostBattle::
-	.string "If I had a bike, I could go\n"
-	.string "search for Pokémon anywhere!$"
+	.string "Se eu tivesse uma bicicleta, poderia ir\n"
+	.string "procurar Pokémon em qualquer lugar!$"
 
 Route18_RocketFugitive::
     trainerbattle_single TRAINER_FUGITIVE_M, RocketFugitive_Text_Intro, RocketFugitive_Text_Defeat
@@ -142,7 +142,7 @@ Route18_EventScript_Pinsir::
 	end
 
 Route18_Text_Pinsir:
-	.string "Pinsir is chewing on a stick.$"
+	.string "Pinsir está mastigando um graveto.$"
 
 Route18_EventScript_AromaLadyLily::
 	lock
@@ -155,15 +155,15 @@ Route18_EventScript_AromaLadyLily::
 	end
 
 Route18_Text_LilyIntro:
-	.string "Another trainer appears!\n"
-	.string "Do you use bird Pokémon, too?$"
+	.string "Mais um treinador por aqui!\n"
+	.string "Você também usa Pokémon pássaro?$"
 
 Route18_Text_LilyDefeat:
-	.string "I lost? How wonderful!$"
+	.string "Eu perdi? Que maravilhoso!$"
 
 Route18_Text_LilyPostBattle:
-	.string "That was a great fight!\n"
-	.string "Don't you think so, Pinchy?$"
+	.string "Essa foi uma ótima batalha!\n"
+	.string "Não acha, Beliscão?$"
 
 Route18_EventScript_MegaHintPinsir::    
     goto_if_set FLAG_GOT_PINSIRITE, Route18_EventScript_LilyDefeated
@@ -173,9 +173,9 @@ Route18_EventScript_MegaHintPinsir::
     end
     
 Route18_Text_PinsirMegaHint:
-    .string "What's that? Mega Stone?\n"
-	.string "Oh that's right, I found mine\l"
-	.string "in the Safari Zone over there!$"
+    .string "O que é isso? Mega Pedra?\n"
+	.string "Ah, é verdade, eu encontrei a minha\l"
+	.string "na Zona do Safári logo ali!$"
 
 Route18_EventScript_LilyDefeated::
     msgbox LilyDefeated_Text MSGBOX_DEFAULT
@@ -183,9 +183,9 @@ Route18_EventScript_LilyDefeated::
 	end
 
 LilyDefeated_Text:	
-	.string "Thank you for the great match!\n"
-	.string "I can only rechallenge Wilton\l"
-	.string "so often, you know.$"
+	.string "Obrigada pela ótima partida!\n"
+	.string "Eu só posso desafiar o Wilton de tempos\l"
+	.string "em tempos, sabe como é.$"
 
 Route18_EventScript_PinsirDefeated::
 	msgbox PinsirDefeated MSGBOX_DEFAULT
@@ -193,4 +193,4 @@ Route18_EventScript_PinsirDefeated::
 	end
 
 PinsirDefeated:	
-	.string "Pinsir motions for a high five.$"
+	.string "Pinsir gesticula pedindo um toca aqui.$"

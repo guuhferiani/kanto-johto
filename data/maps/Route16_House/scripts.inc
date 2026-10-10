@@ -41,22 +41,22 @@ Route16_House_EventScript_Pidgeot::
 	end
 
 Route16_House_Text_FoundMySecretRetreat::
-    .string "Oh, dear.\n"
-    .string "You've found my secret retreat.\p"
-    .string "Please don't tell anyone I'm here.\n"
-    .string "I'll make it up to you with this!$"
+    .string "Oh, céus.\n"
+    .string "Você descobriu meu refúgio secreto.\p"
+    .string "Por favor, não conte a ninguém que estou aqui.\n"
+    .string "Vou compensar você com isto!$"
 
 Route16_House_Text_ReceivedHM02FromGirl::
-    .string "{PLAYER} received HM02\n"
-    .string "from the girl.$"
+    .string "{PLAYER} recebeu a MO02\n"
+    .string "da garota.$"
 
 Route16_House_Text_ExplainHM02::
-    .string "HM02 is Fly.\n"
-    .string "It's a wonderfully convenient move.\p"
-    .string "Please, put it to good use.$"
+    .string "A MO02 é o Voar.\n"
+    .string "É um movimento incrivelmente útil.\p"
+    .string "Por favor, faça bom uso dele.$"
 
 Route16_House_Text_DontHaveAnyRoomForThis::
-    .string "You don't have any room for this.$"
+    .string "Você não tem espaço para isto.$"
 
 Route16_House_Text_Pidgeot::
     .string "Pidgeot: Kyueen!$"
