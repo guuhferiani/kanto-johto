@@ -58,30 +58,30 @@ RocketHideout_B4F_EventScript_Giovanni::
 	end
 
 RocketHideout_B4F_Text_GiovanniIntro::
-    .string "???: So! I must say, I am impressed\n"
-    .string "you got here.\p"
-    .string "Team Rocket captures Pokémon from\n"
-    .string "around the world.\p"
-    .string "They're important tools for keeping\n"
-    .string "our criminal enterprise going.\p"
-    .string "I am the leader, Giovanni!\p"
-    .string "For your insolence, you will feel a\n"
-    .string "world of pain!$"
+    .string "???: Então! Devo dizer que estou\n"
+    .string "impressionado por ter chegado aqui.\p"
+    .string "A Equipe Rocket captura Pokémon do\n"
+    .string "mundo inteiro.\p"
+    .string "Eles são ferramentas vitais para manter\n"
+    .string "nosso império criminoso funcionando.\p"
+    .string "Eu sou o líder, Giovanni!\p"
+    .string "Pela sua insolência, você sentirá uma\n"
+    .string "dor inesquecível!$"
 
 RocketHideout_B4F_Text_GiovanniDefeat::
-    .string "What!\n"
-    .string "This can't be!$"
+    .string "O quê!\n"
+    .string "Isso é impossível!$"
 
 RocketHideout_B4F_Text_GiovanniPostBattle::
-    .string "Giovanni: I see that you raise\n"
-    .string "Pokémon with utmost care.\p"
-    .string "A child like you would never\n"
-    .string "understand what I hope to achieve.\p"
-    .string "I shall step aside this time, and\n"
-    .string "release this Cubone back to you.$"
+    .string "Giovanni: Vejo que você cria seus\n"
+    .string "Pokémon com extremo cuidado.\p"
+    .string "Uma criança como você jamais entenderia\n"
+    .string "o que pretendo alcançar.\p"
+    .string "Desta vez vou recuar, e libertar\n"
+    .string "este Cubone de volta para você.$"
 
 RocketHideout_B4F_Text_MeetAgain::
-    .string "I hope we meet again…$"
+    .string "Espero que nos encontremos de novo…$"
 
 RocketHideout_B4F_EventScript_Grunt1::
 	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_18, RocketHideout_B4F_Text_Grunt1Intro, RocketHideout_B4F_Text_Grunt1Defeat, RocketHideout_B4F_EventScript_DefeatedGrunt1
@@ -90,11 +90,11 @@ RocketHideout_B4F_EventScript_Grunt1::
 	end
 
 RocketHideout_B4F_Text_Grunt1Intro::
-    .string "The elevator doesn't work?\n"
-    .string "Who has the Lift Key?$"
+    .string "O elevador não funciona?\n"
+    .string "Quem está com a Chave do Elevador?$"
 
 RocketHideout_B4F_Text_Grunt1Defeat::
-    .string "No!$"
+    .string "Não!$"
 
 RocketHideout_B4F_EventScript_DefeatedGrunt1::
 	msgbox RocketHideout_B4F_Text_Grunt1PostBattle
@@ -104,8 +104,8 @@ RocketHideout_B4F_EventScript_DefeatedGrunt1::
 	end
 
 RocketHideout_B4F_Text_Grunt1PostBattle::
-    .string "Oh, no!\n"
-    .string "I dropped the Lift Key!$"
+    .string "Ah, não!\n"
+    .string "Eu deixei a Chave do Elevador cair!$"
 
 RocketHideout_B4F_EventScript_LiftKey::
 	lock
@@ -124,15 +124,14 @@ RocketHideout_B4F_EventScript_Grunt2::
 	end
 
 RocketHideout_B4F_Text_Grunt2Intro::
-    .string "I know you!\n"
-    .string "You ruined our plans at Mt. Moon!$"
+    .string "Eu conheço você!\n"
+    .string "Você arruinou nossos planos no Monte Lua!$"
 
 RocketHideout_B4F_Text_Grunt2Defeat::
-    .string "Burned again!$"
+    .string "Derrotado de novo!$"
 
 RocketHideout_B4F_Text_Grunt2PostBattle::
-    .string "Do you have something against Team\n"
-    .string "Rocket?$"
+    .string "Você tem algo contra a Equipe Rocket?$"
 
 RocketHideout_B4F_EventScript_DefeatedGrunt2::
 	setvar NUM_DOOR_GRUNTS_DEFEATED, 0
@@ -153,16 +152,16 @@ RocketHideout_B4F_EventScript_Grunt3::
 	end
 
 RocketHideout_B4F_Text_Grunt3Intro::
-    .string "How can you not see the beauty of\n"
-    .string "our evil?$"
+    .string "Como você não consegue ver a beleza\n"
+    .string "da nossa maldade?$"
 
 RocketHideout_B4F_Text_Grunt3Defeat::
-    .string "Boss!\n"
-    .string "I'm sorry I failed you!$"
+    .string "Chefe!\n"
+    .string "Perdoe-me por falhar!$"
 
 RocketHideout_B4F_Text_Grunt3PostBattle::
-    .string "You may have beaten me, but\n"
-    .string "more of us are coming!$"
+    .string "Você pode até ter me vencido, mas\n"
+    .string "outros de nós estão a caminho!$"
 
 RocketHideout_B4F_EventScript_DefeatedGrunt3::
 	setvar NUM_DOOR_GRUNTS_DEFEATED, 0
@@ -208,33 +207,32 @@ RocketHideout_B4F_EventScript_RepositionRockets::
 	return
 
 RocketHideout_B4F_Text_JamesSorry:
-	.string "James: For what it's worth, I\n"
-	.string "am sorry about what happened to\l"
-	.string "that Cubone's mother...$"
+	.string "James: Se serve de consolo, eu sinto\n"
+	.string "muito pelo que aconteceu com a mãe\l"
+	.string "daquele Cubone…$"
 	
 RocketHideout_B4F_Text_JessieJamesIntro:
-	.string "Jessie: You're that twerp that\n"
-	.string "keeps interrupting our schemes!\p"
-	.string "James: You're starting to take\n"
-	.string "the fun out of all of this.$"
+	.string "Jessie: É você, o pirralho que vive\n"
+	.string "estragando os nossos planos!\p"
+	.string "James: Você já está tirando toda a\n"
+	.string "graça disso tudo.$"
 
 RocketHideout_B4F_Text_JessieJamesDefeat:
-	.string "Jessie: No! No! No!\p"
-	.string "James: This is really starting\n"
-	.string "to get to me!$"
+	.string "Jessie: Não! Não! Não!\p"
+	.string "James: Isso já está me dando nos nervos!$"
 
 RocketHideout_B4F_Text_JessieDone:
-	.string "Jessie: You may have defeated\n"
-	.string "me again, but the Boss will\l"
-	.string "finally get rid of you for good.$"
+	.string "Jessie: Você pode ter nos derrotado\n"
+	.string "de novo, mas o Chefe vai se livrar\l"
+	.string "de você de uma vez por todas.$"
 
 RocketHideout_B4F_Text_JessieJamesPostBattle:
-	.string "Jessie: You may have defeated\n"
-	.string "me again, but the Boss will\l"
-	.string "finally get rid of you for good.\p"
-	.string "James: For what it's worth, I\n"
-	.string "am sorry about what happened to\l"
-	.string "that Cubone's mother...$"
+	.string "Jessie: Você pode ter nos derrotado\n"
+	.string "de novo, mas o Chefe vai se livrar\l"
+	.string "de você de uma vez por todas.\p"
+	.string "James: Se serve de consolo, eu sinto\n"
+	.string "muito pelo que aconteceu com a mãe\l"
+	.string "daquele Cubone…$"
 
 //RocketHideout_B4F_EventScript_Jessie::
 	//trainerbattle_single TRAINER_ROCKET_HIDEOUT_JESSIE, RocketHideout_B4F_Text_JessieIntro, RocketHideout_B4F_Text_JessieDefeat
@@ -386,8 +384,7 @@ RocketHideout_B4F_EventScript_Kangaskhan::
 	end
 
 RocketHideout_B4F_Text_Kangaskhan:
-	.string "There's something sinister about\n"
-	.string "this Kangaskhan.$"
+	.string "Há algo de sinistro sobre este Kangaskhan.$"
 
 RocketHideout_B4F_EventScript_WaiterTony::
 	lock
@@ -400,21 +397,21 @@ RocketHideout_B4F_EventScript_WaiterTony::
 	end
 
 RocketHideout_B4F_Text_TonyIntro:
-	.string "How dare you enter the offices of\n"
-	.string "the great Giovanni!\p"
-	.string "...\p"
-	.string "Wait... it can't be!\p"
-	.string "You're the brat who dismantled\n"
-	.string "Giovanni's organization?\p"
-	.string "Kangaskhan, crush them!$"
+	.string "Como ousa entrar nos aposentos do\n"
+	.string "grande Giovanni!\p"
+	.string "…\p"
+	.string "Espere… não pode ser!\p"
+	.string "Você é o pirralho que desmantelou\n"
+	.string "a organização do Giovanni?\p"
+	.string "Kangaskhan, esmague-o!$"
 
 RocketHideout_B4F_Text_TonyDefeat:
-	.string "I see now....$"
+	.string "Agora eu entendo…$"
 
 RocketHideout_B4F_Text_TonyPostBattle:
-	.string "It is clear to me now.\p"
-	.string "Team Rocket had no choice but\n"
-	.string "to disband. You forced them.$"
+	.string "Agora tudo está claro para mim.\p"
+	.string "A Equipe Rocket não teve escolha a não\n"
+	.string "ser debandar. Você os forçou a isso.$"
 
 RocketHideout_B4F_EventScript_MegaHintKangaskhan::    
     goto_if_set FLAG_GOT_KANGASKHANITE, RocketHideout_B4F_EventScript_TonyDefeated
@@ -424,11 +421,11 @@ RocketHideout_B4F_EventScript_MegaHintKangaskhan::
     end
     
 RocketHideout_B4F_Text_KangaskhanMegaHint:
-    .string "Look kid, don't hurt us!\n"
-	.string "I can tell you where to find your\l"
-	.string "very own Kangaskhanite!.\p"
-	.string "I found it on the ground in\n"
-	.string "the Safari Zone.$"
+    .string "Olhe, pirralho, não nos machuque!\n"
+	.string "Eu posso te dizer onde encontrar a\l"
+	.string "sua própria Kangaskhanita!\p"
+	.string "Eu encontrei ela jogada no chão na\n"
+	.string "Zona do Safári.$"
 
 RocketHideout_B4F_EventScript_TonyDefeated::
     msgbox TonyDefeated_Text MSGBOX_DEFAULT
@@ -436,8 +433,8 @@ RocketHideout_B4F_EventScript_TonyDefeated::
 	end
 
 TonyDefeated_Text:	
-	.string "This surely can't be the end\n"
-	.string "of the great Giovanni's story.$"
+	.string "Este com certeza não pode ser o fim da\n"
+	.string "história do grande Giovanni.$"
 
 RocketHideout_B4F_EventScript_KangaskhanDefeated::
 	msgbox KangaskhanDefeated MSGBOX_DEFAULT
@@ -445,8 +442,8 @@ RocketHideout_B4F_EventScript_KangaskhanDefeated::
 	end
 
 KangaskhanDefeated:	
-	.string "Kangaskhan takes a deep breath\n"
-	.string "and gives a dissatisfactory grunt.$"
+	.string "Kangaskhan respira fundo e solta\n"
+	.string "um grunhido insatisfeito.$"
 
 RocketHideout_B4F_EventScript_Burglars_TM35::
 	lock
@@ -460,10 +457,10 @@ RocketHideout_B4F_EventScript_Burglars_TM35::
 	end
 
 RocketHideout_B4F_Burglars_Text_GetTM:
-    .string "Team Rocket left a lot of good\n"
-    .string "loot behind when they left.\p"
-    .string "Here, take this.\n"
-    .string "There's plenty to go around!$"
+    .string "A Equipe Rocket deixou muito espólio\n"
+    .string "bom para trás quando vazou.\p"
+    .string "Aqui, pegue isto.\n"
+    .string "Tem de sobra para todo mundo!$"
 
 RocketHideout_B4F_EventScript_GotTM35::
     msgbox RocketHideout_B4F_Burglars_Text_BurglarPostBattle5, MSGBOX_AUTOCLOSE
@@ -471,14 +468,14 @@ RocketHideout_B4F_EventScript_GotTM35::
     end
 
 RocketHideout_B4F_Burglars_Text_BurglarIntro5:
-    .string "Stealing is cool!$"
+    .string "Roubar é muito maneiro!$"
 
 RocketHideout_B4F_Burglars_Text_BurglarDefeat5:
-    .string "Losing is not!$"
+    .string "Perder não é nada maneiro!$"
 
 RocketHideout_B4F_Burglars_Text_BurglarPostBattle5:
-    .string "I just love stealing so much.\n"
-    .string "Its the only thing I love!$"
+    .string "Eu simplesmente amo roubar.\n"
+    .string "É a única coisa que eu amo!$"
 
 RocketHideout_B4F_EventScript_TM35_Fix::
 	goto_if_set FLAG_GOT_TM35, RocketHideout_B4F_EventScript_GotTM35
@@ -489,5 +486,5 @@ RocketHideout_B4F_EventScript_TM35_Fix::
 	end
 
 RocketHideout_B4F_Text_YouForgotThis:
-	.string "I didn't know I was supposed to\n"
-	.string "share before. Here you go!$"
+	.string "Eu não sabia que tinha que dividir\n"
+	.string "antes. Tome aqui!$"

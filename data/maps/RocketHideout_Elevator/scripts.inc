@@ -21,7 +21,7 @@ RocketHideout_Elevator_EventScript_FloorSelect::
 	end
 
 Text_WhichFloorWillYouPick::
-	.string "Which floor will you pick?$"
+	.string "Qual andar você deseja?$"
 
 RocketHideout_Elevator_NeedKey::
 	msgbox RocketHideout_Elevator_Text_AppearsToNeedAKey, MSGBOX_AUTOCLOSE
@@ -29,7 +29,7 @@ RocketHideout_Elevator_NeedKey::
 	end
 
 RocketHideout_Elevator_Text_AppearsToNeedAKey::
-    .string "It appears to need a key.$"
+    .string "Parece precisar de uma chave.$"
 
 @ Below scripts ensure the cursor for floor select always starts on the current floor
 RocketHideout_Elevator_EventScript_FloorSelectFromB1F::

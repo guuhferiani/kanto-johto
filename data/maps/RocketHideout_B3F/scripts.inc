@@ -7,17 +7,17 @@ RocketHideout_B3F_EventScript_Grunt1::
 	end
 
 RocketHideout_B3F_Text_Grunt1Intro::
-    .string "Stop meddling in Team Rocket's\n"
-    .string "affairs or else!$"
+    .string "Pare de se meter nos assuntos da\n"
+    .string "Equipe Rocket, senão vai ver só!$"
 
 RocketHideout_B3F_Text_Grunt1Defeat::
-    .string "Oof!\n"
-    .string "Taken down!$"
+    .string "Ugh!\n"
+    .string "Fui derrotado!$"
 
 RocketHideout_B3F_Text_Grunt1PostBattle::
     .string "Cubone?\n"
-    .string "Oh, that Pokémon we stole.\p"
-    .string "It's here somewhere.$"
+    .string "Ah, aquele Pokémon que roubamos.\p"
+    .string "Ele está em algum lugar por aqui.$"
 
 RocketHideout_B3F_EventScript_Grunt2::
 	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_15, RocketHideout_B3F_Text_Grunt2Intro, RocketHideout_B3F_Text_Grunt2Defeat
@@ -25,17 +25,17 @@ RocketHideout_B3F_EventScript_Grunt2::
 	end
 
 RocketHideout_B3F_Text_Grunt2Intro::
-    .string "We got word from upstairs that you\n"
-    .string "were coming!$"
+    .string "Ficamos sabendo lá de cima que você\n"
+    .string "estava vindo!$"
 
 RocketHideout_B3F_Text_Grunt2Defeat::
-    .string "What?\n"
-    .string "I lost? No!$"
+    .string "O quê?\n"
+    .string "Eu perdi? Não!$"
 
 RocketHideout_B3F_Text_Grunt2PostBattle::
-    .string "Go ahead and go!\p"
-    .string "But you can't run the elevator\n"
-    .string "without the Lift Key.$"
+    .string "Pode ir em frente!\p"
+    .string "Mas você não vai conseguir usar o elevador\n"
+    .string "sem a Chave do Elevador.$"
 
 RocketHideout_B3F_EventScript_ItemRareCandy::
 	finditem ITEM_RARE_CANDY, 1
