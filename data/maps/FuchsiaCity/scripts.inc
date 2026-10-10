@@ -34,9 +34,9 @@ FuchsiaCity_EventScript_FossilMonSign::
 	end
 
 FuchsiaCity_Text_KabutoSign::
-    .string "Name: Kabuto\n"
-    .string "An extremely rare Pokémon that was\l"
-    .string "regenerated from a fossil.$"
+    .string "Nome: Kabuto\n"
+    .string "Um Pokémon extremamente raro que foi\l"
+    .string "regenerado a partir de um fóssil.$"
 
 FuchsiaCity_EventScript_OmanyteSign::
 	setvar VAR_0x8004, SPECIES_OMANYTE
@@ -48,9 +48,9 @@ FuchsiaCity_EventScript_OmanyteSign::
 	end
 
 FuchsiaCity_Text_OmanyteSign::
-    .string "Name: Omanyte\n"
-    .string "An extremely rare Pokémon that was\l"
-    .string "regenerated from a fossil.$"
+    .string "Nome: Omanyte\n"
+    .string "Um Pokémon extremamente raro que foi\l"
+    .string "regenerado a partir de um fóssil.$"
 
 FuchsiaCity_EventScript_GymSign::
 	lockall
@@ -59,9 +59,9 @@ FuchsiaCity_EventScript_GymSign::
 	end
 
 FuchsiaCity_Text_GymSign::
-    .string "Fuchsia City Pokémon GYM\n"
-    .string "Leader: Koga\l"
-    .string "The Poisonous Ninja Master$"
+    .string "Ginásio Pokémon de Fuchsia\n"
+    .string "Líder: Koga\l"
+    .string "O Mestre Ninja Venenoso$"
 
 FuchsiaCity_EventScript_ChanseySign::
 	lockall
@@ -74,8 +74,8 @@ FuchsiaCity_EventScript_ChanseySign::
 	end
 
 FuchsiaCity_Text_ChanseySign::
-    .string "Name: Chansey\n"
-    .string "Catching one is all up to chance.$"
+    .string "Nome: Chansey\n"
+    .string "Capturar uma depende só da sorte.$"
 
 FuchsiaCity_EventScript_VoltorbSign::
 	lockall
@@ -88,8 +88,8 @@ FuchsiaCity_EventScript_VoltorbSign::
 	end
 
 FuchsiaCity_Text_VoltorbSign::
-    .string "Name: Voltorb\n"
-    .string "The very image of a POKé BALL.$"
+    .string "Nome: Voltorb\n"
+    .string "A própria imagem de uma Poké Bola.$"
 
 FuchsiaCity_EventScript_KangaskhanSign::
 	lockall
@@ -102,9 +102,9 @@ FuchsiaCity_EventScript_KangaskhanSign::
 	end
 
 FuchsiaCity_Text_KangaskhanSign::
-    .string "Name: Kangaskhan\p"
-    .string "A maternal Pokémon that raises its\n"
-    .string "young in a pouch on its belly.$"
+    .string "Nome: Kangaskhan\p"
+    .string "Um Pokémon maternal que cria seus\n"
+    .string "filhotes em uma bolsa na barriga.$"
 
 FuchsiaCity_EventScript_SlowpokeSign::
 	lockall
@@ -117,8 +117,8 @@ FuchsiaCity_EventScript_SlowpokeSign::
 	end
 
 FuchsiaCity_Text_SlowpokeSign::
-    .string "Name: Slowpoke\n"
-    .string "Friendly and very slow moving.$"
+    .string "Nome: Slowpoke\n"
+    .string "Amigável e se move muito devagar.$"
 
 FuchsiaCity_EventScript_LaprasSign::
 	lockall
@@ -131,49 +131,49 @@ FuchsiaCity_EventScript_LaprasSign::
 	end
 
 FuchsiaCity_Text_LaprasSign::
-    .string "Name: Lapras\n"
-    .string "AKA the king of the seas.$"
+    .string "Nome: Lapras\n"
+    .string "Também conhecido como o rei dos mares.$"
 
 FuchsiaCity_EventScript_CitySign::
 	msgbox FuchsiaCity_Text_CitySign, MSGBOX_SIGN
 	end
 
 FuchsiaCity_Text_CitySign::
-    .string "Fuchsia City\n"
-    .string "Behold! It's Passion Pink!$"
+    .string "Fuchsia\n"
+    .string "Veja! É Rosa Paixão!$"
 
 FuchsiaCity_EventScript_SafariZoneSign::
 	msgbox FuchsiaCity_Text_SafariZoneSign, MSGBOX_SIGN
 	end
 
 FuchsiaCity_Text_SafariZoneSign::
-    .string "Pokémon Paradise\n"
-    .string "Safari Zone$"
+    .string "Paraíso dos Pokémon\n"
+    .string "Zona do Safári$"
 
 FuchsiaCity_EventScript_SafariGameSign::
 	msgbox FuchsiaCity_Text_SafariGameSign, MSGBOX_SIGN
 	end
 
 FuchsiaCity_Text_SafariGameSign::
-    .string "Safari Game\n"
-    .string "Pokémon-U-Catch!$"
+    .string "Jogo do Safári\n"
+    .string "Pegue quantos puder!$"
 
 FuchsiaCity_EventScript_WardensHomeSign::
 	msgbox FuchsiaCity_Text_WardensHomeSign, MSGBOX_SIGN
 	end
 
 FuchsiaCity_Text_WardensHomeSign::
-    .string "Safari Zone\n"
-    .string "Warden's Home$"
+    .string "Zona do Safári\n"
+    .string "Casa do Guarda$"
 
 FuchsiaCity_EventScript_LittleBoy::
 	msgbox FuchsiaCity_Text_DidYouTrySafariGame, MSGBOX_NPC
 	end
 
 FuchsiaCity_Text_DidYouTrySafariGame::
-    .string "Did you try the Safari Game?\p"
-    .string "There are some rare Pokémon that\n"
-    .string "can only be caught there.$"
+    .string "Você já tentou o Jogo do Safári?\p"
+    .string "Há alguns Pokémon raros que só\n"
+    .string "podem ser capturados lá.$"
 
 
 FuchsiaCity_EventScript_OldMan::
@@ -181,10 +181,10 @@ FuchsiaCity_EventScript_OldMan::
 	end
 
 FuchsiaCity_Text_SafariZoneZooInFront::
-    .string "The Safari Zone has a zoo in front\n"
-    .string "of the entrance.\p"
-    .string "Out back is the Safari Game for\n"
-    .string "catching Pokémon.$"
+    .string "A Zona do Safári tem um zoológico\n"
+    .string "em frente à entrada.\p"
+    .string "Lá atrás fica o Jogo do Safári\n"
+    .string "para capturar Pokémon.$"
 
 
 FuchsiaCity_EventScript_Erik::
@@ -192,18 +192,18 @@ FuchsiaCity_EventScript_Erik::
 	end
 
 FuchsiaCity_Text_WheresSara::
-    .string "Erik: Where's Sara?\n"
-    .string "I said I'd meet her here.$"
+    .string "Erik: Onde está a Sara?\n"
+    .string "Eu combinei de encontrá-la aqui.$"
 
 FuchsiaCity_EventScript_Youngster::
 	msgbox FuchsiaCity_Text_ItemBallInThere, MSGBOX_NPC
 	end
 
 FuchsiaCity_Text_ItemBallInThere::
-    .string "That item ball in there…\n"
-    .string "Were you wanting that?\p"
-    .string "Me, too!\n"
-    .string "…Huh? That's a Pokémon?$"
+    .string "Aquela Poké Bola ali dentro…\n"
+    .string "Você também estava de olho nela?\p"
+    .string "Eu também!\n"
+    .string "…Ué? Aquilo é um Pokémon?$"
 
 FuchsiaCity_EventScript_Lass::
 	lock
@@ -213,8 +213,8 @@ FuchsiaCity_EventScript_Lass::
 	end
 
 FuchsiaCity_Text_MyFatherIsGymLeader::
-    .string "My father is the Gym Leader of\n"
-    .string "this town.\p"
-    .string "I'm training to use Poison Pokémon\n"
-    .string "as well as my father.$"
+    .string "Meu pai é o Líder do Ginásio\n"
+    .string "desta cidade.\p"
+    .string "Estou treinando para usar Pokémon\n"
+    .string "do tipo Venenoso tão bem quanto ele.$"
 

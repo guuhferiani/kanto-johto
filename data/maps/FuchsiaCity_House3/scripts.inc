@@ -90,13 +90,14 @@ FuchsiaCity_House3_EventScript_DaisyVisits::
     end
 
 FuchsiaCity_House3_Text_DaisyVisits:
-    .string "Oh, you know Daisy, too?\p"
-    .string "She visits us from time to time.\n"
-    .string "She's very kind to us.\p"
-    .string "My wife taught her everything she\n"
-    .string "knows about Berry Blending, too!\p"
-    .string "She's might even be better than her!\p"
-    .string "But don't tell my wife I said that!$"
+    .string "Ah, você também conhece a Daisy?\p"
+    .string "Ela nos visita de vez em quando.\n"
+    .string "Ela é muito gentil conosco.\p"
+    .string "Minha esposa ensinou a ela tudo o\n"
+    .string "que sabe sobre Mistura de Frutas!\p"
+    .string "Ela pode até estar melhor do que ela!\p"
+    .string "Mas não conte à minha esposa que eu\n"
+    .string "disse isso!$"
 
 FuchsiaCity_House3_EventScript_WholeFamily::
     msgbox FuchsiaCity_House3_Text_WarmsMyHeart, MSGBOX_NPC
@@ -105,8 +106,8 @@ FuchsiaCity_House3_EventScript_WholeFamily::
     end
 
 FuchsiaCity_House3_Text_WarmsMyHeart:
-    .string "It warms my heart to see my whole\n"
-    .string "family spending time together!$"
+    .string "Aquece o meu coração ver toda a minha\n"
+    .string "família passando um tempo junta!$"
 
 FuchsiaCity_House3_EventScript_OldestGrandhchild::
     msgbox FuchsiaCity_House3_Text_OldestGrandhchild, MSGBOX_NPC
@@ -115,9 +116,9 @@ FuchsiaCity_House3_EventScript_OldestGrandhchild::
     end
 
 FuchsiaCity_House3_Text_OldestGrandhchild:
-    .string "My oldest grandchild is visiting us\n"
-    .string "today!\p"
-    .string "She's a trainer just like you!$"
+    .string "Minha neta mais velha está nos\n"
+    .string "visitando hoje!\p"
+    .string "Ela é uma Treinadora igual a você!$"
 
 FuchsiaCity_House3_EventScript_NoVisitors::
     msgbox FuchsiaCity_House3_Text_NoVisitors, MSGBOX_NPC
@@ -126,11 +127,11 @@ FuchsiaCity_House3_EventScript_NoVisitors::
     end
 
 FuchsiaCity_House3_Text_NoVisitors:
-    .string "Getting older can be difficult.\p"
-    .string "Especially on days like today, when\n"
-    .string "we don't get any visitors...\p"
-    .string "But then you came, and that brightened\n"
-    .string "up our day!$"
+    .string "Envelhecer pode ser difícil.\p"
+    .string "Especialmente em dias como hoje, quando\n"
+    .string "não recebemos nenhuma visita…\p"
+    .string "Mas aí você veio, e isso alegrou\n"
+    .string "o nosso dia!$"
 
 FuchsiaCity_House3_EventScript_BerryBlenderSpeedRecords::
     lockall
@@ -146,9 +147,9 @@ FuchsiaCity_House3_EventScript_Picture::
     end
 
 FuchsiaCity_House3_Text_Picture::
-    .string "It's a picture of the old couple\n"
-    .string "when they were younger...\p"
-    .string "There's a big grove of Berry Trees!$"
+    .string "É uma foto do casal de idosos\n"
+    .string "quando eles eram mais jovens…\p"
+    .string "Há um grande pomar de Árvores de Frutas!$"
 
 FuchsiaCity_House3_EventScript_Lass::
     msgbox FuchsiaCity_House3_Text_Lass, MSGBOX_NPC
@@ -157,9 +158,9 @@ FuchsiaCity_House3_EventScript_Lass::
     end
 
 FuchsiaCity_House3_Text_Lass:
-    .string "I'm trying to get better at Contests,\n"
-    .string "so I'm learning how to Blend Berries\l"
-    .string "from my Grandmother!$"
+    .string "Estou tentando melhorar nos Concursos,\n"
+    .string "então estou aprendendo a Misturar Frutas\l"
+    .string "com a minha avó!$"
 
 FuchsiaCity_House3_EventScript_Youngster::
     msgbox FuchsiaCity_House3_Text_Youngster, MSGBOX_NPC
@@ -168,11 +169,11 @@ FuchsiaCity_House3_EventScript_Youngster::
     end
 
 FuchsiaCity_House3_Text_Youngster:
-    .string "I'd rather be out there battling.\n"
-    .string "My sister says it's nice to visit\l"
-    .string "Grandma and Granpa though.\p"
-    .string "At least Berry Blending is kind of\n"
-    .string "fun, if that's your thing.$"
+    .string "Eu preferia estar lá fora batalhando.\n"
+    .string "Mas minha irmã diz que é legal visitar\l"
+    .string "a vovó e o vovô.\p"
+    .string "Pelo menos Misturar Frutas é até\n"
+    .string "divertido, se você curte isso.$"
 
 FuchsiaCity_House3_EventScript_Daisy::
     msgbox FuchsiaCity_House3_Text_Daisy, MSGBOX_NPC
@@ -181,15 +182,15 @@ FuchsiaCity_House3_EventScript_Daisy::
     end
 
 FuchsiaCity_House3_Text_Daisy:
-    .string "Oh! Hello, {PLAYER}!\p"
-    .string "I didn't know you knew the Berry\n"
-    .string "masters, too!\p"
-    .string "I met them back when I was travelling\n"
-    .string "to Contests.\p"
-    .string "They taught me everything I know about\n"
-    .string "Berry Blending.\p"
-    .string "I still try to visit from time to time.\n"
-    .string "And it doesn't hurt to practice, too!$"
+    .string "Oh! Olá, {PLAYER}!\p"
+    .string "Eu não sabia que você também conhecia\n"
+    .string "os mestres das Frutas!\p"
+    .string "Eu os conheci quando viajava para\n"
+    .string "participar de Concursos.\p"
+    .string "Eles me ensinaram tudo o que sei sobre\n"
+    .string "Mistura de Frutas.\p"
+    .string "Eu ainda tento visitá-los de vez em quando.\n"
+    .string "E não faz mal praticar um pouco, né?$"
 
 FuchsiaCity_House3_EventScript_Expert::
     msgbox FuchsiaCity_House3_Text_Expert, MSGBOX_NPC
@@ -198,13 +199,13 @@ FuchsiaCity_House3_EventScript_Expert::
     end
 
 FuchsiaCity_House3_Text_Expert:
-    .string "My husband and I moved to Kanto\n"
-    .string "a long time ago, but no one here\l"
-    .string "knew about Berry Blending...\p"
-    .string "It was quite popular in our homeland,\n"
-    .string "so we try to keep the tradition alive.\p"
-    .string "Whenever someone visits, we will Blend\n"
-    .string "Berries together!$"
+    .string "Meu marido e eu nos mudamos para Kanto\n"
+    .string "há muito tempo, mas ninguém aqui sabia\l"
+    .string "sobre Mistura de Frutas…\p"
+    .string "Era muito popular na nossa terra natal,\n"
+    .string "então tentamos manter a tradição viva.\p"
+    .string "Sempre que alguém nos visita,\n"
+    .string "nós Misturamos Frutas juntos!$"
 
 
 BerryHouse_EventScript_BerryBlender::
@@ -251,11 +252,11 @@ BerryHouse_EventScript_VsDaisy::
     end
 
 BerryHouse_Text_WantToMakePokeblocks:
-    .string "Oh? Did you want to make some {POKEBLOCK}S?$"
+    .string "Oh? Você gostaria de fazer alguns {POKEBLOCK}s?$"
 
 BerryHouse_Text_WantToMakePokeblocksDaisy:
-    .string "Oh? Did you want to make some {POKEBLOCK}S\n"
-    .string "with me, {PLAYER}?$"
+    .string "Oh? Você gostaria de fazer alguns {POKEBLOCK}s\n"
+    .string "comigo, {PLAYER}?$"
 
 BerryHouse_EventScript_DeclineBlender:
     msgbox BerryHouse_Text_MadeOldTimerSad, MSGBOX_DEFAULT
@@ -264,7 +265,7 @@ BerryHouse_EventScript_DeclineBlender:
 
 BerryHouse_Text_MadeOldTimerSad:
     .string "Oh…\n"
-    .string "Maybe another time then…$"
+    .string "Talvez em uma outra hora, então…$"
 
 BerryHouse_EventScript_TryUseBerryBlender:
     checkitem ITEM_POKEBLOCK_CASE
@@ -278,7 +279,7 @@ BerryHouse_EventScript_TryUseBerryBlender:
     end
 
 BerryHouse_Text_Excellent:
-    .string "Excellent!$"
+    .string "Excelente!$"
 
 BerryHouse_EventScript_TryUseBerryBlenderDaisy:
     checkitem ITEM_POKEBLOCK_CASE
@@ -297,8 +298,9 @@ BerryHouse_EventScript_BlenderNoCase:
     end
 
 BerryHouse_Text_DontHavePokeblockCase:
-    .string "But you don't have a {POKEBLOCK} Case.\p"
-    .string "You should get a {POKEBLOCK} Case first.$"
+    .string "Mas você não tem um Porta-{POKEBLOCK}s.\p"
+    .string "Você deveria conseguir um\n"
+    .string "Porta-{POKEBLOCK}s primeiro.$"
 
 BerryHouse_EventScript_BlenderNoCaseDaisy:
     msgbox BerryHouse_Text_DontHavePokeblockCaseDaisy, MSGBOX_DEFAULT
@@ -306,8 +308,8 @@ BerryHouse_EventScript_BlenderNoCaseDaisy:
     end
 
 BerryHouse_Text_DontHavePokeblockCaseDaisy:
-    .string "Oh? You don't have a {POKEBLOCK} Case?\p"
-    .string "Didn't {RIVAL} give you one?$"
+    .string "Oh? Você não tem um Porta-{POKEBLOCK}s?\p"
+    .string "O {RIVAL} não te deu um?$"
 
 BerryHouse_EventScript_BlenderCaseFull:
     msgbox BerryHouse_Text_PokeblockCaseIsFull, MSGBOX_DEFAULT
@@ -315,10 +317,10 @@ BerryHouse_EventScript_BlenderCaseFull:
     end
 
 BerryHouse_Text_PokeblockCaseIsFull:
-    .string "Your {POKEBLOCK} Case is full,\n"
-    .string "it looks like.\p"
-    .string "You should use some {POKEBLOCK}S up\n"
-    .string "and then come back.$"
+    .string "Parece que o seu Porta-{POKEBLOCK}s\n"
+    .string "está cheio.\p"
+    .string "Você deveria usar alguns {POKEBLOCK}s\n"
+    .string "e depois voltar.$"
 
 BerryHouse_EventScript_BlenderNoBerries:
     msgbox BerryHouse_Text_DontHaveAnyBerries, MSGBOX_DEFAULT
@@ -327,21 +329,21 @@ BerryHouse_EventScript_BlenderNoBerries:
     end
 
 BerryHouse_Text_DontHaveAnyBerries:
-    .string "You don't have any Berries,\n"
-    .string "do you?\p"
-    .string "If you don't have any Berries,\n"
-    .string "you can't make any {POKEBLOCK}S.\p"
-    .string "We'll always be making {POKEBLOCK}S here,\n"
-    .string "so let's make some together when\l"
-    .string "you get a Berry or two.$"
+    .string "Você não tem nenhuma Fruta,\n"
+    .string "não é?\p"
+    .string "Se não tiver Frutas,\n"
+    .string "não dá para fazer {POKEBLOCK}s.\p"
+    .string "Nós sempre estaremos fazendo {POKEBLOCK}s aqui,\n"
+    .string "então vamos fazer juntos quando você\l"
+    .string "conseguir uma ou duas Frutas.$"
 
 BerryHouse_EventScript_HusbandGiveYouBerry::
     msgbox BerryHouse_Text_HusbandGiveYouBerry, MSGBOX_DEFAULT
     return
 
 BerryHouse_Text_HusbandGiveYouBerry:
-    .string "If you ask nicely, my husband might have\n"
-    .string "an extra Berry to spare.$"
+    .string "Se você pedir com jeitinho, meu marido\n"
+    .string "pode ter uma Fruta sobrando para te dar.$"
 
 BerryHouse_EventScript_BlenderNoBerriesDaisy:
     msgbox BerryHouse_Text_DontHaveAnyBerriesDaisy, MSGBOX_DEFAULT
@@ -350,17 +352,17 @@ BerryHouse_EventScript_BlenderNoBerriesDaisy:
     end
 
 BerryHouse_Text_DontHaveAnyBerriesDaisy:
-    .string "Oh! You don't have any Berries?\n"
-    .string "If you don't have any Berries,\n"
-    .string "you can't make any {POKEBLOCK}S.$"
+    .string "Oh! Você não tem nenhuma Fruta?\n"
+    .string "Se não tiver Frutas,\n"
+    .string "não dá para fazer {POKEBLOCK}s.$"
 
 BerryHouse_EventScript_OldManGiveYouBerry::
     msgbox BerryHouse_Text_OldManGiveYouBerry, MSGBOX_DEFAULT
     return
 
 BerryHouse_Text_OldManGiveYouBerry:
-    .string "You know, if you ask nicely, the old man\n"
-    .string "may have an extra Berry to spare.$"
+    .string "Sabe, se você pedir com jeitinho, o velhinho\n"
+    .string "pode ter uma Fruta sobrando para te dar.$"
 
 BerryHouse_EventScript_GetDailyBerry::
     specialvar VAR_RESULT, PlayerHasBerries
@@ -376,10 +378,10 @@ BerryHouse_EventScript_BlenderNoSpareBerries::
     end
 
 BerryHouse_Text_DontHaveAnyBerriesToSpare:
-    .string "If I had some Berries left over,\n"
-    .string "I'd gladly give you one…\p"
-    .string "But, I don't have any to spare today.\n"
-    .string "We'll have to do this another time.$"
+    .string "Se eu tivesse algumas Frutas sobrando,\n"
+    .string "te daria uma com prazer…\p"
+    .string "Mas hoje não tenho nenhuma sobrando.\n"
+    .string "Teremos que deixar para outra hora.$"
 
 BerryHouse_EventScript_GiveSpareBerry:
     msgbox BerryHouse_Text_DontHaveAnyBerriesHaveOne, MSGBOX_DEFAULT
@@ -390,10 +392,10 @@ BerryHouse_EventScript_GiveSpareBerry:
 
 BerryHouse_Text_DontHaveAnyBerriesHaveOne:
     .string "Oh?\n"
-    .string "You don't have any Berries?\p"
-    .string "Well, that won't do at all now, will it?\p"
-    .string "If you don't mind leftovers, you can\n"
-    .string "have one of my Berries.$"
+    .string "Você não tem nenhuma Fruta?\p"
+    .string "Bem, isso não pode ficar assim, pode?\p"
+    .string "Se você não se importar com as sobras,\n"
+    .string "pode ficar com uma das minhas Frutas.$"
 
 
 BerryHouse_EventScript_UseBerryBlender:
@@ -403,7 +405,7 @@ BerryHouse_EventScript_UseBerryBlender:
     end
 
 BerryHouse_Text_KnowHowToMakePokeblocks:
-    .string "Do you know how to make a {POKEBLOCK}?$"
+    .string "Você sabe como fazer um {POKEBLOCK}?$"
 
 BerryHouse_EventScript_ExplainBlending:
     msgbox BerryHouse_Text_ExplainBerryBlending, MSGBOX_DEFAULT
@@ -411,12 +413,12 @@ BerryHouse_EventScript_ExplainBlending:
     end
 
 BerryHouse_Text_ExplainBerryBlending:
-    .string "Okay, a little explanation, then.\p"
-    .string "Oh, don't worry, it's quite simple.\p"
-    .string "When the Blender's arrow comes to\n"
-    .string "your marker, just press the A Button.\p"
-    .string "That's all you have to do.\n"
-    .string "You'll see how easy it is when you try.$"
+    .string "Certo, então aqui vai uma explicação rápida.\p"
+    .string "Oh, não se preocupe, é bem simples.\p"
+    .string "Quando a seta do Misturador apontar\n"
+    .string "para o seu marcador, aperte o Botão A.\p"
+    .string "É só isso que você precisa fazer.\n"
+    .string "Você vai ver como é fácil quando tentar.$"
 
 BerryHouse_EventScript_StartBlender:
     msgbox BerryHouse_Text_LetsBerryBlender, MSGBOX_DEFAULT
@@ -424,8 +426,8 @@ BerryHouse_EventScript_StartBlender:
     end
 
 BerryHouse_Text_LetsBerryBlender:
-    .string "Let's get started, then!\p"
-    .string "Let's Berry Blender!$"
+    .string "Vamos começar, então!\p"
+    .string "Hora de Misturar Frutas!$"
 
 BerryHouse_EventScript_DoBerryBlending:
     @callnative RemoveFollowingPokemon

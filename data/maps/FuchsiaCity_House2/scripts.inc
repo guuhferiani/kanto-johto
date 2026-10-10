@@ -36,38 +36,38 @@ FuchsiaCity_House2_EventScript_NoRoomForGoodRod::
 	end
 
 FuchsiaCity_House2_Text_DoYouLikeToFish::
-    .string "I'm the Fishing Guru's older\n"
-    .string "brother.\p"
-    .string "I simply looove fishing!\n"
-    .string "I can't bear to go without.\p"
-    .string "Tell me, do you like to fish?$"
+    .string "Eu sou o irmão mais velho do\n"
+    .string "Guru da Pesca.\p"
+    .string "Eu simplesmente aamo pescar!\n"
+    .string "Não consigo viver sem isso.\p"
+    .string "Diga-me, você gosta de pescar?$"
 
 FuchsiaCity_House2_Text_LikeYourStyleTakeThis::
-    .string "Grand! I like your style.\n"
-    .string "I think we can be friends.\p"
-    .string "Take this and fish, young friend!$"
+    .string "Excelente! Gostei do seu estilo.\n"
+    .string "Acho que podemos ser amigos.\p"
+    .string "Pegue isto e pesque, jovem amigo!$"
 
 FuchsiaCity_House2_Text_ReceivedGoodRod::
-    .string "{PLAYER} received a Good Rod from\n"
-    .string "the Fishing Guru's brother.$"
+    .string "{PLAYER} recebeu uma Vara Boa do\n"
+    .string "irmão do Guru da Pesca.$"
 
 FuchsiaCity_House2_Text_GoodRodCanCatchBetterMons::
-    .string "Fishing is a way of life!\n"
-    .string "It is like the finest poetry.\p"
-    .string "A crummy Old Rod could only catch\n"
-    .string "Magikarp, yes?\p"
-    .string "But with a Good Rod, you can\n"
-    .string "catch much better Pokémon.$"
+    .string "Pescar é um estilo de vida!\n"
+    .string "É como a mais bela poesia.\p"
+    .string "Uma Vara Velha mixuruca só conseguia\n"
+    .string "pescar Magikarp, não é?\p"
+    .string "Mas com uma Vara Boa, você pode\n"
+    .string "fisgar Pokémon muito melhores.$"
 
 FuchsiaCity_House2_Text_OhThatsDisappointing::
     .string "Oh…\n"
-    .string "That's so disappointing…$"
+    .string "Que decepção…$"
 
 FuchsiaCity_House2_Text_HowAreTheFishBiting::
-    .string "Hello there, {PLAYER}!\p"
-    .string "How are the fish biting?$"
+    .string "Olá, {PLAYER}!\p"
+    .string "Como estão as fisgadas dos peixes?$"
 
 FuchsiaCity_House2_Text_YouHaveNoRoomForGift::
-    .string "Oh, no!\p"
-    .string "I had a gift for you, but you have\n"
-    .string "no room for it!$"
+    .string "Oh, não!\p"
+    .string "Eu tinha um presente para você,\n"
+    .string "mas você não tem espaço para ele!$"

@@ -9,6 +9,6 @@ FuchsiaCity_PokemonCenter_2F_NinjaBoy::
 	end
 
 FuchsiaCity_PokemonCenter_2F_Ninja::
-	.string "Koga is the most powerful Gym Leader,\n"
-	.string "because he is a Ninja.\p"
-	.string "Ninjas are so cool!$"
+	.string "O Koga é o Líder de Ginásio mais\n"
+	.string "poderoso, porque ele é um Ninja.\p"
+	.string "Ninjas são muito legais!$"

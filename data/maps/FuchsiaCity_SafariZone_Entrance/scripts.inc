@@ -34,16 +34,16 @@ FuchsiaCity_SafariZone_Entrance_EventScript_InfoAttendant::
 	end
 
 FuchsiaCity_SafariZone_Entrance_Text_TrainerTip:
-	.string "Here's a tip!\p"
-	.string "Throw {POKEBLOCK}s at wild Pokémon to make\n"
-	.string "them less likely to flee.$"
+	.string "Aqui vai uma dica!\p"
+	.string "Jogue {POKEBLOCK}s nos Pokémon selvagens para\n"
+	.string "torná-los menos propensos a fugir.$"
 
 FuchsiaCity_SafariZone_Entrance_Text_WelcomeFirstTime:
-	.string "Welcome to the Safari Zone!\n"
-	.string "Is it your first time here?$"
+	.string "Boas-vindas à Zona do Safári!\n"
+	.string "É a sua primeira vez aqui?$"
 
 FuchsiaCity_SafariZone_Entrance_Text_ComeInAndEnjoy:
-	.string "Come in and enjoy the Safari Zone!$"
+	.string "Entre e aproveite a Zona do Safári!$"
 
 FuchsiaCity_SafariZone_Entrance_EventScript_FirstTimeInfo::
 	msgbox FuchsiaCity_SafariZone_Entrance_Text_FirstTimeInfo, MSGBOX_DEFAULT
@@ -51,13 +51,13 @@ FuchsiaCity_SafariZone_Entrance_EventScript_FirstTimeInfo::
 	end
 
 FuchsiaCity_SafariZone_Entrance_Text_FirstTimeInfo:
-	.string "When you enter the Safari Zone, you\n"
-	.string "start with 30 Safari Balls for\l"
-	.string "catching Pokémon.\p"
-	.string "The Safari Game is over when you run\n"
-	.string "out of Safari Balls, or when you've\l"
-	.string "walked 500 steps.\p"
-	.string "Come in and enjoy the Safari Zone!$"
+	.string "Ao entrar na Zona do Safári, você\n"
+	.string "começa com 30 Bolas Safári para\l"
+	.string "capturar Pokémon.\p"
+	.string "O Jogo do Safári termina quando suas\n"
+	.string "Bolas Safári acabarem ou quando você\l"
+	.string "der 500 passos.\p"
+	.string "Entre e aproveite a Zona do Safári!$"
 
 FuchsiaCity_SafariZone_Entrance_EventScript_EntranceCounterTriggerLeft::
 	lockall
@@ -94,13 +94,13 @@ FuchsiaCity_SafariZone_Entrance_EventScript_EntranceCounter::
 	end
 
 FuchsiaCity_SafariZone_Entrance_Text_WouldYouLikeToPlay:
-	.string "Welcome to the Safari Zone!\p"
-	.string "All you can catch for just ¥500!\n"
-	.string "Would you like to play a Safari Game?$"
+	.string "Boas-vindas à Zona do Safári!\p"
+	.string "Capture o quanto puder por apenas ¥500!\n"
+	.string "Gostaria de participar do Jogo do Safári?$"
 
 FuchsiaCity_SafariZone_Entrance_Text_PlayAnotherTime:
-	.string "Okay.\n"
-	.string "Please play another time!$"
+	.string "Certo.\n"
+	.string "Por favor, volte em outra ocasião!$"
 
 FuchsiaCity_SafariZone_Entrance_EventScript_TryEnterSafariZone::
 	call FuchsiaCity_SafariZone_Entrance_EventScript_CheckHasRoomForPokemon
@@ -126,20 +126,19 @@ FuchsiaCity_SafariZone_Entrance_EventScript_TryEnterSafariZone::
 	end
 
 FuchsiaCity_SafariZone_Entrance_Text_ThatWillBe500Please:
-	.string "That will be ¥500, please.$"
+	.string "Serão ¥500, por favor.$"
 
 FuchsiaCity_SafariZone_Entrance_Text_HereAreYourSafariBalls:
-	.string "Here are your Safari Balls.$"
+	.string "Aqui estão as suas Bolas Safári.$"
 
 FuchsiaCity_SafariZone_Entrance_Text_Received30SafariBalls:
-    .string "{PLAYER} received 30 Safari Balls\n"
-    .string "from the attendant.$"
+    .string "{PLAYER} recebeu 30 Bolas Safári\n"
+    .string "do atendente.$"
 
 FuchsiaCity_SafariZone_Entrance_Text_PleaseEnjoyYourself:
-    .string "We'll call you on the PA when you\n"
-    .string "run out of time or Safari Balls.\p"
-    .string "Well, I'll wish you the best of\n"
-    .string "luck!$"
+    .string "Avisaremos pelo alto-falante quando o\n"
+    .string "seu tempo ou as Bolas Safári acabarem.\p"
+    .string "Bem, desejo a você muita boa sorte!$"
 
 FuchsiaCity_SafariZone_Entrance_Movement_EnterSafariZone:
 	walk_left
@@ -158,8 +157,8 @@ FuchsiaCity_SafariZone_Entrance_EventScript_CheckHasRoomForPokemon::
 	end
 
 FuchsiaCity_SafariZone_Entrance_Text_PCIsFull:
-	.string "Excuse me!\n"
-	.string "Your PC Box is full.$"
+	.string "Com licença!\n"
+	.string "Sua Caixa do PC está cheia.$"
 
 FuchsiaCity_SafariZone_Entrance_EventScript_NotEnoughMoney::
 	msgbox FuchsiaCity_SafariZone_Entrance_Text_NotEnoughMoney, MSGBOX_DEFAULT
@@ -167,8 +166,8 @@ FuchsiaCity_SafariZone_Entrance_EventScript_NotEnoughMoney::
 	end
 
 FuchsiaCity_SafariZone_Entrance_Text_NotEnoughMoney:
-	.string "You don't have enough money.\n"
-	.string "Sorry.$"
+	.string "Você não tem dinheiro suficiente.\n"
+	.string "Desculpe.$"
 
 FuchsiaCity_SafariZone_Entrance_EventScript_MovePlayerBackFromCounter::
 	closemessage
@@ -213,12 +212,12 @@ FuchsiaCity_SafariZone_Entrance_EventScript_ExitCounter::
 	end
 
 FuchsiaCity_SafariZone_Entrance_Text_EnjoyTheRestOfYourAdventure:
-	.string "Please enjoy the rest of your wild\n"
-	.string "adventure!$"
+	.string "Por favor, aproveite o restante da\n"
+	.string "sua aventura selvagem!$"
 
 FuchsiaCity_SafariZone_Entrance_Text_StillHaveTimeExit:
-    .string "Are you going to leave the\n"
-    .string "Safari Zone early?$"
+    .string "Você deseja sair da Zona do Safári\n"
+    .string "antes da hora?$"
 
 FuchsiaCity_SafariZone_Entrance_EventScript_Exit::
 	msgbox FuchsiaCity_SafariZone_Entrance_Text_ExitEarlyThankYouForPlaying, MSGBOX_DEFAULT
@@ -228,5 +227,5 @@ FuchsiaCity_SafariZone_Entrance_EventScript_Exit::
 	end
 
 FuchsiaCity_SafariZone_Entrance_Text_ExitEarlyThankYouForPlaying:
-    .string "Please return any Safari Balls\n"
-    .string "you may have left.$"
+    .string "Por favor, devolva as Bolas Safári\n"
+    .string "que ainda tiver com você.$"

@@ -6,38 +6,38 @@ FuchsiaCity_SafariZone_Office_EventScript_Worker1::
 	end
 
 FuchsiaCity_SafariZone_Office_Text_NicknamedWardenSlowpoke::
-    .string "We nicknamed the Warden\n"
-    .string "“Slowpoke.”\p"
-    .string "You know, he has that vacant look\n"
-    .string "like a Slowpoke.$"
+    .string "Apelidamos o Guarda de\n"
+    .string "“Slowpoke”.\p"
+    .string "Sabe, ele tem aquele olhar vago\n"
+    .string "igual ao de um Slowpoke.$"
 
 FuchsiaCity_SafariZone_Office_EventScript_Worker2::
 	msgbox FuchsiaCity_SafariZone_Office_Text_WardenIsVeryKnowledgeable, MSGBOX_NPC
 	end
 
 FuchsiaCity_SafariZone_Office_Text_WardenIsVeryKnowledgeable::
-    .string "Warden Slowpoke is very\n"
-    .string "knowledgeable about Pokémon.\p"
-    .string "He even has some fossils of rare,\n"
-    .string "extinct Pokémon.$"
+    .string "O Guarda Slowpoke tem muito\n"
+    .string "conhecimento sobre Pokémon.\p"
+    .string "Ele até tem fósseis de Pokémon\n"
+    .string "raros e extintos.$"
 
 FuchsiaCity_SafariZone_Office_EventScript_Worker3::
 	msgbox FuchsiaCity_SafariZone_Office_Text_CouldntUnderstandWarden, MSGBOX_NPC
 	end
 
 FuchsiaCity_SafariZone_Office_Text_CouldntUnderstandWarden::
-    .string "Warden Slowpoke came in, but\n"
-    .string "I couldn't understand him.\p"
-    .string "I think he's got a speech problem!$"
+    .string "O Guarda Slowpoke apareceu por aqui,\n"
+    .string "mas não consegui entender nada.\p"
+    .string "Acho que ele está com problemas na fala!$"
 
 FuchsiaCity_SafariZone_Office_EventScript_Worker4::
 	msgbox FuchsiaCity_SafariZone_Office_Text_PrizeInSafariZone, MSGBOX_NPC
 	end
 
 FuchsiaCity_SafariZone_Office_Text_PrizeInSafariZone::
-    .string "Warden Slowpoke is running a\n"
-    .string "promotion campaign right now.\p"
-    .string "Try to get to the farthest corner\n"
-    .string "of the Safari Zone.\p"
-    .string "If you can make it, you'll win a\n"
-    .string "very convenient prize.$"
+    .string "O Guarda Slowpoke está fazendo uma\n"
+    .string "campanha promocional agora mesmo.\p"
+    .string "Tente chegar ao canto mais distante\n"
+    .string "da Zona do Safári.\p"
+    .string "Se você conseguir, vai ganhar um\n"
+    .string "prêmio muito conveniente.$"
