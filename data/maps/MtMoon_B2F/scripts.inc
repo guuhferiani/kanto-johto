@@ -23,18 +23,19 @@ MtMoon_B2F_EventScript_Grunt1::
 	end
 
 MtMoon_B2F_Text_Grunt1Intro::
-    .string "We, Team Rocket, shall find the\n"
-    .string "fossils!\p"
-    .string "Reviving Pokémon from them will\n"
-    .string "earn us huge riches!$"
+    .string "Nós, da Equipe Rocket, vamos encontrar\n"
+    .string "os fósseis!\p"
+    .string "Reviver Pokémon a partir deles vai nos\n"
+    .string "render riquezas imensas!$"
 
 MtMoon_B2F_Text_Grunt1Defeat::
     .string "Urgh!\n"
-    .string "Now I'm mad!$"
+    .string "Agora fiquei furioso!$"
 
 MtMoon_B2F_Text_Grunt1PostBattle::
-    .string "You made me mad!\n"
-    .string "Team Rocket will blacklist you!$"
+    .string "Você me tirou do sério!\n"
+    .string "A Equipe Rocket vai colocar você na lista\n"
+    .string "negra!$"
 
 MtMoon_B2F_EventScript_Grunt2::
 	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_2, MtMoon_B2F_Text_Grunt2Intro, MtMoon_B2F_Text_Grunt2Defeat
@@ -42,16 +43,16 @@ MtMoon_B2F_EventScript_Grunt2::
 	end
 
 MtMoon_B2F_Text_Grunt2Intro::
-    .string "We, Team Rocket, are Pokémon\n"
-    .string "gangsters!\l"
-    .string "We strike fear with our strength!$"
+    .string "Nós, da Equipe Rocket, somos os\n"
+    .string "gângsteres do mundo Pokémon!\l"
+    .string "Impomos medo com a nossa força!$"
 
 MtMoon_B2F_Text_Grunt2Defeat::
-    .string "I blew it!$"
+    .string "Eu estraguei tudo!$"
 
 MtMoon_B2F_Text_Grunt2PostBattle::
-    .string "Darn it all!\n"
-    .string "My associates won't stand for this!$"
+    .string "Droga de tudo!\n"
+    .string "Meus comparsas não vão tolerar isso!$"
 
 MtMoon_B2F_EventScript_Grunt3::
 	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_3, MtMoon_B2F_Text_Grunt3Intro, MtMoon_B2F_Text_Grunt3Defeat
@@ -59,15 +60,15 @@ MtMoon_B2F_EventScript_Grunt3::
 	end
 
 MtMoon_B2F_Text_Grunt3Intro::
-    .string "We're pulling a big job here!\n"
-    .string "Get lost, kid!$"
+    .string "Estamos em um grande trabalho aqui!\n"
+    .string "Dê o fora, pirralho!$"
 
 MtMoon_B2F_Text_Grunt3Defeat::
-    .string "So, you are good…$"
+    .string "Então você é bom mesmo…$"
 
 MtMoon_B2F_Text_Grunt3PostBattle::
-    .string "If you find a fossil, give it to me\n"
-    .string "and scram!$"
+    .string "Se você achar um fóssil, passe pra cá e\n"
+    .string "suma da minha frente!$"
 
 MtMoon_B2F_EventScript_Grunt4::
 	trainerbattle_single TRAINER_TEAM_ROCKET_GRUNT_4, MtMoon_B2F_Text_Grunt4Intro, MtMoon_B2F_Text_Grunt4Defeat
@@ -75,16 +76,16 @@ MtMoon_B2F_EventScript_Grunt4::
 	end
 
 MtMoon_B2F_Text_Grunt4Intro::
-    .string "Little kids shouldn't be messing\n"
-    .string "around with grown-ups!\p"
-    .string "It could be bad news!$"
+    .string "Crianças não deveriam se meter nos\n"
+    .string "assuntos dos adultos!\p"
+    .string "Isso pode acabar muito mal!$"
 
 MtMoon_B2F_Text_Grunt4Defeat::
-    .string "I'm steamed!$"
+    .string "Estou fervendo de raiva!$"
 
 MtMoon_B2F_Text_Grunt4PostBattle::
-    .string "Pokémon lived here long before\n"
-    .string "people came.$"
+    .string "Os Pokémon viviam aqui muito antes das\n"
+    .string "pessoas chegarem.$"
 
 MtMoon_B2F_EventScript_MiguelTrigger::
 	lockall
@@ -113,17 +114,17 @@ MtMoon_B2F_EventScript_BattleMiguel::
 	end
 
 MtMoon_B2F_Text_MiguelIntro::
-    .string "Hey, stop!\p"
-    .string "I found these fossils!\n"
-    .string "They're both mine!$"
+    .string "Ei, pare aí!\p"
+    .string "Eu encontrei estes fósseis!\n"
+    .string "Os dois são meus!$"
 
 MtMoon_B2F_Text_MiguelDefeat::
-    .string "Okay!\n"
-    .string "I'll share!$"
+    .string "Tudo bem!\n"
+    .string "Eu divido com você!$"
 
 MtMoon_B2F_Text_WellEachTakeAFossil::
-    .string "We'll each take a fossil!\n"
-    .string "No being greedy!$"
+    .string "Cada um de nós vai levar um fóssil!\n"
+    .string "Nada de ser ganancioso!$"
 
 MtMoon_B2F_EventScript_Aerodactyl::
 	lock
@@ -137,7 +138,7 @@ MtMoon_B2F_EventScript_Aerodactyl::
 	end
 
 MtMoon_B2F_Text_Aerodactyl:
-	.string "Aerodactyl growls as you approach.$"
+	.string "Aerodactyl rosna conforme você se aproxima.$"
 
 MtMoon_B2F_EventScript_SuperNerdMiguel::
 	goto_if_set FLAG_HIDE_DOME_FOSSIL, MtMoon_B2F_EventScript_SuperNerdMiguelOmanyte
@@ -160,17 +161,17 @@ MtMoon_B2F_EventScript_SuperNerdMiguelKabuto::
 	end
 
 MtMoon_B2F_Text_Miguel2Intro:
-	.string "Oh, great. You again.\p"
-	.string "I found more fossils and I don't\n"
-	.string "plan on losing to a little kid again!$"
+	.string "Ah, que ótimo. Você de novo.\p"
+	.string "Eu achei mais fósseis e não planejo\n"
+	.string "perder para uma criança outra vez!$"
 
 MtMoon_B2F_Text_Miguel2Defeat:
-	.string "Inconceivable!$"
+	.string "Inconcebível!$"
 
 MtMoon_B2F_Text_Miguel2PostBattle:
-	.string "Get out of here, won't you?\p"
-	.string "This is my spot, and you're ruining\n"
-	.string "my fossil search!$"
+	.string "Dá o fora daqui, quer fazer o favor?\p"
+	.string "Este é o meu ponto, e você está estragando\n"
+	.string "minha busca por fósseis!$"
 
 MtMoon_B2F_EventScript_MegaHintAerodactyl::    
     goto_if_set FLAG_GOT_AERODACTYLITE, MtMoon_B2F_EventScript_Miguel2Defeated
@@ -180,13 +181,13 @@ MtMoon_B2F_EventScript_MegaHintAerodactyl::
     end
     
 MtMoon_B2F_Text_AerodactylMegaHint:
-    .string "UGH, stop talking to me!\p"
-	.string "There are surely other places you can\n"
-	.string "run around in than here.\p"
-	.string "If you want more fossils, go north of\n"
-	.string "Lavendar Town for a hike.\p" 
-	.string "Rock Tunnel is full of rocks,\n"
-	.string "including Mega Stones. I swear!$"
+    .string "UGH, para de falar comigo!\p"
+	.string "Certamente tem outros lugares para você\n"
+	.string "ficar correndo por aí além daqui.\p"
+	.string "Se quiser mais fósseis, vá ao norte de\n"
+	.string "Lavender Town para uma caminhada.\p" 
+	.string "O Rock Tunnel está cheio de rochas,\n"
+	.string "incluindo Mega Pedras. É sério!$"
 
 MtMoon_B2F_EventScript_Miguel2Defeated::
     msgbox Miguel2Defeated_Text MSGBOX_DEFAULT
@@ -194,8 +195,8 @@ MtMoon_B2F_EventScript_Miguel2Defeated::
 	end
 
 Miguel2Defeated_Text:	
-	.string "This is what I get for trying to\n"
-	.string "leave my basement and touch grass.$"
+	.string "É isso que eu ganho por tentar sair do meu\n"
+	.string "quarto e ver a luz do sol.$"
 
 MtMoon_B2F_EventScript_AerodactylDefeated::
 	msgbox AerodactylDefeated MSGBOX_DEFAULT
@@ -203,8 +204,8 @@ MtMoon_B2F_EventScript_AerodactylDefeated::
 	end
 
 AerodactylDefeated:	
-	.string "Aerodactyl stares at you with\n"
-	.string "what you believe to be admiration.$"
+	.string "Aerodactyl encara você com o que parece ser\n"
+	.string "um olhar de admiração.$"
 
 MtMoon_B2F_EventScript_MiguelFossilPicked::
 	msgbox MtMoon_B2F_Text_LabOnCinnabarRegeneratesFossils, MSGBOX_DEFAULT
@@ -212,10 +213,10 @@ MtMoon_B2F_EventScript_MiguelFossilPicked::
 	end
 
 MtMoon_B2F_Text_LabOnCinnabarRegeneratesFossils::
-    .string "Far away, on Cinnabar Island,\n"
-    .string "there's a Pokémon Lab.\p"
-    .string "They do research on regenerating\n"
-    .string "fossils.$"
+    .string "Muito longe daqui, na Cinnabar Island,\n"
+    .string "existe um Laboratório Pokémon.\p"
+    .string "Eles fazem pesquisas para regenerar\n"
+    .string "fósseis.$"
 
 MtMoon_B2F_EventScript_MiguelGoPickFossil::
 	msgbox MtMoon_B2F_Text_WellEachTakeAFossil, MSGBOX_DEFAULT
@@ -249,10 +250,10 @@ MtMoon_B2F_EventScript_DomeFossil::
 	end
 
 MtMoon_B2F_Text_YouWantDomeFossil::
-    .string "Do you want the Dome Fossil?$"
+    .string "Você quer o Fóssil Domo?$"
 
 MtMoon_B2F_Text_ObtainedDomeFossil::
-    .string "Obtained the Dome Fossil!$"
+    .string "Você obteve o Fóssil Domo!$"
 
 MtMoon_B2F_Movement_MiguelToHelixFossil::
 	walk_right
@@ -288,14 +289,14 @@ MtMoon_B2F_EventScript_HelixFossil::
 	end
 
 MtMoon_B2F_Text_YouWantHelixFossil::
-    .string "Do you want the Helix Fossil?$"
+    .string "Você quer o Fóssil Hélix?$"
 
 MtMoon_B2F_Text_ObtainedHelixFossil::
-    .string "Obtained the Helix Fossil!$"
+    .string "Você obteve o Fóssil Hélix!$"
 
 MtMoon_B2F_Text_ThenThisFossilIsMine::
-    .string "All right.\n"
-    .string "Then this fossil is mine!$"
+    .string "Certo.\n"
+    .string "Então este fóssil é meu!$"
 
 MtMoon_B2F_Movement_MiguelToDomeFossil::
 	walk_up
@@ -354,7 +355,7 @@ Movement_FaceRockets2:
 	step_end
 
 MtMoon_B2F_Text_StopRightThere::
-	.string "???: Stop right there!$"
+	.string "???: Parados aí mesmo!$"
 
 MtMoon_B2F_EventScript_RocketDuo::
 	playbgm MUS_RG_ENCOUNTER_ROCKET, 0
@@ -409,15 +410,15 @@ MtMoon_Movement_AndMakeItDouble:
 	step_end
 
 MtMoon_B2F_Text_RocketDuoIntro::
-	.string "???: That fossil belongs\n"
-	.string "to Team Rocket!\p"
-	.string "Surrender now, or prepare\n"
-	.string "to fight!$"
+	.string "???: Esse fóssil pertence à\n"
+	.string "Equipe Rocket!\p"
+	.string "Renda-se agora, ou prepare-se para\n"
+	.string "lutar!$"
 
 MtMoon_B2F_Text_RocketDuoDefeat::
-	.string "What, this brat beat us?$"
+	.string "O quê? Esse pirralho venceu a gente?$"
 
 MtMoon_B2F_Text_RocketDuoDefeated::
-	.string "Jessie: This isn't over, kid!\p"
-	.string "James: Team Rocket, blast off at\n"
-	.string "the speed of light!$"
+	.string "Jessie: Isso não acabou aqui, pirralho!\p"
+	.string "James: Equipe Rocket, decolando na\n"
+	.string "velocidade da luz!$"

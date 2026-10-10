@@ -24,20 +24,20 @@ Route4_EventScript_Boy::
 	end
 
 Route4_Text_PeopleLikeAndRespectBrock::
-    .string "Oh, wow, that's the Boulder Badge!\n"
-    .string "You got it from Brock, didn't you?\p"
-    .string "Brock is cool. He's not just tough.\n"
-    .string "People like and respect him.\p"
-    .string "I want to become a Gym Leader\n"
-    .string "like him.$"
+    .string "Nossa, essa é a Insígnia da Rocha!\n"
+    .string "Você conseguiu com o Brock, não foi?\p"
+    .string "O Brock é incrível. Ele não é apenas durão.\n"
+    .string "As pessoas gostam e o respeitam.\p"
+    .string "Eu quero me tornar um Líder de Ginásio\n"
+    .string "como ele.$"
 
 Route4_EventScript_Woman::
 	msgbox Route4_Text_TrippedOverGeodude, MSGBOX_NPC
 	end
 
 Route4_Text_TrippedOverGeodude::
-    .string "Ouch! I tripped over a rocky\n"
-    .string "Pokémon, Geodude!$"
+    .string "Ai! Eu tropecei em um Pokémon de\n"
+    .string "pedra, Geodude!$"
 
 Route4_EventScript_MtMoonSign::
 	msgbox Route4_Text_MtMoonEntrance, MSGBOX_SIGN
@@ -45,14 +45,14 @@ Route4_EventScript_MtMoonSign::
 
 Route4_Text_MtMoonEntrance::
     .string "Mt. Moon\n"
-    .string "Tunnel Entrance$"
+    .string "Entrada do Túnel$"
 
 Route4_EventScript_RouteSign::
 	msgbox Route4_Text_RouteSign, MSGBOX_SIGN
 	end
 
 Route4_Text_RouteSign::
-    .string "Route 4\n"
+    .string "Rota 4\n"
     .string "Mt. Moon - Cerulean City$"
 
 Route4_EventScript_Crissy::
@@ -61,16 +61,16 @@ Route4_EventScript_Crissy::
     end
 
 Route4_Text_CrissyIntro::
-    .string "I came to MT. MOON in search of\n"
-    .string "mushroom Pokémon.$"
+    .string "Eu vim ao MT. MOON em busca de Pokémon\n"
+    .string "cogumelo.$"
 
 Route4_Text_CrissyDefeat::
-    .string "After all I did to catch them!$"
+    .string "Depois de tudo o que fiz para pegá-los!$"
 
 Route4_Text_CrissyPostBattle::
-    .string "There might not be any more\n"
-    .string "mushrooms here.\p"
-    .string "I think I got them all.$"
+    .string "Talvez não haja mais nenhum cogumelo\n"
+    .string "por aqui.\p"
+    .string "Acho que peguei todos.$"
 
 Route4_EventScript_ItemTM05::
 	finditem ITEM_TM05, 1
@@ -183,32 +183,32 @@ Movement_LookerExit:
 	step_end
 
 Route4_Text_StopRightThere::
-	.string "???: Stop right there!\p"
-	.string "You thought you could escape\n"
-	.string "the International Police?\p"
-	.string "Well, I'll always be one step\n"
-	.string "ahead of your plans, Team Rocket!$"
+	.string "???: Parado aí mesmo!\p"
+	.string "Achou que conseguiria fugir da Polícia\n"
+	.string "Internacional?\p"
+	.string "Pois eu sempre estarei um passo à frente\n"
+	.string "dos seus planos, Equipe Rocket!$"
 
 Route4_Text_TeamRocketFossils::
-	.string "Ha! You're saying your not\n"
-	.string "with Team Rocket?\p"
-	.string "Then how do you explain that\n"
-	.string "fossil you're carrying?\p"
-	.string "We know Team Rocket is seeking\n"
-	.string "rare fossils to sell on the\l"
-	.string "black market!\p"
+	.string "Ha! Você está dizendo que não é da\n"
+	.string "Equipe Rocket?\p"
+	.string "Então como explica esse fóssil que está\n"
+	.string "carregando?\p"
+	.string "Nós sabemos que a Equipe Rocket está atrás\n"
+	.string "de fósseis raros para vender no mercado\l"
+	.string "negro!\p"
 	.string "...\n"
 	.string "......\l"
-	.string "...........oh.\p"
-	.string "So you're saying you stopped them?\n"
-	.string "And they already fled Mt. Moon?\p"
-	.string "Blast! How did we miss them!\p"
-	.string "I'm sorry for the misunderstanding.\p"
-	.string "My name is Looker - since you already\n"
-	.string "stopped Team Rocket once, maybe we can\l"
-	.string "help each other out.\p"
-	.string "Here's my Cell Phone number - call me\n"
-	.string "if you learn anything about Team Rocket!$"
+	.string "...........ah.\p"
+	.string "Então quer dizer que você os deteve?\n"
+	.string "E que eles já fugiram do Mt. Moon?\p"
+	.string "Droga! Como deixamos eles passarem!\p"
+	.string "Peço desculpas pelo mal-entendido.\p"
+	.string "Meu nome é Looker. Como você já enfrentou\n"
+	.string "a Equipe Rocket antes, talvez possamos\l"
+	.string "nos ajudar mutuamente.\p"
+	.string "Aqui está o número do meu celular. Me ligue\n"
+	.string "se descobrir algo sobre a Equipe Rocket!$"
 
 Route4_EventScript_PixieDust::
 	finditem ITEM_PIXIE_DUST, 1
@@ -244,21 +244,21 @@ Route4_EventScript_PicnickerSolana::
 	end
 
 Route4_Text_SolanaIntro:
-	.string "Think you can beat me?\n"
-	.string "As if!$"
+	.string "Acha que consegue me vencer?\n"
+	.string "Até parece!$"
 	return
 
 Route4_Text_SolanaDefeat:
-	.string "Oh no! Are you two okay?$"
+	.string "Ah não! Vocês dois estão bem?$"
 
 Route4_Text_SolanaPostBattle:
-	.string "Even though we lost, I'm\n"
-	.string "very proud of my Pokémon.\p"
-	.string "You're an incredible trainer!$"	
+	.string "Mesmo tendo perdido, estou muito orgulhosa\n"
+	.string "dos meus Pokémon.\p"
+	.string "Você é um treinador incrível!$"	
 
 Route4_Text_SolanaNotEnoughMons::
-    .string "You have just one Pokémon?\n"
-    .string "How did you manage Mt. Moon?$"
+    .string "Você só tem um Pokémon?\n"
+    .string "Como você conseguiu passar pelo Mt. Moon?$"
 
 Route4_EventScript_Charizard::
 	lock
@@ -272,8 +272,8 @@ Route4_EventScript_Charizard::
 	end
 
 Route4_Text_Charizard:
-	.string "Charizard seems aloof.\n"
-	.string "It's usually tall for a Charizard.$"
+	.string "Charizard parece indiferente.\n"
+	.string "Ele é incomumente alto para um Charizard.$"
 
 Route4_EventScript_YoungsterKody::
 	lock
@@ -286,15 +286,15 @@ Route4_EventScript_YoungsterKody::
 	end
 
 Route4_Text_KodyIntro:
-	.string "Since swords are frowned upon,\n"
-	.string "I'll defeat you with Charizard!$"
+	.string "Já que espadas não são bem-vistas,\n"
+	.string "vou derrotar você com o meu Charizard!$"
 
 Route4_Text_KodyDefeat:
-	.string "That's so unfair!$"
+	.string "Isso é tão injusto!$"
 
 Route4_Text_KodyPostBattle:
-	.string "If I could legally sword fight you,\n"
-	.string "I would be the winner!$"
+	.string "Se eu pudesse legalmente lutar de espada\n"
+	.string "com você, eu seria o vencedor!$"
 
 Route4_EventScript_MegaHintCharizard::    
     goto_if_set FLAG_GOT_CHARIZARDITE_Y, Route4_EventScript_KodyDefeated
@@ -304,10 +304,10 @@ Route4_EventScript_MegaHintCharizard::
     end
     
 Route4_Text_CharizardMegaHint:
-    .string "Where did I get the Mega Stone\n"
-	.string "For my Charizard?\p"
-	.string "I was training at the top of\n"
-	.string "the Mansion on Cinnbar Island!$"
+    .string "Onde consegui a Mega Pedra para o meu\n"
+	.string "Charizard?\p"
+	.string "Eu estava treinando no topo da Mansão\n"
+	.string "na Cinnabar Island!$"
 
 Route4_EventScript_KodyDefeated::
     msgbox KodyDefeated_Text MSGBOX_DEFAULT
@@ -315,9 +315,8 @@ Route4_EventScript_KodyDefeated::
 	end
 
 KodyDefeated_Text:	
-	.string "Even if the morrow is barren of\n"
-	.string "promises, nothing shall forestall\l"
-	.string "my return.$"
+	.string "Mesmo que o amanhã seja desprovido de\n"
+	.string "promessas, nada impedirá o meu retorno.$"
 
 Route4_EventScript_CharizardDefeated::
 	msgbox CharizardYDefeated MSGBOX_DEFAULT
@@ -325,5 +324,5 @@ Route4_EventScript_CharizardDefeated::
 	end
 
 CharizardYDefeated:	
-	.string "You think Charizard is smiling,\n"
-	.string "but it's tough to say.$"
+	.string "Você acha que o Charizard está sorrindo,\n"
+	.string "mas é difícil dizer.$"

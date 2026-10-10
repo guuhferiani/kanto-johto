@@ -23,10 +23,10 @@ Route4_PokemonCenter_1F_EventScript_Boy::
 	end
 
 Route4_PokemonCenter_1F_Text_CanHaveSixMonsWithYou::
-    .string "Okay, set six Poké Balls in my\n"
-    .string "belt…\p"
-    .string "Yeah, that'll do it. At most, you\n"
-    .string "can have six Pokémon with you.$"
+    .string "Certo, seis Poké Bolas no meu\n"
+    .string "cinto…\p"
+    .string "É, isso basta. No máximo, você\n"
+    .string "pode carregar seis Pokémon com você.$"
 
 Route4_PokemonCenter_1F_EventScript_Gentleman::
 	lock
@@ -35,22 +35,22 @@ Route4_PokemonCenter_1F_EventScript_Gentleman::
 	end
 
 Route4_PokemonCenter_1F_Text_TeamRocketAttacksCerulean::
-    .string "Team Rocket attacks Cerulean\n"
-    .string "citizens…\p"
-    .string "Not a day goes by without Team\n"
-    .string "Rocket being in the news.\p"
-	.string "We need more kind people in the world.\n"
-	.string "Like the Hiker I met upstairs!$"
+    .string "A Equipe Rocket atacou cidadãos\n"
+    .string "de Cerulean…\p"
+    .string "Não passa um dia sequer sem que a\n"
+    .string "Equipe Rocket esteja no noticiário.\p"
+	.string "Precisamos de mais pessoas gentis no mundo.\n"
+	.string "Como o Montanhês que conheci lá em cima!$"
 
 Route4_PokemonCenter_1F_EventScript_Youngster::
 	msgbox Route4_PokemonCenter_1F_Text_ShouldStoreMonsUsingPC, MSGBOX_NPC
 	end
 
 Route4_PokemonCenter_1F_Text_ShouldStoreMonsUsingPC::
-    .string "Sometimes, you'll have too many\n"
-    .string "Pokémon with you to add any more.\p"
-    .string "In that case, you should just\n"
-    .string "store some using any PC.$"
+    .string "Às vezes você terá muitos Pokémon\n"
+    .string "com você para poder adicionar mais.\p"
+    .string "Nesse caso, basta guardar alguns\n"
+    .string "usando qualquer PC.$"
 
 Route4_PokemonCenter_1F_EventScript_Newspaper::
 	lock
@@ -59,13 +59,13 @@ Route4_PokemonCenter_1F_EventScript_Newspaper::
 	end
 
 Route4_PokemonCenter_1F_Text_Newspaper::
-    .string "It's a newspaper.\n"
-    .string "TEAM ROCKET ATTACKS CERULEAN\p"
-    .string "CITIZENS!\p"
-    .string "...multiple break-ins reported\n"
-    .string "...gang activity on the rise...\l"
-    .string "International Police rumored to\l"
-    .string "be getting involved...$"
+    .string "É um jornal.\n"
+    .string "EQUIPE ROCKET ATACA CIDADÃOS DE\p"
+    .string "CERULEAN!\p"
+    .string "...múltiplas invasões reportadas\n"
+    .string "...atividades de gangues em alta...\l"
+    .string "Há rumores de que a Polícia Internacional\l"
+    .string "está se envolvendo...$"
 
 Route4_PokemonCenter_1F_EventScript_MagikarpSalesman::
 	lock
@@ -84,11 +84,11 @@ Route4_PokemonCenter_1F_EventScript_MagikarpSalesman::
 	end
 
 Route4_PokemonCenter_1F_Text_BuyMagikarpForJust500::
-    .string "Man: Hey there, kid!\n"
-    .string "Have I got a deal just for you!\p"
-    .string "I'll let you have a secret Pokémon\n"
-    .string "- a Magikarp - for just ¥500!\p"
-    .string "So, you'll buy it, am I right?$"
+    .string "Homem: Olá, jovem!\n"
+    .string "Tenho uma oferta imperdível só para você!\p"
+    .string "Vou te passar um Pokémon secreto\n"
+    .string "- um Magikarp - por apenas ¥500!\p"
+    .string "E aí, você vai querer comprar, não vai?$"
 
 
 Route4_PokemonCenter_1F_EventScript_BuyMagikarpParty::
@@ -120,8 +120,8 @@ Route4_PokemonCenter_1F_EventScript_NoRoomForMagikarp::
 	end
 
 Route4_PokemonCenter_1F_Text_NoRoomForMorePokemon::
-    .string "Looks like there's no more room\n"
-    .string "for any more Pokémon.$"
+    .string "Parece que não há mais espaço\n"
+    .string "para nenhum outro Pokémon.$"
 
 Route4_PokemonCenter_1F_EventScript_PayForMagikarp::
 	removemoney 500
@@ -135,8 +135,8 @@ Route4_PokemonCenter_1F_EventScript_PayForMagikarp::
 	return
 
 Route4_PokemonCenter_1F_Text_PaidOutrageouslyForMagikarp::
-    .string "{PLAYER} paid an outrageous ¥500\n"
-    .string "and bought the Magikarp…$"
+    .string "{PLAYER} pagou a quantia absurda de\n"
+    .string "¥500 e comprou o Magikarp…$"
 
 Route4_PokemonCenter_1F_EventScript_BoughtMagikarp::
 	setflag FLAG_BOUGHT_MAGIKARP
@@ -150,8 +150,8 @@ Route4_PokemonCenter_1F_EventScript_DeclineMagikarp::
 	end
 
 Route4_PokemonCenter_1F_Text_OnlyDoingThisAsFavorToYou::
-    .string "No? You say no? I'm only doing this\n"
-    .string "as a favor to you!$"
+    .string "Não? Você diz não? Eu só estou fazendo\n"
+    .string "isso como um favor a você!$"
 
 Route4_PokemonCenter_1F_EventScript_NotEnoughMoney::
 	msgbox Route4_PokemonCenter_1F_Text_YoullNeedMoreMoney, MSGBOX_DEFAULT
@@ -160,7 +160,7 @@ Route4_PokemonCenter_1F_EventScript_NotEnoughMoney::
 	end
 
 Route4_PokemonCenter_1F_Text_YoullNeedMoreMoney::
-    .string "You'll need more money than that!$"
+    .string "Você vai precisar de mais dinheiro que isso!$"
 
 Route4_PokemonCenter_1F_EventScript_AlreadyBoughtMagikarp::
 	msgbox Route4_PokemonCenter_1F_Text_IDontGiveRefunds, MSGBOX_DEFAULT
@@ -168,5 +168,5 @@ Route4_PokemonCenter_1F_EventScript_AlreadyBoughtMagikarp::
 	end
 
 Route4_PokemonCenter_1F_Text_IDontGiveRefunds::
-    .string "Man: Well, I don't give refunds.\n"
-    .string "You knew what you were getting!$"
+    .string "Homem: Olha, eu não faço reembolsos.\n"
+    .string "Você sabia muito bem o que estava levando!$"

@@ -524,8 +524,8 @@ MatchCall_Text_AideGameClear::
 	.string "location. Au revoir!$"
 
 MatchCall_Text_RegisteredLooker:
-	.string "Looker registered their info in\n"
-	.string "your Cell Phone.$"
+	.string "Looker registrou suas informações no\n"
+	.string "seu Telefone Celular.$"
 
 MatchCall_Text_LookerIntro::
 	.string "Looker: Team Rocket…\p"

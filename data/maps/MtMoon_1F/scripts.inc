@@ -6,8 +6,8 @@ MtMoon_1F_EventScript_ZubatSign::
 	end
 
 MtMoon_1F_Text_ZubatIsABloodsucker::
-    .string "Beware!\n"
-    .string "Zubat is a bloodsucker!$"
+    .string "Cuidado!\n"
+    .string "Zubat é um sugador de sangue!$"
 
 MtMoon_1F_EventScript_Macros::
 	trainerbattle_single TRAINER_HIKER_MARCOS, MtMoon_1F_Text_MarcosIntro, MtMoon_1F_Text_MarcosDefeat
@@ -15,17 +15,17 @@ MtMoon_1F_EventScript_Macros::
 	end
 
 MtMoon_1F_Text_MarcosIntro::
-    .string "WHOA!\n"
-    .string "You shocked me!\l"
-    .string "…Oh, you're just a kid!$"
+    .string "UOU!\n"
+    .string "Que susto você me deu!\l"
+    .string "…Ah, é só uma criança!$"
 
 MtMoon_1F_Text_MarcosDefeat::
-    .string "Wow!\n"
-    .string "Shocked again!$"
+    .string "Uau!\n"
+    .string "Chocado de novo!$"
 
 MtMoon_1F_Text_MarcosPostBattle::
-    .string "Kids like you shouldn't be\n"
-    .string "wandering around here in the dark.$"
+    .string "Crianças como você não deveriam ficar\n"
+    .string "vadiando por aqui no escuro.$"
 
 MtMoon_1F_EventScript_Josh::
 	trainerbattle_single TRAINER_YOUNGSTER_JOSH, MtMoon_1F_Text_JoshIntro, MtMoon_1F_Text_JoshDefeat
@@ -33,16 +33,15 @@ MtMoon_1F_EventScript_Josh::
 	end
 
 MtMoon_1F_Text_JoshIntro::
-    .string "Did you come to explore the cave,\n"
-    .string "too?$"
+    .string "Você veio explorar a caverna também?$"
 
 MtMoon_1F_Text_JoshDefeat::
-    .string "Losing stinks!\n"
-    .string "It's so uncool.$"
+    .string "Perder é péssimo!\n"
+    .string "Não tem nada de legal nisso.$"
 
 MtMoon_1F_Text_JoshPostBattle::
-    .string "I came all the way down here to\n"
-    .string "show off to girls.$"
+    .string "Eu vim até aqui embaixo para me exibir\n"
+    .string "para as garotas.$"
 
 
 MtMoon_1F_EventScript_Miriam::
@@ -51,16 +50,16 @@ MtMoon_1F_EventScript_Miriam::
 	end
 
 MtMoon_1F_Text_MiriamIntro::
-    .string "Wow! It's way bigger in here than\n"
-    .string "I thought!$"
+    .string "Nossa! Aqui dentro é bem maior do que\n"
+    .string "eu pensava!$"
 
 MtMoon_1F_Text_MiriamDefeat::
-    .string "Oh!\n"
-    .string "I lost it!$"
+    .string "Ah!\n"
+    .string "Eu perdi!$"
 
 MtMoon_1F_Text_MiriamPostBattle::
-    .string "How do you get out of here?\n"
-    .string "It's so big, I may get lost.$"
+    .string "Como se sai daqui?\n"
+    .string "É tão grande que acho que vou me perder.$"
 
 MtMoon_1F_EventScript_Iris::
 	trainerbattle_single TRAINER_LASS_IRIS, MtMoon_1F_Text_IrisIntro, MtMoon_1F_Text_IrisDefeat
@@ -69,16 +68,16 @@ MtMoon_1F_EventScript_Iris::
 
 
 MtMoon_1F_Text_IrisIntro::
-    .string "What?\n"
-    .string "I'm waiting for my friends to find\l"
-    .string "me here.$"
+    .string "O quê?\n"
+    .string "Estou esperando meus amigos me encontrarem\l"
+    .string "aqui.$"
 
 MtMoon_1F_Text_IrisDefeat::
-    .string "I lost?$"
+    .string "Eu perdi?$"
 
 MtMoon_1F_Text_IrisPostBattle::
-    .string "I came because I heard there are\n"
-    .string "some very rare fossils here.$"
+    .string "Eu vim porque ouvi dizer que há alguns\n"
+    .string "fósseis muito raros por aqui.$"
 
 MtMoon_1F_EventScript_Jovan::
 	trainerbattle_single TRAINER_SUPER_NERD_JOVAN, MtMoon_1F_Text_JovanIntro, MtMoon_1F_Text_JovanDefeat
@@ -86,15 +85,15 @@ MtMoon_1F_EventScript_Jovan::
 	end
 
 MtMoon_1F_Text_JovanIntro::
-    .string "What!\n"
-    .string "Don't sneak up on me!$"
+    .string "O quê!\n"
+    .string "Não chegue de mansinho pelas minhas costas!$"
 
 MtMoon_1F_Text_JovanDefeat::
-    .string "My POKéMON won't do!$"
+    .string "Meus Pokémon não deram conta!$"
 
 MtMoon_1F_Text_JovanPostBattle::
-    .string "I have to find stronger POKéMON.\n"
-    .string "Where might they be?$"
+    .string "Preciso encontrar Pokémon mais fortes.\n"
+    .string "Onde será que eles estão?$"
 
 MtMoon_1F_EventScript_Kent::
 	trainerbattle_single TRAINER_BUG_CATCHER_KENT, MtMoon_1F_Text_KentIntro, MtMoon_1F_Text_KentDefeat
@@ -102,15 +101,15 @@ MtMoon_1F_EventScript_Kent::
 	end
 
 MtMoon_1F_Text_KentIntro::
-    .string "Suspicious men are in the cave.\n"
-    .string "What about you?$"
+    .string "Homens suspeitos estão na caverna.\n"
+    .string "E quanto a você?$"
 
 MtMoon_1F_Text_KentDefeat::
-    .string "You got me!$"
+    .string "Você me pegou!$"
 
 MtMoon_1F_Text_KentPostBattle::
-    .string "I saw them!\n"
-    .string "I'm sure they're from Team Rocket!$"
+    .string "Eu vi eles!\n"
+    .string "Tenho certeza de que são da Equipe Rocket!$"
 
 MtMoon_1F_EventScript_Robby::
 	trainerbattle_single TRAINER_BUG_CATCHER_ROBBY, MtMoon_1F_Text_RobbyIntro, MtMoon_1F_Text_RobbyDefeat
@@ -118,16 +117,16 @@ MtMoon_1F_EventScript_Robby::
 	end
 
 MtMoon_1F_Text_RobbyIntro::
-    .string "You need to go through this cave\n"
-    .string "to get to Cerulean City.$"
+    .string "Você precisa atravessar esta caverna para\n"
+    .string "chegar a Cerulean City.$"
 
 MtMoon_1F_Text_RobbyDefeat::
-    .string "I lost.$"
+    .string "Eu perdi.$"
 
 MtMoon_1F_Text_RobbyPostBattle::
-    .string "Zubat is tough!\n"
-    .string "But if you can catch one, you'll\l"
-    .string "be able to count on it.$"
+    .string "Zubat é durão!\n"
+    .string "Mas se você conseguir capturar um, vai\l"
+    .string "poder contar com ele.$"
 
 MtMoon_1F_EventScript_BaldingMan::
     msgbox MtMoon_1F_Text_BrockHelpsExcavateFossils, MSGBOX_NPC
@@ -135,10 +134,10 @@ MtMoon_1F_EventScript_BaldingMan::
     end
 
 MtMoon_1F_Text_BrockHelpsExcavateFossils::
-    .string "Hi, I'm excavating for fossils here\n"
-    .string "under Mt. Moon.\p"
-    .string "Sometimes, Brock of Pewter Gym\n"
-    .string "lends me a hand.$"
+    .string "Olá, estou escavando fósseis aqui sob o\n"
+    .string "Mt. Moon.\p"
+    .string "Às vezes, o Brock do Ginásio de Pewter me\n"
+    .string "dá uma mãozinha.$"
 
 MtMoon_1F_EventScript_ItemParalyzeHeal::
 	finditem ITEM_PARALYZE_HEAL, 1

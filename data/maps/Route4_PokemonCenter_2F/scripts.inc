@@ -15,9 +15,9 @@ Route4_PokemonCenter_2F_Hiker::
 
 
 Route4_PokemonCenter_2F_Text_RockSmash::
-	.string "I'm hunting for Moon Stones with\n"
-	.string "my Pokémon!\p"
-	.string "You should try it too!$"
+	.string "Estou procurando Pedras da Lua com os\n"
+	.string "meus Pokémon!\p"
+	.string "Você deveria tentar também!$"
 
 Route4_PokemonCenter_2F_HikerRockSmash::
 	lock
@@ -26,6 +26,6 @@ Route4_PokemonCenter_2F_HikerRockSmash::
 	end
 
 Route4_PokemonCenter_2F_Text_MyGeodude::
-	.string "Be careful when using Rock Smash.\n"
-	.string "Sometimes, a Pokémon might jump out!\p"
-	.string "That's how I met my Geodude!$"
+	.string "Tenha cuidado ao usar o Quebrar Rocha.\n"
+	.string "Às vezes, um Pokémon pode saltar para fora!\p"
+	.string "Foi assim que conheci o meu Geodude!$"

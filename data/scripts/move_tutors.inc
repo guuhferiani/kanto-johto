@@ -328,13 +328,12 @@ MoveTutor_MegaPunch::
 	end
 
 MoveTutor_Text_MegaPunchTeach::
-    .string "A punch of roaring ferocity!\p"
-    .string "Packed with destructive power!\p"
-    .string "When the chips are down,\n"
-    .string "Mega Punch is the ultimate attack!\l"
-    .string "You agree, yes?\p"
-    .string "Now!\n"
-    .string "Let me teach it to your Pokémon!$"
+    .string "Um soco de ferocidade estrondosa!\p"
+    .string "Repleto de poder destrutivo!\p"
+    .string "Na hora do aperto, o Megasoco é o\n"
+    .string "ataque supremo! Você concorda, não é?\p"
+    .string "Agora!\n"
+    .string "Deixe-me ensiná-lo ao seu Pokémon!$"
 
 MoveTutor_EventScript_MegaPunchDeclined::
 	msgbox MoveTutor_Text_MegaPunchDeclined, MSGBOX_DEFAULT
@@ -342,12 +341,12 @@ MoveTutor_EventScript_MegaPunchDeclined::
 	end
 
 MoveTutor_Text_MegaPunchDeclined::
-    .string "You'll be back when you understand\n"
-    .string "the worth of Mega Punch.$"
+    .string "Você vai voltar quando entender o valor do\n"
+    .string "Megasoco.$"
 
 MoveTutor_Text_MegaPunchWhichMon::
-    .string "Fine!\n"
-    .string "Which Pokémon will learn it?$"
+    .string "Ótimo!\n"
+    .string "Qual Pokémon vai aprender?$"
 
 MoveTutor_EventScript_MegaPunchTaught::
 	msgbox MoveTutor_Text_MegaPunchTaught, MSGBOX_DEFAULT
@@ -355,11 +354,11 @@ MoveTutor_EventScript_MegaPunchTaught::
 	end
 
 MoveTutor_Text_MegaPunchTaught::
-    .string "Now, we are comrades in the way of\n"
-    .string "punching!\p"
-    .string "You should go before you're seen\n"
-    .string "by the misguided fool who trains\l"
-    .string "only his silly kicking over there.$"
+    .string "Agora somos companheiros no caminho do\n"
+    .string "soco!\p"
+    .string "É melhor você ir antes que seja visto\n"
+    .string "por aquele tolo iludido que treina\l"
+    .string "apenas seus chutes bobos logo ali.$"
 
 MoveTutor_MegaKick::
 	lock
@@ -374,13 +373,12 @@ MoveTutor_MegaKick::
 	end
 
 MoveTutor_Text_MegaKickTeach::
-    .string "A kick of brutal ferocity!\p"
-    .string "Packed with destructive power!\p"
-    .string "When you get right down to it,\n"
-    .string "Mega Kick is the ultimate attack!\l"
-    .string "Don't you agree?\p"
-    .string "Okay!\n"
-    .string "I'll teach it to your Pokémon!$"
+    .string "Um chute de ferocidade brutal!\p"
+    .string "Repleto de poder destrutivo!\p"
+    .string "Pensando bem, o Megachute é o ataque\n"
+    .string "supremo! Você não concorda?\p"
+    .string "Certo!\n"
+    .string "Vou ensiná-lo ao seu Pokémon!$"
 
 MoveTutor_EventScript_MegaKickDeclined::
 	msgbox MoveTutor_Text_MegaKickDeclined, MSGBOX_DEFAULT
@@ -388,12 +386,12 @@ MoveTutor_EventScript_MegaKickDeclined::
 	end
 
 MoveTutor_Text_MegaKickDeclined::
-    .string "You'll come crawling back when you\n"
-    .string "realize the value of Mega Kick.$"
+    .string "Você voltará rastejando quando perceber o\n"
+    .string "valor do Megachute.$"
 
 MoveTutor_Text_MegaKickWhichMon::
-    .string "All right!\n"
-    .string "Which Pokémon wants to learn it?$"
+    .string "Muito bem!\n"
+    .string "Qual Pokémon quer aprender?$"
 
 MoveTutor_EventScript_MegaKickTaught::
 	msgbox MoveTutor_Text_MegaKickTaught, MSGBOX_DEFAULT
@@ -401,11 +399,11 @@ MoveTutor_EventScript_MegaKickTaught::
 	end
 
 MoveTutor_Text_MegaKickTaught::
-    .string "Now, we are soul mates in the way\n"
-    .string "of kicking!\p"
-    .string "You should run before you're seen\n"
-    .string "by the deluded nitwit who trains\l"
-    .string "only simple punching over there.$"
+    .string "Agora somos almas gêmeas no caminho do\n"
+    .string "chute!\p"
+    .string "É melhor você correr antes que seja visto\n"
+    .string "por aquele boboca iludido que só treina\l"
+    .string "socos simples logo ali.$"
 
 MoveTutor_RockSlide::
 	lock
