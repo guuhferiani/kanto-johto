@@ -19,15 +19,15 @@ Route12_EventScript_RouteSign::
 	end
 
 Route12_Text_RouteSign::
-    .string "Route 12 \n"
-    .string "North to Lavender$"
+    .string "Rota 12\n"
+    .string "Norte para Lavender$"
 
 Route12_EventScript_FishingSign::
 	msgbox Route12_Text_SportfishingArea, MSGBOX_SIGN
 	end
 
 Route12_Text_SportfishingArea::
-    .string "Sportfishing Area$"
+    .string "Área de Pesca Esportiva$"
 
 @Snorlax
 Route12_EventScript_TryRemoveSnorlax::
@@ -75,11 +75,11 @@ Route12_EventScript_SnorlaxNoPokeFlute::
 	end
 
 Route12_Text_MonSprawledOutInSlumber::
-    .string "A Pokémon is sprawled out in\n"
-    .string "a deep and comfortable slumber.$"
+    .string "Um Pokémon está estirado em um sono\n"
+    .string "profundo e confortável.$"
 
 Text_PlayedPokeFlute::
-    .string "{PLAYER} played the Poké Flute.$"
+    .string "{PLAYER} tocou a Poké Flauta.$"
 
 @Trainers
 Route12_EventScript_Ned::
@@ -91,16 +91,16 @@ Route12_EventScript_Ned::
 	end
 
 Route12_Text_NedIntro::
-    .string "Yeah!\n"
-    .string "I got a bite here!$"
+    .string "Isso aí!\n"
+    .string "Fisguei um aqui!$"
 
 Route12_Text_NedDefeat::
-    .string "Tch!\n"
-    .string "Just a small fry…$"
+    .string "Tsc!\n"
+    .string "Só um peixinho miúdo…$"
 
 Route12_Text_NedPostBattle::
-    .string "Hang on!\n"
-    .string "My line's snagged!$"
+    .string "Aguenta aí!\n"
+    .string "Minha linha enroscou!$"
 
 Route12_EventScript_RegisterNedAfterBattle::
 	special PlayerFaceTrainerAfterBattle
@@ -111,8 +111,8 @@ Route12_EventScript_RegisterNedAfterBattle::
 	end
 
 Route12_Text_NedRegister:
-	.string "Give me a call if you ever\n"
-	.string "want to go fishing.$"
+	.string "Me dê uma ligada se você quiser ir pescar\n"
+	.string "algum dia.$"
 
 Route12_EventScript_NedRematch::
 	trainerbattle_rematch REMATCHABLE_TRAINER_FISHERMAN_NED_1, Route12_Text_NedRematchIntro, Route12_Text_NedDefeat
@@ -120,11 +120,11 @@ Route12_EventScript_NedRematch::
 	end
 
 Route12_Text_NedRematchIntro::
-	.string "Whoa!\n"
-	.string "This is gonna be a big one!$"
+	.string "Uau!\n"
+	.string "Esse aqui vai ser dos grandes!$"
 
 Route12_Text_NedRematchPostBattle::
-	.string "Just another Magikarp.$"
+	.string "Só mais um Magikarp.$"
 
 Route12_EventScript_Luca::
     trainerbattle_single REMATCHABLE_TRAINER_ROCKER_LUCA_1, Route12_Text_LucaIntro, Route12_Text_LucaDefeat, Route12_EventScript_RegisterLucaAfterBattle
@@ -135,16 +135,16 @@ Route12_EventScript_Luca::
     end
 
 Route12_Text_LucaIntro::
-    .string "Electricity is my specialty.\p"
-    .string "I don't know a thing about Pokémon\n"
-    .string "of the sea, though.$"
+    .string "Eletricidade é a minha especialidade.\p"
+    .string "Mas eu não entendo nada de Pokémon\n"
+    .string "do mar.$"
 
 Route12_Text_LucaDefeat::
-    .string "Unplugged!$"
+    .string "Desconectado!$"
 
 Route12_Text_LucaPostBattle::
-    .string "Water conducts electricity, so you\n"
-    .string "should zap sea Pokémon.$"
+    .string "A água conduz eletricidade, então você\n"
+    .string "deve dar um choque nos Pokémon do mar.$"
 
 Route12_EventScript_RegisterLucaAfterBattle::
     special PlayerFaceTrainerAfterBattle
@@ -155,8 +155,8 @@ Route12_EventScript_RegisterLucaAfterBattle::
     end
 
 Route12_Text_LucaRegister:
-    .string "After I recharge, let's have\n"
-    .string "a rematch.$"
+    .string "Depois que eu recarregar, vamos ter\n"
+    .string "uma revanche.$"
 
 Route12_EventScript_LucaRematch::
     trainerbattle_rematch REMATCHABLE_TRAINER_ROCKER_LUCA_1, Route12_Text_LucaRematchIntro, Route12_Text_LucaDefeat
@@ -164,11 +164,11 @@ Route12_EventScript_LucaRematch::
     end
 
 Route12_Text_LucaRematchIntro::
-    .string "I still don't know a thing \n"
-    .string "about Pokémon of the sea.$"
+    .string "Eu ainda não entendo nada sobre\n"
+    .string "Pokémon do mar.$"
 
 Route12_Text_LucaRematchPostBattle::
-    .string "Zapped!$"
+    .string "Eletrocutado!$"
 
 Route12_EventScript_Chip::
 	trainerbattle_single TRAINER_FISHERMAN_CHIP, Route12_Text_ChipIntro, Route12_Text_ChipDefeat
@@ -176,15 +176,15 @@ Route12_EventScript_Chip::
 	end
 
 Route12_Text_ChipIntro::
-    .string "Be patient.\n"
-    .string "Fishing is a waiting game.$"
+    .string "Tenha paciência.\n"
+    .string "Pescar é um jogo de espera.$"
 
 Route12_Text_ChipDefeat::
-    .string "That one got away!$"
+    .string "Aquele escapou!$"
 
 Route12_Text_ChipPostBattle::
-    .string "With a better rod, I could catch\n"
-    .string "better Pokémon…$"
+    .string "Com uma vara melhor, eu conseguiria\n"
+    .string "pescar Pokémon melhores…$"
 
 Route12_EventScript_Hank::
     trainerbattle_single TRAINER_FISHERMAN_HANK, Route12_Text_HankIntro, Route12_Text_HankDefeat
@@ -192,17 +192,17 @@ Route12_EventScript_Hank::
     end
 
 Route12_Text_HankIntro::
-    .string "The fishing fool versus Pokémon\n"
-    .string "kid!$"
+    .string "O maluco da pesca contra o prodígio\n"
+    .string "Pokémon!$"
 
 Route12_Text_HankDefeat::
-    .string "Touch too much!$"
+    .string "Foi um pouco demais!$"
 
 Route12_Text_HankPostBattle::
-    .string "I guess you get to be good at\n"
-    .string "what you like.\p"
-    .string "Well, you beat me at Pokémon,\n"
-    .string "but you can't top me at fishing.$"
+    .string "Acho que a gente fica bom naquilo\n"
+    .string "que gosta.\p"
+    .string "Bem, você me venceu no Pokémon,\n"
+    .string "mas não me supera na pescaria.$"
 
 Route12_EventScript_Elliot::
     trainerbattle_single TRAINER_FISHERMAN_ELLIOT, Route12_Text_ElliotIntro, Route12_Text_ElliotDefeat
@@ -210,16 +210,16 @@ Route12_EventScript_Elliot::
     end
     
 Route12_Text_ElliotIntro::
-    .string "I love fishing, don't get me wrong.\p"
-    .string "But it'd be best if I also had more\n"
-    .string "work.$"
+    .string "Eu amo pescar, não me entenda mal.\p"
+    .string "Mas seria melhor se eu também tivesse\n"
+    .string "mais trabalho.$"
 
 Route12_Text_ElliotDefeat::
-    .string "It's not easy…$"
+    .string "Não é fácil…$"
 
 Route12_Text_ElliotPostBattle::
-    .string "It's all right.\n"
-    .string "Losing doesn't bug me anymore.$"
+    .string "Tudo bem.\n"
+    .string "Perder não me incomoda mais.$"
 
 Route12_EventScript_Jes::
     trainerbattle_double TRAINER_YOUNG_COUPLE_GIA_JES, Route12_Text_JesIntro, Route12_Text_JesDefeat, Route12_Text_JesNotEnoughMons
@@ -227,22 +227,22 @@ Route12_EventScript_Jes::
     end
 
 Route12_Text_JesIntro::
-    .string "Jes: If I win, I'm going to\n"
-    .string "propose to Gia.$"
+    .string "Jes: Se eu vencer, vou pedir a Gia\n"
+    .string "em casamento.$"
 
 Route12_Text_JesDefeat::
-    .string "Jes: Oh, please, why couldn't you\n"
-    .string "let us win?$"
+    .string "Jes: Ah, por favor, por que você não\n"
+    .string "podia nos deixar vencer?$"
 
 Route12_Text_JesPostBattle::
-    .string "Jes: Oh, Gia, forgive me,\n"
-    .string "my love!$"
+    .string "Jes: Ah, Gia, me perdoe,\n"
+    .string "meu amor!$"
 
 Route12_Text_JesNotEnoughMons::
-    .string "Jes: Gia and I, we'll be\n"
-    .string "together forever.\p"
-    .string "We won't battle unless you have\n"
-    .string "two Pokémon of your own.$"
+    .string "Jes: A Gia e eu ficaremos\n"
+    .string "juntos para sempre.\p"
+    .string "Só batalhamos se você tiver\n"
+    .string "dois Pokémon.$"
 
 Route12_EventScript_Gia::
     trainerbattle_double TRAINER_YOUNG_COUPLE_GIA_JES, Route12_Text_GiaIntro, Route12_Text_GiaDefeat, Route12_Text_GiaNotEnoughMons
@@ -250,20 +250,20 @@ Route12_EventScript_Gia::
     end
 
 Route12_Text_GiaIntro::
-    .string "Gia: Hey, Jes…\p"
-    .string "If we win, I'll marry you!$"
+    .string "Gia: Ei, Jes…\p"
+    .string "Se nós vencermos, eu me caso com você!$"
 
 Route12_Text_GiaDefeat::
-    .string "Gia: Oh, but why?$"
+    .string "Gia: Ah, mas por quê?$"
 
 Route12_Text_GiaPostBattle::
-    .string "Gia: Jes, you silly!\n"
-    .string "You ruined this!$"
+    .string "Gia: Jes, seu bobo!\n"
+    .string "Você arruinou tudo!$"
 
 Route12_Text_GiaNotEnoughMons::
-    .string "Gia: I can't bear to battle\n"
-    .string "without my Jes!\p"
-    .string "Don't you have one more Pokémon?$"
+    .string "Gia: Eu não consigo batalhar\n"
+    .string "sem o meu Jes!\p"
+    .string "Você não tem mais um Pokémon?$"
 
 Route12_EventScript_Justin::
     trainerbattle_single TRAINER_CAMPER_JUSTIN, Route12_Text_JustinIntro, Route12_Text_JustinDefeat
@@ -271,16 +271,16 @@ Route12_EventScript_Justin::
     end
 
 Route12_Text_JustinIntro::
-    .string "I'm searching for a Moon Stone.\n"
-    .string "Have you found one?$"
+    .string "Estou procurando uma Pedra da Lua.\n"
+    .string "Você encontrou alguma?$"
 
 Route12_Text_JustinDefeat::
-    .string "Oww!$"
+    .string "Ai, ai!$"
 
 Route12_Text_JustinPostBattle::
-    .string "I could have made my Pokémon\n"
-    .string "evolve with a Moon Stone.\p"
-    .string "I would have won then, I bet.$"
+    .string "Eu poderia ter feito meu Pokémon\n"
+    .string "evoluir com uma Pedra da Lua.\p"
+    .string "Aposto que eu teria vencido então.$"
 
 Route12_EventScript_Andrew::
     trainerbattle_single TRAINER_FISHERMAN_ANDREW, Route12_Text_AndrewIntro, Route12_Text_AndrewDefeat
@@ -288,17 +288,17 @@ Route12_EventScript_Andrew::
     end
 
 Route12_Text_AndrewIntro::
-    .string "What's catching?\p"
-    .string "You never know what you could\n"
-    .string "catch!$"
+    .string "O que está fisgando?\p"
+    .string "Nunca se sabe o que pode\n"
+    .string "pescar!$"
 
 Route12_Text_AndrewDefeat::
-    .string "Lost it!$"
+    .string "Perdi a fisgada!$"
 
 Route12_Text_AndrewPostBattle::
-    .string "What, Magikarp?\p"
-    .string "I catch them all the time, sure.\n"
-    .string "But, boy are they wimpy.$"
+    .string "O quê, Magikarp?\p"
+    .string "Eu pesco eles o tempo todo, claro.\n"
+    .string "Mas nossa, como são molengas.$"
 
 Route12_EventScript_ItemIron::
     finditem ITEM_IRON, 1
@@ -334,8 +334,8 @@ Route12_EventScript_Dennis::
 
 Route12_Text_Dennis:
 	.string "DENNIS: KAAAARP!\p"
-	.string "... you feel uneasy, as if you\n"
-	.string "are looking at death itself.$"
+	.string "… você sente um arrepio, como se estivesse\n"
+	.string "olhando para a própria morte.$"
 
 Route12_EventScript_FishermanLarry::
 	lock
@@ -348,16 +348,16 @@ Route12_EventScript_FishermanLarry::
 	end
 
 Route12_Text_LarryIntro:
-	.string "How's it going, kiddo?\n"
-    .string "You seem like a capable trainer.\p"
-	.string "The fish aren't biting at the\n"
-    .string "moment, so show me what you got!$"
+	.string "Como vai, jovem?\n"
+    .string "Você parece um Treinador capaz.\p"
+	.string "Os peixes não estão mordendo no\n"
+    .string "momento, então mostre-me o que você tem!$"
 
 Route12_Text_LarryDefeat:
-	.string "That was fun!$"
+	.string "Isso foi divertido!$"
 
 Route12_Text_LarryPostBattle:
-	.string "Dennis, that was thrilling!$"
+	.string "Dennis, isso foi emocionante!$"
 
 Route12_EventScript_MegaHintGyarados::    
     goto_if_set FLAG_GOT_GYARADOSITE, Route12_Text_LarryDefeated
@@ -367,9 +367,9 @@ Route12_EventScript_MegaHintGyarados::
     end
     
 Route12_Text_GyaradosMegaHint:
-    .string "If you don't mind the journey,\n"
-    .string "Seafoam Islands is beautiful\l"
-    .string "this time of year.$"
+    .string "Se não se importar com a viagem, as\n"
+    .string "Ilhas Espuma são lindas nesta época\l"
+    .string "do ano.$"
 
 Route12_Text_LarryDefeated::
     msgbox LarryDefeated_Text MSGBOX_DEFAULT
@@ -377,10 +377,10 @@ Route12_Text_LarryDefeated::
 	end
 
 LarryDefeated_Text:	
-	.string "Dennis must like you. He...\p"
-	.string "Well. Let's just say I don't\n"
-    .string "leave the house without a lot\l"
-    .string "of Max Revives for my opponents.$"
+	.string "Dennis deve gostar de você. Ele…\p"
+	.string "Bem. Digamos apenas que eu não saio\n"
+    .string "de casa sem muitos Reviver Máximo\l"
+    .string "para meus oponentes.$"
 
 Route12_EventScript_DennisDefeated::
 	msgbox DennisDefeated MSGBOX_DEFAULT
@@ -389,6 +389,6 @@ Route12_EventScript_DennisDefeated::
 
 DennisDefeated:	
 	.string "DENNIS: KARP!\p"
-	.string "... a warm feeling floods you\n"
-	.string "and you bow in gratitude for\l"
-    .string "being spared by this god.$"
+	.string "… uma sensação calorosa te invade\n"
+	.string "e você se curva em gratidão por ter\l"
+    .string "sido poupado por este deus.$"

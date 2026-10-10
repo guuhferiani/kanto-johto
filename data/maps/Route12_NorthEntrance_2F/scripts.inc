@@ -6,18 +6,18 @@ Route12_NorthEntrance_2F_EventScript_LeftBinoculars::
 	end
 
 Route12_NorthEntrance_2F_Text_TheresManFishing::
-    .string "Let's see what the binoculars have\n"
-    .string "to show…\p"
-    .string "There's a man fishing!$"
+    .string "Vejamos o que os binóculos têm\n"
+    .string "a mostrar…\p"
+    .string "Há um homem pescando!$"
 
 Route12_NorthEntrance_2F_EventScript_RightBinoculars::
 	msgbox Route12_NorthEntrance_2F_Text_ItsPokemonTower, MSGBOX_SIGN
 	end
 
 Route12_NorthEntrance_2F_Text_ItsPokemonTower::
-    .string "Let's see what the binoculars have\n"
-    .string "to show…\p"
-    .string "It's Pokémon Tower!$"
+    .string "Vejamos o que os binóculos têm\n"
+    .string "a mostrar…\p"
+    .string "É a Torre Pokémon!$"
 
 Route12_NorthEntrance_2F_EventScript_Lass::
 	lock
@@ -38,14 +38,14 @@ Route12_NorthEntrance_2F_EventScript_Lass::
 	end
 
 Route12_NorthEntrance_2F_Text_ReceivedTM27::
-    .string "{PLAYER} received TM27\n"
-    .string "from the mourning girl.$"
+    .string "{PLAYER} recebeu o MT27\n"
+    .string "da garota de luto.$"
 
 Route12_NorthEntrance_2F_Text_TakeTMDontNeedAnymore::
-    .string "My Pokémon's ashes are stored in\n"
-    .string "Pokémon Tower.\p"
-    .string "You can have this TM.\n"
-    .string "I don't need it anymore…$"
+    .string "As cinzas do meu Pokémon estão guardadas\n"
+    .string "na Torre Pokémon.\p"
+    .string "Você pode ficar com este MT.\n"
+    .string "Eu não preciso mais dele…$"
 
 Route12_NorthEntrance_2F_EventScript_ExplainTM27::
     msgbox Route12_NorthEntrance_2F_Text_ExplainTM27
@@ -53,10 +53,10 @@ Route12_NorthEntrance_2F_EventScript_ExplainTM27::
     end
 
 Route12_NorthEntrance_2F_Text_ExplainTM27::
-    .string "TM27 is a move called Return…\p"
-    .string "If you treat your Pokémon good,\n"
-    .string "it will return your love by working\l"
-    .string "its hardest in battle.$"
+    .string "O MT27 é um golpe chamado Retribuição…\p"
+    .string "Se você tratar bem seu Pokémon, ele\n"
+    .string "retribuirá seu amor dando o melhor de si\l"
+    .string "na batalha.$"
 
 Route12_NorthEntrance_2F_EventScript_NoRoomForTM27::
     msgbox Route12_NorthEntrance_2F_Text_DontHaveRoomForThis
@@ -64,4 +64,4 @@ Route12_NorthEntrance_2F_EventScript_NoRoomForTM27::
     end
     
 Route12_NorthEntrance_2F_Text_DontHaveRoomForThis::
-    .string "You don't have room for this.$"
+    .string "Você não tem espaço para isto.$"
