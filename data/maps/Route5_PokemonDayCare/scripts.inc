@@ -24,10 +24,10 @@ Route5_PokemonDayCare_EventScript_DaycareEmployee::
 	end
 
 Route5_PokemonDayCare_Text_Volunteers::
-	.string "The owner of this Day Care used\n"
-	.string "to do it all on his own, but\l"
-	.string "he lets us volunteer here to\l"
-	.string "spend time with Pokémon!$"
+	.string "O dono desta Creche costumava\n"
+	.string "cuidar de tudo sozinho, mas ele\l"
+	.string "deixa a gente ajudar como voluntárias\l"
+	.string "para passar tempo com os Pokémon!$"
 
 Route5_PokemonDayCare_EventScript_EggWaitingPartner::
 	msgbox Route5_PokemonDayCare_Text_PartnerWasLookingForYou, MSGBOX_DEFAULT
@@ -36,8 +36,8 @@ Route5_PokemonDayCare_EventScript_EggWaitingPartner::
 	end
 
 Route5_PokemonDayCare_Text_PartnerWasLookingForYou:
-	.string "Oh! My partner was looking for you\n"
-	.string "out front!$"
+	.string "Ah! Minha parceira estava procurando\n"
+	.string "por você lá na frente!$"
 
 Route5_PokemonDayCare_EventScript_EmployeesOnly::
 	turnobject LOCALID_VOLUNTEER, DIR_EAST
@@ -51,9 +51,9 @@ Route5_PokemonDayCare_EventScript_EmployeesOnly::
 	end
 
 Route5_PokemonDayCare_Text_EmployeesOnly::
-	.string "Excuse me!\p"
-	.string "Only employees are allowed to\n"
-	.string "go back there.$"
+	.string "Com licença!\p"
+	.string "Apenas funcionários têm permissão\n"
+	.string "para entrar ali atrás.$"
 
 Movement_StepBack:
 	walk_down
@@ -78,9 +78,9 @@ Route5_PokemonDayCare_EventScript_EggWaiting::
 	end
 
 Route5_PokemonDayCare_Text_SomeoneWasLookingForYou:
-	.string "Oh! It's you!\p"
-	.string "The volunteer out front wanted to\n"
-	.string "speak with you!$"
+	.string "Ah! É você!\p"
+	.string "A voluntária lá na frente queria\n"
+	.string "falar com você!$"
 
 Route5_PokemonDayCare_EventScript_OneMonInDaycare::
 	msgbox Route5_PokemonDayCare_Text_GoodToSeeYou, MSGBOX_DEFAULT
@@ -94,12 +94,12 @@ Route5_PokemonDayCare_EventScript_OneMonInDaycare::
 	end
 
 Route5_PokemonDayCare_Text_GoodToSeeYou:
-	.string "Ah, it's you! Good to see you.\n"
-	.string "Your Pokémon are doing good!$"
+	.string "Ah, é você! Que bom vê-lo.\n"
+	.string "Seus Pokémon estão indo muito bem!$"
 
 Route5_PokemonDayCare_Text_TakeYourMonBack:
-	.string "Did you want to take one of\n"
-	.string "your Pokémon back?$"
+	.string "Quer pegar um dos seus\n"
+	.string "Pokémon de volta?$"
 
 Route5_PokemonDayCare_EventScript_DisplayLevelsGained::
 	specialvar VAR_RESULT, GetNumLevelsGainedFromDaycare
@@ -111,8 +111,8 @@ Route5_PokemonDayCare_EventScript_YourMonHasGrownXLevels::
 	return
 
 Route5_PokemonDayCare_Text_YourMonHasGrownXLevels:
-	.string "So far, your {STR_VAR_1} has\n"
-	.string "grown by {STR_VAR_2} levels.$"
+	.string "Até agora, seu {STR_VAR_1}\n"
+	.string "subiu {STR_VAR_2} níveis.$"
 
 Route5_PokemonDayCare_EventScript_DisplayLevelsGained2::
 	specialvar VAR_RESULT, GetNumLevelsGainedFromDaycare
@@ -124,13 +124,13 @@ Route5_PokemonDayCare_EventScript_YourOtherMonHasGrownXLevels::
 	return
 
 Route5_PokemonDayCare_Text_YourOtherMonHasGrownXLevels:
-	.string "And your {STR_VAR_1} has\n"
-	.string "grown by {STR_VAR_2} levels.$"
+	.string "E o seu {STR_VAR_1}\n"
+	.string "subiu {STR_VAR_2} níveis.$"
 
 Route5_PokemonDayCare_Text_WeCanRaiseOneMore:
-	.string "Did you know that we can raise two\n"
-	.string "of your Pokémon?\p"
-	.string "Would you like us to raise one more?$"
+	.string "Você sabia que nós podemos cuidar de\n"
+	.string "dois dos seus Pokémon?\p"
+	.string "Gostaria que cuidássemos de mais um?$"
 
 Route5_PokemonDayCare_EventScript_GiveMonToRaise::
 	specialvar VAR_RESULT, CountPartyNonEggMons
@@ -158,13 +158,13 @@ Route5_PokemonDayCare_EventScript_GiveMonToRaise::
 	end
 
 Route5_PokemonDayCare_Text_WhichMonShouldWeRaise:
-	.string "Which Pokémon should we raise for\n"
-	.string "you?$"
+	.string "De qual Pokémon devemos cuidar\n"
+	.string "para você?$"
 
 Route5_PokemonDayCare_Text_WellRaiseYourMon:
-	.string "Great! We'll raise your {STR_VAR_1}\n"
-	.string "for a while.\p"
-	.string "Don't forget to come back for it!$"
+	.string "Ótimo! Cuidaremos do seu {STR_VAR_1}\n"
+	.string "por um tempo.\p"
+	.string "Não se esqueça de vir buscá-lo!$"
 
 Route5_PokemonDayCare_EventScript_OnlyOneMon::
 	msgbox Route5_PokemonDayCare_Text_YouHaveJustOneMon, MSGBOX_DEFAULT
@@ -172,10 +172,10 @@ Route5_PokemonDayCare_EventScript_OnlyOneMon::
 	end
 
 Route5_PokemonDayCare_Text_YouHaveJustOneMon:
-	.string "Oh? But you have just one\n"
+	.string "Ah? Mas você tem apenas um\n"
 	.string "Pokémon.\p"
-	.string "I couldn't leave you alone!\n"
-	.string "Come back another time.$"
+	.string "Não posso deixar você sozinho!\n"
+	.string "Volte outra hora.$"
 
 Route5_PokemonDayCare_EventScript_OnlyTwoAliveMons::
 	msgbox Route5_PokemonDayCare_Text_YoullBeLeftWithJustOne, MSGBOX_DEFAULT
@@ -183,10 +183,10 @@ Route5_PokemonDayCare_EventScript_OnlyTwoAliveMons::
 	end
 
 Route5_PokemonDayCare_Text_YoullBeLeftWithJustOne:
-	.string "If you leave that Pokémon with\n"
-	.string "me, you'll be left with just one.\p"
-	.string "If you want my advice, you should\n"
-	.string "try to catch some more.$"
+	.string "Se deixar esse Pokémon comigo,\n"
+	.string "você vai ficar com apenas um.\p"
+	.string "Se quer meu conselho, você deveria\n"
+	.string "tentar capturar mais alguns.$"
 
 Route5_PokemonDayCare_EventScript_ComeAgain::
 	msgbox Route5_PokemonDayCare_Text_ComeAgain, MSGBOX_DEFAULT
@@ -194,7 +194,7 @@ Route5_PokemonDayCare_EventScript_ComeAgain::
 	end
 
 Route5_PokemonDayCare_Text_ComeAgain:
-	.string "Come again.$"
+	.string "Volte sempre.$"
 
 Route5_PokemonDayCare_EventScript_OnlyOneAliveMon::
 	msgbox Route5_PokemonDayCare_Text_WhatWillYouBattleWith, MSGBOX_DEFAULT
@@ -202,9 +202,9 @@ Route5_PokemonDayCare_EventScript_OnlyOneAliveMon::
 	end
 
 Route5_PokemonDayCare_Text_WhatWillYouBattleWith:
-	.string "Oh! If you leave me that Pokémon,\n"
-	.string "what will you battle with?\p"
-	.string "You should come back another time!$"
+	.string "Ah! Se você me deixar esse Pokémon,\n"
+	.string "com o que vai batalhar?\p"
+	.string "Você deveria voltar outra hora!$"
 
 Route5_PokemonDayCare_EventScript_CanRaiseOneMore::
 	msgbox Route5_PokemonDayCare_Text_WeCanRaiseOneMore, MSGBOX_YESNO
@@ -231,8 +231,8 @@ Route5_PokemonDayCare_EventScript_NoRoom::
 	end
 
 Route5_PokemonDayCare_Text_YourTeamIsFull:
-	.string "Oh! Your Pokémon team is full.\n"
-	.string "Come see me when you have room.$"
+	.string "Ah! Sua equipe Pokémon está cheia.\n"
+	.string "Venha falar comigo quando tiver espaço.$"
 
 Route5_PokemonDayCare_EventScript_CostPrompt::
 	special GetDaycareCost
@@ -242,8 +242,8 @@ Route5_PokemonDayCare_EventScript_CostPrompt::
 	end
 
 Route5_PokemonDayCare_Text_ItWillCostX:
-	.string "We took good care of {STR_VAR_1},\n"
-	.string "so it will cost ¥{STR_VAR_2}.$"
+	.string "Cuidamos muito bem de {STR_VAR_1},\n"
+	.string "então vai custar ¥{STR_VAR_2}.$"
 
 Route5_PokemonDayCare_EventScript_CheckEnoughMoney::
 	specialvar VAR_RESULT, IsEnoughForCostInVar0x8005
@@ -335,12 +335,12 @@ Route5_PokemonDayCare_Movement_RetrieveDaycareMonAlt:
 	step_end
 
 Route5_PokemonDayCare_Text_HeresYourMon:
-	.string "Perfect!\n"
-	.string "Here's your Pokémon.$"
+	.string "Perfeito!\n"
+	.string "Aqui está o seu Pokémon.$"
 
 Route5_PokemonDayCare_Text_TookBackMon:
-	.string "{PLAYER} took back {STR_VAR_1} from\n"
-	.string "the Day Care.$"
+	.string "{PLAYER} pegou {STR_VAR_1} de volta\n"
+	.string "da Creche.$"
 
 Route5_PokemonDayCare_EventScript_AskRetrieveOtherMon::
 	msgbox Route5_PokemonDayCare_Text_TakeOtherOneBackToo, MSGBOX_YESNO
@@ -349,11 +349,11 @@ Route5_PokemonDayCare_EventScript_AskRetrieveOtherMon::
 	end
 
 Route5_PokemonDayCare_Text_TakeOtherOneBackToo:
-	.string "Will you take back the other one,\n"
-	.string "too?$"
+	.string "Vai levar o outro de volta\n"
+	.string "também?$"
 
 Route5_PokemonDayCare_Text_NotEnoughMoney:
-	.string "You don't have enough money…$"
+	.string "Você não tem dinheiro suficiente…$"
 
 Route5_PokemonDayCare_EventScript_TwoMonsInDaycare::
 	msgbox Route5_PokemonDayCare_Text_GoodToSeeYou, MSGBOX_DEFAULT
@@ -368,12 +368,12 @@ Route5_PokemonDayCare_EventScript_TwoMonsInDaycare::
 	end
 
 Route5_PokemonDayCare_Text_WouldYouLikeUsToRaiseAMon:
-	.string "I'm the owner of the Day Care.\p"
-	.string "We can raise Pokémon for you.\p"
-	.string "Would you like us to raise one?$"
+	.string "Eu sou o dono da Creche.\p"
+	.string "Nós podemos cuidar de Pokémon para você.\p"
+	.string "Gostaria que cuidássemos de um?$"
 
 Route5_PokemonDayCare_Text_FineThenComeAgain:
-	.string "Have a nice day!$"
+	.string "Tenha um bom dia!$"
 
 EventScript_EggHatch::
 	lockall
@@ -404,9 +404,9 @@ Route5_PokemonDayCare_EventScript_GetDailyBerry::
 	end
 
 Route5_PokemonDayCare_Text_PokemonLoveBerries::
-	.string "Pokémon love berries!\p"
-	.string "I found this while I was exploring\n"
-	.string "with my Pokémon.$"
+	.string "Os Pokémon adoram Frutas!\p"
+	.string "Encontrei esta enquanto explorava\n"
+	.string "com meus Pokémon.$"
 
 Route5_PokemonDayCare_EventScript_GiveCheriBerry::
 	giveitem ITEM_CHERI_BERRY, 1
@@ -438,5 +438,5 @@ Route5_PokemonDayCare_EventScript_PlantBerries::
 	end
 
 Route5_PokemonDayCare_Text_SoftSoil::
-	.string "If you stick it in some soft soil,\n"
-	.string "it might grow!$"
+	.string "Se plantar em terra fofa e fértil,\n"
+	.string "ela pode brotar!$"

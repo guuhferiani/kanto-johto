@@ -30,12 +30,12 @@ UndergroundPath_NorthEntrance_EventScript_Saige::
 	end
 
 UndergroundPath_NorthEntrance_Text_HeyThanks::
-	.string "Hey, thanks!$"
+	.string "Ei, muito obrigado!$"
 
 UndergroundPath_NorthEntrance_Text_LookingForMonWannaTradeForMon::
-	.string "Hi!\n"
-	.string "Do you have a {STR_VAR_1}?\p"
-	.string "Want to trade it for my\n"
+	.string "Oi!\n"
+	.string "Você tem um {STR_VAR_1}?\p"
+	.string "Quer trocar pelo meu\n"
 	.string "{STR_VAR_2}?$"
 
 UndergroundPath_NorthEntrance_EventScript_DeclineTrade::
@@ -44,7 +44,7 @@ UndergroundPath_NorthEntrance_EventScript_DeclineTrade::
 	end
 
 UndergroundPath_NorthEntrance_Text_DeclinedTrade::
-	.string "That's too bad.$"
+	.string "Que pena.$"
 
 UndergroundPath_NorthEntrance_EventScript_NotRequestedMon::
 	bufferspeciesname STR_VAR_1, VAR_0x8009
@@ -53,8 +53,8 @@ UndergroundPath_NorthEntrance_EventScript_NotRequestedMon::
 	end
 
 UndergroundPath_NorthEntrance_Text_WhatThatsNotMon::
-	.string "What?\n"
-	.string "That's no {STR_VAR_1}!$"
+	.string "O quê?\n"
+	.string "Isso não é um {STR_VAR_1}!$"
 
 UndergroundPath_NorthEntrance_EventScript_AlreadyTraded::
 	msgbox UndergroundPath_NorthEntrance_Text_IsntMyOldMonGreat
@@ -62,6 +62,6 @@ UndergroundPath_NorthEntrance_EventScript_AlreadyTraded::
 	end
 
 UndergroundPath_NorthEntrance_Text_IsntMyOldMonGreat::
-	.string "How is my old {STR_VAR_2}?\n"
-	.string "My {STR_VAR_1} is doing great!$"
+	.string "Como está meu antigo {STR_VAR_2}?\n"
+	.string "Meu {STR_VAR_1} está ótimo!$"
 

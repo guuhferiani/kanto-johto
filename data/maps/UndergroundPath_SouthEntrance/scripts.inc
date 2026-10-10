@@ -6,5 +6,5 @@ UndergroundPath_SouthEntrance_EventScript_Woman::
 	end
 
 UndergroundPath_SouthEntrance_Text_PeopleLoseThingsInTheDarkness::
-    .string "People often lose things in the\n"
-    .string "darkness of the Underground Path.$"
+    .string "As pessoas costumam perder coisas na\n"
+    .string "escuridão da Passagem Subterrânea.$"

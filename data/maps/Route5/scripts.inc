@@ -36,16 +36,16 @@ Route5_EventScript_UndergroundPathSign::
 	end
 
 Route5_Text_UndergroundPathSign::
-    .string "Underground Path\n"
-    .string "Cerulean City - Vermilion City$"
+    .string "Passagem Subterrânea\n"
+    .string "Cidade de Cerulean - Cidade de Vermilion$"
 
 Route5_EventScript_DayCareSign::
 	msgbox Route5_Text_DayCareSign, MSGBOX_SIGN
 	end
 
 Route5_Text_DayCareSign::
-	.string "Pokémon Day Care\n"
-	.string "“Let us raise your Pokémon.”$"
+	.string "Creche Pokémon\n"
+	.string "“Deixe-nos criar seus Pokémon.”$"
 
 
 @Daycare Woman
@@ -63,11 +63,11 @@ Route5_EventScript_DaycareWoman::
 	end
 
 Route5_Text_GoInsideIfYoudLikeMeToRaiseMon:
-	.string "I'm volunteering at the Day Care.\p"
-	.string "Trainers from all over Kanto ask us\n"
-	.string "to take care of their Pokémon.\p"
-	.string "If you'd like us to raise your Pokémon,\n"
-	.string "have a word inside.$"
+	.string "Sou voluntária na Creche.\p"
+	.string "Treinadores de toda Kanto nos pedem\n"
+	.string "para cuidar dos seus Pokémon.\p"
+	.string "Se quiser que criemos o seu Pokémon,\n"
+	.string "converse com o pessoal lá dentro.$"
 
 Route5_EventScript_DaycareEggWaiting::
 	msgbox Route5_Text_DoYouWantEgg, MSGBOX_YESNO
@@ -82,21 +82,21 @@ Route5_EventScript_DaycareEggWaiting::
 	end
 
 Route5_Text_DoYouWantEgg:
-	.string "Oh, it's you!\p"
-	.string "We were raising your Pokémon,\n"
-	.string "and my goodness, were we surprised!\p"
-	.string "Your Pokémon had an Egg!\p"
-	.string "We don't know how it got there,\n"
-	.string "but your Pokémon had it.\p"
-	.string "Would you like to take it with you?$"
+	.string "Ah, é você!\p"
+	.string "Estávamos criando seu Pokémon,\n"
+	.string "e caramba, que surpresa nós tivemos!\p"
+	.string "Seu Pokémon tinha um Ovo!\p"
+	.string "Não sabemos como ele apareceu,\n"
+	.string "mas o seu Pokémon o tinha.\p"
+	.string "Gostaria de levá-lo com você?$"
 
 Route5_Text_IWillKeepDoYouWantIt:
-	.string "You don't want to take it?\n"
-	.string "Do you want me to give it away?$"
+	.string "Você não quer levar?\n"
+	.string "Quer que eu doe para outra pessoa?$"
 
 Route5_Text_IllKeepIt:
-	.string "Okay! We'll find a good home for\n"
-	.string "this Egg.$"
+	.string "Certo! Encontraremos um bom lar\n"
+	.string "para este Ovo.$"
 
 Route5_EventScript_DaycareAcceptEgg::
 	specialvar VAR_RESULT, CalculatePlayerPartyCount
@@ -106,8 +106,8 @@ Route5_EventScript_DaycareAcceptEgg::
 	end
 
 Route5_Text_YouHaveNoRoomForIt:
-	.string "You have no room for it…\n"
-	.string "Come back when you've made room.$"
+	.string "Você não tem espaço para ele…\n"
+	.string "Volte quando tiver liberado um espaço.$"
 
 Route5_EventScript_DaycareReceiveEgg::
 	message Route5_Text_ReceivedEgg
@@ -123,11 +123,11 @@ Route5_EventScript_DaycareReceiveEgg::
 	end
 
 Route5_Text_ReceivedEgg:
-	.string "{PLAYER} received the Egg from\n"
-	.string "the Day Care.$"
+	.string "{PLAYER} recebeu o Ovo\n"
+	.string "da Creche.$"
 
 Route5_Text_TakeGoodCareOfIt:
-	.string "Take good care of it.$"
+	.string "Cuide muito bem dele.$"
 
 Route5_EventScript_CheckOnOneMon::
 	special GetDaycareMonNicknames
@@ -137,8 +137,8 @@ Route5_EventScript_CheckOnOneMon::
 	end
 
 Route5_Text_YourMonIsDoingFine:
-	.string "Oh, it's you! Good to see you.\n"
-	.string "Your {STR_VAR_1}'s doing fine.$"
+	.string "Ah, é você! Que bom ver você.\n"
+	.string "Seu {STR_VAR_1} está indo muito bem.$"
 
 Route5_EventScript_CheckOnTwoMons::
 	special GetDaycareMonNicknames
@@ -152,8 +152,8 @@ Route5_EventScript_CheckOnTwoMons::
 	end
 
 Route5_Text_YourMonsAreDoingFine:
-	.string "Oh, it's you! Your {STR_VAR_1} and\n"
-	.string "{STR_VAR_2} are doing fine.$"
+	.string "Ah, é você! Seus {STR_VAR_1} e\n"
+	.string "{STR_VAR_2} estão indo muito bem.$"
 
 Route5_EventScript_BerryGuy::
 	lock
@@ -163,8 +163,8 @@ Route5_EventScript_BerryGuy::
 	end
 
 Route5_Text_FriendshipBerries:
-	.string "I've heard there are berries that\n"
-	.string "make a Pokémon more friendly.$"
+	.string "Ouvi dizer que existem Frutas que\n"
+	.string "deixam o Pokémon mais amigável.$"
 
 Route5_RocketFugitive::
 	trainerbattle_single TRAINER_FUGITIVE_M, RocketFugitive_Text_Intro, RocketFugitive_Text_Defeat
