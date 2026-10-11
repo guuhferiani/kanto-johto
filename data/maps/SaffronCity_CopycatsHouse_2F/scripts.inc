@@ -13,8 +13,8 @@ SaffronCity_CopycatsHouse_2F_EventScript_Doduo::
 
 SaffronCity_CopycatsHouse_2F_Text_Doduo::
     .string "Doduo: Giiih!\p"
-    .string "Pretty mirror look at me,\n"
-    .string "see how pretty I can be?$"
+    .string "Espelho lindo, olhe para mim,\n"
+    .string "viu como posso ser bela assim?$"
 
 SaffronCity_CopycatsHouse_2F_EventScript_Doll::
 	lock
@@ -23,8 +23,8 @@ SaffronCity_CopycatsHouse_2F_EventScript_Doll::
 	end
 
 SaffronCity_CopycatsHouse_2F_Text_RareMonOnlyDoll::
-    .string "This is a rare Pokémon!\n"
-    .string "Huh? It's only a doll!$"
+    .string "Este é um Pokémon raro!\n"
+    .string "Ué? É só uma boneca!$"
 
 SaffronCity_CopycatsHouse_2F_EventScript_Copycat::
 	lock
@@ -42,44 +42,44 @@ SaffronCity_CopycatsHouse_2F_EventScript_MimicPlayerMale::
 	return
 
 SaffronCity_CopycatsHouse_2F_Text_MimickingFavoriteHobbyMale::
-    .string "{PLAYER}: Hi!\n"
-    .string "Do you like Pokémon?\p"
-    .string "{PLAYER}: Uh, no, I just asked you.\p"
-    .string "{PLAYER}: Huh?\n"
-    .string "You're strange!\p"
-    .string "Copycat: Hmm? Quit mimicking?\n"
-    .string "But, that's my favorite hobby!$"
+    .string "{PLAYER}: Oi!\n"
+    .string "Você gosta de Pokémon?\p"
+    .string "{PLAYER}: Hã, não, eu te perguntei.\p"
+    .string "{PLAYER}: Hein?\n"
+    .string "Você é muito estranha!\p"
+    .string "Copiona: Hmm? Parar de imitar?\n"
+    .string "Mas esse é o meu passatempo favorito!$"
 
 SaffronCity_CopycatsHouse_2F_EventScript_MimicPlayerFemale::
 	msgbox SaffronCity_CopycatsHouse_2F_Text_MimickingFavoriteHobbyFemale
 	return
 
 SaffronCity_CopycatsHouse_2F_Text_MimickingFavoriteHobbyFemale::
-    .string "{PLAYER}: Hi.\n"
-    .string "You must like Pokémon.\p"
-    .string "{PLAYER}: No, not me.\n"
-    .string "I asked you.\p"
-    .string "{PLAYER}: Pardon?\n"
-    .string "You're weird!\l"
+    .string "{PLAYER}: Olá.\n"
+    .string "Você deve gostar de Pokémon.\p"
+    .string "{PLAYER}: Não, eu não.\n"
+    .string "Eu perguntei pra você.\p"
+    .string "{PLAYER}: Como é que é?\n"
+    .string "Você é muito esquisita!\l"
     .string " \l"
-    .string "Copycat: Hmm? Quit mimicking?\l"
-    .string "But that's my favorite hobby!$"
+    .string "Copiona: Hmm? Parar de imitar?\l"
+    .string "Mas esse é o meu passatempo favorito!$"
 
 SaffronCity_CopycatsHouse_2F_EventScript_Computer::
 	msgbox SaffronCity_CopycatsHouse_2F_Text_MySecrets, MSGBOX_SIGN
 	end
 
 SaffronCity_CopycatsHouse_2F_Text_MySecrets::
-    .string "…\p"
-    .string "My Secrets!\p"
-    .string "Skill: Mimicry!\n"
-    .string "Hobby: Collecting dolls!\l"
-    .string "Favorite Pokémon: Clefairy!$"
+    .string "...\p"
+    .string "Meus Segredos!\p"
+    .string "Habilidade: Imitação!\n"
+    .string "Passatempo: Colecionar bonecas!\l"
+    .string "Pokémon favorito: Clefairy!$"
 
 SaffronCity_CopycatsHouse_2F_EventScript_Game::
 	msgbox SaffronCity_CopycatsHouse_2F_Text_MarioWearingABucket, MSGBOX_SIGN
 	end
 
 SaffronCity_CopycatsHouse_2F_Text_MarioWearingABucket::
-    .string "A game with Mario wearing a bucket\n"
-    .string "on his head!$"
+    .string "Um jogo do Mario usando um balde\n"
+    .string "na cabeça!$"

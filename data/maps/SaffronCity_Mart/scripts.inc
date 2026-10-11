@@ -33,11 +33,11 @@ SaffronCity_Mart_EventScript_Youngster::
 	end
 
 SaffronCity_Mart_Text_MaxRepelMoreEffectiveThanSuper::
-    .string "Max Repel keeps weaker Pokémon\n"
-    .string "from appearing.\p"
-    .string "Max Repel stays effective longer\n"
-    .string "than Super Repel.$"
+    .string "O Repelente Máx evita que Pokémon\n"
+    .string "mais fracos apareçam.\p"
+    .string "O Repelente Máx dura mais tempo\n"
+    .string "do que o Super-Repelente.$"
 
 SaffronCity_Mart_Text_ReviveIsCostly::
-    .string "Revive is costly, but it revives\n"
-    .string "fainted Pokémon!$"
+    .string "O Reviver é caro, mas revive um\n"
+    .string "Pokémon desmaiado!$"

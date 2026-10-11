@@ -7,8 +7,8 @@ SaffronCity_PokemonCenter_2F_Rocket1::
 	end
 
 SaffronCity_PokemonCenter_2F_Text_Rocket1::
-	.string "Heh, scram kid!\n"
-	.string "This is Team Rocket's Loot now!$"
+	.string "Hehe, dá o fora daqui, pirralho!\n"
+	.string "Isto agora é saque da Equipe Rocket!$"
 
 
 SaffronCity_PokemonCenter_2F_Rocket2::
@@ -17,7 +17,7 @@ SaffronCity_PokemonCenter_2F_Rocket2::
 	end
 
 SaffronCity_PokemonCenter_2F_Text_Rocket2::
-	.string "Uh..I forgot what we came here for.$"
+	.string "Ué... esqueci o que viemos fazer aqui.$"
 
 SaffronCity_PokemonCenter_2F_Rocket3::
 	msgbox SaffronCity_PokemonCenter_2F_Text_Rocket3, MSGBOX_NPC
@@ -25,9 +25,9 @@ SaffronCity_PokemonCenter_2F_Rocket3::
 	end
 
 SaffronCity_PokemonCenter_2F_Text_Rocket3::
-	.string "Whoa! They have some really rare\n"
-	.string "goods back here!\p"
-	.string "The Boss is going to love this haul!$"
+	.string "Uau! Tem coisas realmente raras\n"
+	.string "guardadas aqui atrás!\p"
+	.string "O Chefe vai adorar esse carregamento!$"
 
 
 SaffronCity_PokemonCenter_2F_BlackBelt::
@@ -46,11 +46,11 @@ SaffronCity_PokemonCenter_2F_BlackBelt2::
 	end
 
 SaffronCity_PokemonCenter_2F_Text_Unworthy::
-	.string "I am ashamed.\p"
-	.string "When Team Rocket attacked Saffron City,\n"
-	.string "I was unable to stop them.\p"
-	.string "I am unworthy of this.$"
+	.string "Eu me sinto envergonhado.\p"
+	.string "Quando a Equipe Rocket atacou\n"
+	.string "Saffron City, fui incapaz de detê-los.\p"
+	.string "Não sou digno disto.$"
 
 SaffronCity_PokemonCenter_2F_Text_Unworthy2::
-	.string "I need to return to the Dojo.\n"
-	.string "I must retrain my body and spirit.$"
+	.string "Preciso retornar ao Dojo.\n"
+	.string "Devo retreinar meu corpo e espírito.$"

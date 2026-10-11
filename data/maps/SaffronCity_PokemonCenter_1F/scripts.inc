@@ -26,9 +26,9 @@ SaffronCity_PokemonCenter_1F_EventScript_Woman::
 	end
 
 SaffronCity_PokemonCenter_1F_Text_RocketsUpstairs::
-	.string "Team Rocket is so shady!\p"
-	.string "They left us alone down here while they\n"
-	.string "were looting the second floor!$"
+	.string "A Equipe Rocket é tão suspeita!\p"
+	.string "Eles nos deixaram em paz aqui embaixo\n"
+	.string "enquanto saqueavam o segundo andar!$"
 
 SaffronCity_PokemonCenter_1F_EventScript_Woman2::
 	msgbox SaffronCity_PokemonCenter_1F_Text_GrowthRatesDifferBySpecies, MSGBOX_NPC
@@ -48,21 +48,21 @@ SaffronCity_PokemonCenter_1F_EventScript_YoungsterRocketsGone::
 	end
 
 SaffronCity_PokemonCenter_1F_Text_GrowthRatesDifferBySpecies::
-    .string "Pokémon growth rates differ from\n"
-    .string "species to species.$"
+    .string "A velocidade de crescimento dos\n"
+    .string "Pokémon varia conforme a espécie.$"
 
 SaffronCity_PokemonCenter_1F_Text_SilphCoVictimOfFame::
-    .string "Silph Co. is widely known to all.\p"
-    .string "It's a victim of its own fame - it\n"
-    .string "attracted Team Rocket.$"
+    .string "A Silph S.A. é amplamente conhecida.\p"
+    .string "Ela foi vítima da própria fama -\n"
+    .string "acabou atraindo a Equipe Rocket.$"
 
 SaffronCity_PokemonCenter_1F_Text_GreatIfEliteFourCameBeatRockets::
-    .string "Sigh…\n"
-    .string "Wouldn't this be great?\p"
-    .string "If the Elite Four came and\n"
-    .string "stomped Team Rocket?$"
+    .string "Ai, ai...\n"
+    .string "Não seria fantástico se a Elite dos\p"
+    .string "Quatro viesse aqui e esmagasse a\n"
+    .string "Equipe Rocket?$"
 
 SaffronCity_PokemonCenter_1F_Text_TeamRocketTookOff::
-    .string "Team Rocket took off!\n"
-    .string "We can go out safely again!\l"
-    .string "That's great!$"
+    .string "A Equipe Rocket bateu em retirada!\n"
+    .string "Podemos sair em segurança de novo!\l"
+    .string "Isso é maravilhoso!$"

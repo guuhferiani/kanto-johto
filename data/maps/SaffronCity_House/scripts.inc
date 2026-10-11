@@ -24,21 +24,21 @@ SaffronCity_House_EventScript_Letter::
 	end
 
 SaffronCity_House_Text_DontLookAtMyLetter::
-    .string "…Thank you for writing.\n"
-    .string "I hope to see you soon!\p"
-    .string "…Hey!\n"
-    .string "Don't look at my letter!$"
+    .string "...Obrigada por me escrever.\n"
+    .string "Espero te ver em breve!\p"
+    .string "...Ei!\n"
+    .string "Não fique lendo a minha carta!$"
 
 SaffronCity_House_Text_Pidgey::
     .string "Pidgey: Kurukkoo!$"
 
 SaffronCity_House_Text_GettingCopycatPokeDoll::
-    .string "The Copycat is cute!\n"
-    .string "I'm getting her a Poké Doll.$"
+    .string "A Copiona é tão fofa!\n"
+    .string "Vou levar uma Boneca Pokémon pra ela.$"
 
 SaffronCity_House_Text_ExplainPPUp::
-    .string "I was given a PP UP as a gift.\p"
-    .string "It's used to increase the PP of\n"
-    .string "a Pokémon's move.\p"
-    .string "I should use it on a powerful move\n"
-    .string "with only a few PP.$"
+    .string "Ganhei um PP UP de presente.\p"
+    .string "Ele serve para aumentar o PP de um\n"
+    .string "golpe de um Pokémon.\p"
+    .string "Devo usá-lo em um golpe poderoso\n"
+    .string "que tenha poucos PP.$"

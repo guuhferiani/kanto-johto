@@ -147,12 +147,12 @@ MoveTutor_Mimic::
 	end
 
 MoveTutor_Text_MimicTeach::
-    .string "Oh wow!\n"
-    .string "A Poké Doll!\p"
-    .string "For me?\n"
-    .string "Thank you!\p"
-    .string "You know what?\n"
-    .string "I can teach the move Mimic.$"
+    .string "Uau!\n"
+    .string "Uma Boneca Pokémon!\p"
+    .string "Pra mim?\n"
+    .string "Muito obrigada!\p"
+    .string "Sabe de uma coisa?\n"
+    .string "Eu posso ensinar o golpe Mímica.$"
 
 MoveTutor_EventScript_MimicDeclined::
 	msgbox MoveTutor_Text_MimicDeclined, MSGBOX_DEFAULT
@@ -160,11 +160,11 @@ MoveTutor_EventScript_MimicDeclined::
 	end
 
 MoveTutor_Text_MimicDeclined::
-    .string "Don't you like Mimic?$"
+    .string "Você não gosta de Mímica?$"
 
 MoveTutor_Text_MimicWhichMon::
-    .string "I really love Mimic!\n"
-    .string "Who's going to learn it?$"
+    .string "Eu amo demais a Mímica!\n"
+    .string "Quem vai aprender?$"
 
 MoveTutor_EventScript_MimicTaught::
 	msgbox MoveTutor_Text_MimicTaught, MSGBOX_DEFAULT
@@ -172,13 +172,13 @@ MoveTutor_EventScript_MimicTaught::
 	end
 
 MoveTutor_Text_MimicTaught::
-    .string "{PLAYER}: Hi!\n"
-    .string "Thanks for earlier!\p"
-    .string "{PLAYER}: Pardon?\p"
-    .string "{PLAYER}: Is it that fun to mimic my\n"
-    .string "every move?\p"
-    .string "COPYCAT: You bet!\n"
-    .string "It's a scream!$"
+    .string "{PLAYER}: Oi!\n"
+    .string "Obrigado por antes!\p"
+    .string "{PLAYER}: Como é que é?\p"
+    .string "{PLAYER}: É tão divertido assim imitar\n"
+    .string "cada movimento meu?\p"
+    .string "COPIONA: Com certeza!\n"
+    .string "É o maior barato!$"
 
 MoveTutor_Substitute::
 	lock

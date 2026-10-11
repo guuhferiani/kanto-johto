@@ -33,8 +33,9 @@ SaffronCity_EventScript_DoorGuardGrunt::
 	end
 
 SaffronCity_Text_ImASecurityGuard::
-    .string "I'm a security guard.\p"
-    .string "Suspicious kids I don't allow in!$"
+    .string "Eu sou um guarda de segurança.\p"
+    .string "Crianças suspeitas não passam por\n"
+    .string "mim!$"
 
 SaffronCity_EventScript_DoorGuardAsleep::
 	msgbox SaffronCity_Text_HesTakingASnooze
@@ -42,65 +43,66 @@ SaffronCity_EventScript_DoorGuardAsleep::
 	end
 
 SaffronCity_Text_HesTakingASnooze::
-    .string "…\n"
-    .string "Snore…\p"
-    .string "Hah! He's taking a snooze!$"
+    .string "...\n"
+    .string "Ronque...\p"
+    .string "Haha! Ele está tirando uma soneca!$"
 
 SaffronCity_EventScript_RocketGrunt1::
 	msgbox SaffronCity_Text_WhatDoYouWantGetLost, MSGBOX_NPC
 	end
 
 SaffronCity_Text_WhatDoYouWantGetLost::
-    .string "What do you want?\n"
-    .string "Get lost!$"
+    .string "O que você quer?\n"
+    .string "Dá o fora daqui!$"
 
 SaffronCity_EventScript_RocketGrunt2::
 	msgbox SaffronCity_Text_BossTakeTownForTeamRocket, MSGBOX_NPC
 	end
 
 SaffronCity_Text_BossTakeTownForTeamRocket::
-    .string "Boss said he'll take this town\n"
-    .string "in the name of Team Rocket!$"
+    .string "O Chefe disse que vai tomar esta\n"
+    .string "cidade em nome da Equipe Rocket!$"
 
 SaffronCity_EventScript_RocketGrunt3::
 	msgbox SaffronCity_Text_DontGetDefiantOrIllHurtYou, MSGBOX_NPC
 	end
 
 SaffronCity_Text_DontGetDefiantOrIllHurtYou::
-    .string "Don't get defiant!\n"
-    .string "Or I'll have to hurt you!$"
+    .string "Não banque o engraçadinho!\n"
+    .string "Ou eu vou ter que te machucar!$"
 
 SaffronCity_EventScript_RocketGrunt4::
 	msgbox SaffronCity_Text_SaffronBelongsToTeamRocket, MSGBOX_NPC
 	end
 
 SaffronCity_Text_SaffronBelongsToTeamRocket::
-    .string "Saffron belongs to Team Rocket!$"
+    .string "Saffron agora pertence à\n"
+    .string "Equipe Rocket!$"
 
 SaffronCity_EventScript_RocketGrunt5::
 	msgbox SaffronCity_Text_CriminalLifeMakesMeFeelAlive, MSGBOX_NPC
 	end
 
 SaffronCity_Text_CriminalLifeMakesMeFeelAlive::
-    .string "My life as a criminal makes me feel\n"
-    .string "so alive!$"
+    .string "A vida no crime me faz sentir\n"
+    .string "tão vivo!$"
 
 SaffronCity_EventScript_RocketGrunt6::
 	msgbox SaffronCity_Text_WatchWhereYoureWalking, MSGBOX_NPC
 	end
 
 SaffronCity_Text_WatchWhereYoureWalking::
-    .string "Ow!\n"
-    .string "Watch where you're walking!$"
+    .string "Ai!\n"
+    .string "Olhe por onde anda!$"
 
 SaffronCity_EventScript_RocketGrunt7::
 	msgbox SaffronCity_Text_WeCanExploitMonsAroundWorld, MSGBOX_NPC
 	end
 
 SaffronCity_Text_WeCanExploitMonsAroundWorld::
-    .string "With Silph under control, we can\n"
-    .string "exploit Pokémon around the world!\p"
-    .string "We'll get stinking rich, yeahah!$"
+    .string "Com a Silph sob controle, podemos\n"
+    .string "explorar Pokémon pelo mundo todo!\p"
+    .string "Vamos ficar podres de ricos, hahah!$"
 
 
 SaffronCity_EventScript_BattleGirl::
@@ -109,49 +111,50 @@ SaffronCity_EventScript_BattleGirl::
 	end
 
 SaffronCity_Text_HowCanClubNotRecognizeLance::
-    .string "This Fan Club…\n"
-    .string "No one here has a clue!\p"
-    .string "How could they not recognize\n"
-    .string "the brilliance that is Lance?\p"
-    .string "He stands for justice!\n"
-    .string "He's cool, and yet passionate!\l"
-    .string "He's the greatest, Lance!$"
+    .string "Este Fã-Clube...\n"
+    .string "Ninguém aqui entende nada!\p"
+    .string "Como eles podem não reconhecer\n"
+    .string "o brilhantismo que é o Lance?\p"
+    .string "Ele luta pela justiça!\n"
+    .string "Ele é maneiro e tão apaixonado!\l"
+    .string "O Lance é simplesmente o maior!$"
 
 SaffronCity_EventScript_WorkerM::
 	msgbox SaffronCity_Text_YouBeatTeamRocket, MSGBOX_NPC
 	end
 
 SaffronCity_Text_YouBeatTeamRocket::
-    .string "You beat Team Rocket all alone?\n"
-    .string "That's amazing!$"
+    .string "Você derrotou a Equipe Rocket\n"
+    .string "completamente sozinho?\l"
+    .string "Isso é impressionante!$"
 
 SaffronCity_EventScript_Youngster::
 	msgbox SaffronCity_Text_SafeToGoOutAgain, MSGBOX_NPC
 	end
 
 SaffronCity_Text_SafeToGoOutAgain::
-    .string "Yeah! Team Rocket is gone!\n"
-    .string "It's safe to go out again!$"
+    .string "Viva! A Equipe Rocket se foi!\n"
+    .string "Já é seguro sair de novo!$"
 
 SaffronCity_EventScript_Lass::
 	msgbox SaffronCity_Text_PeopleComingBackToSaffron, MSGBOX_NPC
 	end
 
 SaffronCity_Text_PeopleComingBackToSaffron::
-    .string "People fled from here in droves\n"
-    .string "when those Rockets came.\p"
-    .string "They should be flocking back to\n"
-    .string "Saffron now.$"
+    .string "As pessoas fugiram em massa daqui\n"
+    .string "quando aqueles Rockets chegaram.\p"
+    .string "Agora todos devem estar voltando\n"
+    .string "para Saffron.$"
 
 SaffronCity_EventScript_Boy::
 	msgbox SaffronCity_Text_FlewHereOnPidgeot, MSGBOX_NPC
 	end
 
 SaffronCity_Text_FlewHereOnPidgeot::
-    .string "I flew here on my Pidgeot when\n"
-    .string "I read about Silph.\p"
-    .string "It's already over?\n"
-    .string "I missed the media action…$"
+    .string "Voei até aqui no meu Pidgeot assim\n"
+    .string "que li as notícias sobre a Silph.\p"
+    .string "Já acabou tudo?\n"
+    .string "Perdi toda a comoção da mídia...$"
 
 SaffronCity_EventScript_Pidgeot::
 	lock
@@ -171,8 +174,8 @@ SaffronCity_EventScript_Man::
 	end
 
 SaffronCity_Text_SawRocketBossEscaping::
-    .string "I saw the Rocket Boss escaping\n"
-    .string "Silph's building.$"
+    .string "Eu vi o Chefe Rocket escapando\n"
+    .string "do prédio da Silph.$"
 
 SaffronCity_EventScript_GymSign::
 	lockall
@@ -181,9 +184,9 @@ SaffronCity_EventScript_GymSign::
 	end
 
 SaffronCity_Text_GymSign::
-    .string "Saffron City Pokémon Gym\n"
-    .string "Leader: Sabrina\l"
-    .string "The Master of Psychic Pokémon!$"
+    .string "Ginásio Pokémon de Saffron City\n"
+    .string "Líder: Sabrina\l"
+    .string "A Mestra dos Pokémon Psíquicos!$"
 
 SaffronCity_EventScript_CitySign::
 	msgbox SaffronCity_Text_CitySign, MSGBOX_SIGN
@@ -191,68 +194,68 @@ SaffronCity_EventScript_CitySign::
 
 SaffronCity_Text_CitySign::
     .string "Saffron City\n"
-    .string "Shining, Golden Land of Commerce$"
+    .string "A Reluzente e Dourada Terra do Comércio$"
 
 SaffronCity_EventScript_DojoSign::
 	msgbox SaffronCity_Text_FightingDojo, MSGBOX_SIGN
 	end
 
 SaffronCity_Text_FightingDojo::
-    .string "Fighting Dojo$"
+    .string "Dojo de Luta$"
 
 SaffronCity_EventScript_TrainerFanClubSign::
 	msgbox SaffronCity_Text_TrainerFanClubSign, MSGBOX_SIGN
 	end
 
 SaffronCity_Text_TrainerFanClubSign::
-    .string "Pokémon Trainer Fan Club\p"
-    .string "Many trainers have scribbled their\n"
-    .string "names on this sign.$"
+    .string "Fã-Clube de Treinadores Pokémon\p"
+    .string "Vários treinadores rabiscaram seus\n"
+    .string "nomes nesta placa.$"
 
 SaffronCity_EventScript_TrainerTips1::
 	msgbox SaffronCity_Text_FullHealCuresStatus, MSGBOX_SIGN
 	end
 
 SaffronCity_Text_FullHealCuresStatus::
-    .string "Trainer Tips:\p"
-    .string "Full Heal cures all ailments like\n"
-    .string "burns, paralysis, poisoning,\l"
-    .string "freezing, and sleep.\p"
-    .string "It costs a bit more, but it's more\n"
-    .string "convenient than buying other items.$"
+    .string "Dicas para Treinadores:\p"
+    .string "A Cura Total cura todas as condições,\n"
+    .string "como queimadura, paralisia, veneno,\l"
+    .string "congelamento e sono.\p"
+    .string "Custa um pouco mais, mas é mais\n"
+    .string "prático do que comprar vários itens.$"
 
 SaffronCity_EventScript_TrainerTips2::
 	msgbox SaffronCity_Text_GreatBallImprovedCatchRate, MSGBOX_SIGN
 	end
 
 SaffronCity_Text_GreatBallImprovedCatchRate::
-    .string "Trainer Tips:\p"
-    .string "The new Great Ball offers improved\n"
-    .string "catching rates.\p"
-    .string "Try it on those hard-to-catch\n"
-    .string "Pokémon.$"
+    .string "Dicas para Treinadores:\p"
+    .string "A nova Grande Bola oferece uma taxa\n"
+    .string "de captura aprimorada.\p"
+    .string "Experimente usá-la naqueles Pokémon\n"
+    .string "mais difíceis de pegar.$"
 
 SaffronCity_EventScript_SilphCoSign::
 	msgbox SaffronCity_Text_SilphCoSign, MSGBOX_SIGN
 	end
 
 SaffronCity_Text_SilphCoSign::
-    .string "Silph Co. Headquarters$"
+    .string "Sede da Silph S.A.$"
 
 SaffronCity_EventScript_MrPsychicsHouseSign::
 	msgbox SaffronCity_Text_MrPsychicsHouse, MSGBOX_SIGN
 	end
 
 SaffronCity_Text_MrPsychicsHouse::
-    .string "Mr. Psychic's House$"
+    .string "Casa do Sr. Psíquico$"
 
 SaffronCity_EventScript_SilphProductSign::
 	msgbox SaffronCity_Text_SilphsLatestProduct, MSGBOX_SIGN
 	end
 
 SaffronCity_Text_SilphsLatestProduct::
-    .string "Silph's latest product!\n"
-    .string "Release to be determined…$"
+    .string "O mais novo produto da Silph!\n"
+    .string "Lançamento a ser definido...$"
 
 SaffronCity_EventScript_SkippedLookerScene::
 	setvar VAR_SILPH_STATE, 4
@@ -344,43 +347,41 @@ Movement_LookerWalksLeft::
 	step_end
 
 SaffronCity_Text_ShouldntBeSurprised::
-	.string "Looker: Alright, let's start setting\n"
-	.string "up a perimeter...Oh! {PLAYER}!\p"
-	.string "We just finished rounding up the Team\n"
-	.string "Rocket Grunts that were terrorizing the\l"
-	.string "Citizens. It's time to make our assault\l"
-	.string "on Silph Co and take down their Boss!\p"
-	.string "Those Rocket Plans you delivered were\n"
-	.string "very helpful, but I'll need you to step\l"
-	.string "aside for this one and let the adults\l"
-	.string "take care of it now!\p"
+	.string "Looker: Muito bem, vamos estabelecer\n"
+	.string "um perímetro... Ah! {PLAYER}!\p"
+	.string "Acabamos de encurralar os recrutas\n"
+	.string "da Equipe Rocket que aterrorizavam os\l"
+	.string "cidadãos. É hora de invadir o prédio\l"
+	.string "da Silph S.A. e deter o Chefe deles!\p"
+	.string "Aqueles Planos Rocket que você trouxe\n"
+	.string "foram muito úteis, mas preciso que\l"
+	.string "você se afaste agora e deixe os\l"
+	.string "adultos cuidarem disso!\p"
 	.string "...\p"
-	.string "You what?!\p"
-	.string "You already took out the Rockets inside\n"
-	.string "Silph Co and rescued their President?\p"
-	.string "That's incredible, but very reckless!\p"
-	.string "Wait...\n"
-	.string "What about the Rocket Boss?\p"
-	.string "He got away? Again? Blast!\p"
-	.string "We've busted every Rocket Base we could\n"
-	.string "find, and we've chased him across Kanto.\p"
-	.string "There can't be many places left\n"
-	.string "for him to hide.\p"
-	.string "But we have no leads!\n"
-	.string "I'll have to continue my investigation.$"
+	.string "Você o quê?!\p"
+	.string "Você já derrotou os Rockets dentro da\n"
+	.string "Silph S.A. e resgatou o Presidente?\p"
+	.string "Isso é incrível, mas muito imprudente!\p"
+	.string "Espere...\n"
+	.string "E quanto ao Chefe da Equipe Rocket?\p"
+	.string "Ele fugiu? De novo? Droga!\p"
+	.string "Derrubamos todas as bases Rocket que\n"
+	.string "encontramos e o perseguimos por Kanto.\p"
+	.string "Não devem restar muitos esconderijos\n"
+	.string "para ele.\p"
+	.string "Mas ainda não temos pistas!\n"
+	.string "Terei que continuar minha investigação.$"
 
 SaffronCity_Text_RocketBurgalars:
-	.string "Looker: Sorry, {PLAYER}.\n"
-	.string "I've just received word there\l"
-	.string "were some suspicious looking\l"
-	.string "characters trying to break in\l"
-	.string "to the now abandoned Rocket\l"
-	.string "Hideout below the Game Corner.\p"
-	.string "As much as I would love to\n"
-	.string "investigate, I don't see why a\l"
-	.string "Rocket would need to force entry\l"
-	.string "to their own space.\p"
+	.string "Looker: Desculpe, {PLAYER}.\n"
+	.string "Acabei de ser informado de que havia\l"
+	.string "alguns sujeitos suspeitos tentando\l"
+	.string "invadir o Esconderijo Rocket agora\l"
+	.string "abandonado sob o Cassino.\p"
+	.string "Por mais que eu adorasse averiguar,\n"
+	.string "não vejo por que um Rocket precisaria\l"
+	.string "arrombar o seu próprio esconderijo.\p"
 	.string "...\p"
-	.string "You're a very capable trainer.\n"
-	.string "Just use caution if you go look\l"
-	.string "for yourself, please.$"
+	.string "Você é um treinador e tanto.\n"
+	.string "Apenas tome muito cuidado se for dar\l"
+	.string "uma olhada por lá, por favor.$"
