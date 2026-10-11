@@ -173,40 +173,40 @@ const u8 gSandslashPokedexText[] = _(
     "temperatures rise sharply.");
 
 const u8 gNidoranFPokedexText[] = _(
-    "Its highly toxic barbs are thought to have\n"
-    "developed as protection for this small-\n"
-    "bodied Pokémon. When enraged, it releases\n"
-    "a horrible toxin from its horn.");
+    "Acredita-se que seus espinhos venenosos\n"
+    "tenham surgido para proteger seu corpo\n"
+    "pequeno. Quando enfurecida, ela libera\n"
+    "uma terrível toxina pelo seu chifre.");
 
 const u8 gNidorinaPokedexText[] = _(
-    "When it is with its friends or\n"
-    "family, its barbs are tucked away to\n"
-    "prevent injury. It appears to become\n"
-    "nervous if separated from the others.");
+    "Quando está com amigos ou família, seus\n"
+    "espinhos se retraem para evitar ferimentos.\n"
+    "Ela parece ficar bastante nervosa se\n"
+    "for separada dos demais.");
 
 const u8 gNidoqueenPokedexText[] = _(
-    "It is adept at sending foes flying with\n"
-    "harsh tackles using its tough, scaly body.\n"
-    "This Pokémon is at its strongest when\n"
-    "it is defending its young.");
+    "É perita em lançar rivais para longe\n"
+    "com investidas usando seu corpo escamoso.\n"
+    "Este Pokémon fica mais forte quando\n"
+    "está defendendo seus filhotes.");
 
 const u8 gNidoranMPokedexText[] = _(
-    "The male Nidoran has developed muscles\n"
-    "that freely move its ears in any direction.\n"
-    "Even the slightest sound does not escape\n"
-    "this Pokémon's notice.");
+    "O Nidoran macho desenvolveu músculos que\n"
+    "movem suas orelhas livremente em qualquer\n"
+    "direção. Mesmo o mais sutil dos sons não\n"
+    "escapa da percepção deste Pokémon.");
 
 const u8 gNidorinoPokedexText[] = _(
-    "Its horn is harder than a diamond.\n"
-    "If it senses a hostile presence, all the\n"
-    "barbs on its back bristle up at once, and it\n"
-    "challenges the foe with all its might.");
+    "Seu chifre é mais duro que diamante.\n"
+    "Se sente uma presença hostil, todos os\n"
+    "espinhos em suas costas se eriçam e ele\n"
+    "desafia o inimigo com todas as forças.");
 
 const u8 gNidokingPokedexText[] = _(
-    "A Nidoking's thick tail packs enormously\n"
-    "destructive power capable of toppling\n"
-    "a metal transmission tower. Once it goes\n"
-    "on a rampage, there is no stopping it.");
+    "A cauda grossa do Nidoking tem um poder\n"
+    "destrutivo enorme, capaz de derrubar uma\n"
+    "torre de metal. Uma vez que entra em\n"
+    "fúria, não há nada que possa detê-lo.");
 
 const u8 gClefairyPokedexText[] = _(
     "On every night of a full moon, they come\n"

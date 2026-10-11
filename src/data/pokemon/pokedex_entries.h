@@ -362,7 +362,7 @@ const struct PokedexEntry gPokedexEntries[] =
 
     [NATIONAL_DEX_NIDORAN_F] =
     {
-        .categoryName = _("Poison Pin"),
+        .categoryName = _("Espinho Ven"),
         .height = 4,
         .weight = 70,
         .description = gNidoranFPokedexText,
@@ -374,7 +374,7 @@ const struct PokedexEntry gPokedexEntries[] =
 
     [NATIONAL_DEX_NIDORINA] =
     {
-        .categoryName = _("Poison Pin"),
+        .categoryName = _("Espinho Ven"),
         .height = 8,
         .weight = 200,
         .description = gNidorinaPokedexText,
@@ -386,7 +386,7 @@ const struct PokedexEntry gPokedexEntries[] =
 
     [NATIONAL_DEX_NIDOQUEEN] =
     {
-        .categoryName = _("Drill"),
+        .categoryName = _("Broca"),
         .height = 13,
         .weight = 600,
         .description = gNidoqueenPokedexText,
@@ -398,7 +398,7 @@ const struct PokedexEntry gPokedexEntries[] =
 
     [NATIONAL_DEX_NIDORAN_M] =
     {
-        .categoryName = _("Poison Pin"),
+        .categoryName = _("Espinho Ven"),
         .height = 5,
         .weight = 90,
         .description = gNidoranMPokedexText,
@@ -410,7 +410,7 @@ const struct PokedexEntry gPokedexEntries[] =
 
     [NATIONAL_DEX_NIDORINO] =
     {
-        .categoryName = _("Poison Pin"),
+        .categoryName = _("Espinho Ven"),
         .height = 9,
         .weight = 195,
         .description = gNidorinoPokedexText,
@@ -422,7 +422,7 @@ const struct PokedexEntry gPokedexEntries[] =
 
     [NATIONAL_DEX_NIDOKING] =
     {
-        .categoryName = _("Drill"),
+        .categoryName = _("Broca"),
         .height = 14,
         .weight = 620,
         .description = gNidokingPokedexText,
