@@ -6490,8 +6490,8 @@ void IsLastMonThatKnowsSurf(void)
 #define tOldFunc        4
 #define tNewNature      data[6]
 
-static const u8 sText_AskMint[] = _("Give {STR_VAR_1} the {STR_VAR_2} MINT?");
-static const u8 sText_MintDone[] = _("{STR_VAR_1}'s started to feel more {STR_VAR_2}!{PAUSE_UNTIL_PRESS}");
+static const u8 sText_AskMint[] = _("Dar a {STR_VAR_1} a HORTELÃ {STR_VAR_2}?");
+static const u8 sText_MintDone[] = _("{STR_VAR_1} começou a se sentir mais {STR_VAR_2}!{PAUSE_UNTIL_PRESS}");
 static void Task_Mints(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
@@ -6595,8 +6595,8 @@ void ItemUseCB_Mints(u8 taskId, TaskFunc task)
 
 void Task_AbilityCapsule(u8 taskId)
 {
-    static const u8 askText[] = _("Would you like to change {STR_VAR_1}'s\nability to {STR_VAR_2}?");
-    static const u8 doneText[] = _("{STR_VAR_1}'s ability became\n{STR_VAR_2}!{PAUSE_UNTIL_PRESS}");
+    static const u8 askText[] = _("Deseja mudar a habilidade\nde {STR_VAR_1} para {STR_VAR_2}?");
+    static const u8 doneText[] = _("A habilidade de {STR_VAR_1}\nmudou para {STR_VAR_2}!{PAUSE_UNTIL_PRESS}");
     s16 *data = gTasks[taskId].data;
 
     switch (tState)
@@ -6694,8 +6694,8 @@ void ItemUseCB_AbilityCapsule(u8 taskId, TaskFunc task)
 
 void Task_AbilityPatch(u8 taskId)
 {
-    static const u8 askText[] = _("Would you like to change {STR_VAR_1}'s\nability to {STR_VAR_2}?");
-    static const u8 doneText[] = _("{STR_VAR_1}'s ability became\n{STR_VAR_2}!{PAUSE_UNTIL_PRESS}");
+    static const u8 askText[] = _("Deseja mudar a habilidade\nde {STR_VAR_1} para {STR_VAR_2}?");
+    static const u8 doneText[] = _("A habilidade de {STR_VAR_1}\nmudou para {STR_VAR_2}!{PAUSE_UNTIL_PRESS}");
     s16 *data = gTasks[taskId].data;
 
     switch (tState)
@@ -7083,7 +7083,7 @@ void ItemUseCB_PokeBall(u8 taskId, TaskFunc task)
     struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
     u16 currBall = GetMonData(mon, MON_DATA_POKEBALL);
     u16 newBall = gSpecialVar_ItemId;
-    static const u8 sText_MonBallWasChanged[] = _("{STR_VAR_1} was put in the {STR_VAR_2}.{PAUSE_UNTIL_PRESS}");
+    static const u8 sText_MonBallWasChanged[] = _("{STR_VAR_1} foi colocado(a) na {STR_VAR_2}.{PAUSE_UNTIL_PRESS}");
 
     if (currBall == newBall)
     {
