@@ -227,13 +227,13 @@ TitleMatch_EventScript_Exit::
 
 
 TitleMatch_Text_TitleMatchVictory::
-	.string "The Title Match has concluded!\n"
-	.string "{PLAYER} has won the match!$"
+	.string "A Disputa pelo Titulo terminou!\n"
+	.string "{PLAYER} venceu a partida!$"
 
 TitleMatch_Text_TitleMatchDefeated::
-	.string "The Title Match has concluded!\n"
-	.string "{PLAYER} has been defeated!\p"
-	.string "Kanto has a new champion!$"
+	.string "A Disputa pelo Titulo terminou!\n"
+	.string "{PLAYER} foi derrotado!\p"
+	.string "Kanto tem um novo Campeao!$"
 
 TitleMatch_Steph::
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
@@ -241,10 +241,10 @@ TitleMatch_Steph::
 	end
 
 TitleMatch_Text_StephIntro::
-	.string "I'm ready!$"
+	.string "Estou pronta!$"
 
 TitleMatch_Text_StephDefeated::
-	.string "Alright, I'm gonna head out.$"
+	.string "Tudo bem, estou caindo fora.$"
 
 TitleMatch_Liz::
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
@@ -252,10 +252,10 @@ TitleMatch_Liz::
 	end
 
 TitleMatch_Text_LizIntro::
-	.string "I'm a genius.$"
+	.string "Eu sou um genio.$"
 
 TitleMatch_Text_LizDefeated::
-	.string "Oh no!$"
+	.string "Ah, nao!$"
 
 TitleMatch_Mike::
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
@@ -263,11 +263,11 @@ TitleMatch_Mike::
 	end
 
 TitleMatch_Text_MikeIntro::
-	.string "My rival is Chris.$"
+	.string "Meu rival e o Chris.$"
 
 TitleMatch_Text_MikeDefeated::
-	.string "I don't care if you win, as long\n"
-	.string "as he loses.$"
+	.string "Nao ligo se voce vencer, contanto\n"
+	.string "que ele perca.$"
 
 TitleMatch_Chris::
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
@@ -275,10 +275,10 @@ TitleMatch_Chris::
 	end
 
 TitleMatch_Text_ChrisIntro::
-	.string "It's not time for games!$"
+	.string "Nao e hora de brincadeiras!$"
 
 TitleMatch_Text_ChrisDefeated::
-	.string "Too scared!"
+	.string "Medroso demais!$"
 
 TitleMatch_Kev::
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
@@ -286,11 +286,12 @@ TitleMatch_Kev::
 	end
 
 TitleMatch_Text_KevIntro::
-	.string "I have the power of Pokémon\n"
-	.string "on my side!$"
+	.string "Eu tenho o poder dos Pokémon\n"
+	.string "do meu lado!$"
 
 TitleMatch_Text_KevDefeated::
-	.string "No! I should have used my full power!$"
+	.string "Nao! Eu deveria ter usado todo\n"
+	.string "o meu poder!$"
 
 TitleMatch_Meghan::
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
@@ -298,10 +299,10 @@ TitleMatch_Meghan::
 	end
 
 TitleMatch_Text_MeghanIntro::
-	.string "It is no longer possible to log off.$"
+	.string "Nao e mais possivel se desconectar.$"
 
 TitleMatch_Text_MeghanDefeated::
-	.string "Hit the bricks!$"
+	.string "Cai fora daqui!$"
 
 TitleMatch_Steve::
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
@@ -309,10 +310,10 @@ TitleMatch_Steve::
 	end
 
 TitleMatch_Text_SteveIntro::
-	.string "Pokémon is all about power.$"
+	.string "Pokémon e tudo uma questao de poder.$"
 
 TitleMatch_Text_SteveDefeated::
-	.string "Today was not my day.$"
+	.string "Hoje nao foi o meu dia.$"
 
 TitleMatch_M::
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
@@ -320,10 +321,10 @@ TitleMatch_M::
 	end
 
 TitleMatch_Text_MIntro::
-	.string "This is my swamp!$"
+	.string "Este e o meu pantano!$"
 
 TitleMatch_Text_MDefeated::
-	.string "Leave me alone!$"
+	.string "Me deixe em paz!$"
 
 TitleMatch_Bean::
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
@@ -331,10 +332,10 @@ TitleMatch_Bean::
 	end
 
 TitleMatch_Text_BeanIntro::
-	.string "I won't tolerate bullies.$"
+	.string "Eu nao tolero valentoes.$"
 
 TitleMatch_Text_BeanDefeated::
-	.string "You're tough! I like that!$"
+	.string "Voce e forte! Eu gosto disso!$"
 
 TitleMatch_Annie::
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
@@ -342,10 +343,10 @@ TitleMatch_Annie::
 	end
 
 TitleMatch_Text_AnnieIntro::
-	.string "I borrowed my mom's Pokémon.$"
+	.string "Peguei os Pokémon da minha mae emprestados.$"
 
 TitleMatch_Text_AnnieDefeated::
-	.string "Wahhhhhhh! I want my mommy!$"
+	.string "Buaaaaa! Eu quero a minha mae!$"
 
 TitleMatch_Brock::
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
@@ -353,10 +354,10 @@ TitleMatch_Brock::
 	end
 
 TitleMatch_Text_BrockIntro::
-	.string "Brock: I'm on a roll!$"
+	.string "Brock: Estou pegando fogo!$"
 
 TitleMatch_Text_BrockDefeated::
-	.string "You've come a long way, {PLAYER}.$"
+	.string "Voce percorreu um longo caminho, {PLAYER}.$"
 
 TitleMatch_Misty::
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
@@ -364,13 +365,13 @@ TitleMatch_Misty::
 	end
 
 TitleMatch_Text_MistyIntro::
-	.string "Misty: Hey, it's you!\p"
-	.string "This champion thing should be\n"
-	.string "easy, then.$"
+	.string "Misty: Ei, e voce!\p"
+	.string "Essa defesa de titulo vai ser\n"
+	.string "facil entao.$"
 
 TitleMatch_Text_MistyDefeated::
-	.string "Ew! I can't believe I lost\n"
-	.string "to you again!$"
+	.string "Eca! Nao acredito que perdi\n"
+	.string "para voce de novo!$"
 
 TitleMatch_Surge::
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
@@ -378,11 +379,11 @@ TitleMatch_Surge::
 	end
 
 TitleMatch_Text_SurgeIntro::
-	.string "Surge: Life's a war, kid.\p"
-	.string "This is just another battlefield.$"
+	.string "Surge: A vida e uma guerra, garoto.\p"
+	.string "Este e so mais um campo de batalha.$"
 
 TitleMatch_Text_SurgeDefeated::
-	.string "Back to basic training!$"
+	.string "De volta ao treinamento basico!$"
 
 TitleMatch_Erika::
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
@@ -390,11 +391,11 @@ TitleMatch_Erika::
 	end
 
 TitleMatch_Text_ErikaIntro::
-	.string "Erika: Hello, {PLAYER}.\p"
-	.string "Shall we battle again?$"
+	.string "Erika: Ola, {PLAYER}.\p"
+	.string "Vamos batalhar novamente?$"
 
 TitleMatch_Text_ErikaDefeated::
-	.string "Looks like I lost again...$"
+	.string "Parece que perdi de novo...$"
 
 TitleMatch_Sabrina::
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
@@ -402,10 +403,10 @@ TitleMatch_Sabrina::
 	end
 
 TitleMatch_Text_SabrinaIntro::
-	.string "Sabrina: I have forseen this battle.$"
+	.string "Sabrina: Eu ja previa esta batalha.$"
 
 TitleMatch_Text_SabrinaDefeated::
-	.string "I knew it would end this way...$"
+	.string "Eu sabia que terminaria assim...$"
 
 TitleMatch_Koga::
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
@@ -413,12 +414,12 @@ TitleMatch_Koga::
 	end
 
 TitleMatch_Text_KogaIntro::
-	.string "Koga: I've decided to make my move\n"
-	.string "and become one of the Elite Four.\p"
-	.string "You are my only obstacle!$"
+	.string "Koga: Decidi dar o proximo passo\n"
+	.string "e entrar para a Elite dos Quatro.\p"
+	.string "Voce e meu unico obstaculo!$"
 
 TitleMatch_Text_KogaDefeated::
-	.string "I am still unworthy$"
+	.string "Ainda não sou digno...$"
 
 TitleMatch_Blaine::
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
@@ -426,10 +427,10 @@ TitleMatch_Blaine::
 	end
 
 TitleMatch_Text_BlaineIntro::
-	.string "Blaine: You got me all fired up!$"
+	.string "Blaine: Voce acendeu a minha chama!$"
 
 TitleMatch_Text_BlaineDefeated::
-	.string "Not hot enough!$"
+	.string "Nao quente o suficiente!$"
 
 TitleMatch_Rocket::
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
@@ -437,14 +438,14 @@ TitleMatch_Rocket::
 	end
 
 TitleMatch_Text_RocketIntro::
-	.string "We fought back at Silph Co.\p"
-	.string "I'm trying to go straight.\n"
-	.string "You inspired me to try and be\l"
-	.string "a real trainer.$"
+	.string "Nos lutamos la na Silph Co.\p"
+	.string "Estou tentando andar na linha.\n"
+	.string "Voce me inspirou a tentar ser\l"
+	.string "um treinador de verdade.$"
 
 TitleMatch_Text_RocketDefeated::
-	.string "I didn't deserve to win after\n"
-	.string "all the terrible things I've done.$"
+	.string "Eu nao merecia vencer depois de\n"
+	.string "todas as coisas terriveis que fiz.$"
 
 TitleMatch_Daisy::
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
@@ -452,14 +453,13 @@ TitleMatch_Daisy::
 	end
 
 TitleMatch_Text_DaisyIntro::
-	.string "Daisy: Hi, {PLAYER}!\p"
-	.string "You and my brother were always\n"
-	.string "talking about battling, so I\l"
-	.string "decided to give a try.\p"
-	.string "I guess I'm pretty good, too!$"
+	.string "Daisy: Oi, {PLAYER}!\p"
+	.string "Voce e meu irmao estavam sempre falando\n"
+	.string "sobre batalhas, entao decidi tentar.\p"
+	.string "Acho que ate sou muito boa nisso!$"
 
 TitleMatch_Text_DaisyDefeated::
-	.string "That was fun!$"
+	.string "Isso foi divertido!$"
 
 TitleMatch_Rival::
 	goto_if_eq VAR_RIVAL_WINRATE, 2, TitleMatch_Rival_Jolteon
@@ -482,9 +482,9 @@ TitleMatch_Rival_Vaporeon::
 	end
 
 TitleMatch_Text_RivalIntro::
-	.string "{RIVAL}: Alright, we meet again!\p"
-	.string "Now's my chance to prove I'm the\n"
-	.string "true champion!$"
+	.string "{RIVAL}: Muito bem, nos encontramos de novo!\p"
+	.string "Agora e a minha chance de provar que\n"
+	.string "sou o verdadeiro campeao!$"
 
 TitleMatch_Text_RivalDefeated::
-	.string "Heh, still can't hack it.$"
+	.string "Heh, ainda nao dou conta de voce.$"

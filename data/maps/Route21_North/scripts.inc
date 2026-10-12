@@ -22,14 +22,14 @@ Route21_North_EventScript_Anri::
 	end
 
 Route21_North_Text_AnriIntro::
-    .string "I'm training for Victory Road!$"
+    .string "Estou treinando para a Victory Road!$"
 
 Route21_North_Text_AnriDefeat::
-    .string "I gave it my all.$"
+    .string "Eu dei tudo de mim.$"
 
 Route21_North_Text_AnriPostBattle::
-    .string "Only the strongest trainers\n"
-    .string "can make it to the Elite Four.$"
+    .string "Apenas os treinadores mais fortes\n"
+    .string "conseguem chegar a Elite dos Quatro.$"
 
 Route21_North_EventScript_RegisterAnriAfterBattle::
 	special PlayerFaceTrainerAfterBattle
@@ -40,9 +40,9 @@ Route21_North_EventScript_RegisterAnriAfterBattle::
 	end
 
 Route21_North_Text_AnriRegister:
-	.string "I like your style!\p"
-	.string "Call me if you find anywhere\n"
-	.string "good to train!$"
+	.string "Gostei do seu estilo!\p"
+	.string "Me ligue se encontrar um bom lugar\n"
+	.string "para treinar!$"
 
 Route21_North_EventScript_AnriRematch::
 	trainerbattle_rematch REMATCHABLE_TRAINER_COOLTRAINER_ANRI_1, Route21_North_Text_AnriRematchIntro, Route21_North_Text_AnriDefeat
@@ -50,11 +50,11 @@ Route21_North_EventScript_AnriRematch::
 	end
 
 Route21_North_Text_AnriRematchIntro::
-	.string "Alright! Time to practice!$"
+	.string "Muito bem! Hora de praticar!$"
 
 Route21_North_Text_AnriRematchPostBattle::
-	.string "You'll need more than brute force\n"
-	.string "to make it through the Elite Four!$"
+	.string "Voce precisara de mais do que forca\n"
+	.string "bruta para vencer a Elite dos Quatro!$"
 
 
 Route21_North_EventScript_Ronald::
@@ -63,15 +63,15 @@ Route21_North_EventScript_Ronald::
 	end
 
 Route21_North_Text_RonaldIntro::
-	.string "You want to know if the fish are\n"
-	.string "biting?$"
+	.string "Quer saber se os peixes estao\n"
+	.string "mordendo a isca?$"
 
 Route21_North_Text_RonaldDefeat::
-	.string "Dang!$"
+	.string "Droga!$"
 
 Route21_North_Text_RonaldPostBattle::
-	.string "I can't catch anything good.\n"
-	.string "Not one good Pokémon to be had!$"
+	.string "Nao consigo pescar nada que preste.\n"
+	.string "Nenhum Pokemon bom por aqui!$"
 
 Route21_North_EventScript_Wade::
 	trainerbattle_single TRAINER_FISHERMAN_WADE, Route21_North_Text_WadeIntro, Route21_North_Text_WadeDefeat
@@ -79,15 +79,15 @@ Route21_North_EventScript_Wade::
 	end
 
 Route21_North_Text_WadeIntro::
-	.string "I got a big haul!\n"
-	.string "Wanna go for it?$"
+	.string "Consegui uma pescaria enorme!\n"
+	.string "Quer tentar a sorte?$"
 
 Route21_North_Text_WadeDefeat::
-	.string "Heheh, Magikarp just don't make\n"
-	.string "the grade, do they?$"
+	.string "Heheh, Magikarp nao da conta do recado,\n"
+	.string "nao e?$"
 
 Route21_North_Text_WadePostBattle::
-	.string "I seem to only catch Magikarp!$"
+	.string "Parece que so pesco Magikarp!$"
 
 Route21_North_EventScript_Spencer::
 	trainerbattle_single TRAINER_SWIMMER_MALE_SPENCER, Route21_North_Text_SpencerIntro, Route21_North_Text_SpencerDefeat
@@ -95,14 +95,14 @@ Route21_North_EventScript_Spencer::
 	end
 
 Route21_North_Text_SpencerIntro::
-	.string "The sea cleanses my body and soul!$"
+	.string "O mar purifica meu corpo e minha alma!$"
 
 Route21_North_Text_SpencerDefeat::
 	.string "Ayah!$"
 
 Route21_North_Text_SpencerPostBattle::
-	.string "The sea is great and all, but I\n"
-	.string "like the mountains, too.$"
+	.string "O mar e otimo e tudo mais, mas eu\n"
+	.string "tambem gosto das montanhas.$"
 
 Route21_North_EventScript_Lil::
 	trainerbattle_double TRAINER_SIS_AND_BRO_LIL_IAN, Route21_North_Text_LilIntro, Route21_North_Text_LilDefeat, Route21_North_Text_LilNotEnoughMons
@@ -110,21 +110,21 @@ Route21_North_EventScript_Lil::
 	end
 
 Route21_North_Text_LilIntro::
-	.string "Lil: Huh? A battle?\n"
-	.string "Ian, can't you do it alone?$"
+	.string "Lil: Hein? Uma batalha?\n"
+	.string "Ian, nao pode lutar sozinho?$"
 
 Route21_North_Text_LilDefeat::
-	.string "Lil: Oh, see?\n"
-	.string "We lost. Happy now?$"
+	.string "Lil: Ah, viu so?\n"
+	.string "Perdemos. Feliz agora?$"
 
 Route21_North_Text_LilPostBattle::
-	.string "Lil: I'm tired.\n"
-	.string "Can't we go home already?$"
+	.string "Lil: Estou cansada.\n"
+	.string "Nao podemos ir logo para casa?$"
 
 Route21_North_Text_LilNotEnoughMons::
-	.string "Lil: Huh? A battle?\n"
-	.string "I can't be bothered to do it alone.\l"
-	.string "Bring two Pokémon, won't you?$"
+	.string "Lil: Hein? Uma batalha?\n"
+	.string "Nao estou a fim de lutar sozinha.\l"
+	.string "Traga dois Pokemon, quer?$"
 
 Route21_North_EventScript_Ian::
 	trainerbattle_double TRAINER_SIS_AND_BRO_LIL_IAN, Route21_North_Text_IanIntro, Route21_North_Text_IanDefeat, Route21_North_Text_IanNotEnoughMons
@@ -132,21 +132,20 @@ Route21_North_EventScript_Ian::
 	end
 
 Route21_North_Text_IanIntro::
-	.string "Ian: My sis doesn't get enough\n"
-	.string "exercise, so I made her come.$"
+	.string "Ian: Minha irma nao faz exercicio o\n"
+	.string "bastante, entao fiz ela vir comigo.$"
 
 Route21_North_Text_IanDefeat::
-	.string "Ian: Awww, Sis!\n"
-	.string "Get it together!$"
+	.string "Ian: Poxa, Mana!\n"
+	.string "Foco na batalha!$"
 
 Route21_North_Text_IanPostBattle::
-	.string "Ian: Come on, Sis!\p"
-	.string "You're not going to lose weight\n"
-	.string "like this!$"
+	.string "Ian: Vamos la, Mana!\p"
+	.string "Voce nao vai perder peso desse jeito!$"
 
 Route21_North_Text_IanNotEnoughMons::
-	.string "Ian: We want a two-on-two battle.\n"
-	.string "So can you bring two Pokémon?$"
+	.string "Ian: Queremos uma batalha de dois contra\n"
+	.string "dois. Entao pode trazer dois Pokemon?$"
 
 
 Route21_RocketFugitive::

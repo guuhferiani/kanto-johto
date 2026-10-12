@@ -34,11 +34,11 @@ FarawayIsland_Entrance_EventScript_Sailor::
 	end
 
 FarawayIsland_Entrance_Text_Return:
-    .string "This was quite a journey!\p"
-	.string "It's been a long time since I've\n"
-	.string "had a chance to sail somewhere new.\n"
-	.string "Have you already explored the island?\p"
-	.string "Do you want to return to Cinnabar?$"
+    .string "Essa foi uma baita jornada!\p"
+	.string "Fazia muito tempo que eu nao tinha\n"
+	.string "a chance de velejar para um lugar novo.\n"
+	.string "Voce ja explorou toda a ilha?\p"
+	.string "Deseja retornar para Cinnabar?$"
 
 FarawayIsland_Entrance_EventScript_AsYouLike::
 	msgbox EventTicket_Text_AsYouLike, MSGBOX_DEFAULT
@@ -58,12 +58,13 @@ FarawayIsland_Entrance_EventScript_LassKairi::
 	end
 
 FarawayIsland_Entrance_Text_KairiNoBattle:
-	.string "Hi, I'm Kairi! How do you do?\p"
-	.string "You're friends with Mew, too?\n"
-	.string "That's wonderful!\p"
-	.string "I sense you are on a grand\n"
-	.string "adventure, yes?\p"
-	.string "Please visit any time you like.$"
+	.string "Ola, sou a Kairi! Como vai voce?\p"
+	.string "Voce tambem e amigo do Mew?\n"
+	.string "Que maravilhoso!\p"
+	.string "Sinto que voce esta numa grande\n"
+	.string "aventura, nao e?\p"
+	.string "Por favor, venha nos visitar sempre\n"
+	.string "que quiser.$"
 
 FarawayIsland_Entrance_EventScript_LassKairiBattle::
 	trainerbattle_double TRAINER_LASS_KAIRI, FarawayIsland_Entrance_Text_KairiIntro, FarawayIsland_Entrance_Text_KairiDefeat, FarawayIsland_Entrance_Text_KairiNotEnoughMons
@@ -72,17 +73,17 @@ FarawayIsland_Entrance_EventScript_LassKairiBattle::
 	end
 
 FarawayIsland_Entrance_Text_KairiIntro:
-	.string "Hello {PLAYER}, welcome back!\p"
-	.string "... you've become Champion???\n"
-	.string "Wow, I wonder if you can beat me?$"
+	.string "Ola, {PLAYER}, que bom ter voce de volta!\p"
+	.string "... Voce se tornou Campeao???\n"
+	.string "Uau! Sera que voce consegue me vencer?$"
 
 FarawayIsland_Entrance_Text_KairiDefeat:
-	.string "I see why a Mew chose you.$"
+	.string "Agora vejo por que Mew escolheu voce.$"
 
 FarawayIsland_Entrance_Text_KairiPostBattle:
-	.string "Pokémon battling is fun, but\n"
-	.string "I aspire to be an artist!$"
+	.string "Batalhar com Pokémon e divertido, mas\n"
+	.string "eu sonho mesmo em ser uma artista!$"
 
 FarawayIsland_Entrance_Text_KairiNotEnoughMons::
-	.string "Where are your Pokémon friends?$"
+	.string "Onde estao seus amigos Pokémon?$"
 

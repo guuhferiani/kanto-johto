@@ -48,15 +48,15 @@ Route20_EventScript_Barry::
 	end
 
 Route20_Text_BarryIntro::
-    .string "The water is shallow here.\n"
-    .string "There are many people swimming.$"
+    .string "A agua e rasa por aqui.\n"
+    .string "Tem muita gente nadando.$"
 
 Route20_Text_BarryDefeat::
-    .string "Splash!$"
+    .string "Tchibum!$"
 
 Route20_Text_BarryPostBattle::
-    .string "I wish I could ride my Pokémon.\n"
-    .string "I bet you're not tired.$"
+    .string "Queria poder surfar num Pokemon.\n"
+    .string "Aposto que voce nem se cansou.$"
 
 Route20_EventScript_Dean::
 	trainerbattle_single TRAINER_SWIMMER_MALE_DEAN, Route20_Text_DeanIntro, Route20_Text_DeanDefeat
@@ -64,14 +64,14 @@ Route20_EventScript_Dean::
 	end
 
 Route20_Text_DeanIntro::
-    .string "Check out my buff physique!$"
+    .string "Olha so o meu porte fisico!$"
 
 Route20_Text_DeanDefeat::
-    .string "Wimpy!$"
+    .string "Fraquejei!$"
 
 Route20_Text_DeanPostBattle::
-    .string "I should've been buffing up my\n"
-    .string "Pokémon, not me!$"
+    .string "Eu devia ter fortalecido meus\n"
+    .string "Pokemon, e nao a mim mesmo!$"
 
 Route20_EventScript_Darrin::
 	trainerbattle_single TRAINER_SWIMMER_MALE_DARRIN, Route20_Text_DarrinIntro, Route20_Text_DarrinDefeat
@@ -79,15 +79,15 @@ Route20_EventScript_Darrin::
 	end
 
 Route20_Text_DarrinIntro::
-    .string "Why are you riding a Pokémon?\n"
-    .string "Can't you swim?$"
+    .string "Por que esta montado num Pokemon?\n"
+    .string "Nao sabe nadar?$"
 
 Route20_Text_DarrinDefeat::
-    .string "Ouch!\n"
-    .string "Torpedoed!$"
+    .string "Ai!\n"
+    .string "Fui torpedeado!$"
 
 Route20_Text_DarrinPostBattle::
-    .string "Riding a Pokémon sure looks fun!$"
+    .string "Surfar num Pokemon parece bem legal!$"
 
 Route20_EventScript_Slowbronite::
 	finditem ITEM_SLOWBRONITE, 1
@@ -109,14 +109,14 @@ Route20_EventScript_Tiffany::
 	end
 
 Route20_Text_TiffanyIntro::
-    .string "I love floating with the fishes\n"
-    .string "here among the waves.$"
+    .string "Adoro boiar com os peixinhos aqui\n"
+    .string "entre as ondas.$"
 
 Route20_Text_TiffanyDefeat::
-    .string "Yowch!$"
+    .string "Ai ai ai!$"
 
 Route20_Text_TiffanyPostBattle::
-    .string "Want to float with me?$"
+    .string "Quer boiar comigo?$"
 
 Route20_EventScript_Nora::
 	trainerbattle_single TRAINER_SWIMMER_FEMALE_NORA, Route20_Text_NoraIntro, Route20_Text_NoraDefeat
@@ -124,15 +124,15 @@ Route20_EventScript_Nora::
 	end
 
 Route20_Text_NoraIntro::
-    .string "My boyfriend gave me big pearls.$"
+    .string "Meu namorado me deu perolas grandes.$"
 
 Route20_Text_NoraDefeat::
-    .string "Oh, no!\n"
-    .string "My pearls were in them!$"
+    .string "Ah, nao!\n"
+    .string "Minhas perolas estavam neles!$"
 
 Route20_Text_NoraPostBattle::
-    .string "Will my pearls grow bigger inside\n"
-    .string "Cloyster?$"
+    .string "Sera que minhas perolas vao crescer\n"
+    .string "dentro de um Cloyster?$"
 
 Route20_EventScript_Melissa::
 	trainerbattle_single TRAINER_SWIMMER_FEMALE_MELISSA, Route20_Text_MelissaIntro, Route20_Text_MelissaDefeat
@@ -140,18 +140,18 @@ Route20_EventScript_Melissa::
 	end
 
 Route20_Text_MelissaIntro::
-    .string "Cinnabar, in the west, has a LAB\n"
-    .string "for Pokémon.\p"
-    .string "My daddy works there.$"
+    .string "Cinnabar, no oeste, tem um laboratorio\n"
+    .string "de Pokemon.\p"
+    .string "Meu pai trabalha la.$"
 
 Route20_Text_MelissaDefeat::
-    .string "Wait!\n"
-    .string "You're supposed to wait!$"
+    .string "Espere!\n"
+    .string "Voce tinha que esperar!$"
 
 Route20_Text_MelissaPostBattle::
-    .string "Cinnabar is a volcanic island.\p"
-    .string "I heard it rose out of the sea\n"
-    .string "when a volcano erupted.$"
+    .string "Cinnabar e uma ilha vulcanica.\p"
+    .string "Ouvi dizer que ela emergiu do mar\n"
+    .string "quando um vulcao entrou em erupcao.$"
 
 Route20_EventScript_Shirley::
 	trainerbattle_single TRAINER_SWIMMER_FEMALE_SHIRLEY, Route20_Text_ShirleyIntro, Route20_Text_ShirleyDefeat
@@ -159,15 +159,15 @@ Route20_EventScript_Shirley::
 	end
 
 Route20_Text_ShirleyIntro::
-    .string "Seafoam is a quiet getaway.\n"
-    .string "I'm vacationing here.$"
+    .string "Seafoam e um refugio tranquilo.\n"
+    .string "Estou passando ferias aqui.$"
 
 Route20_Text_ShirleyDefeat::
-    .string "Quit it!$"
+    .string "Para com isso!$"
 
 Route20_Text_ShirleyPostBattle::
-    .string "There's a huge cavern underneath\n"
-    .string "this island.$"
+    .string "Ha uma caverna enorme embaixo desta\n"
+    .string "ilha.$"
 
 Route20_EventScript_Missy::
 	trainerbattle_single TRAINER_PICNICKER_MISSY, Route20_Text_MissyIntro, Route20_Text_MissyDefeat
@@ -175,17 +175,17 @@ Route20_EventScript_Missy::
 	end
 
 Route20_Text_MissyIntro::
-    .string "I swam here from Cinnabar Island.\n"
-    .string "It wasn't easy, I tell you.$"
+    .string "Eu nadei da Ilha de Cinnabar ate aqui.\n"
+    .string "Nao foi nada facil, sabia?$"
 
 Route20_Text_MissyDefeat::
-    .string "I'm so disappointed!$"
+    .string "Que decepcao!$"
 
 Route20_Text_MissyPostBattle::
-    .string "Pokémon have taken over an\n"
-    .string "abandoned mansion on Cinnabar.\p"
-    .string "They call it the Pokémon Mansion\n"
-    .string "now.$"
+    .string "Os Pokemon tomaram conta de uma mansao\n"
+    .string "abandonada em Cinnabar.\p"
+    .string "Agora chamam o lugar de Mansao\n"
+    .string "Pokemon.$"
 
 Route20_EventScript_Irene::
 	trainerbattle_single TRAINER_PICNICKER_IRENE, Route20_Text_IreneIntro, Route20_Text_IreneDefeat
@@ -193,14 +193,14 @@ Route20_EventScript_Irene::
 	end
 
 Route20_Text_IreneIntro::
-    .string "Are you on vacation, too?$"
+    .string "Voce tambem esta de ferias?$"
 
 Route20_Text_IreneDefeat::
-    .string "No mercy at all!$"
+    .string "Sem piedade nenhuma!$"
 
 Route20_Text_IrenePostBattle::
-    .string "Seafoam used to be a single island\n"
-    .string "in the distant past.$"
+    .string "Seafoam costumava ser uma unica ilha\n"
+    .string "no passado distante.$"
 
 Route20_EventScript_Roger::
 	trainerbattle_single REMATCHABLE_TRAINER_DRAGON_TAMER_ROGER_1, Route20_Text_RogerIntro, Route20_Text_RogerDefeat, Route20_EventScript_RegisterRogerAfterBattle
@@ -211,15 +211,15 @@ Route20_EventScript_Roger::
 	end
 
 Route20_Text_RogerIntro::
-    .string "You'll never make it to the\n"
-    .string "Elite Four with that team!$"
+    .string "Voce nunca vai chegar a Elite dos\n"
+    .string "Quatro com essa equipe!$"
 
 Route20_Text_RogerDefeat::
-    .string "No! Now I'll never meet Lance!$"
+    .string "Nao! Agora nunca vou conhecer Lance!$"
 
 Route20_Text_RogerPostBattle::
-    .string "Wait, you mean Gyarados isn't\n"
-    .string "a Dragon type Pokémon?$"
+    .string "Espera, quer dizer que Gyarados nao e\n"
+    .string "do tipo Dragao?$"
 
 Route20_EventScript_RegisterRogerAfterBattle::
 	special PlayerFaceTrainerAfterBattle
@@ -230,9 +230,9 @@ Route20_EventScript_RegisterRogerAfterBattle::
 	end
 
 Route20_Text_RogerRegister:
-	.string "Ha! I let you win...\p"
-	.string "Call me when you feel like\n"
-	.string "having a real match.$"
+	.string "Ha! Eu deixei voce vencer...\p"
+	.string "Me ligue quando quiser uma disputa\n"
+	.string "de verdade.$"
 
 Route20_EventScript_RogerRematch::
 	trainerbattle_rematch REMATCHABLE_TRAINER_DRAGON_TAMER_ROGER_1, Route20_Text_RogerRematchIntro, Route20_Text_RogerDefeat
@@ -240,12 +240,12 @@ Route20_EventScript_RogerRematch::
 	end
 
 Route20_Text_RogerRematchIntro::
-	.string "I'll crush you with my\n"
-	.string "Dragon Pokémon this time!$"
+	.string "Desta vez vou te esmagar com meus\n"
+	.string "Pokemon de Dragao!$"
 
 Route20_Text_RogerRematchPostBattle::
-	.string "Gyarados isn't Dragon type, but\n"
-	.string "it can learn Dragon type moves!$"
+	.string "Gyarados nao e do tipo Dragao, mas\n"
+	.string "pode aprender golpes de Dragao!$"
 
 Route20_EventScript_Camper::
 	lock
@@ -255,10 +255,10 @@ Route20_EventScript_Camper::
 	end
 
 Route20_Text_MistyTrainsHere::
-    .string "Strong Trainers and Water Pokémon\n"
-    .string "are common sights in these parts.\p"
-    .string "They say that Misty of the\n"
-    .string "Cerulean Gym trains here.$"
+    .string "Treinadores fortes e Pokemon de Agua\n"
+    .string "sao comuns por aqui.\p"
+    .string "Dizem que Misty do Ginasio de Cerulean\n"
+    .string "treina nesta regiao.$"
 
 Route20_RocketFugitive::
     trainerbattle_single TRAINER_FUGITIVE_M, RocketFugitive_Text_Intro, RocketFugitive_Text_Defeat
@@ -283,8 +283,8 @@ Route20_EventScript_Blastoise::
 	end
 
 Route20_Text_Blastoise:
-	.string "Blastoise stares you in the eye.\n"
-	.string "It has overwhelming confidence.$"
+	.string "Blastoise te encara nos olhos.\n"
+	.string "Ele transborda confianca.$"
 
 Route20_EventScript_EngineerDylan::
 	lock
@@ -297,16 +297,16 @@ Route20_EventScript_EngineerDylan::
 	end
 
 Route20_Text_DylanIntro:
-	.string "You seem to be tougher than the\n"
-	.string "kids swimming around here.\p"
-	.string "We might actually need to\n"
-	.string "take this seriously!$"
+	.string "Voce parece mais forte que as outras\n"
+	.string "criancas nadando por aqui.\p"
+	.string "Talvez a gente precise levar isto a\n"
+	.string "serio!$"
 
 Route20_Text_DylanDefeat:
-	.string "Kanto still has some fight in it.$"
+	.string "Kanto ainda tem garra.$"
 
 Route20_Text_DylanPostBattle:
-	.string "What an incredible team you have!$"
+	.string "Que equipe incrivel voce tem!$"
 
 Route20_EventScript_MegaHintBlastoise::  
     goto_if_set FLAG_GOT_BLASTOISINITE, Route20_EventScript_DylanDefeated
@@ -316,10 +316,9 @@ Route20_EventScript_MegaHintBlastoise::
     end
     
 Route20_Text_BlastoiseMegaHint:
-    .string "...hmmm? Where did I get the\n"
-	.string "Blastoisinite from?\p"
-	.string "I found it on the shore after\n"
-	.string "beating the gym in Vermillion City.$"
+    .string "...Hmmm? Onde consegui a Blastoisinite?\p"
+	.string "Eu a encontrei na praia depois de\n"
+	.string "vencer o ginasio em Vermilion City.$"
 
 Route20_EventScript_DylanDefeated::
     msgbox DylanDefeated_Text MSGBOX_DEFAULT
@@ -327,8 +326,8 @@ Route20_EventScript_DylanDefeated::
 	end
 
 DylanDefeated_Text:	
-	.string "I can tell you are a trainer who\n"
-	.string "fights with all your heart and soul.$"
+	.string "Posso ver que voce e um treinador que\n"
+	.string "luta de corpo e alma.$"
 
 Route20_EventScript_BlastoiseDefeated::
 	msgbox BlastoiseDefeated MSGBOX_DEFAULT
@@ -336,5 +335,5 @@ Route20_EventScript_BlastoiseDefeated::
 	end
 
 BlastoiseDefeated:	
-	.string "Blastoise looks at you\n"
-	.string "and snorts approvingly.$"
+	.string "Blastoise olha para voce e bufa em\n"
+	.string "sinal de aprovacao.$"

@@ -101,13 +101,13 @@ SeafoamISlands_B3F_EventScript_BlackBeltMichael::
 	end
 
 SeafoamISlands_B3F_Text_MichaelIntro:
-	.string "I usually am alone training here.\n"
-	.string "Come at us with all you got!$"
+	.string "Eu costumo treinar sozinho por aqui.\n"
+	.string "Venha com tudo o que voce tem!$"
 
 SeafoamISlands_B3F_Text_MichaelDefeat:
-	.string "You're impressive!$"
+	.string "Voce e impressionante!$"
 
 SeafoamISlands_B3F_Text_MichaelPostBattle:
-	.string "That was a great fight!\p"
-	.string "My team and I are going to\n"
-	.string "train harder than before!$"
+	.string "Essa foi uma grande batalha!\p"
+	.string "Minha equipe e eu vamos treinar\n"
+	.string "ainda mais duro do que antes!$"

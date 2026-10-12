@@ -8,10 +8,10 @@ ViridianCity_House_EventScript_BaldingMan::
 	end
 	
 ViridianCity_House_Text_NicknamingIsFun::
-    .string "Coming up with nicknames is fun,\n"
-    .string "but it's not so easy to do.\p"
-    .string "Clever names are nice, but simple\n"
-    .string "names are easier to remember.$"
+    .string "Dar apelidos e divertido, mas\n"
+    .string "nao e tao facil de fazer.\p"
+    .string "Nomes espertos sao legais, mas nomes\n"
+    .string "simples sao mais faceis de lembrar.$"
 
 ViridianCity_House_EventScript_LittleGirl::
 	lock
@@ -21,7 +21,7 @@ ViridianCity_House_EventScript_LittleGirl::
 	end
 
 ViridianCity_House_Text_MyDaddyLovesMonsToo::
-    .string "My daddy loves Pokémon, too.$"
+    .string "Meu papai tambem adora Pokémon!$"
 
 ViridianCity_House_EventScript_Speary::
 	lock
@@ -34,7 +34,7 @@ ViridianCity_House_EventScript_Speary::
 	end
 
 ViridianCity_House_Text_Speary::
-    .string "Speary: Tetweet!$"
+    .string "Speary: Piu-piu!$"
 
 ViridianCity_House_EventScript_NicknameSign::
 	msgbox ViridianCity_House_Text_SpearowNameSpeary, MSGBOX_SIGN
@@ -42,4 +42,4 @@ ViridianCity_House_EventScript_NicknameSign::
 
 ViridianCity_House_Text_SpearowNameSpeary::
     .string "Spearow\n"
-    .string "Name: Speary$"
+    .string "Nome: Speary$"

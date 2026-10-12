@@ -72,7 +72,7 @@ PalletTown_ProfessorOaksLab_Text_RivalFedUpWithWaiting:
 
 PalletTown_ProfessorOaksLab_Text_TakeStarter::
     .string "Carvalho: {RIVAL}?\n"
-    .string "Deixe-me ver…\p"
+    .string "Deixe-me ver...\p"
     .string "Ah, é verdade, eu disse para você\n"
     .string "vir! Apenas espere!\p"
     .string "Aqui, {PLAYER}.\p"
@@ -700,7 +700,7 @@ PalletTown_ProfessorOaksLab_Text_OakExplainCatching::
 
 PalletTown_ProfessorOaksLab_Text_OakCompleteMonGuideWasMyDream::
     .string "Criar um guia completo com todos\n"
-    .string "os Pokémon deste mundo…\p"
+    .string "os Pokémon deste mundo...\p"
     .string "Esse sempre foi o meu grande sonho!\p"
     .string "Mas estou velho demais.\n"
     .string "Não consigo concluir essa tarefa.\p"
@@ -770,7 +770,7 @@ PalletTown_ProfessorOaksLab_EventScript_Computer::
 
 PalletTown_ProfessorOaksLab_Text_EmailMessage::
     .string "Há uma mensagem de e-mail aqui.\p"
-    .string "…\p"
+    .string "...\p"
     .string "Finalmente!\n"
     .string "Os melhores treinadores da Liga Pokémon\l"
     .string "estão prontos para novos desafiantes!\p"
@@ -779,7 +779,7 @@ PalletTown_ProfessorOaksLab_Text_EmailMessage::
     .string "QG da Liga Pokémon\n"
     .string "Planalto Índigo\p"
     .string "Prof. Carvalho, venha nos visitar!\n"
-    .string "…$"
+    .string "...$"
 
 PalletTown_ProfessorOaksLab_EventScript_LeftSign::
 	msgbox PalletTown_ProfessorOaksLab_Text_PressStartToOpenMenu, MSGBOX_SIGN
@@ -825,11 +825,11 @@ PalletTown_ProfessorOaksLab_Text_StudyAsOaksAide:
     .string "do Prof. Carvalho.$"
 
 PalletTown_ProfessorOaksLab_Text_StudyAsOaksAide2:
-    .string "I know what you're going to ask.\n"
-	.string "She's here, go say hi to Cedar!\p"
-	.string "Let's face it, I didn't have much\n"
-	.string "to say before and that has not\l"
-	.string "changed. Enjoy your stay.$"
+    .string "Eu sei o que voce vai perguntar.\n"
+	.string "Ela esta aqui, va dar um oi para Cedar!\p"
+	.string "Sejamos francos, eu nao tinha muito a\n"
+	.string "dizer antes e isso nao mudou nada.\l"
+	.string "Aproveite a sua estadia.$"
 
 PalletTown_ProfessorOaksLab_NOFlash::
 	msgbox PalletTown_ProfessorOaksLab_Text_NOFlash, MSGBOX_NPC
@@ -837,15 +837,15 @@ PalletTown_ProfessorOaksLab_NOFlash::
 	end
 
 PalletTown_ProfessorOaksLab_Text_NOFlash:
-	.string "... what's that?\n"
-	.string "You're looking for Cedar?\p"
-	.string "I'm afraid she's not here but\n"
-	.string "I do know where she should be.\p"
-	.string "She was told to head to Route 2.\n"
-	.string "She's east of the regrowing CUT trees.\p"
-	.string "You can't CUT trees without the proper\n"
-	.string "badge, but you can get behind them if\l"
-	.string "you take Diglett Cave from Vermillion.$"
+	.string "... O que disse?\n"
+	.string "Esta procurando a Cedar?\p"
+	.string "Receio que ela nao esteja aqui, mas\n"
+	.string "eu sei onde ela deveria estar.\p"
+	.string "Disseram a ela para ir a Rota 2.\n"
+	.string "Ela esta a leste das arvores de corte.\p"
+	.string "Voce nao pode cortar arvores sem a\n"
+	.string "insignia certa, mas pode dar a volta\l"
+	.string "pela Diglett Cave a partir de Vermilion.$"
 
 PalletTown_ProfessorOaksLab_NOEverstone::
 	msgbox PalletTown_ProfessorOaksLab_Text_NOEverstone, MSGBOX_NPC
@@ -853,16 +853,16 @@ PalletTown_ProfessorOaksLab_NOEverstone::
 	end
 
 PalletTown_ProfessorOaksLab_Text_NOEverstone:
-	.string "... what's that?\n"
-	.string "You're looking for Cedar?\p"
-	.string "I'm afraid she's not here but\n"
-	.string "I do know where she should be.\p"
-	.string "She was told to head to Rock Tunnel.\n"
-	.string "It's a hard tunnel to get through.\p"
-	.string "Try checking the PokéCenter outside\n"
-	.string "the north entrance.\p"
-	.string "Have you picked up Fly? If so, please\n"
-	.string "Fly on over to Rock Tunnel.$"
+	.string "... O que disse?\n"
+	.string "Esta procurando a Cedar?\p"
+	.string "Receio que ela nao esteja aqui, mas\n"
+	.string "eu sei onde ela deveria estar.\p"
+	.string "Disseram a ela para ir ao Rock Tunnel.\n"
+	.string "E um tunel dificil de atravessar.\p"
+	.string "Tente ver no Centro Pokemon do lado\n"
+	.string "de fora da entrada norte.\p"
+	.string "Ja pegou o Fly? Se sim, por favor,\n"
+	.string "va voando para o Rock Tunnel.$"
 
 PalletTown_ProfessorOaksLab_NOItemfinder::
 	msgbox PalletTown_ProfessorOaksLab_Text_NOItemfinder, MSGBOX_NPC
@@ -870,13 +870,13 @@ PalletTown_ProfessorOaksLab_NOItemfinder::
 	end
 
 PalletTown_ProfessorOaksLab_Text_NOItemfinder::
-	.string "... what's that?\n"
-	.string "You're looking for Cedar?\p"
-	.string "I'm afraid she's not here but\n"
-	.string "I do know where she should be.\p"
-	.string "She was told to head to Route 11.\n"
-	.string "I suspect she would rest at the\l"
-	.string "checkpoint to the east of there.$"
+	.string "... O que disse?\n"
+	.string "Esta procurando a Cedar?\p"
+	.string "Receio que ela nao esteja aqui, mas\n"
+	.string "eu sei onde ela deveria estar.\p"
+	.string "Disseram a ela para ir a Rota 11.\n"
+	.string "Suspeito que esteja descansando no\l"
+	.string "posto de controle a leste de la.$"
 
 PalletTown_ProfessorOaksLab_NoUpdateOnCedar1::
 	msgbox PalletTown_ProfessorOaksLab_Text_NoUpdateOnCedar1, MSGBOX_NPC
@@ -884,16 +884,15 @@ PalletTown_ProfessorOaksLab_NoUpdateOnCedar1::
 	end
 
 PalletTown_ProfessorOaksLab_Text_NoUpdateOnCedar1:
-	.string "... what's that?\n"
-	.string "You're looking for Cedar?\l"
-	.string "I'm afraid she's not here.\p"
-	.string "As a matter of fact, she does not\n"
-	.string "have a current task so she's taking\l"
-	.string "a break.\p"
-	.string "She's probably in Celadon shopping\n"
-	.string "or at the Game Corner.\p"
-	.string "When Professor Oak assigns a new\n"
-	.string "task, Cedar will be sure to call.$"
+	.string "... O que disse?\n"
+	.string "Esta procurando a Cedar?\l"
+	.string "Receio que ela nao esteja aqui.\p"
+	.string "Na verdade, ela nao tem nenhuma tarefa\n"
+	.string "agora, entao esta de folga.\p"
+	.string "Ela deve estar fazendo compras em\n"
+	.string "Celadon ou no Game Corner.\p"
+	.string "Quando o Prof. Carvalho passar uma nova\n"
+	.string "tarefa, Cedar com certeza vai ligar.$"
 
 PalletTown_ProfessorOaksLab_NOAmuletCoin::
 	msgbox PalletTown_ProfessorOaksLab_Text_NOAmuletCoin, MSGBOX_NPC
@@ -901,17 +900,17 @@ PalletTown_ProfessorOaksLab_NOAmuletCoin::
 	end
 
 PalletTown_ProfessorOaksLab_Text_NOAmuletCoin::
-	.string "... what's that?\n"
-	.string "You're looking for Cedar?\p"
-	.string "I'm afraid she's not here but\n"
-	.string "I do know where she should be.\p"
-	.string "She was told to head to Route 16.\n"
-	.string "She called to say a Snorlax fell\l"
-	.string "asleep which blocked her path back\l"
-	.string "to Celadon City.\p"
-	.string "So... without a bike in her posession\n"
-	.string "she would be stuck at the checkpoint\l"
-	.string "until Snorlax is encouraged to move.$"
+	.string "... O que disse?\n"
+	.string "Esta procurando a Cedar?\p"
+	.string "Receio que ela nao esteja aqui, mas\n"
+	.string "eu sei onde ela deveria estar.\p"
+	.string "Disseram a ela para ir a Rota 16.\n"
+	.string "Ela ligou avisando que um Snorlax dormiu\l"
+	.string "e bloqueou o caminho de volta para\l"
+	.string "Celadon City.\p"
+	.string "Entao... sem uma bicicleta, ela deve\n"
+	.string "estar no posto de controle ate que o\l"
+	.string "Snorlax seja convencido a sair.$"
 
 PalletTown_ProfessorOaksLab_NoUpdateOnCedar2::
 	msgbox PalletTown_ProfessorOaksLab_Text_NoUpdateOnCedar2, MSGBOX_NPC
@@ -919,17 +918,16 @@ PalletTown_ProfessorOaksLab_NoUpdateOnCedar2::
 	end
 
 PalletTown_ProfessorOaksLab_Text_NoUpdateOnCedar2:
-	.string "... what's that?\n"
-	.string "You're looking for Cedar?\l"
-	.string "I'm afraid she's not here.\p"
-	.string "As a matter of fact, she does not\n"
-	.string "have a current task so she's taking\l"
-	.string "a break.\p"
-	.string "She's talked about swimming out to\n"
-	.string "the Seafoam Caverns last time she\l"
-	.string "had tea with her fellow Aides.\p"
-	.string "When Professor Oak assigns a new\n"
-	.string "task, Cedar will be sure to call.$"
+	.string "... O que disse?\n"
+	.string "Esta procurando a Cedar?\l"
+	.string "Receio que ela nao esteja aqui.\p"
+	.string "Na verdade, ela nao tem nenhuma tarefa\n"
+	.string "agora, entao esta de folga.\p"
+	.string "Ela falou sobre nadar ate as cavernas\n"
+	.string "de Seafoam da ultima vez que tomou cha\l"
+	.string "com os outros assistentes.\p"
+	.string "Quando o Prof. Carvalho passar uma nova\n"
+	.string "tarefa, Cedar com certeza vai ligar.$"
 
 PalletTown_ProfessorOaksLab_NOExpShare::
 	msgbox PalletTown_ProfessorOaksLab_Text_NOExpShare, MSGBOX_NPC
@@ -937,18 +935,16 @@ PalletTown_ProfessorOaksLab_NOExpShare::
 	end
 
 PalletTown_ProfessorOaksLab_Text_NOExpShare:
-	.string "... what's that?\n"
-	.string "You're looking for Cedar?\p"
-	.string "I'm afraid she's not here but\n"
-	.string "I do know where she should be.\p"
-	.string "She was told to head to Route 15.\n"
-	.string "That being said, she has always\l"
-	.string "talked about going to the Safari\l"
-	.string "Zone if given the chance.\p"
-	.string "I am starting to sound like a\n"
-	.string "broken record at this point,\l"
-	.string "but my hunch is she is resting\l"
-	.string "at the Route 15 checkpoint.$"
+	.string "... O que disse?\n"
+	.string "Esta procurando a Cedar?\p"
+	.string "Receio que ela nao esteja aqui, mas\n"
+	.string "eu sei onde ela deveria estar.\p"
+	.string "Disseram a ela para ir a Rota 15.\n"
+	.string "Dito isso, ela sempre falou sobre ir\l"
+	.string "a Safari Zone se tivesse chance.\p"
+	.string "Ja estou parecendo um disco quebrado,\n"
+	.string "mas meu palpite e que ela esta no posto\l"
+	.string "de controle da Rota 15.$"
 
 PalletTown_ProfessorOaksLab_EventScript_Aide2::
 	lock
@@ -959,8 +955,8 @@ PalletTown_ProfessorOaksLab_EventScript_Aide2::
 	end
 
 PalletTown_ProfessorOaksLab_Text_CedarRunsErrands::
-    .string "Cedar is the newest aide in the lab,\n"
-    .string "so she is always out running errands.$"
+    .string "Cedar e a mais nova assistente do lab,\n"
+    .string "entao vive na rua fazendo recados.$"
 
 PalletTown_ProfessorOaksLab_EventScript_JealousAide::
 	msgbox PalletTown_ProfessorOaksLab_Text_Jealous
@@ -968,11 +964,11 @@ PalletTown_ProfessorOaksLab_EventScript_JealousAide::
 	end
 
 PalletTown_ProfessorOaksLab_Text_Jealous::
-    .string "If I'm being honest, lab work can\n"
-    .string "get a little boring.\p"
-    .string "I teased her in the beginning, but\n"
-    .string "now I'm a little jealous that Cedar\l"
-    .string "had the chance to travel so often!$"
+    .string "Para ser sincero, o trabalho no lab\n"
+    .string "pode ficar meio sem graca.\p"
+    .string "Eu implicava com ela no comeco, mas\n"
+    .string "agora tenho uma pontinha de inveja de\l"
+    .string "que Cedar possa viajar tanto!$"
 
 PalletTown_ProfessorOaksLab_EventScript_Cedar::
 	lock
@@ -985,10 +981,11 @@ PalletTown_ProfessorOaksLab_EventScript_Cedar::
 	end
 
 PalletTown_ProfessorOaksLab_Text_JustJoined::
-    .string "Cedar: Hello. Nice to meet you!\n"
-    .string "I recently joined Professor Oak's\l"
-    .string "team.\p"
-    .string "I'm excited to work with everyone.$"
+    .string "Cedar: Ola! Muito prazer!\n"
+    .string "Eu me juntei recentemente a equipe\l"
+    .string "do Professor Carvalho.\p"
+    .string "Estou muito empolgada em trabalhar\n"
+    .string "com todos.$"
 
 PalletTown_ProfessorOaksLab_EventScript_CedarPostgame::
 	msgbox PalletTown_ProfessorOaksLab_Text_CedarHiPlayer, MSGBOX_DEFAULT
@@ -1015,14 +1012,14 @@ PalletTown_ProfessorOaksLab_EventScript_GetCatchingCharm::
 	end
 
 PalletTown_ProfessorOaksLab_Text_CatchingCharmReward::
-	.string "Wow! You defeated the Elite Four?\n"
-	.string "That's quite an accomplishment!\p"
-	.string "You know, there's still more Pokémon\n"
-	.string "to see out there.\p"
-	.string "This will help you complete your Pokédex!$"
+	.string "Uau! Voce venceu a Elite dos Quatro?\n"
+	.string "Isso e uma grande conquista!\p"
+	.string "Sabe, ainda ha mais Pokemon para\n"
+	.string "ver por ai afora.\p"
+	.string "Isto vai te ajudar a completar sua Pokedex!$"
 
 PalletTown_ProfessorOaksLab_Text_ReceivedCatchingCharm::
-	.string "{PLAYER} earned the Catching Charm!$"
+	.string "{PLAYER} recebeu o Catching Charm!$"
 
 PalletTown_ProfessorOaksLab_EventScript_GetOvalCharm::
 	goto_if_unset FLAG_CLEARED_SECRET_BATTLE, PalletTown_ProfessorOaksLab_EventScript_CedarCheckNext
@@ -1039,14 +1036,14 @@ PalletTown_ProfessorOaksLab_EventScript_GetOvalCharm::
 	end
 
 PalletTown_ProfessorOaksLab_Text_OvalCharmReward::
-	.string "Wow! You defeated Professor Oak?\n"
-	.string "That's quite an accomplishment!\p"
-	.string "Raising Pokémon is just as important\n"
-	.string "as battling, you know.\p"
-	.string "This should help you raise new Pokémon!$"
+	.string "Uau! Voce venceu o Prof. Carvalho?\n"
+	.string "Essa e uma conquista impressionante!\p"
+	.string "Criar Pokemon e tao importante quanto\n"
+	.string "batalhar, sabia?\p"
+	.string "Isto deve te ajudar a criar novos Pokemon!$"
 
 PalletTown_ProfessorOaksLab_Text_ReceivedOvalCharm::
-	.string "{PLAYER} earned the Oval Charm!$"
+	.string "{PLAYER} recebeu o Oval Charm!$"
 
 PalletTown_ProfessorOaksLab_EventScript_GetShinyCharm::
 	specialvar VAR_RESULT, HasAllHoennMons
@@ -1064,15 +1061,15 @@ PalletTown_ProfessorOaksLab_EventScript_GetShinyCharm::
 	end
 
 PalletTown_ProfessorOaksLab_Text_ShinyCharmReward::
-	.string "Incredible! You caught them all?\n"
-	.string "That's an amazing accomplishment!\p"
-	.string "I've heard that Pokémon have rare\n"
-	.string "variations.\p"
-	.string "I've never seen one, though...\p"
-	.string "This might help you find them!$"
+	.string "Incrivel! Voce capturou todos eles?\n"
+	.string "Essa e uma conquista extraordinaria!\p"
+	.string "Ouvi dizer que Pokemon tem variacoes\n"
+	.string "rarissimas.\p"
+	.string "Eu nunca vi uma, no entanto...\p"
+	.string "Isto pode te ajudar a acha-los!$"
 
 PalletTown_ProfessorOaksLab_Text_ReceivedShinyCharm::
-	.string "{PLAYER} earned the Shiny Charm!$"
+	.string "{PLAYER} recebeu o Shiny Charm!$"
 
 Cedar_CheckCharms::
 	goto_if_unset FLAG_RECEIVED_CATCHING_CHARM, Common_EventScript_Return
@@ -1087,42 +1084,42 @@ PalletTown_ProfessorOaksLab_EventScript_CedarAllItems::
 	end
 
 PalletTown_ProfessorOaksLab_Text_CedarHiPlayer:
-	.string "Cedar: Hi, {PLAYER}!\n"
-	.string "Stopping by to see the Prof?\p"
-	.string "Oh? You came to see me?$"
+	.string "Cedar: Ola, {PLAYER}!\n"
+	.string "Passou para ver o Professor?\p"
+	.string "Ah? Veio falar comigo?$"
 
 PalletTown_ProfessorOaksLab_Text_MaybeMoreItems::
-	.string "Hmm, I don't have any new items\n"
-	.string "to give you right now.\p"
-	.string "I'd love to keep hearing about your\n"
-	.string "adventures, though!\p"
-	.string "If you have a good accomplishment\n"
-	.string "to tell me about, I could convince\l"
-	.string "Prof. Oak to give you something good!$"
+	.string "Hmm, nao tenho novos itens para te\n"
+	.string "dar no momento.\p"
+	.string "Mas adoraria continuar ouvindo sobre\n"
+	.string "as suas aventuras!\p"
+	.string "Se tiver uma grande conquista para me\n"
+	.string "contar, posso convencer o Professor a\l"
+	.string "te dar algo muito bom!$"
 
 PalletTown_ProfessorOaksLab_Text_WhatAJourney::
-	.string "Cedar: Oh, {PLAYER}!\n"
-	.string "It's so nice to see you.\p"
-	.string "I don't have any new items for you\n"
-	.string "this time, though. Ha!\p"
-	.string "You know, when I joined Prof. Oak's\n"
-	.string "Lab, I wasn't happy that I'd spend so\l"
-	.string "much time travelling away from it!\p"
-	.string "But, following your journey was also\n"
-	.string "an adventure for me!\p"
-	.string "I saw so much of Kanto, and got to\n"
-	.string "see what life as a Trainer is like.\p"
-	.string "I see now why Prof. Oak gave me that\n"
-	.string "assignment.\p"
-	.string "So, thanks for the adventure!$"
+	.string "Cedar: Ah, {PLAYER}!\n"
+	.string "E tao bom te ver.\p"
+	.string "Nao tenho novos itens para voce desta\n"
+	.string "vez, no entanto. Ha!\p"
+	.string "Sabe, quando entrei no lab do Prof.\n"
+	.string "Carvalho, eu nao gostei de passar tanto\l"
+	.string "tempo viajando longe daqui!\p"
+	.string "Mas acompanhar sua jornada tambem foi\n"
+	.string "uma aventura para mim!\p"
+	.string "Eu vi tanto de Kanto e vi como e a\n"
+	.string "vida de um Treinador.\p"
+	.string "Agora entendo por que o Professor me\n"
+	.string "deu essa missao.\p"
+	.string "Entao, obrigada pela aventura!$"
 
 PalletTown_ProfessorOaksLab_EventScript_Pokedex::
 	msgbox PalletTown_ProfessorOaksLab_Text_BlankEncyclopedia, MSGBOX_NPC
 	end
 
 PalletTown_ProfessorOaksLab_Text_BlankEncyclopedia::
-    .string "It's like an encyclopedia, but the\n"
-    .string "pages are blank.$"
+    .string "E como uma enciclopedia, mas as\n"
+    .string "paginas estao em branco.$"
 
 PalletTown_ProfessorOaksLab_EventScript_LastPokeBall::
 	msgbox PalletTown_ProfessorOaksLab_Text_OaksLastMon, MSGBOX_DEFAULT
@@ -1130,7 +1127,7 @@ PalletTown_ProfessorOaksLab_EventScript_LastPokeBall::
 	end
 
 PalletTown_ProfessorOaksLab_Text_OaksLastMon::
-    .string "That's Prof. Oak's last Pokémon.$"
+    .string "Esse e o ultimo Pokémon do Prof. Carvalho.$"
 
 PalletTown_ProfessorOaksLab_EventScript_ProfOak::
 	lock
@@ -1154,68 +1151,52 @@ PalletTown_ProfessorOaksLab_EventScript_HelloChampion::
 	end
 
 PalletTown_ProfessorOaksLab_WonderfulToSeeYou:
-	.string "Champion {PLAYER}!\n"
-	.string "I'm so glad you dropped by.\p"
-	.string "So! Looking for some ideas\n"
-	.string "on how to continue your journey?\p"
+	.string "Campeao {PLAYER}!\n"
+	.string "Que bom que voce apareceu.\p"
+	.string "Entao! Procurando ideias de como\n"
+	.string "continuar a sua jornada?\p"
 	.string "...\p"
-	.string "What? You were hoping your mom\n"
-	.string "would get off your back about\l"
-	.string "playing your Nintendo?\p"
-	.string "Ha ha, yeah I imagine staying\n"
-	.string "home and playing your NES would\l"
-	.string "be a nice break.\p"
-	.string "{RIVAL} has one too. Fascinating\n"
-	.string "bit of technology.\p"
-	.string "Ahem, anyways. If you want\n"
-	.string "more adventure and fun, here\l"
-	.string "are some next steps a Champion\l"
-	.string "should consider on their road\l"
-	.string "to becoming a Pokémon Master.\p"
-	.string "I don't know if you have been\n"
-	.string "keeping an eye on the news, but\l"
-	.string "the news of your victory has\l"
-	.string "created an influx of interest\l"
-	.string "in the League!\p"
-	.string "You are now in {RIVAL}'s shoes\n"
-	.string "and when a challenger defeats\l"
-	.string "Lance and the rest of the E4,\l"
-	.string "you will need to head to the\l"
-	.string "League to defend your title.\p"
-	.string "I know that all Kanto gyms\n"
-	.string "are training at an increased\l"
-	.string "schedule.\p"
-	.string "Part of your role as Champion\n"
-	.string "is to check in on the gyms.\p"
-	.string "It's been years since we've\n"
-	.string "had regulatory concerns with\l"
-	.string "a Leader, so may I suggest\l"
-	.string "rematching the Leaders?\p"
-	.string "While they won't be able to\n"
-	.string "give you a second badge,\l"
-	.string "you will be awarded with\l"
-	.string "Battle Points.\p"
+	.string "O que? Esperava que sua mae parasse\n"
+	.string "de chiar por voce jogar videogame?\p"
+	.string "Ha ha, imagino que ficar em casa e\n"
+	.string "jogar o seu videogame seria otimo.\p"
+	.string "{RIVAL} tem um tambem. Uma tecnologia\n"
+	.string "fascinante.\p"
+	.string "Enfim, se quiser mais aventura, aqui\n"
+	.string "estao os proximos passos que um Campeao\l"
+	.string "deve considerar para se tornar um\l"
+	.string "Mestre Pokemon.\p"
+	.string "Nao sei se acompanhou as noticias,\n"
+	.string "mas a sua vitoria gerou uma onda de\l"
+	.string "interesse na Liga!\p"
+	.string "Voce agora esta no lugar de {RIVAL},\n"
+	.string "e quando um desafiante derrotar a\l"
+	.string "Elite, precisara ir a Liga defender\l"
+	.string "o seu titulo.\p"
+	.string "Sei que todos os Ginasios de Kanto\n"
+	.string "estao treinando em ritmo acelerado.\p"
+	.string "Parte do seu papel como Campeao e\n"
+	.string "visitar os Ginasios.\p"
+	.string "Que tal desafiar os Lideres para\n"
+	.string "uma revanche?\p"
+	.string "Eles nao poderao te dar outra insignia,\n"
+	.string "mas voce ganhara Pontos de Batalha!\p"
 	.string "..."
-	.string "What are Battle Points?\p"
-	.string "They are rewards for trainers\n"
-	.string "who have gone above and beyond.\p"
-	.string "I'm assuming you met Scott?\p"
-	.string "He runs the Battle Tower west\n"
-	.string "of Viridian City.\p"
-	.string "I've heard rumor that his pet\n"
-	.string "project is experiencing some\l"
-	.string "setbacks, but you can redeem\l"
-	.string "Battle Points there even if\l"
-	.string "they need to close.\p"
-	.string "Finally, please continue\n"
-	.string "assisting Looker and the\l"
-	.string "International Police.\p"
-	.string "Champions help keep the peace\n"
-	.string "but you're a special trainer.\p"
-	.string "... I can see your eyes are\n"
-	.string "glazing over, so I'll be done.\p"
-	.string "Just go out there and be the\n"
-	.string "best, like no one ever was.$"
+	.string "O que sao Pontos de Batalha?\p"
+	.string "Sao recompensas para treinadores que\n"
+	.string "foram alem dos limites.\p"
+	.string "Imagino que conheceu Scott?\p"
+	.string "Ele comanda a Battle Tower a oeste\n"
+	.string "de Viridian City.\p"
+	.string "Voce pode trocar Pontos de Batalha la!\p"
+	.string "Por fim, continue ajudando Looker e\n"
+	.string "a Policia Internacional.\p"
+	.string "Campeoes ajudam a manter a paz, mas\n"
+	.string "voce e um treinador especial.\p"
+	.string "... Vejo que seus olhos estao pesando,\n"
+	.string "entao vou parar por aqui.\p"
+	.string "Apenas va la fora e seja o melhor,\n"
+	.string "como ninguem jamais foi.$"
 
 PalletTown_ProfessorOaksLab_EventScript_NoE42::
 	msgbox PalletTown_ProfessorOaksLab_Text_NoE42, MSGBOX_NPC
@@ -1226,11 +1207,11 @@ PalletTown_ProfessorOaksLab_EventScript_NoE42::
 
 PalletTown_ProfessorOaksLab_Text_NoE42:
 	.string "Hmm?\p"
-	.string "For a Pokémon Professor,\n"
-	.string "I seem to know a lot about\l"
-	.string "the Pokémon League?\p"
-	.string "Curious, isn't it?\p"
-	.string "Good luck out there, Champ.$"
+	.string "Para um Professor Pokémon,\n"
+	.string "parece que sei muito sobre\l"
+	.string "a Liga Pokémon, nao e?\p"
+	.string "Curioso, nao acha?\p"
+	.string "Boa sorte la fora, Campeao.$"
 
 PalletTown_ProfessorOaksLab_EventScript_GoTakePokeball::
 	msgbox PalletTown_ProfessorOaksLab_Text_TakeMyPokemon, MSGBOX_DEFAULT
@@ -1239,10 +1220,10 @@ PalletTown_ProfessorOaksLab_EventScript_GoTakePokeball::
 	end
 
 PalletTown_ProfessorOaksLab_Text_TakeMyPokemon::
-    .string "Oak: Now, {PLAYER}.\p"
-    .string "Inside that Pokéball is\n"
-    .string "one of my Pokémon.\p"
-    .string "Please take good care of it!$"
+    .string "Carvalho: Agora, {PLAYER}.\p"
+    .string "Dentro daquela Pokebola esta\n"
+    .string "um dos meus Pokemon.\p"
+    .string "Por favor, cuide muito bem dele!$"
 
 PalletTown_ProfessorOaksLab_EventScript_OakCanReachNextTownWithMon::
 	msgbox PalletTown_ProfessorOaksLab_Text_OakCanReachNextTownWithMon, MSGBOX_DEFAULT
@@ -1251,10 +1232,10 @@ PalletTown_ProfessorOaksLab_EventScript_OakCanReachNextTownWithMon::
 	end
 
 PalletTown_ProfessorOaksLab_Text_OakCanReachNextTownWithMon::
-    .string "Oak: If a wild Pokémon appears,\n"
-    .string "your Pokémon can battle it.\p"
-    .string "With it at your side, you should be\n"
-    .string "able to reach the next town.$"
+    .string "Carvalho: Se um Pokemon selvagem surgir,\n"
+    .string "seu Pokemon pode batalhar com ele.\p"
+    .string "Com ele ao seu lado, voce conseguira\n"
+    .string "chegar a proxima cidade.$"
 
 PalletTown_ProfessorOaksLab_EventScript_OakBattleMonForItToGrow::
 	msgbox PalletTown_ProfessorOaksLab_Text_OakBattleMonForItToGrow, MSGBOX_DEFAULT
@@ -1263,9 +1244,9 @@ PalletTown_ProfessorOaksLab_EventScript_OakBattleMonForItToGrow::
 	end
 
 PalletTown_ProfessorOaksLab_Text_OakBattleMonForItToGrow::
-    .string "Oak: {PLAYER}, raise your young\n"
-    .string "Pokémon by making it battle.\p"
-    .string "It has to battle for it to grow.$"
+    .string "Carvalho: {PLAYER}, treine seu jovem\n"
+    .string "Pokémon fazendo-o batalhar.\p"
+    .string "Ele precisa batalhar para crescer.$"
 
 PalletTown_ProfessorOaksLab_EventScript_OakMonsAroundWorldWait::
 	msgbox PalletTown_ProfessorOaksLab_Text_OakMonsAroundWorldWait, MSGBOX_DEFAULT
@@ -1274,8 +1255,8 @@ PalletTown_ProfessorOaksLab_EventScript_OakMonsAroundWorldWait::
 	end
 
 PalletTown_ProfessorOaksLab_Text_OakMonsAroundWorldWait::
-    .string "Pokémon around the world wait for\n"
-    .string "you, {PLAYER}!$"
+    .string "Pokemon de todo o mundo esperam\n"
+    .string "por voce, {PLAYER}!$"
 
 EventScript_RegisterProfOak::
 	msgbox MatchCall_Text_OakRegisterCall, MSGBOX_DEFAULT

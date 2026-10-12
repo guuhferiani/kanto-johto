@@ -157,10 +157,10 @@ Movement_BlockPlayerEscape:
 	walk_left
 	step_end
 
-	.string "James: How did you know about our\n"
-	.string "secret drop off spot? It's secret!\p"
-	.string "Jessie: Someone in the base must have\n"
-	.string "talked!\p"
+	.string "James: Como voce descobriu nosso ponto\n"
+	.string "de entrega secreto? Era segredo!\p"
+	.string "Jessie: Alguem na base deve ter\n"
+	.string "aberto o bico!\p"
 	.string ""
 
 CeladonCity_Condominiums_Roof_Text_RocketDuoIntro::

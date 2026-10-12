@@ -270,15 +270,15 @@ SeafoamIslands_B4F_EventScript_BoulderHintSign::
 	end
 
 SeafoamIslands_B4F_Text_BouldersMightChangeWaterFlow::
-    .string "Hint: Boulders might change the\n"
-    .string "flow of water.$"
+    .string "Dica: Rochas podem mudar o\n"
+    .string "fluxo da agua.$"
 
 SeafoamIslands_B4F_EventScript_FastCurrentSign::
 	msgbox SeafoamIslands_B4F_Text_DangerFastCurrent, MSGBOX_SIGN
 	end
 	
 SeafoamIslands_B4F_Text_DangerFastCurrent::
-    .string "DANGER\n"
-    .string "Fast current!$"
+    .string "PERIGO\n"
+    .string "Correnteza rapida!$"
 
 
