@@ -41,10 +41,10 @@ SaffronCity_Dojo_OffenseMaster::
 	end
 
 SaffronCity_Dojo_Text_IAmTheOffenseMaster::
-	.string "I am the Offense Master.\p"
-	.string "My pupils have mastered the art\n"
-	.string "offense, and their Pokémon all\l"
-	.string "reflect that.$"
+	.string "Eu sou o Mestre do Ataque.\p"
+	.string "Meus pupilos dominaram a arte\n"
+	.string "ofensiva, e seus Pokémon\l"
+	.string "refletem isso.$"
 
 SaffronCity_Dojo_EventScript_DefeatMyPupils::
 	msgbox SaffronCity_Dojo_Text_DefeatThemAll, MSGBOX_DEFAULT
@@ -52,9 +52,9 @@ SaffronCity_Dojo_EventScript_DefeatMyPupils::
 	end
 
 SaffronCity_Dojo_Text_DefeatThemAll::
-	.string "If you can defeat all my pupils,\n"
-	.string "I will reward you with a special\l"
-	.string "Pokémon!$"
+	.string "Se você derrotar todos os meus\n"
+	.string "pupilos, eu lhe darei um\l"
+	.string "Pokémon especial de presente!$"
 
 SaffronCity_Dojo_TrainWithMyPupils::
 	msgbox SaffronCity_Dojo_Text_TrainWithMyPupilsOffense, MSGBOX_DEFAULT
@@ -62,18 +62,18 @@ SaffronCity_Dojo_TrainWithMyPupils::
 	end
 
 SaffronCity_Dojo_Text_TrainWithMyPupilsOffense::
-	.string "If you train with my pupils, you\n"
-	.string "too can master the art of Offense.\p"
-	.string "You may spar with them every day.\n"
-	.string "But they do need to rest.\p"
-	.string "Staying hydrated is important for\n"
-	.string "training.$"
+	.string "Se treinar com meus pupilos, você\n"
+	.string "também dominará a arte do Ataque.\p"
+	.string "Você pode treinar com eles todo dia,\n"
+	.string "mas eles precisam descansar.\p"
+	.string "Manter-se hidratado é essencial\n"
+	.string "para o treinamento.$"
 
 SaffronCityDojo_Text_ProvedYourselfOffensive::
-	.string "So, you have defeated all my pupils.\p"
-	.string "I see you've proven yourself capable\n"
-	.string "of surviving the strongest offense!\p"
-	.string "For that, you have earned this\n"
+	.string "Então você derrotou todos os pupilos.\p"
+	.string "Vejo que provou ser capaz de\n"
+	.string "resistir ao mais forte ataque!\p"
+	.string "Por isso, você conquistou este\n"
 	.string "Pokémon... Hitmonchan!$"
 
 SaffronCity_Dojo_EventScript_HitmonchanParty::
@@ -94,8 +94,8 @@ SaffronCity_Dojo_EventScript_GetHitmonchan::
 	return
 
 SaffronCity_Dojo_EventScript_Text_EarnedHitmonchan::
-	.string "{PLAYER} mastered the art of Offense\n"
-	.string "and earned the Dojo's Hitmonchan!$"
+	.string "{PLAYER} dominou a arte do Ataque\n"
+	.string "e ganhou o Hitmonchan do Dojô!$"
 
 SaffronCity_Dojo_EventScript_GotHitmonchan::
 	setflag FLAG_RECEIVED_HITMONCHAN
@@ -132,10 +132,10 @@ SaffronCity_Dojo_DefenseMaster::
 	end
 
 SaffronCity_Dojo_Text_IAmTheDefenseMaster::
-	.string "I am the Defense Master.\p"
-	.string "My pupils have mastered the art\n"
-	.string "defense, and their Pokémon all\l"
-	.string "reflect that.$"
+	.string "Eu sou o Mestre da Defesa.\p"
+	.string "Meus pupilos dominaram a arte\n"
+	.string "defensiva, e seus Pokémon\l"
+	.string "refletem isso.$"
 
 SaffronCity_Dojo_TrainWithMyPupilsDefense::
 	msgbox SaffronCity_Dojo_Text_TrainWithMyPupilsDefense, MSGBOX_DEFAULT
@@ -143,18 +143,18 @@ SaffronCity_Dojo_TrainWithMyPupilsDefense::
 	end
 
 SaffronCity_Dojo_Text_TrainWithMyPupilsDefense::
-	.string "If you train with my pupils, you\n"
-	.string "too can master the art of Defense.\p"
-	.string "You may spar with them every day.\n"
-	.string "But they do need to rest.\p"
-	.string "Staying hydrated is important for\n"
-	.string "training as well.$"
+	.string "Se treinar com meus pupilos, você\n"
+	.string "também dominará a arte da Defesa.\p"
+	.string "Você pode treinar com eles todo dia,\n"
+	.string "mas eles precisam descansar.\p"
+	.string "Manter-se hidratado também é\n"
+	.string "essencial para o treinamento.$"
 
 SaffronCityDojo_Text_ProvedYourselfDefensive::
-	.string "So, you have defeated all my pupils.\p"
-	.string "I see you've proven yourself capable\n"
-	.string "of breaking the strongest defense!\p"
-	.string "For that, you have earned this\n"
+	.string "Então você derrotou todos os pupilos.\p"
+	.string "Vejo que provou ser capaz de quebrar\n"
+	.string "a mais impenetrável defesa!\p"
+	.string "Por isso, você conquistou este\n"
 	.string "Pokémon... Hitmonlee!$"
 
 SaffronCity_Dojo_EventScript_HitmonleeParty::
@@ -175,8 +175,8 @@ SaffronCity_Dojo_EventScript_GetHitmonlee::
 	return
 
 SaffronCity_Dojo_EventScript_Text_EarnedHitmonlee::
-	.string "{PLAYER} mastered the art of Defense\n"
-	.string "and earned the Dojo's Hitmonlee!$"
+	.string "{PLAYER} dominou a arte da Defesa\n"
+	.string "e ganhou o Hitmonlee do Dojô!$"
 
 SaffronCity_Dojo_EventScript_GotHitmonlee::
 	setflag FLAG_RECEIVED_HITMONLEE
@@ -202,31 +202,31 @@ SaffronCity_Dojo_EventScript_NoRoomForPokemon::
 	end
 
 SaffronCity_Dojo_Text_NoRoomForMorePokemon::
-    .string "Oh! You don't have room\n"
-    .string "for any more Pokémon!$"
+    .string "Oh! Você não tem espaço\n"
+    .string "para mais nenhum Pokémon!$"
 
 SaffronCity_Dojo_EventScript_Statue::
 	msgbox SaffronCity_Dojo_Text_FightingDojo, MSGBOX_SIGN
 	end
 
 SaffronCity_Dojo_Text_FightingDojo::
-    .string "Fighting Dojo$"
+    .string "Dojô de Luta$"
 
 SaffronCity_Dojo_EventScript_LeftScroll::
 	msgbox SaffronCity_Dojo_Text_StrongOffense, MSGBOX_SIGN
 	end
 
 SaffronCity_Dojo_Text_StrongOffense::
-    .string "A strong offense is\n"
-    .string "the key to victory!$"
+    .string "Um ataque poderoso é\n"
+    .string "a chave para a vitória!$"
 
 SaffronCity_Dojo_EventScript_RightScroll::
 	msgbox SaffronCity_Dojo_Text_StrongDefense, MSGBOX_SIGN
 	end
 
 SaffronCity_Dojo_Text_StrongDefense::
-    .string "A strong defense is\n"
-    .string "the key to survival!$"
+    .string "Uma defesa sólida é\n"
+    .string "a chave para a sobrevivência!$"
 
 
 SaffronCity_Dojo_EventScript_FreshWater::
@@ -244,25 +244,26 @@ SaffronCity_Dojo_EventScript_CouldUseADrink::
 	end
 
 SaffronCity_Dojo_Text_SureAmThirsty:
-	.string "Pokémon training is exhausting!\p"
-	.string "I'm going to get refreshed before\n"
-	.string "I can go another round...$"
+	.string "Treinar Pokémon é exaustivo!\p"
+	.string "Preciso me refrescar antes de\n"
+	.string "poder lutar outra rodada...$"
 
 SaffronCity_Dojo_Text_CanIHaveThat:
-	.string "Oh! You have some Fresh Water!\p"
-	.string "Could I have some of that?$"
+	.string "Oh! Você tem uma Água Fresca!\p"
+	.string "Poderia me dar um pouco?$"
 
 SaffronCity_Dojo_Text_CouldUseADrink:
-	.string "I sure could use a drink...$"
+	.string "Eu realmente preciso de algo\n"
+	.string "para beber...$"
 
 SaffronCity_Dojo_Text_HitsThatSpot:
-	.string "Wow, thanks!\p"
-	.string "GLUG GLUG GLUG$"
+	.string "Uau, obrigado!\p"
+	.string "GLUB GLUB GLUB$"
 
 SaffronCity_Dojo_Text_AhhMuchBetter:
 	.string "Ahhhhhhh....\p"
-	.string "That really hits the spot!\p"
-	.string "I feel ready for another battle!$"
+	.string "Isso caiu muito bem!\p"
+	.string "Sinto-me pronto para outra batalha!$"
 
 SaffronCity_Dojo_EventScript_BattleLater::
 	msgbox SaffronCity_Dojo_Text_BattleLater, MSGBOX_DEFAULT
@@ -270,68 +271,67 @@ SaffronCity_Dojo_EventScript_BattleLater::
 	end
 
 SaffronCity_Dojo_Text_PupilIntro:
-	.string "Alright! I'll show you what\n"
-	.string "my sensei has taught me!$"
+	.string "Muito bem! Mostrarei o que\n"
+	.string "meu sensei me ensinou!$"
 
 SaffronCity_Dojo_Text_PupilDefeat:
-	.string "I was no match for you.$"
+	.string "Não fui páreo para você.$"
 
 SaffronCity_Dojo_Text_AGoodWorkout:
-	.string "I still have a long way to go.\n"
-	.string "That was quite the workout.$"
+	.string "Ainda tenho muito a aprender.\n"
+	.string "Esse foi um ótimo treino.$"
 
 SaffronCity_Dojo_Text_AttackPupil:
-	.string "I am studying the ways of the\n"
-	.string "Offense Master!\p"
-	.string "Physical attacks are the most\n"
-	.string "powerful moves, and I will be\l"
-	.string "the strongest in all of Kanto!\p"
-	.string "Do you wish to challenge me?$"	
+	.string "Estou estudando os caminhos do\n"
+	.string "Mestre do Ataque!\p"
+	.string "Ataques físicos são os golpes mais\n"
+	.string "poderosos, e serei o mais forte\l"
+	.string "de toda Kanto!\p"
+	.string "Deseja me desafiar?$"	
 
 SaffronCity_Dojo_Text_DefensePupil:
-	.string "I am studying the ways of the\n"
-	.string "Defense Master!\p"
-	.string "Physical attacks cannot even\n"
-	.string "break my defense, and I will be\l"
-	.string "the strongest in all of Kanto!\p"
-	.string "Do you wish to challenge me?$"	
+	.string "Estou estudando os caminhos do\n"
+	.string "Mestre da Defesa!\p"
+	.string "Ataques físicos nem sequer quebram\n"
+	.string "minha defesa, e serei o mais\l"
+	.string "forte de toda Kanto!\p"
+	.string "Deseja me desafiar?$"	
 
 SaffronCity_Dojo_Text_SpAttackPupil:
-	.string "I am studying the ways of the\n"
-	.string "Offense Master!\p"
-	.string "Special attacks are the most\n"
-	.string "powerful moves, and I will be\l"
-	.string "the strongest in all of Kanto!\p"
-	.string "Do you wish to challenge me?$"
+	.string "Estou estudando os caminhos do\n"
+	.string "Mestre do Ataque!\p"
+	.string "Ataques especiais são os golpes\n"
+	.string "mais poderosos, e serei o mais\l"
+	.string "forte de toda Kanto!\p"
+	.string "Deseja me desafiar?$"
 
 SaffronCity_Dojo_Text_SpDefensePupil:
-	.string "I am studying the ways of the\n"
-	.string "Defense Master!\p"
-	.string "Special attacks cannot even\n"
-	.string "break my defense, and I will be\l"
-	.string "the strongest in all of Kanto!\p"
-	.string "Do you wish to challenge me?$"	
+	.string "Estou estudando os caminhos do\n"
+	.string "Mestre da Defesa!\p"
+	.string "Ataques especiais nem sequer quebram\n"
+	.string "minha defesa, e serei o mais\l"
+	.string "forte de toda Kanto!\p"
+	.string "Deseja me desafiar?$"	
 
 SaffronCity_Dojo_Text_SpeedPupil:
-	.string "I am studying the ways of the\n"
-	.string "Offense Master!\p"
-	.string "Speed is the most important\n"
-	.string "factor in battle, and I will be\l"
-	.string "the strongest in all of Kanto!\p"
-	.string "Do you wish to challenge me?$"	
+	.string "Estou estudando os caminhos do\n"
+	.string "Mestre do Ataque!\p"
+	.string "A velocidade é o fator mais\n"
+	.string "importante em batalha, e serei\l"
+	.string "o mais forte de toda Kanto!\p"
+	.string "Deseja me desafiar?$"	
 
 SaffronCity_Dojo_Text_HpPupil:
-	.string "I am studying the ways of the\n"
-	.string "Defense Master!\p"
-	.string "Having more HP than your opponent\n"
-	.string "is the most important factor in\l"
-	.string "battle, and I will be the strongest\l"
-	.string "in all of Kanto!\p"
-	.string "Do you wish to challenge me?$"	
+	.string "Estou estudando os caminhos do\n"
+	.string "Mestre da Defesa!\p"
+	.string "Ter mais HP que o oponente é o\n"
+	.string "fator mais importante em batalha,\l"
+	.string "e serei o mais forte de toda Kanto!\p"
+	.string "Deseja me desafiar?$"	
 	
 SaffronCity_Dojo_Text_BattleLater:
-	.string "If you wish to become the best,\n"
-	.string "you must work for it!$"
+	.string "Se deseja se tornar o melhor,\n"
+	.string "precisa se esforçar para isso!$"
 
 SaffronCity_Dojo_EventScript_AttackPupil::
 	lock
@@ -511,8 +511,8 @@ SaffronCity_Dojo_ExpertBelt::
 	end
 
 SaffronCity_Dojo_Text_ExpertBelt::
-	.string "This Belt proves you are\n"
-	.string "a master of Pokémon battles.$"
+	.string "Este cinto prova que você é\n"
+	.string "um mestre em batalhas Pokémon.$"
 
 SaffronCity_Dojo_Unworthy::
 	msgbox SaffronCity_Dojo_Text_Unworthy, MSGBOX_DEFAULT
@@ -520,5 +520,5 @@ SaffronCity_Dojo_Unworthy::
 	end
 
 SaffronCity_Dojo_Text_Unworthy::
-	.string "You don't feel worthy of it.$"
+	.string "Você não se sente digno disso.$"
 

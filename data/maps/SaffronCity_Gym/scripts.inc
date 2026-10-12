@@ -17,14 +17,14 @@ SaffronCity_Gym_EventScript_Johan::
 	end
 
 SaffronCity_Gym_Text_JohanIntro::
-    .string "Does our unseen power scare you?$"
+    .string "Nosso poder invisível assusta você?$"
 
 SaffronCity_Gym_Text_JohanDefeat::
-    .string "I never foresaw this!$"
+    .string "Eu nunca previ isso!$"
 
 SaffronCity_Gym_Text_JohanPostBattle::
-    .string "Psychic Pokémon fear only ghosts\n"
-    .string "and bugs!$"
+    .string "Pokémon Psíquicos só temem\n"
+    .string "fantasmas e insetos!$"
 
 SaffronCity_Gym_EventScript_Tyron::
 	trainerbattle_single TRAINER_PSYCHIC_TRISH, SaffronCity_Gym_Text_TyronIntro, SaffronCity_Gym_Text_TyronDefeat
@@ -32,16 +32,16 @@ SaffronCity_Gym_EventScript_Tyron::
 	end
 
 SaffronCity_Gym_Text_TyronIntro::
-    .string "You understand, don't you?\p"
-    .string "That power alone isn't enough to\n"
-    .string "win in the world of Pokémon?$"
+    .string "Você compreende, não é?\p"
+    .string "Que poder por si só não basta\n"
+    .string "para vencer no mundo Pokémon?$"
 
 SaffronCity_Gym_Text_TyronDefeat::
-    .string "I don't believe this!$"
+    .string "Não acredito nisso!$"
 
 SaffronCity_Gym_Text_TyronPostBattle::
-    .string "Sabrina just wiped out the Karate\n"
-    .string "Master next door.$"
+    .string "Sabrina derrotou facilmente o\n"
+    .string "Mestre do Karatê ao lado.$"
 
 SaffronCity_Gym_EventScript_Cameron::
 	trainerbattle_single TRAINER_PSYCHIC_CAMERON, SaffronCity_Gym_Text_CameronIntro, SaffronCity_Gym_Text_CameronDefeat
@@ -49,21 +49,21 @@ SaffronCity_Gym_EventScript_Cameron::
 	end
 
 SaffronCity_Gym_Text_CameronIntro::
-    .string "Sabrina is young, but she's also\n"
-    .string "our highly skilled Leader.\p"
-    .string "You won't reach her easily!$"
+    .string "Sabrina é jovem, mas também é nossa\n"
+    .string "Líder extremamente habilidosa.\p"
+    .string "Você não chegará a ela facilmente!$"
 
 SaffronCity_Gym_Text_CameronDefeat::
-    .string "Ow!\n"
-    .string "Down and out!$"
+    .string "Ai!\n"
+    .string "Fui nocauteado!$"
 
 SaffronCity_Gym_Text_CameronPostBattle::
-    .string "There used to be two Pokémon Gyms\n"
-    .string "in Saffron.\p"
-    .string "The Fighting Dojo next door lost\n"
-    .string "its Gym status, though.\p"
-    .string "We simply creamed them when we\n"
-    .string "decided to have just one Gym.$"
+    .string "Costumava haver dois Ginásios Pokémon\n"
+    .string "em Saffron.\p"
+    .string "O Dojô de Luta ao lado perdeu seu\n"
+    .string "título oficial de Ginásio.\p"
+    .string "Nós simplesmente os massacramos quando\n"
+    .string "decidiram ter apenas um Ginásio.$"
 
 SaffronCity_Gym_EventScript_Preston::
 	trainerbattle_single TRAINER_PSYCHIC_PRESTON, SaffronCity_Gym_Text_PrestonIntro, SaffronCity_Gym_Text_PrestonDefeat
@@ -71,17 +71,17 @@ SaffronCity_Gym_EventScript_Preston::
 	end
 
 SaffronCity_Gym_Text_PrestonIntro::
-    .string "Saffron Pokémon Gym is famous for\n"
-    .string "training psychics.\p"
-    .string "You want to see Sabrina, don't\n"
-    .string "you? I can tell!$"
+    .string "O Ginásio Pokémon de Saffron é famoso\n"
+    .string "por treinar médiuns psíquicos.\p"
+    .string "Você quer ver a Sabrina, não quer?\n"
+    .string "Eu posso sentir!$"
 
 SaffronCity_Gym_Text_PrestonDefeat::
     .string "Arrrgh!$"
 
 SaffronCity_Gym_Text_PrestonPostBattle::
-    .string "That's right! I used telepathy to\n"
-    .string "read your mind!$"
+    .string "Exato! Usei telepatia para ler a\n"
+    .string "sua mente!$"
 
 SaffronCity_Gym_EventScript_Amanda::
 	trainerbattle_single TRAINER_CHANNELER_AMANDA, SaffronCity_Gym_Text_AmandaIntro, SaffronCity_Gym_Text_AmandaDefeat
@@ -89,17 +89,17 @@ SaffronCity_Gym_EventScript_Amanda::
 	end
 
 SaffronCity_Gym_Text_AmandaIntro::
-    .string "Sabrina is far younger than I,\n"
-    .string "but she has earned my respect.$"
+    .string "Sabrina é bem mais jovem que eu,\n"
+    .string "mas ela conquistou o meu respeito.$"
 
 SaffronCity_Gym_Text_AmandaDefeat::
-    .string "Not good enough!$"
+    .string "Não fui boa o bastante!$"
 
 SaffronCity_Gym_Text_AmandaPostBattle::
-    .string "In a battle of equals, the one\n"
-    .string "with the stronger will wins.\p"
-    .string "If you wish to beat Sabrina, focus\n"
-    .string "and will yourself to victory.$"
+    .string "Numa batalha entre iguais, vence quem\n"
+    .string "tiver a determinação mais forte.\p"
+    .string "Se deseja vencer Sabrina, concentre-se\n"
+    .string "e canalize sua mente para a vitória.$"
 
 SaffronCity_Gym_EventScript_Stacy::
 	trainerbattle_single TRAINER_CHANNELER_STACY, SaffronCity_Gym_Text_StacyIntro, SaffronCity_Gym_Text_StacyDefeat
@@ -107,17 +107,17 @@ SaffronCity_Gym_EventScript_Stacy::
 	end
 
 SaffronCity_Gym_Text_StacyIntro::
-    .string "Pokémon take on the appearance of\n"
-    .string "their trainers.\p"
-    .string "Your Pokémon must be tough, then!$"
+    .string "Os Pokémon refletem a personalidade\n"
+    .string "de seus treinadores.\p"
+    .string "Seus Pokémon devem ser bem fortes!$"
 
 SaffronCity_Gym_Text_StacyDefeat::
-    .string "I knew it!$"
+    .string "Eu sabia!$"
 
 SaffronCity_Gym_Text_StacyPostBattle::
-    .string "I have much to learn still…\p"
-    .string "I must master Psychic and teach it\n"
-    .string "to my Pokémon…$"
+    .string "Ainda tenho muito a aprender...\p"
+    .string "Preciso dominar o Psíquico e ensiná-lo\n"
+    .string "aos meus Pokémon...$"
 
 SaffronCity_Gym_EventScript_Tasha::
 	trainerbattle_single TRAINER_CHANNELER_TASHA, SaffronCity_Gym_Text_TashaIntro, SaffronCity_Gym_Text_TashaDefeat
@@ -125,15 +125,14 @@ SaffronCity_Gym_EventScript_Tasha::
 	end
 
 SaffronCity_Gym_Text_TashaIntro::
-    .string "You and I, our Pokémon shall\n"
-    .string "battle!$"
+    .string "Você e eu, nossos Pokémon irão\n"
+    .string "batalhar!$"
 
 SaffronCity_Gym_Text_TashaDefeat::
-    .string "I lost after all!$"
+    .string "Perdi afinal de contas!$"
 
 SaffronCity_Gym_Text_TashaPostBattle::
-    .string "I knew that this was going to take\n"
-    .string "place.$"
+    .string "Eu sabia que isso ia acontecer.$"
 
 
 SaffronCity_Gym_EventScript_Sabrina::
@@ -151,19 +150,19 @@ SaffronCity_Gym_EventScript_ChallengeLeader::
 	end
 
 SaffronCity_Gym_Text_LeaderSpeech::
-    .string "I had a vision of your arrival.\p"
-    .string "I have had psychic powers since\n"
-    .string "I was a child.\p"
-    .string "It started when a spoon I\n"
-    .string "carelessly tossed, bent.$"
+    .string "Eu tive uma visão da sua chegada.\p"
+    .string "Tenho poderes psíquicos desde que\n"
+    .string "era criança.\p"
+    .string "Tudo começou quando uma colher que\n"
+    .string "joguei displicentemente entortou.$"
 
 SaffronCity_Gym_Text_LeaderIntro::
-    .string "I dislike battling, but if you wish,\n"
-    .string "I will show you my powers!$"
+    .string "Não gosto de batalhar, mas se insiste,\n"
+    .string "eu lhe mostrarei os meus poderes!$"
 
 SaffronCity_Gym_Text_LeaderDefeat::
-    .string "This loss shocks me!\n"
-    .string "But, a loss is a loss.$"
+    .string "Esta derrota me choca!\n"
+    .string "Porém, uma derrota é uma derrota.$"
 
 SaffronCity_Gym_EventScript_DefeatedLeaderGetBadge::
 	msgbox SaffronCity_Gym_Text_GetBadge, MSGBOX_DEFAULT
@@ -191,24 +190,24 @@ SaffronCity_Gym_EventScript_QueueNextAideCall::
     return
 
 SaffronCity_Gym_Text_GetBadge::
-    .string "I admit, I didn't work hard enough\n"
-    .string "to win.\p"
-    .string "Your victory has earned you the\n"
-    .string "Marsh Badge.$"
+    .string "Admito, eu não me esforcei o bastante\n"
+    .string "para vencer.\p"
+    .string "Sua vitória lhe garantiu a Insígnia\n"
+    .string "do Pântano.$"
 
 SaffronCity_Gym_Text_ReceivedBadge::
-	.string "{PLAYER} received the Marsh\n"
-    .string "Badge from Sabrina!$"
+	.string "{PLAYER} recebeu a Insígnia do\n"
+    .string "Pântano de Sabrina!$"
 
 SaffronCity_Gym_Text_ExplainBadge::
-    .string "The Marsh Badge allows your\n"
-    .string "Pokémon to use Rock Smash.\p"
-    .string "It will also make Pokémon up\n"
-    .string "to Lv. 70 obey you.\p"
-    .string "Stronger Pokémon will become wild,\n"
-    .string "ignoring your orders in battle.\p"
-    .string "Just don't raise your Pokémon too\n"
-    .string "much to avoid that problem.$"
+    .string "A Insígnia do Pântano permite que\n"
+    .string "seus Pokémon usem Rock Smash.\p"
+    .string "Ela também faz com que Pokémon até\n"
+    .string "o Nv. 70 obedeçam a você.\p"
+    .string "Pokémon mais fortes ficarão rebeldes,\n"
+    .string "ignorando suas ordens em batalha.\p"
+    .string "Apenas não os treine além da conta\n"
+    .string "para evitar esse problema.$"
 
 SaffronCity_Gym_EventScript_GetTM::
 	msgbox SaffronCity_Gym_Text_TakeThisWithYou, MSGBOX_DEFAULT
@@ -224,16 +223,16 @@ SaffronCity_Gym_EventScript_GetTM::
 	end
 
 SaffronCity_Gym_Text_TakeThisWithYou::
-    .string "Wait, please take this TM with you.$"
+    .string "Espere, por favor leve este MT.$"
 
 SaffronCity_Gym_Text_ReceivedTM::
-	.string "{PLAYER} received TM04\n"
-    .string "from Sabrina.$"
+	.string "{PLAYER} recebeu o MT04\n"
+    .string "de Sabrina.$"
 
 SaffronCity_Gym_Text_ExplainTM::
-    .string "TM04 is Calm Mind.\p"
-    .string "It makes the Pokémon concentrate\n"
-    .string "to raise both Sp. Atk and Sp. Def.$"
+    .string "O MT04 contém Calm Mind.\p"
+    .string "Ele faz o Pokémon se concentrar para\n"
+    .string "elevar tanto o Sp. Atk quanto o Sp. Def.$"
 
 SaffronCity_Gym_EventScript_NoRoomForTM::
 	msgbox SaffronCity_Gym_Text_NoRoomForTM, MSGBOX_DEFAULT
@@ -241,7 +240,7 @@ SaffronCity_Gym_EventScript_NoRoomForTM::
 	end
 
 SaffronCity_Gym_Text_NoRoomForTM::
-    .string "Your Bag is full of other items.$"
+    .string "Sua Mochila está cheia de itens.$"
 
 SaffronCity_Gym_EventScript_LeaderPostBattle::
 	lock
@@ -252,10 +251,10 @@ SaffronCity_Gym_EventScript_LeaderPostBattle::
 	end
 
 SaffronCity_Gym_Text_LeaderPostBattle::
-    .string "Psychic power isn't something that\n"
-    .string "only a few people have.\p"
-    .string "Everyone has psychic power.\n"
-    .string "People just don't realize it.$"
+    .string "O poder psíquico não é algo reservado\n"
+    .string "a poucas pessoas.\p"
+    .string "Todos possuem poder psíquico.\n"
+    .string "As pessoas apenas não percebem.$"
 
 SaffronCity_Gym_EventScript_LeaderPostBattleGameClear::
 	msgbox SaffronCity_Gym_Text_PostBattleGameClear, MSGBOX_DEFAULT
@@ -263,10 +262,10 @@ SaffronCity_Gym_EventScript_LeaderPostBattleGameClear::
 	end
 
 SaffronCity_Gym_Text_PostBattleGameClear::
-	.string "You have done well.\p" 
-	.string "If I cannot match you now, I \n"
-	.string "can only train further.\p" 
-	.string "Continue testing your skill!$"
+	.string "Você se saiu muito bem.\p"
+	.string "Se não consigo superá-lo agora,\n"
+	.string "só me resta treinar ainda mais.\p"
+	.string "Continue testando suas habilidades!$"
 
 SaffronCity_Gym_EventScript_RematchLeader::
 	msgbox SaffronCity_Gym_Text_RematchLeader, MSGBOX_YESNO
@@ -276,16 +275,16 @@ SaffronCity_Gym_EventScript_RematchLeader::
 	end
 
 SaffronCity_Gym_Text_RematchLeader::
-	.string "...It's true that psychic power is a\n" 
-	.string "potent ability.\p" 
-	.string "However, there are things that cannot\n" 
-	.string "be overcome with that power alone.\p" 
-	.string "I finally understand that now, after\n" 
-	.string "losing to you in our last battle.\p" 
-	.string " I won't be relying on just psychic power\n"
-	.string "this time.\p" 
-	.string "My true strength...my true self...\p"
-	.string "Allow me to test them against you!$"
+	.string "...É verdade que o poder psíquico é uma\n"
+	.string "habilidade poderosa.\p"
+	.string "No entanto, há coisas que não podem\n"
+	.string "ser superadas apenas com esse poder.\p"
+	.string "Finalmente compreendi isso após perder\n"
+	.string "para você em nossa última batalha.\p"
+	.string "Não vou depender só de poderes psíquicos\n"
+	.string "desta vez.\p"
+	.string "Minha verdadeira força... meu verdadeiro eu...\p"
+	.string "Permita-me testá-los contra você!$"
 
 SaffronCity_Gym_EventScript_DeclineRematch::
 	msgbox SaffronCity_Gym_Text_DeclineRematch, MSGBOX_DEFAULT
@@ -293,7 +292,7 @@ SaffronCity_Gym_EventScript_DeclineRematch::
 	end
 
 SaffronCity_Gym_Text_DeclineRematch::
-	.string "I foresaw this possibility...$"
+	.string "Eu já previa esta possibilidade...$"
 
 SaffronCity_Gym_EventScript_PostgameRematch::
 	msgbox SaffronCity_Gym_Text_RematchMode, MSGBOX_YESNO
@@ -302,16 +301,16 @@ SaffronCity_Gym_EventScript_PostgameRematch::
 	end
 
 SaffronCity_Gym_Text_RematchMode::
-	.string "Now that you're the champion,\n"
-	.string "would you like to go all out?$"
+	.string "Agora que você é o Campeão,\n"
+	.string "gostaria de lutar com tudo?$"
 
 SaffronCity_Gym_EventScript_LeaderRematch_OriginalTeam::
 	trainerbattle_single LEADER_REMATCH_SABRINA_ORIGINAL, SaffronCity_Gym_Text_RematchOriginal, SaffronCity_Gym_Text_RematchDefeat, SaffronCity_Gym_EventScript_DefeatedLeaderRematch
 	end
 
 SaffronCity_Gym_Text_RematchOriginal::
-	.string "Let us look into our pasts to discover\n" 
-	.string "what our future holds!$" 
+	.string "Vamos contemplar nosso passado para ver\n"
+	.string "o que o futuro nos reserva!$" 
 
 SaffronCity_Gym_EventScript_LeaderRematch_PostGameTeam::
 	setvar VAR_0x8003, 1
@@ -320,11 +319,11 @@ SaffronCity_Gym_EventScript_LeaderRematch_PostGameTeam::
 	end
 
 SaffronCity_Gym_Text_RematchPostgame::
-	.string "I foresaw that you would come here by\n" 
-	.string "looking into the future.\p" 
-	.string "But I intentionally didn't look to see\n" 
-	.string "who will win out battle.\p" 
-	.string "Let's find out together!$"
+	.string "Eu previ que você viria aqui ao olhar\n"
+	.string "para o futuro.\p"
+	.string "Mas deliberadamente não olhei quem\n"
+	.string "vencerá nossa batalha.\p"
+	.string "Vamos descobrir juntos!$"
 
 SaffronCity_Gym_EventScript_DefeatedLeaderRematch::
 	setflag FLAG_DAILY_SABRINA_REMATCH
@@ -332,8 +331,8 @@ SaffronCity_Gym_EventScript_DefeatedLeaderRematch::
 	end
 
 SaffronCity_Gym_Text_RematchDefeat::
-	.string "I won't encounter a Trainer like you for\n" 
-	.string "around another three years.$"
+	.string "Não encontrarei um Treinador como você\n"
+	.string "por cerca de mais três anos.$"
 
 
 SaffronCity_Gym_EventScript_GymGuy::
@@ -345,14 +344,14 @@ SaffronCity_Gym_EventScript_GymGuy::
 	end
 
 SaffronCity_Gym_Text_GymGuyAdvice::
-    .string "Yo!\n"
-    .string "Champ in the making!\p"
-    .string "Sabrina's Pokémon use psychic\n"
-    .string "power instead of force.\p"
-    .string "Fighting Pokémon are especially\n"
-    .string "weak against Psychic Pokémon.\p"
-    .string "They'll get destroyed before they\n"
-    .string "can even aim a punch!$"
+    .string "E aí!\n"
+    .string "Futuro Campeão!\p"
+    .string "Os Pokémon de Sabrina usam poder\n"
+    .string "psíquico em vez de força bruta.\p"
+    .string "Pokémon Lutadores são especialmente\n"
+    .string "vulneráveis contra Psíquicos.\p"
+    .string "Eles serão destruídos antes mesmo\n"
+    .string "de conseguirem desferir um soco!$"
 
 SaffronCity_Gym_EventScript_GymGuyPostVictory::
 	msgbox SaffronCity_Gym_Text_GymGuyPostVictory
@@ -360,9 +359,9 @@ SaffronCity_Gym_EventScript_GymGuyPostVictory::
 	end
 
 SaffronCity_Gym_Text_GymGuyPostVictory::
-    .string "Psychic power, huh?\p"
-    .string "If I had that, I'd make a bundle\n"
-    .string "at the slots!$"
+    .string "Poder psíquico, hein?\p"
+    .string "Se eu tivesse isso, ficaria milionário\n"
+    .string "nos caça-níqueis!$"
 
 SaffronCity_Gym_EventScript_GymStatue::
 	lockall
@@ -372,9 +371,9 @@ SaffronCity_Gym_EventScript_GymStatue::
 	end
 
 SaffronCity_Gym_Text_GymStatue::
-    .string "Saffron Pokémon GYM\n"
-    .string "Leader: Sabrina\p"
-    .string "Winning Trainers:\n"
+    .string "Ginásio Pokémon de Saffron\n"
+    .string "Líder: Sabrina\p"
+    .string "Treinadores Vencedores:\n"
     .string "{RIVAL}$"
 
 SaffronCity_Gym_EventScript_GymStatuePostVictory::
@@ -383,7 +382,7 @@ SaffronCity_Gym_EventScript_GymStatuePostVictory::
 	end
 
 SaffronCity_Gym_Text_GymStatuePlayerWon::
-    .string "Saffron Pokémon GYM\n"
-    .string "Leader: Sabrina\p"
-    .string "Winning Trainers:\n"
+    .string "Ginásio Pokémon de Saffron\n"
+    .string "Líder: Sabrina\p"
+    .string "Treinadores Vencedores:\n"
     .string "{RIVAL}, {PLAYER}$"
