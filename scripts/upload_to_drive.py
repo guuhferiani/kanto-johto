@@ -29,8 +29,8 @@ except ImportError:
     print("Execute: pip install google-api-python-client google-auth-httplib2 google-auth-oauthlib", flush=True)
     sys.exit(1)
 
-SCOPES = ["https://www.googleapis.com/auth/drive.file"]
-DEFAULT_FOLDER_NAME = "Pokemon_Kanto_Johto"
+SCOPES = ["https://www.googleapis.com/auth/drive"]
+DEFAULT_FOLDER_ID = "1sddzUsY0F3QWFkY3XkKMH14TosCbTlw1"  # Pasta ROMs > gba
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 SCRIPTS_DIR = Path(__file__).resolve().parent
@@ -93,7 +93,13 @@ def get_drive_service():
     creds = None
 
     if token_file.exists():
-        creds = Credentials.from_authorized_user_file(str(token_file), SCOPES)
+        try:
+            creds = Credentials.from_authorized_user_file(str(token_file), SCOPES)
+            if not creds.has_scopes(SCOPES):
+                print("[INFO] Escopo do Google Drive alterado. Reautenticando para obter acesso à pasta desejada...")
+                creds = None
+        except Exception:
+            creds = None
 
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
@@ -113,7 +119,7 @@ def get_drive_service():
                 sys.exit(1)
 
             print(f"[INFO] Usando credenciais de: {creds_file}", flush=True)
-            print("[INFO] Iniciando servidor local para autenticacao...", flush=True)
+            print("[INFO] Iniciando servidor local para autenticação...", flush=True)
             flow = InstalledAppFlow.from_client_secrets_file(str(creds_file), SCOPES)
             creds = flow.run_local_server(
                 port=0,
@@ -148,6 +154,20 @@ def get_or_create_folder(service, folder_name: str) -> str:
     print(f"[DRIVE] Nova pasta criada: '{folder_name}' (ID: {folder_id})")
     return folder_id
 
+def get_folder_id(service, folder_identifier: str) -> str:
+    # Se parecer um ID do Google Drive (string longa sem espaços)
+    if len(folder_identifier) > 20 and ' ' not in folder_identifier:
+        try:
+            folder = service.files().get(fileId=folder_identifier, fields='id, name').execute()
+            print(f"[DRIVE] Pasta de destino identificada: '{folder.get('name')}' (ID: {folder_identifier})")
+            return folder_identifier
+        except Exception as e:
+            print(f"[ERRO] Não foi possível acessar a pasta pelo ID '{folder_identifier}': {e}")
+            sys.exit(1)
+
+    # Caso contrário, busca ou cria pelo nome
+    return get_or_create_folder(service, folder_identifier)
+
 def find_file_in_folder(service, folder_id: str, file_name: str) -> str | None:
     query = f"'{folder_id}' in parents and name = '{file_name}' and trashed = false"
     response = service.files().list(q=query, spaces='drive', fields='files(id, name)').execute()
@@ -156,7 +176,7 @@ def find_file_in_folder(service, folder_id: str, file_name: str) -> str | None:
         return files[0]['id']
     return None
 
-def upload_rom(file_path: Path, folder_name: str = DEFAULT_FOLDER_NAME):
+def upload_rom(file_path: Path, folder_identifier: str = DEFAULT_FOLDER_ID):
     if not file_path.exists():
         print(f"[ERRO] Arquivo não encontrado: {file_path}")
         sys.exit(1)
@@ -165,13 +185,13 @@ def upload_rom(file_path: Path, folder_name: str = DEFAULT_FOLDER_NAME):
     print(f"[LOCAL] Arquivo pronto: {file_path.name} ({file_size_mb:.2f} MB)")
 
     service = get_drive_service()
-    folder_id = get_or_create_folder(service, folder_name)
+    folder_id = get_folder_id(service, folder_identifier)
 
     existing_file_id = find_file_in_folder(service, folder_id, file_path.name)
     media = MediaFileUpload(str(file_path), mimetype='application/octet-stream', resumable=True)
 
     if existing_file_id:
-        print(f"[DRIVE] Substituindo arquivo existente '{file_path.name}'...")
+        print(f"[DRIVE] Substituindo arquivo existente '{file_path.name}' na pasta de destino...")
         updated_file = service.files().update(
             fileId=existing_file_id,
             media_body=media,
@@ -182,7 +202,7 @@ def upload_rom(file_path: Path, folder_name: str = DEFAULT_FOLDER_NAME):
         print(f"         Link: {updated_file.get('webViewLink')}")
         print(f"         Modificado em: {updated_file.get('modifiedTime')}")
     else:
-        print(f"[DRIVE] Fazendo upload de novo arquivo '{file_path.name}'...")
+        print(f"[DRIVE] Fazendo upload de novo arquivo '{file_path.name}' na pasta de destino...")
         file_metadata = {
             'name': file_path.name,
             'parents': [folder_id]
@@ -190,16 +210,17 @@ def upload_rom(file_path: Path, folder_name: str = DEFAULT_FOLDER_NAME):
         uploaded_file = service.files().create(
             body=file_metadata,
             media_body=media,
-            fields='id, name, webViewLink'
+            fields='id, name, webViewLink, modifiedTime'
         ).execute()
         print(f"[SUCESSO] Arquivo enviado para o Google Drive!")
         print(f"         Nome: {uploaded_file.get('name')}")
         print(f"         Link: {uploaded_file.get('webViewLink')}")
+        print(f"         Modificado em: {uploaded_file.get('modifiedTime')}")
 
 def main():
     parser = argparse.ArgumentParser(description="Upload de ROM para o Google Drive")
     parser.add_argument("--file", "-f", type=str, help="Caminho do arquivo .gba a ser enviado")
-    parser.add_argument("--folder", type=str, default=DEFAULT_FOLDER_NAME, help="Nome da pasta no Google Drive")
+    parser.add_argument("--folder", type=str, default=DEFAULT_FOLDER_ID, help="ID ou nome da pasta no Google Drive")
     parser.add_argument("--setup", action="store_true", help="Apenas configurar autenticação inicial")
     args = parser.parse_args()
 
