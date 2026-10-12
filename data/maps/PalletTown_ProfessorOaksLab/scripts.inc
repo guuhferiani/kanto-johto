@@ -556,6 +556,7 @@ PalletTown_ProfessorOaksLab_EventScript_GetPokedexScene::
 	waitfanfare
 	setflag FLAG_SYS_POKEDEX_GET
 	special SetUnlockedPokedexFlags
+	special EnableNationalPokedex
 	msgbox PalletTown_ProfessorOaksLab_Text_OakCatchMonsForDataTakeThese
 	giveitem ITEM_POKE_BALL, 5
 	@PalletTown_ProfessorOaksLab_Text_ReceivedFivePokeBalls 
