@@ -316,6 +316,10 @@ bool16 AddTextPrinter(struct TextPrinterTemplate *printerTemplate, u8 speed, voi
     return TRUE;
 }
 
+// Number of characters drawn per frame when the text speed is at its fastest
+// setting (textSpeed == 0). Vanilla draws only 1 character per frame.
+#define FAST_TEXT_CHARS_PER_FRAME 3
+
 void RunTextPrinters(void)
 {
     int i;
@@ -327,6 +331,28 @@ void RunTextPrinters(void)
             if (sTextPrinters[i].active)
             {
                 u16 renderCmd = RenderFont(&sTextPrinters[i]);
+                int extraChars = 0;
+
+                // Fast text: keep rendering plain characters in the same frame.
+                // Stops on anything that isn't a simple glyph print (waits,
+                // prompts, pauses, scrolls, end of string).
+                while (renderCmd == RENDER_PRINT
+                    && sTextPrinters[i].textSpeed == 0
+                    && !gTextFlags.autoScroll
+                    && sTextPrinters[i].state == RENDER_STATE_HANDLE_CHAR
+                    && extraChars < FAST_TEXT_CHARS_PER_FRAME - 1)
+                {
+                    if (sTextPrinters[i].callback != NULL)
+                        sTextPrinters[i].callback(&sTextPrinters[i].printerTemplate, renderCmd);
+                    renderCmd = RenderFont(&sTextPrinters[i]);
+                    extraChars++;
+                }
+
+                // Make sure glyphs drawn in the fast loop reach the screen even if
+                // this frame ended on a wait/prompt/finish instead of a print.
+                if (extraChars != 0 && renderCmd != RENDER_PRINT)
+                    CopyWindowToVram(sTextPrinters[i].printerTemplate.windowId, COPYWIN_GFX);
+
                 switch (renderCmd)
                 {
                 case RENDER_PRINT:

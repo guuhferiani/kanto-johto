@@ -799,6 +799,50 @@ u8 GetTrainerBattleTransition(void)
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_CHAMPION)
         return B_TRANSITION_CHAMPION;
 
+    // Kanto Gym Leaders (and Giovanni as Rocket Boss) get a mugshot transition
+    switch (gTrainerBattleOpponent_A)
+    {
+    case TRAINER_LEADER_BROCK:
+    case LEADER_REMATCH_BROCK_ORIGINAL:
+    case LEADER_REMATCH_BROCK_POSTGAME:
+    case TITLE_MATCH_BROCK:
+        return B_TRANSITION_BROCK;
+    case TRAINER_LEADER_MISTY:
+    case LEADER_REMATCH_MISTY_ORIGINAL:
+    case LEADER_REMATCH_MISTY_POSTGAME:
+    case TITLE_MATCH_MISTY:
+        return B_TRANSITION_MISTY;
+    case TRAINER_LEADER_SURGE:
+    case LEADER_REMATCH_SURGE_ORIGINAL:
+    case LEADER_REMATCH_SURGE_POSTGAME:
+    case TITLE_MATCH_SURGE:
+        return B_TRANSITION_SURGE;
+    case TRAINER_LEADER_ERIKA:
+    case LEADER_REMATCH_ERIKA_ORIGINAL:
+    case LEADER_REMATCH_ERIKA_POSTGAME:
+    case TITLE_MATCH_ERIKA:
+        return B_TRANSITION_ERIKA;
+    case TRAINER_LEADER_KOGA:
+    case LEADER_REMATCH_KOGA_ORIGINAL:
+    case LEADER_REMATCH_KOGA_POSTGAME:
+    case TITLE_MATCH_KOGA:
+        return B_TRANSITION_KOGA;
+    case TRAINER_LEADER_SABRINA:
+    case LEADER_REMATCH_SABRINA_ORIGINAL:
+    case LEADER_REMATCH_SABRINA_POSTGAME:
+    case TITLE_MATCH_SABRINA:
+        return B_TRANSITION_SABRINA;
+    case TRAINER_LEADER_BLAINE:
+    case LEADER_REMATCH_BLAINE_ORIGINAL:
+    case LEADER_REMATCH_BLAINE_POSTGAME:
+    case TITLE_MATCH_BLAINE:
+        return B_TRANSITION_BLAINE;
+    case TRAINER_LEADER_GIOVANNI:
+    case TRAINER_BOSS_GIOVANNI:
+    case TRAINER_BOSS_GIOVANNI_2:
+        return B_TRANSITION_GIOVANNI;
+    }
+
     if (gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_TEAM_MAGMA
         || gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_MAGMA_LEADER
         || gTrainers[gTrainerBattleOpponent_A].trainerClass == TRAINER_CLASS_MAGMA_ADMIN)
