@@ -6,17 +6,17 @@ CinnabarIsland_PokemonLab_Entrance_EventScript_Scientist::
     end
 
 CinnabarIsland_PokemonLab_Entrance_Text_StudyMonsExtensively::
-    .string "We study Pokémon extensively\n"
-    .string "every day.\p"
-    .string "People often bring us rare Pokémon\n"
-    .string "for examination.$"
+    .string "Estudamos Pokémon a fundo todos\n"
+    .string "os dias.\p"
+    .string "As pessoas sempre nos trazem Pokémon\n"
+    .string "raros para serem examinados.$"
 
 CinnabarIsland_PokemonLab_Entrance_EventScript_DrFujiPhoto::
     msgbox CinnabarIsland_PokemonLab_Entrance_Text_PhotoOfLabFounderDrFuji, MSGBOX_SIGN
     end
 
 CinnabarIsland_PokemonLab_Entrance_Text_PhotoOfLabFounderDrFuji::
-    .string "A photo of the Lab's founder…\n"
+    .string "Uma foto do fundador do Laboratório...\n"
     .string "Dr. Fuji?!$"
 
 CinnabarIsland_PokemonLab_Entrance_EventScript_MeetingRoomSign::
@@ -24,21 +24,21 @@ CinnabarIsland_PokemonLab_Entrance_EventScript_MeetingRoomSign::
     end
 
 CinnabarIsland_PokemonLab_Entrance_Text_MeetingRoomSign::
-    .string "Pokémon Lab\n"
-    .string "Meeting Room$"
+    .string "Laboratório Pokémon\n"
+    .string "Sala de Reuniões$"
 
 CinnabarIsland_PokemonLab_Entrance_EventScript_RAndDRoomSign::
     msgbox CinnabarIsland_PokemonLab_Entrance_Text_RAndDRoomSign, MSGBOX_SIGN
     end
 
 CinnabarIsland_PokemonLab_Entrance_Text_RAndDRoomSign::
-    .string "Pokémon Lab\n"
-    .string "R & D Room$"
+    .string "Laboratório Pokémon\n"
+    .string "Sala de P & D$"
 
 CinnabarIsland_PokemonLab_Entrance_EventScript_TestingRoomSign::
     msgbox CinnabarIsland_PokemonLab_Entrance_Text_TestingRoomSign, MSGBOX_SIGN
     end
 
 CinnabarIsland_PokemonLab_Entrance_Text_TestingRoomSign::
-    .string "Pokémon Lab\n"
-    .string "Testing Room$"
+    .string "Laboratório Pokémon\n"
+    .string "Sala de Testes$"

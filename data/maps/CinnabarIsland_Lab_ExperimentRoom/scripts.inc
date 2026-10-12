@@ -17,17 +17,17 @@ CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_FossilScientist::
 	end
 
 FossilResurrection_Text_InventedAMachine::
-	.string "Did you know that Pokémon have been\n"
-	.string "around for millions of years?\p"
-	.string "We have evidence of ancient Pokémon from\n"
-	.string "fossil records!\p"
-	.string "Sadly, these Pokémon have gone extinct…\n"
-	.string "but I've been working on a machine that\l"
-	.string "resurrects Pokémon from their fossils!$"
+	.string "Sabia que os Pokémon existem há\n"
+	.string "milhões de anos?\p"
+	.string "Temos evidências de Pokémon antigos por\n"
+	.string "meio de registros fósseis!\p"
+	.string "Infelizmente, esses Pokémon foram extintos...\n"
+	.string "mas eu desenvolvi uma máquina que ressuscita\l"
+	.string "Pokémon a partir de seus fósseis!$"
 
 FossilResurrection_Text_BringMeAFossil::
-	.string "If you ever find a Fossil, please\n"
-	.string "bring it to me!$"
+	.string "Se encontrar algum Fóssil, por\n"
+	.string "favor traga para mim!$"
 
 FossilRessurection_CheckAmber::
 	checkitem ITEM_OLD_AMBER
@@ -63,8 +63,8 @@ FossilResurrection_HasFossil::
 	end
 
 FossilResurrection_Text_WhatsThat::
-	.string "Oh! What do you have there?\n"
-	.string "Let me see...$"
+	.string "Oh! O que você tem aí?\n"
+	.string "Deixe-me ver...$"
 
 FossilResurrection_HasAmber::
 	checkitem ITEM_HELIX_FOSSIL
@@ -77,9 +77,9 @@ FossilResurrection_HasAmber::
 	end
 
 FossilResurrection_Text_WantToTryOldAmber::
-	.string "You have some Old Amber!\p"
-	.string "Would you like to try and resurrect\n"
-	.string "a Pokémon from the DNA contained inside?$"
+	.string "Você tem um Âmbar Antigo!\p"
+	.string "Gostaria de tentar ressuscitar um\n"
+	.string "Pokémon a partir do DNA contido nele?$"
 
 FossilResurrection_HasHelix::
 	checkitem ITEM_DOME_FOSSIL
@@ -91,9 +91,9 @@ FossilResurrection_HasHelix::
 
 
 FossilResurrection_Text_WantToTryHelixFossil::
-	.string "You have a Helix Fossil!\p"
-	.string "Would you like to try and resurrect\n"
-	.string "a Pokémon from the fossilized bones?$"
+	.string "Você tem um Fóssil Espiral!\p"
+	.string "Gostaria de tentar ressuscitar um\n"
+	.string "Pokémon a partir dos ossos fossilizados?$"
 
 FossilResurrection_HasDome::
 	msgbox FossilResurrection_Text_WantToTryDomeFossil, MSGBOX_YESNO
@@ -102,9 +102,9 @@ FossilResurrection_HasDome::
 	end
 
 FossilResurrection_Text_WantToTryDomeFossil::
-	.string "You have a Dome Fossil!\p"
-	.string "Would you like to try and resurrect\n"
-	.string "a Pokémon from the fossilized bones?$"
+	.string "Você tem um Fóssil Domo!\p"
+	.string "Gostaria de tentar ressuscitar um\n"
+	.string "Pokémon a partir dos ossos fossilizados?$"
 
 FossilResurrection_HasAmberHelix::
 	checkitem ITEM_DOME_FOSSIL
@@ -156,10 +156,9 @@ FossilResurrection_HasAmberHelixDome::
 	end
 
 FossilResurrection_Text_WhichFossil::
-	.string "Oh! You actually have multiple\n"
-	.string "fossils!\p"
-	.string "Which Fossil would you like to\n"
-	.string "resurrect?$"
+	.string "Oh! Você tem múltiplos fósseis!\p"
+	.string "Qual Fóssil você gostaria de\n"
+	.string "ressuscitar?$"
 
 FossilResurrection_ChooseOldAmber::
 	removeitem ITEM_OLD_AMBER
@@ -187,11 +186,10 @@ FossilResurrection_Begin::
 	end
 
 FossilResurrection_Text_LetsGetStarted::
-	.string "Excellent!\p"
-	.string "The resurrection process could take\n"
-	.string "some time, so I'll get started right\l"
-	.string "away!\p"
-	.string "You should come back again later.$"
+	.string "Excelente!\p"
+	.string "O processo de ressurreição pode levar\n"
+	.string "algum tempo, então vou começar já!\p"
+	.string "Volte aqui mais tarde.$"
 
 FossilResurrection_AnotherTime::
 	msgbox FossilResurrection_Text_AnotherTime
@@ -200,8 +198,8 @@ FossilResurrection_AnotherTime::
 	end
 
 FossilResurrection_Text_AnotherTime::
-	.string "Ah, alright...\n"
-	.string "Perhaps another time!$"
+	.string "Ah, tudo bem...\n"
+	.string "Talvez em outra ocasião!$"
 
 FossilResurrection_Status::
 	goto_if_lt VAR_FOSSIL_STEP_COUNTER, 500, FossilResurrection_ComeBackLater
@@ -216,8 +214,8 @@ FossilResurrection_ComeBackLater::
 	end
 
 FossilResurrection_Text_FossilNotReady::
-	.string "The process still needs more time.\n"
-    .string "Why not go for walk a little while?$"
+	.string "O processo ainda precisa de mais tempo.\n"
+    .string "Por que não vai dar uma volta?$"
 
 FossilResurrection_Omanyte::
 	bufferspeciesname STR_VAR_2, SPECIES_OMANYTE
@@ -345,14 +343,14 @@ FossilResurrection_Finish::
 	end
 
 Text_FossilMonBackToLife::
-    .string "There you are!\n"
-    .string "The experiment is complete, and\p"
-    .string "your fossil came back to life!\n"
-    .string "We successfully revived {STR_VAR_2}!$"
+    .string "Aí está você!\n"
+    .string "O experimento foi concluído, e\p"
+    .string "seu fóssil voltou à vida!\n"
+    .string "Revivemos com sucesso {STR_VAR_2}!$"
 
 Text_ReceivedMonFromResearcher:
-	.string "{PLAYER} received {STR_VAR_2} from\n"
-	.string "the Researcher.$"
+	.string "{PLAYER} recebeu {STR_VAR_2} do\n"
+	.string "Pesquisador.$"
 
 CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_Garett::
 	lock
@@ -383,12 +381,12 @@ CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_Garett::
 	end
 
 CinnabarIsland_PokemonLab_ExperimentRoom_Text_HeyThanks::
-	.string "Hey, thanks!$"
+	.string "Ei, muito obrigado!$"
 
 CinnabarIsland_PokemonLab_ExperimentRoom_Text_LookingForMonWannaTradeForMon::
-	.string "Hi!\n"
-	.string "Do you have a {STR_VAR_1}?\p"
-	.string "Want to trade it for my\n"
+	.string "Oi!\n"
+	.string "Você tem um {STR_VAR_1}?\p"
+	.string "Gostaria de trocá-lo pelo meu\n"
 	.string "{STR_VAR_2}?$"
 
 CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_DeclineTrade::
@@ -397,7 +395,7 @@ CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_DeclineTrade::
 	end
 
 CinnabarIsland_PokemonLab_ExperimentRoom_Text_DeclinedTrade::
-	.string "That's too bad.$"
+	.string "Que pena.$"
 
 CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_NotRequestedMon::
 	bufferspeciesname STR_VAR_1, VAR_0x8009
@@ -406,8 +404,8 @@ CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_NotRequestedMon::
 	end
 
 CinnabarIsland_PokemonLab_ExperimentRoom_Text_WhatThatsNotMon::
-	.string "What?\n"
-	.string "That's no {STR_VAR_1}!$"
+	.string "O quê?\n"
+	.string "Esse não é um {STR_VAR_1}!$"
 
 CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_AlreadyTraded::
 	msgbox CinnabarIsland_PokemonLab_ExperimentRoom_Text_IsntMyOldMonGreat
@@ -415,5 +413,5 @@ CinnabarIsland_PokemonLab_ExperimentRoom_EventScript_AlreadyTraded::
 	end
 
 CinnabarIsland_PokemonLab_ExperimentRoom_Text_IsntMyOldMonGreat::
-	.string "How is my old {STR_VAR_2}?\n"
-	.string "My {STR_VAR_1} is doing great!$"
+	.string "Como está o meu antigo {STR_VAR_2}?\n"
+	.string "Meu {STR_VAR_1} está ótimo!$"

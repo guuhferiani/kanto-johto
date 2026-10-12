@@ -9,6 +9,6 @@ CinnabarIsland_PokemonCenter_2F_Resident::
 	end
 
 CinnabarIsland_PokemonCenter_2F_Volcano::
-	.string "They say Cinnabar Island is\n"
-	.string "an active volcano.\p"
-	.string "I hope nothing ever happens!$"
+	.string "Dizem que a Ilha de Cinnabar é\n"
+	.string "um vulcão ativo.\p"
+	.string "Espero que nunca aconteça nada!$"

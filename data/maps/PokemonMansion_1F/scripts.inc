@@ -26,15 +26,15 @@ PokemonMansion_1F_EventScript_Ted::
 	end
 
 PokemonMansion_1F_Text_TedIntro::
-    .string "Who are you?\n"
-    .string "There shouldn't be anyone here.$"
+    .string "Quem é você?\n"
+    .string "Não deveria haver ninguém aqui.$"
 
 PokemonMansion_1F_Text_TedDefeat::
-    .string "Ouch!$"
+    .string "Ai!$"
 
 PokemonMansion_1F_Text_TedPostBattle::
-    .string "A key? I don't know what you're\n"
-    .string "talking about.$"
+    .string "Uma chave? Não faço ideia do que\n"
+    .string "você está falando.$"
 
 PokemonMansion_1F_EventScript_Johnson::
 	trainerbattle_single TRAINER_YOUNGSTER_JOHNSON, PokemonMansion_1F_Text_JohnsonIntro, PokemonMansion_1F_Text_JohnsonDefeat
@@ -42,17 +42,17 @@ PokemonMansion_1F_EventScript_Johnson::
 	end
 
 PokemonMansion_1F_Text_JohnsonIntro::
-    .string "W-w-waah! You startled me!\n"
-    .string "I thought you were a ghost.$"
+    .string "U-u-uaah! Que susto você me deu!\n"
+    .string "Achei que você fosse um fantasma.$"
 
 PokemonMansion_1F_Text_JohnsonDefeat::
-    .string "Tch!\n"
-    .string "I can't get any wins.$"
+    .string "Tsc!\n"
+    .string "Não consigo vencer nenhuma.$"
 
 PokemonMansion_1F_Text_JohnsonPostBattle::
-    .string "I was exploring here by myself,\n"
-    .string "but I feel spooked.\p"
-    .string "I ought to go soon.$"
+    .string "Eu estava explorando aqui sozinho,\n"
+    .string "mas estou ficando assustado.\p"
+    .string "É melhor eu ir embora logo.$"
 
 PokemonMansion_1F_EventScript_ItemEscapeRope::
 	finditem ITEM_ESCAPE_ROPE, 1
@@ -86,8 +86,8 @@ PokemonMansion_1F_EventScript_Alakazam::
 	end
 
 PokemonMansion_1F_Text_Alakazam:
-	.string "Alakazam reaches into your mind.\n"
-	.string "It wishes to battle your team.$"
+	.string "Alakazam penetra em sua mente.\n"
+	.string "Ele deseja enfrentar sua equipe.$"
 
 PokemonMansion_1F_EventScript_GentlemanJustice::
 	lock
@@ -100,19 +100,18 @@ PokemonMansion_1F_EventScript_GentlemanJustice::
 	end
 
 PokemonMansion_1F_Text_JusticeIntro:
-	.string "Greetings! I'm Justice.\p"
-	.string "I had an acquaintance who lived\n"
-	.string "here decades ago and wanted to\l"
-	.string "journey down memory lane.\p"
-	.string "You're the Champion! Well well.\n"
-	.string "How about a match?$"
+	.string "Saudações! Eu sou Justice.\p"
+	.string "Eu tinha um conhecido que morava aqui\n"
+	.string "há décadas e quis revisitar as memórias.\p"
+	.string "Você é o Campeão! Ora, ora.\n"
+	.string "Que tal uma batalha?$"
 
 PokemonMansion_1F_Text_JusticeDefeat:
-	.string "You live up to the title!$"
+	.string "Você realmente faz jus ao título!$"
 
 PokemonMansion_1F_Text_JusticePostBattle:
-	.string "The best battles happen in the\n"
-	.string "most unexpected places, I find.$"
+	.string "As melhores batalhas acontecem nos\n"
+	.string "lugares mais inesperados, não acha?$"
 
 PokemonMansion_1F_EventScript_MegaHintAlakazam::    
     goto_if_set FLAG_GOT_ALAKAZITE, PokemonMansion_1F_EventScript_JusticeDefeated
@@ -122,10 +121,10 @@ PokemonMansion_1F_EventScript_MegaHintAlakazam::
     end
     
 PokemonMansion_1F_Text_AlakazamMegaHint:
-    .string "You don't have to ask, for Alakazam\n"
-	.string "told me what you seek.\p"
-	.string "Visit an acquiantence of mine in\n"
-	.string "Saffron City for the Mega Stone.$"
+    .string "Não precisa perguntar, Alakazam\n"
+	.string "já me disse o que você procura.\p"
+	.string "Visite um conhecido meu na Cidade\n"
+	.string "de Saffron para obter a Mega Pedra.$"
 
 PokemonMansion_1F_EventScript_JusticeDefeated::
     msgbox JusticeDefeated_Text MSGBOX_DEFAULT
@@ -133,17 +132,17 @@ PokemonMansion_1F_EventScript_JusticeDefeated::
 	end
 
 JusticeDefeated_Text:	
-	.string "Do you happen to know Professor Oak?\p"
-	.string "... I see, so you are one of his\n"
-	.string "assistants he sends out for data.\p"
-	.string "... Oh, you've defeated him in a\n"
-	.string "Champion match as well? Fascinating!\p"
-	.string "I knew Samuel Oak back when he was a\n"
-	.string "child competing in the League.\p"
-	.string "I held the Chamption Title for many\n"
-	.string "years until he challenged me.\p"
-	.string "I'm honored to have witnessed two\n"
-	.string "prodigies rise above my heights.$"
+	.string "Você por acaso conhece o Professor Oak?\p"
+	.string "... Entendo, então você é um dos assistentes\n"
+	.string "que ele envia para coletar dados.\p"
+	.string "... Oh, você também o venceu em uma disputa\n"
+	.string "de Campeão? Fascinante!\p"
+	.string "Eu conhecia Samuel Oak quando ele era apenas\n"
+	.string "uma criança competindo na Liga.\p"
+	.string "Eu detive o Título de Campeão por muitos\n"
+	.string "anos até que ele me desafiou.\p"
+	.string "Sinto-me honrado por testemunhar dois\n"
+	.string "prodígios superarem as minhas alturas.$"
 
 PokemonMansion_1F_EventScript_AlakazamDefeated::
 	msgbox AlakazamDefeated MSGBOX_DEFAULT
@@ -152,6 +151,6 @@ PokemonMansion_1F_EventScript_AlakazamDefeated::
 
 AlakazamDefeated:	
 	.string "KA ZAM!\p"
-	.string "... images of a Mega Alakazam\n"
-	.string "holding a Life Orb and Mega Stone\l"
-	.string "aggressively flood your mind.$"
+	.string "... visões de um Mega Alakazam\n"
+	.string "segurando uma Life Orb e uma Mega Stone\l"
+	.string "invadem intensamente a sua mente.$"

@@ -31,32 +31,32 @@ PokemonMansion_B1F_EventScript_Ivan::
 	end
 
 PokemonMansion_B1F_Text_LewisIntro::
-    .string "Uh-oh…\n"
-    .string "Where am I now?$"
+    .string "Ops...\n"
+    .string "Onde é que eu vim parar agora?$"
 
 PokemonMansion_B1F_Text_LewisDefeat::
-    .string "Awooh!$"
+    .string "Auuu!$"
 
 PokemonMansion_B1F_Text_LewisPostBattle::
-    .string "You can find stuff lying around.\n"
-    .string "The residents must've left them.$"
+    .string "Dá para achar itens jogados por aí.\n"
+    .string "Os antigos moradores devem ter deixado.$"
 
 PokemonMansion_B1F_Text_IvanIntro::
-    .string "This place is ideal for a lab.\n"
-    .string "Look at all this space.$"
+    .string "Este lugar é ideal para um laboratório.\n"
+    .string "Olhe só todo esse espaço.$"
 
 PokemonMansion_B1F_Text_IvanDefeat::
-    .string "What was that for?$"
+    .string "Pra que isso?$"
 
 PokemonMansion_B1F_Text_IvanPostBattle::
-    .string "I like it here.\n"
-    .string "It's conducive to my studies.$"
+    .string "Eu gosto daqui.\n"
+    .string "É muito propício para os meus estudos.$"
 
 PokemonMansion_B1F_Text_MewtwoIsFarTooPowerful::
-    .string "Diary: Sept. 1\n"
-    .string "Mewtwo is far too powerful.\p"
-    .string "We have failed to curb its vicious\n"
-    .string "tendencies…$"
+    .string "Diário: 1 de Setembro\n"
+    .string "Mewtwo é poderoso demais.\p"
+    .string "Fracassamos em conter suas tendências\n"
+    .string "violentas...$"
 
 PokemonMansion_B1F_EventScript_ItemTM22::
 	finditem ITEM_TM22, 1
@@ -88,10 +88,10 @@ PokemonMansion_B1F_EventScript_SkipOldSeaMap::
 	end
 
 PokemonMansion_B1F_Text_OldMap::
-	.string "It's an old map...\p"
-	.string "There's an island you don't\n"
-	.string "recognize on it.$"
+	.string "É um mapa antigo...\p"
+	.string "Há uma ilha que você não\n"
+	.string "reconhece nele.$"
 
 PokemonMansion_B1F_Text_SomethingHidden::
-	.string "There's something hidden\n"
-	.string "behind the frame!$"
+	.string "Há algo escondido\n"
+	.string "atrás da moldura!$"

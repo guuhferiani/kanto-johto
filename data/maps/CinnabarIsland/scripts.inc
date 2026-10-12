@@ -23,54 +23,54 @@ CinnabarIsland_EventScript_Woman::
 	end
 
 CinnabarIsland_Text_BlaineLivedHereSinceBeforeLab::
-    .string "Cinnabar Gym's Blaine is quite the\n"
-    .string "odd fellow.\p"
-    .string "He's lived on the island since way\n"
-    .string "before the LAB was built.$"
+    .string "Blaine, do Ginásio de Cinnabar, é um\n"
+    .string "sujeito bastante excêntrico.\p"
+    .string "Ele mora na ilha desde muito antes\n"
+    .string "do Laboratório ser construído.$"
 
 CinnabarIsland_EventScript_OldMan::
 	msgbox CinnabarIsland_Text_ScientistsExperimentInMansion, MSGBOX_NPC
 	end
 
 CinnabarIsland_Text_ScientistsExperimentInMansion::
-    .string "Scientists conduct experiments \n"
-    .string "in the burned-out building.\p"
-    .string "You know, the one they call the\n"
-    .string "Pokémon Mansion.$"
+    .string "Cientistas realizam experimentos no\n"
+    .string "edifício queimado.\p"
+    .string "Sabe, aquele que todo mundo chama de\n"
+    .string "Mansão Pokémon.$"
 
 CinnabarIsland_EventScript_Kid::
 	msgbox CinnabarIsland_Text_GhostStory, MSGBOX_NPC
 	end
 
 CinnabarIsland_Text_GhostStory::
-	.string "The local kids like to make up\n"
-	.string "stories about the Pokémon Mansion.\p"
-	.string "My favorite was the one about there\n"
-	.string "being an Old Treasure Map hidden\l"
-	.string "somehwere inside!$"
+	.string "As crianças daqui gostam de inventar\n"
+	.string "histórias sobre a Mansão Pokémon.\p"
+	.string "Minha favorita é a que diz que há um\n"
+	.string "Mapa do Tesouro Antigo escondido em\l"
+	.string "algum lugar lá dentro!$"
 
 CinnabarIsland_EventScript_IslandSign::
 	msgbox CinnabarIsland_Text_IslandSign, MSGBOX_SIGN
 	end
 
 CinnabarIsland_Text_IslandSign::
-    .string "Cinnabar Island\n"
-    .string "The Fiery Town of Burning Desire$"
+    .string "Ilha de Cinnabar\n"
+    .string "A Cidade Ardente do Desejo Fervoroso$"
 
 CinnabarIsland_EventScript_PokemonLabSign::
 	msgbox CinnabarIsland_Text_PokemonLab, MSGBOX_SIGN
 	end
 
 CinnabarIsland_Text_PokemonLab::
-    .string "Pokémon Lab$"
+    .string "Laboratório Pokémon$"
 
 CinnabarIsland_EventScript_PokemonMansionSign::
 	msgbox CinnabarIsland_Text_PokemonMansion, MSGBOX_SIGN
 	end
 
 CinnabarIsland_Text_PokemonMansion::
-    .string "Pokémon Mansion\n"
-    .string "NOTICE: CONDEMNED$"
+    .string "Mansão Pokémon\n"
+    .string "AVISO: CONDENADA$"
 
 CinnabarIsland_EventScript_GymSign::
 	lockall
@@ -79,9 +79,9 @@ CinnabarIsland_EventScript_GymSign::
 	end
 
 CinnabarIsland_Text_GymSign::
-    .string "Cinnabar Island Pokémon Gym\n"
-    .string "Leader: Blaine\l"
-    .string "The Hotheaded Quiz Master!$"
+    .string "Ginásio Pokémon da Ilha de Cinnabar\n"
+    .string "Líder: Blaine\l"
+    .string "O Mestre dos Enigmas Ardentes!$"
 
 CinnabarIsland_EventScript_ShellBell::
 	finditem ITEM_SHELL_BELL, 1
@@ -115,7 +115,7 @@ CinnabarIsland_EventScript_Depart::
 	end
 
 CinnabarIsland_EventScript_Text_ReadyToSail::
-	.string "Ready for an adventure?$"
+	.string "Pronto para uma aventura?$"
 
 CinnabarIsland_EventScript_NotSail::
 	msgbox CinnabarIsland_EventScript_Text_ReadyWhenYouAre, MSGBOX_DEFAULT
@@ -123,13 +123,13 @@ CinnabarIsland_EventScript_NotSail::
 	end
 
 CinnabarIsland_EventScript_Text_ReadyWhenYouAre:
-	.string "We'll set sail as soon as you're\n"
-	.string "ready!$"
+	.string "Zarparemos assim que você\n"
+	.string "estiver pronto!$"
 
 CinnabarIsland_EventScript_Text_LetsSail:
-	.string "Excellent! We'll set sail right away!\p"
-	.string "Let's find this island on\n"
-	.string "this Old Sea Map!$"
+	.string "Excelente! Vamos zarpar agora mesmo!\p"
+	.string "Vamos encontrar a ilha indicada neste\n"
+	.string "Mapa do Mar Antigo!$"
 
 Movement_CaptainEnterShip::
 	walk_up
@@ -196,15 +196,14 @@ CinnabarIsland_EventScript_GamblerRyan::
 	end
 
 CinnabarIsland_3F_Text_RyanIntro:
-	.string "I never expected someone would surf\n"
-	.string "over and find me here.$"
+	.string "Nunca esperei que alguém viria surfando\n"
+	.string "e me encontraria aqui.$"
 
 CinnabarIsland_3F_Text_RyanDefeat:
-	.string "Ha ha ha, so much for relaxation!$"
+	.string "Ha ha ha, adeus ao meu descanso!$"
 
 CinnabarIsland_3F_Text_RyanPostBattle:
-	.string "I came out here holding on to my\n"
-	.string "Tentacool for some peace and quiet\l"
-	.string "on my vacation.\p"
-	.string "Thanks for the battle!$"
+	.string "Vim até aqui segurando meu Tentacool\n"
+	.string "em busca de paz e sossego nas férias.\p"
+	.string "Obrigado pela batalha!$"
 
