@@ -44,6 +44,7 @@
 #include "trainer_card.h"
 #include "window.h"
 #include "union_room.h"
+#include "pokemon_storage_system.h"
 #include "constants/battle_frontier.h"
 #include "dexnav.h"
 #include "constants/rgb.h"
@@ -55,6 +56,7 @@ enum
     MENU_ACTION_POKEDEX,
     MENU_ACTION_POKEMON,
     MENU_ACTION_BAG,
+    MENU_ACTION_PC,
     MENU_ACTION_POKENAV,
     MENU_ACTION_PLAYER,
     MENU_ACTION_SAVE,
@@ -85,7 +87,7 @@ EWRAM_DATA static u8 sSafariBallsWindowId = 0;
 EWRAM_DATA static u8 sBattlePyramidFloorWindowId = 0;
 EWRAM_DATA static u8 sStartMenuCursorPos = 0;
 EWRAM_DATA static u8 sNumStartMenuActions = 0;
-EWRAM_DATA static u8 sCurrentStartMenuActions[9] = {0};
+EWRAM_DATA static u8 sCurrentStartMenuActions[12] = {0};
 EWRAM_DATA static u8 sInitStartMenuData[2] = {0};
 
 EWRAM_DATA static u8 (*sSaveDialogCallback)(void) = NULL;
@@ -97,6 +99,8 @@ EWRAM_DATA static u8 sSaveInfoWindowId = 0;
 static bool8 StartMenuPokedexCallback(void);
 static bool8 StartMenuPokemonCallback(void);
 static bool8 StartMenuBagCallback(void);
+static bool8 StartMenuPCCallback(void);
+static void Task_WaitFadeAccessPC(u8 taskId);
 static bool8 StartMenuPokeNavCallback(void);
 static bool8 StartMenuPlayerNameCallback(void);
 static bool8 StartMenuSaveCallback(void);
@@ -166,6 +170,7 @@ static const struct MenuAction sStartMenuItems[] =
     {gText_MenuPokedex, {.u8_void = StartMenuPokedexCallback}},
     {gText_MenuPokemon, {.u8_void = StartMenuPokemonCallback}},
     {gText_MenuBag, {.u8_void = StartMenuBagCallback}},
+    {gText_MenuPC, {.u8_void = StartMenuPCCallback}},
     {gText_MenuPokenav, {.u8_void = StartMenuPokeNavCallback}},
     {gText_MenuPlayer, {.u8_void = StartMenuPlayerNameCallback}},
     {gText_MenuSave, {.u8_void = StartMenuSaveCallback}},
@@ -311,7 +316,10 @@ static void BuildNormalStartMenu(void)
         AddStartMenuAction(MENU_ACTION_POKEDEX);
     
     if (FlagGet(FLAG_SYS_POKEMON_GET) == TRUE)
+    {
         AddStartMenuAction(MENU_ACTION_POKEMON);
+        AddStartMenuAction(MENU_ACTION_PC);
+    }
 
     AddStartMenuAction(MENU_ACTION_BAG);
 
@@ -688,6 +696,30 @@ static bool8 StartMenuBagCallback(void)
         CleanupOverworldWindowsAndTilemaps();
         SetMainCallback2(CB2_BagMenuFromStartMenu); // Display bag menu
 
+        return TRUE;
+    }
+
+    return FALSE;
+}
+
+static void Task_WaitFadeAccessPC(u8 taskId)
+{
+    if (!gPaletteFade.active)
+    {
+        DestroyTask(taskId);
+        FlagSet(FLAG_SYS_PC_FROM_DEBUG_MENU);
+        EnterPokeStorage(2);
+    }
+}
+
+static bool8 StartMenuPCCallback(void)
+{
+    if (!gPaletteFade.active)
+    {
+        PlayRainStoppingSoundEffect();
+        RemoveExtraStartMenuWindows();
+        CleanupOverworldWindowsAndTilemaps();
+        CreateTask(Task_WaitFadeAccessPC, 0);
         return TRUE;
     }
 
