@@ -139,4 +139,7 @@ const u16 gSpeciesIdToCryId[] =
     [SPECIES_RIVAL_EEVEE - 277] = 389,
     [SPECIES_RIOLU - 277] = 296,
     [SPECIES_LUCARIO - 277] = 287,
+    [SPECIES_LEAFEON - 277] = 133,
+    [SPECIES_GLACEON - 277] = 134,
+    [SPECIES_SYLVEON - 277] = 135,
 };

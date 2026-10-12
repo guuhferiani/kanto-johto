@@ -2493,13 +2493,13 @@ const struct Item gItems[] =
     {
         .name = _("Gelo Eterno"),
         .itemId = ITEM_NEVER_MELT_ICE,
-        .price = 100,
+        .price = 2100,
         .holdEffect = HOLD_EFFECT_ICE_POWER,
         .holdEffectParam = 10,
         .description = sNeverMeltIceDesc,
-        .pocket = POCKET_BATTLE_ITEMS,
-        .type = ITEM_USE_BAG_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
     },
 
     [ITEM_SPELL_TAG] =

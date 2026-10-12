@@ -484,6 +484,9 @@ const u8 *const gMonIconTable[] =
     [SPECIES_MEWTWO_MEGA_Y] = gMonIcon_MewtwoMegaY,
     [SPECIES_RIOLU] = gMonIcon_Riolu,
     [SPECIES_LUCARIO] = gMonIcon_Lucario,
+    [SPECIES_LEAFEON] = gMonIcon_Leafeon,
+    [SPECIES_GLACEON] = gMonIcon_Glaceon,
+    [SPECIES_SYLVEON] = gMonIcon_Sylveon,
 };
 
 const u8 gMonIconPaletteIndices[] =
@@ -948,6 +951,9 @@ const u8 gMonIconPaletteIndices[] =
     [SPECIES_MEWTWO_MEGA_Y] = 2,
     [SPECIES_RIOLU] = 0,
     [SPECIES_LUCARIO] = 0,
+    [SPECIES_LEAFEON] = 1,
+    [SPECIES_GLACEON] = 0,
+    [SPECIES_SYLVEON] = 1,
 };
 
 const struct SpritePalette gMonIconPaletteTable[] =

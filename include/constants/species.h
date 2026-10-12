@@ -438,8 +438,11 @@
 #define SPECIES_MEWTWO_MEGA_Y                FORMS_START + 15
 #define SPECIES_RIOLU                        FORMS_START + 16
 #define SPECIES_LUCARIO                      FORMS_START + 17
+#define SPECIES_LEAFEON                      FORMS_START + 18
+#define SPECIES_GLACEON                      FORMS_START + 19
+#define SPECIES_SYLVEON                      FORMS_START + 20
 
-#define SPECIES_EGG SPECIES_LUCARIO + 1 
+#define SPECIES_EGG SPECIES_SYLVEON + 1 
 #define NUM_SPECIES SPECIES_EGG
 
 #define SPECIES_UNOWN_B (NUM_SPECIES + 1)

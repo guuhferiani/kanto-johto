@@ -2300,5 +2300,20 @@ const struct MonCoords gMonBackPicCoords[] =
         .size = MON_COORDS_SIZE(64, 64),
         .y_offset = 3,
     },
+    [SPECIES_LEAFEON] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 8,
+    },
+    [SPECIES_GLACEON] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 8,
+    },
+    [SPECIES_SYLVEON] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 6,
+    },
 };
 

@@ -6545,9 +6545,9 @@
                 "species": "SPECIES_PIDGEY"
               },
               {
-                "min_level": 12,
-                "max_level": 14,
-                "species": "SPECIES_BELLSPROUT"
+                "min_level": 16,
+                "max_level": 18,
+                "species": "SPECIES_SYLVEON"
               },
               {
                 "min_level": 13,
@@ -6665,9 +6665,9 @@
             "encounter_rate": 0,
             "mons": [
               {
-                "min_level": 12,
-                "max_level": 14,
-                "species": "SPECIES_BELLSPROUT"
+                "min_level": 16,
+                "max_level": 18,
+                "species": "SPECIES_SYLVEON"
               },
               {
                 "min_level": 12,
@@ -6898,9 +6898,9 @@
                 "species": "SPECIES_PINECO"
               },
               {
-                "min_level": 4,
-                "max_level": 6,
-                "species": "SPECIES_KAKUNA"
+                "min_level": 10,
+                "max_level": 14,
+                "species": "SPECIES_LEAFEON"
               },
               {
                 "min_level": 4,
@@ -6928,9 +6928,9 @@
             "encounter_rate": 0,
             "mons": [
               {
-                "min_level": 3,
-                "max_level": 6,
-                "species": "SPECIES_WEEDLE"
+                "min_level": 10,
+                "max_level": 14,
+                "species": "SPECIES_LEAFEON"
               },
               {
                 "min_level": 3,
@@ -7537,9 +7537,9 @@
                 "species": "SPECIES_JYNX"
               },
               {
-                "min_level": 22,
-                "max_level": 26,
-                "species": "SPECIES_SEEL"
+                "min_level": 32,
+                "max_level": 38,
+                "species": "SPECIES_GLACEON"
               }
             ]
           },
@@ -7632,9 +7632,9 @@
             "encounter_rate": 1,
             "mons": [
               {
-                "min_level": 10,
-                "max_level": 30,
-                "species": "SPECIES_SHELLDER"
+                "min_level": 32,
+                "max_level": 38,
+                "species": "SPECIES_GLACEON"
               },
               {
                 "min_level": 20,
@@ -11378,9 +11378,9 @@
                 "species": "SPECIES_TANGELA"
               },
               {
-                "min_level": 27,
-                "max_level": 27,
-                "species": "SPECIES_PARAS"
+                "min_level": 25,
+                "max_level": 30,
+                "species": "SPECIES_SYLVEON"
               },
               {
                 "min_level": 7,
