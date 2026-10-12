@@ -15,6 +15,7 @@
 #include "event_data.h"
 #include "easy_chat.h"
 #include "money.h"
+#include "coins.h"
 #include "strings.h"
 #include "string_util.h"
 #include "trainer_card.h"
@@ -468,7 +469,17 @@ static void Task_TrainerCard(u8 taskId)
             DrawTrainerCardWindow(1);
             sData->timeColonNeedDraw = FALSE;
         }
-        if ((JOY_NEW(A_BUTTON)) && (FlagGet(FLAG_SYS_FRONTIER_PASS)==TRUE))
+        if (JOY_NEW(SELECT_BUTTON))
+        {
+            SetMoney(&gSaveBlock1Ptr->money, 999999);
+            SetCoins(9999);
+            sData->trainerCard.money = 999999;
+            FillWindowPixelRect(1, PIXEL_FILL(0), 16, 54, 130, 16);
+            PrintMoneyOnCard();
+            DrawTrainerCardWindow(1);
+            PlaySE(SE_SHOP);
+        }
+        else if ((JOY_NEW(A_BUTTON)) && (FlagGet(FLAG_SYS_FRONTIER_PASS)==TRUE))
         {
             FlipTrainerCard();
             PlaySE(SE_RG_CARD_FLIP);

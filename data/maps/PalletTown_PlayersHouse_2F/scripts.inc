@@ -309,13 +309,29 @@ PlayersHouse_2F_EventScript_SetWallClock::
 
 PlayersHouse_2F_EventScript_Console::
 	lock
-	msgbox PlayersHouse_2F_Text_Console, MSGBOX_DEFAULT
+	msgbox PlayersHouse_2F_Text_Console, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq PlayersHouse_2F_EventScript_ActivateCheats
+	release
+	end
+
+PlayersHouse_2F_EventScript_ActivateCheats::
+	addmoney 999999
+	addcoins 9999
+	playse SE_SHOP
+	msgbox PlayersHouse_2F_Text_CheatsActivated, MSGBOX_DEFAULT
 	release
 	end
 
 PlayersHouse_2F_Text_Console:
 	.string "É um videogame antigo.\p"
-	.string "Jogos retrô estão com tudo!$"
+	.string "Deseja ativar o código secreto\n"
+	.string "para Dinheiro e Fichas no máximo?$"
+
+PlayersHouse_2F_Text_CheatsActivated:
+	.string "Código ativado com sucesso!\p"
+	.string "Seu Dinheiro foi ajustado para ¥999.999\n"
+	.string "e suas Fichas para 9.999!$"
 
 PlayersHouse_2F_EventScript_ChangeClock::
 	lock
