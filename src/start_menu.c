@@ -67,7 +67,8 @@ enum
     MENU_ACTION_REST_FRONTIER,
     MENU_ACTION_RETIRE_FRONTIER,
     MENU_ACTION_PYRAMID_BAG,
-    MENU_ACTION_DEBUG
+    MENU_ACTION_DEBUG,
+    MENU_ACTION_DEXNAV
 };
 
 // Save status
@@ -326,6 +327,9 @@ static void BuildNormalStartMenu(void)
     if (FlagGet(FLAG_SYS_POKENAV_GET) == TRUE)
         AddStartMenuAction(MENU_ACTION_POKENAV);
 
+    if (FlagGet(FLAG_SYS_DEXNAV_GET) == TRUE)
+        AddStartMenuAction(MENU_ACTION_DEXNAV);
+
     AddStartMenuAction(MENU_ACTION_PLAYER);
     AddStartMenuAction(MENU_ACTION_SAVE);
     AddStartMenuAction(MENU_ACTION_OPTION);
@@ -348,6 +352,11 @@ static void BuildDebugStartMenu(void)
     if (FlagGet(FLAG_SYS_POKENAV_GET) == TRUE)
     {
         AddStartMenuAction(MENU_ACTION_POKENAV);
+    }
+
+    if (FlagGet(FLAG_SYS_DEXNAV_GET) == TRUE)
+    {
+        AddStartMenuAction(MENU_ACTION_DEXNAV);
     }
 
     AddStartMenuAction(MENU_ACTION_PLAYER);

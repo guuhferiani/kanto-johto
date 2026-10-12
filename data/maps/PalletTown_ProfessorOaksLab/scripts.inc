@@ -555,6 +555,8 @@ PalletTown_ProfessorOaksLab_EventScript_GetPokedexScene::
 	waitmessage
 	waitfanfare
 	setflag FLAG_SYS_POKEDEX_GET
+	setflag FLAG_SYS_DEXNAV_GET
+	setflag FLAG_SYS_DETECTOR_MODE
 	special SetUnlockedPokedexFlags
 	special EnableNationalPokedex
 	msgbox PalletTown_ProfessorOaksLab_Text_OakCatchMonsForDataTakeThese
