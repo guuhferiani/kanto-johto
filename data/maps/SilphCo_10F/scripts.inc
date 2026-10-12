@@ -49,34 +49,34 @@ SilphCo_10F_EventScript_Grunt::
 	end
 
 SilphCo_10F_Text_GruntIntro::
-    .string "Welcome to 10F!\n"
-    .string "So good of you to join me!$"
+    .string "Bem-vindo ao 10º andar!\n"
+    .string "Que bom que veio se juntar a mim!$"
 
 SilphCo_10F_Text_GruntDefeat::
-    .string "I'm stunned!$"
+    .string "Estou pasmo!$"
 
 SilphCo_10F_Text_GruntPostBattle::
-    .string "Nice try, but the boardroom is up\n"
-    .string "one more floor.$"
+    .string "Boa tentativa, mas a sala da diretoria\n"
+    .string "fica um andar acima.$"
 
 SilphCo_10F_Text_TravisIntro::
-    .string "Enough of your silly games!$"
+    .string "Chega de joguinhos tolos!$"
 
 SilphCo_10F_Text_TravisDefeat::
-    .string "No continues left!$"
+    .string "Sem fichas restantes!$"
 
 SilphCo_10F_Text_TravisPostBattle::
-    .string "Are you satisfied with beating me?\n"
-    .string "Then go on home!$"
+    .string "Ficou satisfeito em me derrotar?\n"
+    .string "Então vá para casa!$"
 
 SilphCo_10F_Text_WaaaImScared::
-    .string "Waaaaa!\n"
-    .string "I'm scared!$"
+    .string "Buaaaa!\n"
+    .string "Estou com medo!$"
 
 SilphCo_10F_Text_KeepMeCryingASecret::
-    .string "About me crying…\n"
-    .string "Please keep it a secret.$"
+    .string "Sobre eu estar chorando...\n"
+    .string "Por favor, guarde segredo.$"
 
 SilphCo_10F_Text_FloorSign::
-    .string "Silph Co. Head Office\n"
-    .string "10F$"
+    .string "Sede da Silph S.A.\n"
+    .string "10º Andar$"

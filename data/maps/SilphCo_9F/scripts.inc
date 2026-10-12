@@ -29,8 +29,8 @@ SilphCo_9F_EventScript_HealWomanRocketsBack::
 	end
 
 SilphCo_9F_Text_HealWomanRocketsBack:
-	.string "Ready to fight?\n"
-    .string "You should take a quick nap.$"
+	.string "Pronto para lutar?\n"
+    .string "Você deveria tirar um cochilo rápido.$"
 
 SilphCo_9F_EventScript_HealWomanRocketsGone::
 	msgbox SilphCo_9F_Text_ThankYouSoMuch
@@ -59,48 +59,47 @@ SilphCo_9F_EventScript_Grunt2::
 	end
 
 SilphCo_9F_Text_YouShouldTakeQuickNap::
-    .string "You look tired.\n"
-    .string "You should take a quick nap.$"
+    .string "Você parece cansado.\n"
+    .string "Deveria tirar um cochilo rápido.$"
 
 SilphCo_9F_Text_DontGiveUp::
-    .string "Don't give up!$"
+    .string "Não desista!$"
 
 SilphCo_9F_Text_ThankYouSoMuch::
-    .string "Thank you so much.$"
+    .string "Muito obrigada.$"
 
 SilphCo_9F_Text_Grunt1Intro::
-    .string "Your Pokémon seem to adore you,\n"
-    .string "kid!$"
+    .string "Seus Pokémon parecem te adorar,\n"
+    .string "pirralho!$"
 
 SilphCo_9F_Text_Grunt1Defeat::
     .string "Ghaaah!$"
 
 SilphCo_9F_Text_Grunt1PostBattle::
-    .string "If I had started as a trainer at\n"
-    .string "your age…$"
+    .string "Se eu tivesse começado como treinador\n"
+    .string "na sua idade...$"
 
 SilphCo_9F_Text_EdIntro::
-    .string "Your Pokémon have weak points!\n"
-    .string "I can nail them!$"
+    .string "Seus Pokémon têm pontos fracos!\n"
+    .string "Eu vou acertá-los em cheio!$"
 
 SilphCo_9F_Text_EdDefeat::
-    .string "You hammered me!$"
+    .string "Você me arrasou!$"
 
 SilphCo_9F_Text_EdPostBattle::
-    .string "Exploiting weak spots does work.\n"
-    .string "Think about type advantages.$"
+    .string "Explorar pontos fracos funciona mesmo.\n"
+    .string "Pense nas vantagens de tipos!$"
 
 SilphCo_9F_Text_Grunt2Intro::
-    .string "I am one of the four Rocket\n"
-    .string "Brothers!$"
+    .string "Eu sou um dos quatro Irmãos Rocket!$"
 
 SilphCo_9F_Text_Grunt2Defeat::
     .string "Warg!\n"
-    .string "Brothers, I lost!$"
+    .string "Irmãos, eu perdi!$"
 
 SilphCo_9F_Text_Grunt2PostBattle::
-    .string "My brothers will avenge me!$"
+    .string "Meus irmãos me vingarão!$"
 
 SilphCo_9F_Text_FloorSign::
-    .string "Silph Co. Head Office\n"
-    .string "9F$"
+    .string "Sede da Silph S.A.\n"
+    .string "9º Andar$"

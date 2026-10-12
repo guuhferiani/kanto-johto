@@ -27,10 +27,10 @@ SilphCo_3F_EventScript_WorkerMInvasion::
 	end
 
 SilphCo_3F_Text_WorkerMInvasion:
-	.string "Just when I thought things were\n"
-	.string "starting to slow down around\l"
-	.string "here, the Rockets break in\l"
-	.string "again during my meal break.$"
+	.string "Bem quando achei que as coisas\n"
+	.string "estavam se acalmando por aqui,\l"
+	.string "os Rockets invadem novamente bem\l"
+	.string "na hora do meu almoço.$"
 
 SilphCo_3F_EventScript_WorkerMRocketsGone::
 	msgbox SilphCo_3F_Text_YouAndYourMonsSavedUs
@@ -52,38 +52,38 @@ SilphCo_3F_EventScript_Grunt::
 	end
 
 SilphCo_3F_Text_WhatAmIToDo::
-    .string "I work for Silph Co.\n"
-    .string "What am I to do?$"
+    .string "Eu trabalho para a Silph S.A.\n"
+    .string "O que é que eu posso fazer?$"
 
 SilphCo_3F_Text_YouAndYourMonsSavedUs::
     .string "{PLAYER}!\n"
-    .string "You and your Pokémon saved us!$"
+    .string "Você e seus Pokémon nos salvaram!$"
 
 SilphCo_3F_Text_GruntIntro::
-    .string "Quit messing with us, kid!$"
+    .string "Pare de nos atrapalhar, pirralho!$"
 
 SilphCo_3F_Text_GruntDefeat::
-    .string "I give up!$"
+    .string "Eu me rendo!$"
 
 SilphCo_3F_Text_GruntPostBattle::
-    .string "A hint? You can open doors with\n"
-    .string "a Card Key!$"
+    .string "Uma dica? Você pode abrir portas\n"
+    .string "com o Cartão-Chave!$"
 
 SilphCo_3F_Text_JoseIntro::
-    .string "I support Team Rocket more than\n"
-    .string "I support Silph Co.!$"
+    .string "Eu apoio a Equipe Rocket muito mais\n"
+    .string "do que a Silph S.A.!$"
 
 SilphCo_3F_Text_JoseDefeat::
-    .string "You really got me!$"
+    .string "Você me pegou de jeito!$"
 
 SilphCo_3F_Text_JosePostBattle::
-    .string "Humph…\p"
-    .string "Team Rocket said that if I helped\n"
-    .string "them, they'd let me study Pokémon.$"
+    .string "Humph...\p"
+    .string "A Equipe Rocket disse que se eu os\n"
+    .string "ajudasse, me deixariam estudar Pokémon.$"
 
 SilphCo_3F_Text_FloorSign::
-    .string "Silph Co. Head Office\n"
-    .string "3F$"
+    .string "Sede da Silph S.A.\n"
+    .string "3º Andar$"
 
 SilphCo_3F_EventScript_PostgameGrunt4::
 	trainerbattle_single TRAINER_POSTGAME_ROCKET_4, SilphCo_3F_Text_PostgameGrunt4Intro, SilphCo_3F_Text_PostgameGrunt4Defeat
@@ -91,13 +91,13 @@ SilphCo_3F_EventScript_PostgameGrunt4::
 	end
 
 SilphCo_3F_Text_PostgameGrunt4Intro::
-    .string "Rockets never say die!$"
+    .string "Rockets nunca desistem!$"
 
 SilphCo_3F_Text_PostgameGrunt4Defeat::
-    .string "We're dead!$"
+    .string "Já éramos!$"
 
 SilphCo_3F_Text_PostgameGrunt4PostBattle::
-    .string "This was our last shot.\p"
-    .string "The Boss has taken the Silph\n"
-    .string "Co President hostage again.\p"
-    .string "There's no coming back from this!$"
+    .string "Esta era a nossa última chance.\p"
+    .string "O Chefe fez o Presidente da Silph\n"
+    .string "de refém novamente.\p"
+    .string "Não tem volta depois disso!$"

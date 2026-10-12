@@ -28,7 +28,7 @@ SilphCo_Elevator_EventScript_FloorSelect::
 	end
 
 Text_SilphWhichFloorWillYouPick::
-	.string "Which floor will you pick?$"
+	.string "Para qual andar deseja ir?$"
 
 SilphCo_Elevator_EventScript_11F::
 	setvar VAR_0x8006, DEPT_STORE_FLOORNUM_11F

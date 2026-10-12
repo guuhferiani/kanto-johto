@@ -26,8 +26,8 @@ SilphCo_8F_EventScript_WorkerMRocketsBack::
 	end
 
 SilphCo_8F_Text_WorkerMRocketsBack:
-	.string "We made it through before.\n"
-	.string "We will make it through again.$"
+	.string "Nós superamos isso antes.\n"
+	.string "Superaremos isso novamente.$"
 
 SilphCo_8F_EventScript_WorkerMRocketsGone::
 	msgbox SilphCo_8F_Text_ThanksForSavingUs
@@ -54,46 +54,45 @@ SilphCo_8F_EventScript_Grunt2::
 	end
 
 SilphCo_8F_Text_WonderIfSilphIsFinished::
-    .string "I wonder if Silph is finished…$"
+    .string "Será que a Silph está arruinada...?$"
 
 SilphCo_8F_Text_ThanksForSavingUs::
-    .string "Thanks for saving us!$"
+    .string "Obrigado por nos salvar!$"
 
 SilphCo_8F_Text_Grunt1Intro::
-    .string "That's as far as you'll go!$"
+    .string "Você não passa daqui!$"
 
 SilphCo_8F_Text_Grunt1Defeat::
-    .string "Not enough grit!$"
+    .string "Faltou garra!$"
 
 SilphCo_8F_Text_Grunt1PostBattle::
-    .string "If you don't turn back…\n"
-    .string "I'll call for backup!$"
+    .string "Se você não der meia-volta...\n"
+    .string "vou chamar reforços!$"
 
 SilphCo_8F_Text_ParkerIntro::
-    .string "You're causing us problems!$"
+    .string "Você está nos causando problemas!$"
 
 SilphCo_8F_Text_ParkerDefeat::
-    .string "Huh?\n"
-    .string "I lost?$"
+    .string "Hã?\n"
+    .string "Eu perdi?$"
 
 SilphCo_8F_Text_ParkerPostBattle::
-    .string "So, what do you think of Silph\n"
-    .string "Building's maze?$"
+    .string "E então, o que achou do labirinto\n"
+    .string "do prédio da Silph?$"
 
 SilphCo_8F_Text_Grunt2Intro::
-    .string "I am one of the four Rocket\n"
-    .string "Brothers!$"
+    .string "Eu sou um dos quatro Irmãos Rocket!$"
 
 SilphCo_8F_Text_Grunt2Defeat::
-    .string "Whoo!\n"
-    .string "Oh, Brothers!$"
+    .string "Uau!\n"
+    .string "Ah, meus irmãos!$"
 
 SilphCo_8F_Text_Grunt2PostBattle::
-    .string "I'll leave you up to my brothers.$"
+    .string "Deixo você por conta dos meus irmãos.$"
 
 SilphCo_8F_Text_FloorSign::
-    .string "Silph Co. Head Office\n"
-    .string "8F$"
+    .string "Sede da Silph S.A.\n"
+    .string "8º Andar$"
 
 SilphCo_8F_EventScript_Scientist::
 	lock
@@ -103,9 +102,9 @@ SilphCo_8F_EventScript_Scientist::
 	end
 
 SilphCo_8F_Text_ToRocketBossMonsAreTools::
-    .string "Team Rocket's Boss is terribly\n"
-    .string "cruel!\p"
-    .string "To him, Pokémon are just tools to\n"
-    .string "be used.\p"
-    .string "What will happen if that tyrant\n"
-    .string "takes over our company…$"
+    .string "O Chefe da Equipe Rocket é terrível\n"
+    .string "e cruel!\p"
+    .string "Para ele, Pokémon são apenas ferramentas\n"
+    .string "a serem usadas.\p"
+    .string "O que acontecerá se aquele tirano\n"
+    .string "tomar posse da nossa empresa...$"

@@ -31,9 +31,9 @@ SilphCo_6F_EventScript_WorkerM2RocketsBack::
 	end
 
 SilphCo_6F_Text_WorkerM2RocketsBack:
-	.string "I can't complain about the invasion.\p"
-	.string "You are here and a meeting\n"
-	.string "I dreaded was canceled.$"
+	.string "Não posso reclamar da invasão.\p"
+	.string "Você está aqui e uma reunião\n"
+	.string "que eu temia foi cancelada.$"
 
 SilphCo_6F_EventScript_WorkerM2RocketsGone::
 	msgbox SilphCo_6F_Text_ComeWorkForSilphWhenYoureOlder
@@ -55,8 +55,8 @@ SilphCo_6F_EventScript_WorkerM3RocketsBack::
 	end
 
 SilphCo_6F_Text_WorkerM3RocketsBack:
-	.string "These Rockets just don't stop.\n"
-	.string "The extra break is nice, though.$"
+	.string "Esses Rockets não cansam.\n"
+	.string "Mas essa folga extra é ótima.$"
 
 SilphCo_6F_EventScript_WorkerM3RocketsGone::
 	msgbox SilphCo_6F_Text_BetterGetBackToWork
@@ -78,8 +78,8 @@ SilphCo_6F_EventScript_WorkerM1RocketsBack::
 	end
 
 SilphCo_6F_Text_WorkerM1RocketsBack:
-	.string "On no, what am I going to do?\n"
-	.string "I promised I would be brave!$"
+	.string "Ai não, o que eu vou fazer?\n"
+	.string "Eu prometi que seria corajoso!$"
 
 SilphCo_6F_EventScript_WorkerM1RocketsGone::
 	msgbox SilphCo_6F_Text_WeGotEngaged
@@ -101,7 +101,7 @@ SilphCo_6F_EventScript_WorkerF1RocketsBack::
 	end
 
 SilphCo_6F_Text_WorkerF1RocketsBack:
-	.string "Men would be lost without us.$"
+	.string "Os homens estariam perdidos sem nós.$"
 
 SilphCo_6F_EventScript_WorkerF1RocketsGone::
 	msgbox SilphCo_6F_Text_NeedsMeToLookAfterHim
@@ -123,8 +123,8 @@ SilphCo_6F_EventScript_WorkerF2RocketsBack::
 	end
 
 SilphCo_6F_Text_WorkerF2RocketsBack:
-	.string "You're my hero, so please come\n"
-	.string "to our aid once more!$"
+	.string "Você é meu herói, por favor venha\n"
+	.string "em nosso socorro mais uma vez!$"
 
 SilphCo_6F_EventScript_WorkerF2RocketsGone::
 	msgbox SilphCo_6F_Text_RocketsRanAwayBecauseOfYou
@@ -151,79 +151,78 @@ SilphCo_6F_EventScript_Grunt2::
 	end
 
 SilphCo_6F_Text_RocketsTookOverBuilding::
-    .string "The Rockets came and took over\n"
-    .string "the building!$"
+    .string "Os Rockets vieram e tomaram\n"
+    .string "o prédio!$"
 
 SilphCo_6F_Text_BetterGetBackToWork::
-    .string "Well, better get back to work.$"
+    .string "Bem, é melhor voltar ao trabalho.$"
 
 SilphCo_6F_Text_HelpMePlease::
-    .string "Oh dear, oh dear.\n"
-    .string "Help me, please!$"
+    .string "Ai, meu Deus, ai, meu Deus.\n"
+    .string "Me ajude, por favor!$"
 
 SilphCo_6F_Text_WeGotEngaged::
-    .string "We got engaged.\n"
+    .string "Ficamos noivos.\n"
     .string "Heheh!$"
 
 SilphCo_6F_Text_ThatManIsSuchACoward::
-    .string "That man next to me…\n"
-    .string "He's such a coward!$"
+    .string "Aquele homem ao meu lado...\n"
+    .string "Ele é tão covarde!$"
 
 SilphCo_6F_Text_NeedsMeToLookAfterHim::
-    .string "He's so helpless, he needed\n"
-    .string "someone like me to look after him.$"
+    .string "Ele é tão indefeso, precisava de\n"
+    .string "alguém como eu para cuidar dele.$"
 
 SilphCo_6F_Text_RocketsTryingToConquerWorld::
-    .string "Team Rocket is trying to conquer\n"
-    .string "the world with Pokémon.$"
+    .string "A Equipe Rocket está tentando\n"
+    .string "conquistar o mundo com Pokémon.$"
 
 SilphCo_6F_Text_RocketsRanAwayBecauseOfYou::
-    .string "Team Rocket ran away, and it's all\n"
-    .string "because of you!$"
+    .string "A Equipe Rocket fugiu, e é tudo\n"
+    .string "graças a você!$"
 
 SilphCo_6F_Text_TargetedSilphForOurMonProducts::
-    .string "They must have targeted Silph for\n"
-    .string "our Pokémon products.$"
+    .string "Eles devem ter invadido a Silph por\n"
+    .string "causa de nossos produtos Pokémon.$"
 
 SilphCo_6F_Text_ComeWorkForSilphWhenYoureOlder::
-    .string "Come work for Silph when you\n"
-    .string "get older.$"
+    .string "Venha trabalhar na Silph quando\n"
+    .string "você crescer.$"
 
 SilphCo_6F_Text_Grunt1Intro::
-    .string "I am one of the four Rocket\n"
-    .string "Brothers!$"
+    .string "Eu sou um dos quatro Irmãos Rocket!$"
 
 SilphCo_6F_Text_Grunt1Defeat::
-    .string "Flame out!$"
+    .string "Apagou a chama!$"
 
 SilphCo_6F_Text_Grunt1PostBattle::
-    .string "No matter!\n"
-    .string "My brothers will avenge me!$"
+    .string "Não importa!\n"
+    .string "Meus irmãos me vingarão!$"
 
 SilphCo_6F_Text_TaylorIntro::
-    .string "That rotten President!\p"
-    .string "Serves him right for shipping me\n"
-    .string "off to the Unova Branch!\p"
-    .string "That's why Team Rocket came after\n"
-    .string "us, I'm sure of it!$"
+    .string "Aquele Presidente imprestável!\p"
+    .string "Bem feito para ele por me transferir\n"
+    .string "para a filial de Unova!\p"
+    .string "É por isso que a Equipe Rocket nos\n"
+    .string "atacou, tenho certeza!$"
 
 SilphCo_6F_Text_TaylorDefeat::
-    .string "Shoot!$"
+    .string "Droga!$"
 
 SilphCo_6F_Text_TaylorPostBattle::
-    .string "Unova Branch?\n"
-    .string "That's the other side of the world!$"
+    .string "Filial de Unova?\n"
+    .string "Fica do outro lado do mundo!$"
 
 SilphCo_6F_Text_Grunt2Intro::
-    .string "You dare betray Team Rocket?$"
+    .string "Você ousa desafiar a Equipe Rocket?$"
 
 SilphCo_6F_Text_Grunt2Defeat::
-    .string "You traitor!$"
+    .string "Seu traidor!$"
 
 SilphCo_6F_Text_Grunt2PostBattle::
-    .string "If you stand for justice, you\n"
-    .string "betray us bad guys!$"
+    .string "Se você defende a justiça, você\n"
+    .string "trai a nós, os vilões!$"
 
 SilphCo_6F_Text_FloorSign::
-    .string "Silph Co. Head Office\n"
-    .string "6F$"
+    .string "Sede da Silph S.A.\n"
+    .string "6º Andar$"

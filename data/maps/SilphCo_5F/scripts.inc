@@ -38,9 +38,9 @@ SilphCo_5F_EventScript_WorkerMRocketsBack::
 	end
 
 SilphCo_5F_Text_WorkerMRocketsBack:
-	.string "Team Rocket is scrambling for\n"
-    .string "control of the building.\p"
-    .string "Are you going to help again?$"
+	.string "A Equipe Rocket está lutando pelo\n"
+    .string "controle do prédio.\p"
+    .string "Você vai nos ajudar de novo?$"
 
 SilphCo_5F_EventScript_WorkerMRocketsGone::
 	msgbox SilphCo_5F_Text_YoureOurHeroThankYou
@@ -84,78 +84,78 @@ SilphCo_5F_EventScript_Dalton::
 	end
 
 SilphCo_5F_Text_RocketsInUproarAboutIntruder::
-    .string "Team Rocket is in an uproar over\n"
-    .string "some intruder.\p"
-    .string "That's you, right?$"
+    .string "A Equipe Rocket está em polvorosa\n"
+    .string "por causa de um invasor.\p"
+    .string "É você, não é?$"
 
 SilphCo_5F_Text_YoureOurHeroThankYou::
-    .string "Team Rocket took off!\n"
-    .string "You're our hero! Thank you!$"
+    .string "A Equipe Rocket fugiu!\n"
+    .string "Você é o nosso herói! Obrigado!$"
 
 SilphCo_5F_Text_Grunt1Intro::
-    .string "I heard a kid was wandering\n"
-    .string "around.$"
+    .string "Ouvi falar que um pirralho estava\n"
+    .string "perambulando por aqui.$"
 
 SilphCo_5F_Text_Grunt1Defeat::
-    .string "Boom!$"
+    .string "Bum!$"
 
 SilphCo_5F_Text_Grunt1PostBattle::
-    .string "It's not smart to pick a fight with\n"
-    .string "Team Rocket!$"
+    .string "Não é nada esperto comprar briga com\n"
+    .string "a Equipe Rocket!$"
 
 SilphCo_5F_Text_BeauIntro::
-    .string "We study Poké Ball technology on\n"
-    .string "this floor.$"
+    .string "Estudamos a tecnologia de Pokébolas\n"
+    .string "neste andar.$"
 
 SilphCo_5F_Text_BeauDefeat::
-    .string "Dang!\n"
-    .string "Blast it!$"
+    .string "Droga!\n"
+    .string "Que droga!$"
 
 SilphCo_5F_Text_BeauPostBattle::
-    .string "We worked on the ultimate Poké\n"
-    .string "Ball which would catch anything.$"
+    .string "Trabalhamos na Pokébola definitiva,\n"
+    .string "capaz de capturar qualquer coisa.$"
 
 SilphCo_5F_Text_DaltonIntro::
-    .string "Whaaat?\p"
-    .string "There shouldn't be any children\n"
-    .string "here!$"
+    .string "O quêêê?\p"
+    .string "Não deveria haver nenhuma criança\n"
+    .string "aqui!$"
 
 SilphCo_5F_Text_DaltonDefeat::
-    .string "Oh, goodness!$"
+    .string "Ai, céus!$"
 
 SilphCo_5F_Text_DaltonPostBattle::
-    .string "You're only on 5F.\n"
-    .string "It's a long way to my Boss!$"
+    .string "Você está apenas no 5º andar.\n"
+    .string "Ainda falta muito até o meu Chefe!$"
 
 SilphCo_5F_Text_Grunt2Intro::
-    .string "Show Team Rocket a little respect!$"
+    .string "Tenha mais respeito pela Equipe Rocket!$"
 
 SilphCo_5F_Text_Grunt2Defeat::
-    .string "Cough…\n"
-    .string "Cough…$"
+    .string "Cof...\n"
+    .string "Cof...$"
 
 SilphCo_5F_Text_Grunt2PostBattle::
-    .string "Which reminds me.\p"
-    .string "Koffing evolves into Weezing!$"
+    .string "O que me lembra:\p"
+    .string "Koffing evolui para Weezing!$"
 
 SilphCo_5F_Text_PorygonFirstVRMon::
-    .string "It's a Pokémon Report!\p"
-    .string "In rare cases, some Pokémon\n"
-    .string "may have different abilities.$"
+    .string "É um Relatório Pokémon!\p"
+    .string "Em casos raros, alguns Pokémon\n"
+    .string "podem ter habilidades diferentes.$"
 
 SilphCo_5F_Text_Over350TechniquesConfirmed::
-    .string "It's a Pokémon Report!\p"
-    .string "Over 350 Pokémon techniques have\n"
-    .string "been confirmed.$"
+    .string "É um Relatório Pokémon!\p"
+    .string "Mais de 350 golpes Pokémon foram\n"
+    .string "confirmados.$"
 
 SilphCo_5F_Text_SomeMonsEvolveWhenTraded::
-    .string "It's a Pokémon Report!\p"
-    .string "Some Pokémon have been confirmed\n"
-    .string "to evolve when they are traded.$"
+    .string "É um Relatório Pokémon!\p"
+    .string "Foi confirmado que certos Pokémon\n"
+    .string "evoluem quando são trocados.$"
 
 SilphCo_5F_Text_FloorSign::
-    .string "Silph Co. Head Office\n"
-    .string "5F$"
+    .string "Sede da Silph S.A.\n"
+    .string "5º Andar$"
 
 SilphCo_5F_EventScript_Scientist::
 	lock
@@ -165,9 +165,9 @@ SilphCo_5F_EventScript_Scientist::
 	end
 
 SilphCo_5F_Text_RocketBossLookingForStrongMons::
-    .string "Those thugs that took over our\n"
-    .string "building…\p"
-    .string "Their Boss said he was looking for\n"
-    .string "strong Pokémon.\p"
-    .string "I hope our President managed to\n"
-    .string "avoid trouble…$"
+    .string "Aqueles bandidos que tomaram nosso\n"
+    .string "prédio...\p"
+    .string "O Chefe deles disse estar procurando\n"
+    .string "por Pokémon fortes.\p"
+    .string "Espero que nosso Presidente tenha\n"
+    .string "conseguido evitar problemas...$"

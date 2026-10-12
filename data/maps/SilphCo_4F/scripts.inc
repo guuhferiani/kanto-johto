@@ -42,10 +42,10 @@ SilphCo_4F_EventScript_WorkerMRocketsBack::
 	end
 
 SilphCo_4F_Text_TeamRocketIsBack:
-	.string "Sssh! Please leave!\p"
-    .string "They came back and I'm afraid\n"
-	.string "to be seen with the kid who\l"
-	.string "disrupted their plans before.$"
+	.string "Shhh! Por favor vá embora!\p"
+    .string "Eles voltaram e tenho medo de ser visto\n"
+	.string "com a criança que arruinou os planos\l"
+	.string "deles antes.$"
 
 SilphCo_4F_EventScript_WorkerMRocketsGone::
 	msgbox SilphCo_4F_Text_TeamRocketIsGone
@@ -72,46 +72,45 @@ SilphCo_4F_EventScript_Grunt2::
 	end
 
 SilphCo_4F_Text_CantYouSeeImHiding::
-    .string "Sssh!\n"
-    .string "Can't you see I'm hiding?$"
+    .string "Shhh!\n"
+    .string "Não está vendo que estou me escondendo?$"
 
 SilphCo_4F_Text_TeamRocketIsGone::
-    .string "Huh?\n"
-    .string "Team Rocket is gone?$"
+    .string "Hã?\n"
+    .string "A Equipe Rocket foi embora?$"
 
 SilphCo_4F_Text_Grunt1Intro::
-    .string "Team Rocket has taken control\n"
-    .string "of Silph Co.!$"
+    .string "A Equipe Rocket assumiu o controle\n"
+    .string "da Silph S.A.!$"
 
 SilphCo_4F_Text_Grunt1Defeat::
     .string "Arrgh!$"
 
 SilphCo_4F_Text_Grunt1PostBattle::
     .string "Fwahahaha!\n"
-    .string "My Boss has been after this place!$"
+    .string "Meu Chefe estava de olho neste lugar!$"
 
 SilphCo_4F_Text_RodneyIntro::
-    .string "My Pokémon is my loyal servant.$"
+    .string "Meu Pokémon é meu servo leal.$"
 
 SilphCo_4F_Text_RodneyDefeat::
-    .string "Darn!\n"
-    .string "You weak Pokémon!$"
+    .string "Droga!\n"
+    .string "Pokémon inútil!$"
 
 SilphCo_4F_Text_RodneyPostBattle::
-    .string "The doors are electronically\n"
-    .string "locked.\p"
-    .string "It takes a Card Key to open the\n"
-    .string "doors here.$"
+    .string "As portas são trancadas eletronicamente.\p"
+    .string "É necessário um Cartão-Chave para abrir\n"
+    .string "as portas aqui.$"
 
 SilphCo_4F_Text_Grunt2Intro::
-    .string "Intruder spotted!$"
+    .string "Intruso à vista!$"
 
 SilphCo_4F_Text_Grunt2Defeat::
-    .string "Who are you?$"
+    .string "Quem é você?$"
 
 SilphCo_4F_Text_Grunt2PostBattle::
-    .string "I better tell the Boss on 11F!$"
+    .string "É melhor eu avisar o Chefe no 11º andar!$"
 
 SilphCo_4F_Text_FloorSign::
-    .string "Silph Co. Head Office\n"
-    .string "4F$"
+    .string "Sede da Silph S.A.\n"
+    .string "4º Andar$"
