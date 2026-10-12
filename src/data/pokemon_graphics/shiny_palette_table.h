@@ -458,4 +458,6 @@ const struct CompressedSpritePalette gMonShinyPaletteTable[] =
     SPECIES_SHINY_PAL(AERODACTYL_MEGA, gMonShinyPalette_AerodactylMega),
     SPECIES_SHINY_PAL(MEWTWO_MEGA_X, gMonShinyPalette_MewtwoMegaX),
     SPECIES_SHINY_PAL(MEWTWO_MEGA_Y, gMonShinyPalette_MewtwoMegaY),
+    SPECIES_SHINY_PAL(RIOLU, gMonShinyPalette_Riolu),
+    SPECIES_SHINY_PAL(LUCARIO, gMonShinyPalette_Lucario),
 };

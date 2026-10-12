@@ -436,8 +436,10 @@
 #define SPECIES_AERODACTYL_MEGA              FORMS_START + 13
 #define SPECIES_MEWTWO_MEGA_X                FORMS_START + 14
 #define SPECIES_MEWTWO_MEGA_Y                FORMS_START + 15
+#define SPECIES_RIOLU                        FORMS_START + 16
+#define SPECIES_LUCARIO                      FORMS_START + 17
 
-#define SPECIES_EGG SPECIES_MEWTWO_MEGA_Y + 1 
+#define SPECIES_EGG SPECIES_LUCARIO + 1 
 #define NUM_SPECIES SPECIES_EGG
 
 #define SPECIES_UNOWN_B (NUM_SPECIES + 1)

@@ -529,6 +529,8 @@ static const u16 sSpeciesToHoennPokedexNum[NUM_SPECIES - 1] =
     [SPECIES_AERODACTYL_MEGA - 1] = NATIONAL_DEX_AERODACTYL,
     [SPECIES_MEWTWO_MEGA_X - 1] = NATIONAL_DEX_MEWTWO,
     [SPECIES_MEWTWO_MEGA_Y - 1] = NATIONAL_DEX_MEWTWO,
+    [SPECIES_RIOLU - 1] = 0,
+    [SPECIES_LUCARIO - 1] = 0,
 };
 
 // Assigns all species to the National Dex Index (Summary No. for National Dex)
@@ -964,6 +966,8 @@ static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES - 1] =
     [SPECIES_AERODACTYL_MEGA - 1] = NATIONAL_DEX_AERODACTYL,
     [SPECIES_MEWTWO_MEGA_X - 1] = NATIONAL_DEX_MEWTWO,
     [SPECIES_MEWTWO_MEGA_Y - 1] = NATIONAL_DEX_MEWTWO,
+    [SPECIES_RIOLU - 1] = NATIONAL_DEX_RIOLU,
+    [SPECIES_LUCARIO - 1] = NATIONAL_DEX_LUCARIO,
 };
 
 // Assigns all Hoenn Dex Indexes to a National Dex Index

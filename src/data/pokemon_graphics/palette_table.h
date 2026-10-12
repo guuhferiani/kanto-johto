@@ -457,4 +457,6 @@ const struct CompressedSpritePalette gMonPaletteTable[] =
     SPECIES_PAL(AERODACTYL_MEGA, gMonPalette_AerodactylMega),
     SPECIES_PAL(MEWTWO_MEGA_X, gMonPalette_MewtwoMegaX),
     SPECIES_PAL(MEWTWO_MEGA_Y, gMonPalette_MewtwoMegaY),
+    SPECIES_PAL(RIOLU, gMonPalette_Riolu),
+    SPECIES_PAL(LUCARIO, gMonPalette_Lucario),
 };

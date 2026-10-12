@@ -429,4 +429,6 @@ const u8 gSpeciesNames[][POKEMON_NAME_LENGTH + 1] = {
     [SPECIES_AERODACTYL_MEGA] = _("Aerodactyl"),
     [SPECIES_MEWTWO_MEGA_X] = _("Mewtwo"),
     [SPECIES_MEWTWO_MEGA_Y] = _("Mewtwo"),
+    [SPECIES_RIOLU] = _("Riolu"),
+    [SPECIES_LUCARIO] = _("Lucario"),
 };

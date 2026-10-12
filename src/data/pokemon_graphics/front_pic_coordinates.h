@@ -2290,4 +2290,14 @@ const struct MonCoords gMonFrontPicCoords[] =
         .size = MON_COORDS_SIZE(40, 64),
         .y_offset = 0,
     },
+    [SPECIES_RIOLU] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 10,
+    },
+    [SPECIES_LUCARIO] =
+    {
+        .size = MON_COORDS_SIZE(64, 64),
+        .y_offset = 3,
+    },
 };

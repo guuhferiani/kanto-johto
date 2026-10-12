@@ -458,4 +458,6 @@ const struct CompressedSpriteSheet gMonFrontPicTable[] =
     SPECIES_SPRITE(AERODACTYL_MEGA, gMonFrontPic_AerodactylMega),
     SPECIES_SPRITE(MEWTWO_MEGA_X, gMonFrontPic_MewtwoMegaX),
     SPECIES_SPRITE(MEWTWO_MEGA_Y, gMonFrontPic_MewtwoMegaY),
+    SPECIES_SPRITE(RIOLU, gMonFrontPic_Riolu),
+    SPECIES_SPRITE(LUCARIO, gMonFrontPic_Lucario),
 };

@@ -430,4 +430,6 @@ const struct LevelUpMove *const gLevelUpLearnsets[NUM_SPECIES] =
     [SPECIES_AERODACTYL_MEGA] = sAerodactylLevelUpLearnset,
     [SPECIES_MEWTWO_MEGA_X] = sMewtwoLevelUpLearnset,
     [SPECIES_MEWTWO_MEGA_Y] = sMewtwoLevelUpLearnset,
+    [SPECIES_RIOLU] = sRioluLevelUpLearnset,
+    [SPECIES_LUCARIO] = sLucarioLevelUpLearnset,
 };
