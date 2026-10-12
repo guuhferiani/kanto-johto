@@ -187,8 +187,12 @@ def upload_rom(file_path: Path, folder_identifier: str = DEFAULT_FOLDER_ID):
     service = get_drive_service()
     folder_id = get_folder_id(service, folder_identifier)
 
+    import mimetypes
+    mime, _ = mimetypes.guess_type(str(file_path))
+    if not mime:
+        mime = 'application/octet-stream'
+    media = MediaFileUpload(str(file_path), mimetype=mime, resumable=True)
     existing_file_id = find_file_in_folder(service, folder_id, file_path.name)
-    media = MediaFileUpload(str(file_path), mimetype='application/octet-stream', resumable=True)
 
     if existing_file_id:
         print(f"[DRIVE] Substituindo arquivo existente '{file_path.name}' na pasta de destino...")
