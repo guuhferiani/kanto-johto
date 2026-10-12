@@ -38,15 +38,15 @@ VictoryRoad_1F_EventScript_Naomi::
 	end
 
 VictoryRoad_1F_Text_NaomiIntro::
-    .string "I wonder if you are good enough\n"
-    .string "for me?$"
+    .string "Sera que voce e bom o bastante\n"
+    .string "para mim?$"
 
 VictoryRoad_1F_Text_NaomiDefeat::
-    .string "I lost out…$"
+    .string "Eu perdi...$"
 
 VictoryRoad_1F_Text_NaomiPostBattle::
-    .string "I never wanted to lose to anybody,\n"
-    .string "especially to a younger kid…$"
+    .string "Eu nunca quis perder para ninguem,\n"
+    .string "especialmente alguem mais jovem...$"
 
 VictoryRoad_1F_EventScript_Rolando::
 	trainerbattle_single TRAINER_COOLTRAINER_ROLANDO, VictoryRoad_1F_Text_RolandoIntro, VictoryRoad_1F_Text_RolandoDefeat
@@ -54,15 +54,15 @@ VictoryRoad_1F_EventScript_Rolando::
 	end
 
 VictoryRoad_1F_Text_RolandoIntro::
-    .string "I can see you're good.\n"
-    .string "Let me see exactly how good!$"
+    .string "Posso ver que voce e bom.\n"
+    .string "Deixe-me ver o quao bom exatamente!$"
 
 VictoryRoad_1F_Text_RolandoDefeat::
-    .string "I had a chance…$"
+    .string "Eu tive uma chance...$"
 
 VictoryRoad_1F_Text_RolandoPostBattle::
-    .string "Tch!\n"
-    .string "I concede, you are better than I!$"
+    .string "Tsc!\n"
+    .string "Eu admito, voce e melhor do que eu!$"
 
 VictoryRoad_1F_EventScript_ItemTM02::
 	finditem ITEM_TM02, 1

@@ -113,41 +113,38 @@ PokemonLeague_BrunosRoom_EventScript_BrunoLookAwayDown::
 	return
 
 PokemonLeague_BrunosRoom_Text_Intro::
-    .string "I am Bruno of the Elite Four!\p"
-    .string "Through rigorous training, people\n"
-    .string "and Pokémon can become stronger\l"
-    .string "without limit.\p"
-    .string "I've lived and trained with my\n"
-    .string "fighting Pokémon!\l"
-    .string "And that will never change!\p"
+    .string "Eu sou Bruno, da Elite dos Quatro!\p"
+    .string "Atraves de treino rigoroso, pessoas\n"
+    .string "e Pokemon podem se fortalecer sem\l"
+    .string "limites.\p"
+    .string "Eu vivi e treinei com meus Pokemon\n"
+    .string "lutadores! E isso nunca vai mudar!\p"
     .string "{PLAYER}!\p"
-    .string "We will grind you down with our\n"
-    .string "superior power!\p"
+    .string "Nossa forca esmagadora ira te triturar!\p"
     .string "Hoo hah!$"
 
 PokemonLeague_BrunosRoom_Text_Intro2::
-    .string "I could feel the intensity of your\n"
-    .string "battle with Lorelei, even from here!\p" 
-    .string "Now it's time to show you the power\n" 
-    .string "of my Fighting-type Pokémon, who I've\l" 
-    .string "been training just as hard as you've\l" 
-    .string "trained your team, surely!\p" 
+    .string "Pude sentir a intensidade da sua luta\n"
+    .string "com Lorelei, mesmo daqui!\p"
+    .string "Agora e hora de mostrar o poder dos\n"
+    .string "meus Pokemon Lutadores, que treinei\l"
+    .string "tao duro quanto voce treinou os seus!\p"
     .string "Hoo hah! Hoo! HAH!!!$"
 
 PokemonLeague_BrunosRoom_Text_Defeat::
-    .string "Why?\n"
-    .string "How could I lose?$"
+    .string "Por que?\n"
+    .string "Como pude perder?$"
 
 PokemonLeague_BrunosRoom_Text_Defeat2::
-    .string "I have regrets!$"
+    .string "Eu tenho arrependimentos!$"
 
 PokemonLeague_BrunosRoom_Text_PostBattle::
-    .string "My job is done.\n"
-    .string "Go face your next challenge.$"
+    .string "Meu trabalho acabou.\n"
+    .string "Va encarar seu proximo desafio.$"
 
 PokemonLeague_BrunosRoom_Text_PostBattle2::
-    .string "Ugh! No! So my training is still\n" 
-    .string "lacking, is that it?\p"
-    .string "...Go.\p"
-    .string "Do not trouble yourself on my behalf.\n" 
-    .string "Continue to move forward!$"
+    .string "Ugh! Nao! Meu treinamento ainda foi\n"
+    .string "insuficiente, e isso?\p"
+    .string "...Va.\n"
+    .string "Nao se preocupe comigo.\n"
+    .string "Continue seguindo em frente!$"

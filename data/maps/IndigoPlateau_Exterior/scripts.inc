@@ -13,7 +13,7 @@ IndigoPlateau_Exterior_EventScript_Charizard::
 	end
 
 IndigoPlateau_Exterior_Text_Charizard:
-	.string "Charizard snorts as it glares.$"
+	.string "Charizard bufa enquanto encara.$"
 
 IndigoPlateau_Exterior_EventScript_DragonTamerNick::
 	lock
@@ -26,13 +26,13 @@ IndigoPlateau_Exterior_EventScript_DragonTamerNick::
 	end
 
 IndigoPlateau_Exterior_Text_NickIntro:
-	.string "Oh good! Practice!$"
+	.string "Que otimo! Um treino!$"
 
 IndigoPlateau_Exterior_Text_NickDefeat:
-	.string "Ha ha, yes!$"
+	.string "Ha ha, sim!$"
 
 IndigoPlateau_Exterior_Text_NickPostBattle:
-	.string "I'm all fired up now!$"
+	.string "Agora estou pegando fogo!$"
 
 IndigoPlateau_Exterior_EventScript_MegaHintCharizard::    
     goto_if_set FLAG_GOT_CHARIZARDITE_X, IndigoPlateau_Exterior_EventScript_NickDefeated
@@ -42,8 +42,8 @@ IndigoPlateau_Exterior_EventScript_MegaHintCharizard::
     end
     
 IndigoPlateau_Exterior_Text_CharizardMegaHint:
-    .string "If you want a Charizard as impressive\n"
-	.string "as mine, check the Pokémon Mansion.$"
+    .string "Se quiser um Charizard tao impressionante\n"
+	.string "quanto o meu, busque na Mansao Pokemon.$"
 
 IndigoPlateau_Exterior_EventScript_NickDefeated::
     msgbox NickDefeated_Text MSGBOX_DEFAULT
@@ -51,9 +51,9 @@ IndigoPlateau_Exterior_EventScript_NickDefeated::
 	end
 
 NickDefeated_Text:	
-	.string "My Charizard's flame burns so strongly\n"
-	.string "it is able to go swimming without\l"
-	.string "its tail going out!$"
+	.string "A chama do meu Charizard queima tao\n"
+	.string "forte que ele consegue nadar sem a\l"
+	.string "cauda se apagar!$"
 
 IndigoPlateau_Exterior_EventScript_CharizardDefeated::
 	msgbox CharizardDefeated MSGBOX_DEFAULT
@@ -61,5 +61,5 @@ IndigoPlateau_Exterior_EventScript_CharizardDefeated::
 	end
 
 CharizardDefeated:	
-	.string "Charizard looks annoyed with you.\n"
-	.string "It swishes its tail, exhaling smoke.$"
+	.string "Charizard parece irritado com voce.\n"
+	.string "Ele balanca a cauda, soltando fumaca.$"

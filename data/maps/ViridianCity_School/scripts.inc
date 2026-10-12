@@ -14,8 +14,8 @@ ViridianCity_School_EventScript_Lass::
 	end
 
 ViridianCity_School_Text_TryingToMemorizeNotes::
-    .string "Whew! I'm trying to memorize all my\n"
-    .string "notes.$"
+    .string "Ufa! Estou tentando memorizar todas\n"
+    .string "as minhas anotacoes.$"
 
 ViridianCity_School_EventScript_Woman::
 	lock
@@ -27,9 +27,9 @@ ViridianCity_School_EventScript_Woman::
 	end
 
 ViridianCity_School_Text_ReadBlackboardCarefully::
-    .string "Okay!\p"
-    .string "Be sure to read what's on the\n"
-    .string "blackboard carefully!$"
+    .string "Certo!\p"
+    .string "Certifique-se de ler o que esta no\n"
+    .string "quadro-negro com atencao!$"
 
 ViridianCity_School_EventScript_Notebook::
 	lockall
@@ -50,51 +50,51 @@ ViridianCity_School_EventScript_Notebook::
 	end
 
 ViridianCity_School_Text_TurnThePage::
-    .string "Turn the page?$"
+    .string "Virar a pagina?$"
 
 ViridianCity_School_Text_NotebookFirstPage::
-    .string "Let's check out the notebook.\p"
-    .string "First page…\p"
-    .string "Poké Balls are used to catch\n"
-    .string "Pokémon.\p"
-    .string "Up to six Pokémon can be carried\n"
-    .string "in your party.\p"
-    .string "People who raise and battle\n"
-    .string "with Pokémon are called Trainers.$"
+    .string "Vamos conferir o caderno.\p"
+    .string "Primeira pagina...\p"
+    .string "Poke Bolas sao usadas para capturar\n"
+    .string "Pokemon.\p"
+    .string "Ate seis Pokemon podem ser levados\n"
+    .string "na sua equipe.\p"
+    .string "Pessoas que criam e batalham com\n"
+    .string "Pokemon sao chamadas de Treinadores.$"
 
 ViridianCity_School_Text_NotebookSecondPage::
-    .string "Second page…\p"
-    .string "A healthy Pokémon may be hard to\n"
-    .string "catch, so weaken it first.\p"
-    .string "Poison, burn, or cause another\n"
-    .string "status problem to weaken it.$"
+    .string "Segunda pagina...\p"
+    .string "Um Pokemon saudavel pode ser dificil\n"
+    .string "de pegar, entao enfraqueca-o antes.\p"
+    .string "Envenene, queime ou cause outro\n"
+    .string "problema de status para enfraquece-lo.$"
 
 ViridianCity_School_Text_NotebookThirdPage::
-    .string "Third page…\p"
-    .string "Pokémon Trainers seek others to\n"
-    .string "engage in Pokémon battles.\p"
-    .string "To Trainers, the taste of victory\n"
-    .string "is sweet, indeed.\p"
-    .string "Battles are constantly waged at\n"
-    .string "Pokémon Gyms everywhere.$"
+    .string "Terceira pagina...\p"
+    .string "Treinadores buscam outros para travar\n"
+    .string "batalhas de Pokemon.\p"
+    .string "Para os Treinadores, o gosto da\n"
+    .string "vitoria e doce, de fato.\p"
+    .string "Batalhas sao travadas constantemente\n"
+    .string "em Ginasios Pokemon por toda parte.$"
 
 ViridianCity_School_Text_NotebookFourthPage::
-    .string "Fourth page…\p"
-    .string "The ultimate goal for all Pokémon\n"
-    .string "Trainers is simple.\p"
-    .string "It is to defeat the top eight\n"
-    .string "Pokémon Gym Leaders.\p"
-    .string "Do so to earn the right to face…\p"
-    .string "The Elite Four of the Pokémon\n"
-    .string "League!$"
+    .string "Quarta pagina...\p"
+    .string "O objetivo final de todos os\n"
+    .string "Treinadores de Pokemon e simples.\p"
+    .string "E derrotar os oito Lideres de\n"
+    .string "Ginasio de Pokemon.\p"
+    .string "Faca isso para ganhar o direito de\n"
+    .string "enfrentar...\p"
+    .string "A Elite dos Quatro da Liga Pokemon!$"
 
 ViridianCity_School_EventScript_StopReadingNotebook::
 	releaseall
 	end
 
 ViridianCity_School_Text_HeyDontLookAtMyNotes::
-    .string "Girl: Hey!\n"
-    .string "Don't look at my notes!$"
+    .string "Garota: Ei!\n"
+    .string "Nao olhe as minhas anotacoes!$"
 
 ViridianCity_School_EventScript_Blackboard::
 	lockall
@@ -103,8 +103,8 @@ ViridianCity_School_EventScript_Blackboard::
 	end
 
 ViridianCity_School_Text_BlackboardListsStatusProblems::
-    .string "The blackboard lists Pokémon\n"
-    .string "Status problems during battles.$"
+    .string "O quadro-negro lista problemas de\n"
+    .string "status dos Pokemon em batalha.$"
 
 ViridianCity_School_EventScript_ChooseBlackboardTopic::
 	message ViridianCity_School_Text_ReadWhichTopic
@@ -121,7 +121,7 @@ ViridianCity_School_EventScript_ChooseBlackboardTopic::
 	end
 
 ViridianCity_School_Text_ReadWhichTopic::
-    .string "Which topic do you want to read?$"
+    .string "Qual assunto voce quer ler?$"
 
 ViridianCity_School_EventScript_ReadSleep::
 	msgbox ViridianCity_School_Text_ExplainSleep
@@ -129,12 +129,12 @@ ViridianCity_School_EventScript_ReadSleep::
 	end
 
 ViridianCity_School_Text_ExplainSleep::
-    .string "A Pokémon can't attack if it's\n"
-    .string "asleep.\p"
-    .string "Pokémon will stay asleep even\n"
-    .string "after battles.\p"
-    .string "Use Awakening to awaken one\n"
-    .string "from sleep.$"
+    .string "Um Pokemon nao pode atacar se\n"
+    .string "estiver dormindo.\p"
+    .string "Pokemon continuarao dormindo mesmo\n"
+    .string "depois das batalhas.\p"
+    .string "Use Awakening para acordar um\n"
+    .string "Pokemon adormecido.$"
 
 ViridianCity_School_EventScript_ReadBurn::
 	msgbox ViridianCity_School_Text_ExplainBurn
@@ -142,10 +142,10 @@ ViridianCity_School_EventScript_ReadBurn::
 	end
 
 ViridianCity_School_Text_ExplainBurn::
-    .string "A burn reduces Attack power.\n"
-    .string "It also causes ongoing HP loss.\p"
-    .string "A burn remains after a battle.\n"
-    .string "Use Burn Heal to cure a burn.$"
+    .string "A queimadura reduz o Ataque.\n"
+    .string "Tambem causa perda continua de HP.\p"
+    .string "A queimadura continua apos a batalha.\n"
+    .string "Use Burn Heal para curar a queimadura.$"
 
 ViridianCity_School_EventScript_ReadPoison::
 	msgbox ViridianCity_School_Text_ExplainPoison
@@ -153,10 +153,10 @@ ViridianCity_School_EventScript_ReadPoison::
 	end
 
 ViridianCity_School_Text_ExplainPoison::
-    .string "When poisoned, a Pokémon's health\n"
-    .string "steadily drops.\p"
-    .string "Poison lingers after battles.\n"
-    .string "Use an Antidote to cure poison!$"
+    .string "Quando envenenado, o HP do Pokemon\n"
+    .string "cai de forma constante.\p"
+    .string "O veneno persiste apos as batalhas.\n"
+    .string "Use um Antidote para curar o veneno!$"
 
 ViridianCity_School_EventScript_ReadFreeze::
 	msgbox ViridianCity_School_Text_ExplainFreeze
@@ -164,12 +164,12 @@ ViridianCity_School_EventScript_ReadFreeze::
 	end
 
 ViridianCity_School_Text_ExplainFreeze::
-    .string "A frozen Pokémon becomes\n"
-    .string "helplessly immobile.\p"
-    .string "It stays frozen even after the\n"
-    .string "battle ends.\p"
-    .string "Use Ice Heal to thaw out the\n"
-    .string "suffering Pokémon.$"
+    .string "Um Pokemon congelado fica totalmente\n"
+    .string "imovel e indefeso.\p"
+    .string "Ele permanece congelado mesmo apos\n"
+    .string "o fim da batalha.\p"
+    .string "Use Ice Heal para descongelar o\n"
+    .string "pobre Pokemon.$"
 
 ViridianCity_School_EventScript_ReadParalysis::
 	msgbox ViridianCity_School_Text_ExplainParalysis
@@ -177,10 +177,10 @@ ViridianCity_School_EventScript_ReadParalysis::
 	end
 
 ViridianCity_School_Text_ExplainParalysis::
-    .string "Paralysis reduces Speed and may\n"
-    .string "prevent the Pokémon from moving.\p"
-    .string "Paralysis remains after battles.\n"
-    .string "Use Parlyz Heal for treatment.$"
+    .string "A paralisia reduz a Velocidade e\n"
+    .string "pode impedir o Pokemon de se mover.\p"
+    .string "A paralisia persiste apos batalhas.\n"
+    .string "Use Parlyz Heal para o tratamento.$"
 
 ViridianCity_School_EventScript_ExitBlackboard::
 	closemessage
@@ -194,11 +194,11 @@ ViridianCity_School_EventScript_PokemonJournal::
 	end
 
 PokemonJournal_Text_SpecialFeatureProfOak::
-	.string "Pokémon Journal\p"
-	.string "Special Feature: Prof. Oak,\n"
-	.string "the Pokémon Researcher!\p"
-	.string "Prof. Oak reportedly lives with his\n"
-	.string "grandchildren Daisy and {RIVAL}.$"
+	.string "Revista Pokemon\p"
+	.string "Especial: Prof. Carvalho,\n"
+	.string "o Pesquisador de Pokemon!\p"
+	.string "Dizem que o Prof. Carvalho vive com\n"
+	.string "seus netos Daisy e {RIVAL}.$"
 
 ViridianCity_School_EventScript_PokemonJournal2::
 	lock
@@ -207,10 +207,10 @@ ViridianCity_School_EventScript_PokemonJournal2::
 	end
 
 PokemonJournal_Text_SpecialFeatureDaisyOak::
-	.string "This is a Pokémon Journal from\n"
-	.string "years ago…\p"
-	.string "Pokémon Journal\n"
-	.string "Contest Special!\p"
-	.string "The Spring Pokémon Contest's\n"
-	.string "Grand Champion is Daisy Oak of\l"
-	.string "Pallet Town!$"
+	.string "Esta e uma Revista Pokemon de\n"
+	.string "anos atras...\p"
+	.string "Revista Pokemon\n"
+	.string "Especial do Concurso!\p"
+	.string "A Grande Campea do Concurso de\n"
+	.string "Pokemon da Primavera e Daisy Carvalho\l"
+	.string "de Pallet Town!$"

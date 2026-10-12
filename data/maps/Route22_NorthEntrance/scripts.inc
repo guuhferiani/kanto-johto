@@ -25,11 +25,11 @@ Route22_NorthEntrance_EventScript_GateGuard::
 	end
 
 Route22_NorthEntrance_Text_Collect8Badges::
-	.string "Oh? You want to head to Indigo\n"
+	.string "Oh? Voce quer ir para o Indigo\n"
 	.string "Plateau?\p"
-	.string "I'm sorry, I can't let you through\n"
-	.string "unless you've collected all 8 Gym\l"
-	.string "Badges.$"
+	.string "Sinto muito, nao posso deixar passar\n"
+	.string "a menos que tenha conquistado todas\l"
+	.string "as 8 Insignias de Ginasio.$"
 
 Route22_NorthEntrance_HeadToVictoryRoad::
 	msgbox Route22_NorthEntrance_Text_HeadToVictoryRoad, MSGBOX_NPC
@@ -37,10 +37,10 @@ Route22_NorthEntrance_HeadToVictoryRoad::
 	end
 
 Route22_NorthEntrance_Text_HeadToVictoryRoad::
-	.string "You'll find Victory Road at the end\n"
-	.string "of Route 23.\p"
-	.string "It's full of elite trainers and strong\n"
-	.string "Pokémon.\n"
-	.string "It's your final test before you face the\n"
-	.string "Elite Four!$"
+	.string "Voce encontrara a Victory Road no fim\n"
+	.string "da Rota 23.\p"
+	.string "Ela esta repleta de treinadores de\n"
+	.string "elite e Pokemon fortes.\p"
+	.string "E o seu teste final antes de enfrentar\n"
+	.string "a Elite dos Quatro!$"
 

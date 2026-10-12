@@ -9,9 +9,9 @@ ViridianCity_PokemonCenter_2F_LittleGirl::
 	end
 
 ViridianCity_PokemonCenter_2F_Text_Rank::
-	.string "That man won't let me buy stuff!\n"
-	.string "He says I'm not a high enough rank!\p"
-	.string "What's that even mean?\p"
-	.string "I guess I'll check the next town\n"
-	.string "over and try my luck there.$"
+	.string "Aquele homem nao me deixa comprar!\n"
+	.string "Ele diz que nao tenho rank suficiente!\p"
+	.string "O que isso quer dizer afinal?\p"
+	.string "Acho que vou ate a proxima cidade\n"
+	.string "e tentar a sorte por la.$"
 

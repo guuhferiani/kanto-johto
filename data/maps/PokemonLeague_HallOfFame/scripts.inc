@@ -66,29 +66,28 @@ PokemonLeague_HallOfFame_EventScript_OakCongratulations2::
 	return
 
 PokemonLeague_HallOfFame_Text_OakCongratulations::
-    .string "Oak: Er-hem!\n"
-    .string "Congratulations, {PLAYER}!\p"
-    .string "This floor is the Pokémon Hall of\n"
-    .string "Fame.\p"
-    .string "Pokémon League Champions are\n"
-    .string "honored for their exploits here.\p"
-    .string "Their Pokémon are also recorded in\n"
-    .string "the Hall of Fame.\p"
+    .string "Carvalho: Cof-cof!\n"
+    .string "Parabens, {PLAYER}!\p"
+    .string "Este andar e o Hall da Fama Pokemon.\p"
+    .string "Os Campeoes da Liga Pokemon sao\n"
+    .string "homenageados por seus feitos aqui.\p"
+    .string "Seus Pokemon tambem sao registrados\n"
+    .string "no Hall da Fama.\p"
     .string "{PLAYER}!\p"
-    .string "You have worked hard to become\n"
-    .string "the new League Champion.\p"
-    .string "Congratulations, {PLAYER}, you and\n"
-    .string "your Pokémon are Hall of Famers!$"
+    .string "Voce trabalhou duro para se tornar o\n"
+    .string "novo Campeao da Liga.\p"
+    .string "Parabens, {PLAYER}, voce e seus Pokemon\n"
+    .string "estao no Hall da Fama!$"
 
 PokemonLeague_HallOfFame_Text_OakCongratulations2::
-    .string "Oak: Er-hem!\n"
-    .string "Congratulations, {PLAYER}!\p"
-    .string "You have worked hard to maintain\n"
-    .string "your status as League Champion.\p"
-    .string "We will record these Pokémon in\n"
-    .string "the Hall of Fame.\p"
-    .string "Congratulations, {PLAYER}, you and\n"
-    .string "your Pokémon are true Champions!$"
+    .string "Carvalho: Cof-cof!\n"
+    .string "Parabens, {PLAYER}!\p"
+    .string "Voce trabalhou duro para manter seu\n"
+    .string "status como Campeao da Liga.\p"
+    .string "Vamos registrar estes Pokemon no\n"
+    .string "Hall da Fama.\p"
+    .string "Parabens, {PLAYER}, voce e seus Pokemon\n"
+    .string "sao verdadeiros Campeoes!$"
 
 PokemonLeague_HallOfFame_EventScript_SetGameClearFlags::
 	special SetChampionSaveWarp

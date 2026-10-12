@@ -61,18 +61,18 @@ PokemonLeague_LoreleisRoom_EventScript_Lorelei::
 	end
 
 PokemonLeague_LoreleisRoom_Text_Intro::
-    .string "Welcome to the Pokémon League.\p"
-    .string "I am Lorelei of the Elite Four.\p"
-    .string "No one can best me when it comes\n"
-    .string "to icy Pokémon.\p"
-    .string "Freezing moves are powerful.\p"
-    .string "Your Pokémon will be at my mercy\n"
-    .string "when they are frozen solid.\p"
+    .string "Boas-vindas a Liga Pokemon.\p"
+    .string "Eu sou Lorelei, da Elite dos Quatro.\p"
+    .string "Ninguem me supera quando se trata de\n"
+    .string "Pokemon de gelo.\p"
+    .string "Golpes congelantes sao poderosos.\p"
+    .string "Seus Pokemon ficarao a minha merce\n"
+    .string "quando estiverem congelados.\p"
     .string "Hahaha!\n"
-    .string "Are you ready?$"
+    .string "Voce esta pronto?$"
 
 PokemonLeague_LoreleisRoom_Text_Defeat::
-    .string "…Things shouldn't be this way!$"
+    .string "...As coisas nao deviam ser assim!$"
 
 PokemonLeague_LoreleisRoom_EventScript_LoreleiPostgame::
 	msgbox PokemonLeague_LoreleisRoom_Text_Intro2
@@ -84,13 +84,13 @@ PokemonLeague_LoreleisRoom_EventScript_LoreleiPostgame::
 	end
 
 PokemonLeague_LoreleisRoom_Text_Intro2::
-    .string "Welcome to the Pokémon League!\p" 
-    .string "Hey, fantastic timing!\p" 
-    .string "I was just thinking how I'd like to\n"
-    .string "battle you. I hope you're ready.$"
+    .string "Boas-vindas a Liga Pokemon!\p"
+    .string "Ei, que momento perfeito!\p"
+    .string "Eu estava pensando no quanto queria\n"
+    .string "batalhar com voce. Esteja pronto!$"
 
 PokemonLeague_LoreleisRoom_Text_Defeat2::
-	.string "Argh! How?!$"
+	.string "Argh! Como?!$"
 
 PokemonLeague_LoreleisRoom_EventScript_DefeatedLorelei::
 	setflag FLAG_DEFEATED_LORELEI
@@ -107,10 +107,10 @@ PokemonLeague_LoreleisRoom_EventScript_PostBattle::
 	end
 
 PokemonLeague_LoreleisRoom_Text_PostBattle::
-    .string "You're better than I thought.\n"
-    .string "Go on ahead.\p"
-    .string "You only got a taste of the\n"
-    .string "Pokémon League's power.$"
+    .string "Voce e melhor do que eu pensava.\n"
+    .string "Pode prosseguir.\p"
+    .string "Voce so teve uma amostra do poder\n"
+    .string "da Liga Pokemon.$"
 
 PokemonLeague_LoreleisRoom_EventScript_PostBattle2::
 	msgbox PokemonLeague_LoreleisRoom_Text_PostBattle2
@@ -118,7 +118,7 @@ PokemonLeague_LoreleisRoom_EventScript_PostBattle2::
 	end
 
 PokemonLeague_LoreleisRoom_Text_PostBattle2::
-    .string "I may have lost, but I'll never\n" 
-    .string "give up on my Ice-type Pokémon!\p" 
-    .string "You should aim to win using\n"
-    .string "Pokémon you like best, too!$"
+    .string "Posso ter perdido, mas nunca vou abrir\n"
+    .string "mao dos meus Pokemon de Gelo!\p"
+    .string "Voce tambem deve vencer usando os\n"
+    .string "Pokemon de que mais gosta!$"

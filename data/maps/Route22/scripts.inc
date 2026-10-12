@@ -58,19 +58,19 @@ Route22_EventScript_EarlyRival::
 	end
 
 Route22_Text_EarlyRivalIntro::
-	.string "{RIVAL}: Hey! {PLAYER}!\p"
-	.string "You're off to the Pokémon League?\n"
-	.string "Forget about it!\p"
-	.string "You probably don't have any\n"
-	.string "Badges, do you?\p"
-	.string "The guard won't let you through\n"
-	.string "without them.\p"
-	.string "By the way, did your Pokémon get\n"
-	.string "any stronger?$"
+	.string "{RIVAL}: Ei! {PLAYER}!\p"
+	.string "Esta indo para a Liga Pokemon?\n"
+	.string "Pode esquecer!\p"
+	.string "Voce provavelmente nao tem nenhuma\n"
+	.string "Insignia, tem?\p"
+	.string "O guarda nao vai te deixar passar\n"
+	.string "sem elas.\p"
+	.string "A proposito, seus Pokemon ficaram\n"
+	.string "mais fortes?$"
 
 Route22_Text_EarlyRivalDefeated::
-	.string "Awww!\n"
-	.string "You just lucked out!$"
+	.string "Ahhh!\n"
+	.string "Voce so deu sorte!$"
 
 Route22_EventScript_RivalBattleOutcome::
 	specialvar VAR_RESULT, GetBattleOutcome
@@ -87,9 +87,9 @@ Route22_EventScript_EarlyRivalBattleLost::
 
 Route22_Text_EarlyRivalVictory:
 	.string "{RIVAL}: Hahaha! {PLAYER}!\p"
-	.string "That's your best? You're nowhere\n" 
-	.string "near as good as me, pal!\p"
-	.string "Go train some more! You loser!$"
+	.string "Esse e o seu melhor? Voce nem chega\n"
+	.string "perto do meu nivel, amigo!\p"
+	.string "Va treinar mais! Seu perdedor!$"
 
 Route22_EventScript_EarlyRivalPostBattle::
 	msgbox Route22_Text_EarlyRivalPostBattle, MSGBOX_DEFAULT
@@ -103,12 +103,12 @@ Route22_EventScript_EarlyRivalPostBattle::
 	end
 
 Route22_Text_EarlyRivalPostBattle::
-	.string "I heard the Pokémon League is\n"
-	.string "crawling with tough Trainers.\p"
-	.string "I have to figure out how to get\n"
-	.string "past them.\p"
-	.string "You should quit dawdling and get a\n"
-	.string "move on!$"
+	.string "Ouvi dizer que a Liga Pokemon esta\n"
+	.string "cheia de Treinadores cascas-grossas.\p"
+	.string "Tenho que descobrir como passar\n"
+	.string "por eles.\p"
+	.string "Voce devia parar de enrolar e se\n"
+	.string "mexer!$"
 
 Movement_RivalApproach:
 	walk_right
@@ -151,18 +151,17 @@ Route22_EventScript_LateRival_Vaporeon::
 	goto Route22_EventScript_LateRivalPostBattle
 
 Route22_Text_LateRivalIntro::
-	.string "{RIVAL}: Hey! {PLAYER}!\p"
-	.string "What a surprise to see you here!\p"
-	.string "So, you're on your way to the\n"
-	.string "Pokémon League?\p"
-	.string "You collected all the Badges too?\n"
-	.string "That's cool!\p"
-	.string "Then I will whip you {PLAYER} as a warm up\n"
-	.string "for the Pokémon League! Come on!$" 
+	.string "{RIVAL}: Ei! {PLAYER}!\p"
+	.string "Que surpresa ver voce por aqui!\p"
+	.string "Entao esta a caminho da Liga Pokemon?\p"
+	.string "Conseguiu todas as Insignias tambem?\n"
+	.string "Que legal!\p"
+	.string "Entao vou te dar uma surra, {PLAYER},\n"
+	.string "como aquecimento para a Liga! Vamos la!$" 
 
 Route22_Text_LateRivalDefeat::
-	.string "What!?\p"
-	.string "I was just careless!$"
+	.string "O que!?\p"
+	.string "Eu fui apenas descuidado!$"
 
 Route22_EventScript_LateRivalPostBattle::
 	playbgm MUS_RG_RIVAL_EXIT, 0
@@ -182,19 +181,19 @@ Route22_EventScript_LateRivalPostBattle::
 	end
 
 Route22_Text_LateRivalPostBattle::
-	.string "That loosened me up.\n"
-	.string "I'm ready for the Pokémon League!\p"
-	.string "{PLAYER}, you need more practice.\p"
-	.string "But hey, you know that!\n"
-	.string "I'm out of here. Smell ya!$"
+	.string "Isso serviu para me aquecer.\n"
+	.string "Estou pronto para a Liga Pokemon!\p"
+	.string "{PLAYER}, voce precisa praticar mais.\p"
+	.string "Mas ei, voce sabe disso!\n"
+	.string "Fui nessa. Ate mais, perdedor!$"
 
 Route22_EventScript_LeagueGateSign::
 	msgbox Route22_Text_LeagueGateSign, MSGBOX_SIGN
 	end
 
 Route22_Text_LeagueGateSign::
-	.string "Pokémon League\n"
-	.string "Front Gate $"
+	.string "Liga Pokemon\n"
+	.string "Portao Principal$"
 
 Route22_RocketFugitive::
 	trainerbattle_single TRAINER_FUGITIVE_F, RocketFugitive_Text_Intro, RocketFugitive_Text_Defeat

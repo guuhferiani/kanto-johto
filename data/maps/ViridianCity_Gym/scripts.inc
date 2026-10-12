@@ -28,37 +28,39 @@ ViridianCity_Gym_EventScript_Giovanni::
 
 ViridianCity_Gym_Text_GiovanniIntro::
     .string "Fwahahaha!\n"
-    .string "Welcome to my hideout!\p"
-    .string "It shall be so until I can restore\n"
-    .string "Team Rocket to its former glory.\p"
-    .string "But, you have found me again.\n"
-    .string "So be it.\p"
-	.string "This time, I'm not holding back!\p"
-    .string "Once more, you shall face\n"
-    .string "Giovanni, the greatest Trainer!$"
+    .string "Bem-vindo ao meu esconderijo!\p"
+    .string "Sera assim ate que eu possa restaurar\n"
+    .string "a Equipe Rocket a sua antiga gloria.\p"
+    .string "Mas voce me encontrou de novo.\n"
+    .string "Que assim seja.\p"
+	.string "Desta vez, nao vou me conter!\p"
+    .string "Mais uma vez, voce enfrentara\n"
+    .string "Giovanni, o maior dos Treinadores!$"
 
 ViridianCity_Gym_Text_GiovanniPostBattle::
-    .string "Having lost in this fashion, \n"
-    .string "I can't face my followers.\l"
-    .string "I have betrayed their trust.\p"
-    .string "As of today, Team Rocket is\n"
-    .string "finished forever!\p"
-    .string "As for myself, I shall dedicate\n"
-    .string "my life to training again.\p"
-    .string "Let us meet again someday!\n"
-    .string "Farewell!$"
+    .string "Tendo perdido dessa forma,\n"
+    .string "nao posso encarar meus seguidores.\l"
+    .string "Eu traí a confianca deles.\p"
+    .string "A partir de hoje, a Equipe Rocket\n"
+    .string "esta acabada para sempre!\p"
+    .string "Quanto a mim, dedicarei minha vida\n"
+    .string "a treinar novamente.\p"
+    .string "Que nos encontremos de novo algum dia!\n"
+    .string "Adeus!$"
 
 ViridianCity_Gym_Text_GiovanniDefeat::
     .string "Ha!\n"
-    .string "That was a truly intense fight.$"
+    .string "Essa foi uma luta verdadeiramente\n"
+    .string "intensa.$"
 
 ViridianCity_Gym_Text_GiovanniGiveBadge::
-    .string "You have won!\p"
-    .string "As proof, here is the Earth Badge!$"
+    .string "Voce venceu!\p"
+    .string "Como prova, aqui esta a Insignia da\n"
+    .string "Terra!$"
 
 ViridianCity_Gym_Text_ReceivedBadgeFromGiovanni::
-    .string "{PLAYER} received the Earth Badge\n"
-    .string "from Giovanni.$"
+    .string "{PLAYER} recebeu a Insignia da\n"
+    .string "Terra de Giovanni.$"
 
 ViridianCity_Gym_EventScript_DefeatedGiovanni::
 	msgbox ViridianCity_Gym_Text_GiovanniGiveBadge
@@ -96,19 +98,20 @@ ViridianCity_Gym_EventScript_GiveTM26::
 	end
 
 ViridianCity_Gym_Text_ExplainEarthBadgeTakeThis::
-    .string "The Earth Badge makes Pokémon of\n"
-    .string "any level obey without question.\p"
-    .string "It is evidence of your mastery as\n"
-    .string "a Pokémon Trainer.\p"
-    .string "With it, you can challenge the\n"
-    .string "Pokémon League.\p"
-    .string "Also, take this TM.\p"
-    .string "Consider it a gift for your Pokémon\n"
-    .string "League challenge.$"
+    .string "A Insignia da Terra faz qualquer\n"
+    .string "Pokemon de qualquer nivel obedecer\l"
+    .string "sem questionar.\p"
+    .string "E a prova do seu dominio como um\n"
+    .string "Treinador de Pokemon.\p"
+    .string "Com ela, voce pode desafiar a\n"
+    .string "Liga Pokemon.\p"
+    .string "Alem disso, fique com este TM.\p"
+    .string "Considere-o um presente para o seu\n"
+    .string "desafio na Liga Pokemon.$"
 
 ViridianCity_Gym_Text_ReceivedTM26FromGiovanni::
-    .string "{PLAYER} received TM26\n"
-    .string "from Giovanni.$"
+    .string "{PLAYER} recebeu o TM26\n"
+    .string "de Giovanni.$"
 
 ViridianCity_Gym_EventScript_NoRoomForTM26::
 	msgbox ViridianCity_Gym_Text_YouDoNotHaveSpace
@@ -116,17 +119,17 @@ ViridianCity_Gym_EventScript_NoRoomForTM26::
 	end
 
 ViridianCity_Gym_Text_ExplainTM26::
-    .string "TM26 contains Earthquake.\p"
-    .string "It is a powerful attack that causes\n"
-    .string "a massive tremor.\p"
-    .string "I made it when I ran the Gym here,\n"
-    .string "far too long ago… $"
+    .string "O TM26 contem Earthquake.\p"
+    .string "E um ataque poderoso que causa um\n"
+    .string "tremor devastador.\p"
+    .string "Eu o criei quando comandava o\n"
+    .string "Ginasio aqui, ha muito tempo...$"
 
 ViridianCity_Gym_Text_YouDoNotHaveSpace::
-    .string "You do not have space for this!\p"
-    .string "I will not remain here for long.\p"
-    .string "You should make room and speak to\n"
-    .string "me again.$"
+    .string "Voce nao tem espaco para isto!\p"
+    .string "Nao vou permanecer aqui por muito tempo.\p"
+    .string "Abra espaco na mochila e fale comigo\n"
+    .string "novamente.$"
 
 
 ViridianCity_Gym_EventScript_Jason::
@@ -135,15 +138,15 @@ ViridianCity_Gym_EventScript_Jason::
 	end
 
 ViridianCity_Gym_Text_JasonIntro::
-    .string "Pokémon and I, we make wonderful\n"
-    .string "music together!$"
+    .string "Os Pokemon e eu, fazemos uma musica\n"
+    .string "maravilhosa juntos!$"
 
 ViridianCity_Gym_Text_JasonDefeat::
-    .string "You are in perfect harmony!$"
+    .string "Voce esta em perfeita harmonia!$"
 
 ViridianCity_Gym_Text_JasonPostBattle::
-    .string "Do you know the identity of our\n"
-    .string "Gym Leader?$"
+    .string "Voce sabe a identidade do nosso\n"
+    .string "Lider de Ginasio?$"
 
 ViridianCity_Gym_EventScript_Cole::
 	trainerbattle_single TRAINER_TAMER_COLE, ViridianCity_Gym_Text_ColeIntro, ViridianCity_Gym_Text_ColeDefeat
@@ -151,16 +154,16 @@ ViridianCity_Gym_EventScript_Cole::
 	end
 
 ViridianCity_Gym_Text_ColeIntro::
-    .string "Your Pokémon will cower at the\n"
-    .string "crack of my whip!$"
+    .string "Seus Pokemon vao tremer ao estalo\n"
+    .string "do meu chicote!$"
 
 ViridianCity_Gym_Text_ColeDefeat::
-    .string "Yowch!\n"
-    .string "Whiplash!$"
+    .string "Ai ai ai!\n"
+    .string "Que chicotada!$"
 
 ViridianCity_Gym_Text_ColePostBattle::
-    .string "Wait!\n"
-    .string "I was just careless!$"
+    .string "Espere!\n"
+    .string "Eu fui apenas descuidado!$"
 
 ViridianCity_Gym_EventScript_Atsushi::
 	trainerbattle_single TRAINER_BLACK_BELT_ATSUSHI, ViridianCity_Gym_Text_AtsushiIntro, ViridianCity_Gym_Text_AtsushiDefeat
@@ -168,14 +171,14 @@ ViridianCity_Gym_EventScript_Atsushi::
 	end
 
 ViridianCity_Gym_Text_AtsushiIntro::
-    .string "Rrrroar!\n"
-    .string "I'm working myself into a rage!$"
+    .string "Rrrroaar!\n"
+    .string "Estou ficando enfurecido!$"
 
 ViridianCity_Gym_Text_AtsushiDefeat::
-    .string "Wargh!$"
+    .string "Uaaargh!$"
 
 ViridianCity_Gym_Text_AtsushiPostBattle::
-    .string "I'm still not worthy!$"
+    .string "Ainda nao sou digno!$"
 
 ViridianCity_Gym_EventScript_Kiyo::
 	trainerbattle_single TRAINER_BLACK_BELT_KIYO, ViridianCity_Gym_Text_KiyoIntro, ViridianCity_Gym_Text_KiyoDefeat
@@ -183,15 +186,15 @@ ViridianCity_Gym_EventScript_Kiyo::
 	end
 
 ViridianCity_Gym_Text_KiyoIntro::
-    .string "Karate is the ultimate form of\n"
-    .string "martial arts!$"
+    .string "O karate e a forma definitiva de arte\n"
+    .string "marcial!$"
 
 ViridianCity_Gym_Text_KiyoDefeat::
     .string "Aiyah!$"
 
 ViridianCity_Gym_Text_KiyoPostBattle::
-    .string "If my Pokémon were as good at\n"
-    .string "karate as I…$"
+    .string "Se meus Pokemon fossem tao bons no\n"
+    .string "karate quanto eu...$"
 
 ViridianCity_Gym_EventScript_Takashi::
 	trainerbattle_single TRAINER_BLACK_BELT_TAKASHI, ViridianCity_Gym_Text_TakashiIntro, ViridianCity_Gym_Text_TakashiDefeat
@@ -199,15 +202,15 @@ ViridianCity_Gym_EventScript_Takashi::
 	end
 
 ViridianCity_Gym_Text_TakashiIntro::
-    .string "I'm the Karate King!\n"
-    .string "Your fate rests with me!$"
+    .string "Eu sou o Rei do Karate!\n"
+    .string "Seu destino repousa comigo!$"
 
 ViridianCity_Gym_Text_TakashiDefeat::
     .string "Ayah!$"
 
 ViridianCity_Gym_Text_TakashiPostBattle::
-    .string "The Pokémon League?\n"
-    .string "You? Don't get cocky!$"
+    .string "A Liga Pokemon?\n"
+    .string "Voce? Nao fique convencido!$"
 
 ViridianCity_Gym_EventScript_Samuel::
 	trainerbattle_single TRAINER_COOLTRAINER_SAMUEL, ViridianCity_Gym_Text_SamuelIntro, ViridianCity_Gym_Text_SamuelDefeat
@@ -215,17 +218,16 @@ ViridianCity_Gym_EventScript_Samuel::
 	end
 
 ViridianCity_Gym_Text_SamuelIntro::
-    .string "Viridian Gym was closed for a\n"
-    .string "long time.\p"
-    .string "But now, our Leader is back!$"
+    .string "O Ginasio de Viridian ficou fechado\n"
+    .string "por muito tempo.\p"
+    .string "Mas agora, nosso Lider voltou!$"
 
 ViridianCity_Gym_Text_SamuelDefeat::
-    .string "I was beaten?$"
+    .string "Eu fui derrotado?$"
 
 ViridianCity_Gym_Text_SamuelPostBattle::
-    .string "You can go on to the Pokémon\n"
-    .string "League only by defeating our Gym\l"
-    .string "Leader!$"
+    .string "Voce so podera ir para a Liga Pokemon\n"
+    .string "se derrotar o nosso Lider de Ginasio!$"
 
 ViridianCity_Gym_EventScript_Yuji::
 	trainerbattle_single TRAINER_COOLTRAINER_YUJI, ViridianCity_Gym_Text_YujiIntro, ViridianCity_Gym_Text_YujiDefeat
@@ -234,15 +236,15 @@ ViridianCity_Gym_EventScript_Yuji::
 
 ViridianCity_Gym_Text_YujiIntro::
     .string "Heh!\n"
-    .string "You must be running out of steam\l"
-    .string "by now!$"
+    .string "Voce ja deve estar perdendo o folego\l"
+    .string "a essa altura!$"
 
 ViridianCity_Gym_Text_YujiDefeat::
-    .string "I ran out of gas!$"
+    .string "Acabou meu combustivel!$"
 
 ViridianCity_Gym_Text_YujiPostBattle::
-    .string "You'll need power to keep up with\n"
-    .string "our Gym Leader.$"
+    .string "Voce precisara de forca para aguentar\n"
+    .string "o ritmo do nosso Lider.$"
 
 ViridianCity_Gym_EventScript_Warren::
 	trainerbattle_single TRAINER_COOLTRAINER_WARREN, ViridianCity_Gym_Text_WarrenIntro, ViridianCity_Gym_Text_WarrenDefeat
@@ -250,14 +252,15 @@ ViridianCity_Gym_EventScript_Warren::
 	end
 
 ViridianCity_Gym_Text_WarrenIntro::
-    .string "The truly talented win with style.$"
+    .string "Os que tem verdadeiro talento vencem\n"
+    .string "com estilo.$"
 
 ViridianCity_Gym_Text_WarrenDefeat::
-    .string "I lost my grip!$"
+    .string "Perdi o controle!$"
 
 ViridianCity_Gym_Text_WarrenPostBattle::
-    .string "The Leader will scold me for\n"
-    .string "losing this way…$"
+    .string "O Lider vai me dar uma bronca por\n"
+    .string "perder dessa maneira...$"
 
 
 ViridianCity_Gym_EventScript_GymGuy::
@@ -269,15 +272,16 @@ ViridianCity_Gym_EventScript_GymGuy::
 	end
 
 ViridianCity_Gym_Text_GymGuyAdvice::
-    .string "Yo!\n"
-    .string "Champ in the making!\p"
-    .string "Even I don't know the Viridian\n"
-    .string "Leader's identity.\p"
-    .string "But one thing's certain.\n"
-    .string "This will be the toughest of all\l"
-    .string "the Gym Leaders.\p"
-    .string "Also, I heard that the Trainers\n"
-    .string "here like Ground type Pokémon.$"
+    .string "E ai!\n"
+    .string "Futuro campeao!\p"
+    .string "Nem mesmo eu sei a identidade do\n"
+    .string "Lider de Viridian.\p"
+    .string "Mas uma coisa e certa:\n"
+    .string "este sera o mais dificil de todos\l"
+    .string "os Lideres de Ginasio.\p"
+    .string "Alem disso, ouvi dizer que os\n"
+    .string "Treinadores daqui curtem Pokemon\l"
+    .string "do tipo Terrestre.$"
 
 ViridianCity_Gym_EventScript_GymGuyPostVictory::
 	msgbox ViridianCity_Gym_Text_GymGuyPostVictory
@@ -285,8 +289,8 @@ ViridianCity_Gym_EventScript_GymGuyPostVictory::
 	end
 
 ViridianCity_Gym_Text_GymGuyPostVictory::
-    .string "Blow me away! Giovanni was the\n"
-    .string "Gym Leader of Viridian?$"
+    .string "Caiu o meu queixo! Giovanni era o\n"
+    .string "Lider de Ginasio de Viridian?$"
 
 ViridianCity_Gym_EventScript_GymStatue::
 	lockall
@@ -296,9 +300,9 @@ ViridianCity_Gym_EventScript_GymStatue::
 	end
 
 ViridianCity_Gym_Text_GymStatue::
-    .string "Viridian Pokémon Gym\n"
-    .string "Leader: ?\p"
-    .string "Winning Trainers:\n"
+    .string "Ginasio Pokemon de Viridian\n"
+    .string "Lider: ?\p"
+    .string "Treinadores Vencedores:\n"
     .string "{RIVAL}$"
 
 ViridianCity_Gym_EventScript_GymStatuePostVictory::
@@ -307,9 +311,9 @@ ViridianCity_Gym_EventScript_GymStatuePostVictory::
 	end
 
 ViridianCity_Gym_Text_GymStatuePlayerWon::
-    .string "Viridian Pokémon Gym\n"
-    .string "Leader: ?\p"
-    .string "Winning Trainers:\n"
+    .string "Ginasio Pokemon de Viridian\n"
+    .string "Lider: ?\p"
+    .string "Treinadores Vencedores:\n"
     .string "{RIVAL}, {PLAYER}$"
 
 ViridianCity_Gym_EventScript_Rival::
@@ -332,26 +336,26 @@ ViridianCity_Gym_EventScript_SkipRivalSpeech::
 
 ViridianCity_Gym_Text_RivalSpeech::
 	.string "{RIVAL}: ...{PLAYER}?\n"
-	.string "I've just been thinking...\p"
-	.string "Back when I started this journey,\n"
-	.string "I really thought I was the best\l"
-	.string "there ever was...\p"
-	.string "But you were always there, right\n"
-	.string "behind me...and I got careless.\p"
-	.string "I need to take some time to reflect.\n"
-	.string "Who knows...\p"
-	.string "I may not be the champion, but maybe\n"
-	.string "one day, I could be a Gym Leader...\p"
+	.string "Eu estive pensando...\p"
+	.string "Quando comecei esta jornada,\n"
+	.string "eu realmente achava que era o melhor\l"
+	.string "que existia...\p"
+	.string "Mas voce sempre esteve la, logo\n"
+	.string "atras de mim... e eu me descuidei.\p"
+	.string "Preciso de um tempo para refletir.\n"
+	.string "Quem sabe...\p"
+	.string "Posso nao ser o campeao, mas talvez\n"
+	.string "um dia eu seja um Lider de Ginasio...\p"
 	.string "...\p"
-	.string "Eh, whatever! No time to get all\n"
+	.string "Ah, tanto faz! Nao ha tempo para ficar\n"
 	.string "sentimental!$"
 
 ViridianCity_Gym_Text_RematchLeader::
-	.string "So what are you doing here?\n"
-	.string "Come here to rub it in?\p"
-	.string "Well, you made a mistake!\p"
-	.string "Don't think I'll just let you show\n"
-	.string "up without challenging you to a battle!$"
+	.string "Entao o que esta fazendo aqui?\n"
+	.string "Veio esfregar na minha cara?\p"
+	.string "Pois saiba que cometeu um erro!\p"
+	.string "Nao pense que vou te deixar aparecer\n"
+	.string "sem te desafiar para uma batalha!$"
 
 ViridianCity_Gym_EventScript_RivalJolteon::
 	setvar VAR_0x8003, 1
@@ -372,12 +376,12 @@ ViridianCity_Gym_EventScript_RivalVaporeon::
 	end
 
 ViridianCity_Gym_Text_RivalIntro::
-	.string "All right!\n"
-	.string "It's been a while since I've gone all out.\p"
-	.string "I'll prove I'm still the best there is!$"
+	.string "Muito bem!\n"
+	.string "Ja faz um tempo que nao luto com tudo.\p"
+	.string "Vou provar que ainda sou o melhor!$"
 
 ViridianCity_Gym_Text_RivalDefeat::
-	.string "Aw man, what was I doing?$"
+	.string "Poxa vida, o que eu estava fazendo?$"
 
 ViridianCity_Gym_EventScript_DefeatedRival::
 	setflag FLAG_DAILY_RIVAL_REMATCH
@@ -390,9 +394,9 @@ ViridianCity_Gym_EventScript_RivalPostBattle::
 	end
 
 ViridianCity_Gym_Text_RivalPostBattle::
-	.string "I don't like to admit it, but I'm\n"
-	.string "still not at your level.\p"
-	.string "But next time, I'll beat you!$"
+	.string "Nao gosto de admitir, mas ainda nao\n"
+	.string "estou no seu nivel.\p"
+	.string "Mas da proxima vez, eu vou vencer!$"
 
 ViridianCity_Gym_EventScript_RivalFoundTM::
 	msgbox ViridianCity_Gym_Text_FoundThis, MSGBOX_DEFAULT
@@ -409,16 +413,16 @@ ViridianCity_Gym_EventScript_RivalFoundTM::
 	return
 
 ViridianCity_Gym_Text_FoundThis::
-	.string "Oh, I almost forgot!\p"
-	.string "I found this when I was scoping this\n" 
-	.string "place out.\p"
-	.string "As much as I hate rewarding you, I\n"
-	.string "already have this TM.\p" 
-	.string "You should take it.$"
+	.string "Ah, quase esqueci!\p"
+	.string "Encontrei isto quando estava vigiando\n"
+	.string "este lugar.\p"
+	.string "Por mais que eu odeie te presentear,\n"
+	.string "eu ja tenho esse TM.\p"
+	.string "Pode ficar com ele.$"
 
 ViridianCity_Gym_Text_ReceivedTM26FromRival::
-    .string "{PLAYER} received TM26\n"
-    .string "from {RIVAL}.$"
+    .string "{PLAYER} recebeu o TM26\n"
+    .string "de {RIVAL}.$"
 
 ViridianCity_Gym_EventScript_NoRoomForTM262::
 	msgbox ViridianCity_Gym_Text_YouDoNotHaveSpace2
@@ -426,13 +430,13 @@ ViridianCity_Gym_EventScript_NoRoomForTM262::
 	end
 
 ViridianCity_Gym_Text_RivalExplainTM26::
-    .string "TM26 contains Earthquake.\p"
-    .string "It is a powerful attack that causes\n"
-    .string "a massive tremor.$"
+    .string "O TM26 contem Earthquake.\p"
+    .string "E um ataque poderoso que causa um\n"
+    .string "tremor devastador.$"
 
 ViridianCity_Gym_Text_YouDoNotHaveSpace2::
-    .string "Oh, you don't have space for this?\p"
-    .string "Too bad! Guess I'll keep it. Ha!$"
+    .string "Ah, voce nao tem espaco para isto?\p"
+    .string "Uma pena! Acho que vou guardar. Ha!$"
 
 ViridianCity_Gym_EventScript_MewtwoY::
 	lock
@@ -446,11 +450,11 @@ ViridianCity_Gym_EventScript_MewtwoY::
 	end
 
 ViridianCity_Gym_Text_MewtwoY:
-	.string "So, it was you who deflated the\n"
-	.string "oversized ego of Giovanni.\p"
-	.string "The bonds you have forged with your\n"
-	.string "Pokémon grant you tremendous strength.\p"
-	.string "I hope you will accept our challenge.$"
+	.string "Entao foi voce quem esvaziou o ego\n"
+	.string "gigantesco de Giovanni.\p"
+	.string "Os lacos que voce forjou com seus\n"
+	.string "Pokemon lhe concedem imensa forca.\p"
+	.string "Espero que aceite o nosso desafio.$"
 
 ViridianCity_Gym_EventScript_Ranger_MEIHUI::
 	lock
@@ -463,15 +467,16 @@ ViridianCity_Gym_EventScript_Ranger_MEIHUI::
 	end
 
 ViridianCity_Gym_Text_MeiHuiIntro:
-	.string "Hold it right there!\p"
-	.string "This Pokémon Gym is now under\n"
-	.string "the control of Team Yellow!$"
+	.string "Parado bem ai!\p"
+	.string "Este Ginasio Pokemon agora esta sob o\n"
+	.string "controle da Equipe Amarela!$"
 
 ViridianCity_Gym_Text_MeiHuiDefeat:
-	.string "Fight fair, will you?$"
+	.string "Lute com justica, quer fazer o favor?$"
 
 ViridianCity_Gym_Text_MeiHuiPostBattle:
-	.string "Admit it! My baby Pokémon rule!$"
+	.string "Admita! Meus Pokemon bebes mandam\n"
+	.string "muito bem!$"
 
 ViridianCity_Gym_EventScript_MegaHintMewtwo::    
     goto_if_set FLAG_GOT_MEWTWONITE_Y, ViridianCity_Gym_EventScript_MeiHuiDefeated
@@ -481,14 +486,15 @@ ViridianCity_Gym_EventScript_MegaHintMewtwo::
     end
     
 ViridianCity_Gym_Text_MewtwoYMegaHint:
-    .string "No, you can't have my items!\p"
-	.string "Who do you think you are... oh.\n"
-	.string "You're asking why my Mewtwo can\l"
-	.string "evolve during a fight.\p"
-	.string "That's the power of Mega Pokémon!\p"
-	.string "Check Cerulean Cave for a\n"
-	.string "special stone. Trust me!\p"
-	.string "It made my 3 Star even better.$"
+    .string "Nao, voce nao pode ter meus itens!\p"
+	.string "Quem voce pensa que e... ah.\n"
+	.string "Voce quer saber como meu Mewtwo pode\l"
+	.string "evoluir durante uma batalha.\p"
+	.string "Esse e o poder dos Mega Pokemon!\p"
+	.string "Procure na Cerulean Cave por uma\n"
+	.string "pedra especial. Confie em mim!\p"
+	.string "Ela deixou o meu 3 Estrelas ainda\n"
+	.string "melhor.$"
 
 ViridianCity_Gym_EventScript_MeiHuiDefeated::
     msgbox MeiHuiDefeated_Text MSGBOX_DEFAULT
@@ -496,9 +502,9 @@ ViridianCity_Gym_EventScript_MeiHuiDefeated::
 	end
 
 MeiHuiDefeated_Text:	
-	.string "Hey, are you on Red or Blue?\p"
-	.string "Can you knock me out of the gym?\n"
-	.string "I would like to get my coins.$"
+	.string "Ei, voce e da equipe Vermelha ou Azul?\p"
+	.string "Pode me derrubar do ginasio?\n"
+	.string "Eu queria pegar minhas moedas.$"
 
 ViridianCity_Gym_EventScript_MewtwoYDefeated::
 	msgbox MewtwoYDefeated MSGBOX_DEFAULT
@@ -506,5 +512,5 @@ ViridianCity_Gym_EventScript_MewtwoYDefeated::
 	end
 
 MewtwoYDefeated:	
-	.string "Hold your head high, {PLAYER}.\p"
-	.string "You were a formidable opponent.$"
+	.string "Mantenha a cabeca erguida, {PLAYER}.\p"
+	.string "Voce foi um oponente formidavel.$"

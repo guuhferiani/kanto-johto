@@ -36,8 +36,8 @@ Route23_EventScript_VictoryRoadGateSign::
 	end
 
 Route23_Text_VictoryRoadGateSign::
-    .string "Victory Road Gate -\n"
-    .string "Pokémon League$"
+    .string "Portao da Victory Road -\n"
+    .string "Liga Pokemon$"
 
 Route23_EventScript_ItemTM10::
 	finditem ITEM_TM10, 1
@@ -105,17 +105,17 @@ Route23_EventScript_Tangela::
 	end
 
 Route23_Text_Tangela:
-	.string "Tangela is practicing soft\n"
-	.string "and quiet feet in the grass.$"
+	.string "Tangela esta praticando passos\n"
+	.string "suaves e silenciosos na grama.$"
 
 Route23_Text_AlexIntro:
-	.string "Tag, you're it?$"
+	.string "Pega-pega, ta com voce?$"
 
 Route23_Text_AlexDefeat:
-	.string "Dang, now I'm it!$"
+	.string "Caramba, agora ta comigo!$"
 
 Route23_Text_AlexPostBattle:
-	.string "Thanks for playing!$"
+	.string "Obrigada por brincar!$"
 
 Route23_EventScript_TalkAboutTangela::    
     msgbox Route23_Text_TalkAboutTangela MSGBOX_DEFAULT
@@ -124,21 +124,21 @@ Route23_EventScript_TalkAboutTangela::
     end
     
 Route23_Text_TalkAboutTangela:
-    .string "No matter how hard Gordon tries,\n"
-	.string "he can't quite seem to figure\l"
-	.string "how to make quiet steps.$"
+    .string "Nao importa o quanto Gordon tente,\n"
+	.string "ele nao consegue descobrir como\l"
+	.string "dar passos silenciosos.$"
 
 Route23_Text_AlexGreeting:
-	.string "Oh... hi!\n"
-	.string "You're not who I was expecting.\p"
-	.string "I'm taking a break from training\n"
-	.string "for the League to play with my\l"
-	.string "amazing Pokémon.$"
+	.string "Ah... oi!\n"
+	.string "Voce nao e quem eu esperava.\p"
+	.string "Estou fazendo uma pausa no treino\n"
+	.string "da Liga para brincar com o meu\l"
+	.string "incrivel Pokemon.$"
 
 Route23_Text_AlexLooking:
-	.string "Speaking of which, it's not\n"
-	.string "like Gordon to take this long\l"
-	.string "during hide and seek...$"
+	.string "Falando nisso, nao e do feitio do\n"
+	.string "Gordon demorar tanto assim no\l"
+	.string "esconde-esconde...$"
 
 Movement_LookUpDownRightFacePlayer::
 	face_up

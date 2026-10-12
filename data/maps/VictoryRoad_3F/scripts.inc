@@ -35,14 +35,14 @@ VictoryRoad_3F_EventScript_George::
 	end
 
 VictoryRoad_3F_Text_GeorgeIntro::
-    .string "I heard rumors of a child prodigy.$"
+    .string "Ouvi boatos sobre uma crianca prodigio.$"
 
 VictoryRoad_3F_Text_GeorgeDefeat::
-    .string "The rumors were true!$"
+    .string "Os boatos eram verdadeiros!$"
 
 VictoryRoad_3F_Text_GeorgePostBattle::
-    .string "So, it was you who beat Giovanni\n"
-    .string "of Team Rocket?$"
+    .string "Entao foi voce quem derrotou Giovanni\n"
+    .string "da Equipe Rocket?$"
 
 VictoryRoad_3F_EventScript_Colby::
 	trainerbattle_single TRAINER_COOLTRAINER_COLBY, VictoryRoad_3F_Text_ColbyIntro, VictoryRoad_3F_Text_ColbyDefeat
@@ -50,15 +50,15 @@ VictoryRoad_3F_EventScript_Colby::
 	end
 
 VictoryRoad_3F_Text_ColbyIntro::
-    .string "Only the chosen can pass here!$"
+    .string "Apenas os escolhidos podem passar aqui!$"
 
 VictoryRoad_3F_Text_ColbyDefeat::
-    .string "I don't believe it!$"
+    .string "Nao acredito nisso!$"
 
 VictoryRoad_3F_Text_ColbyPostBattle::
-    .string "All Trainers here are headed to\n"
-    .string "the Pokémon League.\p"
-    .string "Don't let down your guard.$"
+    .string "Todos os Treinadores aqui vao para\n"
+    .string "a Liga Pokemon.\p"
+    .string "Nao baixe a sua guarda.$"
 
 VictoryRoad_3F_EventScript_Caroline::
 	trainerbattle_single TRAINER_COOLTRAINER_CAROLINE, VictoryRoad_3F_Text_CarolineIntro, VictoryRoad_3F_Text_CarolineDefeat
@@ -66,15 +66,14 @@ VictoryRoad_3F_EventScript_Caroline::
 	end
 
 VictoryRoad_3F_Text_CarolineIntro::
-    .string "I'll show you just how good you\n"
-    .string "are. Not!$"
+    .string "Vou te mostrar o quao bom voce e.\n"
+    .string "So que nao!$"
 
 VictoryRoad_3F_Text_CarolineDefeat::
-    .string "I'm furious!$"
+    .string "Estou furiosa!$"
 
 VictoryRoad_3F_Text_CarolinePostBattle::
-    .string "You showed me just how good\n"
-    .string "I was…$"
+    .string "Voce me mostrou o quao boa eu era...$"
 
 VictoryRoad_3F_EventScript_Alexa::
 	trainerbattle_single TRAINER_COOLTRAINER_ALEXA, VictoryRoad_3F_Text_AlexaIntro, VictoryRoad_3F_Text_AlexaDefeat
@@ -82,16 +81,16 @@ VictoryRoad_3F_EventScript_Alexa::
 	end
 
 VictoryRoad_3F_Text_AlexaIntro::
-    .string "Trainers live to seek stronger\n"
-    .string "opponents.$"
+    .string "Treinadores vivem para buscar\n"
+    .string "oponentes mais fortes.$"
 
 VictoryRoad_3F_Text_AlexaDefeat::
     .string "Oh!\n"
-    .string "So strong!$"
+    .string "Tao forte!$"
 
 VictoryRoad_3F_Text_AlexaPostBattle::
-    .string "By fighting tough battles, you get\n"
-    .string "stronger.$"
+    .string "Lutando batalhas dificeis, voce fica\n"
+    .string "mais forte.$"
 
 VictoryRoad_3F_EventScript_Ray::
 	trainerbattle_double TRAINER_COOL_COUPLE_RAY_TYRA, VictoryRoad_3F_Text_RayIntro, VictoryRoad_3F_Text_RayDefeat, VictoryRoad_3F_Text_RayNotEnoughMons
@@ -99,22 +98,22 @@ VictoryRoad_3F_EventScript_Ray::
 	end
 
 VictoryRoad_3F_Text_RayIntro::
-    .string "Ray: Together, the two of us are\n"
-    .string "destined for greatness!$"
+    .string "Ray: Juntos, nos dois estamos\n"
+    .string "destinados a grandeza!$"
 
 VictoryRoad_3F_Text_RayDefeat::
-    .string "Ray: Ludicrous!\n"
-    .string "This can't be!$"
+    .string "Ray: Ridiculo!\n"
+    .string "Isso nao pode ser!$"
 
 VictoryRoad_3F_Text_RayPostBattle::
-    .string "Ray: You've beaten us.\n"
-    .string "Greatness remains elusive…$"
+    .string "Ray: Voce nos venceu.\n"
+    .string "A grandeza continua distante...$"
 
 VictoryRoad_3F_Text_RayNotEnoughMons::
-    .string "Ray: Together, the two of us are\n"
-    .string "striving for the pinnacle.\p"
-    .string "We need you to bring two Pokémon\n"
-    .string "into battle with us.$"
+    .string "Ray: Juntos, nos dois buscamos\n"
+    .string "o topo.\p"
+    .string "Precisamos que traga dois Pokemon para\n"
+    .string "batalhar conosco.$"
 
 VictoryRoad_3F_EventScript_Tyra::
 	trainerbattle_double TRAINER_COOL_COUPLE_RAY_TYRA, VictoryRoad_3F_Text_TyraIntro, VictoryRoad_3F_Text_TyraDefeat, VictoryRoad_3F_Text_TyraNotEnoughMons
@@ -122,19 +121,19 @@ VictoryRoad_3F_EventScript_Tyra::
 	end
 
 VictoryRoad_3F_Text_TyraIntro::
-    .string "Tyra: We're trying to become\n"
-    .string "champions together.$"
+    .string "Tyra: Estamos tentando nos tornar\n"
+    .string "campeoes juntos.$"
 
 VictoryRoad_3F_Text_TyraDefeat::
-    .string "Tyra: Oh, but…$"
+    .string "Tyra: Ah, mas...$"
 
 VictoryRoad_3F_Text_TyraPostBattle::
-    .string "Tyra: You've taught me that power\n"
-    .string "can be infinite in shape and form.$"
+    .string "Tyra: Voce me ensinou que o poder\n"
+    .string "pode ter infinitas formas e feitios.$"
 
 VictoryRoad_3F_Text_TyraNotEnoughMons::
-    .string "Tyra: You can't battle with us if\n"
-    .string "you have only one Pokémon.$"
+    .string "Tyra: Nao podemos batalhar se voce\n"
+    .string "tiver apenas um Pokemon.$"
 
 VictoryRoad_3F_EventScript_ItemMaxRevive::
 	finditem ITEM_MAX_REVIVE, 1
@@ -158,21 +157,21 @@ VictoryRoad_3F_EventScript_NinjaOrion::
 	end
 
 VictoryRoad_3F_Text_OrionIntro:
-	.string "Come at me, bro!$"
+	.string "Cai dentro, parceiro!$"
 
 VictoryRoad_3F_Text_OrionDefeat:
-	.string "Such power! How is this possible?$"
+	.string "Tamanho poder! Como isso e possivel?$"
 
 VictoryRoad_3F_Text_OrionPostBattle:
-	.string "I may have lost this battle\n"
-	.string "but it remains to be seen if\l"
-	.string "you can win this war!\p"
-	.string "Raichu, Blastoise, and I will\n"
-	.string "train harder than ever.\p"
-	.string "That's our Ninja Way!$"	
+	.string "Posso ter perdido esta batalha,\n"
+	.string "mas ainda veremos se voce consegue\l"
+	.string "vencer esta guerra!\p"
+	.string "Raichu, Blastoise e eu vamos treinar\n"
+	.string "mais duro do que nunca.\p"
+	.string "Esse e o nosso Jeito Ninja!$"	
 
 VictoryRoad_3F_Text_OrionNotEnoughMons::
-    .string "You are either very brave or\n"
-    .string "very foolish to walk around\l"
-	.string "here with only one Pokémon.$"
+    .string "Voce e muito corajoso ou muito\n"
+    .string "tolo para andar por aqui com apenas\l"
+    .string "um Pokemon.$"
 

@@ -22,14 +22,14 @@ IndigoPlateau_PokemonCenter_1F_EventScript_GymGuy::
 	end
 
 IndigoPlateau_PokemonCenter_1F_Text_GymGuyAdvice::
-    .string "Yo!\n"
-    .string "Champ in the making!\p"
-    .string "At the Pokémon League, you will\n"
-    .string "face the Elite Four all in a row.\p"
-    .string "If you lose, you have to start all\n"
-    .string "over again!\p"
-    .string "This is it!\n"
-    .string "Go for it!$"
+    .string "E ai!\n"
+    .string "Futuro campeao!\p"
+    .string "Na Liga Pokemon, voce enfrentara\n"
+    .string "a Elite dos Quatro em sequencia.\p"
+    .string "Se perder, tera que comecar tudo\n"
+    .string "de novo!\p"
+    .string "E agora ou nunca!\n"
+    .string "Va em frente!$"
 
 IndigoPlateau_PokemonCenter_1F_EventScript_DoorGuard::
     lock
@@ -41,7 +41,7 @@ IndigoPlateau_PokemonCenter_1F_EventScript_DoorGuard::
     end
 
 IndigoPlateau_PokemonCenter_1F_Text_GreetingsChampion::
-	.string "Hello, Champion {PLAYER}!$"
+	.string "Ola, Campeao {PLAYER}!$"
 	
 IndigoPlateau_PokemonCenter_1F_EventScript_TitleMatch::
 	playse SE_PIN
@@ -91,10 +91,10 @@ IndigoPlateau_PokemonCenter_1F_EventScript_EliteFourPostGame::
     end
 
 IndigoPlateau_PokemonCenter_1F_Text_Challenger::
-	.string "Oh! It seems someone has defeated the\n"
-	.string "Elite Four today.\p"
-	.string "They are challenging you to a Title Match!\n"
-	.string "Are you here to accept their challenge?$"
+	.string "Oh! Parece que alguem derrotou a\n"
+	.string "Elite dos Quatro hoje.\p"
+	.string "Estao te desafiando para Disputa de Titulo!\n"
+	.string "Veio aqui aceitar o desafio?$"
 
 IndigoPlateau_PokemonCenter_1F_EventScript_EliteFourFirstChallenge::
     msgbox IndigoPlateau_PokemonCenter_1F_Text_FaceEliteFour, MSGBOX_YESNO
@@ -174,21 +174,21 @@ Player_Movement_FaceDown:
 	step_end
 
 IndigoPlateau_PokemonCenter_1F_Text_FaceEliteFour::
-    .string "From here on, you face the\n"
-    .string "Elite Four one by one.\p"
-    .string "If you win, a door opens to the\n"
-    .string "next trainer.\p"
-    .string "You cannot return until you have\n"
-    .string "defeated them all, or have failed.\p"
-    .string "Are you prepared for the challenge?$"
+    .string "A partir daqui, voce enfrenta a\n"
+    .string "Elite dos Quatro um por um.\p"
+    .string "Se vencer, uma porta se abre para o\n"
+    .string "proximo treinador.\p"
+    .string "Nao pode voltar ate derrotar todos\n"
+    .string "ou ser derrotado.\p"
+    .string "Esta preparado para o desafio?$"
 
 IndigoPlateau_PokemonCenter_1F_Text_FaceEliteFourPostGame::
-    .string "As the Champion, you can challenge\n"
-    .string "the Elite Four to exhibition battles.\p"
-    .string "Be warned, though.\p"
-    .string "Now that you have already proven your\n"
-    .string "skills, they will not be holding back.\p"
-    .string "Are you prepared for the challenge?$"
+    .string "Como Campeao, voce pode desafiar a\n"
+    .string "Elite dos Quatro para exibicao.\p"
+    .string "Mas esteja avisado.\p"
+    .string "Agora que ja provou suas habilidades,\n"
+    .string "eles nao vao pegar leve.\p"
+    .string "Esta preparado para o desafio?$"
 
 IndigoPlateau_PokemonCenter_1F_EventScript_Decline::
 	msgbox IndigoPlateau_PokemonCenter_1F_Text_GuardDecline, MSGBOX_DEFAULT
@@ -197,12 +197,12 @@ IndigoPlateau_PokemonCenter_1F_EventScript_Decline::
 	end
 
 IndigoPlateau_PokemonCenter_1F_Text_GuardDecline::
-	.string "I understand.\n"
-	.string "Please see me if you change your mind.$"
+	.string "Eu compreendo.\n"
+	.string "Fale comigo se mudar de ideia.$"
 
 IndigoPlateau_PokemonCenter_1F_Text_ExcellentGoodLuck::
-	.string "Excellent!\n"
-	.string "Good luck!$"
+	.string "Excelente!\n"
+	.string "Boa sorte!$"
 
 IndigoPlateau_PokemonCenter_1F_EventScript_BlackBelt::
     lock
@@ -212,16 +212,16 @@ IndigoPlateau_PokemonCenter_1F_EventScript_BlackBelt::
     end
 
 IndigoPlateau_PokemonCenter_1F_Text_AgathaWhuppedUs::
-    .string "Agatha's Ghost type Pokémon are\n"
-    .string "horrifically terrifying in toughness.\p"
-    .string "I took my Fighting type Pokémon\n"
-    .string "and raised them to the max.\p"
-    .string "I went at Agatha feeling pretty\n"
-    .string "confident, but she whupped us.\p"
-    .string "That old lady's also got a really\n"
-    .string "short fuse, too.\p"
-    .string "It doesn't take anything to get\n"
-    .string "that scary lady hollering.$"
+    .string "Os Pokemon Fantasma de Agatha sao\n"
+    .string "assustadoramente resistentes.\p"
+    .string "Treinei meus Pokemon do tipo Lutador\n"
+    .string "ao maximo.\p"
+    .string "Fui enfrentar Agatha bem confiante,\n"
+    .string "mas ela acabou com a gente.\p"
+    .string "Aquela senhora tambem tem um pavio\n"
+    .string "curtissimo.\p"
+    .string "Nao precisa de nada para aquela velha\n"
+    .string "assustadora comecar a gritar.$"
 
 IndigoPlateau_PokemonCenter_1F_EventScript_Dragontamer::
     lock
@@ -231,11 +231,11 @@ IndigoPlateau_PokemonCenter_1F_EventScript_Dragontamer::
     end
 
 IndigoPlateau_PokemonCenter_1F_Text_LancesCousinGymLeaderFarAway::
-    .string "Maybe becoming an Elite Four\n"
-    .string "member is in the blood.\p"
-    .string "From what I've heard, Lance has\n"
-    .string "a cousin who's a Gym Leader\l"
-    .string "somewhere far away.$"
+    .string "Talvez ser da Elite dos Quatro\n"
+    .string "esteja no sangue.\p"
+    .string "Pelo que ouvi, Lance tem uma prima\n"
+    .string "que e Lider de Ginasio em algum\l"
+    .string "lugar bem distante.$"
 
 IndigoPlateau_PokemonCenter_1F_EventScript_PokemonJournal::
 	lock
@@ -245,12 +245,12 @@ IndigoPlateau_PokemonCenter_1F_EventScript_PokemonJournal::
 	end
 
 PokemonJournal_Text_SpecialFeatureLance::
-	.string "Pokémon Journal\p"
-	.string "Special Feature:\n"
-	.string "Elite Four's Lance!\p"
-	.string "Lance's grandfather is thought to\n"
-	.string "be the elder of a famous clan of\l"
-	.string "dragon masters.$"
+	.string "Revista Pokemon\p"
+	.string "Edicao Especial:\n"
+	.string "Lance da Elite dos Quatro!\p"
+	.string "Dizem que o avo de Lance e o anciao\n"
+	.string "de um famoso cla de mestres de\l"
+	.string "dragoes.$"
 
 IndigoPlateau_PokemonCenter_1F_EventScript_Clerk::
 	lock
@@ -307,11 +307,11 @@ IndigoPlateau_PokemonCenter_1F_EventScript_GiveLeppaBerry::
 	return
 
 IndigoPlateau_PokemonCenter_1F_Text_NoPokeCenters::
-	.string "When you take on the Elite Four, you\n"
-	.string "won't be able to return to the Pokémon\l"
-	.string "Center to heal!\p"
-	.string "A berry like this could make all the\n"
-	.string "difference!$"
+	.string "Ao enfrentar a Elite dos Quatro, voce\n"
+	.string "nao podera voltar ao Centro Pokemon\l"
+	.string "para se curar!\p"
+	.string "Uma frutinha como esta pode fazer toda\n"
+	.string "a diferenca!$"
 
 IndigoPlateau_PokemonCenter_1F_EventScript_Determination::
 	msgbox IndigoPlateau_PokemonCenter_1F_Text_Determination, MSGBOX_NPC
@@ -319,6 +319,6 @@ IndigoPlateau_PokemonCenter_1F_EventScript_Determination::
 	end
 
 IndigoPlateau_PokemonCenter_1F_Text_Determination::
-	.string "It takes every thing you have\n"
-	.string "to take on the Elite Four!\p"
-	.string "I hope you're filled with determination!$"
+	.string "E preciso dar tudo de si para encarar\n"
+	.string "a Elite dos Quatro!\p"
+	.string "Espero que esteja cheio de determinacao!$"
