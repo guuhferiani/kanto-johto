@@ -21,6 +21,6 @@ EventScript_ScarySeas::
 	end
 
 EventScript_ScarySeasText:
-	.string "The water before you looks inviting.\p"
-	.string "Perhaps surfing is in your future.$"
+	.string "A água à sua frente parece convidativa.\p"
+	.string "Talvez você possa surfar no futuro.$"
 

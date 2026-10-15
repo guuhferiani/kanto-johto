@@ -565,9 +565,9 @@ EventScript_OpenDoor::
 
 Text_CardKeyOpenedDoor::
     .string "Bingo!\n"
-    .string "The Card Key opened the door!$"
+    .string "A Chave Magnética abriu a porta!$"
 
 Text_ItNeedsCardKey::
-    .string "No!\n"
-    .string "It needs a Card Key!$"
+    .string "Não!\n"
+    .string "Precisa de uma Chave Magnética!$"
 

@@ -2,13 +2,13 @@ gText_FollowerLovesYou::
   .string "123456789012345678901234567890123\n$"
 
 gText_FollowerLostInThought::
-  .string "{STR_VAR_1} seems lost in thought.$"
+  .string "{STR_VAR_1} parece perdido em pensamentos.$"
 
 gText_FollowerDefault::
-  .string "ERROR 404: Script not found.$"
+  .string "ERRO 404: Script não encontrado.$"
 
 gText_WantsToFly::
-  .string "{STR_VAR_1} looks up at the\nsky restlessly.\pWould you like to use Fly?$"
+  .string "{STR_VAR_1} olha para o céu\ninquieto.\pDeseja usar Voar?$"
 
 .macro playfirstmoncry
 callfunc ScrFunc_playfirstmoncry
