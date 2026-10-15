@@ -704,6 +704,13 @@ bool8 StandardWildEncounter(u16 currMetaTileBehavior, u16 previousMetaTileBehavi
     if (sWildEncountersDisabled == TRUE)
         return FALSE;
 
+    // Overworld visible encounter mode: disable random invisible encounters in grass/water
+    // Wild encounters happen exclusively by walking up to visible roaming Pokémon on the map!
+    if (MetatileBehavior_IsLandWildEncounter(currMetaTileBehavior) == TRUE ||
+        MetatileBehavior_IsWaterWildEncounter(currMetaTileBehavior) == TRUE ||
+        (TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING) && MetatileBehavior_IsBridgeOverWater(currMetaTileBehavior) == TRUE))
+        return FALSE;
+
     headerId = GetCurrentMapWildMonHeaderId();
     if (headerId == HEADER_NONE)
     {

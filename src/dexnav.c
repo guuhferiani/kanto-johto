@@ -588,9 +588,13 @@ static void RemoveDexNavWindowAndGfx(void)
     SafeFreeMonIconPalette(sDexNavSearchDataPtr->species);
     
     // remove window
-    ClearStdWindowAndFrameToTransparent(sDexNavSearchDataPtr->windowId, FALSE);
-    CopyWindowToVram(sDexNavSearchDataPtr->windowId, 3);
-    RemoveWindow(sDexNavSearchDataPtr->windowId);
+    if (sDexNavSearchDataPtr->windowId != 0xFF && sDexNavSearchDataPtr->windowId != 0)
+    {
+        ClearStdWindowAndFrameToTransparent(sDexNavSearchDataPtr->windowId, FALSE);
+        CopyWindowToVram(sDexNavSearchDataPtr->windowId, 3);
+        RemoveWindow(sDexNavSearchDataPtr->windowId);
+        sDexNavSearchDataPtr->windowId = 0xFF;
+    }
 }
 
 
@@ -838,15 +842,10 @@ static void Task_SetUpDexNavSearch(u8 taskId)
     sDexNavSearchDataPtr->heldItem = DexNavGenerateHeldItem(species, searchLevel);
     sDexNavSearchDataPtr->abilityNum = DexNavGetAbilityNum(species, searchLevel);
     sDexNavSearchDataPtr->potential = DexNavGeneratePotential(searchLevel);
-    DexNavProximityUpdate();
-    
-    LoadSearchIconData();
-    if (sDexNavSearchDataPtr->hiddenSearch)
+    sDexNavSearchDataPtr->windowId = 0xFF;
+    if (!sDexNavSearchDataPtr->hiddenSearch)
     {
-        DexNavDrawHiddenIcons();
-    }
-    else
-    {
+        LoadSearchIconData();
         DexNavDrawIcons();
         DexNavUpdateSearchWindow(sDexNavSearchDataPtr->proximity, searchLevel);
     }
@@ -1090,12 +1089,6 @@ static void Task_DexNavSearch(u8 taskId)
         return;
     }
     
-    if (sDexNavSearchDataPtr->proximity <= 2 && TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_DASH | PLAYER_AVATAR_FLAG_BIKE)) 
-    { // running/biking too close scares the wild mon
-        EndDexNavSearchSetupScript(EventScript_MovedTooFast, taskId);
-        return;
-    }
-    
     if (ScriptContext2_IsEnabled() == TRUE)
     { // check if script just executed
         EndDexNavSearch(taskId);
@@ -1103,7 +1096,8 @@ static void Task_DexNavSearch(u8 taskId)
     }
     
     if (gTasks[taskId].tFrameCount > DEXNAV_TIMEOUT * 60)
-    { // player took too long
+    { // player took too long, wild pokemon flees
+        PlaySE(SE_FLEE);
         if (sDexNavSearchDataPtr->hiddenSearch && !task->tRevealed)
             EndDexNavSearch(taskId);
         else
@@ -1128,7 +1122,7 @@ static void Task_DexNavSearch(u8 taskId)
         return;
     }
     
-    if (sDexNavSearchDataPtr->hiddenSearch && !task->tRevealed &&
+    if (!sDexNavSearchDataPtr->hiddenSearch && !task->tRevealed &&
         (JOY_NEW(SELECT_BUTTON) || (sDexNavSearchDataPtr->proximity < CREEPING_PROXIMITY)))
     {
         PlaySE(SE_DEX_SEARCH);
@@ -1168,7 +1162,7 @@ static void Task_DexNavSearch(u8 taskId)
     if (task->tProximity != sDexNavSearchDataPtr->proximity)
     {
         //player has moved
-        if (task->tRevealed)    //update search window info only if hidden mon has been revealed (always true for search mode)
+        if (task->tRevealed && !sDexNavSearchDataPtr->hiddenSearch)    //update search window info only if manual search mode
             DexNavUpdateSearchWindow(sDexNavSearchDataPtr->proximity, sDexNavSearchDataPtr->searchLevel);
         
         task->tProximity = sDexNavSearchDataPtr->proximity;
