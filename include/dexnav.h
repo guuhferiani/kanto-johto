@@ -9,9 +9,9 @@
 #define DEXNAV_CHAIN_MAX                100
 
 //hidden pokemon options - tuned for dynamic overworld visible encounters
-#define HIDDEN_MON_STEP_COUNT       25  //look for hidden pokemon every x steps
-#define HIDDEN_MON_SEARCH_RATE      75  //x% chance of finding hidden pokemon every x steps
-#define HIDDEN_MON_PROBABILTY       60  //x% chance of finding hidden mon compared to regular encounter data
+#define HIDDEN_MON_STEP_COUNT       45  //look for hidden pokemon every x steps
+#define HIDDEN_MON_SEARCH_RATE      45  //x% chance of finding hidden pokemon every x steps
+#define HIDDEN_MON_PROBABILTY       35  //x% chance of finding hidden mon compared to regular encounter data
 
 //// SEARCH PROBABILITIES
 // see https://m.bulbapedia.bulbagarden.net/wiki/DexNav#Benefits

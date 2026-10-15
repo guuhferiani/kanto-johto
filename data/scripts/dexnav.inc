@@ -14,8 +14,8 @@ EventScript_NotFoundNearby::
     end
 
 sText_NotFoundNearby:
-    .string "It couldn't be found nearby.\n"
-    .string "Try looking in a different area!$"
+    .string "Não foi encontrado por perto.\n"
+    .string "Tente procurar em outra área!$"
 
 
 EventScript_MovedTooFast::
@@ -23,10 +23,10 @@ EventScript_MovedTooFast::
     end
 
 sText_TryMovingSlower:
-    .string "The Pokémon got away!\n"
-    .string "Try moving more slowly.\p"
-    .string "Hold A to switch to tip-toe\n"
-    .string "mode on your Running Shoes!$"
+    .string "O Pokémon fugiu!\n"
+    .string "Tente se mover mais devagar.\p"
+    .string "Segure A para andar na ponta\n"
+    .string "dos pés com os Tênis de Corrida!$"
 
 
 EventScript_PokemonGotAway::
@@ -34,20 +34,20 @@ EventScript_PokemonGotAway::
     end
 	
 sText_PokemonGotAway:
-    .string "The Pokémon got away!$"
+    .string "O Pokémon fugiu!$"
 
 EventScript_LostSignal::
     msgbox sText_LostSignal, MSGBOX_SIGN
     end
 
 sText_LostSignal:
-    .string "There is no reaction.\n"
-    .string "The signal was lost!$"
+    .string "Não há nenhuma reação.\n"
+    .string "O sinal foi perdido!$"
 
 EventScript_TooDark::
     msgbox sText_TooDark, MSGBOX_SIGN
     end
 
 sText_TooDark:
-    .string "It's too dark to search\n"
-	.string "for a Pokémon!$"
+    .string "Está escuro demais para\n"
+	.string "procurar um Pokémon!$"
