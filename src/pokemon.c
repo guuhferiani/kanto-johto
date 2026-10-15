@@ -6471,6 +6471,35 @@ u16 GetBattleBGM(void)
         return MUS_VS_KYOGRE_GROUDON;
     else if (gBattleTypeFlags & BATTLE_TYPE_REGI)
         return MUS_VS_REGI;
+    else if (gBattleTypeFlags & BATTLE_TYPE_LEGENDARY)
+    {
+        u16 species = GetMonData(&gEnemyParty[0], MON_DATA_SPECIES, NULL);
+        switch (species)
+        {
+        case SPECIES_MEWTWO:
+            return MUS_RG_VS_MEWTWO;
+        case SPECIES_DEOXYS:
+            return MUS_RG_VS_DEOXYS;
+        case SPECIES_MEW:
+            return MUS_VS_MEW;
+        case SPECIES_RAYQUAZA:
+            return MUS_VS_RAYQUAZA;
+        case SPECIES_GROUDON:
+        case SPECIES_KYOGRE:
+            return MUS_VS_KYOGRE_GROUDON;
+        case SPECIES_ARTICUNO:
+        case SPECIES_ZAPDOS:
+        case SPECIES_MOLTRES:
+        case SPECIES_RAIKOU:
+        case SPECIES_ENTEI:
+        case SPECIES_SUICUNE:
+        case SPECIES_LUGIA:
+        case SPECIES_HO_OH:
+        case SPECIES_CELEBI:
+        default:
+            return MUS_RG_VS_LEGEND;
+        }
+    }
     else if (gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED_LINK))
         return MUS_RG_VS_TRAINER;
     else if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)
@@ -6505,7 +6534,7 @@ u16 GetBattleBGM(void)
                 return MUS_RG_VS_TRAINER;
             return MUS_RG_VS_TRAINER;
         case TRAINER_CLASS_ELITE_FOUR:
-            return MUS_VS_ELITE_FOUR;
+            return MUS_RG_VS_GYM_LEADER;
         case TRAINER_CLASS_SALON_MAIDEN:
         case TRAINER_CLASS_DOME_ACE:
         case TRAINER_CLASS_PALACE_MAVEN:

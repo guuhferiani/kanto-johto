@@ -817,6 +817,8 @@ extern const u8 gText_SouthernIsland[];
 extern const u8 gText_NavelRock[];
 extern const u8 gText_BirthIsland[];
 extern const u8 gText_FarawayIsland[];
+extern const u8 gText_SSAquaJohto[];
+extern const u8 gText_SSAquaVermilion[];
 
 extern const u8 gText_BattleTrainers[];
 extern const u8 gText_BattleBasics[];

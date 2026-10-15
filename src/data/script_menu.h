@@ -881,6 +881,20 @@ static const struct MenuAction MultichoiceList_AllDrinks[] =
     {gText_Cancel2},
 };
 
+static const struct MenuAction MultichoiceList_SSAquaVermilion[] =
+{
+    {gText_SSAquaJohto},
+    {gText_FarawayIsland},
+    {gText_Cancel2},
+};
+
+static const struct MenuAction MultichoiceList_SSAquaJohto[] =
+{
+    {gText_SSAquaVermilion},
+    {gText_FarawayIsland},
+    {gText_Cancel2},
+};
+
 struct MultichoiceListStruct
 {
     const struct MenuAction *list;
@@ -1007,6 +1021,8 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_FOSSIL_AMBERHELIX]          = MULTICHOICE(MultichoiceList_AmberHelix),
     [MULTI_FOSSIL_AMBERDOME]           = MULTICHOICE(MultichoiceList_AmberDome),
     [MULTI_BATTLE_MODE_2]              = MULTICHOICE(MultichoiceList_BattleMode2),
+    [MULTI_SS_AQUA_VERMILION]          = MULTICHOICE(MultichoiceList_SSAquaVermilion),
+    [MULTI_SS_AQUA_JOHTO]              = MULTICHOICE(MultichoiceList_SSAquaJohto),
 };
 
 const u8 *const gStdStrings[] =

@@ -11,6 +11,12 @@ SSAnne_Exterior_MapScripts::
 
 SSAnne_Exterior_OnTransition:
 	call Common_EventScript_GetDayOrNight
+	goto_if_set FLAG_SYS_GAME_CLEAR, SSAnne_Exterior_EventScript_SetupSSAqua
+	end
+
+SSAnne_Exterior_EventScript_SetupSSAqua::
+	clearflag FLAG_HIDE_SS_ANNE
+	clearflag FLAG_HIDE_VERMILION_HARBOR_SAILOR
 	end
 
 SSAnne_Exterior_OnWarp::
@@ -20,6 +26,7 @@ SSAnne_Exterior_OnWarp::
 
 SSAnne_Exterior_OnResume:
 	call Common_EventScript_GetDayOrNight
+	goto_if_set FLAG_SYS_GAME_CLEAR, SSAnne_Exterior_EventScript_SetupSSAqua
 	end
 
 SSAnne_Exterior_BlockDock::
@@ -64,14 +71,94 @@ Movement_MissedBoat:
 	delay_16
 	step_end
 
-@This guy will be used later. This is mostly placeholder.
 SSAnne_Exterior_EventScript_Sailor::
-	msgbox SSAnne_Exterior_Text_MissedTheBoat, MSGBOX_NPC
+	lock
+	faceplayer
+	goto_if_set FLAG_SYS_GAME_CLEAR, SSAnne_Exterior_EventScript_SSAquaBoarding
+	msgbox SSAnne_Exterior_Text_SSAquaPreparing, MSGBOX_DEFAULT
 	release
 	end
 
-SSAnne_Exterior_Text_MissedTheBoat::
-	.string "Oh não! Eu perdi o navio!$"
+SSAnne_Exterior_EventScript_SSAquaBoarding::
+	msgbox SSAnne_Exterior_Text_SSAquaWelcome, MSGBOX_DEFAULT
+	message SSAnne_Exterior_Text_WhereToSail
+	waitmessage
+	multichoice 18, 6, MULTI_SS_AQUA_VERMILION, FALSE
+	switch VAR_RESULT
+	case 0, SSAnne_Exterior_EventScript_SailToJohto
+	case 1, SSAnne_Exterior_EventScript_SailToFarawayIsland
+	case 2, SSAnne_Exterior_EventScript_CancelSail
+	case MULTI_B_PRESSED, SSAnne_Exterior_EventScript_CancelSail
+	end
+
+SSAnne_Exterior_EventScript_SailToJohto::
+	msgbox SSAnne_Exterior_Text_ConfirmJohto, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SSAnne_Exterior_EventScript_CancelSail
+	msgbox SSAnne_Exterior_Text_DepartingToJohto, MSGBOX_DEFAULT
+	closemessage
+	fadescreen FADE_TO_BLACK
+	fadenewbgm MUS_SURF
+	playse SE_SHIP
+	delay 60
+	warp MAP_BATTLE_FRONTIER_OUTSIDE_WEST, 19, 70
+	waitstate
+	release
+	end
+
+SSAnne_Exterior_EventScript_SailToFarawayIsland::
+	msgbox SSAnne_Exterior_Text_ConfirmFaraway, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SSAnne_Exterior_EventScript_CancelSail
+	msgbox SSAnne_Exterior_Text_DepartingToFaraway, MSGBOX_DEFAULT
+	closemessage
+	fadescreen FADE_TO_BLACK
+	fadenewbgm MUS_SURF
+	playse SE_SHIP
+	delay 60
+	warp MAP_FARAWAY_ISLAND_ENTRANCE, 13, 38
+	waitstate
+	release
+	end
+
+SSAnne_Exterior_EventScript_CancelSail::
+	msgbox SSAnne_Exterior_Text_ComeBackAnytime, MSGBOX_DEFAULT
+	release
+	end
+
+SSAnne_Exterior_Text_SSAquaPreparing::
+	.string "O S.S. Anne já zarpou em sua viagem anual.\p"
+	.string "Estamos nos preparativos do navio S.S. Aqua\n"
+	.string "para a conexão oceânica com Johto!\p"
+	.string "O serviço será inaugurado assim que você\n"
+	.string "conquistar a Liga Pokémon e se tornar Campeão!$"
+
+SSAnne_Exterior_Text_SSAquaWelcome::
+	.string "Marinheiro: Ahoy, Campeão {PLAYER}!\p"
+	.string "Bem-vindo a bordo do transatlântico S.S. Aqua!\n"
+	.string "Fazemos a travessia direta entre o Porto\n"
+	.string "de Vermilion (Kanto) e o litoral de Johto!$"
+
+SSAnne_Exterior_Text_WhereToSail::
+	.string "Para onde gostaria de navegar hoje?$"
+
+SSAnne_Exterior_Text_ConfirmJohto::
+	.string "Rumo ao Porto de Johto, onde treinadores\n"
+	.string "de elite e grandes desafios te aguardam!\p"
+	.string "Podemos partir agora?$"
+
+SSAnne_Exterior_Text_DepartingToJohto::
+	.string "Marinheiro: Perfeito! Todos a bordo!\n"
+	.string "Próxima parada: Costa de Johto!$"
+
+SSAnne_Exterior_Text_ConfirmFaraway::
+	.string "Rumo à misteriosa Ilha Distante em alto-mar!\n"
+	.string "Podemos partir agora?$"
+
+SSAnne_Exterior_Text_DepartingToFaraway::
+	.string "Marinheiro: Levantando âncora!\n"
+	.string "Destino: Ilha Distante!$"
+
+SSAnne_Exterior_Text_ComeBackAnytime::
+	.string "Estaremos a postos quando quiser navegar!$"
 
 SSAnne_Exterior_EventScript_MewUnderTruck::
 	goto_if_set FLAG_CHECKED_UNDER_TRUCK, SSAnne_Exterior_EventScript_MewNotUnderTruck

@@ -125,8 +125,8 @@
 #define MULTI_FOSSIL_DOMEHELIX             116
 #define MULTI_FOSSIL_ALL                   117
 #define MULTI_BATTLE_MODE_2                118
-#define MULTI_UNUSED_119                   119
-#define MULTI_UNUSED_120                   120
+#define MULTI_SS_AQUA_VERMILION            119
+#define MULTI_SS_AQUA_JOHTO                120
 #define MULTI_UNUSED_121                   121
 #define MULTI_UNUSED_122           		   122
 #define MULTI_UNUSED_123             	   123

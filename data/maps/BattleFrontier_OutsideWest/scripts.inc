@@ -28,10 +28,10 @@ BattleFrontier_OutsideWest_EventScript_FerryAttendant::
 	end
 
 BattleFrontier_OutsideWest_EventScript_ChooseFerryDestination::
-	multichoicedefault 18, 6, MULTI_SSTIDAL_BATTLE_FRONTIER, 2, FALSE
+	multichoicedefault 18, 6, MULTI_SS_AQUA_JOHTO, 2, FALSE
 	switch VAR_RESULT
-	case 0, BattleFrontier_OutsideWest_EventScript_FerryToSlateport
-	case 1, BattleFrontier_OutsideWest_EventScript_FerryToLilycove
+	case 0, BattleFrontier_OutsideWest_EventScript_FerryToVermilion
+	case 1, BattleFrontier_OutsideWest_EventScript_FerryToFaraway
 	case 2, BattleFrontier_OutsideWest_EventScript_CancelFerrySelect
 	case MULTI_B_PRESSED, BattleFrontier_OutsideWest_EventScript_CancelFerrySelect
 	end
@@ -41,22 +41,22 @@ BattleFrontier_OutsideWest_EventScript_NoSSTicket::
 	release
 	end
 
-BattleFrontier_OutsideWest_EventScript_FerryToSlateport::
-	msgbox BattleFrontier_OutsideWest_Text_SlateportItIs, MSGBOX_YESNO
+BattleFrontier_OutsideWest_EventScript_FerryToVermilion::
+	msgbox BattleFrontier_OutsideWest_Text_ConfirmVermilion, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, BattleFrontier_OutsideWest_EventScript_ChooseNewFerryDestination
-	msgbox BattleFrontier_OutsideWest_Text_PleaseBoardFerry, MSGBOX_DEFAULT
+	msgbox BattleFrontier_OutsideWest_Text_DepartingToVermilion, MSGBOX_DEFAULT
 	call BattleFrontier_OutsideWest_EventScript_BoardFerry
-	warp MAP_SLATEPORT_CITY_HARBOR, 8, 11
+	warp MAP_SSANNE_EXTERIOR, 32, 10
 	waitstate
 	release
 	end
 
-BattleFrontier_OutsideWest_EventScript_FerryToLilycove::
-	msgbox BattleFrontier_OutsideWest_Text_LilycoveItIs, MSGBOX_YESNO
+BattleFrontier_OutsideWest_EventScript_FerryToFaraway::
+	msgbox BattleFrontier_OutsideWest_Text_ConfirmFaraway, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, BattleFrontier_OutsideWest_EventScript_ChooseNewFerryDestination
-	msgbox BattleFrontier_OutsideWest_Text_PleaseBoardFerry, MSGBOX_DEFAULT
+	msgbox BattleFrontier_OutsideWest_Text_DepartingToFaraway, MSGBOX_DEFAULT
 	call BattleFrontier_OutsideWest_EventScript_BoardFerry
-	warp MAP_LILYCOVE_CITY_HARBOR, 8, 11
+	warp MAP_FARAWAY_ISLAND_ENTRANCE, 13, 38
 	waitstate
 	release
 	end
@@ -325,35 +325,40 @@ BattleFrontier_OutsideWest_Text_ThisIsBattleTower:
 	.string "Pokémon for elimination-style matches.$"
 
 BattleFrontier_OutsideWest_Text_MayISeeYourTicket:
-	.string "Hello, are you here for the ferry?\n"
-	.string "May I see your Ticket?$"
+	.string "Atendente: Olá! Veio para o porto?\n"
+	.string "Poderia me mostrar o seu bilhete?$"
 
 BattleFrontier_OutsideWest_Text_MustHaveTicketToBoard:
-	.string "{PLAYER} doesn't have the Ticket…\p"
-	.string "I'm terribly sorry.\p"
-	.string "You must have a Ticket to board\n"
-	.string "the ferry.$"
+	.string "{PLAYER} não tem o bilhete necessário…\p"
+	.string "Sinto muito, você precisa de um Bilhete\n"
+	.string "para embarcar no S.S. Aqua.$"
 
 BattleFrontier_OutsideWest_Text_WhereWouldYouLikeToGo:
-	.string "{PLAYER} flashed the Ticket.\p"
-	.string "Perfect! That's all you need!\p"
-	.string "And where would you like to go?$"
+	.string "{PLAYER} mostrou o Bilhete!\p"
+	.string "Perfeito! Tudo pronto a bordo do S.S. Aqua!\p"
+	.string "Para onde você gostaria de velejar?$"
 
-BattleFrontier_OutsideWest_Text_SlateportItIs:
-	.string "Slateport City it is, then!$"
+BattleFrontier_OutsideWest_Text_ConfirmVermilion:
+	.string "Deseja retornar ao Porto de Vermilion em Kanto?$"
 
-BattleFrontier_OutsideWest_Text_LilycoveItIs:
-	.string "Lilycove City it is, then!$"
+BattleFrontier_OutsideWest_Text_DepartingToVermilion:
+	.string "Atendente: Excelente! Tenha uma excelente\n"
+	.string "viagem de retorno para Kanto!$"
+
+BattleFrontier_OutsideWest_Text_ConfirmFaraway:
+	.string "Deseja navegar para a misteriosa Ilha Distante?$"
+
+BattleFrontier_OutsideWest_Text_DepartingToFaraway:
+	.string "Atendente: Muito bem! Rumo à Ilha Distante!$"
 
 BattleFrontier_OutsideWest_Text_SailWithUsAnotherTime:
-	.string "Please sail with us another time!$"
+	.string "Estaremos à disposição quando quiser viajar!$"
 
 BattleFrontier_OutsideWest_Text_PleaseBoardFerry:
-	.string "Please board the ferry and wait for\n"
-	.string "departure.$"
+	.string "Por favor, embarque e aguarde a partida.$"
 
 BattleFrontier_OutsideWest_Text_ThenWhereWouldYouLikeToGo:
-	.string "Then, where would you like to go?$"
+	.string "Então, para onde gostaria de ir?$"
 
 BattleFrontier_OutsideWest_Text_BestOutOfAllMyFriends:
 	.string "I'm the best out of all my friends.\n"

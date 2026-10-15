@@ -288,8 +288,14 @@ VermilionCity_Text_SSAnneVisitsOnceAYear::
 VermilionCity_EventScript_FerrySailor::
 	lock
 	faceplayer
+	goto_if_set FLAG_SYS_GAME_CLEAR, VermilionCity_EventScript_SSAquaReady
 	goto_if_eq VAR_SS_ANNE_STATE, 3, VermilionCity_EventScript_CheckSSTidal
 	msgbox VermilionCity_Text_WelcomeToTheSSAnne, MSGBOX_NPC
+	release
+	end
+
+VermilionCity_EventScript_SSAquaReady::
+	msgbox VermilionCity_Text_SSAquaDocked, MSGBOX_NPC
 	release
 	end
 
@@ -297,18 +303,23 @@ VermilionCity_Text_WelcomeToTheSSAnne::
     .string "Marinheiro: Bem-vindo ao S.S. Anne!$"
 
 VermilionCity_EventScript_CheckSSTidal::
-	goto_if_unset FLAG_HIDE_SS_TIDAL, VermilionCity_EventScript_SSTidalArrived
-	msgbox VermilionCity_Text_TheShipSetSail, MSGBOX_NPC
+	msgbox VermilionCity_Text_SSAquaInPreparation, MSGBOX_NPC
 	release
 	end
 
-VermilionCity_Text_TheShipSetSail::
-    .string "O navio partiu.$"
+VermilionCity_Text_SSAquaDocked::
+	.string "Marinheiro: Olá, Campeão {PLAYER}!\p"
+	.string "O transatlântico S.S. Aqua está atracado\n"
+	.string "no cais pronto para a travessia até Johto!\p"
+	.string "Por favor, siga pelo píer ao sul para\n"
+	.string "embarcar na sua próxima grande jornada!$"
 
-VermilionCity_EventScript_SSTidalArrived::
-	.string "Já ouviu as novidades?\p"
-	.string "Um navio novinho, o S.S. Tidal,\n"
-	.string "acabou de atracar no porto!$"
+VermilionCity_Text_SSAquaInPreparation::
+    .string "O S.S. Anne já zarpou em sua viagem anual.\p"
+    .string "Estamos nos preparativos do navio S.S. Aqua\n"
+    .string "para a conexão com a região de Johto!\p"
+    .string "O serviço será inaugurado assim que você\n"
+    .string "conquistar a Liga Pokémon!$"
 
 VermilionCity_EventScript_TicketCheckTrigger1::
 	lock

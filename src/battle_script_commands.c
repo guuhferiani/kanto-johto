@@ -4008,7 +4008,7 @@ static void Cmd_getexp(void)
                     && !gBattleStruct->wildVictorySong)
                 {
                     BattleStopLowHpSound();
-                    PlayBGM(MUS_VICTORY_WILD);
+                    PlayBGM(MUS_RG_VICTORY_WILD);
                     gBattleStruct->wildVictorySong++;
                 }
 
@@ -8282,7 +8282,7 @@ static void Cmd_various(void)
         }
         break;
     case VARIOUS_PLAY_TRAINER_DEFEATED_MUSIC:
-        BtlController_EmitPlayFanfareOrBGM(BUFFER_A, MUS_VICTORY_TRAINER, TRUE);
+        BtlController_EmitPlayFanfareOrBGM(BUFFER_A, MUS_RG_VICTORY_TRAINER, TRUE);
         MarkBattlerForControllerExec(gActiveBattler);
         break;
     case VARIOUS_STAT_TEXT_BUFFER:
