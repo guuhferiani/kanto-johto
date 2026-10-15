@@ -4589,6 +4589,9 @@ static void DrawFootprint(u8 windowId, u16 dexNum)
     u16 tileIdx = 0;
     u16 i, j;
 
+    if (footprintGfx == NULL)
+        return;
+
     for (i = 0; i < 32; i++)
     {
         u8 tile = footprintGfx[i];

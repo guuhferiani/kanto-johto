@@ -5852,4 +5852,10 @@ extern const u32 gItemIconPalette_HeavyDutyBoots[];
 extern const u32 gItemIcon_LaggingTail[];
 extern const u32 gItemIconPalette_LaggingTail[];
 
+extern const u8 gMonFootprint_Riolu[];
+extern const u8 gMonFootprint_Lucario[];
+extern const u8 gMonFootprint_Leafeon[];
+extern const u8 gMonFootprint_Glaceon[];
+extern const u8 gMonFootprint_Sylveon[];
+
 #endif //GUARD_GRAPHICS_H

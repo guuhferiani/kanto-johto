@@ -209,7 +209,7 @@ static struct PokemonAnimData sAnims[MAX_BATTLERS_COUNT];
 static u8 sAnimIdx;
 static bool32 sIsSummaryAnim;
 
-static const u8 sSpeciesToBackAnimSet[] =
+static const u8 sSpeciesToBackAnimSet[NUM_SPECIES] =
 {
     [SPECIES_BULBASAUR]  = BACK_ANIM_DIP_RIGHT_SIDE,
     [SPECIES_IVYSAUR]    = BACK_ANIM_H_SLIDE,
@@ -597,6 +597,11 @@ static const u8 sSpeciesToBackAnimSet[] =
     [SPECIES_JIRACHI]    = BACK_ANIM_CONVEX_DOUBLE_ARC,
     [SPECIES_DEOXYS]     = BACK_ANIM_SHRINK_GROW_VIBRATE,
     [SPECIES_CHIMECHO]   = BACK_ANIM_CONVEX_DOUBLE_ARC,
+    [SPECIES_RIOLU]      = BACK_ANIM_CONCAVE_ARC_SMALL,
+    [SPECIES_LUCARIO]    = BACK_ANIM_V_SHAKE,
+    [SPECIES_LEAFEON]    = BACK_ANIM_CONCAVE_ARC_LARGE,
+    [SPECIES_GLACEON]    = BACK_ANIM_CONCAVE_ARC_LARGE,
+    [SPECIES_SYLVEON]    = BACK_ANIM_DIP_RIGHT_SIDE,
 };
 
 // Equivalent to struct YellowFlashData, but doesn't match as a struct
@@ -883,7 +888,7 @@ static void SetPosForRotation(struct Sprite *sprite, u16 index, s16 amplitudeX, 
 
 u8 GetSpeciesBackAnimSet(u16 species)
 {
-    if (sSpeciesToBackAnimSet[species] != BACK_ANIM_NONE)
+    if (species < NUM_SPECIES && sSpeciesToBackAnimSet[species] != BACK_ANIM_NONE)
         return sSpeciesToBackAnimSet[species] - 1;
     else
         return 0;

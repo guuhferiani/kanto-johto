@@ -558,7 +558,10 @@ static void RemoveDexNavWindowAndGfx(void)
     
     // try remove sprites
     if (sDexNavSearchDataPtr->iconSpriteId != MAX_SPRITES)
-        DestroySprite(&gSprites[sDexNavSearchDataPtr->iconSpriteId]);
+    {
+        FreeAndDestroyMonIconSprite(&gSprites[sDexNavSearchDataPtr->iconSpriteId]);
+        sDexNavSearchDataPtr->iconSpriteId = MAX_SPRITES;
+    }
     if (sDexNavSearchDataPtr->itemSpriteId != MAX_SPRITES)
         DestroySprite(&gSprites[sDexNavSearchDataPtr->itemSpriteId]);
     if (sDexNavSearchDataPtr->eyeSpriteId != MAX_SPRITES)
@@ -666,15 +669,22 @@ static bool8 DexNavPickTile(u8 environment, u8 areaX, u8 areaY, bool8 smallScan)
                 {
                     if (currMapType == MAP_TYPE_UNDERGROUND)
                     { // inside (cave)
+                        s16 distScale;
                         if (IsElevationMismatchAt(gObjectEvents[gPlayerAvatar.spriteId].currentElevation, topX, topY))
                             break; //occurs at same z coord
                         
-                        scale = 440 - (smallScan * 200) - (GetPlayerDistance(topX, topY) / 2)  - (2 * (topX + topY));
+                        distScale = 440 - (smallScan * 200) - (GetPlayerDistance(topX, topY) / 2)  - (2 * (topX + topY));
+                        if (distScale < 10)
+                            distScale = 10;
+                        scale = (u8)distScale;
                         weight = ((Random() % scale) < 1) && !MapGridIsImpassableAt(topX, topY);
                     }
                     else
                     { // outdoors: grass
-                        scale = 100 - (GetPlayerDistance(topX, topY) * 2);
+                        s16 grassScale = 100 - (GetPlayerDistance(topX, topY) * 2);
+                        if (grassScale < 10)
+                            grassScale = 10;
+                        scale = (u8)grassScale;
                         weight = (Random() % scale <= 5) && !MapGridIsImpassableAt(topX, topY);
                     }
                 }
@@ -682,10 +692,13 @@ static bool8 DexNavPickTile(u8 environment, u8 areaX, u8 areaY, bool8 smallScan)
             case ENCOUNTER_TYPE_WATER:
                 if (MetatileBehavior_IsSurfableWaterOrUnderwater(tileBehaviour))
                 {
-                    u8 scale = 320 - (smallScan * 200) - (GetPlayerDistance(topX, topY) / 2);
+                    s16 surfScale = 320 - (smallScan * 200) - (GetPlayerDistance(topX, topY) / 2);
                     if (IsElevationMismatchAt(gObjectEvents[gPlayerAvatar.spriteId].currentElevation, topX, topY))
                         break;
 
+                    if (surfScale < 10)
+                        surfScale = 10;
+                    scale = (u8)surfScale;
                     weight = (Random() % scale <= 1) && !MapGridIsImpassableAt(topX, topY);
                 }
                 break;
@@ -987,7 +1000,8 @@ void EndDexNavSearch(u8 taskId)
     FlagClear(FLAG_SYS_DEXNAV_SEARCH);
     DestroyTask(taskId);
     RemoveDexNavWindowAndGfx();
-    FieldEffectStop(&gSprites[sDexNavSearchDataPtr->fldEffSpriteId], sDexNavSearchDataPtr->fldEffId);
+    if (sDexNavSearchDataPtr->fldEffSpriteId != MAX_SPRITES)
+        FieldEffectStop(&gSprites[sDexNavSearchDataPtr->fldEffSpriteId], sDexNavSearchDataPtr->fldEffId);
     Free(sDexNavSearchDataPtr);
 }
 
@@ -1036,10 +1050,16 @@ static void Task_RevealHiddenMon(u8 taskId)
         DrawSearchWindow(species, sDexNavSearchDataPtr->potential, TRUE);
         DrawDexNavSearchMonIcon(species, &sDexNavSearchDataPtr->iconSpriteId, FALSE);
         // whiteout icon
-        index = IndexOfSpritePaletteTag(gSprites[sDexNavSearchDataPtr->iconSpriteId].template->paletteTag);
-        CpuCopy16(&gPlttBufferUnfaded[0x100 + index * 16], sDexNavSearchDataPtr->palBuffer, 32);
-        TintPalette_CustomTone(sDexNavSearchDataPtr->palBuffer, 16, 510, 510, 510);
-        LoadPalette(sDexNavSearchDataPtr->palBuffer, 0x100 + index * 16, 32);
+        if (sDexNavSearchDataPtr->iconSpriteId != MAX_SPRITES)
+        {
+            index = IndexOfSpritePaletteTag(gSprites[sDexNavSearchDataPtr->iconSpriteId].template->paletteTag);
+            if (index != 0xFF)
+            {
+                CpuCopy16(&gPlttBufferUnfaded[0x100 + index * 16], sDexNavSearchDataPtr->palBuffer, 32);
+                TintPalette_CustomTone(sDexNavSearchDataPtr->palBuffer, 16, 510, 510, 510);
+                LoadPalette(sDexNavSearchDataPtr->palBuffer, 0x100 + index * 16, 32);
+            }
+        }
     }
     else
     {
@@ -1056,6 +1076,7 @@ static void Task_DexNavSearch(u8 taskId)
 {
     u16 species;
     s16 x, y;
+    u32 attempts = 0;
     struct Task *task = &gTasks[taskId];
     
     if (sDexNavSearchDataPtr->proximity > MAX_PROXIMITY)
@@ -1106,9 +1127,12 @@ static void Task_DexNavSearch(u8 taskId)
         
         FlagClear(FLAG_SYS_DEXNAV_SEARCH);
         gDexnavBattle = TRUE;        
-        ScriptContext1_SetupScript(EventScript_StartDexNavBattle);
+        RemoveDexNavWindowAndGfx();
+        if (sDexNavSearchDataPtr->fldEffSpriteId != MAX_SPRITES)
+            FieldEffectStop(&gSprites[sDexNavSearchDataPtr->fldEffSpriteId], sDexNavSearchDataPtr->fldEffId);
         Free(sDexNavSearchDataPtr);
         DestroyTask(taskId);
+        ScriptContext1_SetupScript(EventScript_StartDexNavBattle);
         return;
     }
     
@@ -1119,7 +1143,11 @@ static void Task_DexNavSearch(u8 taskId)
         ClearStdWindowAndFrameToTransparent(sDexNavSearchDataPtr->windowId, FALSE);
         CopyWindowToVram(sDexNavSearchDataPtr->windowId, 3);
         RemoveWindow(sDexNavSearchDataPtr->windowId);
-        DestroySprite(&gSprites[sDexNavSearchDataPtr->iconSpriteId]);
+        if (sDexNavSearchDataPtr->iconSpriteId != MAX_SPRITES)
+        {
+            DestroySprite(&gSprites[sDexNavSearchDataPtr->iconSpriteId]);
+            sDexNavSearchDataPtr->iconSpriteId = MAX_SPRITES;
+        }
         task->tRevealed = TRUE; //regular dexnav search
         //sDexNavSearchDataPtr->hiddenSearch = FALSE; //now its a regular dexnav search
         task->func = Task_RevealHiddenMon;
@@ -1136,6 +1164,8 @@ static void Task_DexNavSearch(u8 taskId)
         FieldEffectStop(&gSprites[sDexNavSearchDataPtr->fldEffSpriteId], sDexNavSearchDataPtr->fldEffId);
         while (1) {
             if (TryStartHiddenMonFieldEffect(sDexNavSearchDataPtr->environment, 10, 10, TRUE))
+                break;
+            if (++attempts > 20)
                 break;
         }
         
@@ -2629,7 +2659,10 @@ bool8 TryFindHiddenPokemon(void)
             if (TryStartHiddenMonFieldEffect(sDexNavSearchDataPtr->environment, 8, 8, TRUE))
                 break;
             if (++attempts > 20)
+            {
+                Free(sDexNavSearchDataPtr);
                 return FALSE;   //cannot find suitable tile
+            }
         }
 
         // exclamation mark over player
