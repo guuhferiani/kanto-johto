@@ -1639,7 +1639,7 @@ u8 GetFirstInactiveObjectEventId(void)
 
 u8 GetObjectEventIdByLocalIdAndMap(u8 localId, u8 mapNum, u8 mapGroupId)
 {
-    if (localId < OBJ_EVENT_ID_FOLLOWER)
+    if (localId < OBJ_EVENT_ID_WILD_MON)
         return GetObjectEventIdByLocalIdAndMapInternal(localId, mapNum, mapGroupId);
 
     return GetObjectEventIdByLocalId(localId);
@@ -2338,6 +2338,53 @@ void RemoveFollowingPokemon(void) { // Remove follower object. Idempotent.
   RemoveObjectEvent(objectEvent);
 }
 
+u8 SpawnWildMonObjectEvent(u16 species, s16 x, s16 y, bool8 shiny)
+{
+    u8 objectEventId;
+    struct ObjectEventTemplate template;
+
+    if (species == SPECIES_NONE || species >= NUM_SPECIES)
+        return OBJECT_EVENTS_COUNT;
+
+    RemoveWildMonObjectEvent();
+
+    template.localId = OBJ_EVENT_ID_WILD_MON;
+    template.graphicsId = OBJ_EVENT_GFX_OW_MON;
+    template.x = x - MAP_OFFSET;
+    template.y = y - MAP_OFFSET;
+    template.elevation = 3;
+    template.movementType = MOVEMENT_TYPE_LOOK_AROUND;
+    template.movementRangeX = 0;
+    template.movementRangeY = 0;
+    template.trainerType = TRAINER_TYPE_NONE;
+    template.trainerRange_berryTreeId = 0;
+    template.script = NULL;
+    template.flagId = 0;
+    template.inConnection = 0;
+
+    objectEventId = SpawnSpecialObjectEvent(&template);
+    if (objectEventId < OBJECT_EVENTS_COUNT)
+    {
+        FollowerSetGraphics(&gObjectEvents[objectEventId], species, 0, shiny, TRUE);
+        gObjectEvents[objectEventId].invisible = FALSE;
+        return objectEventId;
+    }
+    return OBJECT_EVENTS_COUNT;
+}
+
+void RemoveWildMonObjectEvent(void)
+{
+    u8 i;
+    for (i = 0; i < OBJECT_EVENTS_COUNT; i++)
+    {
+        if (gObjectEvents[i].active && gObjectEvents[i].localId == OBJ_EVENT_ID_WILD_MON)
+        {
+            RemoveObjectEvent(&gObjectEvents[i]);
+            break;
+        }
+    }
+}
+
 static bool8 IsFollowerVisible(void) { // Determine whether follower *should* be visible
     if (gSaveBlock2Ptr->optionsFollowerType == (2))
     { 
@@ -2666,7 +2713,7 @@ void RemoveObjectEventsOutsideView(void)
 
             // Followers should not go OOB, or their sprites may be freed early during a cross-map scripting event,
             // such as Wally's Ralts catch sequence
-            if (objectEvent->active && !objectEvent->isPlayer && objectEvent->localId != OBJ_EVENT_ID_FOLLOWER)
+            if (objectEvent->active && !objectEvent->isPlayer && objectEvent->localId != OBJ_EVENT_ID_FOLLOWER && objectEvent->localId != OBJ_EVENT_ID_WILD_MON)
                 RemoveObjectEventIfOutsideView(objectEvent);
         }
     }

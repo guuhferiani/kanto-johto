@@ -556,6 +556,8 @@ static void RemoveDexNavWindowAndGfx(void)
 {
     u32 i;
     
+    RemoveWildMonObjectEvent();
+    
     // try remove sprites
     if (sDexNavSearchDataPtr->iconSpriteId != MAX_SPRITES)
     {
@@ -780,12 +782,11 @@ static bool8 TryStartHiddenMonFieldEffect(u8 environment, u8 xSize, u8 ySize, bo
             gFieldEffectArguments[2] = 0xFF; // subpriority
             gFieldEffectArguments[3] = 2;   //priority
             sDexNavSearchDataPtr->fldEffSpriteId = FieldEffectStart(fldEffId);
-            if (sDexNavSearchDataPtr->fldEffSpriteId == MAX_SPRITES)
-                return FALSE;
-            
             sDexNavSearchDataPtr->fldEffId = fldEffId;
-            return TRUE;
         }
+        
+        SpawnWildMonObjectEvent(sDexNavSearchDataPtr->species, sDexNavSearchDataPtr->tileX, sDexNavSearchDataPtr->tileY, DexNavTryMakeShinyMon());
+        return TRUE;
     }
 
     return FALSE;
@@ -1002,6 +1003,7 @@ void EndDexNavSearch(u8 taskId)
     RemoveDexNavWindowAndGfx();
     if (sDexNavSearchDataPtr->fldEffSpriteId != MAX_SPRITES)
         FieldEffectStop(&gSprites[sDexNavSearchDataPtr->fldEffSpriteId], sDexNavSearchDataPtr->fldEffId);
+    RemoveWildMonObjectEvent();
     Free(sDexNavSearchDataPtr);
 }
 
@@ -1088,25 +1090,14 @@ static void Task_DexNavSearch(u8 taskId)
         return;
     }
     
-    if (sDexNavSearchDataPtr->proximity <= CREEPING_PROXIMITY && !gPlayerAvatar.creeping && task->tFrameCount > 60)
-    { //should be creeping but player walks normally
-        if (sDexNavSearchDataPtr->hiddenSearch && !task->tRevealed)
-            EndDexNavSearch(taskId);
-        else
-            EndDexNavSearchSetupScript(EventScript_MovedTooFast, taskId);
-        return;
-    }
-    
-    if (sDexNavSearchDataPtr->proximity <= SNEAKING_PROXIMITY && TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_DASH | PLAYER_AVATAR_FLAG_BIKE)) 
-    { // running/biking too close
-        //always do event script, even if player hasn't revealed a hidden mon. It's assumed they would be creeping towards it
+    if (sDexNavSearchDataPtr->proximity <= 2 && TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_DASH | PLAYER_AVATAR_FLAG_BIKE)) 
+    { // running/biking too close scares the wild mon
         EndDexNavSearchSetupScript(EventScript_MovedTooFast, taskId);
         return;
     }
     
     if (ScriptContext2_IsEnabled() == TRUE)
     { // check if script just executed
-        //gSaveBlock1Ptr->dexNavChain = 0;  //issue with reusable repels
         EndDexNavSearch(taskId);
         return;
     }
@@ -1120,7 +1111,7 @@ static void Task_DexNavSearch(u8 taskId)
         return;
     }
     
-    if (sDexNavSearchDataPtr->proximity < 1)
+    if (sDexNavSearchDataPtr->proximity <= 1)
     {
         CreateDexNavWildMon(sDexNavSearchDataPtr->species, sDexNavSearchDataPtr->potential, sDexNavSearchDataPtr->monLevel, 
           sDexNavSearchDataPtr->abilityNum, sDexNavSearchDataPtr->heldItem, sDexNavSearchDataPtr->moves);
@@ -1130,6 +1121,7 @@ static void Task_DexNavSearch(u8 taskId)
         RemoveDexNavWindowAndGfx();
         if (sDexNavSearchDataPtr->fldEffSpriteId != MAX_SPRITES)
             FieldEffectStop(&gSprites[sDexNavSearchDataPtr->fldEffSpriteId], sDexNavSearchDataPtr->fldEffId);
+        RemoveWildMonObjectEvent();
         Free(sDexNavSearchDataPtr);
         DestroyTask(taskId);
         ScriptContext1_SetupScript(EventScript_StartDexNavBattle);
@@ -2782,6 +2774,7 @@ void ResetDexNavSearch(void)
 {
     gSaveBlock1Ptr->dexNavChain = 0;    //reset dex nav chaining on new map
     VarSet(VAR_DEXNAV_STEP_COUNTER, 0); //reset hidden pokemon step counter
+    RemoveWildMonObjectEvent();
     if (FlagGet(FLAG_SYS_DEXNAV_SEARCH))
         EndDexNavSearch(FindTaskIdByFunc(Task_DexNavSearch));   //moving to new map ends dexnav search
 }

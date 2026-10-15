@@ -1,7 +1,7 @@
 #ifndef GUARD_DEXNAV_H
 #define GUARD_DEXNAV_H
 
-#define DEXNAV_TIMEOUT                  20  //15 seconds is the time out. Max of 1092 seconds allowed
+#define DEXNAV_TIMEOUT                  30  //30 seconds timeout
 #define SNEAKING_PROXIMITY              4   //Tile amount
 #define CREEPING_PROXIMITY              2
 #define MAX_PROXIMITY                   18
@@ -9,9 +9,9 @@
 #define DEXNAV_CHAIN_MAX                100
 
 //hidden pokemon options - tuned for dynamic overworld visible encounters
-#define HIDDEN_MON_STEP_COUNT       45  //look for hidden pokemon every x steps
-#define HIDDEN_MON_SEARCH_RATE      45  //x% chance of finding hidden pokemon every x steps
-#define HIDDEN_MON_PROBABILTY       35  //x% chance of finding hidden mon compared to regular encounter data
+#define HIDDEN_MON_STEP_COUNT       30  //look for wild pokemon every x steps
+#define HIDDEN_MON_SEARCH_RATE      70  //x% chance of finding wild pokemon every x steps
+#define HIDDEN_MON_PROBABILTY       50  //x% chance of finding mon compared to regular encounter data
 
 //// SEARCH PROBABILITIES
 // see https://m.bulbapedia.bulbagarden.net/wiki/DexNav#Benefits
