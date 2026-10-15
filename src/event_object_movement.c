@@ -2366,9 +2366,9 @@ u8 SpawnWildMonObjectEvent(u16 species, s16 x, s16 y, bool8 shiny)
     template.x = x - MAP_OFFSET;
     template.y = y - MAP_OFFSET;
     template.elevation = 3;
-    template.movementType = MOVEMENT_TYPE_LOOK_AROUND;
-    template.movementRangeX = 0;
-    template.movementRangeY = 0;
+    template.movementType = MOVEMENT_TYPE_WANDER_AROUND;
+    template.movementRangeX = 2;
+    template.movementRangeY = 2;
     template.trainerType = TRAINER_TYPE_NONE;
     template.trainerRange_berryTreeId = 0;
     template.script = NULL;
@@ -2396,6 +2396,21 @@ void RemoveWildMonObjectEvent(void)
             break;
         }
     }
+}
+
+bool8 GetWildMonCoords(s16 *x, s16 *y)
+{
+    u8 i;
+    for (i = 0; i < OBJECT_EVENTS_COUNT; i++)
+    {
+        if (gObjectEvents[i].active && gObjectEvents[i].localId == OBJ_EVENT_ID_WILD_MON)
+        {
+            *x = gObjectEvents[i].currentCoords.x;
+            *y = gObjectEvents[i].currentCoords.y;
+            return TRUE;
+        }
+    }
+    return FALSE;
 }
 
 static bool8 IsFollowerVisible(void) { // Determine whether follower *should* be visible

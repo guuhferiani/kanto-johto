@@ -610,7 +610,11 @@ static u8 GetPlayerDistance(s16 x, s16 y)
 
 static void DexNavProximityUpdate(void)
 {
-    sDexNavSearchDataPtr->proximity = GetPlayerDistance(sDexNavSearchDataPtr->tileX, sDexNavSearchDataPtr->tileY);
+    s16 monX, monY;
+    if (GetWildMonCoords(&monX, &monY))
+        sDexNavSearchDataPtr->proximity = GetPlayerDistance(monX, monY);
+    else
+        sDexNavSearchDataPtr->proximity = GetPlayerDistance(sDexNavSearchDataPtr->tileX, sDexNavSearchDataPtr->tileY);
 }
 
 //Pick a specific tile based on environment

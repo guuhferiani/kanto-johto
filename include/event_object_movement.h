@@ -447,5 +447,6 @@ bool32 IsVirtualObjectAnimating(u8 virtualObjId);
 bool8 IsElevationMismatchAt(u8, s16, s16);
 u8 SpawnWildMonObjectEvent(u16 species, s16 x, s16 y, bool8 shiny);
 void RemoveWildMonObjectEvent(void);
+bool8 GetWildMonCoords(s16 *x, s16 *y);
 
 #endif //GUARD_EVENT_OBJECT_MOVEMENT_H
