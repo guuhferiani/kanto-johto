@@ -2232,7 +2232,20 @@ static const struct ObjectEventGraphicsInfo * SpeciesToGraphicsInfo(u16 species,
       form %= NUM_UNOWN_FORMS;
       graphicsInfo = &gPokemonObjectGraphics[form ? SPECIES_UNOWN_B + form - 1 : species];
       break;
+    case SPECIES_RIOLU:
+      graphicsInfo = &gPokemonObjectGraphics[SPECIES_TYROGUE];
+      break;
+    case SPECIES_LUCARIO:
+      graphicsInfo = &gPokemonObjectGraphics[SPECIES_HITMONCHAN];
+      break;
+    case SPECIES_LEAFEON:
+    case SPECIES_GLACEON:
+    case SPECIES_SYLVEON:
+      graphicsInfo = &gPokemonObjectGraphics[SPECIES_EEVEE];
+      break;
     default:
+      if (species > SPECIES_DEOXYS)
+        return &gPokemonObjectGraphics[SPECIES_PORYGON];
       graphicsInfo = &gPokemonObjectGraphics[species];
       break;
   }
