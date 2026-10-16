@@ -847,6 +847,7 @@ static void Task_SetUpDexNavSearch(u8 taskId)
     sDexNavSearchDataPtr->abilityNum = DexNavGetAbilityNum(species, searchLevel);
     sDexNavSearchDataPtr->potential = DexNavGeneratePotential(searchLevel);
     sDexNavSearchDataPtr->windowId = 0xFF;
+    DexNavProximityUpdate();
     if (!sDexNavSearchDataPtr->hiddenSearch)
     {
         LoadSearchIconData();
@@ -1084,6 +1085,8 @@ static void Task_DexNavSearch(u8 taskId)
     u32 attempts = 0;
     struct Task *task = &gTasks[taskId];
     
+    DexNavProximityUpdate();
+
     if (sDexNavSearchDataPtr->proximity > MAX_PROXIMITY)
     { // out of range
         if (sDexNavSearchDataPtr->hiddenSearch && !task->tRevealed)

@@ -20,6 +20,7 @@
 #include "international_string_util.h"
 #include "item_menu.h"
 #include "link.h"
+#include "list_menu.h"
 #include "load_save.h"
 #include "main.h"
 #include "menu.h"
@@ -95,6 +96,8 @@ EWRAM_DATA static u8 (*sSaveDialogCallback)(void) = NULL;
 EWRAM_DATA static u8 sSaveDialogTimer = 0;
 EWRAM_DATA static bool8 sSavingComplete = FALSE;
 EWRAM_DATA static u8 sSaveInfoWindowId = 0;
+EWRAM_DATA static u16 sStartMenuScrollOffset = 0;
+EWRAM_DATA static u8 sStartMenuScrollArrowTaskId = 0xFF;
 
 // Menu action callbacks
 static bool8 StartMenuPokedexCallback(void);
@@ -460,8 +463,21 @@ static void ShowPyramidFloorWindow(void)
     CopyWindowToVram(sBattlePyramidFloorWindowId, COPYWIN_GFX);
 }
 
+#define MAX_START_MENU_ACTIONS_SHOWN 7
+#define TAG_START_MENU_SCROLL_ARROW  0x13F0
+
+static void RemoveStartMenuScrollArrows(void)
+{
+    if (sStartMenuScrollArrowTaskId != TASK_NONE)
+    {
+        RemoveScrollIndicatorArrowPair(sStartMenuScrollArrowTaskId);
+        sStartMenuScrollArrowTaskId = TASK_NONE;
+    }
+}
+
 static void RemoveExtraStartMenuWindows(void)
 {
+    RemoveStartMenuScrollArrows();
     if (GetSafariZoneFlag())
     {
         ClearStdWindowAndFrameToTransparent(sSafariBallsWindowId, FALSE);
@@ -475,24 +491,50 @@ static void RemoveExtraStartMenuWindows(void)
     }
 }
 
-static bool32 PrintStartMenuActions(s8 *pIndex, u32 count)
+static void DrawStartMenuActions(void)
 {
-    s8 index = *pIndex;
+    u8 i;
+    u8 visibleCount = (sNumStartMenuActions > MAX_START_MENU_ACTIONS_SHOWN) ? MAX_START_MENU_ACTIONS_SHOWN : sNumStartMenuActions;
 
-    do
+    FillWindowPixelBuffer(GetStartMenuWindowId(), PIXEL_FILL(1));
+
+    for (i = 0; i < visibleCount; i++)
     {
-        if (sStartMenuItems[sCurrentStartMenuActions[index]].func.u8_void == StartMenuPlayerNameCallback)
+        u8 actionIndex = sStartMenuScrollOffset + i;
+        if (sStartMenuItems[sCurrentStartMenuActions[actionIndex]].func.u8_void == StartMenuPlayerNameCallback)
         {
-            PrintPlayerNameOnWindow(GetStartMenuWindowId(), sStartMenuItems[sCurrentStartMenuActions[index]].text, 8, (index << 4) + 9);
+            PrintPlayerNameOnWindow(GetStartMenuWindowId(), sStartMenuItems[sCurrentStartMenuActions[actionIndex]].text, 8, (i << 4) + 9);
         }
         else
         {
-            StringExpandPlaceholders(gStringVar4, sStartMenuItems[sCurrentStartMenuActions[index]].text);
+            StringExpandPlaceholders(gStringVar4, sStartMenuItems[sCurrentStartMenuActions[actionIndex]].text);
+            AddTextPrinterParameterized(GetStartMenuWindowId(), FONT_NORMAL, gStringVar4, 8, (i << 4) + 9, TEXT_SKIP_DRAW, NULL);
+        }
+    }
+
+    CopyWindowToVram(GetStartMenuWindowId(), COPYWIN_GFX);
+}
+
+static bool32 PrintStartMenuActions(s8 *pIndex, u32 count)
+{
+    s8 index = *pIndex;
+    u8 visibleCount = (sNumStartMenuActions > MAX_START_MENU_ACTIONS_SHOWN) ? MAX_START_MENU_ACTIONS_SHOWN : sNumStartMenuActions;
+
+    do
+    {
+        u8 actionIndex = sStartMenuScrollOffset + index;
+        if (sStartMenuItems[sCurrentStartMenuActions[actionIndex]].func.u8_void == StartMenuPlayerNameCallback)
+        {
+            PrintPlayerNameOnWindow(GetStartMenuWindowId(), sStartMenuItems[sCurrentStartMenuActions[actionIndex]].text, 8, (index << 4) + 9);
+        }
+        else
+        {
+            StringExpandPlaceholders(gStringVar4, sStartMenuItems[sCurrentStartMenuActions[actionIndex]].text);
             AddTextPrinterParameterized(GetStartMenuWindowId(), FONT_NORMAL, gStringVar4, 8, (index << 4) + 9, TEXT_SKIP_DRAW, NULL);
         }
 
         index++;
-        if (index >= sNumStartMenuActions)
+        if (index >= visibleCount)
         {
             *pIndex = index;
             return TRUE;
@@ -537,9 +579,39 @@ static bool32 InitStartMenuStep(void)
             sInitStartMenuData[0]++;
         break;
     case 5:
-        sStartMenuCursorPos = InitMenuNormal(GetStartMenuWindowId(), FONT_NORMAL, 0, 9, 16, sNumStartMenuActions, sStartMenuCursorPos);
+    {
+        u8 visibleCount = (sNumStartMenuActions > MAX_START_MENU_ACTIONS_SHOWN) ? MAX_START_MENU_ACTIONS_SHOWN : sNumStartMenuActions;
+        u8 cursorInWindow;
+
+        if (sStartMenuCursorPos >= sNumStartMenuActions)
+            sStartMenuCursorPos = 0;
+
+        if (sStartMenuCursorPos < sStartMenuScrollOffset)
+            sStartMenuScrollOffset = sStartMenuCursorPos;
+        else if (sStartMenuCursorPos >= sStartMenuScrollOffset + visibleCount)
+            sStartMenuScrollOffset = sStartMenuCursorPos - visibleCount + 1;
+
+        cursorInWindow = sStartMenuCursorPos - sStartMenuScrollOffset;
+
+        InitMenuNormal(GetStartMenuWindowId(), FONT_NORMAL, 0, 9, 16, visibleCount, cursorInWindow);
+
+        if (sNumStartMenuActions > MAX_START_MENU_ACTIONS_SHOWN && sStartMenuScrollArrowTaskId == TASK_NONE)
+        {
+            sStartMenuScrollArrowTaskId = AddScrollIndicatorArrowPairParameterized(
+                SCROLL_ARROW_UP,
+                204,
+                12,
+                148,
+                sNumStartMenuActions - MAX_START_MENU_ACTIONS_SHOWN,
+                TAG_START_MENU_SCROLL_ARROW,
+                TAG_START_MENU_SCROLL_ARROW,
+                &sStartMenuScrollOffset
+            );
+        }
+
         CopyWindowToVram(GetStartMenuWindowId(), COPYWIN_MAP);
         return TRUE;
+    }
     }
 
     return FALSE;
@@ -621,16 +693,72 @@ void ShowStartMenu(void)
 
 static bool8 HandleStartMenuInput(void)
 {
+    u8 visibleCount = (sNumStartMenuActions > MAX_START_MENU_ACTIONS_SHOWN) ? MAX_START_MENU_ACTIONS_SHOWN : sNumStartMenuActions;
+
     if (JOY_NEW(DPAD_UP))
     {
         PlaySE(SE_SELECT);
-        sStartMenuCursorPos = Menu_MoveCursor(-1);
+        if (sStartMenuCursorPos > 0)
+        {
+            sStartMenuCursorPos--;
+            if (sStartMenuCursorPos < sStartMenuScrollOffset)
+            {
+                sStartMenuScrollOffset--;
+                DrawStartMenuActions();
+                InitMenuNormal(GetStartMenuWindowId(), FONT_NORMAL, 0, 9, 16, visibleCount, 0);
+                CopyWindowToVram(GetStartMenuWindowId(), COPYWIN_MAP);
+            }
+            else
+            {
+                Menu_MoveCursor(-1);
+            }
+        }
+        else
+        {
+            sStartMenuCursorPos = sNumStartMenuActions - 1;
+            if (sNumStartMenuActions > MAX_START_MENU_ACTIONS_SHOWN)
+            {
+                sStartMenuScrollOffset = sNumStartMenuActions - MAX_START_MENU_ACTIONS_SHOWN;
+                DrawStartMenuActions();
+                InitMenuNormal(GetStartMenuWindowId(), FONT_NORMAL, 0, 9, 16, visibleCount, visibleCount - 1);
+                CopyWindowToVram(GetStartMenuWindowId(), COPYWIN_MAP);
+            }
+            else
+            {
+                Menu_MoveCursor(-1);
+            }
+        }
     }
 
     if (JOY_NEW(DPAD_DOWN))
     {
         PlaySE(SE_SELECT);
-        sStartMenuCursorPos = Menu_MoveCursor(1);
+        if (sStartMenuCursorPos < sNumStartMenuActions - 1)
+        {
+            sStartMenuCursorPos++;
+            if (sStartMenuCursorPos >= sStartMenuScrollOffset + visibleCount)
+            {
+                sStartMenuScrollOffset++;
+                DrawStartMenuActions();
+                InitMenuNormal(GetStartMenuWindowId(), FONT_NORMAL, 0, 9, 16, visibleCount, visibleCount - 1);
+                CopyWindowToVram(GetStartMenuWindowId(), COPYWIN_MAP);
+            }
+            else
+            {
+                Menu_MoveCursor(1);
+            }
+        }
+        else
+        {
+            sStartMenuCursorPos = 0;
+            if (sStartMenuScrollOffset != 0)
+            {
+                sStartMenuScrollOffset = 0;
+                DrawStartMenuActions();
+            }
+            InitMenuNormal(GetStartMenuWindowId(), FONT_NORMAL, 0, 9, 16, visibleCount, 0);
+            CopyWindowToVram(GetStartMenuWindowId(), COPYWIN_MAP);
+        }
     }
 
     if (JOY_NEW(A_BUTTON))
@@ -826,6 +954,7 @@ static bool8 StartMenuSafariZoneRetireCallback(void)
 
 static void HideStartMenuDebug(void)
 {
+    RemoveStartMenuScrollArrows();
     PlaySE(SE_SELECT);
     ClearStdWindowAndFrame(GetStartMenuWindowId(), TRUE);
     RemoveStartMenuWindow();
@@ -1047,6 +1176,7 @@ static bool8 SaveErrorTimer(void)
 
 static u8 SaveConfirmSaveCallback(void)
 {
+    RemoveStartMenuScrollArrows();
     ClearStdWindowAndFrame(GetStartMenuWindowId(), FALSE);
     RemoveStartMenuWindow();
     ShowSaveInfoWindow();
@@ -1490,6 +1620,7 @@ void SaveForBattleTowerLink(void)
 
 static void HideStartMenuWindow(void)
 {
+    RemoveStartMenuScrollArrows();
     ClearStdWindowAndFrame(GetStartMenuWindowId(), TRUE);
     RemoveStartMenuWindow();
     ScriptUnfreezeObjectEvents();

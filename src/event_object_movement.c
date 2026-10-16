@@ -2196,20 +2196,25 @@ u8 CreateVirtualObject(u16 graphicsId, u8 virtualObjId, s16 x, s16 y, u8 elevati
     }
     return spriteId;
 }
-//IF YOU WANT ANY FOLLOWER FROM THE BEGINNING, CHANGE THE "ELSE" to match the "IF"
 struct Pokemon * GetFirstLiveMon(void) { // Return address of first conscious party mon or NULL
   u8 i;
-  for (i=0; i<PARTY_SIZE;i++) 
+  if (gSaveBlock2Ptr->optionsFollowerType == 2) // Nenhum
+      return NULL;
+
+  for (i = 0; i < PARTY_SIZE; i++) 
   {
-    if (gSaveBlock2Ptr->optionsFollowerType == (1) && (FlagGet(FLAG_SYS_GAME_CLEAR) == TRUE))
+    if (gPlayerParty[i].hp > 0 && !(gPlayerParty[i].box.isEgg || gPlayerParty[i].box.isBadEgg))
     {
-        if (gPlayerParty[i].hp > 0 && !(gPlayerParty[i].box.isEgg || gPlayerParty[i].box.isBadEgg))
-            return &gPlayerParty[i];
-    }
-    else
-    {
-        if (gPlayerParty[i].hp > 0 && (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES, NULL) == SPECIES_PIKACHU_PARTNER) && !(gPlayerParty[i].box.isEgg || gPlayerParty[i].box.isBadEgg))
-            return &gPlayerParty[i];
+      if (gSaveBlock2Ptr->optionsFollowerType == 1) // Qualquer
+      {
+        return &gPlayerParty[i];
+      }
+      else // Parceiro (0)
+      {
+        u16 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES, NULL);
+        if (species == SPECIES_PIKACHU || species == SPECIES_PIKACHU_PARTNER)
+          return &gPlayerParty[i];
+      }
     }
   }
   return NULL;
@@ -2232,6 +2237,53 @@ static const struct ObjectEventGraphicsInfo * SpeciesToGraphicsInfo(u16 species,
       form %= NUM_UNOWN_FORMS;
       graphicsInfo = &gPokemonObjectGraphics[form ? SPECIES_UNOWN_B + form - 1 : species];
       break;
+    case SPECIES_PIKACHU_PARTNER:
+      graphicsInfo = &gPokemonObjectGraphics[SPECIES_PIKACHU];
+      break;
+    case SPECIES_RIVAL_EEVEE:
+      graphicsInfo = &gPokemonObjectGraphics[SPECIES_EEVEE];
+      break;
+    case SPECIES_VENUSAUR_MEGA:
+      graphicsInfo = &gPokemonObjectGraphics[SPECIES_VENUSAUR];
+      break;
+    case SPECIES_CHARIZARD_MEGA_X:
+    case SPECIES_CHARIZARD_MEGA_Y:
+      graphicsInfo = &gPokemonObjectGraphics[SPECIES_CHARIZARD];
+      break;
+    case SPECIES_BLASTOISE_MEGA:
+      graphicsInfo = &gPokemonObjectGraphics[SPECIES_BLASTOISE];
+      break;
+    case SPECIES_BEEDRILL_MEGA:
+      graphicsInfo = &gPokemonObjectGraphics[SPECIES_BEEDRILL];
+      break;
+    case SPECIES_PIDGEOT_MEGA:
+      graphicsInfo = &gPokemonObjectGraphics[SPECIES_PIDGEOT];
+      break;
+    case SPECIES_ALAKAZAM_MEGA:
+      graphicsInfo = &gPokemonObjectGraphics[SPECIES_ALAKAZAM];
+      break;
+    case SPECIES_SLOWBRO_MEGA:
+      graphicsInfo = &gPokemonObjectGraphics[SPECIES_SLOWBRO];
+      break;
+    case SPECIES_GENGAR_MEGA:
+      graphicsInfo = &gPokemonObjectGraphics[SPECIES_GENGAR];
+      break;
+    case SPECIES_KANGASKHAN_MEGA:
+      graphicsInfo = &gPokemonObjectGraphics[SPECIES_KANGASKHAN];
+      break;
+    case SPECIES_PINSIR_MEGA:
+      graphicsInfo = &gPokemonObjectGraphics[SPECIES_PINSIR];
+      break;
+    case SPECIES_GYARADOS_MEGA:
+      graphicsInfo = &gPokemonObjectGraphics[SPECIES_GYARADOS];
+      break;
+    case SPECIES_AERODACTYL_MEGA:
+      graphicsInfo = &gPokemonObjectGraphics[SPECIES_AERODACTYL];
+      break;
+    case SPECIES_MEWTWO_MEGA_X:
+    case SPECIES_MEWTWO_MEGA_Y:
+      graphicsInfo = &gPokemonObjectGraphics[SPECIES_MEWTWO];
+      break;
     case SPECIES_RIOLU:
       graphicsInfo = &gPokemonObjectGraphics[SPECIES_TYROGUE];
       break;
@@ -2243,8 +2295,11 @@ static const struct ObjectEventGraphicsInfo * SpeciesToGraphicsInfo(u16 species,
     case SPECIES_SYLVEON:
       graphicsInfo = &gPokemonObjectGraphics[SPECIES_EEVEE];
       break;
+    case SPECIES_CHIMECHO:
+      graphicsInfo = &gPokemonObjectGraphics[SPECIES_CHIMECHO];
+      break;
     default:
-      if (species > SPECIES_DEOXYS)
+      if (species > SPECIES_CHIMECHO || species == SPECIES_NONE)
         return &gPokemonObjectGraphics[SPECIES_PORYGON];
       graphicsInfo = &gPokemonObjectGraphics[species];
       break;
@@ -2414,9 +2469,9 @@ bool8 GetWildMonCoords(s16 *x, s16 *y)
 }
 
 static bool8 IsFollowerVisible(void) { // Determine whether follower *should* be visible
-    if (gSaveBlock2Ptr->optionsFollowerType == (2))
+    if (gSaveBlock2Ptr->optionsFollowerType == 2)
     { 
-        return;
+        return FALSE;
     }
     else
     {
