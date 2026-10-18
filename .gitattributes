@@ -21,6 +21,9 @@ Makefile text eol=lf
 
 *.png binary
 *.bin binary
+*.jar binary
+gradlew text eol=lf
+android/gradlew text eol=lf
 
 *.h linguist-language=C
 *.inc linguist-language=Assembly
