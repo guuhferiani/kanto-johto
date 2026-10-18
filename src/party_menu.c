@@ -2578,24 +2578,24 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
     //Soft-Boiled   = 12
     //Sweet Scent   = 13
     //
-    // If Mon can learn HM02 and action list consists of < 4 moves and player has FLY HM and player has the associated Badge, add FLY to action list
-    if (sPartyMenuInternal->numActions < 5 && CanMonLearnTMHM(&mons[slotId], ITEM_HM02 - ITEM_TM01) && CheckBagHasItem(ITEM_HM02_FLY, 1) && FlagGet(FLAG_BADGE03_GET) == TRUE)
+    // If player has FLY HM and player has the associated Badge, add FLY to action list
+    if (sPartyMenuInternal->numActions < 5 && CheckBagHasItem(ITEM_HM02_FLY, 1) && FlagGet(FLAG_BADGE03_GET) == TRUE)
         AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, 2 + MENU_FIELD_MOVES);
-    // If Mon can learn HM05 and action list consists of < 4 moves and player has FLASH HM, add FLASH to action list
-    if (sPartyMenuInternal->numActions < 5 && CanMonLearnTMHM(&mons[slotId], ITEM_HM05 - ITEM_TM01) && CheckBagHasItem(ITEM_HM05_FLASH, 1)) 
+    // If player has FLASH HM, add FLASH to action list
+    if (sPartyMenuInternal->numActions < 5 && CheckBagHasItem(ITEM_HM05_FLASH, 1)) 
         AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, 0 + MENU_FIELD_MOVES);
-    // If Mon can learn HM01 and action list consists of < 4 moves and player has CUT HM, add CUT to action list
-    if (sPartyMenuInternal->numActions < 5 && CanMonLearnTMHM(&mons[slotId], ITEM_HM01 - ITEM_TM01) && CheckBagHasItem(ITEM_HM01_CUT, 1)) 
+    // If player has CUT HM and Cascade Badge, add CUT to action list
+    if (sPartyMenuInternal->numActions < 5 && CheckBagHasItem(ITEM_HM01_CUT, 1) && FlagGet(FLAG_BADGE01_GET) == TRUE) 
         AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, 1 + MENU_FIELD_MOVES);
-    // If Mon can learn TM28 and action list consists of < 4 moves and player recovered the DIG TM, add DIG to action list
-    if (sPartyMenuInternal->numActions < 5 && CanMonLearnTMHM(&mons[slotId], ITEM_TM28 - ITEM_TM01) && FlagGet(FLAG_RECOVERED_STOLEN_TM) == TRUE)
+    // If player has DIG TM, add DIG to action list
+    if (sPartyMenuInternal->numActions < 5 && (CheckBagHasItem(ITEM_TM28, 1) || FlagGet(FLAG_RECOVERED_STOLEN_TM) == TRUE))
         AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, 9 + MENU_FIELD_MOVES);
     // If Mon can learn TM29 (is a Psychic type and could therefore learn Teleport) and action list consists of < 4 moves, add TELEPORT to action list
     if (sPartyMenuInternal->numActions < 5 && CanMonLearnTMHM(&mons[slotId], ITEM_TM29 - ITEM_TM01))
         AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, 8 + MENU_FIELD_MOVES);
-    // If Mon can learn HM06 and action list consists of <4 moves, add ROCK SMASH to action list
-	//if (sPartyMenuInternal->numActions < 5 && CanMonLearnTMHM(&mons[slotId], ITEM_HM06 - ITEM_TM01) && CheckBagHasItem(ITEM_HM06_ROCK_SMASH, 1)) 
-		//AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, 5 + MENU_FIELD_MOVES);
+    // If player has ROCK SMASH HM and Badge, add ROCK SMASH to action list
+	if (sPartyMenuInternal->numActions < 5 && CheckBagHasItem(ITEM_HM06_ROCK_SMASH, 1) && FlagGet(FLAG_BADGE06_GET) == TRUE) 
+		AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, 5 + MENU_FIELD_MOVES);
 	
 	if (!InBattlePike())
     {

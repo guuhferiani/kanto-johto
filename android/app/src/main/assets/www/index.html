@@ -18,8 +18,72 @@
                 <button id="btn-save-state" class="tool-btn" title="Salvar Estado">💾 Salvar</button>
                 <button id="btn-load-state" class="tool-btn" title="Carregar Estado">📂 Carregar</button>
                 <button id="btn-mute" class="tool-btn" title="Áudio">🔊</button>
+                <button id="btn-settings" class="tool-btn" title="Configurações">⚙️</button>
             </div>
         </header>
+
+        <!-- Settings Modal -->
+        <div id="settings-modal" class="modal-backdrop" style="display: none;">
+            <div class="modal-card">
+                <div class="modal-header">
+                    <h3>⚙️ Configurações</h3>
+                    <button id="btn-close-settings" class="modal-close-btn" aria-label="Fechar">✕</button>
+                </div>
+                <div class="modal-body">
+                    <!-- Touch Controls Customization -->
+                    <div class="setting-group">
+                        <h4>🎮 Controles Touch</h4>
+                        
+                        <div class="setting-row">
+                            <label for="slider-opacity">Transparência: <span id="val-opacity">80%</span></label>
+                            <input type="range" id="slider-opacity" min="20" max="100" value="80" step="5">
+                        </div>
+
+                        <div class="setting-row">
+                            <label>Tamanho dos Botões</label>
+                            <div class="segmented-control" id="control-scale-group">
+                                <button type="button" class="segment-btn" data-scale="0.85">Pequeno</button>
+                                <button type="button" class="segment-btn active" data-scale="1.0">Padrão</button>
+                                <button type="button" class="segment-btn" data-scale="1.18">Grande</button>
+                            </div>
+                        </div>
+
+                        <div class="setting-row">
+                            <label>Posição dos Controles</label>
+                            <div class="segmented-control" id="control-pos-group">
+                                <button type="button" class="segment-btn" data-pos="low">Baixo</button>
+                                <button type="button" class="segment-btn active" data-pos="normal">Padrão</button>
+                                <button type="button" class="segment-btn" data-pos="high">Alto</button>
+                            </div>
+                        </div>
+
+                        <div class="setting-row setting-toggle">
+                            <label for="toggle-haptic">Vibração Tátil (Haptic)</label>
+                            <input type="checkbox" id="toggle-haptic" checked>
+                        </div>
+                    </div>
+
+                    <!-- Graphic Filters -->
+                    <div class="setting-group">
+                        <h4>📺 Filtro Gráfico</h4>
+                        <div class="segmented-control vertical" id="filter-group">
+                            <button type="button" class="segment-btn active" data-filter="pixel">
+                                <strong>Pixel Nítido</strong> <span>(GBA Original Crisp)</span>
+                            </button>
+                            <button type="button" class="segment-btn" data-filter="lcd">
+                                <strong>LCD Retrô</strong> <span>(Grade de pixels GBA)</span>
+                            </button>
+                            <button type="button" class="segment-btn" data-filter="crt">
+                                <strong>CRT Scanlines</strong> <span>(Estilo TV clássica)</span>
+                            </button>
+                            <button type="button" class="segment-btn" data-filter="smooth">
+                                <strong>Suavizado HQ</strong> <span>(Filtro Anti-Aliasing)</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Main Screen & Game Canvas -->
         <main id="screen-container">

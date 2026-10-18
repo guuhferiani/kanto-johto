@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detonado Oficial — Pokémon Kanto & Johto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ef4444;
+            --primary-dark: #dc2626;
+            --secondary: #3b82f6;
+            --accent: #f59e0b;
+            --bg-dark: #0f172a;
+            --bg-card: rgba(30, 41, 59, 0.7);
+            --border: rgba(255, 255, 255, 0.1);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(239, 68, 68, 0.12) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.12) 0px, transparent 50%);
+            background-attachment: fixed;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        header {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1rem 1.5rem;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .brand h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #f87171, #ef4444, #fbbf24);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .search-box {
+            position: relative;
+        }
+
+        .search-box input {
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid var(--border);
+            border-radius: 9999px;
+            padding: 0.5rem 1rem 0.5rem 2.2rem;
+            color: white;
+            font-size: 0.875rem;
+            outline: none;
+            width: 200px;
+            transition: all 0.2s;
+        }
+
+        .search-box input:focus {
+            width: 260px;
+            border-color: var(--primary);
+            box-shadow: 0 0 12px rgba(239, 68, 68, 0.3);
+        }
+
+        .search-box::before {
+            content: "🔍";
+            position: absolute;
+            left: 0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.8rem;
+            opacity: 0.6;
+        }
+
+        .btn-print {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border: none;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+            transition: all 0.2s;
+        }
+
+        .btn-print:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(239, 68, 68, 0.4);
+        }
+
+        /* Navigation Tabs */
+        nav.tabs {
+            max-width: 1200px;
+            margin: 1.5rem auto 0;
+            padding: 0 1rem;
+            display: flex;
+            gap: 0.5rem;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+
+        .tab-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            padding: 0.65rem 1.25rem;
+            border-radius: 12px;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+
+        .tab-btn:hover {
+            color: white;
+            background: rgba(51, 65, 85, 0.8);
+        }
+
+        .tab-btn.active {
+            color: white;
+            background: var(--primary);
+            border-color: var(--primary);
+            box-shadow: 0 4px 16px rgba(239, 68, 68, 0.35);
+        }
+
+        /* Container */
+        main.container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Cards & Grids */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            background: var(--bg-card);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .card:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .card-header h2, .card-header h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .badge-pill {
+            background: rgba(239, 68, 68, 0.2);
+            color: #f87171;
+            border: 1px solid rgba(239, 68, 68, 0.4);
+            padding: 0.25rem 0.6rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .step-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+        }
+
+        .step-list li {
+            position: relative;
+            padding-left: 2rem;
+            font-size: 0.95rem;
+            color: #e2e8f0;
+        }
+
+        .step-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 2px;
+            width: 1.25rem;
+            height: 1.25rem;
+            background: rgba(239, 68, 68, 0.2);
+            color: #ef4444;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 800;
+        }
+
+        .highlight-box {
+            background: rgba(59, 130, 246, 0.1);
+            border-left: 4px solid var(--secondary);
+            border-radius: 0 8px 8px 0;
+            padding: 0.75rem 1rem;
+            margin: 1rem 0;
+            font-size: 0.875rem;
+            color: #bfdbfe;
+        }
+
+        .highlight-box.warn {
+            background: rgba(245, 158, 11, 0.1);
+            border-left-color: var(--accent);
+            color: #fde68a;
+        }
+
+        .highlight-box.success {
+            background: rgba(34, 197, 94, 0.1);
+            border-left-color: #22c55e;
+            color: #bbf7d0;
+        }
+
+        /* Gym Leader Table */
+        table.gym-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+
+        table.gym-table th {
+            background: rgba(15, 23, 42, 0.9);
+            color: var(--text-muted);
+            text-align: left;
+            padding: 0.6rem 0.75rem;
+            font-weight: 600;
+            border-bottom: 1px solid var(--border);
+        }
+
+        table.gym-table td {
+            padding: 0.75rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            vertical-align: middle;
+        }
+
+        table.gym-table tr:hover {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .poke-pill {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 0.2rem 0.5rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            margin: 0.15rem;
+            font-weight: 600;
+        }
+
+        /* Interactive Badge Tracker */
+        .tracker-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+            gap: 0.75rem;
+            margin: 1.5rem 0;
+        }
+
+        .badge-tracker-item {
+            background: rgba(15, 23, 42, 0.6);
+            border: 2px dashed rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 0.75rem 0.5rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            user-select: none;
+        }
+
+        .badge-tracker-item.obtained {
+            border-style: solid;
+            border-color: #ef4444;
+            background: rgba(239, 68, 68, 0.15);
+            box-shadow: 0 0 16px rgba(239, 68, 68, 0.3);
+        }
+
+        .badge-icon {
+            font-size: 1.75rem;
+            display: block;
+            margin-bottom: 0.25rem;
+            filter: grayscale(1);
+            opacity: 0.4;
+            transition: all 0.2s;
+        }
+
+        .badge-tracker-item.obtained .badge-icon {
+            filter: grayscale(0);
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        .badge-name {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--text-muted);
+        }
+
+        .badge-tracker-item.obtained .badge-name {
+            color: #ffffff;
+        }
+
+        /* Print styling */
+        @media print {
+            header, nav.tabs, .search-box, .btn-print, .badge-tracker-item {
+                display: none !important;
+            }
+            body {
+                background: white !important;
+                color: black !important;
+                background-image: none !important;
+            }
+            .tab-content {
+                display: block !important;
+                margin-bottom: 3rem;
+            }
+            .card {
+                background: none !important;
+                border: 1px solid #ccc !important;
+                color: black !important;
+                box-shadow: none !important;
+                page-break-inside: avoid;
+            }
+            .card-header h2, .card-header h3 {
+                color: black !important;
+            }
+            .step-list li {
+                color: #222 !important;
+            }
+            .highlight-box {
+                border-left-color: #333 !important;
+                background: #f4f4f4 !important;
+                color: black !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="brand">
+                <span style="font-size: 1.75rem;">🔴⚪</span>
+                <div>
+                    <h1>Pokémon Kanto & Johto</h1>
+                    <p style="font-size: 0.75rem; color: var(--text-muted);">Detonado Oficial & Guia Completo do Treinador</p>
+                </div>
+            </div>
+
+            <div class="header-actions">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Buscar no detonado..." onkeyup="filterContent()">
+                </div>
+                <button class="btn-print" onclick="window.print()">🖨️ Imprimir / Salvar PDF</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav class="tabs">
+        <button class="tab-btn active" onclick="switchTab('qol')">⭐ Novidades & QoL</button>
+        <button class="tab-btn" onclick="switchTab('kanto')">🗺️ Detonado Kanto</button>
+        <button class="tab-btn" onclick="switchTab('johto')">🚄 Detonado Johto</button>
+        <button class="tab-btn" onclick="switchTab('gyms')">🏆 Ginásios & Chefes</button>
+        <button class="tab-btn" onclick="switchTab('secrets')">✨ Lendários & Segredos</button>
+        <button class="tab-btn" onclick="switchTab('tracker')">🎖️ Rastreador de Insígnias</button>
+    </nav>
+
+    <!-- Content Sections -->
+    <main class="container">
+
+        <!-- TAB 1: QoL & NOVIDADES -->
+        <section id="tab-qol" class="tab-content active">
+            <div class="card" style="margin-bottom: 1.5rem; border-color: rgba(239, 68, 68, 0.4);">
+                <div class="card-header">
+                    <h2>🔥 Atualizações do Projeto & Recursos Exclusivos</h2>
+                    <span class="badge-pill">Versão Final</span>
+                </div>
+                <p style="margin-bottom: 1rem; color: #cbd5e1;">Esta versão especial reúne o melhor da 1ª e 2ª geração com motor moderno em 60 FPS, recursos de qualidade de vida inspirados nas gerações recentes e suporte completo para PC e celular.</p>
+                
+                <div class="grid-2">
+                    <div class="highlight-box success">
+                        <strong style="display:block; font-size:1rem; margin-bottom:0.25rem;">🌳 HMs Sem "Escravo de HM"</strong>
+                        Você não precisa mais desperdiçar espaços de golpes na sua equipe! Bastando ter a Insígnia do Ginásio e a HM na Bolsa, aperte <b>A</b> diretamente sobre a árvore (Corte), rocha (Quebra-Pedra), pedregulho (Força) ou água (Surfe/Cachoeira/Mergulho). Qualquer Pokémon da sua equipe executará o movimento!
+                    </div>
+
+                    <div class="highlight-box success">
+                        <strong style="display:block; font-size:1rem; margin-bottom:0.25rem;">🎯 Ganho de EXP ao Capturar</strong>
+                        Seguindo o padrão moderno das gerações recentes, ao capturar qualquer Pokémon selvagem com Pokébola, toda a sua equipe participante recebe Pontos de Experiência normalmente!
+                    </div>
+
+                    <div class="highlight-box">
+                        <strong style="display:block; font-size:1rem; margin-bottom:0.25rem;">🌓 Ciclo Dinâmico de Dia e Noite</strong>
+                        O mundo do jogo sincroniza com o relógio real (RTC), apresentando tons dinâmicos de Alvorecer, Dia claro, Entardecer Dourado e Noite enluarada, influenciando encontros e evoluções (ex: Eevee para Espeon/Umbreon).
+                    </div>
+
+                    <div class="highlight-box">
+                        <strong style="display:block; font-size:1rem; margin-bottom:0.25rem;">📱 APK Nativo com Filtros & Ajuste Touch</strong>
+                        No APK para Android, toque no ícone de engrenagem <b>⚙️</b> para regular a transparência dos botões (20% a 100%), tamanho, vibração háptica e escolher entre filtros <b>Pixel Nítido</b>, <b>LCD Retrô GBA</b> ou <b>CRT Scanlines</b>.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 2: DETONADO KANTO -->
+        <section id="tab-kanto" class="tab-content">
+            <div class="grid-2">
+                <!-- Parte 1 -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>1. O Início da Jornada & Brock</h3>
+                        <span class="badge-pill">Insígnia Rocha</span>
+                    </div>
+                    <ul class="step-list">
+                        <li>Inicie em <b>Pallet Town</b>. Vá até o norte para ser chamado pelo Prof. Carvalho e escolha seu inicial (Bulbasaur, Charmander ou Squirtle).</li>
+                        <li>Entregue o <b>Oak's Parcel</b> de Viridian até Pallet para desbloquear sua <b>Pokédex</b> e o <b>DexNav</b> com encontros visíveis no mapa.</li>
+                        <li>Atravesse a <b>Viridian Forest</b>. Use golpes de fogo ou voadores contra os insetos.</li>
+                        <li><b>Pewter City:</b> Desafie Brock no Ginásio. Golpeie Geodude e Onix com Água ou Planta (ou Chute Duplo do Mankey capturado na Rota 22).</li>
+                    </ul>
+                </div>
+
+                <!-- Parte 2 -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>2. Monte Moon & Misty</h3>
+                        <span class="badge-pill">Insígnia Cascata</span>
+                    </div>
+                    <ul class="step-list">
+                        <li>Siga pela <b>Rota 3</b> até o <b>Mt. Moon</b>. Derrote os capangas da Equipe Rocket e escolha entre o <i>Helix Fossil</i> (Omanyte) ou <i>Dome Fossil</i> (Kabuto).</li>
+                        <li>Chegue em <b>Cerulean City</b>. Enfrente seu rival e atravesse a <b>Nugget Bridge</b> na Rota 24/25 até a casa de Bill para receber o <b>S.S. Ticket</b>.</li>
+                        <li><b>Ginásio de Cerulean:</b> Use elétricos ou planta contra Staryu e Starmie de Misty para conquistar a Insígnia da Cascata.</li>
+                    </ul>
+                </div>
+
+                <!-- Parte 3 -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>3. S.S. Anne & Tenente Surge</h3>
+                        <span class="badge-pill">Insígnia Trovão</span>
+                    </div>
+                    <ul class="step-list">
+                        <li>Desça pela Rota 5/6 até <b>Vermilion City</b>. Embarque no cruzeiro <b>S.S. Anne</b>, derrote os marinheiros e o Rival.</li>
+                        <li>Converse com o Capitão enjoado para receber o <b>HM01 Corte (Cut)</b>.</li>
+                        <li>Remova o arbusto em frente ao Ginásio de Vermilion (sem precisar ensinar o golpe!). Resolva o enigma dos cestos de lixo e derrote o <b>Lt. Surge</b> usando Pokémon do tipo Terra (Diglett da caverna ao lado).</li>
+                    </ul>
+                </div>
+
+                <!-- Parte 4 -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>4. Rock Tunnel & Lavender Town</h3>
+                        <span class="badge-pill">Torre Fantasma</span>
+                    </div>
+                    <ul class="step-list">
+                        <li>Pegue a <b>HM05 Clarão (Flash)</b> na Rota 2 ao sul de Pewter com o assistente do Prof. Carvalho.</li>
+                        <li>Atravesse a Rota 9/10 e entre no <b>Rock Tunnel</b>. Se você tiver a HM05 na bolsa, a caverna se ilumina com facilidade!</li>
+                        <li>Chegue em <b>Lavender Town</b>. A <i>Pokémon Tower</i> está bloqueada por um fantasma misterioso não identificado; prossiga pela Rota 8 até Celadon.</li>
+                    </ul>
+                </div>
+
+                <!-- Parte 5 -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>5. Celadon City & Erika</h3>
+                        <span class="badge-pill">Insígnia Arco-Íris</span>
+                    </div>
+                    <ul class="step-list">
+                        <li>Em <b>Celadon City</b>, receba o <b>Eevee</b> na mansão e compre itens no shopping.</li>
+                        <li>Vá até o <b>Rocket Game Corner</b>, aperte o botão atrás do pôster e invada o esconderijo da Equipe Rocket. Derrote Giovanni para pegar o <b>Silph Scope</b>!</li>
+                        <li>Volte a Lavender Town com o Silph Scope, revele o fantasma da mãe Marowak e salve o Sr. Fuji para receber a <b>Poké Flute</b>.</li>
+                        <li><b>Ginásio de Celadon:</b> Erika usa plantas venenosas. Fogo, Voador e Psíquico garantem a vitória!</li>
+                    </ul>
+                </div>
+
+                <!-- Parte 6 -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>6. Silph Co. & Sabrina</h3>
+                        <span class="badge-pill">Insígnia Pântano</span>
+                    </div>
+                    <ul class="step-list">
+                        <li>Vá para <b>Saffron City</b>. A metrópole foi tomada pela Equipe Rocket! Invada o prédio da <b>Silph Co.</b>.</li>
+                        <li>No 5º andar, pegue o <b>Card Key</b> para abrir todas as portas eletrônicas.</li>
+                        <li>Derrote o Rival no 7º andar (receba Lapras de presente!), avance até o 11º andar e derrote Giovanni. O presidente da Silph lhe dará a cobiçada <b>Master Ball</b>!</li>
+                        <li><b>Ginásio de Saffron:</b> Sabrina usa Alakazam de alto poder. Tipos Sombrios ou ataques físicos potentes são a chave para vencer.</li>
+                    </ul>
+                </div>
+
+                <!-- Parte 7 -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>7. Fuchsia City & Safari Zone</h3>
+                        <span class="badge-pill">Insígnia Alma</span>
+                    </div>
+                    <ul class="step-list">
+                        <li>Acorde o Snorlax com a Poké Flute e desça pela Rota 17 (Ciclovia) até <b>Fuchsia City</b>.</li>
+                        <li>Entre na <b>Safari Zone</b>. Na área secreta final, encontre a Casa Secreta para ganhar a <b>HM03 Surfe</b> e pegue a Dentadura Dourada para trocar pela <b>HM04 Força</b>!</li>
+                        <li><b>Ginásio de Fuchsia:</b> Koga usa paredes invisíveis e venenos. Fogo, Terra e Psíquico aniquilam Koffing e Weezing.</li>
+                    </ul>
+                </div>
+
+                <!-- Parte 8 -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3>8. Ilha Cinnabar & Giovanni</h3>
+                        <span class="badge-pill">Insígnias Vulcão & Terra</span>
+                    </div>
+                    <ul class="step-list">
+                        <li>Surfe até a <b>Ilha Seafoam</b> (onde habita o lendário Articuno) e alcance <b>Cinnabar Island</b>.</li>
+                        <li>Explore a <i>Pokémon Mansion</i> para encontrar a Chave Secreta do Ginásio.</li>
+                        <li><b>Ginásio de Cinnabar:</b> Blaine usa Pokémon de Fogo. Água e Terra garantem a 7ª Insígnia.</li>
+                        <li>Volte a <b>Viridian City</b>: o líder misterioso é <b>Giovanni</b>! Derrote seus monstros do tipo Terra para conquistar todas as 8 Insígnias de Kanto!</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Liga Pokemon -->
+            <div class="card" style="border-color: #f59e0b;">
+                <div class="card-header">
+                    <h2>🏆 A Liga Pokémon de Kanto (Indigo Plateau)</h2>
+                    <span class="badge-pill" style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; border-color: rgba(245, 158, 11, 0.4);">Nível 50 a 55</span>
+                </div>
+                <p style="margin-bottom: 1rem;">Atravesse a desafiadora <b>Victory Road</b> (onde você pode capturar Moltres com Surfe e Força) e prepare sua equipe:</p>
+                <div class="grid-2">
+                    <div>
+                        <strong style="color: #60a5fa;">1. Lorelei (Gelo & Água):</strong> Lapras, Cloyster, Jynx. Use Elétrico, Lutador e Fogo.<br><br>
+                        <strong style="color: #f87171;">2. Bruno (Lutador & Pedra):</strong> Onix, Hitmonlee, Hitmonchan, Machamp. Use Psíquico e Voador.<br><br>
+                        <strong style="color: #c084fc;">3. Agatha (Fantasma & Veneno):</strong> Gengar, Golbat, Arbok. Use Psíquico e Terremoto.
+                    </div>
+                    <div>
+                        <strong style="color: #fb923c;">4. Lance (Dragões):</strong> Gyarados, Aerodactyl, Dragonair, Dragonite. Gelo e Elétrico são devastadores!<br><br>
+                        <strong style="color: #facc15;">5. Campeão Blue:</strong> Equipe versátil com Alakazam, Rhydon, Exeggutor, Arcanine, Gyarados/Pidgeot e o Inicial. Alterne seus Pokémon aproveitando as vantagens de tipo!
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 3: DETONADO JOHTO -->
+        <section id="tab-johto" class="tab-content">
+            <div class="card" style="margin-bottom: 1.5rem;">
+                <div class="card-header">
+                    <h2>🚄 A Fronteira Oeste: Entrando na Região de Johto!</h2>
+                    <span class="badge-pill">Nível 55+</span>
+                </div>
+                <p>Após consagrar-se Campeão de Kanto, o Prof. Carvalho autoriza seu passaporte diplomático para a região vizinha de <b>Johto</b>! Existem 3 conexões oficiais:</p>
+                <div class="grid-2" style="margin-top: 1rem;">
+                    <div class="highlight-box">
+                        <strong>🚢 Navio S.S. Aqua:</strong> Embarque no porto de Vermilion City para navegar diretamente até as costas de Johto e Olivine City.
+                    </div>
+                    <div class="highlight-box">
+                        <strong>🌊 Tohjo Falls & Rotas 26/27:</strong> Aventure-se a oeste da Rota 22, surfando pelas cachoeiras até New Bark Town.
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>1. Falkner & Bugsy</h3>
+                        <span class="badge-pill">Violet & Azalea</span>
+                    </div>
+                    <ul class="step-list">
+                        <li><b>Violet City:</b> Suba a Sprout Tower e desafie Falkner (Lv 58+). Seus pássaros Pidgeot e Noctowl caem facilmente para Elétrico e Gelo.</li>
+                        <li>Atravesse a Union Cave até <b>Azalea Town</b>. Ajude Kurt a expulsar os remanescentes da Equipe Rocket do Poço dos Slowpoke.</li>
+                        <li><b>Ginásio de Azalea:</b> Bugsy usa Scizor e Heracross de alto nível. Golpes de Fogo são vitória imediata!</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>2. Whitney & Morty</h3>
+                        <span class="badge-pill">Goldenrod & Ecruteak</span>
+                    </div>
+                    <ul class="step-list">
+                        <li>Atravesse Ilex Forest e alcance a metrópole de <b>Goldenrod City</b>.</li>
+                        <li><b>Whitney:</b> Conhecida pelo terrível Miltank! Em Johto avançado, use Pokémon de Pedra resistentes ou golpes do tipo Lutador com alta defesa.</li>
+                        <li>Siga para <b>Ecruteak City</b>. Conheça as torres queimadas (Burned Tower) onde os cães lendários Raikou, Entei e Suicune despertam!</li>
+                        <li><b>Morty:</b> Seus fantasmas usam Hipnose e Bola Sombria. Use golpes Sombrios e Psíquicos.</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>3. Chuck & Jasmine</h3>
+                        <span class="badge-pill">Cianwood & Olivine</span>
+                    </div>
+                    <ul class="step-list">
+                        <li>Surfe pelas rotas marinhas até <b>Cianwood City</b>. Derrote Chuck (Lutador) com Psíquico e pegue o Remédio Secreto na farmácia.</li>
+                        <li>Volte a <b>Olivine City</b>, suba o Farol e cure o Amphy de Jasmine.</li>
+                        <li><b>Jasmine:</b> Utiliza Steelix e Magnemite de Aço. Fogo e Terremoto derretem sua defesa de metal.</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>4. Pryce, Clair & O Monte Silver</h3>
+                        <span class="badge-pill">Mahogany & Blackthorn</span>
+                    </div>
+                    <ul class="step-list">
+                        <li>Em <b>Mahogany Town</b>, investigue o Lago da Fúria e encontre o <b>Gyarados Vermelho (Shiny)</b>. Desafie Pryce no Ginásio de Gelo.</li>
+                        <li>Atravesse a Ice Path até <b>Blackthorn City</b>. Clair desafia com Kingdra e Dragonites. Golpes de Dragão e Fada são decisivos!</li>
+                        <li><b>O Clímax Final no Monte Silver:</b> Embarque no S.S. Aqua ou siga pela Rota 28 até a montanha proibida coberta por neve constante. No cume, o lendário Campeão <b>Red</b> espera em silêncio...</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 4: GINÁSIOS & CHEFES -->
+        <section id="tab-gyms" class="tab-content">
+            <div class="card">
+                <div class="card-header">
+                    <h2>🥊 Tabela Completa de Líderes e Fraquezas</h2>
+                    <span class="badge-pill">Guia Tático</span>
+                </div>
+                <table class="gym-table">
+                    <thead>
+                        <tr>
+                            <th>Líder</th>
+                            <th>Região / Cidade</th>
+                            <th>Tipo Principal</th>
+                            <th>Pokémon Destaque</th>
+                            <th>Melhores Fraquezas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b>Brock</b></td>
+                            <td>Kanto — Pewter</td>
+                            <td>Pedra / Terra</td>
+                            <td><span class="poke-pill">Geodude</span><span class="poke-pill">Onix</span></td>
+                            <td>Água, Planta, Lutador</td>
+                        </tr>
+                        <tr>
+                            <td><b>Misty</b></td>
+                            <td>Kanto — Cerulean</td>
+                            <td>Água</td>
+                            <td><span class="poke-pill">Staryu</span><span class="poke-pill">Starmie</span></td>
+                            <td>Elétrico, Planta</td>
+                        </tr>
+                        <tr>
+                            <td><b>Lt. Surge</b></td>
+                            <td>Kanto — Vermilion</td>
+                            <td>Elétrico</td>
+                            <td><span class="poke-pill">Raichu</span><span class="poke-pill">Electabuzz</span></td>
+                            <td>Terra (Terremoto/Escavação)</td>
+                        </tr>
+                        <tr>
+                            <td><b>Erika</b></td>
+                            <td>Kanto — Celadon</td>
+                            <td>Planta</td>
+                            <td><span class="poke-pill">Vileplume</span><span class="poke-pill">Victreebel</span></td>
+                            <td>Fogo, Voador, Gelo, Psíquico</td>
+                        </tr>
+                        <tr>
+                            <td><b>Sabrina</b></td>
+                            <td>Kanto — Saffron</td>
+                            <td>Psíquico</td>
+                            <td><span class="poke-pill">Alakazam</span><span class="poke-pill">Espeon</span></td>
+                            <td>Sombrio, Fantasma, Inseto</td>
+                        </tr>
+                        <tr>
+                            <td><b>Koga</b></td>
+                            <td>Kanto — Fuchsia</td>
+                            <td>Veneno</td>
+                            <td><span class="poke-pill">Weezing</span><span class="poke-pill">Muk</span></td>
+                            <td>Psíquico, Terra</td>
+                        </tr>
+                        <tr>
+                            <td><b>Blaine</b></td>
+                            <td>Kanto — Cinnabar</td>
+                            <td>Fogo</td>
+                            <td><span class="poke-pill">Arcanine</span><span class="poke-pill">Magmar</span></td>
+                            <td>Água, Terra, Pedra</td>
+                        </tr>
+                        <tr>
+                            <td><b>Giovanni</b></td>
+                            <td>Kanto — Viridian</td>
+                            <td>Terra</td>
+                            <td><span class="poke-pill">Rhydon</span><span class="poke-pill">Nidoking</span></td>
+                            <td>Água, Planta, Gelo</td>
+                        </tr>
+                        <tr>
+                            <td><b>Red (Final)</b></td>
+                            <td>Cume do Monte Silver</td>
+                            <td>Mestre Supremo (Lv 100)</td>
+                            <td><span class="poke-pill">Pikachu</span><span class="poke-pill">Charizard</span><span class="poke-pill">Blastoise</span><span class="poke-pill">Venusaur</span><span class="poke-pill">Snorlax</span><span class="poke-pill">Lapras</span></td>
+                            <td>Equipe balanceada no nível 95+, itens de cura e previsão de tipos</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- TAB 5: LENDÁRIOS & SEGREDOS -->
+        <section id="tab-secrets" class="tab-content">
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>🦅 As Aves Lendárias de Kanto</h3>
+                        <span class="badge-pill">Nível 50</span>
+                    </div>
+                    <ul class="step-list">
+                        <li><b>Zapdos (Power Plant):</b> Surfe pela água da Rota 10 até a Usina Abandonada. No final dos corredores elétricos, enfrente o lendário pássaro do trovão.</li>
+                        <li><b>Articuno (Seafoam Islands):</b> Entre nas cavernas marítimas e empurre as pedras com Força para acalmar a correnteza e alcançar o santuário de gelo.</li>
+                        <li><b>Moltres (Victory Road):</b> Na rota da vitória, empurre as pedras nos botões do chão para desbloquear a caverna secreta do pássaro de fogo.</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>🧬 O Clone Supremo: Mewtwo</h3>
+                        <span class="badge-pill">Nível 70</span>
+                    </div>
+                    <ul class="step-list">
+                        <li>Após vencer a Liga Pokémon de Kanto, o guarda que bloqueia a caverna a noroeste de Cerulean City se afasta.</li>
+                        <li>Entre na <b>Cerulean Cave</b> com Pokémon de Surfe e Quebra-Pedra.</li>
+                        <li>Enfrente monstros selvagens de nível 60+ até encontrar <b>Mewtwo</b> no subsolo. Guarde sua Master Ball para garantir a captura!</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>🌊 Lugia & Ho-Oh (Navel Rock)</h3>
+                        <span class="badge-pill">Nível 70</span>
+                    </div>
+                    <ul class="step-list">
+                        <li>Através do navio S.S. Aqua com o <i>Mystic Ticket</i>, viaje até o arquipélago lendário de <b>Navel Rock</b>.</li>
+                        <li>Suba a torre mais alta para desafiar a ave do arco-íris <b>Ho-Oh</b> com seu golpe sagrado Sacred Fire.</li>
+                        <li>Desça até o abismo mais profundo inundado para encontrar o guardião dos mares <b>Lugia</b> com Aeroblast.</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>🌿 Mew (Faraway Island)</h3>
+                        <span class="badge-pill">Nível 30</span>
+                    </div>
+                    <ul class="step-list">
+                        <li>Viaje até a <b>Ilha Distante (Faraway Island)</b> através do porto.</li>
+                        <li>Adentre a clareira verde secreta no coração da floresta.</li>
+                        <li>Brinque de esconde-esconde na grama alta com <b>Mew</b> e aperte o botão de ação para iniciar a batalha de captura do ancestral genético!</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 6: RASTREADOR DE INSÍGNIAS -->
+        <section id="tab-tracker" class="tab-content">
+            <div class="card">
+                <div class="card-header">
+                    <h2>🎖️ Rastreador Interativo de Insígnias</h2>
+                    <span class="badge-pill">Salva Automaticamente</span>
+                </div>
+                <p style="color: #cbd5e1; font-size: 0.9rem;">Clique nas insígnias abaixo conforme for conquistando os Ginásios de Kanto e Johto. Seu progresso fica salvo no seu navegador!</p>
+
+                <h3 style="margin-top: 1.5rem; color: #ef4444; font-size: 1rem;">Insígnias de Kanto</h3>
+                <div class="tracker-grid">
+                    <div class="badge-tracker-item" onclick="toggleBadge(this, 'b_kanto_1')">
+                        <span class="badge-icon">🪨</span>
+                        <span class="badge-name">Rocha (Brock)</span>
+                    </div>
+                    <div class="badge-tracker-item" onclick="toggleBadge(this, 'b_kanto_2')">
+                        <span class="badge-icon">💧</span>
+                        <span class="badge-name">Cascata (Misty)</span>
+                    </div>
+                    <div class="badge-tracker-item" onclick="toggleBadge(this, 'b_kanto_3')">
+                        <span class="badge-icon">⚡</span>
+                        <span class="badge-name">Trovão (Surge)</span>
+                    </div>
+                    <div class="badge-tracker-item" onclick="toggleBadge(this, 'b_kanto_4')">
+                        <span class="badge-icon">🌈</span>
+                        <span class="badge-name">Arco-Íris (Erika)</span>
+                    </div>
+                    <div class="badge-tracker-item" onclick="toggleBadge(this, 'b_kanto_5')">
+                        <span class="badge-icon">🔮</span>
+                        <span class="badge-name">Pântano (Sabrina)</span>
+                    </div>
+                    <div class="badge-tracker-item" onclick="toggleBadge(this, 'b_kanto_6')">
+                        <span class="badge-icon">💀</span>
+                        <span class="badge-name">Alma (Koga)</span>
+                    </div>
+                    <div class="badge-tracker-item" onclick="toggleBadge(this, 'b_kanto_7')">
+                        <span class="badge-icon">🔥</span>
+                        <span class="badge-name">Vulcão (Blaine)</span>
+                    </div>
+                    <div class="badge-tracker-item" onclick="toggleBadge(this, 'b_kanto_8')">
+                        <span class="badge-icon">🌍</span>
+                        <span class="badge-name">Terra (Giovanni)</span>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 1.5rem; color: #3b82f6; font-size: 1rem;">Insígnias de Johto</h3>
+                <div class="tracker-grid">
+                    <div class="badge-tracker-item" onclick="toggleBadge(this, 'b_johto_1')">
+                        <span class="badge-icon">🪶</span>
+                        <span class="badge-name">Zéfiro (Falkner)</span>
+                    </div>
+                    <div class="badge-tracker-item" onclick="toggleBadge(this, 'b_johto_2')">
+                        <span class="badge-icon">🪲</span>
+                        <span class="badge-name">Colmeia (Bugsy)</span>
+                    </div>
+                    <div class="badge-tracker-item" onclick="toggleBadge(this, 'b_johto_3')">
+                        <span class="badge-icon">🌸</span>
+                        <span class="badge-name">Planície (Whitney)</span>
+                    </div>
+                    <div class="badge-tracker-item" onclick="toggleBadge(this, 'b_johto_4')">
+                        <span class="badge-icon">👻</span>
+                        <span class="badge-name">Neblina (Morty)</span>
+                    </div>
+                    <div class="badge-tracker-item" onclick="toggleBadge(this, 'b_johto_5')">
+                        <span class="badge-icon">🥊</span>
+                        <span class="badge-name">Tempestade (Chuck)</span>
+                    </div>
+                    <div class="badge-tracker-item" onclick="toggleBadge(this, 'b_johto_6')">
+                        <span class="badge-icon">⚙️</span>
+                        <span class="badge-name">Mineral (Jasmine)</span>
+                    </div>
+                    <div class="badge-tracker-item" onclick="toggleBadge(this, 'b_johto_7')">
+                        <span class="badge-icon">❄️</span>
+                        <span class="badge-name">Geleira (Pryce)</span>
+                    </div>
+                    <div class="badge-tracker-item" onclick="toggleBadge(this, 'b_johto_8')">
+                        <span class="badge-icon">🐉</span>
+                        <span class="badge-name">Ascensão (Clair)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer style="text-align: center; padding: 2rem; color: var(--text-muted); font-size: 0.85rem; border-top: 1px solid var(--border); margin-top: 4rem;">
+        Pokémon Kanto & Johto — Projeto Decomp GBA PokéClassic • Detonado Oficial & Guia Completo Interativo
+    </footer>
+
+    <script>
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            
+            const selectedContent = document.getElementById(`tab-${tabId}`);
+            if (selectedContent) selectedContent.classList.add('active');
+
+            event.currentTarget.classList.add('active');
+        }
+
+        function filterContent() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const cards = document.querySelectorAll('.card');
+            
+            cards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                if (text.includes(query)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function toggleBadge(el, badgeKey) {
+            el.classList.toggle('obtained');
+            const isObtained = el.classList.contains('obtained');
+            localStorage.setItem(badgeKey, isObtained ? 'true' : 'false');
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.badge-tracker-item').forEach(el => {
+                const badgeKey = el.getAttribute('onclick').match(/'([^']+)'/)[1];
+                if (localStorage.getItem(badgeKey) === 'true') {
+                    el.classList.add('obtained');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

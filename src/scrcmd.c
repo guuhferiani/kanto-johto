@@ -1780,7 +1780,9 @@ bool8 ScrCmd_checkpartymove(struct ScriptContext *ctx)
             break;
         }
     }
-    if (gSpecialVar_Result == PARTY_SIZE && (CheckBagHasItem(MoveToHM(moveId), 1))){
+    if (gSpecialVar_Result == PARTY_SIZE && (CheckBagHasItem(MoveToHM(moveId), 1)))
+    {
+        // First, check if any mon naturally can learn it
         for (i = 0; i < PARTY_SIZE; i++)
         {
             u16 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES, NULL);
@@ -1790,7 +1792,20 @@ bool8 ScrCmd_checkpartymove(struct ScriptContext *ctx)
             {
                 gSpecialVar_Result = i;
                 gSpecialVar_0x8004 = species;
+                return FALSE;
+            }
+        }
+        // If none is naturally compatible, any non-egg party member can perform it (no HM slave required!)
+        for (i = 0; i < PARTY_SIZE; i++)
+        {
+            u16 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES, NULL);
+            if (!species)
                 break;
+            if (!GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG))
+            {
+                gSpecialVar_Result = i;
+                gSpecialVar_0x8004 = species;
+                return FALSE;
             }
         }
     }

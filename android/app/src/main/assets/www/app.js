@@ -2,6 +2,15 @@ let emulator = null;
 let isTurbo = false;
 let isMuted = false;
 
+// Default User Settings
+let userSettings = {
+    opacity: 80,
+    scale: 1.0,
+    position: 'normal',
+    haptic: true,
+    filter: 'pixel'
+};
+
 // RetroArch / GBA Key mapping
 const KEY_MAP = {
     'ArrowUp': 'ArrowUp',
@@ -17,6 +26,7 @@ const KEY_MAP = {
 };
 
 function triggerVibration(duration = 18) {
+    if (!userSettings.haptic) return;
     try {
         if (window.AndroidBridge && typeof window.AndroidBridge.vibrate === 'function') {
             window.AndroidBridge.vibrate(duration);
@@ -180,6 +190,144 @@ function setupToolbar() {
             }
         });
     }
+
+    const btnSettings = document.getElementById('btn-settings');
+    const modalSettings = document.getElementById('settings-modal');
+    const btnCloseSettings = document.getElementById('btn-close-settings');
+
+    if (btnSettings && modalSettings) {
+        btnSettings.addEventListener('click', () => {
+            triggerVibration(20);
+            modalSettings.style.display = 'flex';
+        });
+    }
+
+    if (btnCloseSettings && modalSettings) {
+        btnCloseSettings.addEventListener('click', () => {
+            triggerVibration(20);
+            modalSettings.style.display = 'none';
+        });
+    }
+
+    if (modalSettings) {
+        modalSettings.addEventListener('click', (e) => {
+            if (e.target === modalSettings) {
+                modalSettings.style.display = 'none';
+            }
+        });
+    }
+}
+
+function loadSettings() {
+    try {
+        const raw = localStorage.getItem('pkmn_user_settings');
+        if (raw) {
+            userSettings = Object.assign(userSettings, JSON.parse(raw));
+        }
+    } catch (e) {
+        console.error('Erro ao ler configurações salvas:', e);
+    }
+    applySettings();
+}
+
+function saveSettings() {
+    try {
+        localStorage.setItem('pkmn_user_settings', JSON.stringify(userSettings));
+    } catch (e) {
+        console.error('Erro ao salvar configurações:', e);
+    }
+}
+
+function applySettings() {
+    const root = document.documentElement;
+    const target = document.getElementById('emulator-target');
+
+    // Apply Controls Opacity
+    root.style.setProperty('--controls-opacity', (userSettings.opacity / 100).toString());
+    const valOpacity = document.getElementById('val-opacity');
+    if (valOpacity) valOpacity.textContent = userSettings.opacity + '%';
+    const sliderOpacity = document.getElementById('slider-opacity');
+    if (sliderOpacity) sliderOpacity.value = userSettings.opacity;
+
+    // Apply Controls Scale
+    root.style.setProperty('--controls-scale', userSettings.scale.toString());
+    document.querySelectorAll('#control-scale-group .segment-btn').forEach(btn => {
+        btn.classList.toggle('active', parseFloat(btn.getAttribute('data-scale')) === userSettings.scale);
+    });
+
+    // Apply Controls Position
+    let offset = '0px';
+    if (userSettings.position === 'low') offset = '-14px';
+    if (userSettings.position === 'high') offset = '24px';
+    root.style.setProperty('--controls-bottom-offset', offset);
+    document.querySelectorAll('#control-pos-group .segment-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-pos') === userSettings.position);
+    });
+
+    // Apply Haptic Toggle
+    const toggleHaptic = document.getElementById('toggle-haptic');
+    if (toggleHaptic) toggleHaptic.checked = userSettings.haptic;
+
+    // Apply Graphic Filters
+    if (target) {
+        target.classList.remove('filter-pixel', 'filter-lcd', 'filter-crt', 'filter-smooth');
+        target.classList.add(`filter-${userSettings.filter}`);
+    }
+    document.querySelectorAll('#filter-group .segment-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-filter') === userSettings.filter);
+    });
+}
+
+function setupSettingsModal() {
+    // Opacity Slider
+    const sliderOpacity = document.getElementById('slider-opacity');
+    if (sliderOpacity) {
+        sliderOpacity.addEventListener('input', (e) => {
+            userSettings.opacity = parseInt(e.target.value, 10);
+            applySettings();
+            saveSettings();
+        });
+    }
+
+    // Scale Selector
+    document.querySelectorAll('#control-scale-group .segment-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            triggerVibration(20);
+            userSettings.scale = parseFloat(btn.getAttribute('data-scale'));
+            applySettings();
+            saveSettings();
+        });
+    });
+
+    // Position Selector
+    document.querySelectorAll('#control-pos-group .segment-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            triggerVibration(20);
+            userSettings.position = btn.getAttribute('data-pos');
+            applySettings();
+            saveSettings();
+        });
+    });
+
+    // Haptic Checkbox
+    const toggleHaptic = document.getElementById('toggle-haptic');
+    if (toggleHaptic) {
+        toggleHaptic.addEventListener('change', (e) => {
+            userSettings.haptic = e.target.checked;
+            triggerVibration(25);
+            saveSettings();
+        });
+    }
+
+    // Graphic Filter Selector
+    document.querySelectorAll('#filter-group .segment-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            triggerVibration(20);
+            userSettings.filter = btn.getAttribute('data-filter');
+            applySettings();
+            saveSettings();
+        });
+    });
 }
 
 // Android Activity lifecycle hooks
@@ -196,7 +344,9 @@ window.onAppResume = function() {
 };
 
 window.addEventListener('DOMContentLoaded', () => {
+    loadSettings();
     setupTouchControls();
     setupToolbar();
+    setupSettingsModal();
     initEmulator();
 });
