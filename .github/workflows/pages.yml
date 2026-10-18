@@ -5,9 +5,9 @@ on:
     branches:
       - main
     paths:
+      - 'wiki/**'
       - 'index.html'
       - 'Wiki_Pokemon_Kanto_Johto.html'
-      - 'Detonado_Interativo_Pokemon_Kanto_Johto.html'
       - 'graphics/**'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
@@ -31,18 +31,29 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: 'wiki/package-lock.json'
+
+      - name: Build React Wiki (Vite)
+        run: |
+          cd wiki
+          npm ci
+          npm run build
+          cd ..
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
       - name: Prepare site files
         run: |
           mkdir -p _site
-          cp index.html _site/
-          cp Wiki_Pokemon_Kanto_Johto.html _site/
-          cp Detonado_Interativo_Pokemon_Kanto_Johto.html _site/
-          if [ -d "graphics" ]; then
-            cp -r graphics _site/
-          fi
+          cp -r wiki/dist/* _site/
+          cp Wiki_Pokemon_Kanto_Johto.html _site/ || true
+          cp Detonado_Interativo_Pokemon_Kanto_Johto.html _site/ || true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
