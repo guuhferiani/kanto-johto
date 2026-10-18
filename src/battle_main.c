@@ -5233,6 +5233,7 @@ static void FreeResetData_ReturnToOvOrDoEvolutions(void)
             IncrementDexNavChain();
         else
             gSaveBlock1Ptr->dexNavChain = 0;
+        gDexnavBattle = FALSE;
         
 
         ResetSpriteData();

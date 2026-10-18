@@ -878,6 +878,7 @@ static void Task_InitDexNavSearch(u8 taskId)
     if (GetFlashLevel() > 0)
     {
         Free(sDexNavSearchDataPtr);
+        sDexNavSearchDataPtr = NULL;
         FreeMonIconPalettes();
         ScriptContext1_SetupScript(EventScript_TooDark);
         DestroyTask(taskId);
@@ -887,6 +888,7 @@ static void Task_InitDexNavSearch(u8 taskId)
     if (sDexNavSearchDataPtr->monLevel == MON_LEVEL_NONEXISTENT || !TryStartHiddenMonFieldEffect(sDexNavSearchDataPtr->environment, 12, 12, FALSE))
     {
         Free(sDexNavSearchDataPtr);
+        sDexNavSearchDataPtr = NULL;
         FreeMonIconPalettes();
         ScriptContext1_SetupScript(EventScript_NotFoundNearby);
         DestroyTask(taskId);
@@ -2674,6 +2676,7 @@ bool8 TryFindHiddenPokemon(void)
         if (sDexNavSearchDataPtr->monLevel == MON_LEVEL_NONEXISTENT)
         {
             Free(sDexNavSearchDataPtr);
+            sDexNavSearchDataPtr = NULL;
             return FALSE;
         }
 
@@ -2684,6 +2687,7 @@ bool8 TryFindHiddenPokemon(void)
             if (++attempts > 20)
             {
                 Free(sDexNavSearchDataPtr);
+                sDexNavSearchDataPtr = NULL;
                 return FALSE;   //cannot find suitable tile
             }
         }
