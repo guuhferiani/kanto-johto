@@ -54,6 +54,8 @@ editors/
 *.sym
 *.js
 !wiki/**
+!assets/**
+!assets/*.js
 wiki/dist/
 wiki/public/graphics/
 porymap.user.cfg
