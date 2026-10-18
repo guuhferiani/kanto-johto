@@ -11,6 +11,9 @@ on:
       - master
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build_rom:
     name: Compile GBA ROM
@@ -62,6 +65,8 @@ jobs:
     name: Build Android APK
     needs: build_rom
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -77,6 +82,7 @@ jobs:
           GBA_FILE=$(find . -name "*.gba" | head -n 1)
           echo "Found ROM at: $GBA_FILE"
           cp "$GBA_FILE" android/app/src/main/assets/game.gba
+          cp "$GBA_FILE" ./Pokemon_Kanto_Johto.gba
           ls -la android/app/src/main/assets/
 
       - name: Set up JDK 17
@@ -115,3 +121,23 @@ jobs:
           name: Pokemon_Kanto_Johto_APK
           path: dist/Pokemon_Kanto_Johto.apk
           if-no-files-found: error
+
+      - name: Publish to GitHub Releases
+        uses: softprops/action-gh-release@v2
+        if: github.ref == 'refs/heads/main'
+        with:
+          tag_name: latest
+          name: "Pokémon Kanto & Johto (Versão Oficial)"
+          body: |
+            ## 🎮 Pokémon Kanto & Johto
+            
+            Versão oficial atualizada automaticamente a cada commit!
+            
+            ### 📥 Downloads:
+            - 📱 **`Pokemon_Kanto_Johto.apk`**: Aplicativo completo para celular Android (instale e jogue direto com controles touch na tela!).
+            - 💻 **`Pokemon_Kanto_Johto.gba`**: Arquivo de ROM para jogar no PC ou emulador externo.
+          files: |
+            dist/Pokemon_Kanto_Johto.apk
+            Pokemon_Kanto_Johto.gba
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
