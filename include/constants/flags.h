@@ -221,8 +221,8 @@
 #define FLAG_MISSING_PECHA_BERRY          	0xCA
 #define FLAG_MET_MAGAZINE_DANI           	0xCB
 #define FLAG_DEFEATED_PKMNRNGR_ALEX         0xCC
-#define FLAG_UNUSED_0x0CD    				0xCD
-#define FLAG_UNUSED_0x0CE    				0xCE
+#define FLAG_DEFEATED_CHAMPION_RED  		0xCD
+#define FLAG_GOT_RED_REWARD         		0xCE
 #define FLAG_UNUSED_0x0CF        			0xCF
 #define FLAG_UNUSED_0x0D0   				0xD0
 #define FLAG_UNUSED_0x0D1           		0xD1

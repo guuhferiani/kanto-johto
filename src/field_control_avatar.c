@@ -771,7 +771,8 @@ static bool8 TryArrowWarp(struct MapPosition *position, u16 metatileBehavior, u8
 
     if (warpEventId != WARP_ID_NONE)
     {
-        if (IsArrowWarpMetatileBehavior(metatileBehavior, direction) == TRUE)
+        if (IsArrowWarpMetatileBehavior(metatileBehavior, direction) == TRUE
+         || (direction == DIR_SOUTH && position->y - MAP_OFFSET == 8 && (position->x - MAP_OFFSET >= 6 && position->x - MAP_OFFSET <= 8)))
         {
             StoreInitialPlayerAvatarState();
             SetupWarp(&gMapHeader, warpEventId, position);
@@ -975,6 +976,22 @@ static s8 GetWarpEventAtPosition(struct MapHeader *mapHeader, u16 x, u16 y, u8 e
                 return i;
         }
     }
+
+    // Fallback para Centros Pokemon com tapete de 3 blocos (y=8, x=6..8):
+    // Se o mapa tiver apenas o warp central em (7,8), permite sair pelas laterais (6 ou 8).
+    if (y == 8 && (x == 6 || x == 8))
+    {
+        warpEvent = mapHeader->events->warps;
+        for (i = 0; i < warpCount; i++, warpEvent++)
+        {
+            if ((u16)warpEvent->x == 7 && (u16)warpEvent->y == 8)
+            {
+                if (warpEvent->elevation == elevation || warpEvent->elevation == 0)
+                    return i;
+            }
+        }
+    }
+
     return WARP_ID_NONE;
 }
 

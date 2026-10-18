@@ -588,7 +588,7 @@ static void RemoveDexNavWindowAndGfx(void)
     SafeFreeMonIconPalette(sDexNavSearchDataPtr->species);
     
     // remove window
-    if (sDexNavSearchDataPtr->windowId != 0xFF && sDexNavSearchDataPtr->windowId != 0)
+    if (sDexNavSearchDataPtr->windowId != 0xFF)
     {
         ClearStdWindowAndFrameToTransparent(sDexNavSearchDataPtr->windowId, FALSE);
         CopyWindowToVram(sDexNavSearchDataPtr->windowId, 3);
@@ -603,8 +603,8 @@ static void RemoveDexNavWindowAndGfx(void)
 //////////////////////
 static u8 GetPlayerDistance(s16 x, s16 y)
 {
-    u16 deltaX = abs(x - (gSaveBlock1Ptr->pos.x + 7));
-    u16 deltaY = abs(y - (gSaveBlock1Ptr->pos.y + 7));
+    u16 deltaX = abs(x - gSaveBlock1Ptr->pos.x);
+    u16 deltaY = abs(y - gSaveBlock1Ptr->pos.y);
     return deltaX + deltaY;
 }
 
@@ -783,15 +783,8 @@ static bool8 TryStartHiddenMonFieldEffect(u8 environment, u8 xSize, u8 ySize, bo
             return FALSE;
         }
         
-        if (fldEffId != 0)
-        {
-            gFieldEffectArguments[0] = sDexNavSearchDataPtr->tileX;
-            gFieldEffectArguments[1] = sDexNavSearchDataPtr->tileY;
-            gFieldEffectArguments[2] = 0xFF; // subpriority
-            gFieldEffectArguments[3] = 2;   //priority
-            sDexNavSearchDataPtr->fldEffSpriteId = FieldEffectStart(fldEffId);
-            sDexNavSearchDataPtr->fldEffId = fldEffId;
-        }
+        sDexNavSearchDataPtr->fldEffSpriteId = MAX_SPRITES;
+        sDexNavSearchDataPtr->fldEffId = 0;
         
         SpawnWildMonObjectEvent(sDexNavSearchDataPtr->species, sDexNavSearchDataPtr->tileX, sDexNavSearchDataPtr->tileY, DexNavTryMakeShinyMon());
         return TRUE;
@@ -2659,11 +2652,9 @@ bool8 TryFindHiddenPokemon(void)
         }
 
         // exclamation mark over player
-        gFieldEffectArguments[0] = gSaveBlock1Ptr->pos.x;
-        gFieldEffectArguments[1] = gSaveBlock1Ptr->pos.y;
-        gFieldEffectArguments[2] = gSprites[gPlayerAvatar.spriteId].subpriority - 1;
-        gFieldEffectArguments[3] = 2;
-        ObjectEventGetLocalIdAndMap(&gObjectEvents[gPlayerAvatar.objectEventId], &gFieldEffectArguments[0], &gFieldEffectArguments[1], &gFieldEffectArguments[2]);
+        gFieldEffectArguments[0] = gObjectEvents[gPlayerAvatar.objectEventId].localId;
+        gFieldEffectArguments[1] = gObjectEvents[gPlayerAvatar.objectEventId].mapNum;
+        gFieldEffectArguments[2] = gObjectEvents[gPlayerAvatar.objectEventId].mapGroup;
         FieldEffectStart(FLDEFF_EXCLAMATION_MARK_ICON);
         
         PlayCry_Script(species, 0);
@@ -2671,8 +2662,6 @@ bool8 TryFindHiddenPokemon(void)
         gTasks[taskId].tSpecies = sDexNavSearchDataPtr->species;
         gTasks[taskId].tEnvironment = sDexNavSearchDataPtr->environment;
         gTasks[taskId].tRevealed = FALSE;
-        HideMapNamePopUpWindow();
-        ChangeBgY_ScreenOff(0, 0, 0);
         return FALSE;   //we dont actually want to enable the script context or the game will freeze
     }
     

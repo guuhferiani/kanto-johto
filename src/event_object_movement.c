@@ -672,6 +672,7 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #include "data/object_events/object_event_subsprites.h"
 #include "data/object_events/object_event_graphics_info.h"
 #include "data/object_events/object_event_graphics_info_followers.h"
+#include "data/object_events/pokemon_overworld_palettes.h"
 
 static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Npc1,                  OBJ_EVENT_PAL_TAG_NPC_1},
@@ -2126,9 +2127,15 @@ u8 CreateObjectGraphicsSprite(u16 graphicsId, void (*callback)(struct Sprite *),
         CopyObjectGraphicsInfoToSpriteTemplate(graphicsId, callback, spriteTemplate, &subspriteTables);
 
     if (spriteTemplate->paletteTag == OBJ_EVENT_PAL_TAG_DYNAMIC) {
-        const struct CompressedSpritePalette *spritePalette = &(shiny ? gMonShinyPaletteTable : gMonPaletteTable)[species];
-        paletteNum = LoadDynamicFollowerPalette(species, form, shiny);
-        spriteTemplate->paletteTag = spritePalette->tag;
+        if (shiny) {
+            const struct CompressedSpritePalette *spritePalette = &gMonShinyPaletteTable[species];
+            paletteNum = LoadDynamicFollowerPalette(species, form, shiny);
+            spriteTemplate->paletteTag = spritePalette->tag;
+        } else {
+            const struct SpritePalette *spritePalette = &gOverworldPokemonPaletteTable[species];
+            paletteNum = LoadDynamicFollowerPalette(species, form, shiny);
+            spriteTemplate->paletteTag = spritePalette->tag;
+        }
     } else if (spriteTemplate->paletteTag != TAG_NONE)
         LoadObjectEventPalette(spriteTemplate->paletteTag);
 
@@ -2310,21 +2317,32 @@ static const struct ObjectEventGraphicsInfo * SpeciesToGraphicsInfo(u16 species,
 // Find, or load, the palette for the specified pokemon info
 static u8 LoadDynamicFollowerPalette(u16 species, u8 form, bool8 shiny) {
     u8 paletteNum;
-    // Note that the shiny palette tag is `species + SPECIES_SHINY_TAG`, which must be increased with more pokemon
-    // so that palette tags do not overlap
-    const struct CompressedSpritePalette *spritePalette = &(shiny ? gMonShinyPaletteTable : gMonPaletteTable)[species];
-    if ((paletteNum = IndexOfSpritePaletteTag(spritePalette->tag)) == 0xFF) { // Load compressed palette
-      LoadCompressedSpritePalette(spritePalette);
-      paletteNum = IndexOfSpritePaletteTag(spritePalette->tag); // Tag is always present
-      if (species == SPECIES_AMPHAROS) { // palette should be light-blended TODO: Add more glowing pokemon
-        // CHARIZARD LINE ? CHINCHOU LANTERN FLAAFY MAREEP UMBREON VOLBEAT ?
+    if (species >= NUM_SPECIES || species == SPECIES_NONE)
+        return 0;
+
+    if (shiny) {
+        const struct CompressedSpritePalette *spritePalette = &gMonShinyPaletteTable[species];
+        if ((paletteNum = IndexOfSpritePaletteTag(spritePalette->tag)) == 0xFF) {
+            LoadCompressedSpritePalette(spritePalette);
+            paletteNum = IndexOfSpritePaletteTag(spritePalette->tag);
+        }
+    } else {
+        const struct SpritePalette *spritePalette = &gOverworldPokemonPaletteTable[species];
+        if ((paletteNum = IndexOfSpritePaletteTag(spritePalette->tag)) == 0xFF) {
+            paletteNum = LoadSpritePalette(spritePalette);
+        }
+    }
+
+    if (paletteNum == 0xFF)
+        return 0;
+
+    if (species == SPECIES_AMPHAROS) { // palette should be light-blended
         u16 * palette = &gPlttBufferUnfaded[(paletteNum+16)*16];
         palette[0] |= 0x8000;
         if (palette[0] & 0x4000) // If color 15 is blended, use it as the alternate color
-          palette[15] |= 0x8000;
-      }
-      UpdateSpritePaletteWithWeather(paletteNum, FALSE);
+            palette[15] |= 0x8000;
     }
+    UpdateSpritePaletteWithWeather(paletteNum, FALSE);
     return paletteNum;
 }
 
@@ -2421,9 +2439,9 @@ u8 SpawnWildMonObjectEvent(u16 species, s16 x, s16 y, bool8 shiny)
     template.x = x - MAP_OFFSET;
     template.y = y - MAP_OFFSET;
     template.elevation = 3;
-    template.movementType = MOVEMENT_TYPE_WANDER_AROUND;
-    template.movementRangeX = 2;
-    template.movementRangeY = 2;
+    template.movementType = MOVEMENT_TYPE_LOOK_AROUND;
+    template.movementRangeX = 0;
+    template.movementRangeY = 0;
     template.trainerType = TRAINER_TYPE_NONE;
     template.trainerRange_berryTreeId = 0;
     template.script = NULL;
@@ -2434,6 +2452,7 @@ u8 SpawnWildMonObjectEvent(u16 species, s16 x, s16 y, bool8 shiny)
     if (objectEventId < OBJECT_EVENTS_COUNT)
     {
         FollowerSetGraphics(&gObjectEvents[objectEventId], species, 0, shiny, TRUE);
+        gObjectEvents[objectEventId].disableCoveringGroundEffects = TRUE;
         gObjectEvents[objectEventId].invisible = FALSE;
         return objectEventId;
     }
@@ -2939,7 +2958,7 @@ u8 UpdateSpritePaletteByTemplate(const struct SpriteTemplate * template, struct 
 static void ObjectEventSetGraphics(struct ObjectEvent *objectEvent, const struct ObjectEventGraphicsInfo *graphicsInfo) {
   struct Sprite *sprite = &gSprites[objectEvent->spriteId];
   u8 i = FindObjectEventPaletteIndexByTag(graphicsInfo->paletteTag);
-  if (i != 0xFF)
+  if (i != 0xFF && graphicsInfo->paletteTag != OBJ_EVENT_PAL_TAG_DYNAMIC)
     UpdateSpritePalette(&sObjectEventSpritePalettes[i], sprite);
   sprite->oam.shape = graphicsInfo->oam->shape;
   sprite->oam.size = graphicsInfo->oam->size;
@@ -9598,7 +9617,7 @@ static void DoFlaggedGroundEffects(struct ObjectEvent *objEvent, struct Sprite *
 
 void filters_out_some_ground_effects(struct ObjectEvent *objEvent, u32 *flags)
 {
-    if (objEvent->disableCoveringGroundEffects)
+    if (objEvent->disableCoveringGroundEffects || objEvent->localId == OBJ_EVENT_ID_WILD_MON)
     {
         objEvent->inShortGrass = 0;
         objEvent->inSandPile = 0;

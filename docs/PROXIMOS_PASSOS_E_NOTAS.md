@@ -17,7 +17,22 @@
    - Corrigido o mapeamento de gráficos dos sprites de Pikachu Parceiro, Eevee do Rival, evoluções de Eevee, Riolu, Lucario e Megas.
    - Liberada a opção *"Companheiro: Qualquer"* no Menu de Opções para permitir que qualquer Pokémon vivo da equipe siga o jogador desde o início do jogo.
 4. **Build e ROM:**
-   - Binário `pokeClassic.gba` compilado sem erros e 100% estável.
+   - Binário `pokeClassic.gba` e `Pokemon_Kanto_Johto.gba` compilados sem erros e 100% estáveis.
+5. **Correção do Centro Pokémon de Pewter City e Escada Rolante:**
+   - Adicionados warps em todas as posições do tapete de entrada (`x: 6, 7, 8`) e corrigido `allow_cycling: false`.
+   - Corrigido recolhimento seguro do seguidor (`HideFollowerForFieldEffect`) antes de congelar objetos na escada rolante.
+6. **Auditoria e Correções Preventivas Globais (Centros Pokémon, Marts e Ginásios):**
+   - **Solução Universal no Motor C (`GetWarpEventAtPosition`):** Todos os Centros Pokémon de Kanto e Johto (Viridian, Cerulean, Vermilion, Celadon, Fuchsia, Saffron, Cinnabar, etc.) agora permitem sair pisando em qualquer um dos 3 blocos do tapete vermelho (`x: 6, 7, 8`), evitando que o jogador fique travado em qualquer cidade futura.
+   - **Ginásio de Pewter City:** Adicionado warp no bloco esquerdo do tapete de saída (`x: 5, y: 14`), permitindo sair por ambos os blocos.
+   - **Interiores de Pewter City:** Corrigido `allow_cycling: false` e `allow_escaping: false` no Mart, Casas e Museu (1F e 2F).
+   - **ROM Sincronizada:** Binário `Pokemon_Kanto_Johto.gba` atualizado no Google Drive.
+7. **Clímax do Monte Silver e Batalha contra o Campeão Red:**
+   - Configurado o mapa do cume do Monte Silver (`MAP_MT_PYRE_SUMMIT`) com clima de neve constante (`WEATHER_SNOW`), música épica e banner pop-up oficial "Monte Silver".
+   - Red posicionado no cume (`x: 23, y: 5`) com sprite oficial `OBJ_EVENT_GFX_RED` e ampla área aberta ao redor para segurança total do Pokémon Companheiro (*Follower*).
+   - Clima de neve em batalha dispara Granizo (*Hail*) automaticamente como nos jogos originais HGSS.
+   - Diálogo icônico de silêncio (`"..."`), tema oficial de Campeão (`MUS_RG_VS_CHAMPION`), e equipe lendária de nível 96 a 100 liderada por Pikachu com Light Ball e Volt Tackle.
+   - Recompensa épica pós-vitória: Cinza Sagrada (`ITEM_SACRED_ASH`) e Master Ball (`ITEM_MASTER_BALL`), com suporte a revanche contínua.
+   - Conexão e retorno seguros: adicionado "Monte Silver" nas opções do navio S.S. Aqua (Vermilion e Costa de Johto) e Marinheiro de retorno na base da montanha (`x: 21, y: 28`) além de escadarias de saída automáticas.
 
 ---
 
@@ -27,10 +42,7 @@
 1. **Posicionar os 8 Líderes de Johto nos Mapas:**
    - Os dados e equipes de alto nível (Lv 58 a 83) já estão criados em `src/data/trainers.h` e `src/data/trainer_parties.h` (`TRAINER_LEADER_FALKNER` até `TRAINER_LEADER_CLAIR`).
    - **Objetivo:** Adicionar os eventos/NPCs nos mapas do hub de Johto (acessado pelo navio S.S. Aqua em Vermilion) para que o jogador possa desafiar cada um deles.
-2. **O Clímax do Monte Silver (Campeão Red):**
-   - A equipe do Red já está programada com seu lendário Pikachu Lv 100 (Light Ball + Volt Tackle).
-   - **Objetivo:** Criar a arena no cume da montanha, com diálogo icônico (`"..."`), clima dramático e a música tema oficial.
-3. **Eventos dos Lendários:**
+2. **Eventos dos Lendários:**
    - Conferir o evento de **Mew** na Ilha Distante (*Faraway Island*), já conectada ao S.S. Aqua.
    - Configurar o acesso a **Navel Rock** (Lugia e Ho-Oh) e **Cerulean Cave** (Mewtwo).
 

@@ -1648,6 +1648,8 @@ u8 IndexOfSpritePaletteTag(u16 tag)
 
 u16 GetSpritePaletteTagByPaletteNum(u8 paletteNum)
 {
+    if (paletteNum >= 16)
+        return TAG_NONE;
     return sSpritePaletteTags[paletteNum];
 }
 

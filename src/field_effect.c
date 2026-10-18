@@ -1487,8 +1487,11 @@ static void HideFollowerForFieldEffect(void) {
     struct ObjectEvent *followerObj = GetFollowerObject();
     if (!followerObj || followerObj->invisible)
         return;
+    followerObj->singleMovementActive = 0;
+    ObjectEventClearHeldMovement(followerObj);
+    gSprites[followerObj->spriteId].data[1] = 0;
+    gSprites[followerObj->spriteId].animCmdIndex = 0;
     ClearObjectEventMovement(followerObj, &gSprites[followerObj->spriteId]);
-    gSprites[followerObj->spriteId].animCmdIndex = 0; // Avoids a visual glitch with follower's animation frame
     ObjectEventSetHeldMovement(followerObj, MOVEMENT_ACTION_ENTER_POKEBALL);
 }
 
@@ -1512,10 +1515,10 @@ static void Task_EscalatorWarpOut(u8 taskId)
 
 static bool8 EscalatorWarpOut_Init(struct Task *task)
 {
+    HideFollowerForFieldEffect(); // Hide follower before freezing
     FreezeObjectEvents();
     CameraObjectReset2();
     StartEscalator(task->tGoingUp);
-    HideFollowerForFieldEffect(); // Hide follower before warping
     task->tState++;
     return FALSE;
 }

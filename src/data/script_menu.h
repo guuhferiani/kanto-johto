@@ -885,6 +885,7 @@ static const struct MenuAction MultichoiceList_SSAquaVermilion[] =
 {
     {gText_SSAquaJohto},
     {gText_FarawayIsland},
+    {gText_MonteSilver},
     {gText_Cancel2},
 };
 
@@ -892,6 +893,7 @@ static const struct MenuAction MultichoiceList_SSAquaJohto[] =
 {
     {gText_SSAquaVermilion},
     {gText_FarawayIsland},
+    {gText_MonteSilver},
     {gText_Cancel2},
 };
 

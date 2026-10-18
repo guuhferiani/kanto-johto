@@ -28,11 +28,12 @@ BattleFrontier_OutsideWest_EventScript_FerryAttendant::
 	end
 
 BattleFrontier_OutsideWest_EventScript_ChooseFerryDestination::
-	multichoicedefault 18, 6, MULTI_SS_AQUA_JOHTO, 2, FALSE
+	multichoicedefault 18, 6, MULTI_SS_AQUA_JOHTO, 3, FALSE
 	switch VAR_RESULT
 	case 0, BattleFrontier_OutsideWest_EventScript_FerryToVermilion
 	case 1, BattleFrontier_OutsideWest_EventScript_FerryToFaraway
-	case 2, BattleFrontier_OutsideWest_EventScript_CancelFerrySelect
+	case 2, BattleFrontier_OutsideWest_EventScript_FerryToMonteSilver
+	case 3, BattleFrontier_OutsideWest_EventScript_CancelFerrySelect
 	case MULTI_B_PRESSED, BattleFrontier_OutsideWest_EventScript_CancelFerrySelect
 	end
 
@@ -57,6 +58,16 @@ BattleFrontier_OutsideWest_EventScript_FerryToFaraway::
 	msgbox BattleFrontier_OutsideWest_Text_DepartingToFaraway, MSGBOX_DEFAULT
 	call BattleFrontier_OutsideWest_EventScript_BoardFerry
 	warp MAP_FARAWAY_ISLAND_ENTRANCE, 13, 38
+	waitstate
+	release
+	end
+
+BattleFrontier_OutsideWest_EventScript_FerryToMonteSilver::
+	msgbox BattleFrontier_OutsideWest_Text_ConfirmMonteSilver, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, BattleFrontier_OutsideWest_EventScript_ChooseNewFerryDestination
+	msgbox BattleFrontier_OutsideWest_Text_DepartingToMonteSilver, MSGBOX_DEFAULT
+	call BattleFrontier_OutsideWest_EventScript_BoardFerry
+	warp MAP_MT_PYRE_SUMMIT, 23, 28
 	waitstate
 	release
 	end
@@ -350,6 +361,13 @@ BattleFrontier_OutsideWest_Text_ConfirmFaraway:
 
 BattleFrontier_OutsideWest_Text_DepartingToFaraway:
 	.string "Atendente: Muito bem! Rumo à Ilha Distante!$"
+
+BattleFrontier_OutsideWest_Text_ConfirmMonteSilver:
+	.string "Deseja subir ao cume congelante do lendário Monte Silver?$"
+
+BattleFrontier_OutsideWest_Text_DepartingToMonteSilver:
+	.string "Atendente: Perfeito! Prepare-se para o frio!\n"
+	.string "Zarpando para o Monte Silver!$"
 
 BattleFrontier_OutsideWest_Text_SailWithUsAnotherTime:
 	.string "Estaremos à disposição quando quiser viajar!$"

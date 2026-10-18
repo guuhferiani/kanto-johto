@@ -87,7 +87,8 @@ SSAnne_Exterior_EventScript_SSAquaBoarding::
 	switch VAR_RESULT
 	case 0, SSAnne_Exterior_EventScript_SailToJohto
 	case 1, SSAnne_Exterior_EventScript_SailToFarawayIsland
-	case 2, SSAnne_Exterior_EventScript_CancelSail
+	case 2, SSAnne_Exterior_EventScript_SailToMonteSilver
+	case 3, SSAnne_Exterior_EventScript_CancelSail
 	case MULTI_B_PRESSED, SSAnne_Exterior_EventScript_CancelSail
 	end
 
@@ -115,6 +116,20 @@ SSAnne_Exterior_EventScript_SailToFarawayIsland::
 	playse SE_SHIP
 	delay 60
 	warp MAP_FARAWAY_ISLAND_ENTRANCE, 13, 38
+	waitstate
+	release
+	end
+
+SSAnne_Exterior_EventScript_SailToMonteSilver::
+	msgbox SSAnne_Exterior_Text_ConfirmMonteSilver, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, SSAnne_Exterior_EventScript_CancelSail
+	msgbox SSAnne_Exterior_Text_DepartingToMonteSilver, MSGBOX_DEFAULT
+	closemessage
+	fadescreen FADE_TO_BLACK
+	fadenewbgm MUS_SURF
+	playse SE_SHIP
+	delay 60
+	warp MAP_MT_PYRE_SUMMIT, 23, 28
 	waitstate
 	release
 	end
@@ -156,6 +171,15 @@ SSAnne_Exterior_Text_ConfirmFaraway::
 SSAnne_Exterior_Text_DepartingToFaraway::
 	.string "Marinheiro: Levantando âncora!\n"
 	.string "Destino: Ilha Distante!$"
+
+SSAnne_Exterior_Text_ConfirmMonteSilver::
+	.string "O Monte Silver é uma montanha sagrada e\n"
+	.string "congelante, onde os maiores mestres treinam.\p"
+	.string "Podemos partir agora rumo ao Monte Silver?$"
+
+SSAnne_Exterior_Text_DepartingToMonteSilver::
+	.string "Marinheiro: Prepare seus agasalhos!\n"
+	.string "Zarpando rumo ao Monte Silver!$"
 
 SSAnne_Exterior_Text_ComeBackAnytime::
 	.string "Estaremos a postos quando quiser navegar!$"

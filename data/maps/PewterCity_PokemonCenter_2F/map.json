@@ -7,7 +7,7 @@
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
-  "allow_cycling": true,
+  "allow_cycling": false,
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": false,
@@ -75,9 +75,9 @@
     {
       "x": 1,
       "y": 6,
-      "elevation": 0,
+      "elevation": 4,
       "dest_map": "MAP_PEWTER_CITY_POKEMON_CENTER_1F",
-      "dest_warp_id": 1
+      "dest_warp_id": 3
     }
   ],
   "coord_events": [
