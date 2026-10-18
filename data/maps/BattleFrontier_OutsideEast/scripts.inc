@@ -241,8 +241,8 @@ BattleFrontier_OutsideEast_Text_BattlePyramidSign:
 	.string "Advance through the Battle Quest!$"
 
 BattleFrontier_OutsideEast_Text_RankingHallSign:
-	.string "Battle Frontier Ranking Hall\n"
-	.string "Set your sights on new records!$"
+	.string "Salão dos Líderes de Johto\n"
+	.string "Desafie os 8 grandes mestres de Johto!$"
 
 BattleFrontier_OutsideEast_Text_ExchangeCornerSign:
 	.string "Battle Point Exchange Service Corner\n"
