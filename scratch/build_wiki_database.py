@@ -2246,11 +2246,15 @@ html_template = f"""<!DOCTYPE html>
 </html>
 """
 
-# Salvar Wiki_Pokemon_Kanto_Johto.html e Detonado_Interativo_Pokemon_Kanto_Johto.html
+# Salvar Wiki_Pokemon_Kanto_Johto.html, Detonado_Interativo_Pokemon_Kanto_Johto.html e index.html (GitHub Pages)
 with open('Wiki_Pokemon_Kanto_Johto.html', 'w', encoding='utf-8') as f:
     f.write(html_template)
 
 with open('Detonado_Interativo_Pokemon_Kanto_Johto.html', 'w', encoding='utf-8') as f:
     f.write(html_template)
 
-print(f"Sucesso! Gerados Wiki_Pokemon_Kanto_Johto.html e Detonado_Interativo_Pokemon_Kanto_Johto.html com {len(pokedex_data)} Pokémon, {len(routes_data_clean)} rotas e {len(gym_bosses)} cards de chefes.")
+with open('index.html', 'w', encoding='utf-8') as f:
+    f.write(html_template)
+
+print(f"Sucesso! Gerados Wiki_Pokemon_Kanto_Johto.html, Detonado_Interativo_Pokemon_Kanto_Johto.html e index.html com {len(pokedex_data)} Pokémon, {len(routes_data_clean)} rotas e {len(gym_bosses)} cards de chefes.")
+
