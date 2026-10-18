@@ -1,14 +1,15 @@
 # -*- coding: utf-8 -*-
 """
 Script gerador da Wiki & Pokédex Oficial Interativa de Pokémon Kanto & Johto.
-Gera Wiki_Pokemon_Kanto_Johto.html e Detonado_Interativo_Pokemon_Kanto_Johto.html.
+Gera Wiki_Pokemon_Kanto_Johto.html, Detonado_Interativo_Pokemon_Kanto_Johto.html e index.html.
+Totalmente responsivo com Top Mobile Bar, Bottom Navigation e navegação por capítulos.
 """
 
 import json
 import os
 import re
 
-print("Carregando banco de dados para a Wiki Interativa...")
+print("Carregando banco de dados para a Wiki Interativa com Navegação Responsiva...")
 
 # 1. Carregar encontros de wild_encounters.json
 with open('src/data/wild_encounters.json', 'r', encoding='utf-8') as f:
@@ -56,7 +57,7 @@ for enc in encounters:
         lvl = f"{m.get('min_level')}-{m.get('max_level')}"
         routes_map[clean_name]['hidden'].add(f"{sp} (Lv {lvl})")
 
-# 2. Dados dos 251 Pokémon com métodos de evolução e pasta local
+# 2. Dados dos 251 Pokémon
 pokedex_data = [
     {"num": 1, "name": "Bulbasaur", "type": ["Planta", "Veneno"], "evo": "Lv 16 -> Ivysaur", "folder": "bulbasaur"},
     {"num": 2, "name": "Ivysaur", "type": ["Planta", "Veneno"], "evo": "Lv 32 -> Venusaur", "folder": "ivysaur"},
@@ -724,7 +725,7 @@ html_template = f"""<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Wiki & Pokédex Oficial — Pokémon Kanto & Johto</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -733,7 +734,7 @@ html_template = f"""<!DOCTYPE html>
         :root {{
             --bg-body: #0b0e14;
             --bg-sidebar: #111622;
-            --bg-card: rgba(23, 29, 43, 0.75);
+            --bg-card: rgba(23, 29, 43, 0.78);
             --border-color: rgba(255, 255, 255, 0.08);
             --primary: #ef4444;
             --secondary: #3b82f6;
@@ -746,6 +747,7 @@ html_template = f"""<!DOCTYPE html>
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
         }}
 
         body {{
@@ -755,13 +757,100 @@ html_template = f"""<!DOCTYPE html>
             display: flex;
             min-height: 100vh;
             line-height: 1.6;
+            overflow-x: hidden;
+        }}
+
+        /* ====================
+           HEADER MÓVEL FIXO
+           ==================== */
+        #mobile-topbar {{
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: rgba(17, 22, 34, 0.95);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 1rem;
+        }}
+
+        .menu-toggle-btn {{
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--border-color);
+            color: white;
+            font-size: 1.3rem;
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }}
+
+        .menu-toggle-btn:active {{
+            background: rgba(239, 68, 68, 0.3);
+            transform: scale(0.95);
+        }}
+
+        .mobile-brand {{
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #f87171, #ef4444, #fbbf24);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }}
+
+        .mobile-search-btn {{
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--border-color);
+            color: white;
+            font-size: 1rem;
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }}
+
+        /* ====================
+           BACKDROP OVERLAY
+           ==================== */
+        #sidebar-backdrop {{
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            z-index: 998;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }}
+
+        #sidebar-backdrop.open {{
+            display: block;
+            opacity: 1;
         }}
 
         /* ====================
            SIDEBAR DE NAVEGAÇÃO
            ==================== */
         #sidebar {{
-            width: 280px;
+            width: 285px;
             background-color: var(--bg-sidebar);
             border-right: 1px solid var(--border-color);
             position: fixed;
@@ -771,12 +860,15 @@ html_template = f"""<!DOCTYPE html>
             display: flex;
             flex-direction: column;
             z-index: 100;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }}
 
         .sidebar-brand {{
             padding: 1.25rem 1.25rem 0.75rem;
             border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }}
 
         .brand-title {{
@@ -789,6 +881,16 @@ html_template = f"""<!DOCTYPE html>
             display: flex;
             align-items: center;
             gap: 0.5rem;
+        }}
+
+        .sidebar-close-btn {{
+            display: none;
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 4px;
         }}
 
         .brand-sub {{
@@ -804,19 +906,19 @@ html_template = f"""<!DOCTYPE html>
 
         .global-search-input {{
             width: 100%;
-            background: rgba(15, 20, 31, 0.8);
+            background: rgba(15, 20, 31, 0.85);
             border: 1px solid var(--border-color);
             border-radius: 8px;
-            padding: 0.6rem 0.8rem 0.6rem 2rem;
+            padding: 0.65rem 0.8rem 0.65rem 2.2rem;
             color: white;
-            font-size: 0.85rem;
+            font-size: 0.88rem;
             outline: none;
             transition: all 0.2s;
         }}
 
         .global-search-input:focus {{
             border-color: var(--primary);
-            box-shadow: 0 0 10px rgba(239, 68, 68, 0.3);
+            box-shadow: 0 0 12px rgba(239, 68, 68, 0.35);
         }}
 
         .search-wrap {{
@@ -826,10 +928,10 @@ html_template = f"""<!DOCTYPE html>
         .search-wrap::before {{
             content: "🔍";
             position: absolute;
-            left: 0.65rem;
+            left: 0.75rem;
             top: 50%;
             transform: translateY(-50%);
-            font-size: 0.75rem;
+            font-size: 0.8rem;
             opacity: 0.6;
         }}
 
@@ -839,18 +941,18 @@ html_template = f"""<!DOCTYPE html>
             padding: 0.75rem;
             display: flex;
             flex-direction: column;
-            gap: 0.25rem;
+            gap: 0.3rem;
         }}
 
         .nav-item {{
             display: flex;
             align-items: center;
             gap: 0.75rem;
-            padding: 0.7rem 0.9rem;
-            border-radius: 8px;
+            padding: 0.75rem 0.95rem;
+            border-radius: 10px;
             color: var(--text-muted);
             text-decoration: none;
-            font-size: 0.85rem;
+            font-size: 0.88rem;
             font-weight: 600;
             transition: all 0.2s;
             cursor: pointer;
@@ -858,14 +960,14 @@ html_template = f"""<!DOCTYPE html>
         }}
 
         .nav-item:hover {{
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.06);
             color: white;
         }}
 
         .nav-item.active {{
-            background: rgba(239, 68, 68, 0.12);
+            background: rgba(239, 68, 68, 0.15);
             color: #f87171;
-            border-color: rgba(239, 68, 68, 0.3);
+            border-color: rgba(239, 68, 68, 0.35);
         }}
 
         .sidebar-footer {{
@@ -879,13 +981,138 @@ html_template = f"""<!DOCTYPE html>
         }}
 
         /* ====================
+           BARRA DE NAVEGAÇÃO INFERIOR (MOBILE BOTTOM NAV)
+           ==================== */
+        #mobile-bottom-nav {{
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 64px;
+            background: rgba(17, 22, 34, 0.96);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-top: 1px solid var(--border-color);
+            z-index: 997;
+            align-items: center;
+            justify-content: space-around;
+            padding: 0 0.25rem;
+        }}
+
+        .bottom-nav-item {{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            padding: 0.35rem 0;
+            transition: all 0.2s;
+        }}
+
+        .bottom-nav-item.active {{
+            color: #f87171;
+        }}
+
+        .bottom-nav-icon {{
+            font-size: 1.25rem;
+            line-height: 1;
+        }}
+
+        .bottom-nav-label {{
+            font-size: 0.65rem;
+            font-weight: 700;
+            margin-top: 2px;
+            letter-spacing: 0.2px;
+        }}
+
+        /* ====================
+           BOTÃO VOLTAR AO TOPO
+           ==================== */
+        #backToTopBtn {{
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 46px;
+            height: 46px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 18px rgba(239, 68, 68, 0.45);
+            cursor: pointer;
+            z-index: 996;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateY(10px);
+        }}
+
+        #backToTopBtn.visible {{
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateY(0);
+        }}
+
+        #backToTopBtn:hover {{
+            background: #dc2626;
+            transform: translateY(-2px);
+        }}
+
+        /* ====================
+           PÍLULAS DE ATALHOS POR CAPÍTULO
+           ==================== */
+        .chapter-pills-bar {{
+            display: flex;
+            gap: 0.5rem;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            padding: 0.25rem 0 0.85rem;
+            margin-bottom: 1.5rem;
+        }}
+
+        .chapter-pills-bar::-webkit-scrollbar {{
+            display: none;
+        }}
+
+        .chapter-pill {{
+            flex-shrink: 0;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--border-color);
+            border-radius: 9999px;
+            padding: 0.4rem 0.9rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }}
+
+        .chapter-pill:hover, .chapter-pill:active {{
+            background: rgba(239, 68, 68, 0.2);
+            color: #f87171;
+            border-color: rgba(239, 68, 68, 0.4);
+        }}
+
+        /* ====================
            CONTEÚDO PRINCIPAL
            ==================== */
         #content {{
-            margin-left: 280px;
+            margin-left: 285px;
             flex: 1;
             padding: 2.5rem 3rem;
-            max-width: 1350px;
+            max-width: 1400px;
         }}
 
         .section-pane {{
@@ -903,7 +1130,7 @@ html_template = f"""<!DOCTYPE html>
         }}
 
         .pane-header {{
-            margin-bottom: 2rem;
+            margin-bottom: 1.75rem;
             border-bottom: 1px solid var(--border-color);
             padding-bottom: 1.25rem;
         }}
@@ -926,16 +1153,18 @@ html_template = f"""<!DOCTYPE html>
         .wiki-card {{
             background: var(--bg-card);
             border: 1px solid var(--border-color);
-            border-radius: 14px;
+            border-radius: 16px;
             padding: 1.5rem;
             margin-bottom: 1.5rem;
             backdrop-filter: blur(12px);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.22);
             transition: all 0.25s ease;
+            scroll-margin-top: 80px;
         }}
 
         .wiki-card:hover {{
-            border-color: rgba(255, 255, 255, 0.18);
+            border-color: rgba(255, 255, 255, 0.2);
             transform: translateY(-2px);
         }}
 
@@ -944,6 +1173,8 @@ html_template = f"""<!DOCTYPE html>
             justify-content: space-between;
             align-items: center;
             margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
         }}
 
         .wiki-card-header h3 {{
@@ -954,7 +1185,7 @@ html_template = f"""<!DOCTYPE html>
 
         .tag-pill {{
             font-size: 0.75rem;
-            padding: 0.2rem 0.6rem;
+            padding: 0.25rem 0.65rem;
             border-radius: 9999px;
             background: rgba(255, 255, 255, 0.08);
             color: var(--text-muted);
@@ -967,24 +1198,18 @@ html_template = f"""<!DOCTYPE html>
             gap: 1.5rem;
         }}
 
-        .card-grid-3 {{
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.25rem;
-        }}
-
         /* ====================
            BANNERS DE CIDADES
            ==================== */
         .city-banner-box {{
             width: 100%;
-            height: 190px;
-            border-radius: 12px;
+            height: 200px;
+            border-radius: 14px;
             overflow: hidden;
             position: relative;
             margin-bottom: 1.25rem;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+            border: 1px solid rgba(255, 255, 255, 0.12);
         }}
 
         .city-banner-img {{
@@ -1001,7 +1226,7 @@ html_template = f"""<!DOCTYPE html>
         .city-banner-overlay {{
             position: absolute;
             inset: 0;
-            background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(11, 14, 20, 0.88) 95%);
+            background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(11, 14, 20, 0.9) 95%);
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
@@ -1027,45 +1252,47 @@ html_template = f"""<!DOCTYPE html>
         }}
 
         .city-poi-badge {{
-            background: rgba(15, 23, 42, 0.75);
+            background: rgba(15, 23, 42, 0.8);
             backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
             border: 1px solid rgba(255, 255, 255, 0.15);
             border-radius: 6px;
-            padding: 0.2rem 0.6rem;
+            padding: 0.25rem 0.65rem;
             font-size: 0.75rem;
             color: #e2e8f0;
             font-weight: 500;
         }}
 
         /* ====================
-           POKÉDEX INTERATIVA
+           POKÉDEX INTERATIVA (SPRITES AMPLIADOS)
            ==================== */
         .pokedex-grid {{
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-            gap: 1.25rem;
+            grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
+            gap: 1.35rem;
         }}
 
         .mon-card {{
             background: var(--bg-card);
             border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 1rem;
+            border-radius: 18px;
+            padding: 1.15rem 1rem;
             display: flex;
             flex-direction: column;
             align-items: center;
             position: relative;
             overflow: hidden;
-            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+            transition: all 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
             backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             cursor: pointer;
         }}
 
         .mon-card:hover {{
-            transform: translateY(-5px);
-            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
-            border-color: rgba(255, 255, 255, 0.25);
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 14px 32px rgba(0, 0, 0, 0.6);
+            border-color: rgba(255, 255, 255, 0.28);
         }}
 
         .mon-card-header {{
@@ -1073,70 +1300,73 @@ html_template = f"""<!DOCTYPE html>
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 0.25rem;
+            margin-bottom: 0.35rem;
         }}
 
         .mon-number {{
             font-family: 'Outfit', sans-serif;
-            font-size: 0.85rem;
+            font-size: 0.88rem;
             font-weight: 800;
             color: var(--text-muted);
             letter-spacing: 0.5px;
         }}
 
         .mon-sprite-box {{
-            width: 100px;
-            height: 100px;
+            width: 110px;
+            height: 110px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0.25rem 0 0.5rem;
+            margin: 0.3rem 0 0.6rem;
             position: relative;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 72%);
+            border-radius: 50%;
         }}
 
         .mon-sprite-box::after {{
             content: '';
             position: absolute;
-            width: 75px;
-            height: 18px;
-            background: radial-gradient(ellipse, rgba(0,0,0,0.45) 0%, transparent 70%);
-            bottom: 4px;
+            width: 80px;
+            height: 16px;
+            background: radial-gradient(ellipse, rgba(0,0,0,0.5) 0%, transparent 70%);
+            bottom: 6px;
             z-index: 1;
         }}
 
         .mon-sprite {{
-            width: 84px;
-            height: 84px;
+            width: 88px;
+            height: 88px;
+            transform: scale(1.3);
             object-fit: contain;
             image-rendering: pixelated;
             z-index: 2;
-            transition: transform 0.25s ease;
-            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.4));
+            transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+            filter: drop-shadow(0 6px 12px rgba(0,0,0,0.55));
         }}
 
         .mon-card:hover .mon-sprite {{
-            transform: scale(1.15);
+            transform: scale(1.52);
         }}
 
         .mon-name {{
             font-family: 'Outfit', sans-serif;
-            font-size: 1.05rem;
+            font-size: 1.12rem;
             font-weight: 800;
             color: white;
-            margin-bottom: 0.35rem;
+            margin-bottom: 0.4rem;
             text-align: center;
         }}
 
         .mon-types {{
             display: flex;
-            gap: 0.3rem;
-            margin-bottom: 0.6rem;
+            gap: 0.35rem;
+            margin-bottom: 0.65rem;
         }}
 
         .type-badge {{
-            font-size: 0.68rem;
+            font-size: 0.7rem;
             font-weight: 700;
-            padding: 0.2rem 0.5rem;
+            padding: 0.2rem 0.55rem;
             border-radius: 6px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
@@ -1163,34 +1393,43 @@ html_template = f"""<!DOCTYPE html>
         .type-Voador {{ background: linear-gradient(135deg, #38bdf8, #0284c7); }}
 
         .mon-evo-note {{
-            font-size: 0.72rem;
+            font-size: 0.74rem;
             color: var(--text-muted);
             text-align: center;
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 6px;
-            padding: 0.3rem 0.5rem;
+            background: rgba(0, 0, 0, 0.35);
+            border-radius: 8px;
+            padding: 0.35rem 0.55rem;
             width: 100%;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.06);
         }}
 
-        /* Filtro de Tipos */
+        /* Filtro de Tipos com scroll horizontal fluido */
         .type-filter-bar {{
             display: flex;
-            flex-wrap: wrap;
             gap: 0.5rem;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            padding-bottom: 0.6rem;
             margin-bottom: 1.5rem;
         }}
 
+        .type-filter-bar::-webkit-scrollbar {{
+            display: none;
+        }}
+
         .type-filter-btn {{
-            background: rgba(255, 255, 255, 0.05);
+            flex-shrink: 0;
+            background: rgba(255, 255, 255, 0.06);
             border: 1px solid var(--border-color);
             color: var(--text-muted);
-            padding: 0.4rem 0.8rem;
+            padding: 0.45rem 0.95rem;
             border-radius: 8px;
-            font-size: 0.8rem;
+            font-size: 0.82rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.2s;
+            white-space: nowrap;
         }}
 
         .type-filter-btn:hover, .type-filter-btn.active {{
@@ -1204,22 +1443,31 @@ html_template = f"""<!DOCTYPE html>
            ==================== */
         .boss-tab-bar {{
             display: flex;
-            gap: 0.75rem;
+            gap: 0.6rem;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            padding-bottom: 0.6rem;
             margin-bottom: 1.5rem;
             border-bottom: 1px solid var(--border-color);
-            padding-bottom: 0.75rem;
+        }}
+
+        .boss-tab-bar::-webkit-scrollbar {{
+            display: none;
         }}
 
         .boss-tab-btn {{
-            background: rgba(255, 255, 255, 0.05);
+            flex-shrink: 0;
+            background: rgba(255, 255, 255, 0.06);
             border: 1px solid var(--border-color);
             color: var(--text-muted);
-            padding: 0.5rem 1rem;
+            padding: 0.55rem 1.1rem;
             border-radius: 8px;
             font-size: 0.85rem;
             font-weight: 700;
             cursor: pointer;
             transition: all 0.2s;
+            white-space: nowrap;
         }}
 
         .boss-tab-btn.active {{
@@ -1239,13 +1487,14 @@ html_template = f"""<!DOCTYPE html>
             background: var(--bg-card);
             border: 1px solid var(--border-color);
             border-radius: 16px;
-            padding: 1.35rem;
+            padding: 1.4rem;
             display: flex;
             flex-direction: column;
             gap: 1rem;
             position: relative;
             overflow: hidden;
             backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
             transition: all 0.25s ease;
         }}
@@ -1265,8 +1514,8 @@ html_template = f"""<!DOCTYPE html>
         }}
 
         .gym-boss-pic {{
-            width: 74px;
-            height: 74px;
+            width: 76px;
+            height: 76px;
             border-radius: 12px;
             background: rgba(0, 0, 0, 0.4);
             border: 1px solid var(--border-color);
@@ -1330,7 +1579,7 @@ html_template = f"""<!DOCTYPE html>
             background: rgba(0, 0, 0, 0.35);
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 8px;
-            padding: 0.3rem 0.6rem;
+            padding: 0.35rem 0.65rem;
             font-size: 0.8rem;
         }}
 
@@ -1363,7 +1612,7 @@ html_template = f"""<!DOCTYPE html>
         .route-card {{
             background: var(--bg-card);
             border: 1px solid var(--border-color);
-            border-radius: 12px;
+            border-radius: 14px;
             padding: 1.25rem;
         }}
 
@@ -1457,33 +1706,115 @@ html_template = f"""<!DOCTYPE html>
             border-color: var(--accent);
         }}
 
-        /* Responsividade */
+        /* ====================
+           RESPONSIVIDADE (MOBILE & TABLET)
+           ==================== */
         @media (max-width: 900px) {{
+            #mobile-topbar {{
+                display: flex;
+            }}
+            #mobile-bottom-nav {{
+                display: flex;
+            }}
+            #sidebar-backdrop {{
+                display: none;
+            }}
             #sidebar {{
                 transform: translateX(-100%);
+                z-index: 999;
+                top: 0;
+                box-shadow: 10px 0 35px rgba(0, 0, 0, 0.85);
             }}
             #sidebar.open {{
                 transform: translateX(0);
             }}
+            .sidebar-close-btn {{
+                display: block;
+            }}
             #content {{
                 margin-left: 0;
-                padding: 1.5rem;
+                padding: 4.8rem 1.15rem 5.5rem; /* Margem para topbar fixa e bottom nav */
             }}
-            .card-grid-2, .gym-boss-grid {{
+            .pane-header h1 {{
+                font-size: 1.65rem;
+            }}
+            .card-grid-2, .gym-boss-grid, .encounter-grid {{
                 grid-template-columns: 1fr;
+            }}
+            .pokedex-grid {{
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 0.85rem;
+            }}
+            .mon-card {{
+                padding: 0.9rem 0.65rem;
+            }}
+            .mon-sprite-box {{
+                width: 95px;
+                height: 95px;
+            }}
+            .mon-sprite {{
+                width: 80px;
+                height: 80px;
+                transform: scale(1.2);
+            }}
+            .city-banner-box {{
+                height: 160px;
+            }}
+            .city-banner-title {{
+                font-size: 1.15rem;
+            }}
+            #backToTopBtn {{
+                bottom: 74px;
+                right: 14px;
+            }}
+        }}
+
+        @media (max-width: 450px) {{
+            .pokedex-grid {{
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.65rem;
+            }}
+            .mon-name {{
+                font-size: 0.95rem;
+            }}
+            .type-badge {{
+                font-size: 0.62rem;
+                padding: 0.15rem 0.4rem;
+            }}
+            .mon-evo-note {{
+                font-size: 0.68rem;
             }}
         }}
     </style>
 </head>
 <body>
 
+    <!-- TOPBAR MÓVEL FIXA -->
+    <header id="mobile-topbar">
+        <button class="menu-toggle-btn" onclick="toggleSidebar()" aria-label="Abrir Menu">
+            <span>☰</span>
+        </button>
+        <div class="mobile-brand">
+            <span>🔥</span> POKÉMON KANTO & JOHTO
+        </div>
+        <button class="mobile-search-btn" onclick="focusMobileSearch()" aria-label="Buscar">
+            <span>🔍</span>
+        </button>
+    </header>
+
+    <!-- BACKDROP PARA FECHAR SIDEBAR NO MOBILE -->
+    <div id="sidebar-backdrop" onclick="closeSidebar()"></div>
+
     <!-- SIDEBAR -->
     <aside id="sidebar">
         <div class="sidebar-brand">
-            <div class="brand-title">
-                <span>🔥</span> POKÉMON KANTO & JOHTO
+            <div>
+                <div class="brand-title">
+                    <span>🔥</span> POKÉMON K&J
+                </div>
+                <div class="brand-sub">Wiki & Pokédex Oficial v2.0</div>
             </div>
-            <div class="brand-sub">Wiki & Pokédex Oficial v2.0</div>
+            <button class="sidebar-close-btn" onclick="closeSidebar()" aria-label="Fechar Menu">✕</button>
         </div>
 
         <div class="search-area">
@@ -1520,10 +1851,41 @@ html_template = f"""<!DOCTYPE html>
         </nav>
 
         <div class="sidebar-footer">
-            <span>Criado com ❤️ para GBA & APK</span>
+            <span>Criado para GBA & APK</span>
             <span>2026</span>
         </div>
     </aside>
+
+    <!-- BOTTOM NAV MÓVEL -->
+    <nav id="mobile-bottom-nav">
+        <button class="bottom-nav-item active" onclick="switchPane('pane-home')">
+            <span class="bottom-nav-icon">🏠</span>
+            <span class="bottom-nav-label">Início</span>
+        </button>
+        <button class="bottom-nav-item" onclick="switchPane('pane-walkthrough-kanto')">
+            <span class="bottom-nav-icon">🗾</span>
+            <span class="bottom-nav-label">Kanto</span>
+        </button>
+        <button class="bottom-nav-item" onclick="switchPane('pane-walkthrough-johto')">
+            <span class="bottom-nav-icon">🚄</span>
+            <span class="bottom-nav-label">Johto</span>
+        </button>
+        <button class="bottom-nav-item" onclick="switchPane('pane-gyms')">
+            <span class="bottom-nav-icon">🥊</span>
+            <span class="bottom-nav-label">Chefes</span>
+        </button>
+        <button class="bottom-nav-item" onclick="switchPane('pane-pokedex')">
+            <span class="bottom-nav-icon">📖</span>
+            <span class="bottom-nav-label">Pokédex</span>
+        </button>
+        <button class="bottom-nav-item" onclick="switchPane('pane-encounters')">
+            <span class="bottom-nav-icon">🧭</span>
+            <span class="bottom-nav-label">Rotas</span>
+        </button>
+    </nav>
+
+    <!-- BOTÃO FLUTUANTE VOLTAR AO TOPO -->
+    <button id="backToTopBtn" onclick="scrollToTop()" aria-label="Voltar ao Topo">▲</button>
 
     <!-- MAIN CONTENT -->
     <main id="content">
@@ -1557,7 +1919,7 @@ html_template = f"""<!DOCTYPE html>
                     </div>
                     <div class="card-grid-2" style="gap: 0.75rem;">
                         <button class="type-filter-btn" style="text-align: left; padding: 0.8rem;" onclick="switchPane('pane-pokedex')">
-                            <b>📖 Pokédex 251</b><br><small>Sprites, evoluções e tipos</small>
+                            <b>📖 Pokédex 251</b><br><small>Sprites grandes, evoluções e tipos</small>
                         </button>
                         <button class="type-filter-btn" style="text-align: left; padding: 0.8rem;" onclick="switchPane('pane-gyms')">
                             <b>🥊 Mural dos Chefes</b><br><small>Fraquezas e equipes</small>
@@ -1580,9 +1942,21 @@ html_template = f"""<!DOCTYPE html>
                 <p>O roteiro otimizado para conquistar as 8 insígnias, derrotar a Equipe Rocket e vencer a Liga Pokémon no Planalto Índigo.</p>
             </div>
 
+            <!-- Atalhos Rápidos por Capítulo -->
+            <div class="chapter-pills-bar">
+                <a class="chapter-pill" href="#kanto-cap1">Cap. 1: Pallet</a>
+                <a class="chapter-pill" href="#kanto-cap2">Cap. 2: Viridian & Pewter</a>
+                <a class="chapter-pill" href="#kanto-cap3">Cap. 3: Cerulean & Misty</a>
+                <a class="chapter-pill" href="#kanto-cap4">Cap. 4: Vermilion & Surge</a>
+                <a class="chapter-pill" href="#kanto-cap5">Cap. 5: Lavender</a>
+                <a class="chapter-pill" href="#kanto-cap6">Cap. 6: Celadon & Saffron</a>
+                <a class="chapter-pill" href="#kanto-cap7">Cap. 7: Fuchsia & Cinnabar</a>
+                <a class="chapter-pill" href="#kanto-cap8">Cap. 8: Liga Pokémon</a>
+            </div>
+
             <div class="card-grid-2">
                 <!-- Pallet Town -->
-                <div class="wiki-card">
+                <div class="wiki-card" id="kanto-cap1">
                     <div class="city-banner-box">
                         <img class="city-banner-img" src="graphics/cities/pallet_town_banner.jpg" alt="Pallet Town">
                         <div class="city-banner-overlay">
@@ -1600,7 +1974,7 @@ html_template = f"""<!DOCTYPE html>
                 </div>
 
                 <!-- Viridian Forest & Pewter -->
-                <div class="wiki-card">
+                <div class="wiki-card" id="kanto-cap2">
                     <div class="city-banner-box">
                         <img class="city-banner-img" src="graphics/cities/viridian_forest_banner.jpg" alt="Viridian Forest">
                         <div class="city-banner-overlay">
@@ -1618,7 +1992,7 @@ html_template = f"""<!DOCTYPE html>
                 </div>
 
                 <!-- Cerulean & Ponte Pepita -->
-                <div class="wiki-card">
+                <div class="wiki-card" id="kanto-cap3">
                     <div class="wiki-card-header">
                         <h3>Capítulo 3: Mt. Moon, Cerulean & Misty</h3>
                         <span class="tag-pill">Insígnia Cascata</span>
@@ -1634,7 +2008,7 @@ html_template = f"""<!DOCTYPE html>
                 </div>
 
                 <!-- Vermilion & S.S. Anne -->
-                <div class="wiki-card">
+                <div class="wiki-card" id="kanto-cap4">
                     <div class="wiki-card-header">
                         <h3>Capítulo 4: Vermilion, Navio S.S. Anne & Surge</h3>
                         <span class="tag-pill">Insígnia Trovão</span>
@@ -1650,7 +2024,7 @@ html_template = f"""<!DOCTYPE html>
                 </div>
 
                 <!-- Lavender Town -->
-                <div class="wiki-card">
+                <div class="wiki-card" id="kanto-cap5">
                     <div class="city-banner-box">
                         <img class="city-banner-img" src="graphics/cities/lavender_town_banner.jpg" alt="Lavender Town">
                         <div class="city-banner-overlay">
@@ -1668,7 +2042,7 @@ html_template = f"""<!DOCTYPE html>
                 </div>
 
                 <!-- Celadon & Saffron -->
-                <div class="wiki-card">
+                <div class="wiki-card" id="kanto-cap6">
                     <div class="wiki-card-header">
                         <h3>Capítulo 6: Celadon, Silph Co. & Sabrina</h3>
                         <span class="tag-pill">Insígnias Arco-Íris & Pântano</span>
@@ -1684,7 +2058,7 @@ html_template = f"""<!DOCTYPE html>
                 </div>
 
                 <!-- Fuchsia & Cinnabar -->
-                <div class="wiki-card">
+                <div class="wiki-card" id="kanto-cap7">
                     <div class="wiki-card-header">
                         <h3>Capítulo 7: Safari Zone, Fuchsia & Cinnabar</h3>
                         <span class="tag-pill">Insígnias Alma & Vulcão</span>
@@ -1700,7 +2074,7 @@ html_template = f"""<!DOCTYPE html>
                 </div>
 
                 <!-- Viridian & Indigo Plateau -->
-                <div class="wiki-card">
+                <div class="wiki-card" id="kanto-cap8">
                     <div class="city-banner-box">
                         <img class="city-banner-img" src="graphics/cities/indigo_plateau_banner.jpg" alt="Indigo Plateau">
                         <div class="city-banner-overlay">
@@ -1726,9 +2100,20 @@ html_template = f"""<!DOCTYPE html>
                 <p>A expansão completa: desbloqueie a fronteira oeste, vença os 8 novos ginásios e enfrente Red no cume nevado do Monte Silver!</p>
             </div>
 
+            <!-- Atalhos Rápidos por Capítulo -->
+            <div class="chapter-pills-bar">
+                <a class="chapter-pill" href="#johto-fase1">Fase 1: Violet</a>
+                <a class="chapter-pill" href="#johto-fase2">Fase 2: Azalea</a>
+                <a class="chapter-pill" href="#johto-fase3">Fase 3: Goldenrod</a>
+                <a class="chapter-pill" href="#johto-fase4">Fase 4: Ecruteak</a>
+                <a class="chapter-pill" href="#johto-fase5">Fase 5: Cianwood & Olivine</a>
+                <a class="chapter-pill" href="#johto-fase6">Fase 6: Mahogany & Blackthorn</a>
+                <a class="chapter-pill" href="#johto-fase7">Fase 7: Monte Silver (Red)</a>
+            </div>
+
             <div class="card-grid-2">
                 <!-- New Bark & Violet -->
-                <div class="wiki-card">
+                <div class="wiki-card" id="johto-fase1">
                     <div class="wiki-card-header">
                         <h3>Fase 1: Travessia para Johto & Falkner</h3>
                         <span class="tag-pill">Nível 55 a 62</span>
@@ -1745,7 +2130,7 @@ html_template = f"""<!DOCTYPE html>
                 </div>
 
                 <!-- Azalea & Bugsy -->
-                <div class="wiki-card">
+                <div class="wiki-card" id="johto-fase2">
                     <div class="wiki-card-header">
                         <h3>Fase 2: Azalea Town & Bugsy</h3>
                         <span class="tag-pill">Poço Slowpoke</span>
@@ -1761,7 +2146,7 @@ html_template = f"""<!DOCTYPE html>
                 </div>
 
                 <!-- Goldenrod & Whitney -->
-                <div class="wiki-card">
+                <div class="wiki-card" id="johto-fase3">
                     <div class="city-banner-box">
                         <img class="city-banner-img" src="graphics/cities/goldenrod_city_banner.jpg" alt="Goldenrod City">
                         <div class="city-banner-overlay">
@@ -1779,7 +2164,7 @@ html_template = f"""<!DOCTYPE html>
                 </div>
 
                 <!-- Ecruteak & Morty -->
-                <div class="wiki-card">
+                <div class="wiki-card" id="johto-fase4">
                     <div class="city-banner-box">
                         <img class="city-banner-img" src="graphics/cities/ecruteak_city_banner.jpg" alt="Ecruteak City">
                         <div class="city-banner-overlay">
@@ -1797,7 +2182,7 @@ html_template = f"""<!DOCTYPE html>
                 </div>
 
                 <!-- Cianwood & Olivine -->
-                <div class="wiki-card">
+                <div class="wiki-card" id="johto-fase5">
                     <div class="wiki-card-header">
                         <h3>Fase 5: Cianwood, Olivine & Jasmine</h3>
                         <span class="tag-pill">Insígnia Mineral</span>
@@ -1813,7 +2198,7 @@ html_template = f"""<!DOCTYPE html>
                 </div>
 
                 <!-- Mahogany & Blackthorn -->
-                <div class="wiki-card">
+                <div class="wiki-card" id="johto-fase6">
                     <div class="wiki-card-header">
                         <h3>Fase 6: Lago da Fúria, Pryce & Clair</h3>
                         <span class="tag-pill">Gyarados Vermelho</span>
@@ -1829,7 +2214,7 @@ html_template = f"""<!DOCTYPE html>
                 </div>
 
                 <!-- Mount Silver -->
-                <div class="wiki-card" style="grid-column: 1 / -1; border-color: rgba(239, 68, 68, 0.4);">
+                <div class="wiki-card" id="johto-fase7" style="grid-column: 1 / -1; border-color: rgba(239, 68, 68, 0.4);">
                     <div class="city-banner-box" style="height: 250px;">
                         <img class="city-banner-img" src="graphics/cities/mt_silver_banner.jpg" alt="Mount Silver">
                         <div class="city-banner-overlay">
@@ -1878,8 +2263,8 @@ html_template = f"""<!DOCTYPE html>
                 <p>Consulte todos os Pokémon, tipos atualizados (incluindo Tipo Fada) e seus métodos de evolução exclusivos nesta hack!</p>
             </div>
 
-            <div class="search-wrap" style="max-width: 400px; margin-bottom: 1rem;">
-                <input type="text" id="pokedexFilterInput" class="global-search-input" placeholder="Buscar por nome ou número..." oninput="filterPokedex()">
+            <div class="search-wrap" style="max-width: 460px; margin-bottom: 1rem;">
+                <input type="text" id="pokedexFilterInput" class="global-search-input" placeholder="Buscar por nome ou número (#025, Pikachu)..." oninput="filterPokedex()">
             </div>
 
             <div class="type-filter-bar" id="typeFilterContainer">
@@ -1908,7 +2293,7 @@ html_template = f"""<!DOCTYPE html>
                 <p>Tabela viva extraída diretamente do código do jogo. Mostra onde cada Pokémon aparece de Dia, de Noite, na Água e no DexNav!</p>
             </div>
 
-            <div class="search-wrap" style="margin-bottom: 1.5rem; max-width: 400px;">
+            <div class="search-wrap" style="margin-bottom: 1.5rem; max-width: 460px;">
                 <input type="text" id="routeFilterInput" class="global-search-input" placeholder="Filtrar por nome de rota..." oninput="filterRoutes(this.value)">
             </div>
 
@@ -2007,10 +2392,33 @@ html_template = f"""<!DOCTYPE html>
         const pokedexData = {pokedex_json};
         const gymBossesData = {gym_bosses_json};
 
-        // Troca de Telas
+        // Controle da Sidebar e Drawer
+        function toggleSidebar() {{
+            const sb = document.getElementById('sidebar');
+            const bd = document.getElementById('sidebar-backdrop');
+            sb.classList.toggle('open');
+            bd.classList.toggle('open');
+        }}
+
+        function closeSidebar() {{
+            const sb = document.getElementById('sidebar');
+            const bd = document.getElementById('sidebar-backdrop');
+            if (sb) sb.classList.remove('open');
+            if (bd) bd.classList.remove('open');
+        }}
+
+        function focusMobileSearch() {{
+            toggleSidebar();
+            setTimeout(() => {{
+                document.getElementById('globalSearch')?.focus();
+            }}, 300);
+        }}
+
+        // Troca de Telas Responsiva
         function switchPane(paneId) {{
             document.querySelectorAll('.section-pane').forEach(p => p.classList.remove('active'));
             document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+            document.querySelectorAll('.bottom-nav-item').forEach(n => n.classList.remove('active'));
 
             const target = document.getElementById(paneId);
             if (target) {{
@@ -2019,13 +2427,38 @@ html_template = f"""<!DOCTYPE html>
             }}
 
             // Destacar botão da sidebar
-            const navItems = document.querySelectorAll('.nav-item');
-            navItems.forEach(item => {{
+            document.querySelectorAll('.nav-item').forEach(item => {{
                 if (item.getAttribute('onclick') && item.getAttribute('onclick').includes(paneId)) {{
                     item.classList.add('active');
                 }}
             }});
+
+            // Destacar botão da bottom bar móvel
+            document.querySelectorAll('.bottom-nav-item').forEach(item => {{
+                if (item.getAttribute('onclick') && item.getAttribute('onclick').includes(paneId)) {{
+                    item.classList.add('active');
+                }}
+            }});
+
+            // Fechar sidebar no mobile se estiver aberta
+            closeSidebar();
         }}
+
+        // Botão Voltar ao Topo
+        function scrollToTop() {{
+            window.scrollTo({{ top: 0, behavior: 'smooth' }});
+        }}
+
+        window.addEventListener('scroll', () => {{
+            const btn = document.getElementById('backToTopBtn');
+            if (btn) {{
+                if (window.scrollY > 300) {{
+                    btn.classList.add('visible');
+                }} else {{
+                    btn.classList.remove('visible');
+                }}
+            }}
+        }});
 
         // Renderizar Pokédex com Imagens e Efeitos
         let currentTypeFilter = 'TODOS';
@@ -2257,4 +2690,3 @@ with open('index.html', 'w', encoding='utf-8') as f:
     f.write(html_template)
 
 print(f"Sucesso! Gerados Wiki_Pokemon_Kanto_Johto.html, Detonado_Interativo_Pokemon_Kanto_Johto.html e index.html com {len(pokedex_data)} Pokémon, {len(routes_data_clean)} rotas e {len(gym_bosses)} cards de chefes.")
-

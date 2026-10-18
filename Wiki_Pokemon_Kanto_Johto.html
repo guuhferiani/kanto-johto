@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>Wiki & Pokédex Oficial — Pokémon Kanto & Johto</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,7 +11,7 @@
         :root {
             --bg-body: #0b0e14;
             --bg-sidebar: #111622;
-            --bg-card: rgba(23, 29, 43, 0.75);
+            --bg-card: rgba(23, 29, 43, 0.78);
             --border-color: rgba(255, 255, 255, 0.08);
             --primary: #ef4444;
             --secondary: #3b82f6;
@@ -24,6 +24,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
         }
 
         body {
@@ -33,13 +34,100 @@
             display: flex;
             min-height: 100vh;
             line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ====================
+           HEADER MÓVEL FIXO
+           ==================== */
+        #mobile-topbar {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background: rgba(17, 22, 34, 0.95);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 1rem;
+        }
+
+        .menu-toggle-btn {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--border-color);
+            color: white;
+            font-size: 1.3rem;
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+
+        .menu-toggle-btn:active {
+            background: rgba(239, 68, 68, 0.3);
+            transform: scale(0.95);
+        }
+
+        .mobile-brand {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #f87171, #ef4444, #fbbf24);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .mobile-search-btn {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--border-color);
+            color: white;
+            font-size: 1rem;
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* ====================
+           BACKDROP OVERLAY
+           ==================== */
+        #sidebar-backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            z-index: 998;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        #sidebar-backdrop.open {
+            display: block;
+            opacity: 1;
         }
 
         /* ====================
            SIDEBAR DE NAVEGAÇÃO
            ==================== */
         #sidebar {
-            width: 280px;
+            width: 285px;
             background-color: var(--bg-sidebar);
             border-right: 1px solid var(--border-color);
             position: fixed;
@@ -49,12 +137,15 @@
             display: flex;
             flex-direction: column;
             z-index: 100;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .sidebar-brand {
             padding: 1.25rem 1.25rem 0.75rem;
             border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
         .brand-title {
@@ -67,6 +158,16 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
+        }
+
+        .sidebar-close-btn {
+            display: none;
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 4px;
         }
 
         .brand-sub {
@@ -82,19 +183,19 @@
 
         .global-search-input {
             width: 100%;
-            background: rgba(15, 20, 31, 0.8);
+            background: rgba(15, 20, 31, 0.85);
             border: 1px solid var(--border-color);
             border-radius: 8px;
-            padding: 0.6rem 0.8rem 0.6rem 2rem;
+            padding: 0.65rem 0.8rem 0.65rem 2.2rem;
             color: white;
-            font-size: 0.85rem;
+            font-size: 0.88rem;
             outline: none;
             transition: all 0.2s;
         }
 
         .global-search-input:focus {
             border-color: var(--primary);
-            box-shadow: 0 0 10px rgba(239, 68, 68, 0.3);
+            box-shadow: 0 0 12px rgba(239, 68, 68, 0.35);
         }
 
         .search-wrap {
@@ -104,10 +205,10 @@
         .search-wrap::before {
             content: "🔍";
             position: absolute;
-            left: 0.65rem;
+            left: 0.75rem;
             top: 50%;
             transform: translateY(-50%);
-            font-size: 0.75rem;
+            font-size: 0.8rem;
             opacity: 0.6;
         }
 
@@ -117,18 +218,18 @@
             padding: 0.75rem;
             display: flex;
             flex-direction: column;
-            gap: 0.25rem;
+            gap: 0.3rem;
         }
 
         .nav-item {
             display: flex;
             align-items: center;
             gap: 0.75rem;
-            padding: 0.7rem 0.9rem;
-            border-radius: 8px;
+            padding: 0.75rem 0.95rem;
+            border-radius: 10px;
             color: var(--text-muted);
             text-decoration: none;
-            font-size: 0.85rem;
+            font-size: 0.88rem;
             font-weight: 600;
             transition: all 0.2s;
             cursor: pointer;
@@ -136,14 +237,14 @@
         }
 
         .nav-item:hover {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.06);
             color: white;
         }
 
         .nav-item.active {
-            background: rgba(239, 68, 68, 0.12);
+            background: rgba(239, 68, 68, 0.15);
             color: #f87171;
-            border-color: rgba(239, 68, 68, 0.3);
+            border-color: rgba(239, 68, 68, 0.35);
         }
 
         .sidebar-footer {
@@ -157,13 +258,138 @@
         }
 
         /* ====================
+           BARRA DE NAVEGAÇÃO INFERIOR (MOBILE BOTTOM NAV)
+           ==================== */
+        #mobile-bottom-nav {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 64px;
+            background: rgba(17, 22, 34, 0.96);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-top: 1px solid var(--border-color);
+            z-index: 997;
+            align-items: center;
+            justify-content: space-around;
+            padding: 0 0.25rem;
+        }
+
+        .bottom-nav-item {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            padding: 0.35rem 0;
+            transition: all 0.2s;
+        }
+
+        .bottom-nav-item.active {
+            color: #f87171;
+        }
+
+        .bottom-nav-icon {
+            font-size: 1.25rem;
+            line-height: 1;
+        }
+
+        .bottom-nav-label {
+            font-size: 0.65rem;
+            font-weight: 700;
+            margin-top: 2px;
+            letter-spacing: 0.2px;
+        }
+
+        /* ====================
+           BOTÃO VOLTAR AO TOPO
+           ==================== */
+        #backToTopBtn {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 46px;
+            height: 46px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 18px rgba(239, 68, 68, 0.45);
+            cursor: pointer;
+            z-index: 996;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateY(10px);
+        }
+
+        #backToTopBtn.visible {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateY(0);
+        }
+
+        #backToTopBtn:hover {
+            background: #dc2626;
+            transform: translateY(-2px);
+        }
+
+        /* ====================
+           PÍLULAS DE ATALHOS POR CAPÍTULO
+           ==================== */
+        .chapter-pills-bar {
+            display: flex;
+            gap: 0.5rem;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            padding: 0.25rem 0 0.85rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .chapter-pills-bar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .chapter-pill {
+            flex-shrink: 0;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid var(--border-color);
+            border-radius: 9999px;
+            padding: 0.4rem 0.9rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .chapter-pill:hover, .chapter-pill:active {
+            background: rgba(239, 68, 68, 0.2);
+            color: #f87171;
+            border-color: rgba(239, 68, 68, 0.4);
+        }
+
+        /* ====================
            CONTEÚDO PRINCIPAL
            ==================== */
         #content {
-            margin-left: 280px;
+            margin-left: 285px;
             flex: 1;
             padding: 2.5rem 3rem;
-            max-width: 1350px;
+            max-width: 1400px;
         }
 
         .section-pane {
@@ -181,7 +407,7 @@
         }
 
         .pane-header {
-            margin-bottom: 2rem;
+            margin-bottom: 1.75rem;
             border-bottom: 1px solid var(--border-color);
             padding-bottom: 1.25rem;
         }
@@ -204,16 +430,18 @@
         .wiki-card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
-            border-radius: 14px;
+            border-radius: 16px;
             padding: 1.5rem;
             margin-bottom: 1.5rem;
             backdrop-filter: blur(12px);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            -webkit-backdrop-filter: blur(12px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.22);
             transition: all 0.25s ease;
+            scroll-margin-top: 80px;
         }
 
         .wiki-card:hover {
-            border-color: rgba(255, 255, 255, 0.18);
+            border-color: rgba(255, 255, 255, 0.2);
             transform: translateY(-2px);
         }
 
@@ -222,6 +450,8 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
         }
 
         .wiki-card-header h3 {
@@ -232,7 +462,7 @@
 
         .tag-pill {
             font-size: 0.75rem;
-            padding: 0.2rem 0.6rem;
+            padding: 0.25rem 0.65rem;
             border-radius: 9999px;
             background: rgba(255, 255, 255, 0.08);
             color: var(--text-muted);
@@ -245,24 +475,18 @@
             gap: 1.5rem;
         }
 
-        .card-grid-3 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.25rem;
-        }
-
         /* ====================
            BANNERS DE CIDADES
            ==================== */
         .city-banner-box {
             width: 100%;
-            height: 190px;
-            border-radius: 12px;
+            height: 200px;
+            border-radius: 14px;
             overflow: hidden;
             position: relative;
             margin-bottom: 1.25rem;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+            border: 1px solid rgba(255, 255, 255, 0.12);
         }
 
         .city-banner-img {
@@ -279,7 +503,7 @@
         .city-banner-overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(11, 14, 20, 0.88) 95%);
+            background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(11, 14, 20, 0.9) 95%);
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
@@ -305,45 +529,47 @@
         }
 
         .city-poi-badge {
-            background: rgba(15, 23, 42, 0.75);
+            background: rgba(15, 23, 42, 0.8);
             backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
             border: 1px solid rgba(255, 255, 255, 0.15);
             border-radius: 6px;
-            padding: 0.2rem 0.6rem;
+            padding: 0.25rem 0.65rem;
             font-size: 0.75rem;
             color: #e2e8f0;
             font-weight: 500;
         }
 
         /* ====================
-           POKÉDEX INTERATIVA
+           POKÉDEX INTERATIVA (SPRITES AMPLIADOS)
            ==================== */
         .pokedex-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-            gap: 1.25rem;
+            grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
+            gap: 1.35rem;
         }
 
         .mon-card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
-            border-radius: 16px;
-            padding: 1rem;
+            border-radius: 18px;
+            padding: 1.15rem 1rem;
             display: flex;
             flex-direction: column;
             align-items: center;
             position: relative;
             overflow: hidden;
-            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+            transition: all 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
             backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             cursor: pointer;
         }
 
         .mon-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5);
-            border-color: rgba(255, 255, 255, 0.25);
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 14px 32px rgba(0, 0, 0, 0.6);
+            border-color: rgba(255, 255, 255, 0.28);
         }
 
         .mon-card-header {
@@ -351,70 +577,73 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 0.25rem;
+            margin-bottom: 0.35rem;
         }
 
         .mon-number {
             font-family: 'Outfit', sans-serif;
-            font-size: 0.85rem;
+            font-size: 0.88rem;
             font-weight: 800;
             color: var(--text-muted);
             letter-spacing: 0.5px;
         }
 
         .mon-sprite-box {
-            width: 100px;
-            height: 100px;
+            width: 110px;
+            height: 110px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0.25rem 0 0.5rem;
+            margin: 0.3rem 0 0.6rem;
             position: relative;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 72%);
+            border-radius: 50%;
         }
 
         .mon-sprite-box::after {
             content: '';
             position: absolute;
-            width: 75px;
-            height: 18px;
-            background: radial-gradient(ellipse, rgba(0,0,0,0.45) 0%, transparent 70%);
-            bottom: 4px;
+            width: 80px;
+            height: 16px;
+            background: radial-gradient(ellipse, rgba(0,0,0,0.5) 0%, transparent 70%);
+            bottom: 6px;
             z-index: 1;
         }
 
         .mon-sprite {
-            width: 84px;
-            height: 84px;
+            width: 88px;
+            height: 88px;
+            transform: scale(1.3);
             object-fit: contain;
             image-rendering: pixelated;
             z-index: 2;
-            transition: transform 0.25s ease;
-            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.4));
+            transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+            filter: drop-shadow(0 6px 12px rgba(0,0,0,0.55));
         }
 
         .mon-card:hover .mon-sprite {
-            transform: scale(1.15);
+            transform: scale(1.52);
         }
 
         .mon-name {
             font-family: 'Outfit', sans-serif;
-            font-size: 1.05rem;
+            font-size: 1.12rem;
             font-weight: 800;
             color: white;
-            margin-bottom: 0.35rem;
+            margin-bottom: 0.4rem;
             text-align: center;
         }
 
         .mon-types {
             display: flex;
-            gap: 0.3rem;
-            margin-bottom: 0.6rem;
+            gap: 0.35rem;
+            margin-bottom: 0.65rem;
         }
 
         .type-badge {
-            font-size: 0.68rem;
+            font-size: 0.7rem;
             font-weight: 700;
-            padding: 0.2rem 0.5rem;
+            padding: 0.2rem 0.55rem;
             border-radius: 6px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
@@ -441,34 +670,43 @@
         .type-Voador { background: linear-gradient(135deg, #38bdf8, #0284c7); }
 
         .mon-evo-note {
-            font-size: 0.72rem;
+            font-size: 0.74rem;
             color: var(--text-muted);
             text-align: center;
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 6px;
-            padding: 0.3rem 0.5rem;
+            background: rgba(0, 0, 0, 0.35);
+            border-radius: 8px;
+            padding: 0.35rem 0.55rem;
             width: 100%;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.06);
         }
 
-        /* Filtro de Tipos */
+        /* Filtro de Tipos com scroll horizontal fluido */
         .type-filter-bar {
             display: flex;
-            flex-wrap: wrap;
             gap: 0.5rem;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            padding-bottom: 0.6rem;
             margin-bottom: 1.5rem;
         }
 
+        .type-filter-bar::-webkit-scrollbar {
+            display: none;
+        }
+
         .type-filter-btn {
-            background: rgba(255, 255, 255, 0.05);
+            flex-shrink: 0;
+            background: rgba(255, 255, 255, 0.06);
             border: 1px solid var(--border-color);
             color: var(--text-muted);
-            padding: 0.4rem 0.8rem;
+            padding: 0.45rem 0.95rem;
             border-radius: 8px;
-            font-size: 0.8rem;
+            font-size: 0.82rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.2s;
+            white-space: nowrap;
         }
 
         .type-filter-btn:hover, .type-filter-btn.active {
@@ -482,22 +720,31 @@
            ==================== */
         .boss-tab-bar {
             display: flex;
-            gap: 0.75rem;
+            gap: 0.6rem;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            padding-bottom: 0.6rem;
             margin-bottom: 1.5rem;
             border-bottom: 1px solid var(--border-color);
-            padding-bottom: 0.75rem;
+        }
+
+        .boss-tab-bar::-webkit-scrollbar {
+            display: none;
         }
 
         .boss-tab-btn {
-            background: rgba(255, 255, 255, 0.05);
+            flex-shrink: 0;
+            background: rgba(255, 255, 255, 0.06);
             border: 1px solid var(--border-color);
             color: var(--text-muted);
-            padding: 0.5rem 1rem;
+            padding: 0.55rem 1.1rem;
             border-radius: 8px;
             font-size: 0.85rem;
             font-weight: 700;
             cursor: pointer;
             transition: all 0.2s;
+            white-space: nowrap;
         }
 
         .boss-tab-btn.active {
@@ -517,13 +764,14 @@
             background: var(--bg-card);
             border: 1px solid var(--border-color);
             border-radius: 16px;
-            padding: 1.35rem;
+            padding: 1.4rem;
             display: flex;
             flex-direction: column;
             gap: 1rem;
             position: relative;
             overflow: hidden;
             backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
             transition: all 0.25s ease;
         }
@@ -543,8 +791,8 @@
         }
 
         .gym-boss-pic {
-            width: 74px;
-            height: 74px;
+            width: 76px;
+            height: 76px;
             border-radius: 12px;
             background: rgba(0, 0, 0, 0.4);
             border: 1px solid var(--border-color);
@@ -608,7 +856,7 @@
             background: rgba(0, 0, 0, 0.35);
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 8px;
-            padding: 0.3rem 0.6rem;
+            padding: 0.35rem 0.65rem;
             font-size: 0.8rem;
         }
 
@@ -641,7 +889,7 @@
         .route-card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
-            border-radius: 12px;
+            border-radius: 14px;
             padding: 1.25rem;
         }
 
@@ -735,33 +983,115 @@
             border-color: var(--accent);
         }
 
-        /* Responsividade */
+        /* ====================
+           RESPONSIVIDADE (MOBILE & TABLET)
+           ==================== */
         @media (max-width: 900px) {
+            #mobile-topbar {
+                display: flex;
+            }
+            #mobile-bottom-nav {
+                display: flex;
+            }
+            #sidebar-backdrop {
+                display: none;
+            }
             #sidebar {
                 transform: translateX(-100%);
+                z-index: 999;
+                top: 0;
+                box-shadow: 10px 0 35px rgba(0, 0, 0, 0.85);
             }
             #sidebar.open {
                 transform: translateX(0);
             }
+            .sidebar-close-btn {
+                display: block;
+            }
             #content {
                 margin-left: 0;
-                padding: 1.5rem;
+                padding: 4.8rem 1.15rem 5.5rem; /* Margem para topbar fixa e bottom nav */
             }
-            .card-grid-2, .gym-boss-grid {
+            .pane-header h1 {
+                font-size: 1.65rem;
+            }
+            .card-grid-2, .gym-boss-grid, .encounter-grid {
                 grid-template-columns: 1fr;
+            }
+            .pokedex-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 0.85rem;
+            }
+            .mon-card {
+                padding: 0.9rem 0.65rem;
+            }
+            .mon-sprite-box {
+                width: 95px;
+                height: 95px;
+            }
+            .mon-sprite {
+                width: 80px;
+                height: 80px;
+                transform: scale(1.2);
+            }
+            .city-banner-box {
+                height: 160px;
+            }
+            .city-banner-title {
+                font-size: 1.15rem;
+            }
+            #backToTopBtn {
+                bottom: 74px;
+                right: 14px;
+            }
+        }
+
+        @media (max-width: 450px) {
+            .pokedex-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.65rem;
+            }
+            .mon-name {
+                font-size: 0.95rem;
+            }
+            .type-badge {
+                font-size: 0.62rem;
+                padding: 0.15rem 0.4rem;
+            }
+            .mon-evo-note {
+                font-size: 0.68rem;
             }
         }
     </style>
 </head>
 <body>
 
+    <!-- TOPBAR MÓVEL FIXA -->
+    <header id="mobile-topbar">
+        <button class="menu-toggle-btn" onclick="toggleSidebar()" aria-label="Abrir Menu">
+            <span>☰</span>
+        </button>
+        <div class="mobile-brand">
+            <span>🔥</span> POKÉMON KANTO & JOHTO
+        </div>
+        <button class="mobile-search-btn" onclick="focusMobileSearch()" aria-label="Buscar">
+            <span>🔍</span>
+        </button>
+    </header>
+
+    <!-- BACKDROP PARA FECHAR SIDEBAR NO MOBILE -->
+    <div id="sidebar-backdrop" onclick="closeSidebar()"></div>
+
     <!-- SIDEBAR -->
     <aside id="sidebar">
         <div class="sidebar-brand">
-            <div class="brand-title">
-                <span>🔥</span> POKÉMON KANTO & JOHTO
+            <div>
+                <div class="brand-title">
+                    <span>🔥</span> POKÉMON K&J
+                </div>
+                <div class="brand-sub">Wiki & Pokédex Oficial v2.0</div>
             </div>
-            <div class="brand-sub">Wiki & Pokédex Oficial v2.0</div>
+            <button class="sidebar-close-btn" onclick="closeSidebar()" aria-label="Fechar Menu">✕</button>
         </div>
 
         <div class="search-area">
@@ -798,10 +1128,41 @@
         </nav>
 
         <div class="sidebar-footer">
-            <span>Criado com ❤️ para GBA & APK</span>
+            <span>Criado para GBA & APK</span>
             <span>2026</span>
         </div>
     </aside>
+
+    <!-- BOTTOM NAV MÓVEL -->
+    <nav id="mobile-bottom-nav">
+        <button class="bottom-nav-item active" onclick="switchPane('pane-home')">
+            <span class="bottom-nav-icon">🏠</span>
+            <span class="bottom-nav-label">Início</span>
+        </button>
+        <button class="bottom-nav-item" onclick="switchPane('pane-walkthrough-kanto')">
+            <span class="bottom-nav-icon">🗾</span>
+            <span class="bottom-nav-label">Kanto</span>
+        </button>
+        <button class="bottom-nav-item" onclick="switchPane('pane-walkthrough-johto')">
+            <span class="bottom-nav-icon">🚄</span>
+            <span class="bottom-nav-label">Johto</span>
+        </button>
+        <button class="bottom-nav-item" onclick="switchPane('pane-gyms')">
+            <span class="bottom-nav-icon">🥊</span>
+            <span class="bottom-nav-label">Chefes</span>
+        </button>
+        <button class="bottom-nav-item" onclick="switchPane('pane-pokedex')">
+            <span class="bottom-nav-icon">📖</span>
+            <span class="bottom-nav-label">Pokédex</span>
+        </button>
+        <button class="bottom-nav-item" onclick="switchPane('pane-encounters')">
+            <span class="bottom-nav-icon">🧭</span>
+            <span class="bottom-nav-label">Rotas</span>
+        </button>
+    </nav>
+
+    <!-- BOTÃO FLUTUANTE VOLTAR AO TOPO -->
+    <button id="backToTopBtn" onclick="scrollToTop()" aria-label="Voltar ao Topo">▲</button>
 
     <!-- MAIN CONTENT -->
     <main id="content">
@@ -835,7 +1196,7 @@
                     </div>
                     <div class="card-grid-2" style="gap: 0.75rem;">
                         <button class="type-filter-btn" style="text-align: left; padding: 0.8rem;" onclick="switchPane('pane-pokedex')">
-                            <b>📖 Pokédex 251</b><br><small>Sprites, evoluções e tipos</small>
+                            <b>📖 Pokédex 251</b><br><small>Sprites grandes, evoluções e tipos</small>
                         </button>
                         <button class="type-filter-btn" style="text-align: left; padding: 0.8rem;" onclick="switchPane('pane-gyms')">
                             <b>🥊 Mural dos Chefes</b><br><small>Fraquezas e equipes</small>
@@ -858,9 +1219,21 @@
                 <p>O roteiro otimizado para conquistar as 8 insígnias, derrotar a Equipe Rocket e vencer a Liga Pokémon no Planalto Índigo.</p>
             </div>
 
+            <!-- Atalhos Rápidos por Capítulo -->
+            <div class="chapter-pills-bar">
+                <a class="chapter-pill" href="#kanto-cap1">Cap. 1: Pallet</a>
+                <a class="chapter-pill" href="#kanto-cap2">Cap. 2: Viridian & Pewter</a>
+                <a class="chapter-pill" href="#kanto-cap3">Cap. 3: Cerulean & Misty</a>
+                <a class="chapter-pill" href="#kanto-cap4">Cap. 4: Vermilion & Surge</a>
+                <a class="chapter-pill" href="#kanto-cap5">Cap. 5: Lavender</a>
+                <a class="chapter-pill" href="#kanto-cap6">Cap. 6: Celadon & Saffron</a>
+                <a class="chapter-pill" href="#kanto-cap7">Cap. 7: Fuchsia & Cinnabar</a>
+                <a class="chapter-pill" href="#kanto-cap8">Cap. 8: Liga Pokémon</a>
+            </div>
+
             <div class="card-grid-2">
                 <!-- Pallet Town -->
-                <div class="wiki-card">
+                <div class="wiki-card" id="kanto-cap1">
                     <div class="city-banner-box">
                         <img class="city-banner-img" src="graphics/cities/pallet_town_banner.jpg" alt="Pallet Town">
                         <div class="city-banner-overlay">
@@ -878,7 +1251,7 @@
                 </div>
 
                 <!-- Viridian Forest & Pewter -->
-                <div class="wiki-card">
+                <div class="wiki-card" id="kanto-cap2">
                     <div class="city-banner-box">
                         <img class="city-banner-img" src="graphics/cities/viridian_forest_banner.jpg" alt="Viridian Forest">
                         <div class="city-banner-overlay">
@@ -896,7 +1269,7 @@
                 </div>
 
                 <!-- Cerulean & Ponte Pepita -->
-                <div class="wiki-card">
+                <div class="wiki-card" id="kanto-cap3">
                     <div class="wiki-card-header">
                         <h3>Capítulo 3: Mt. Moon, Cerulean & Misty</h3>
                         <span class="tag-pill">Insígnia Cascata</span>
@@ -912,7 +1285,7 @@
                 </div>
 
                 <!-- Vermilion & S.S. Anne -->
-                <div class="wiki-card">
+                <div class="wiki-card" id="kanto-cap4">
                     <div class="wiki-card-header">
                         <h3>Capítulo 4: Vermilion, Navio S.S. Anne & Surge</h3>
                         <span class="tag-pill">Insígnia Trovão</span>
@@ -928,7 +1301,7 @@
                 </div>
 
                 <!-- Lavender Town -->
-                <div class="wiki-card">
+                <div class="wiki-card" id="kanto-cap5">
                     <div class="city-banner-box">
                         <img class="city-banner-img" src="graphics/cities/lavender_town_banner.jpg" alt="Lavender Town">
                         <div class="city-banner-overlay">
@@ -946,7 +1319,7 @@
                 </div>
 
                 <!-- Celadon & Saffron -->
-                <div class="wiki-card">
+                <div class="wiki-card" id="kanto-cap6">
                     <div class="wiki-card-header">
                         <h3>Capítulo 6: Celadon, Silph Co. & Sabrina</h3>
                         <span class="tag-pill">Insígnias Arco-Íris & Pântano</span>
@@ -962,7 +1335,7 @@
                 </div>
 
                 <!-- Fuchsia & Cinnabar -->
-                <div class="wiki-card">
+                <div class="wiki-card" id="kanto-cap7">
                     <div class="wiki-card-header">
                         <h3>Capítulo 7: Safari Zone, Fuchsia & Cinnabar</h3>
                         <span class="tag-pill">Insígnias Alma & Vulcão</span>
@@ -978,7 +1351,7 @@
                 </div>
 
                 <!-- Viridian & Indigo Plateau -->
-                <div class="wiki-card">
+                <div class="wiki-card" id="kanto-cap8">
                     <div class="city-banner-box">
                         <img class="city-banner-img" src="graphics/cities/indigo_plateau_banner.jpg" alt="Indigo Plateau">
                         <div class="city-banner-overlay">
@@ -1004,9 +1377,20 @@
                 <p>A expansão completa: desbloqueie a fronteira oeste, vença os 8 novos ginásios e enfrente Red no cume nevado do Monte Silver!</p>
             </div>
 
+            <!-- Atalhos Rápidos por Capítulo -->
+            <div class="chapter-pills-bar">
+                <a class="chapter-pill" href="#johto-fase1">Fase 1: Violet</a>
+                <a class="chapter-pill" href="#johto-fase2">Fase 2: Azalea</a>
+                <a class="chapter-pill" href="#johto-fase3">Fase 3: Goldenrod</a>
+                <a class="chapter-pill" href="#johto-fase4">Fase 4: Ecruteak</a>
+                <a class="chapter-pill" href="#johto-fase5">Fase 5: Cianwood & Olivine</a>
+                <a class="chapter-pill" href="#johto-fase6">Fase 6: Mahogany & Blackthorn</a>
+                <a class="chapter-pill" href="#johto-fase7">Fase 7: Monte Silver (Red)</a>
+            </div>
+
             <div class="card-grid-2">
                 <!-- New Bark & Violet -->
-                <div class="wiki-card">
+                <div class="wiki-card" id="johto-fase1">
                     <div class="wiki-card-header">
                         <h3>Fase 1: Travessia para Johto & Falkner</h3>
                         <span class="tag-pill">Nível 55 a 62</span>
@@ -1023,7 +1407,7 @@
                 </div>
 
                 <!-- Azalea & Bugsy -->
-                <div class="wiki-card">
+                <div class="wiki-card" id="johto-fase2">
                     <div class="wiki-card-header">
                         <h3>Fase 2: Azalea Town & Bugsy</h3>
                         <span class="tag-pill">Poço Slowpoke</span>
@@ -1039,7 +1423,7 @@
                 </div>
 
                 <!-- Goldenrod & Whitney -->
-                <div class="wiki-card">
+                <div class="wiki-card" id="johto-fase3">
                     <div class="city-banner-box">
                         <img class="city-banner-img" src="graphics/cities/goldenrod_city_banner.jpg" alt="Goldenrod City">
                         <div class="city-banner-overlay">
@@ -1057,7 +1441,7 @@
                 </div>
 
                 <!-- Ecruteak & Morty -->
-                <div class="wiki-card">
+                <div class="wiki-card" id="johto-fase4">
                     <div class="city-banner-box">
                         <img class="city-banner-img" src="graphics/cities/ecruteak_city_banner.jpg" alt="Ecruteak City">
                         <div class="city-banner-overlay">
@@ -1075,7 +1459,7 @@
                 </div>
 
                 <!-- Cianwood & Olivine -->
-                <div class="wiki-card">
+                <div class="wiki-card" id="johto-fase5">
                     <div class="wiki-card-header">
                         <h3>Fase 5: Cianwood, Olivine & Jasmine</h3>
                         <span class="tag-pill">Insígnia Mineral</span>
@@ -1091,7 +1475,7 @@
                 </div>
 
                 <!-- Mahogany & Blackthorn -->
-                <div class="wiki-card">
+                <div class="wiki-card" id="johto-fase6">
                     <div class="wiki-card-header">
                         <h3>Fase 6: Lago da Fúria, Pryce & Clair</h3>
                         <span class="tag-pill">Gyarados Vermelho</span>
@@ -1107,7 +1491,7 @@
                 </div>
 
                 <!-- Mount Silver -->
-                <div class="wiki-card" style="grid-column: 1 / -1; border-color: rgba(239, 68, 68, 0.4);">
+                <div class="wiki-card" id="johto-fase7" style="grid-column: 1 / -1; border-color: rgba(239, 68, 68, 0.4);">
                     <div class="city-banner-box" style="height: 250px;">
                         <img class="city-banner-img" src="graphics/cities/mt_silver_banner.jpg" alt="Mount Silver">
                         <div class="city-banner-overlay">
@@ -1156,8 +1540,8 @@
                 <p>Consulte todos os Pokémon, tipos atualizados (incluindo Tipo Fada) e seus métodos de evolução exclusivos nesta hack!</p>
             </div>
 
-            <div class="search-wrap" style="max-width: 400px; margin-bottom: 1rem;">
-                <input type="text" id="pokedexFilterInput" class="global-search-input" placeholder="Buscar por nome ou número..." oninput="filterPokedex()">
+            <div class="search-wrap" style="max-width: 460px; margin-bottom: 1rem;">
+                <input type="text" id="pokedexFilterInput" class="global-search-input" placeholder="Buscar por nome ou número (#025, Pikachu)..." oninput="filterPokedex()">
             </div>
 
             <div class="type-filter-bar" id="typeFilterContainer">
@@ -1186,7 +1570,7 @@
                 <p>Tabela viva extraída diretamente do código do jogo. Mostra onde cada Pokémon aparece de Dia, de Noite, na Água e no DexNav!</p>
             </div>
 
-            <div class="search-wrap" style="margin-bottom: 1.5rem; max-width: 400px;">
+            <div class="search-wrap" style="margin-bottom: 1.5rem; max-width: 460px;">
                 <input type="text" id="routeFilterInput" class="global-search-input" placeholder="Filtrar por nome de rota..." oninput="filterRoutes(this.value)">
             </div>
 
@@ -1285,10 +1669,33 @@
         const pokedexData = [{"num": 1, "name": "Bulbasaur", "type": ["Planta", "Veneno"], "evo": "Lv 16 -> Ivysaur", "folder": "bulbasaur"}, {"num": 2, "name": "Ivysaur", "type": ["Planta", "Veneno"], "evo": "Lv 32 -> Venusaur", "folder": "ivysaur"}, {"num": 3, "name": "Venusaur", "type": ["Planta", "Veneno"], "evo": "Forma Final", "folder": "venusaur"}, {"num": 4, "name": "Charmander", "type": ["Fogo"], "evo": "Lv 16 -> Charmeleon", "folder": "charmander"}, {"num": 5, "name": "Charmeleon", "type": ["Fogo"], "evo": "Lv 36 -> Charizard", "folder": "charmeleon"}, {"num": 6, "name": "Charizard", "type": ["Fogo", "Voador"], "evo": "Forma Final", "folder": "charizard"}, {"num": 7, "name": "Squirtle", "type": ["Água"], "evo": "Lv 16 -> Wartortle", "folder": "squirtle"}, {"num": 8, "name": "Wartortle", "type": ["Água"], "evo": "Lv 36 -> Blastoise", "folder": "wartortle"}, {"num": 9, "name": "Blastoise", "type": ["Água"], "evo": "Forma Final", "folder": "blastoise"}, {"num": 10, "name": "Caterpie", "type": ["Inseto"], "evo": "Lv 7 -> Metapod", "folder": "caterpie"}, {"num": 11, "name": "Metapod", "type": ["Inseto"], "evo": "Lv 10 -> Butterfree", "folder": "metapod"}, {"num": 12, "name": "Butterfree", "type": ["Inseto", "Voador"], "evo": "Forma Final", "folder": "butterfree"}, {"num": 13, "name": "Weedle", "type": ["Inseto", "Veneno"], "evo": "Lv 7 -> Kakuna", "folder": "weedle"}, {"num": 14, "name": "Kakuna", "type": ["Inseto", "Veneno"], "evo": "Lv 10 -> Beedrill", "folder": "kakuna"}, {"num": 15, "name": "Beedrill", "type": ["Inseto", "Veneno"], "evo": "Forma Final", "folder": "beedrill"}, {"num": 16, "name": "Pidgey", "type": ["Normal", "Voador"], "evo": "Lv 18 -> Pidgeotto", "folder": "pidgey"}, {"num": 17, "name": "Pidgeotto", "type": ["Normal", "Voador"], "evo": "Lv 36 -> Pidgeot", "folder": "pidgeotto"}, {"num": 18, "name": "Pidgeot", "type": ["Normal", "Voador"], "evo": "Forma Final", "folder": "pidgeot"}, {"num": 19, "name": "Rattata", "type": ["Normal"], "evo": "Lv 20 -> Raticate", "folder": "rattata"}, {"num": 20, "name": "Raticate", "type": ["Normal"], "evo": "Forma Final", "folder": "raticate"}, {"num": 21, "name": "Spearow", "type": ["Normal", "Voador"], "evo": "Lv 20 -> Fearow", "folder": "spearow"}, {"num": 22, "name": "Fearow", "type": ["Normal", "Voador"], "evo": "Forma Final", "folder": "fearow"}, {"num": 23, "name": "Ekans", "type": ["Veneno"], "evo": "Lv 22 -> Arbok", "folder": "ekans"}, {"num": 24, "name": "Arbok", "type": ["Veneno"], "evo": "Forma Final", "folder": "arbok"}, {"num": 25, "name": "Pikachu", "type": ["Elétrico"], "evo": "Pedra do Trovão -> Raichu", "folder": "pikachu"}, {"num": 26, "name": "Raichu", "type": ["Elétrico"], "evo": "Forma Final", "folder": "raichu"}, {"num": 27, "name": "Sandshrew", "type": ["Terra"], "evo": "Lv 22 -> Sandslash", "folder": "sandshrew"}, {"num": 28, "name": "Sandslash", "type": ["Terra"], "evo": "Forma Final", "folder": "sandslash"}, {"num": 29, "name": "Nidoran♀", "type": ["Veneno"], "evo": "Lv 16 -> Nidorina", "folder": "nidoran_f"}, {"num": 30, "name": "Nidorina", "type": ["Veneno"], "evo": "Pedra da Lua -> Nidoqueen", "folder": "nidorina"}, {"num": 31, "name": "Nidoqueen", "type": ["Veneno", "Terra"], "evo": "Forma Final", "folder": "nidoqueen"}, {"num": 32, "name": "Nidoran♂", "type": ["Veneno"], "evo": "Lv 16 -> Nidorino", "folder": "nidoran_m"}, {"num": 33, "name": "Nidorino", "type": ["Veneno"], "evo": "Pedra da Lua -> Nidoking", "folder": "nidorino"}, {"num": 34, "name": "Nidoking", "type": ["Veneno", "Terra"], "evo": "Forma Final", "folder": "nidoking"}, {"num": 35, "name": "Clefairy", "type": ["Fada"], "evo": "Pedra da Lua -> Clefable", "folder": "clefairy"}, {"num": 36, "name": "Clefable", "type": ["Fada"], "evo": "Forma Final", "folder": "clefable"}, {"num": 37, "name": "Vulpix", "type": ["Fogo"], "evo": "Pedra de Fogo -> Ninetales", "folder": "vulpix"}, {"num": 38, "name": "Ninetales", "type": ["Fogo"], "evo": "Forma Final", "folder": "ninetales"}, {"num": 39, "name": "Jigglypuff", "type": ["Normal", "Fada"], "evo": "Pedra da Lua -> Wigglytuff", "folder": "jigglypuff"}, {"num": 40, "name": "Wigglytuff", "type": ["Normal", "Fada"], "evo": "Forma Final", "folder": "wigglytuff"}, {"num": 41, "name": "Zubat", "type": ["Veneno", "Voador"], "evo": "Lv 22 -> Golbat", "folder": "zubat"}, {"num": 42, "name": "Golbat", "type": ["Veneno", "Voador"], "evo": "Felicidade Máxima -> Crobat", "folder": "golbat"}, {"num": 43, "name": "Oddish", "type": ["Planta", "Veneno"], "evo": "Lv 21 -> Gloom", "folder": "oddish"}, {"num": 44, "name": "Gloom", "type": ["Planta", "Veneno"], "evo": "Pedra Folha (Vileplume) ou Pedra Solar (Bellossom)", "folder": "gloom"}, {"num": 45, "name": "Vileplume", "type": ["Planta", "Veneno"], "evo": "Forma Final", "folder": "vileplume"}, {"num": 46, "name": "Paras", "type": ["Inseto", "Planta"], "evo": "Lv 24 -> Parasect", "folder": "paras"}, {"num": 47, "name": "Parasect", "type": ["Inseto", "Planta"], "evo": "Forma Final", "folder": "parasect"}, {"num": 48, "name": "Venonat", "type": ["Inseto", "Veneno"], "evo": "Lv 31 -> Venomoth", "folder": "venonat"}, {"num": 49, "name": "Venomoth", "type": ["Inseto", "Veneno"], "evo": "Forma Final", "folder": "venomoth"}, {"num": 50, "name": "Diglett", "type": ["Terra"], "evo": "Lv 26 -> Dugtrio", "folder": "diglett"}, {"num": 51, "name": "Dugtrio", "type": ["Terra"], "evo": "Forma Final", "folder": "dugtrio"}, {"num": 52, "name": "Meowth", "type": ["Normal"], "evo": "Lv 28 -> Persian", "folder": "meowth"}, {"num": 53, "name": "Persian", "type": ["Normal"], "evo": "Forma Final", "folder": "persian"}, {"num": 54, "name": "Psyduck", "type": ["Água"], "evo": "Lv 33 -> Golduck", "folder": "psyduck"}, {"num": 55, "name": "Golduck", "type": ["Água"], "evo": "Forma Final", "folder": "golduck"}, {"num": 56, "name": "Mankey", "type": ["Lutador"], "evo": "Lv 28 -> Primeape", "folder": "mankey"}, {"num": 57, "name": "Primeape", "type": ["Lutador"], "evo": "Forma Final", "folder": "primeape"}, {"num": 58, "name": "Growlithe", "type": ["Fogo"], "evo": "Pedra de Fogo -> Arcanine", "folder": "growlithe"}, {"num": 59, "name": "Arcanine", "type": ["Fogo"], "evo": "Forma Final", "folder": "arcanine"}, {"num": 60, "name": "Poliwag", "type": ["Água"], "evo": "Lv 25 -> Poliwhirl", "folder": "poliwag"}, {"num": 61, "name": "Poliwhirl", "type": ["Água"], "evo": "Pedra da Água (Poliwrath) ou King's Rock (Politoed)", "folder": "poliwhirl"}, {"num": 62, "name": "Poliwrath", "type": ["Água", "Lutador"], "evo": "Forma Final", "folder": "poliwrath"}, {"num": 63, "name": "Abra", "type": ["Psíquico"], "evo": "Lv 16 -> Kadabra", "folder": "abra"}, {"num": 64, "name": "Kadabra", "type": ["Psíquico"], "evo": "Lv 37, Pedra do Poder ou Troca -> Alakazam", "folder": "kadabra"}, {"num": 65, "name": "Alakazam", "type": ["Psíquico"], "evo": "Forma Final", "folder": "alakazam"}, {"num": 66, "name": "Machop", "type": ["Lutador"], "evo": "Lv 28 -> Machoke", "folder": "machop"}, {"num": 67, "name": "Machoke", "type": ["Lutador"], "evo": "Lv 37, Pedra do Poder ou Troca -> Machamp", "folder": "machoke"}, {"num": 68, "name": "Machamp", "type": ["Lutador"], "evo": "Forma Final", "folder": "machamp"}, {"num": 69, "name": "Bellsprout", "type": ["Planta", "Veneno"], "evo": "Lv 21 -> Weepinbell", "folder": "bellsprout"}, {"num": 70, "name": "Weepinbell", "type": ["Planta", "Veneno"], "evo": "Pedra Folha -> Victreebel", "folder": "weepinbell"}, {"num": 71, "name": "Victreebel", "type": ["Planta", "Veneno"], "evo": "Forma Final", "folder": "victreebel"}, {"num": 72, "name": "Tentacool", "type": ["Água", "Veneno"], "evo": "Lv 30 -> Tentacruel", "folder": "tentacool"}, {"num": 73, "name": "Tentacruel", "type": ["Água", "Veneno"], "evo": "Forma Final", "folder": "tentacruel"}, {"num": 74, "name": "Geodude", "type": ["Pedra", "Terra"], "evo": "Lv 25 -> Graveler", "folder": "geodude"}, {"num": 75, "name": "Graveler", "type": ["Pedra", "Terra"], "evo": "Lv 37, Pedra do Poder ou Troca -> Golem", "folder": "graveler"}, {"num": 76, "name": "Golem", "type": ["Pedra", "Terra"], "evo": "Forma Final", "folder": "golem"}, {"num": 77, "name": "Ponyta", "type": ["Fogo"], "evo": "Lv 40 -> Rapidash", "folder": "ponyta"}, {"num": 78, "name": "Rapidash", "type": ["Fogo"], "evo": "Forma Final", "folder": "rapidash"}, {"num": 79, "name": "Slowpoke", "type": ["Água", "Psíquico"], "evo": "Lv 37 (Slowbro) ou King's Rock (Slowking)", "folder": "slowpoke"}, {"num": 80, "name": "Slowbro", "type": ["Água", "Psíquico"], "evo": "Forma Final", "folder": "slowbro"}, {"num": 81, "name": "Magnemite", "type": ["Elétrico", "Aço"], "evo": "Lv 30 -> Magneton", "folder": "magnemite"}, {"num": 82, "name": "Magneton", "type": ["Elétrico", "Aço"], "evo": "Forma Final", "folder": "magneton"}, {"num": 83, "name": "Farfetch'd", "type": ["Normal", "Voador"], "evo": "Não evolui", "folder": "farfetchd"}, {"num": 84, "name": "Doduo", "type": ["Normal", "Voador"], "evo": "Lv 31 -> Dodrio", "folder": "doduo"}, {"num": 85, "name": "Dodrio", "type": ["Normal", "Voador"], "evo": "Forma Final", "folder": "dodrio"}, {"num": 86, "name": "Seel", "type": ["Água"], "evo": "Lv 34 -> Dewgong", "folder": "seel"}, {"num": 87, "name": "Dewgong", "type": ["Água", "Gelo"], "evo": "Forma Final", "folder": "dewgong"}, {"num": 88, "name": "Grimer", "type": ["Veneno"], "evo": "Lv 38 -> Muk", "folder": "grimer"}, {"num": 89, "name": "Muk", "type": ["Veneno"], "evo": "Forma Final", "folder": "muk"}, {"num": 90, "name": "Shellder", "type": ["Água"], "evo": "Pedra da Água -> Cloyster", "folder": "shellder"}, {"num": 91, "name": "Cloyster", "type": ["Água", "Gelo"], "evo": "Forma Final", "folder": "cloyster"}, {"num": 92, "name": "Gastly", "type": ["Fantasma", "Veneno"], "evo": "Lv 25 -> Haunter", "folder": "gastly"}, {"num": 93, "name": "Haunter", "type": ["Fantasma", "Veneno"], "evo": "Lv 37, Pedra da Noite ou Troca -> Gengar", "folder": "haunter"}, {"num": 94, "name": "Gengar", "type": ["Fantasma", "Veneno"], "evo": "Forma Final", "folder": "gengar"}, {"num": 95, "name": "Onix", "type": ["Pedra", "Terra"], "evo": "Metal Coat -> Steelix", "folder": "onix"}, {"num": 96, "name": "Drowzee", "type": ["Psíquico"], "evo": "Lv 26 -> Hypno", "folder": "drowzee"}, {"num": 97, "name": "Hypno", "type": ["Psíquico"], "evo": "Forma Final", "folder": "hypno"}, {"num": 98, "name": "Krabby", "type": ["Água"], "evo": "Lv 28 -> Kingler", "folder": "krabby"}, {"num": 99, "name": "Kingler", "type": ["Água"], "evo": "Forma Final", "folder": "kingler"}, {"num": 100, "name": "Voltorb", "type": ["Elétrico"], "evo": "Lv 30 -> Electrode", "folder": "voltorb"}, {"num": 101, "name": "Electrode", "type": ["Elétrico"], "evo": "Forma Final", "folder": "electrode"}, {"num": 102, "name": "Exeggcute", "type": ["Planta", "Psíquico"], "evo": "Pedra Folha -> Exeggutor", "folder": "exeggcute"}, {"num": 103, "name": "Exeggutor", "type": ["Planta", "Psíquico"], "evo": "Forma Final", "folder": "exeggutor"}, {"num": 104, "name": "Cubone", "type": ["Terra"], "evo": "Lv 28 -> Marowak", "folder": "cubone"}, {"num": 105, "name": "Marowak", "type": ["Terra"], "evo": "Forma Final", "folder": "marowak"}, {"num": 106, "name": "Hitmonlee", "type": ["Lutador"], "evo": "Tyrogue (Atk > Def)", "folder": "hitmonlee"}, {"num": 107, "name": "Hitmonchan", "type": ["Lutador"], "evo": "Tyrogue (Def > Atk)", "folder": "hitmonchan"}, {"num": 108, "name": "Lickitung", "type": ["Normal"], "evo": "Aprender Rollout -> Lickilicky", "folder": "lickitung"}, {"num": 109, "name": "Koffing", "type": ["Veneno"], "evo": "Lv 35 -> Weezing", "folder": "koffing"}, {"num": 110, "name": "Weezing", "type": ["Veneno"], "evo": "Forma Final", "folder": "weezing"}, {"num": 111, "name": "Rhyhorn", "type": ["Terra", "Pedra"], "evo": "Lv 42 -> Rhydon", "folder": "rhyhorn"}, {"num": 112, "name": "Rhydon", "type": ["Terra", "Pedra"], "evo": "Protector -> Rhyperior", "folder": "rhydon"}, {"num": 113, "name": "Chansey", "type": ["Normal"], "evo": "Felicidade Máxima -> Blissey", "folder": "chansey"}, {"num": 114, "name": "Tangela", "type": ["Planta"], "evo": "Aprender Ancient Power -> Tangrowth", "folder": "tangela"}, {"num": 115, "name": "Kangaskhan", "type": ["Normal"], "evo": "Não evolui", "folder": "kangaskhan"}, {"num": 116, "name": "Horsea", "type": ["Água"], "evo": "Lv 32 -> Seadra", "folder": "horsea"}, {"num": 117, "name": "Seadra", "type": ["Água"], "evo": "Dragon Scale -> Kingdra", "folder": "seadra"}, {"num": 118, "name": "Goldeen", "type": ["Água"], "evo": "Lv 33 -> Seaking", "folder": "goldeen"}, {"num": 119, "name": "Seaking", "type": ["Água"], "evo": "Forma Final", "folder": "seaking"}, {"num": 120, "name": "Staryu", "type": ["Água"], "evo": "Pedra da Água -> Starmie", "folder": "staryu"}, {"num": 121, "name": "Starmie", "type": ["Água", "Psíquico"], "evo": "Forma Final", "folder": "starmie"}, {"num": 122, "name": "Mr. Mime", "type": ["Psíquico", "Fada"], "evo": "Não evolui", "folder": "mr_mime"}, {"num": 123, "name": "Scyther", "type": ["Inseto", "Voador"], "evo": "Metal Coat -> Scizor", "folder": "scyther"}, {"num": 124, "name": "Jynx", "type": ["Gelo", "Psíquico"], "evo": "Smoochum Lv 30", "folder": "jynx"}, {"num": 125, "name": "Electabuzz", "type": ["Elétrico"], "evo": "Elekid Lv 30 / Electirizer", "folder": "electabuzz"}, {"num": 126, "name": "Magmar", "type": ["Fogo"], "evo": "Magby Lv 30 / Magmarizer", "folder": "magmar"}, {"num": 127, "name": "Pinsir", "type": ["Inseto"], "evo": "Não evolui", "folder": "pinsir"}, {"num": 128, "name": "Tauros", "type": ["Normal"], "evo": "Não evolui", "folder": "tauros"}, {"num": 129, "name": "Magikarp", "type": ["Água"], "evo": "Lv 20 -> Gyarados", "folder": "magikarp"}, {"num": 130, "name": "Gyarados", "type": ["Água", "Voador"], "evo": "Forma Final", "folder": "gyarados"}, {"num": 131, "name": "Lapras", "type": ["Água", "Gelo"], "evo": "Não evolui", "folder": "lapras"}, {"num": 132, "name": "Ditto", "type": ["Normal"], "evo": "Não evolui (Transform)", "folder": "ditto"}, {"num": 133, "name": "Eevee", "type": ["Normal"], "evo": "Água, Trovão, Fogo, Sol, Noite...", "folder": "eevee"}, {"num": 134, "name": "Vaporeon", "type": ["Água"], "evo": "Forma Final", "folder": "vaporeon"}, {"num": 135, "name": "Jolteon", "type": ["Elétrico"], "evo": "Forma Final", "folder": "jolteon"}, {"num": 136, "name": "Flareon", "type": ["Fogo"], "evo": "Forma Final", "folder": "flareon"}, {"num": 137, "name": "Porygon", "type": ["Normal"], "evo": "Up-Grade -> Porygon2", "folder": "porygon"}, {"num": 138, "name": "Omanyte", "type": ["Pedra", "Água"], "evo": "Lv 40 -> Omastar", "folder": "omanyte"}, {"num": 139, "name": "Omastar", "type": ["Pedra", "Água"], "evo": "Forma Final", "folder": "omastar"}, {"num": 140, "name": "Kabuto", "type": ["Pedra", "Água"], "evo": "Lv 40 -> Kabutops", "folder": "kabuto"}, {"num": 141, "name": "Kabutops", "type": ["Pedra", "Água"], "evo": "Forma Final", "folder": "kabutops"}, {"num": 142, "name": "Aerodactyl", "type": ["Pedra", "Voador"], "evo": "Não evolui (Old Amber)", "folder": "aerodactyl"}, {"num": 143, "name": "Snorlax", "type": ["Normal"], "evo": "Acordado com Poké Flute", "folder": "snorlax"}, {"num": 144, "name": "Articuno", "type": ["Gelo", "Voador"], "evo": "Lendário (Seafoam Islands)", "folder": "articuno"}, {"num": 145, "name": "Zapdos", "type": ["Elétrico", "Voador"], "evo": "Lendário (Power Plant)", "folder": "zapdos"}, {"num": 146, "name": "Moltres", "type": ["Fogo", "Voador"], "evo": "Lendário (Mt. Ember / Victory Road)", "folder": "moltres"}, {"num": 147, "name": "Dratini", "type": ["Dragão"], "evo": "Lv 30 -> Dragonair", "folder": "dratini"}, {"num": 148, "name": "Dragonair", "type": ["Dragão"], "evo": "Lv 55 -> Dragonite", "folder": "dragonair"}, {"num": 149, "name": "Dragonite", "type": ["Dragão", "Voador"], "evo": "Forma Final", "folder": "dragonite"}, {"num": 150, "name": "Mewtwo", "type": ["Psíquico"], "evo": "Lendário (Cerulean Cave Lv 70)", "folder": "mewtwo"}, {"num": 151, "name": "Mew", "type": ["Psíquico"], "evo": "Mítico Ancestral", "folder": "mew"}, {"num": 152, "name": "Chikorita", "type": ["Planta"], "evo": "Lv 16 -> Bayleef", "folder": "chikorita"}, {"num": 153, "name": "Bayleef", "type": ["Planta"], "evo": "Lv 32 -> Meganium", "folder": "bayleef"}, {"num": 154, "name": "Meganium", "type": ["Planta"], "evo": "Forma Final", "folder": "meganium"}, {"num": 155, "name": "Cyndaquil", "type": ["Fogo"], "evo": "Lv 14 -> Quilava", "folder": "cyndaquil"}, {"num": 156, "name": "Quilava", "type": ["Fogo"], "evo": "Lv 36 -> Typhlosion", "folder": "quilava"}, {"num": 157, "name": "Typhlosion", "type": ["Fogo"], "evo": "Forma Final", "folder": "typhlosion"}, {"num": 158, "name": "Totodile", "type": ["Água"], "evo": "Lv 18 -> Croconaw", "folder": "totodile"}, {"num": 159, "name": "Croconaw", "type": ["Água"], "evo": "Lv 30 -> Feraligatr", "folder": "croconaw"}, {"num": 160, "name": "Feraligatr", "type": ["Água"], "evo": "Forma Final", "folder": "feraligatr"}, {"num": 161, "name": "Sentret", "type": ["Normal"], "evo": "Lv 15 -> Furret", "folder": "sentret"}, {"num": 162, "name": "Furret", "type": ["Normal"], "evo": "Forma Final", "folder": "furret"}, {"num": 163, "name": "Hoothoot", "type": ["Normal", "Voador"], "evo": "Lv 20 -> Noctowl", "folder": "hoothoot"}, {"num": 164, "name": "Noctowl", "type": ["Normal", "Voador"], "evo": "Forma Final", "folder": "noctowl"}, {"num": 165, "name": "Ledyba", "type": ["Inseto", "Voador"], "evo": "Lv 18 -> Ledian", "folder": "ledyba"}, {"num": 166, "name": "Ledian", "type": ["Inseto", "Voador"], "evo": "Forma Final", "folder": "ledian"}, {"num": 167, "name": "Spinarak", "type": ["Inseto", "Veneno"], "evo": "Lv 22 -> Ariados", "folder": "spinarak"}, {"num": 168, "name": "Ariados", "type": ["Inseto", "Veneno"], "evo": "Forma Final", "folder": "ariados"}, {"num": 169, "name": "Crobat", "type": ["Veneno", "Voador"], "evo": "Forma Final", "folder": "crobat"}, {"num": 170, "name": "Chinchou", "type": ["Água", "Elétrico"], "evo": "Lv 27 -> Lanturn", "folder": "chinchou"}, {"num": 171, "name": "Lanturn", "type": ["Água", "Elétrico"], "evo": "Forma Final", "folder": "lanturn"}, {"num": 172, "name": "Pichu", "type": ["Elétrico"], "evo": "Felicidade -> Pikachu", "folder": "pichu"}, {"num": 173, "name": "Cleffa", "type": ["Fada"], "evo": "Felicidade -> Clefairy", "folder": "cleffa"}, {"num": 174, "name": "Igglybuff", "type": ["Normal", "Fada"], "evo": "Felicidade -> Jigglypuff", "folder": "igglybuff"}, {"num": 175, "name": "Togepi", "type": ["Fada"], "evo": "Felicidade -> Togetic", "folder": "togepi"}, {"num": 176, "name": "Togetic", "type": ["Fada", "Voador"], "evo": "Pedra do Brilho -> Togekiss", "folder": "togetic"}, {"num": 177, "name": "Natu", "type": ["Psíquico", "Voador"], "evo": "Lv 25 -> Xatu", "folder": "natu"}, {"num": 178, "name": "Xatu", "type": ["Psíquico", "Voador"], "evo": "Forma Final", "folder": "xatu"}, {"num": 179, "name": "Mareep", "type": ["Elétrico"], "evo": "Lv 15 -> Flaaffy", "folder": "mareep"}, {"num": 180, "name": "Flaaffy", "type": ["Elétrico"], "evo": "Lv 30 -> Ampharos", "folder": "flaaffy"}, {"num": 181, "name": "Ampharos", "type": ["Elétrico"], "evo": "Forma Final", "folder": "ampharos"}, {"num": 182, "name": "Bellossom", "type": ["Planta"], "evo": "Pedra Solar de Gloom", "folder": "bellossom"}, {"num": 183, "name": "Marill", "type": ["Água", "Fada"], "evo": "Lv 18 -> Azumarill", "folder": "marill"}, {"num": 184, "name": "Azumarill", "type": ["Água", "Fada"], "evo": "Forma Final", "folder": "azumarill"}, {"num": 185, "name": "Sudowoodo", "type": ["Pedra"], "evo": "SquirtBottle na Rota 36", "folder": "sudowoodo"}, {"num": 186, "name": "Politoed", "type": ["Água"], "evo": "King's Rock + Lv up de Poliwhirl", "folder": "politoed"}, {"num": 187, "name": "Hoppip", "type": ["Planta", "Voador"], "evo": "Lv 18 -> Skiploom", "folder": "hoppip"}, {"num": 188, "name": "Skiploom", "type": ["Planta", "Voador"], "evo": "Lv 27 -> Jumpluff", "folder": "skiploom"}, {"num": 189, "name": "Jumpluff", "type": ["Planta", "Voador"], "evo": "Forma Final", "folder": "jumpluff"}, {"num": 190, "name": "Aipom", "type": ["Normal"], "evo": "Double Hit -> Ambipom", "folder": "aipom"}, {"num": 191, "name": "Sunkern", "type": ["Planta"], "evo": "Pedra Solar -> Sunflora", "folder": "sunkern"}, {"num": 192, "name": "Sunflora", "type": ["Planta"], "evo": "Forma Final", "folder": "sunflora"}, {"num": 193, "name": "Yanma", "type": ["Inseto", "Voador"], "evo": "Ancient Power -> Yanmega", "folder": "yanma"}, {"num": 194, "name": "Wooper", "type": ["Água", "Terra"], "evo": "Lv 20 -> Quagsire", "folder": "wooper"}, {"num": 195, "name": "Quagsire", "type": ["Água", "Terra"], "evo": "Forma Final", "folder": "quagsire"}, {"num": 196, "name": "Espeon", "type": ["Psíquico"], "evo": "Eevee + Felicidade (Dia)", "folder": "espeon"}, {"num": 197, "name": "Umbreon", "type": ["Sombrio"], "evo": "Eevee + Felicidade (Noite)", "folder": "umbreon"}, {"num": 198, "name": "Murkrow", "type": ["Sombrio", "Voador"], "evo": "Pedra da Noite -> Honchkrow", "folder": "murkrow"}, {"num": 199, "name": "Slowking", "type": ["Água", "Psíquico"], "evo": "King's Rock + Lv up de Slowpoke", "folder": "slowking"}, {"num": 200, "name": "Misdreavus", "type": ["Fantasma"], "evo": "Pedra da Noite -> Mismagius", "folder": "misdreavus"}, {"num": 201, "name": "Unown", "type": ["Psíquico"], "evo": "Ruínas de Alph", "folder": "unown"}, {"num": 202, "name": "Wobbuffet", "type": ["Psíquico"], "evo": "Wynaut Lv 15", "folder": "wobbuffet"}, {"num": 203, "name": "Girafarig", "type": ["Normal", "Psíquico"], "evo": "Twin Beam -> Farigiraf", "folder": "girafarig"}, {"num": 204, "name": "Pineco", "type": ["Inseto"], "evo": "Lv 31 -> Forretress", "folder": "pineco"}, {"num": 205, "name": "Forretress", "type": ["Inseto", "Aço"], "evo": "Forma Final", "folder": "forretress"}, {"num": 206, "name": "Dunsparce", "type": ["Normal"], "evo": "Dark Cave", "folder": "dunsparce"}, {"num": 207, "name": "Gligar", "type": ["Terra", "Voador"], "evo": "Razor Fang (Noite) -> Gliscor", "folder": "gligar"}, {"num": 208, "name": "Steelix", "type": ["Aço", "Terra"], "evo": "Metal Coat de Onix", "folder": "steelix"}, {"num": 209, "name": "Snubbull", "type": ["Fada"], "evo": "Lv 23 -> Granbull", "folder": "snubbull"}, {"num": 210, "name": "Granbull", "type": ["Fada"], "evo": "Forma Final", "folder": "granbull"}, {"num": 211, "name": "Qwilfish", "type": ["Água", "Veneno"], "evo": "Não evolui", "folder": "qwilfish"}, {"num": 212, "name": "Scizor", "type": ["Inseto", "Aço"], "evo": "Metal Coat de Scyther", "folder": "scizor"}, {"num": 213, "name": "Shuckle", "type": ["Inseto", "Pedra"], "evo": "Não evolui", "folder": "shuckle"}, {"num": 214, "name": "Heracross", "type": ["Inseto", "Lutador"], "evo": "Não evolui (Árvores de Mel)", "folder": "heracross"}, {"num": 215, "name": "Sneasel", "type": ["Sombrio", "Gelo"], "evo": "Razor Claw (Noite) -> Weavile", "folder": "sneasel"}, {"num": 216, "name": "Teddiursa", "type": ["Normal"], "evo": "Lv 30 -> Ursaring", "folder": "teddiursa"}, {"num": 217, "name": "Ursaring", "type": ["Normal"], "evo": "Forma Final", "folder": "ursaring"}, {"num": 218, "name": "Slugma", "type": ["Fogo"], "evo": "Lv 38 -> Magcargo", "folder": "slugma"}, {"num": 219, "name": "Magcargo", "type": ["Fogo", "Pedra"], "evo": "Forma Final", "folder": "magcargo"}, {"num": 220, "name": "Swinub", "type": ["Gelo", "Terra"], "evo": "Lv 33 -> Piloswine", "folder": "swinub"}, {"num": 221, "name": "Piloswine", "type": ["Gelo", "Terra"], "evo": "Ancient Power -> Mamoswine", "folder": "piloswine"}, {"num": 222, "name": "Corsola", "type": ["Água", "Pedra"], "evo": "Não evolui", "folder": "corsola"}, {"num": 223, "name": "Remoraid", "type": ["Água"], "evo": "Lv 25 -> Octillery", "folder": "remoraid"}, {"num": 224, "name": "Octillery", "type": ["Água"], "evo": "Forma Final", "folder": "octillery"}, {"num": 225, "name": "Delibird", "type": ["Gelo", "Voador"], "evo": "Ice Path", "folder": "delibird"}, {"num": 226, "name": "Mantine", "type": ["Água", "Voador"], "evo": "Mantyke + Remoraid", "folder": "mantine"}, {"num": 227, "name": "Skarmory", "type": ["Aço", "Voador"], "evo": "Não evolui", "folder": "skarmory"}, {"num": 228, "name": "Houndour", "type": ["Sombrio", "Fogo"], "evo": "Lv 24 -> Houndoom", "folder": "houndour"}, {"num": 229, "name": "Houndoom", "type": ["Sombrio", "Fogo"], "evo": "Forma Final", "folder": "houndoom"}, {"num": 230, "name": "Kingdra", "type": ["Água", "Dragão"], "evo": "Dragon Scale de Seadra", "folder": "kingdra"}, {"num": 231, "name": "Phanpy", "type": ["Terra"], "evo": "Lv 25 -> Donphan", "folder": "phanpy"}, {"num": 232, "name": "Donphan", "type": ["Terra"], "evo": "Forma Final", "folder": "donphan"}, {"num": 233, "name": "Porygon2", "type": ["Normal"], "evo": "Dubious Disc -> Porygon-Z", "folder": "porygon2"}, {"num": 234, "name": "Stantler", "type": ["Normal"], "evo": "Shield Bash -> Wyrdeer", "folder": "stantler"}, {"num": 235, "name": "Smeargle", "type": ["Normal"], "evo": "Ruínas de Alph", "folder": "smeargle"}, {"num": 236, "name": "Tyrogue", "type": ["Lutador"], "evo": "Lv 20 -> Hitmonlee / Chan / Top", "folder": "tyrogue"}, {"num": 237, "name": "Hitmontop", "type": ["Lutador"], "evo": "Tyrogue (Atk == Def)", "folder": "hitmontop"}, {"num": 238, "name": "Smoochum", "type": ["Gelo", "Psíquico"], "evo": "Lv 30 -> Jynx", "folder": "smoochum"}, {"num": 239, "name": "Elekid", "type": ["Elétrico"], "evo": "Lv 30 -> Electabuzz", "folder": "elekid"}, {"num": 240, "name": "Magby", "type": ["Fogo"], "evo": "Lv 30 -> Magmar", "folder": "magby"}, {"num": 241, "name": "Miltank", "type": ["Normal"], "evo": "Não evolui (Whitney Boss)", "folder": "miltank"}, {"num": 242, "name": "Blissey", "type": ["Normal"], "evo": "Chansey + Felicidade Máxima", "folder": "blissey"}, {"num": 243, "name": "Raikou", "type": ["Elétrico"], "evo": "Cão Lendário (Burned Tower)", "folder": "raikou"}, {"num": 244, "name": "Entei", "type": ["Fogo"], "evo": "Cão Lendário (Burned Tower)", "folder": "entei"}, {"num": 245, "name": "Suicune", "type": ["Água"], "evo": "Cão Lendário (Burned Tower)", "folder": "suicune"}, {"num": 246, "name": "Larvitar", "type": ["Pedra", "Terra"], "evo": "Lv 30 -> Pupitar", "folder": "larvitar"}, {"num": 247, "name": "Pupitar", "type": ["Pedra", "Terra"], "evo": "Lv 55 -> Tyranitar", "folder": "pupitar"}, {"num": 248, "name": "Tyranitar", "type": ["Pedra", "Sombrio"], "evo": "Forma Final", "folder": "tyranitar"}, {"num": 249, "name": "Lugia", "type": ["Psíquico", "Voador"], "evo": "Lendário Guardião (Navel Rock Lv 70)", "folder": "lugia"}, {"num": 250, "name": "Ho-Oh", "type": ["Fogo", "Voador"], "evo": "Lendário Sagrado (Navel Rock Lv 70)", "folder": "ho_oh"}, {"num": 251, "name": "Celebi", "type": ["Psíquico", "Planta"], "evo": "Mítico Viajante do Tempo (Ilex Forest)", "folder": "celebi"}];
         const gymBossesData = [{"id": "brock", "region": "kanto", "name": "Brock", "title": "O Treinador de Pedra Inabalável", "city": "Pewter City", "badge": "Insígnia Rocha", "badge_icon": "🪨", "type": "Pedra / Terra", "pic": "graphics/trainers/front_pics/leader_brock_front_pic.png", "team": [{"num": 74, "name": "Geodude", "lvl": 12}, {"num": 95, "name": "Onix", "lvl": 14}], "strategy": "Vulnerável a Água, Planta e Lutador. Bulbasaur (Vine Whip) e Squirtle (Bubble) vencem em um único golpe. Com Charmander, use Metal Claw ou capture Mankey (Low Kick) na Rota 22."}, {"id": "misty", "region": "kanto", "name": "Misty", "title": "A Garota Moleca Sereia", "city": "Cerulean City", "badge": "Insígnia Cascata", "badge_icon": "💧", "type": "Água", "pic": "graphics/trainers/front_pics/leader_misty_front_pic.png", "team": [{"num": 120, "name": "Staryu", "lvl": 18}, {"num": 121, "name": "Starmie", "lvl": 21}], "strategy": "Starmie tem alta velocidade e usa Water Pulse com chance de confusão. Use Pikachu da Floresta de Viridian ou Bellsprout/Oddish da Rota 24. Golpes elétricos e de planta são essenciais."}, {"id": "surge", "region": "kanto", "name": "Lt. Surge", "title": "O Relâmpago Americano", "city": "Vermilion City", "badge": "Insígnia Trovão", "badge_icon": "⚡", "type": "Elétrico", "pic": "graphics/trainers/front_pics/leader_lt_surge_front_pic.png", "team": [{"num": 100, "name": "Voltorb", "lvl": 21}, {"num": 25, "name": "Pikachu", "lvl": 18}, {"num": 26, "name": "Raichu", "lvl": 24}], "strategy": "Capture um Diglett ou Dugtrio na Diglett's Cave ao lado de Vermilion. O tipo Terra é 100% imune aos choques de Raichu e o golpe Magnitude/Dig nocauteia sua equipe rapidamente."}, {"id": "erika", "region": "kanto", "name": "Erika", "title": "A Princesa Apaixonada pela Natureza", "city": "Celadon City", "badge": "Insígnia Arco-Íris", "badge_icon": "🌸", "type": "Planta / Veneno", "pic": "graphics/trainers/front_pics/leader_erika_front_pic.png", "team": [{"num": 71, "name": "Victreebel", "lvl": 29}, {"num": 114, "name": "Tangela", "lvl": 24}, {"num": 45, "name": "Vileplume", "lvl": 29}], "strategy": "Sua equipe usa pós de sono e paralisia. Traga Awakening/Cheri Berries. Use ataques de Fogo (Charizard, Flareon, Vulpix/Growlithe), Voador (Pidgeot) ou Psíquico (Kadabra/Alakazam)."}, {"id": "koga", "region": "kanto", "name": "Koga", "title": "O Mestre Ninja Tóxico", "city": "Fuchsia City", "badge": "Insígnia Alma", "badge_icon": "☠️", "type": "Veneno", "pic": "graphics/trainers/front_pics/leader_koga_front_pic.png", "team": [{"num": 109, "name": "Koffing", "lvl": 37}, {"num": 89, "name": "Muk", "lvl": 39}, {"num": 109, "name": "Koffing", "lvl": 37}, {"num": 110, "name": "Weezing", "lvl": 43}], "strategy": "Cuidado com paredes invisíveis no ginásio. Muk usa Minimize e Toxic; Koffing/Weezing têm habilidade Levitate (imunes a Terremoto!). Golpes Psíquicos de Alakazam ou Kadabra liquidam sua equipe sem risco."}, {"id": "sabrina", "region": "kanto", "name": "Sabrina", "title": "A Senhora dos Poderes Psíquicos", "city": "Saffron City", "badge": "Insígnia Pântano", "badge_icon": "🔮", "type": "Psíquico", "pic": "graphics/trainers/front_pics/leader_sabrina_front_pic.png", "team": [{"num": 64, "name": "Kadabra", "lvl": 38}, {"num": 122, "name": "Mr. Mime", "lvl": 37}, {"num": 49, "name": "Venomoth", "lvl": 38}, {"num": 65, "name": "Alakazam", "lvl": 43}], "strategy": "Alakazam tem velocidade avassaladora e alto Ataque Especial, mas Defesa Física de papel. Use golpes físicos potentes, ataques do tipo Sombrio (Bite/Crunch de Gyarados/Arcanine) ou Fantasma (Shadow Ball)."}, {"id": "blaine", "region": "kanto", "name": "Blaine", "title": "O Mestre das Charadas Incandescentes", "city": "Cinnabar Island", "badge": "Insígnia Vulcão", "badge_icon": "🔥", "type": "Fogo", "pic": "graphics/trainers/front_pics/leader_blaine_front_pic.png", "team": [{"num": 58, "name": "Growlithe", "lvl": 42}, {"num": 77, "name": "Ponyta", "lvl": 40}, {"num": 78, "name": "Rapidash", "lvl": 42}, {"num": 59, "name": "Arcanine", "lvl": 47}], "strategy": "Pegue a Chave Secreta na Mansão Pokémon antes de entrar. Blaine depende de golpes de Fogo poderosos como Fire Blast. Use Pokémon de Água (Surfe de Blastoise, Lapras, Vaporeon) ou Terra/Pedra."}, {"id": "giovanni", "region": "kanto", "name": "Giovanni", "title": "O Líder da Equipe Rocket", "city": "Viridian City", "badge": "Insígnia Terra", "badge_icon": "🌍", "type": "Terra", "pic": "graphics/trainers/front_pics/leader_giovanni_front_pic.png", "team": [{"num": 111, "name": "Rhyhorn", "lvl": 45}, {"num": 51, "name": "Dugtrio", "lvl": 42}, {"num": 31, "name": "Nidoqueen", "lvl": 44}, {"num": 34, "name": "Nidoking", "lvl": 45}, {"num": 112, "name": "Rhydon", "lvl": 50}], "strategy": "O chefe final dos 8 ginásios de Kanto! Seus tipos Terra/Pedra sofrem fraqueza quádrupla para Água e Planta. Golpes como Surfe e Raio Solar / Giga Drain limpam sua equipe com facilidade."}, {"id": "lorelei", "region": "elite", "name": "Lorelei", "title": "Elite Four #1 — A Rainha do Gelo", "city": "Indigo Plateau", "badge": "Elite dos Quatro", "badge_icon": "🧊", "type": "Gelo / Água", "pic": "graphics/trainers/front_pics/elite_four_lorelei_front_pic.png", "team": [{"num": 87, "name": "Dewgong", "lvl": 54}, {"num": 91, "name": "Cloyster", "lvl": 53}, {"num": 80, "name": "Slowbro", "lvl": 54}, {"num": 124, "name": "Jynx", "lvl": 56}, {"num": 131, "name": "Lapras", "lvl": 56}], "strategy": "Quase todos seus monstros combinam Gelo com Água. Use Pokémon Elétricos para Dewgong, Cloyster e Lapras, e golpes de Fogo/Sombrio contra Jynx. Cuidado com o Blizzard de Lapras!"}, {"id": "bruno", "region": "elite", "name": "Bruno", "title": "Elite Four #2 — O Guerreiro dos Punhos de Ferro", "city": "Indigo Plateau", "badge": "Elite dos Quatro", "badge_icon": "🥋", "type": "Lutador / Pedra", "pic": "graphics/trainers/front_pics/elite_four_bruno_front_pic.png", "team": [{"num": 95, "name": "Onix", "lvl": 53}, {"num": 107, "name": "Hitmonchan", "lvl": 55}, {"num": 106, "name": "Hitmonlee", "lvl": 55}, {"num": 95, "name": "Onix", "lvl": 56}, {"num": 68, "name": "Machamp", "lvl": 58}], "strategy": "Derrote os dois Onix com qualquer golpe de Água ou Planta (4x de dano). Para Hitmonlee, Hitmonchan e Machamp, golpes Psíquicos (Psychic) ou Voadores (Wing Attack/Fly) neutralizam seus contra-ataques."}, {"id": "agatha", "region": "elite", "name": "Agatha", "title": "Elite Four #3 — A Sacerdotisa dos Espíritos", "city": "Indigo Plateau", "badge": "Elite dos Quatro", "badge_icon": "👻", "type": "Fantasma / Veneno", "pic": "graphics/trainers/front_pics/elite_four_agatha_front_pic.png", "team": [{"num": 94, "name": "Gengar", "lvl": 56}, {"num": 42, "name": "Golbat", "lvl": 56}, {"num": 93, "name": "Haunter", "lvl": 55}, {"num": 24, "name": "Arbok", "lvl": 58}, {"num": 94, "name": "Gengar", "lvl": 60}], "strategy": "Todos os seus Pokémon possuem o tipo Veneno secundário! Um bom monstro Psíquico como Alakazam derruba quase toda a sua equipe. Cuidado com Confuse Ray e Hypnosis."}, {"id": "lance", "region": "elite", "name": "Lance", "title": "Elite Four #4 — O Domador dos Dragões", "city": "Indigo Plateau", "badge": "Líder da Elite Four", "badge_icon": "🐲", "type": "Dragão / Voador", "pic": "graphics/trainers/front_pics/elite_four_lance_front_pic.png", "team": [{"num": 130, "name": "Gyarados", "lvl": 58}, {"num": 148, "name": "Dragonair", "lvl": 56}, {"num": 148, "name": "Dragonair", "lvl": 56}, {"num": 142, "name": "Aerodactyl", "lvl": 60}, {"num": 149, "name": "Dragonite", "lvl": 62}], "strategy": "Gyarados cai com 1 golpe Elétrico (4x dano). Aerodactyl é fraco contra Água, Elétrico e Gelo. Contra Dragonite e os Dragonairs, golpes de Gelo (Ice Beam / Blizzard) causam dano quadruplicado devastador!"}, {"id": "blue", "region": "elite", "name": "Blue (Rival)", "title": "O Novo Campeão de Kanto", "city": "Indigo Plateau", "badge": "Campeão da Liga", "badge_icon": "👑", "type": "Equipe Balanceada", "pic": "graphics/trainers/front_pics/champion_rival_front_pic.png", "team": [{"num": 18, "name": "Pidgeot", "lvl": 61}, {"num": 65, "name": "Alakazam", "lvl": 59}, {"num": 112, "name": "Rhydon", "lvl": 61}, {"num": 103, "name": "Exeggutor", "lvl": 61}, {"num": 130, "name": "Gyarados", "lvl": 63}, {"num": 6, "name": "Charizard", "lvl": 65}], "strategy": "Equipe altamente equilibrada e veloz. Alterne seus Pokémon para explorar cada fraqueza: Elétrico para Pidgeot e Gyarados; Água/Gelo para Rhydon; Fogo/Gelo para Exeggutor; Sombrio para Alakazam."}, {"id": "falkner", "region": "johto", "name": "Falkner", "title": "O Mestre dos Céus de Johto", "city": "Violet City", "badge": "Insígnia Asas", "badge_icon": "🪶", "type": "Voador", "pic": "graphics/trainers/johto/falkner.png", "team": [{"num": 18, "name": "Pidgeot", "lvl": 58}, {"num": 164, "name": "Noctowl", "lvl": 60}], "strategy": "Nível 58+. O primeiro ginásio de Johto já exige uma equipe pós-Liga! Pidgeot e Noctowl caem facilmente com ataques Elétricos (Thunderbolt), de Gelo (Ice Beam) ou Pedra."}, {"id": "bugsy", "region": "johto", "name": "Bugsy", "title": "A Enciclopédia Ambulante de Insetos", "city": "Azalea Town", "badge": "Insígnia Colmeia", "badge_icon": "🪲", "type": "Inseto", "pic": "graphics/trainers/johto/bugsy.png", "team": [{"num": 212, "name": "Scizor", "lvl": 62}, {"num": 214, "name": "Heracross", "lvl": 63}], "strategy": "Scizor possui o tipo Inseto/Aço: imune a quase tudo, exceto FOGO (que causa 4x de dano letal!). Heracross sofre 4x para golpes Voadores e também é fraco a Fogo e Psíquico."}, {"id": "whitney", "region": "johto", "name": "Whitney", "title": "A Doce e Temível Menina Prodígio", "city": "Goldenrod City", "badge": "Insígnia Planície", "badge_icon": "⭐", "type": "Normal / Fada", "pic": "graphics/trainers/johto/whitney.png", "team": [{"num": 36, "name": "Clefable", "lvl": 65}, {"num": 241, "name": "Miltank", "lvl": 67}], "strategy": "O terror dos jogadores! Miltank usa Rollout e Milk Drink em nível 67+. Use um monstro de Pedra resistente (Rhydon, Golem, Tyranitar) ou um tipo Lutador forte (Machamp, Heracross) para nocauteá-la antes do Rollout acumular."}, {"id": "morty", "region": "johto", "name": "Morty", "title": "O Místico Iluminado de Ecruteak", "city": "Ecruteak City", "badge": "Insígnia Névoa", "badge_icon": "👻", "type": "Fantasma", "pic": "graphics/trainers/johto/morty.png", "team": [{"num": 93, "name": "Haunter", "lvl": 70}, {"num": 94, "name": "Gengar", "lvl": 72}], "strategy": "Gengar possui Shadow Ball e Spite em altíssimo nível. Ataques do tipo Sombrio (Houndoom, Umbreon, Tyranitar) ou Psíquico (Alakazam, Espeon) vencem a partida sem dificuldade."}, {"id": "chuck", "region": "johto", "name": "Chuck", "title": "O Rugido Furioso dos Mares", "city": "Cianwood City", "badge": "Insígnia Tempestade", "badge_icon": "🥊", "type": "Lutador", "pic": "graphics/trainers/johto/chuck.png", "team": [{"num": 57, "name": "Primeape", "lvl": 72}, {"num": 62, "name": "Poliwrath", "lvl": 74}], "strategy": "Primeape bate forte e Poliwrath usa golpes aquáticos e de submissão. Voadores (Pidgeot, Lugia, Crobat) ou Psíquicos (Alakazam) são imbatíveis contra sua formação."}, {"id": "jasmine", "region": "johto", "name": "Jasmine", "title": "A Garota com a Vontade de Aço", "city": "Olivine City", "badge": "Insígnia Mineral", "badge_icon": "⚙️", "type": "Aço", "pic": "graphics/trainers/johto/jasmine.png", "team": [{"num": 81, "name": "Magnemite", "lvl": 75}, {"num": 208, "name": "Steelix", "lvl": 77}], "strategy": "Após curar o Ampharos no Farol de Olivine, enfrente Jasmine. Steelix possui defesa física monumental. Golpes Especiais de Fogo (Flamethrower) ou Terremoto derretem seu corpo de aço."}, {"id": "pryce", "region": "johto", "name": "Pryce", "title": "O Mestre do Inverno Eterno", "city": "Mahogany Town", "badge": "Insígnia Glaciar", "badge_icon": "❄️", "type": "Gelo", "pic": "graphics/trainers/johto/pryce.png", "team": [{"num": 87, "name": "Dewgong", "lvl": 78}, {"num": 221, "name": "Piloswine", "lvl": 80}], "strategy": "Piloswine (Gelo/Terra) sofre dano severo de Água, Planta, Fogo e Lutador. Dewgong é vulnerável a Elétrico e Planta. Traga monstro com boa velocidade para não levar Blizzard."}, {"id": "clair", "region": "johto", "name": "Clair", "title": "A Donzela Bendita dos Dragões", "city": "Blackthorn City", "badge": "Insígnia Ascensão", "badge_icon": "🐉", "type": "Dragão", "pic": "graphics/trainers/johto/clair.png", "team": [{"num": 148, "name": "Dragonair", "lvl": 82}, {"num": 230, "name": "Kingdra", "lvl": 85}], "strategy": "O ginásio mais difícil de Johto! Kingdra é Água/Dragão: imune a fraquezas comuns de água e dragão, sofrendo dano dobrado APENAS para golpes de Dragão e Fada! Use Togekiss, Clefable ou Dragonite veloz com Outrage."}, {"id": "red", "region": "red", "name": "Red (Campeão Lendário)", "title": "O Maior Treinador de Todos os Tempos", "city": "Cume do Monte Silver", "badge": "O Mestre Supremo", "badge_icon": "🏆", "type": "Equipe Lendária Nível 95-100", "pic": "graphics/trainers/front_pics/red_front_pic.png", "team": [{"num": 25, "name": "Pikachu", "lvl": 100}, {"num": 6, "name": "Charizard", "lvl": 98}, {"num": 9, "name": "Blastoise", "lvl": 98}, {"num": 3, "name": "Venusaur", "lvl": 98}, {"num": 143, "name": "Snorlax", "lvl": 97}, {"num": 131, "name": "Lapras", "lvl": 96}], "strategy": "A batalha definitiva! O clima de Nevasca/Granizo causará dano a cada turno. Pikachu carrega Light Ball (dobro de ataque) e deve ser derrubado com Terremoto antes de agir. Snorlax usa Rest/Body Slam e exige ataques potentes do tipo Lutador. Tenha uma equipe balanceada com nível 95+!"}];
 
-        // Troca de Telas
+        // Controle da Sidebar e Drawer
+        function toggleSidebar() {
+            const sb = document.getElementById('sidebar');
+            const bd = document.getElementById('sidebar-backdrop');
+            sb.classList.toggle('open');
+            bd.classList.toggle('open');
+        }
+
+        function closeSidebar() {
+            const sb = document.getElementById('sidebar');
+            const bd = document.getElementById('sidebar-backdrop');
+            if (sb) sb.classList.remove('open');
+            if (bd) bd.classList.remove('open');
+        }
+
+        function focusMobileSearch() {
+            toggleSidebar();
+            setTimeout(() => {
+                document.getElementById('globalSearch')?.focus();
+            }, 300);
+        }
+
+        // Troca de Telas Responsiva
         function switchPane(paneId) {
             document.querySelectorAll('.section-pane').forEach(p => p.classList.remove('active'));
             document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+            document.querySelectorAll('.bottom-nav-item').forEach(n => n.classList.remove('active'));
 
             const target = document.getElementById(paneId);
             if (target) {
@@ -1297,13 +1704,38 @@
             }
 
             // Destacar botão da sidebar
-            const navItems = document.querySelectorAll('.nav-item');
-            navItems.forEach(item => {
+            document.querySelectorAll('.nav-item').forEach(item => {
                 if (item.getAttribute('onclick') && item.getAttribute('onclick').includes(paneId)) {
                     item.classList.add('active');
                 }
             });
+
+            // Destacar botão da bottom bar móvel
+            document.querySelectorAll('.bottom-nav-item').forEach(item => {
+                if (item.getAttribute('onclick') && item.getAttribute('onclick').includes(paneId)) {
+                    item.classList.add('active');
+                }
+            });
+
+            // Fechar sidebar no mobile se estiver aberta
+            closeSidebar();
         }
+
+        // Botão Voltar ao Topo
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        window.addEventListener('scroll', () => {
+            const btn = document.getElementById('backToTopBtn');
+            if (btn) {
+                if (window.scrollY > 300) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            }
+        });
 
         // Renderizar Pokédex com Imagens e Efeitos
         let currentTypeFilter = 'TODOS';
