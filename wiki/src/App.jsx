@@ -38,8 +38,18 @@ export default function App() {
   }, []);
 
   // Hash router helper to allow direct links: #detonado, #kanto, #johto, #pokedex, #gyms, etc.
+  // Also supports clean pathnames (e.g. /detonado, /pokedex) when hosted on Vercel
   const resolveHash = (hashStr) => {
-    const raw = (hashStr || window.location.hash || '').replace(/^#\/?/, '').toLowerCase().trim();
+    let raw = (hashStr || window.location.hash || '').replace(/^#\/?/, '').toLowerCase().trim();
+    if (!raw) {
+      const pathname = window.location.pathname
+        .replace(/^\/kanto-johto\/?/, '')
+        .replace(/^\//, '')
+        .replace(/\/$/, '')
+        .toLowerCase()
+        .trim();
+      raw = pathname;
+    }
     if (!raw) return { tab: 'home' };
 
     if (raw === 'detonado' || raw === 'detonado-kanto' || raw === 'kanto' || raw === 'walkthrough') {
