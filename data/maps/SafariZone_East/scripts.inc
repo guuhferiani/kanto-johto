@@ -46,15 +46,7 @@ SafariZone_East_EventScript_ItemTM11::
 	end
 
 SafariZone_East_EventScript_Kangaskhanite::
-	finditem ITEM_KANGASKHANITE, 1
+	finditem ITEM_SILK_SCARF, 1
 	setflag FLAG_GOT_KANGASKHANITE
-	goto_if_unset FLAG_FIRST_MEGASTONE, SafariZone_East_EventScript_FoundMegaStone
-    end
-
-SafariZone_East_EventScript_FoundMegaStone::
-    lockall
-    pokenavcall MatchCall_Text_Bill7
-    waitmessage
-    setflag FLAG_FIRST_MEGASTONE
-    releaseall
-    end
+	release
+	end

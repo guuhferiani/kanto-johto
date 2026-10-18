@@ -39,17 +39,9 @@ Route2_FindItem_ParlyzHeal::
 	end
 
 Route2_FindItem_Pidgeotite::
-	finditem ITEM_PIDGEOTITE, 1
+	finditem ITEM_SHARP_BEAK, 1
 	setflag FLAG_GOT_PIDGEOTITE
-	goto_if_unset FLAG_FIRST_MEGASTONE, Route2_EventScript_FoundMegaStone
-	end
-
-Route2_EventScript_FoundMegaStone::
-	lockall
-	pokenavcall MatchCall_Text_Bill7
-	waitmessage
-	setflag FLAG_FIRST_MEGASTONE
-	releaseall
+	release
 	end
 
 Route2_RocketFugitiveM::

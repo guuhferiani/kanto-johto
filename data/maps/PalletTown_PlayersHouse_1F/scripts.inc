@@ -142,7 +142,7 @@ PlayersHouse_1F_EventScript_Bill::
 	msgbox PlayersHouse_1F_Text_SomethingAmazing, MSGBOX_NPC
 	playfanfare MUS_RG_OBTAIN_KEY_ITEM
 	msgbox PlayersHouse_1F_Text_GetMegaRing, MSGBOX_DEFAULT
-	additem ITEM_MEGA_RING, 1
+	additem ITEM_LUCKY_EGG, 1
 	setflag FLAG_GOT_MEGA_RING
 	msgbox PlayersHouse_1F_Text_FindMegaStones, MSGBOX_NPC
 	setvar VAR_SECRET_BATTLE_CLEAR, 3
@@ -156,30 +156,22 @@ PlayersHouse_1F_EventScriptChallengeUnlocked::
 
 PlayersHouse_1F_Text_SomethingAmazing::
 	.string "Ei, {PLAYER}!\n"
-	.string "Eu descobri algo impressionante!\p"
-	.string "Eu estava pesquisando para a minha\n"
-	.string "coleção de Pokémon, quando um dos meus\l"
-	.string "aparelhos captou uma leitura estranha.\p"
-	.string "Parece que certos Pokémon têm um\n"
-	.string "potencial oculto que nunca vimos antes.\p"
-	.string "E este sinal parece ser a chave!\p"
-	.string "Encontrei a origem do sinal perto do\n"
-	.string "Chalé do Mar.\p"
-	.string "Era uma pedra rara que nunca vi antes!\p"
-	.string "Trouxe para o laboratório e construí\n"
-	.string "um dispositivo para extrair seu poder!\p"
-	.string "Quero que você fique com ele!$"
+	.string "Parabéns por se tornar o Campeão!\p"
+	.string "Eu soube da sua grande vitória na\n"
+	.string "Liga Pokémon e vim te parabenizar.\p"
+	.string "Como pesquisador de Pokémon, preparei\n"
+	.string "um presente especial para sua jornada!$"
 
 PlayersHouse_1F_Text_GetMegaRing::
-	.string "Bill entregou o Mega Anel!$"
+	.string "Bill entregou um Ovo da Sorte!$"
 
 PlayersHouse_1F_Text_FindMegaStones::
-	.string "De acordo com minhas leituras, há mais\n"
-	.string "dessas pedras escondidas por Kanto.\p"
-	.string "Agora que você tem o Mega Anel,\n"
-	.string "você será capaz de vê-las!\p"
-	.string "Precisamos encontrar uma Mega Pedra\n"
-	.string "para testar minha teoria!$"
+	.string "Com sua vitória, vários treinadores\n"
+	.string "fortes de outras regiões vieram para\l"
+	.string "Kanto em busca de desafios!\p"
+	.string "Eles estão espalhados pelas rotas\n"
+	.string "esperando para batalhar com você!\p"
+	.string "Boa sorte nos novos desafios!$"
 
 PlayersHouse_1F_EventScript_Bill2::
 	msgbox PlayersHouse_1F_Text_MegaStones, MSGBOX_NPC
@@ -187,8 +179,9 @@ PlayersHouse_1F_EventScript_Bill2::
 	end
 
 PlayersHouse_1F_Text_MegaStones::
-	.string "Bill: Precisamos encontrar uma\n"
-	.string "Mega Pedra para testar minha teoria!$"
+	.string "Bill: Há muitos treinadores fortes\n"
+	.string "espalhados pelas rotas de Kanto!\l"
+	.string "Mostre a eles o poder do Campeão!$"
 
 PlayersHouse_1F_Text_Visitor::
 	.string "Mãe: Onde você vai, {PLAYER}?\p"

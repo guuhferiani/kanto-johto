@@ -756,15 +756,7 @@ CeruleanCity_Text_DexNavCall::
 	.string "eu te mostro!$"
 
 CeruleanCity_EventScript_Venusaurite::
-	finditem ITEM_VENUSAURITE, 1
+	finditem ITEM_MIRACLE_SEED, 1
 	setflag FLAG_GOT_VENUSAURITE
-	goto_if_unset FLAG_FIRST_MEGASTONE, CeruleanCity_EventScript_FoundMegaStone
-    end
-
-CeruleanCity_EventScript_FoundMegaStone::
-    lockall
-    pokenavcall MatchCall_Text_Bill7
-    waitmessage
-    setflag FLAG_FIRST_MEGASTONE
-    releaseall
-    end
+	release
+	end

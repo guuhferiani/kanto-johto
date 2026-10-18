@@ -98,8 +98,6 @@ Movement_ReturnToPlayer::
 Route25_SeaCottage_EventScript_Bill::
 	lock
 	faceplayer
-	goto_if_set FLAG_EXHAUSTED_BILL, Route25_SeaCottage_EventScript_CollectionOrMega
-	goto_if_set FLAG_FIRST_MEGASTONE, Route25_SeaCottage_EventScript_MegaStoneAcquired
 	goto_if_set FLAG_SYS_DETECTOR_MODE, Route25_SeaCottage_EventScript_BillGoLookAtPC
 	goto_if_set FLAG_SYS_DEXNAV_GET, Route25_SeaCottage_EventScript_CheckDexNavEvent
 	goto_if_set FLAG_GOT_SS_TICKET, Route25_SeaCottage_EventScript_GetDexNavOrSmallTalk

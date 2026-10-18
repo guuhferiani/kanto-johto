@@ -90,18 +90,10 @@ Route20_Text_DarrinPostBattle::
     .string "Surfar num Pokemon parece bem legal!$"
 
 Route20_EventScript_Slowbronite::
-	finditem ITEM_SLOWBRONITE, 1
+	finditem ITEM_WATER_STONE, 1
 	setflag FLAG_GOT_SLOWBRONITE
-	goto_if_unset FLAG_FIRST_MEGASTONE, Route20_EventScript_FoundMegaStone
-    end
-
-Route20_EventScript_FoundMegaStone::
-    lockall
-    pokenavcall MatchCall_Text_Bill7
-    waitmessage
-    setflag FLAG_FIRST_MEGASTONE
-    releaseall
-    end
+	release
+	end
 
 Route20_EventScript_Tiffany::
 	trainerbattle_single TRAINER_SWIMMER_FEMALE_TIFFANY, Route20_Text_TiffanyIntro, Route20_Text_TiffanyDefeat

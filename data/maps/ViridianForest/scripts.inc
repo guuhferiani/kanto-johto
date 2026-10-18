@@ -211,17 +211,9 @@ ViridianForest_EventScript_ItemPokeBall::
 	end
 
 ViridianForest_EventScript_Beedrillite::
-    finditem ITEM_BEEDRILLITE, 1
+    finditem ITEM_POISON_BARB, 1
     setflag FLAG_GOT_BEEDRILLITE
-    goto_if_unset FLAG_FIRST_MEGASTONE, ViridianForest_EventScript_FoundMegaStone
-    end
-
-ViridianForest_EventScript_FoundMegaStone::
-    lockall
-    pokenavcall MatchCall_Text_Bill7
-    waitmessage
-    setflag FLAG_FIRST_MEGASTONE
-    releaseall
+    release
     end
 
 ViridianForest_EventScript_Venusaur::

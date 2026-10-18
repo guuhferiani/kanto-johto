@@ -621,15 +621,7 @@ VermilionCity_Text_SquirtleGlasses::
 	.string "Aquele Squirtle está usando óculos escuros?$"
 	
 VermilionCity_EventScript_Blastoisinite::
-	finditem ITEM_BLASTOISINITE, 1
+	finditem ITEM_MYSTIC_WATER, 1
 	setflag FLAG_GOT_BLASTOISINITE
-	goto_if_unset FLAG_FIRST_MEGASTONE, VermilionCity_EventScript_FoundMegaStone
-    end
-
-VermilionCity_EventScript_FoundMegaStone::
-    lockall
-    pokenavcall MatchCall_Text_Bill7
-    waitmessage
-    setflag FLAG_FIRST_MEGASTONE
-    releaseall
-    end
+	release
+	end

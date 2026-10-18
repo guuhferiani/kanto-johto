@@ -15,18 +15,10 @@ PokemonTower_6F_EventScript_ItemRareCandy::
 	end
 
 PokemonTower_6F_EventScript_Gengarite::
-	finditem ITEM_GENGARITE, 1
+	finditem ITEM_SPELL_TAG, 1
 	setflag FLAG_GOT_GENGARITE
-	goto_if_unset FLAG_FIRST_MEGASTONE, PokemonTower_6F_EventScript_FoundMegaStone
-    end
-
-PokemonTower_6F_EventScript_FoundMegaStone::
-    lockall
-    pokenavcall MatchCall_Text_Bill7
-    waitmessage
-    setflag FLAG_FIRST_MEGASTONE
-    releaseall
-    end
+	release
+	end
 
 PokemonTower_6F_EventScript_Angelica::
 	trainerbattle_single TRAINER_CHANNELER_ANGELICA, PokemonTower_6F_Text_AngelicaIntro, PokemonTower_6F_Text_AngelicaDefeat

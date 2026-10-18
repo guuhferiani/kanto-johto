@@ -22,30 +22,21 @@ SaffronCity_MrPsychicsHouse_EventScript_GetPsychic::
 SaffronCity_MrPsychicsHouse_EventScript_GetAlakazite::
 	goto_if_set FLAG_HIDE_ALAKAZITE, SaffronCity_MrPsychicsHouse_EventScript_GetPsychic
 	msgbox SaffronCity_MrPsychicsHouse_Text_YouWantedThis
-	checkitemspace ITEM_ALAKAZITE, 1
+	checkitemspace ITEM_TWISTED_SPOON, 1
 	goto_if_eq VAR_RESULT, FALSE, SaffronCity_MrPsychicsHouse_EventScript_NoRoomForTM29
-	giveitem ITEM_ALAKAZITE, 1
+	giveitem ITEM_TWISTED_SPOON, 1
 	msgbox SaffronCity_MrPsychicsHouse_Text_ExplainAlakazite
 	waitmessage
 	setflag FLAG_HIDE_ALAKAZITE
 	setflag FLAG_GOT_ALAKAZITE
-	goto_if_unset FLAG_FIRST_MEGASTONE, SaffronCity_MrPsychicsHouse_EventScript_FoundMegaStone
 	release
-    end
-
-SaffronCity_MrPsychicsHouse_EventScript_FoundMegaStone::
-    lockall
-    pokenavcall MatchCall_Text_Bill7
-    waitmessage
-    setflag FLAG_FIRST_MEGASTONE
-    releaseall
-    end
+	end
 
 SaffronCity_MrPsychicsHouse_Text_ExplainAlakazite::
 	.string "Você já sabe, não sabe?\n"
-    .string "Essa pedra é uma Alakazita.\p"
-    .string "Ela desbloqueia o potencial psíquico\n"
-    .string "definitivo de um Alakazam!$"
+	.string "Essa é uma Colher Retorcida.\p"
+	.string "Ela fortalece o poder psíquico\n"
+	.string "de quem a segurar!$"
 
 SaffronCity_MrPsychicsHouse_EventScript_NoRoomForTM29::
 	msgbox SaffronCity_MrPsychicsHouse_Text_YouveNoRoom

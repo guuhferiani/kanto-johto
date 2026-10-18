@@ -1275,7 +1275,7 @@ static const struct TrainerMonItemCustomMoves sParty_BlackBeltJiraiya[] = {
 		.iv = 250,
 		.lvl = 80,
 		.species = SPECIES_MEWTWO,
-		.heldItem = ITEM_MEWTWONITE_X,
+		.heldItem = ITEM_LIFE_ORB,
 		.moves = {MOVE_KNOCK_OFF, MOVE_DRAIN_PUNCH, MOVE_EARTHQUAKE, MOVE_PSYCHO_CUT},
         .abilityNums = 0, //Steadfast
 	},
@@ -1468,7 +1468,7 @@ static const struct TrainerMonItemCustomMoves sParty_BugCatcherDani[] = {
         .iv = 250,
         .lvl = 72,
         .species = SPECIES_VENUSAUR,
-        .heldItem = ITEM_VENUSAURITE,
+        .heldItem = ITEM_LEFTOVERS,
         .moves = {MOVE_EARTH_POWER, MOVE_SLUDGE_BOMB, MOVE_PETAL_BLIZZARD, MOVE_LEECH_SEED},
         .abilityNums = 0, //Thick Fat
     },
@@ -1589,7 +1589,7 @@ static const struct TrainerMonItemCustomMoves sParty_CoolTrainerMura[] = {
         .iv = 250,
         .lvl = 72,
         .species = SPECIES_PIDGEOT,
-        .heldItem = ITEM_PIDGEOTITE,
+        .heldItem = ITEM_SHARP_BEAK,
         .moves = {MOVE_HURRICANE, MOVE_HEAT_WAVE, MOVE_ROOST, MOVE_ATTRACT},
         .abilityNums = 0, //Keen Eye
     },
@@ -1837,7 +1837,7 @@ static const struct TrainerMonItemCustomMoves sParty_YoungsterKody[] = {
         .iv = 250,
         .lvl = 72,
         .species = SPECIES_CHARIZARD,
-        .heldItem = ITEM_CHARIZARDITE_Y,
+        .heldItem = ITEM_CHARCOAL,
         .moves = {MOVE_WEATHER_BALL, MOVE_AIR_SLASH, MOVE_DRAGON_PULSE, MOVE_SCORCHING_SANDS},
         .abilityNums = 0, //Drought
     },
@@ -2065,7 +2065,7 @@ static const struct TrainerMonItemCustomMoves sParty_SuperNerdMiguel2A[] = { //P
         .iv = 250,
         .lvl = 72,
         .species = SPECIES_AERODACTYL,
-        .heldItem = ITEM_AERODACTYLITE,
+        .heldItem = ITEM_FOCUS_SASH,
         .moves = {MOVE_DRAGON_DANCE, MOVE_ROOST, MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE},
         .abilityNums = 0, //Tough Claws
     },
@@ -2116,7 +2116,7 @@ static const struct TrainerMonItemCustomMoves sParty_SuperNerdMiguel2B[] = { //P
         .iv = 250,
         .lvl = 72,
         .species = SPECIES_AERODACTYL,
-        .heldItem = ITEM_AERODACTYLITE,
+        .heldItem = ITEM_FOCUS_SASH,
         .moves = {MOVE_DRAGON_DANCE, MOVE_ROOST, MOVE_EARTHQUAKE, MOVE_ROCK_SLIDE},
         .abilityNums = 0, //Tough Claws
     },
@@ -2754,7 +2754,7 @@ static const struct TrainerMonItemCustomMoves sParty_GentlemanDiamond[] = {
         .iv = 250,
         .lvl = 72,
         .species = SPECIES_SLOWBRO,
-        .heldItem = ITEM_SLOWBRONITE,
+        .heldItem = ITEM_LEFTOVERS,
         .moves = {MOVE_SCALD, MOVE_CALM_MIND, MOVE_SLACK_OFF, MOVE_PSYSHOCK},
         .abilityNums = 2, //Regenerator
     },
@@ -3354,7 +3354,7 @@ static const struct TrainerMonItemCustomMoves sParty_FishermanLarry[] = {
 		.iv = 250,
 		.lvl = 72,
 		.species = SPECIES_GYARADOS,
-		.heldItem = ITEM_GYARADOSITE,
+		.heldItem = ITEM_LUM_BERRY,
 		.moves = {MOVE_DRAGON_DANCE, MOVE_CRUNCH, MOVE_WATERFALL, MOVE_EARTHQUAKE},
         .abilityNums = 0, //Mold Breaker
 	},
@@ -3921,7 +3921,7 @@ static const struct TrainerMonItemCustomMoves sParty_BeautyKishi[] = {
         .iv = 250,
         .lvl = 72,
         .species = SPECIES_GENGAR,
-        .heldItem = ITEM_GENGARITE,
+        .heldItem = ITEM_FOCUS_SASH,
         .moves = {MOVE_PROTECT, MOVE_HEX, MOVE_SLUDGE_BOMB, MOVE_WILL_O_WISP},
         .abilityNums = 0, //Shadow Tag
     },
@@ -4411,7 +4411,7 @@ static const struct TrainerMonItemCustomMoves sParty_AromaLadyPhoebe[] = {
         .iv = 250,
         .lvl = 72,
         .species = SPECIES_BEEDRILL,
-        .heldItem = ITEM_BEEDRILLITE,
+        .heldItem = ITEM_FOCUS_SASH,
         .moves = {MOVE_DRILL_RUN, MOVE_POISON_JAB, MOVE_SWORDS_DANCE, MOVE_U_TURN},
         .abilityNums = 0, //Swarm
     },
@@ -4782,7 +4782,7 @@ static const struct TrainerMonItemCustomMoves sParty_CoolTrainerMTony[] = {
         .iv = 250,
         .lvl = 72,
         .species = SPECIES_KANGASKHAN,
-        .heldItem = ITEM_KANGASKHANITE,
+        .heldItem = ITEM_SILK_SCARF,
         .moves = {MOVE_FAKE_OUT, MOVE_POWER_UP_PUNCH, MOVE_BODY_SLAM, MOVE_CRUNCH},
         .abilityNums = 0, //Parental Bond, but not available so it is Inner Focus
     },
@@ -5395,7 +5395,7 @@ static const struct TrainerMonItemCustomMoves sParty_AromaLadyLily[] = {
         .iv = 250,
         .lvl = 72,
         .species = SPECIES_PINSIR,
-        .heldItem = ITEM_PINSIRITE,
+        .heldItem = ITEM_FOCUS_SASH,
         .moves = {MOVE_DOUBLE_EDGE, MOVE_SUBMISSION, MOVE_SWORDS_DANCE, MOVE_X_SCISSOR},
         .abilityNums = 1, //Mold Breaker
     },
@@ -7569,7 +7569,7 @@ static const struct TrainerMonItemCustomMoves sParty_EngineerDylan[] = {
 		.iv = 250,
 		.lvl = 72,
 		.species = SPECIES_BLASTOISE,
-		.heldItem = ITEM_BLASTOISINITE,
+		.heldItem = ITEM_MYSTIC_WATER,
 		.moves = {MOVE_WATER_SPOUT, MOVE_AURA_SPHERE, MOVE_DARK_PULSE, MOVE_ICE_BEAM},
         .abilityNums = 0, //Torrent
 	},
@@ -8087,7 +8087,7 @@ static const struct TrainerMonItemCustomMoves sParty_GentlemanJustice[] = {
 		.iv = 250,
 		.lvl = 72,
 		.species = SPECIES_ALAKAZAM,
-		.heldItem = ITEM_ALAKAZITE,
+		.heldItem = ITEM_TWISTED_SPOON,
 		.moves = {MOVE_CALM_MIND, MOVE_RECOVER, MOVE_PSYCHIC, MOVE_SHADOW_BALL},
         .abilityNums = 0, //Trace
 	},
@@ -8664,7 +8664,7 @@ static const struct TrainerMonItemCustomMoves sParty_RangerMeiHui[] = {
         .iv = 250,
         .lvl = 72,
         .species = SPECIES_MEWTWO,
-        .heldItem = ITEM_MEWTWONITE_Y,
+        .heldItem = ITEM_LIFE_ORB,
         .moves = {MOVE_CALM_MIND, MOVE_PSYCHIC, MOVE_SHADOW_BALL, MOVE_FOCUS_BLAST},
         .abilityNums = 2, //Unnerve
     },
@@ -9042,7 +9042,7 @@ static const struct TrainerMonItemCustomMoves sParty_DragonTamerNick[] = {
         .iv = 250,
         .lvl = 72,
         .species = SPECIES_CHARIZARD,
-        .heldItem = ITEM_CHARIZARDITE_X,
+        .heldItem = ITEM_LUM_BERRY,
         .moves = {MOVE_DRAGON_DANCE, MOVE_OUTRAGE, MOVE_FIRE_PUNCH, MOVE_EARTHQUAKE},
         .abilityNums = 0, //Tough Claws
     },
@@ -9835,7 +9835,7 @@ static const struct TrainerMonItemCustomMoves sParty_RetiredFugi[] = {
         .iv = 250,
         .lvl = 70,
         .species = SPECIES_MEWTWO,
-        .heldItem = ITEM_MEWTWONITE_Y,
+        .heldItem = ITEM_LIFE_ORB,
         .moves = {MOVE_PSYSTRIKE, MOVE_ICE_BEAM, MOVE_SHADOW_BALL, MOVE_NASTY_PLOT},
         .abilityNums = 0, //Insomnia
     },
