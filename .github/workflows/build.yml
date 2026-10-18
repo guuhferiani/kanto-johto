@@ -74,17 +74,19 @@ jobs:
       - name: Prepare Android ROM Asset
         run: |
           mkdir -p android/app/src/main/assets
-          if [ -f "pokeClassic.gba" ]; then
-            cp pokeClassic.gba android/app/src/main/assets/game.gba
-          elif [ -f "Pokemon_Kanto_Johto.gba" ]; then
-            cp Pokemon_Kanto_Johto.gba android/app/src/main/assets/game.gba
-          fi
+          GBA_FILE=$(find . -name "*.gba" | head -n 1)
+          echo "Found ROM at: $GBA_FILE"
+          cp "$GBA_FILE" android/app/src/main/assets/game.gba
+          ls -la android/app/src/main/assets/
 
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '17'
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
 
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
@@ -97,14 +99,16 @@ jobs:
       - name: Build APK with Gradle
         run: |
           cd android
-          gradle wrapper
           chmod +x gradlew
-          ./gradlew assembleRelease --no-daemon
+          ./gradlew assembleRelease --no-daemon --stacktrace
 
       - name: Prepare APK Output
         run: |
           mkdir -p dist
-          cp android/app/build/outputs/apk/release/app-release.apk dist/Pokemon_Kanto_Johto.apk
+          APK_FILE=$(find android/app/build/outputs/apk -name "*.apk" | head -n 1)
+          echo "Found APK at: $APK_FILE"
+          cp "$APK_FILE" dist/Pokemon_Kanto_Johto.apk
+          ls -la dist/
 
       - name: Upload Android APK
         uses: actions/upload-artifact@v4
