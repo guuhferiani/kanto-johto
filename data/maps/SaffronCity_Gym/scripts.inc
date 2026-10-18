@@ -201,7 +201,8 @@ SaffronCity_Gym_Text_ReceivedBadge::
 
 SaffronCity_Gym_Text_ExplainBadge::
     .string "A Insígnia do Pântano permite que\n"
-    .string "seus Pokémon usem Rock Smash.\p"
+    .string "seus Pokémon usem Quebrar Rocha\l"
+    .string "fora de batalha.\p"
     .string "Ela também faz com que Pokémon até\n"
     .string "o Nv. 70 obedeçam a você.\p"
     .string "Pokémon mais fortes ficarão rebeldes,\n"
