@@ -3,6 +3,7 @@ package com.antigravity.pokemonkantojohto;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.VibrationEffect;
@@ -12,9 +13,16 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebChromeClient;
+import android.webkit.WebResourceRequest;
+import android.webkit.WebResourceResponse;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.HashMap;
+import java.util.Map;
 
 public class MainActivity extends Activity {
 
@@ -49,13 +57,64 @@ public class MainActivity extends Activity {
         settings.setRenderPriority(WebSettings.RenderPriority.HIGH);
         settings.setCacheMode(WebSettings.LOAD_DEFAULT);
 
-        webView.setWebViewClient(new WebViewClient());
+        webView.setWebViewClient(new WebViewClient() {
+            @Override
+            public WebResourceResponse shouldInterceptRequest(WebView view, WebResourceRequest request) {
+                if (request != null && request.getUrl() != null) {
+                    Uri uri = request.getUrl();
+                    if ("localhost".equals(uri.getHost())) {
+                        return handleAssetRequest(uri.getPath());
+                    }
+                }
+                return super.shouldInterceptRequest(view, request);
+            }
+
+            @SuppressWarnings("deprecation")
+            @Override
+            public WebResourceResponse shouldInterceptRequest(WebView view, String url) {
+                if (url != null && url.startsWith("https://localhost/")) {
+                    String path = url.substring("https://localhost/".length());
+                    int queryIdx = path.indexOf('?');
+                    if (queryIdx >= 0) path = path.substring(0, queryIdx);
+                    int hashIdx = path.indexOf('#');
+                    if (hashIdx >= 0) path = path.substring(0, hashIdx);
+                    return handleAssetRequest(path);
+                }
+                return super.shouldInterceptRequest(view, url);
+            }
+        });
+
         webView.setWebChromeClient(new WebChromeClient());
         webView.setBackgroundColor(0xFF000000);
 
         webView.addJavascriptInterface(new WebAppInterface(this), "AndroidBridge");
 
-        webView.loadUrl("file:///android_asset/www/index.html");
+        // Carrega via https://localhost para que o Chromium permita fetch() e WebAssembly locais sem erro de CORS
+        webView.loadUrl("https://localhost/www/index.html");
+    }
+
+    private WebResourceResponse handleAssetRequest(String path) {
+        if (path == null) return null;
+        if (path.startsWith("/")) path = path.substring(1);
+        try {
+            InputStream is = getAssets().open(path);
+            String mimeType = "application/octet-stream";
+            if (path.endsWith(".html")) mimeType = "text/html";
+            else if (path.endsWith(".js")) mimeType = "application/javascript";
+            else if (path.endsWith(".wasm")) mimeType = "application/wasm";
+            else if (path.endsWith(".css")) mimeType = "text/css";
+            else if (path.endsWith(".png")) mimeType = "image/png";
+            else if (path.endsWith(".jpg") || path.endsWith(".jpeg")) mimeType = "image/jpeg";
+            else if (path.endsWith(".gba")) mimeType = "application/octet-stream";
+
+            Map<String, String> headers = new HashMap<>();
+            headers.put("Access-Control-Allow-Origin", "*");
+            headers.put("Access-Control-Allow-Methods", "GET, HEAD, OPTIONS");
+            headers.put("Access-Control-Allow-Headers", "*");
+            return new WebResourceResponse(mimeType, "UTF-8", 200, "OK", headers, is);
+        } catch (IOException e) {
+            return null;
+        }
     }
 
     private void setImmersiveMode() {

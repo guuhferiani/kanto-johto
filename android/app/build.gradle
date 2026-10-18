@@ -45,6 +45,11 @@ android {
         targetCompatibility JavaVersion.VERSION_17
     }
 
+    aaptOptions {
+        noCompress 'gba', 'wasm'
+    }
+
+
     lint {
         abortOnError false
         checkReleaseBuilds false
