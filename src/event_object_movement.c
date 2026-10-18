@@ -2444,7 +2444,7 @@ u8 SpawnWildMonObjectEvent(u16 species, s16 x, s16 y, bool8 shiny)
     template.movementRangeY = 0;
     template.trainerType = TRAINER_TYPE_NONE;
     template.trainerRange_berryTreeId = 0;
-    template.script = NULL;
+    template.script = EventScript_StartDexNavBattle;
     template.flagId = 0;
     template.inConnection = 0;
 
@@ -2454,6 +2454,8 @@ u8 SpawnWildMonObjectEvent(u16 species, s16 x, s16 y, bool8 shiny)
         FollowerSetGraphics(&gObjectEvents[objectEventId], species, 0, shiny, TRUE);
         gObjectEvents[objectEventId].disableCoveringGroundEffects = TRUE;
         gObjectEvents[objectEventId].invisible = FALSE;
+        gObjectEvents[objectEventId].extra.mon.species = species;
+        gObjectEvents[objectEventId].extra.mon.shiny = shiny;
         return objectEventId;
     }
     return OBJECT_EVENTS_COUNT;
@@ -3528,10 +3530,18 @@ void SetObjectEventDirection(struct ObjectEvent *objectEvent, u8 direction)
 
 static const u8 *GetObjectEventScriptPointerByLocalIdAndMap(u8 localId, u8 mapNum, u8 mapGroup)
 {
+    struct ObjectEventTemplate *obj;
+
     if (localId == OBJ_EVENT_ID_FOLLOWER) {
       return EventScript_Follower;
     }
-    return GetObjectEventTemplateByLocalIdAndMap(localId, mapNum, mapGroup)->script;
+    if (localId == OBJ_EVENT_ID_WILD_MON) {
+      return EventScript_StartDexNavBattle;
+    }
+    obj = GetObjectEventTemplateByLocalIdAndMap(localId, mapNum, mapGroup);
+    if (obj == NULL)
+        return NULL;
+    return obj->script;
 }
 
 const u8 *GetObjectEventScriptPointerByObjectEventId(u8 objectEventId)
@@ -10606,6 +10616,9 @@ u16 GetBoulderRevealFlagByLocalIdAndMap(u8 localId, u8 mapNum, u8 mapGroup)
 {
     // Pushable boulder object events store the flag to reveal the boulder
     // on the floor below in their trainer type field.
-    return GetObjectEventTemplateByLocalIdAndMap(localId, mapNum, mapGroup)->trainerType;
+    struct ObjectEventTemplate *obj = GetObjectEventTemplateByLocalIdAndMap(localId, mapNum, mapGroup);
+    if (obj == NULL)
+        return 0;
+    return obj->trainerType;
 }
 

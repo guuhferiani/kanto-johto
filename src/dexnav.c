@@ -49,6 +49,7 @@
 #include "text_window.h"
 #include "wild_encounter.h"
 #include "window.h"
+#include "constants/event_objects.h"
 #include "constants/map_types.h"
 #include "constants/species.h"
 #include "constants/maps.h"
@@ -152,6 +153,7 @@ static void DexNavUpdateSearchWindow(u8 proximity, u8 searchLevel);
 //static void DexNavSightUpdate(u8 index);
 static void Task_DexNavSearch(u8 taskId);
 static void EndDexNavSearchSetupScript(const u8 *script, u8 taskId);
+void StartDexNavBattlePreparation(void);
 // HIDDEN MONS
 static void DexNavDrawHiddenIcons(void);
 static void DrawHiddenSearchWindow(u8 width);
@@ -555,6 +557,7 @@ static void DrawSearchWindow(u16 species, u8 potential, bool8 hidden)
 static void RemoveDexNavWindowAndGfx(void)
 {
     u32 i;
+    bool8 hadIcon = (sDexNavSearchDataPtr->iconSpriteId != MAX_SPRITES);
     
     RemoveWildMonObjectEvent();
     
@@ -585,7 +588,8 @@ static void RemoveDexNavWindowAndGfx(void)
     FreeSpriteTilesByTag(HIDDEN_MON_ICON_TAG);
     FreeSpriteTilesByTag(LIT_STAR_TILE_TAG);
     FreeSpritePaletteByTag(HELD_ITEM_TAG);
-    SafeFreeMonIconPalette(sDexNavSearchDataPtr->species);
+    if (hadIcon)
+        SafeFreeMonIconPalette(sDexNavSearchDataPtr->species);
     
     // remove window
     if (sDexNavSearchDataPtr->windowId != 0xFF)
@@ -997,11 +1001,15 @@ void EndDexNavSearch(u8 taskId)
 {
     FlagClear(FLAG_SYS_DEXNAV_SEARCH);
     DestroyTask(taskId);
-    RemoveDexNavWindowAndGfx();
-    if (sDexNavSearchDataPtr->fldEffSpriteId != MAX_SPRITES)
-        FieldEffectStop(&gSprites[sDexNavSearchDataPtr->fldEffSpriteId], sDexNavSearchDataPtr->fldEffId);
+    if (sDexNavSearchDataPtr != NULL)
+    {
+        if (sDexNavSearchDataPtr->fldEffSpriteId != MAX_SPRITES)
+            FieldEffectStop(&gSprites[sDexNavSearchDataPtr->fldEffSpriteId], sDexNavSearchDataPtr->fldEffId);
+        RemoveDexNavWindowAndGfx();
+        Free(sDexNavSearchDataPtr);
+        sDexNavSearchDataPtr = NULL;
+    }
     RemoveWildMonObjectEvent();
-    Free(sDexNavSearchDataPtr);
 }
 
 static void EndDexNavSearchSetupScript(const u8 *script, u8 taskId)
@@ -1107,17 +1115,7 @@ static void Task_DexNavSearch(u8 taskId)
     
     if (sDexNavSearchDataPtr->proximity <= 1)
     {
-        CreateDexNavWildMon(sDexNavSearchDataPtr->species, sDexNavSearchDataPtr->potential, sDexNavSearchDataPtr->monLevel, 
-          sDexNavSearchDataPtr->abilityNum, sDexNavSearchDataPtr->heldItem, sDexNavSearchDataPtr->moves);
-        
-        FlagClear(FLAG_SYS_DEXNAV_SEARCH);
-        gDexnavBattle = TRUE;        
-        RemoveDexNavWindowAndGfx();
-        if (sDexNavSearchDataPtr->fldEffSpriteId != MAX_SPRITES)
-            FieldEffectStop(&gSprites[sDexNavSearchDataPtr->fldEffSpriteId], sDexNavSearchDataPtr->fldEffId);
-        RemoveWildMonObjectEvent();
-        Free(sDexNavSearchDataPtr);
-        DestroyTask(taskId);
+        StartDexNavBattlePreparation();
         ScriptContext1_SetupScript(EventScript_StartDexNavBattle);
         return;
     }
@@ -1267,6 +1265,45 @@ static void CreateDexNavWildMon(u16 species, u8 potential, u8 level, u8 abilityN
 
     CalculateMonStats(mon);
     FlagClear(FLAG_SHINY_CREATION);
+}
+
+void StartDexNavBattlePreparation(void)
+{
+    u8 taskId;
+
+    if (sDexNavSearchDataPtr != NULL)
+    {
+        CreateDexNavWildMon(sDexNavSearchDataPtr->species, sDexNavSearchDataPtr->potential, sDexNavSearchDataPtr->monLevel, 
+          sDexNavSearchDataPtr->abilityNum, sDexNavSearchDataPtr->heldItem, sDexNavSearchDataPtr->moves);
+        
+        FlagClear(FLAG_SYS_DEXNAV_SEARCH);
+        gDexnavBattle = TRUE;        
+        if (sDexNavSearchDataPtr->fldEffSpriteId != MAX_SPRITES)
+            FieldEffectStop(&gSprites[sDexNavSearchDataPtr->fldEffSpriteId], sDexNavSearchDataPtr->fldEffId);
+        RemoveDexNavWindowAndGfx();
+        Free(sDexNavSearchDataPtr);
+        sDexNavSearchDataPtr = NULL;
+    }
+    else
+    {
+        u16 currentSpecies = GetMonData(&gEnemyParty[0], MON_DATA_SPECIES);
+        if (currentSpecies == SPECIES_NONE)
+        {
+            u8 objEventId = GetObjectEventIdByLocalIdAndMap(OBJ_EVENT_ID_WILD_MON, gSaveBlock1Ptr->location.mapNum, gSaveBlock1Ptr->location.mapGroup);
+            u16 species = SPECIES_RATTATA;
+            if (objEventId < OBJECT_EVENTS_COUNT && gObjectEvents[objEventId].extra.mon.species != SPECIES_NONE)
+                species = gObjectEvents[objEventId].extra.mon.species;
+            CreateWildMon(species, 3);
+        }
+    }
+    RemoveWildMonObjectEvent();
+
+    taskId = FindTaskIdByFunc(Task_DexNavSearch);
+    if (taskId != TASK_NONE)
+        DestroyTask(taskId);
+    taskId = FindTaskIdByFunc(Task_SetUpDexNavSearch);
+    if (taskId != TASK_NONE)
+        DestroyTask(taskId);
 }
 
 // gets a random level of the species based on map data.

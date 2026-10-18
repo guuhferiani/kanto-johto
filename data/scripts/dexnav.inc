@@ -1,12 +1,11 @@
 EventScript_StartDexNavBattle::
-	lock
+	lockall
 	playse 0x15
-	applymovement OBJ_EVENT_ID_PLAYER Common_Movement_ExclamationMark
-	waitmovement 0
-	waitse
+	callnative StartDexNavBattlePreparation
 	dowildbattle    
-	release
+	releaseall
 	end
+
 
 
 EventScript_NotFoundNearby::

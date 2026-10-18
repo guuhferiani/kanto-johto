@@ -130,6 +130,7 @@ bool8 DexNavTryMakeShinyMon(void);
 void IncrementDexNavChain(void);
 void Task_OpenDexNavFromPokenav(u8 taskId);
 u32 PokeNavMenuDexNavCallback(void);
+void StartDexNavBattlePreparation(void);
 
 //ewram
 extern u8 gCurrentDexNavChain;
