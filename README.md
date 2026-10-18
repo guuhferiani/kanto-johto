@@ -9,6 +9,19 @@
 
 **Uma jornada épica contínua do Nível 1 ao 100 unindo Kanto e Johto, recriando os eventos de Pokémon Yellow sobre a engine de Pokémon Emerald (`pokeemerald`) para o Game Boy Advance, com mecânicas modernas de qualidade de vida e localização completa em Português do Brasil!**
 
+<br>
+
+### 🌐 Links Oficiais & Wiki Interativa no GitHub Pages
+
+| Seção | Link Direto | Descrição |
+| :--- | :--- | :--- |
+| 📖 **Detonado Oficial (Kanto & Johto)** | [**Acessar Detonado**](https://guuhferiani.github.io/kanto-johto/#detonado) | Guia passo a passo com capítulos de Kanto e Johto |
+| 📕 **Pokédex Completa** | [**Acessar Pokédex**](https://guuhferiani.github.io/kanto-johto/#pokedex) | 251 Pokémon com stats, tipos e localizações |
+| ⚡ **Chefes & Líderes de Ginásio** | [**Acessar Chefes**](https://guuhferiani.github.io/kanto-johto/#gyms) | Todos os 16 líderes, Elite 4, Blue e Red com times |
+| 🗺️ **Rotas & Encontros** | [**Acessar Rotas**](https://guuhferiani.github.io/kanto-johto/#routes) | Relação de Pokémon por rota e probabilidades |
+| 🎒 **Itens, TMs & HMs** | [**Acessar Itens**](https://guuhferiani.github.io/kanto-johto/#items) | Lista de 50 TMs, HMs e itens especiais |
+| 🏠 **Wiki Hub Principal** | [**Acessar Home**](https://guuhferiani.github.io/kanto-johto/) | Visão geral, novidades e busca universal |
+
 </div>
 
 ---

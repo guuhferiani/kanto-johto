@@ -54,6 +54,8 @@ editors/
 *.sym
 *.js
 !wiki/**
+wiki/dist/
+wiki/public/graphics/
 porymap.user.cfg
 
 # Google Drive credentials

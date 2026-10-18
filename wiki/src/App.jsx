@@ -37,26 +37,82 @@ export default function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Hash router helper to allow direct links: #detonado, #kanto, #johto, #pokedex, #gyms, etc.
+  const resolveHash = (hashStr) => {
+    const raw = (hashStr || window.location.hash || '').replace(/^#\/?/, '').toLowerCase().trim();
+    if (!raw) return { tab: 'home' };
+
+    if (raw === 'detonado' || raw === 'detonado-kanto' || raw === 'kanto' || raw === 'walkthrough') {
+      return { tab: 'kanto' };
+    }
+    if (raw === 'detonado-johto' || raw === 'johto') {
+      return { tab: 'johto' };
+    }
+    if (raw.startsWith('kanto-cap')) {
+      return { tab: 'kanto', chapter: raw };
+    }
+    if (raw.startsWith('johto-fase')) {
+      return { tab: 'johto', chapter: raw };
+    }
+    if (raw === 'pokedex' || raw === 'dex') {
+      return { tab: 'pokedex' };
+    }
+    if (raw === 'gyms' || raw === 'chefes' || raw === 'ginasios' || raw === 'bosses') {
+      return { tab: 'gyms' };
+    }
+    if (raw === 'routes' || raw === 'rotas') {
+      return { tab: 'routes' };
+    }
+    if (raw === 'items' || raw === 'itens' || raw === 'tms') {
+      return { tab: 'items' };
+    }
+    if (raw === 'controls' || raw === 'controles') {
+      return { tab: 'controls' };
+    }
+    return { tab: raw };
+  };
+
+  // Sync state with URL hash on mount and hash changes
+  useEffect(() => {
+    const handleHashChange = () => {
+      const { tab, chapter } = resolveHash();
+      if (tab) {
+        setActiveTab(tab);
+        if (chapter) setHighlightChapter(chapter);
+      }
+    };
+    handleHashChange();
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
+  // Function to switch tab and update browser URL hash without full reload
+  const changeTab = (tab, targetPayload = null) => {
+    setActiveTab(tab);
+    setHighlightChapter(null);
+    setHighlightBoss(null);
+    setTargetMon('');
+    setTargetRoute('');
+
+    if (tab === 'home') {
+      if (window.location.hash) {
+        history.replaceState(null, '', window.location.pathname + window.location.search);
+      }
+    } else {
+      window.location.hash = tab;
+    }
+
+    if (targetPayload) {
+      if (tab === 'pokedex') setTargetMon(targetPayload);
+      else if (tab === 'gyms') setHighlightBoss(targetPayload);
+      else if (tab === 'kanto' || tab === 'johto') setHighlightChapter(targetPayload);
+      else if (tab === 'routes') setTargetRoute(targetPayload);
+    }
+  };
+
   // Universal navigation handler (used by search and internal links)
   const handleNavigate = (tab, targetPayload) => {
-    if (tab === 'pokedex') {
-      setActiveTab('pokedex');
-      setTargetMon(targetPayload || '');
-    } else if (tab === 'gyms') {
-      setActiveTab('gyms');
-      setHighlightBoss(targetPayload || null);
-    } else if (tab === 'kanto') {
-      setActiveTab('kanto');
-      setHighlightChapter(targetPayload || null);
-    } else if (tab === 'johto') {
-      setActiveTab('johto');
-      setHighlightChapter(targetPayload || null);
-    } else if (tab === 'routes') {
-      setActiveTab('routes');
-      setTargetRoute(targetPayload || '');
-    } else if (tab) {
-      setActiveTab(tab);
-    }
+    changeTab(tab, targetPayload);
   };
 
   const scrollToTop = () => {
@@ -76,13 +132,7 @@ export default function App() {
         isOpen={isDrawerOpen}
         onClose={() => setIsDrawerOpen(false)}
         activeTab={activeTab}
-        onSelectTab={(tab) => {
-          setActiveTab(tab);
-          setHighlightChapter(null);
-          setHighlightBoss(null);
-          setTargetMon('');
-          setTargetRoute('');
-        }}
+        onSelectTab={(tab) => changeTab(tab)}
         onOpenSearch={() => setIsSearchOpen(true)}
       />
 
@@ -91,7 +141,7 @@ export default function App() {
         {activeTab === 'home' && (
           <HomeView
             onSelectTab={(tab) => {
-              setActiveTab(tab);
+              changeTab(tab);
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
             onOpenSearch={() => setIsSearchOpen(true)}
@@ -132,13 +182,7 @@ export default function App() {
       {/* Mobile Bottom Fixed Navigation */}
       <BottomNav
         activeTab={activeTab}
-        onSelectTab={(tab) => {
-          setActiveTab(tab);
-          setHighlightChapter(null);
-          setHighlightBoss(null);
-          setTargetMon('');
-          setTargetRoute('');
-        }}
+        onSelectTab={(tab) => changeTab(tab)}
       />
 
       {/* Floating Back to Top Button */}
