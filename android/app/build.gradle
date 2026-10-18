@@ -1,0 +1,56 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.antigravity.pokemonkantojohto'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.antigravity.pokemonkantojohto"
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName "1.0.0"
+    }
+
+    signingConfigs {
+        release {
+            if (file("release.keystore").exists()) {
+                storeFile file("release.keystore")
+                storePassword "pokemonkj"
+                keyAlias "pokemonkj"
+                keyPassword "pokemonkj"
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            if (file("release.keystore").exists()) {
+                signingConfig signingConfigs.release
+            }
+        }
+        debug {
+            if (file("release.keystore").exists()) {
+                signingConfig signingConfigs.release
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+}
+
+dependencies {
+    // Zero heavy external dependencies needed - uses Android framework
+}

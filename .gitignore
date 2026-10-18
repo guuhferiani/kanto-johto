@@ -60,3 +60,11 @@ credentials.json
 token.json
 scripts/credentials.json
 scripts/token.json
+
+# Android
+!android/**/*.js
+!android/**/*.wasm
+android/.gradle/
+android/**/build/
+android/app/release.keystore
+android/app/src/main/assets/game.gba

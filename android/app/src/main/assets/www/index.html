@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Pokémon Kanto & Johto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app-container">
+        <!-- Top Toolbar -->
+        <header id="top-bar">
+            <div class="bar-left">
+                <span class="game-title">Pokémon Kanto & Johto</span>
+            </div>
+            <div class="bar-right">
+                <button id="btn-turbo" class="tool-btn" title="Acelerar / Turbo">⚡ 1x</button>
+                <button id="btn-save-state" class="tool-btn" title="Salvar Estado">💾 Salvar</button>
+                <button id="btn-load-state" class="tool-btn" title="Carregar Estado">📂 Carregar</button>
+                <button id="btn-mute" class="tool-btn" title="Áudio">🔊</button>
+            </div>
+        </header>
+
+        <!-- Main Screen & Game Canvas -->
+        <main id="screen-container">
+            <div id="loading-overlay">
+                <div class="loader-content">
+                    <img src="icon.png" alt="Capa Pokémon Kanto e Johto" id="splash-icon">
+                    <h2>Carregando aventura...</h2>
+                    <div class="spinner"></div>
+                </div>
+            </div>
+            <div id="emulator-target"></div>
+        </main>
+
+        <!-- Virtual Touch Gamepad Controls -->
+        <nav id="gamepad-overlay" aria-label="Controles">
+            <!-- Top Shoulder Buttons -->
+            <button id="btn-l" class="shoulder-btn btn-l" data-key="KeyA" aria-label="Botão L">L</button>
+            <button id="btn-r" class="shoulder-btn btn-r" data-key="KeyS" aria-label="Botão R">R</button>
+
+            <!-- D-Pad (Left) -->
+            <div id="dpad-container">
+                <div class="dpad-bg">
+                    <button class="dpad-btn dpad-up" data-key="ArrowUp" aria-label="Cima"></button>
+                    <button class="dpad-btn dpad-right" data-key="ArrowRight" aria-label="Direita"></button>
+                    <button class="dpad-btn dpad-down" data-key="ArrowDown" aria-label="Baixo"></button>
+                    <button class="dpad-btn dpad-left" data-key="ArrowLeft" aria-label="Esquerda"></button>
+                    <div class="dpad-center"></div>
+                </div>
+            </div>
+
+            <!-- Start / Select (Center) -->
+            <div id="center-buttons">
+                <div class="pill-btn-wrap">
+                    <button class="pill-btn" id="btn-select" data-key="ShiftRight" aria-label="Select"></button>
+                    <span class="pill-label">SELECT</span>
+                </div>
+                <div class="pill-btn-wrap">
+                    <button class="pill-btn" id="btn-start" data-key="Enter" aria-label="Start"></button>
+                    <span class="pill-label">START</span>
+                </div>
+            </div>
+
+            <!-- Action Buttons A & B (Right) -->
+            <div id="action-buttons">
+                <div class="action-btn-wrap btn-b-wrap">
+                    <button class="action-btn btn-b" data-key="KeyX" aria-label="Botão B">B</button>
+                </div>
+                <div class="action-btn-wrap btn-a-wrap">
+                    <button class="action-btn btn-a" data-key="KeyZ" aria-label="Botão A">A</button>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Scripts -->
+    <script src="nostalgist.umd.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-name: Build ROM
+name: Build ROM and Android APK
 
 on:
   push:
@@ -12,7 +12,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  build_rom:
+    name: Compile GBA ROM
     runs-on: ubuntu-22.04
     env:
       GAME_VERSION: EMERALD
@@ -42,7 +43,11 @@ jobs:
         working-directory: agbcc
 
       - name: Compile ROM
-        run: make -j$(nproc) all
+        run: |
+          make -j$(nproc) all
+          if [ -f "pokeClassic.gba" ]; then
+            cp pokeClassic.gba Pokemon_Kanto_Johto.gba
+          fi
 
       - name: Upload GBA ROM
         uses: actions/upload-artifact@v4
@@ -51,4 +56,59 @@ jobs:
           path: |
             Pokemon_Kanto_Johto.gba
             pokeClassic.gba
+          if-no-files-found: error
+
+  build_apk:
+    name: Build Android APK
+    needs: build_rom
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Download ROM Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: Pokemon_Kanto_Johto_ROM
+
+      - name: Prepare Android ROM Asset
+        run: |
+          mkdir -p android/app/src/main/assets
+          if [ -f "pokeClassic.gba" ]; then
+            cp pokeClassic.gba android/app/src/main/assets/game.gba
+          elif [ -f "Pokemon_Kanto_Johto.gba" ]; then
+            cp Pokemon_Kanto_Johto.gba android/app/src/main/assets/game.gba
+          fi
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v3
+
+      - name: Generate Release Keystore
+        run: |
+          cd android/app
+          keytool -genkeypair -v -keystore release.keystore -alias pokemonkj -keyalg RSA -keysize 2048 -validity 10000 -storepass pokemonkj -keypass pokemonkj -dname "CN=PokemonKJ, OU=Games, O=Antigravity, L=SP, ST=SP, C=BR"
+
+      - name: Build APK with Gradle
+        run: |
+          cd android
+          gradle wrapper
+          chmod +x gradlew
+          ./gradlew assembleRelease --no-daemon
+
+      - name: Prepare APK Output
+        run: |
+          mkdir -p dist
+          cp android/app/build/outputs/apk/release/app-release.apk dist/Pokemon_Kanto_Johto.apk
+
+      - name: Upload Android APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: Pokemon_Kanto_Johto_APK
+          path: dist/Pokemon_Kanto_Johto.apk
           if-no-files-found: error
