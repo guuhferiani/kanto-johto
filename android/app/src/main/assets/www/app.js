@@ -4,7 +4,7 @@ let isMuted = false;
 
 // Default User Settings
 let userSettings = {
-    opacity: 80,
+    opacity: 85,
     scale: 1.0,
     position: 'normal',
     haptic: true,
@@ -17,11 +17,11 @@ const KEY_MAP = {
     'ArrowDown': 'ArrowDown',
     'ArrowLeft': 'ArrowLeft',
     'ArrowRight': 'ArrowRight',
-    'KeyZ': 'z',       // A button
-    'KeyX': 'x',       // B button
-    'KeyA': 'a',       // L shoulder
-    'KeyS': 's',       // R shoulder
-    'Enter': 'Enter',   // Start
+    'KeyZ': 'z',          // Botão A
+    'KeyX': 'x',          // Botão B
+    'KeyA': 'a',          // Gatilho L
+    'KeyS': 's',          // Gatilho R
+    'Enter': 'Enter',      // Start
     'ShiftRight': 'Shift' // Select
 };
 
@@ -58,16 +58,21 @@ function setupTouchControls() {
 
     buttons.forEach(btn => {
         const key = btn.getAttribute('data-key');
+        let isPressed = false;
 
         const press = (e) => {
-            e.preventDefault();
+            if (e.cancelable) e.preventDefault();
+            if (isPressed) return;
+            isPressed = true;
             btn.classList.add('active');
-            triggerVibration(16);
+            triggerVibration(18);
             sendKeyEvent('keydown', key);
         };
 
         const release = (e) => {
-            e.preventDefault();
+            if (e && e.cancelable) e.preventDefault();
+            if (!isPressed) return;
+            isPressed = false;
             btn.classList.remove('active');
             sendKeyEvent('keyup', key);
         };
@@ -83,16 +88,31 @@ function setupTouchControls() {
 }
 
 async function initEmulator() {
-    const target = document.getElementById('emulator-target');
+    const canvas = document.getElementById('emulator-canvas');
     const overlay = document.getElementById('loading-overlay');
+    const loaderSub = document.getElementById('loader-sub');
 
     try {
         console.log('Iniciando emulador mGBA offline...');
-        
+        if (loaderSub) loaderSub.textContent = 'Carregando ROM do jogo...';
+
+        let romSource = 'game.gba';
+        try {
+            const romFetch = await fetch('game.gba');
+            if (romFetch.ok) {
+                romSource = await romFetch.blob();
+                console.log('ROM carregada como Blob com sucesso!');
+            }
+        } catch (fetchErr) {
+            console.warn('Usando caminho direto como fallback:', fetchErr);
+        }
+
+        if (loaderSub) loaderSub.textContent = 'Iniciando emulador mGBA...';
+
         emulator = await Nostalgist.launch({
             core: 'mgba',
-            rom: '../game.gba',
-            element: target,
+            rom: romSource,
+            element: canvas,
             resolveCoreJs: () => 'core/mgba_libretro.js',
             resolveCoreWasm: () => 'core/mgba_libretro.wasm',
             retroarchConfig: {
@@ -107,18 +127,23 @@ async function initEmulator() {
             overlay.style.opacity = '0';
             setTimeout(() => {
                 overlay.style.display = 'none';
-            }, 400);
+            }, 350);
         }
     } catch (err) {
         console.error('Erro ao inicializar emulador:', err);
         if (overlay) {
             overlay.innerHTML = `
                 <div class="loader-content">
-                    <img src="icon.png" style="width:80px;border-radius:18px;">
-                    <h2 style="color:#ef4444;margin:12px 0;">Erro ao iniciar jogo</h2>
-                    <p style="font-size:12px;color:#94a3b8;max-width:280px;">${err.message || err}</p>
+                    <img src="icon.png" style="width:68px;border-radius:16px;box-shadow:0 4px 16px rgba(0,0,0,0.6);">
+                    <h2 style="color:#ef4444;margin:12px 0 4px;font-size:16px;">Erro ao iniciar jogo</h2>
+                    <p style="font-size:11px;color:#cbd5e1;max-width:280px;line-height:1.4;">${err.message || err}</p>
+                    <button id="btn-retry" style="margin-top:14px;padding:8px 18px;background:#ef4444;color:white;border:none;border-radius:20px;font-weight:700;cursor:pointer;">Tentar Novamente</button>
                 </div>
             `;
+            const btnRetry = document.getElementById('btn-retry');
+            if (btnRetry) {
+                btnRetry.addEventListener('click', () => location.reload());
+            }
         }
     }
 }
@@ -154,6 +179,7 @@ function setupToolbar() {
                 alert('Jogo salvo com sucesso!');
             } catch (e) {
                 console.error('Erro ao salvar estado:', e);
+                alert('Erro ao salvar estado.');
             }
         });
     }
@@ -173,6 +199,7 @@ function setupToolbar() {
                 }
             } catch (e) {
                 console.error('Erro ao carregar estado:', e);
+                alert('Erro ao carregar estado.');
             }
         });
     }
@@ -225,7 +252,7 @@ function loadSettings() {
             userSettings = Object.assign(userSettings, JSON.parse(raw));
         }
     } catch (e) {
-        console.error('Erro ao ler configurações salvas:', e);
+        console.error('Erro ao ler configurações:', e);
     }
     applySettings();
 }
@@ -242,33 +269,33 @@ function applySettings() {
     const root = document.documentElement;
     const target = document.getElementById('emulator-target');
 
-    // Apply Controls Opacity
+    // Opacity
     root.style.setProperty('--controls-opacity', (userSettings.opacity / 100).toString());
     const valOpacity = document.getElementById('val-opacity');
     if (valOpacity) valOpacity.textContent = userSettings.opacity + '%';
     const sliderOpacity = document.getElementById('slider-opacity');
     if (sliderOpacity) sliderOpacity.value = userSettings.opacity;
 
-    // Apply Controls Scale
+    // Scale
     root.style.setProperty('--controls-scale', userSettings.scale.toString());
     document.querySelectorAll('#control-scale-group .segment-btn').forEach(btn => {
         btn.classList.toggle('active', parseFloat(btn.getAttribute('data-scale')) === userSettings.scale);
     });
 
-    // Apply Controls Position
+    // Height offset
     let offset = '0px';
-    if (userSettings.position === 'low') offset = '-14px';
-    if (userSettings.position === 'high') offset = '24px';
+    if (userSettings.position === 'low') offset = '-16px';
+    if (userSettings.position === 'high') offset = '22px';
     root.style.setProperty('--controls-bottom-offset', offset);
     document.querySelectorAll('#control-pos-group .segment-btn').forEach(btn => {
         btn.classList.toggle('active', btn.getAttribute('data-pos') === userSettings.position);
     });
 
-    // Apply Haptic Toggle
+    // Haptics
     const toggleHaptic = document.getElementById('toggle-haptic');
     if (toggleHaptic) toggleHaptic.checked = userSettings.haptic;
 
-    // Apply Graphic Filters
+    // Filters
     if (target) {
         target.classList.remove('filter-pixel', 'filter-lcd', 'filter-crt', 'filter-smooth');
         target.classList.add(`filter-${userSettings.filter}`);
@@ -279,7 +306,6 @@ function applySettings() {
 }
 
 function setupSettingsModal() {
-    // Opacity Slider
     const sliderOpacity = document.getElementById('slider-opacity');
     if (sliderOpacity) {
         sliderOpacity.addEventListener('input', (e) => {
@@ -289,7 +315,6 @@ function setupSettingsModal() {
         });
     }
 
-    // Scale Selector
     document.querySelectorAll('#control-scale-group .segment-btn').forEach(btn => {
         btn.addEventListener('click', () => {
             triggerVibration(20);
@@ -299,7 +324,6 @@ function setupSettingsModal() {
         });
     });
 
-    // Position Selector
     document.querySelectorAll('#control-pos-group .segment-btn').forEach(btn => {
         btn.addEventListener('click', () => {
             triggerVibration(20);
@@ -309,7 +333,6 @@ function setupSettingsModal() {
         });
     });
 
-    // Haptic Checkbox
     const toggleHaptic = document.getElementById('toggle-haptic');
     if (toggleHaptic) {
         toggleHaptic.addEventListener('change', (e) => {
@@ -319,7 +342,6 @@ function setupSettingsModal() {
         });
     }
 
-    // Graphic Filter Selector
     document.querySelectorAll('#filter-group .segment-btn').forEach(btn => {
         btn.addEventListener('click', () => {
             triggerVibration(20);
