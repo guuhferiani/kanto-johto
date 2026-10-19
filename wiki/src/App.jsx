@@ -203,7 +203,7 @@ export default function App() {
           aria-label="Voltar ao topo"
           style={{
             position: 'fixed',
-            bottom: '75px',
+            bottom: 'calc(68px + env(safe-area-inset-bottom, 0px))',
             right: '16px',
             width: '44px',
             height: '44px',
