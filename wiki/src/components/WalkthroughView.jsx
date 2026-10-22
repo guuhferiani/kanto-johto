@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Compass, Sparkles, AlertCircle, ChevronRight, Zap, CheckCircle2 } from 'lucide-react';
+import { Compass, Sparkles, AlertCircle, CheckCircle2 } from 'lucide-react';
 import { kantoChapters, johtoChapters } from '../data/walkthroughData';
 
 export default function WalkthroughView({ region = 'kanto', highlightChapterId }) {
@@ -147,14 +147,9 @@ export default function WalkthroughView({ region = 'kanto', highlightChapterId }
               {chap.content.map((item, idx) => (
                 <div 
                   key={idx}
-                  style={{
-                    background: 'rgba(255, 255, 255, 0.02)',
-                    padding: '1rem',
-                    borderRadius: 'var(--radius-md)',
-                    border: '1px solid rgba(255, 255, 255, 0.05)'
-                  }}
+                  className="feature-subcard"
                 >
-                  <h3 style={{ fontSize: '1.05rem', fontWeight: 700, color: '#f1f5f9', marginBottom: '0.4rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                  <h3 style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--text-heading)', marginBottom: '0.4rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
                     <CheckCircle2 size={16} color="#10b981" />
                     <span>{item.heading}</span>
                   </h3>

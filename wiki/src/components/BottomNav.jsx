@@ -26,7 +26,7 @@ export default function BottomNav({ activeTab, onSelectTab }) {
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
           >
-            <IconComponent size={20} color={isActive ? '#ef4444' : '#94a3b8'} />
+            <IconComponent size={20} color={isActive ? 'var(--primary)' : 'var(--text-muted)'} />
             <span>{tab.label}</span>
           </button>
         );

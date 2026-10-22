@@ -12,7 +12,9 @@ import {
   X, 
   Zap,
   Download,
-  Code2
+  Code2,
+  Sun,
+  Moon
 } from 'lucide-react';
 
 export default function SidebarDrawer({ 
@@ -20,7 +22,9 @@ export default function SidebarDrawer({
   onClose, 
   activeTab, 
   onSelectTab, 
-  onOpenSearch 
+  onOpenSearch,
+  theme,
+  onToggleTheme
 }) {
   const navItems = [
     { id: 'home', label: 'Início & Resumo', icon: Home },
@@ -59,31 +63,34 @@ export default function SidebarDrawer({
           justifyContent: 'space-between'
         }}>
           <div className="brand-title">
-            <Zap size={22} color="#ef4444" fill="#ef4444" />
+            <Zap size={22} color="var(--primary)" fill="var(--primary)" />
             <span>Kanto & Johto</span>
           </div>
 
-          <button 
-            type="button"
-            onClick={onClose}
-            className="mobile-close-btn"
-            style={{
-              background: 'transparent',
-              border: 'none',
-              color: 'var(--text-muted)',
-              cursor: 'pointer',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              padding: '4px'
-            }}
-          >
-            <X size={20} />
-          </button>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
+            <button 
+              type="button"
+              onClick={onClose}
+              className="mobile-close-btn"
+              aria-label="Fechar menu"
+              style={{
+                background: 'transparent',
+                border: 'none',
+                color: 'var(--text-muted)',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: '4px'
+              }}
+            >
+              <X size={20} />
+            </button>
+          </div>
         </div>
 
         {/* Universal Search Bar Trigger in Sidebar */}
-        <div style={{ padding: '1rem 1.25rem 0.5rem 1.25rem' }}>
+        <div style={{ padding: '0.85rem 1rem 0.4rem 1rem' }}>
           <button 
             type="button"
             className="search-trigger-btn"
@@ -99,8 +106,21 @@ export default function SidebarDrawer({
           </button>
         </div>
 
+        {/* Theme Toggle Button in Sidebar */}
+        <div style={{ padding: '0.25rem 1rem 0.5rem 1rem' }}>
+          <button
+            type="button"
+            onClick={onToggleTheme}
+            className="theme-toggle-btn"
+            style={{ width: '100%', justifyContent: 'flex-start', padding: '0.6rem 0.85rem' }}
+          >
+            {theme === 'dark' ? <Sun size={17} color="var(--accent)" /> : <Moon size={17} color="var(--primary)" />}
+            <span>{theme === 'dark' ? 'Alternar para Modo Claro' : 'Alternar para Modo Escuro'}</span>
+          </button>
+        </div>
+
         {/* Navigation Links */}
-        <nav style={{ padding: '0.75rem 0.75rem', flex: 1, display: 'flex', flexDirection: 'column', gap: '4px' }}>
+        <nav style={{ padding: '0.5rem 0.75rem', flex: 1, display: 'flex', flexDirection: 'column', gap: '3px' }}>
           {navItems.map((item) => {
             const Icon = item.icon;
             const isActive = activeTab === item.id;
@@ -111,7 +131,7 @@ export default function SidebarDrawer({
                 className={`nav-link-btn ${isActive ? 'active' : ''}`}
                 onClick={() => handleItemClick(item.id)}
               >
-                <Icon size={18} color={isActive ? '#ef4444' : '#94a3b8'} />
+                <Icon size={18} color={isActive ? 'var(--primary)' : 'var(--text-muted)'} />
                 <span>{item.label}</span>
               </button>
             );
@@ -130,20 +150,8 @@ export default function SidebarDrawer({
             href="https://github.com/guuhferiani/kanto-johto/releases/latest"
             target="_blank"
             rel="noopener noreferrer"
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: '0.5rem',
-              background: 'linear-gradient(135deg, #ef4444, #dc2626)',
-              color: '#fff',
-              textDecoration: 'none',
-              borderRadius: 'var(--radius-sm)',
-              padding: '0.6rem 1rem',
-              fontSize: '0.85rem',
-              fontWeight: 600,
-              boxShadow: '0 4px 12px rgba(239, 68, 68, 0.3)'
-            }}
+            className="btn-primary-red"
+            style={{ padding: '0.65rem 1rem', fontSize: '0.86rem' }}
           >
             <Download size={16} />
             <span>Baixar APK Android</span>
@@ -153,19 +161,8 @@ export default function SidebarDrawer({
             href="https://github.com/guuhferiani/kanto-johto"
             target="_blank"
             rel="noopener noreferrer"
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: '0.5rem',
-              background: 'rgba(255, 255, 255, 0.05)',
-              color: 'var(--text-muted)',
-              textDecoration: 'none',
-              borderRadius: 'var(--radius-sm)',
-              padding: '0.5rem 1rem',
-              fontSize: '0.82rem',
-              border: '1px solid var(--border-color)'
-            }}
+            className="btn-subtle"
+            style={{ padding: '0.55rem 1rem', fontSize: '0.82rem' }}
           >
             <Code2 size={15} />
             <span>Repositório GitHub</span>

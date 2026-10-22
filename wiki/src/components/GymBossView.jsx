@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Trophy, Shield, Zap, Swords } from 'lucide-react';
+import { Trophy, Swords } from 'lucide-react';
 import { gymBossesData } from '../data/gymBossesData';
 
 export default function GymBossView({ highlightBossId }) {
@@ -97,8 +97,8 @@ export default function GymBossView({ highlightBossId }) {
               <div style={{
                 width: '74px',
                 height: '74px',
-                borderRadius: '12px',
-                background: 'rgba(255, 255, 255, 0.05)',
+                borderRadius: 'var(--radius-md)',
+                background: 'var(--bg-subtle)',
                 border: '1px solid var(--border-color)',
                 overflow: 'hidden',
                 flexShrink: 0,
@@ -121,14 +121,14 @@ export default function GymBossView({ highlightBossId }) {
               <div style={{ flex: 1, minWidth: 0 }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap' }}>
                   <h3 style={{ fontSize: '1.25rem', fontWeight: 800 }}>{boss.name}</h3>
-                  <span className="badge-pill" style={{ background: 'rgba(245, 158, 11, 0.15)', color: '#f59e0b', borderColor: 'rgba(245, 158, 11, 0.3)' }}>
+                  <span className="badge-pill" style={{ background: 'var(--accent-subtle)', color: 'var(--accent)', borderColor: 'rgba(245, 158, 11, 0.3)' }}>
                     {boss.badge_icon} {boss.badge}
                   </span>
                 </div>
                 <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginTop: '2px' }}>
-                  {boss.city} • Tipo: <strong style={{ color: '#f1f5f9' }}>{boss.type}</strong>
+                  {boss.city} • Tipo: <strong style={{ color: 'var(--text-heading)' }}>{boss.type}</strong>
                 </div>
-                <div style={{ fontSize: '0.78rem', color: '#94a3b8', fontStyle: 'italic', marginTop: '2px' }}>
+                <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)', fontStyle: 'italic', marginTop: '2px' }}>
                   "{boss.title}"
                 </div>
               </div>
@@ -136,11 +136,11 @@ export default function GymBossView({ highlightBossId }) {
 
             {/* Team Showcase */}
             <div style={{
-              background: 'rgba(0, 0, 0, 0.25)',
+              background: 'var(--bg-subtle)',
               borderRadius: 'var(--radius-md)',
               padding: '0.75rem',
               marginBottom: '1rem',
-              border: '1px solid rgba(255, 255, 255, 0.05)'
+              border: '1px solid var(--border-color)'
             }}>
               <div style={{ fontSize: '0.75rem', fontWeight: 700, textTransform: 'uppercase', color: 'var(--text-muted)', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
                 <Swords size={14} />
@@ -155,10 +155,10 @@ export default function GymBossView({ highlightBossId }) {
                       display: 'flex',
                       alignItems: 'center',
                       gap: '0.4rem',
-                      background: 'rgba(255, 255, 255, 0.05)',
+                      background: 'var(--bg-card)',
                       padding: '4px 8px',
-                      borderRadius: '8px',
-                      border: '1px solid rgba(255, 255, 255, 0.06)'
+                      borderRadius: 'var(--radius-sm)',
+                      border: '1px solid var(--border-color)'
                     }}
                   >
                     <img
@@ -167,8 +167,8 @@ export default function GymBossView({ highlightBossId }) {
                       style={{ width: '28px', height: '28px', imageRendering: 'pixelated' }}
                       loading="lazy"
                     />
-                    <span style={{ fontSize: '0.82rem', fontWeight: 600 }}>{mon.name}</span>
-                    <span style={{ fontSize: '0.75rem', color: '#f59e0b', fontWeight: 700 }}>Lv {mon.lvl}</span>
+                    <span style={{ fontSize: '0.82rem', fontWeight: 600, color: 'var(--text-heading)' }}>{mon.name}</span>
+                    <span style={{ fontSize: '0.75rem', color: 'var(--accent)', fontWeight: 700 }}>Lv {mon.lvl}</span>
                   </div>
                 ))}
               </div>
@@ -176,16 +176,16 @@ export default function GymBossView({ highlightBossId }) {
 
             {/* Strategy */}
             <div style={{
-              background: 'rgba(59, 130, 246, 0.06)',
-              borderLeft: '3px solid #3b82f6',
+              background: 'var(--bg-subtle)',
+              borderLeft: '3px solid var(--secondary)',
               padding: '0.75rem 0.85rem',
               borderRadius: '0 var(--radius-sm) var(--radius-sm) 0',
               fontSize: '0.85rem',
-              color: '#cbd5e1',
+              color: 'var(--text-main)',
               lineHeight: '1.5',
               marginTop: 'auto'
             }}>
-              <strong style={{ color: '#93c5fd' }}>Estratégia Recomendada: </strong>
+              <strong style={{ color: 'var(--secondary)' }}>Estratégia Recomendada: </strong>
               {boss.strategy}
             </div>
           </div>

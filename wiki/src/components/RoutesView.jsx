@@ -78,7 +78,7 @@ export default function RoutesView({ searchTargetRoute }) {
       <div style={{
         position: 'relative',
         maxWidth: '480px',
-        background: 'rgba(255, 255, 255, 0.05)',
+        background: 'var(--bg-card)',
         border: '1px solid var(--border-color)',
         borderRadius: 'var(--radius-md)',
         display: 'flex',
@@ -98,7 +98,7 @@ export default function RoutesView({ searchTargetRoute }) {
             background: 'transparent',
             border: 'none',
             outline: 'none',
-            color: '#fff',
+            color: 'var(--text-heading)',
             fontSize: '0.95rem',
             fontFamily: 'inherit'
           }}
@@ -122,7 +122,7 @@ export default function RoutesView({ searchTargetRoute }) {
             className="card"
             style={{ padding: '1.25rem', margin: 0, borderLeft: '4px solid #10b981' }}
           >
-            <h3 style={{ fontSize: '1.15rem', fontWeight: 800, marginBottom: '0.75rem', color: '#fff', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+            <h3 style={{ fontSize: '1.15rem', fontWeight: 800, marginBottom: '0.75rem', color: 'var(--text-heading)', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
               <MapPin size={18} color="#10b981" />
               <span>{rt.name}</span>
             </h3>
@@ -135,7 +135,7 @@ export default function RoutesView({ searchTargetRoute }) {
                     <Sun size={14} />
                     <span>Dia:</span>
                   </div>
-                  <div style={{ color: '#cbd5e1', lineHeight: '1.4' }}>
+                  <div style={{ color: 'var(--text-main)', lineHeight: '1.4' }}>
                     {rt.day.join(', ')}
                   </div>
                 </div>
@@ -148,7 +148,7 @@ export default function RoutesView({ searchTargetRoute }) {
                     <Moon size={14} />
                     <span>Noite:</span>
                   </div>
-                  <div style={{ color: '#cbd5e1', lineHeight: '1.4' }}>
+                  <div style={{ color: 'var(--text-main)', lineHeight: '1.4' }}>
                     {rt.night.join(', ')}
                   </div>
                 </div>
@@ -161,7 +161,7 @@ export default function RoutesView({ searchTargetRoute }) {
                     <Waves size={14} />
                     <span>Água:</span>
                   </div>
-                  <div style={{ color: '#cbd5e1', lineHeight: '1.4' }}>
+                  <div style={{ color: 'var(--text-main)', lineHeight: '1.4' }}>
                     {rt.water.join(', ')}
                   </div>
                 </div>
@@ -174,7 +174,7 @@ export default function RoutesView({ searchTargetRoute }) {
                     <Eye size={14} />
                     <span>DexNav:</span>
                   </div>
-                  <div style={{ color: '#cbd5e1', lineHeight: '1.4' }}>
+                  <div style={{ color: 'var(--text-main)', lineHeight: '1.4' }}>
                     {rt.hidden.join(', ')}
                   </div>
                 </div>

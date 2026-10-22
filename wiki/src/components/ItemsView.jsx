@@ -1,5 +1,5 @@
 import React from 'react';
-import { Gift, Sparkles, Zap, ShieldAlert } from 'lucide-react';
+import { Gift, Sparkles, Zap } from 'lucide-react';
 import { hmsData, tmsData, stonesData } from '../data/itemsData';
 
 export default function ItemsView() {
@@ -92,7 +92,7 @@ export default function ItemsView() {
       </div>
 
       {/* Evolution Stones Card */}
-      <div className="card" style={{ borderTop: '3px solid #f59e0b' }}>
+      <div className="card" style={{ borderLeft: '4px solid var(--accent)' }}>
         <h2 style={{ fontSize: '1.25rem', fontWeight: 800, marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
           <span style={{ fontSize: '1.3rem' }}>🌙</span>
           <span>Pedras Evolutivas</span>
@@ -105,18 +105,13 @@ export default function ItemsView() {
           {stonesData.map((s, idx) => (
             <div
               key={idx}
-              style={{
-                background: 'rgba(255, 255, 255, 0.03)',
-                padding: '1rem',
-                borderRadius: 'var(--radius-md)',
-                border: '1px solid var(--border-color)'
-              }}
+              className="feature-subcard"
             >
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.4rem', fontWeight: 700, color: '#fde68a' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.4rem', fontWeight: 700, color: 'var(--text-heading)' }}>
                 <span style={{ fontSize: '1.2rem' }}>{s.icon}</span>
                 <span>{s.name}</span>
               </div>
-              <p style={{ fontSize: '0.85rem', color: '#cbd5e1', marginBottom: '0.4rem' }}>
+              <p style={{ fontSize: '0.85rem', color: 'var(--text-main)', marginBottom: '0.4rem' }}>
                 {s.use}
               </p>
               <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>

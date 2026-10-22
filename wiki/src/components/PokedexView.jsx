@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { Search, BookOpen, Sparkles, Filter, X } from 'lucide-react';
+import { Search, BookOpen, X } from 'lucide-react';
 import { pokedexData } from '../data/pokedexData';
 
 const ALL_TYPES = [
@@ -76,7 +76,7 @@ export default function PokedexView({ searchTargetMon }) {
           position: 'relative',
           flex: 1,
           minWidth: '240px',
-          background: 'rgba(255, 255, 255, 0.05)',
+          background: 'var(--bg-card)',
           border: '1px solid var(--border-color)',
           borderRadius: 'var(--radius-md)',
           display: 'flex',
@@ -95,7 +95,7 @@ export default function PokedexView({ searchTargetMon }) {
               background: 'transparent',
               border: 'none',
               outline: 'none',
-              color: '#fff',
+              color: 'var(--text-heading)',
               fontSize: '0.95rem',
               fontFamily: 'inherit'
             }}
@@ -184,7 +184,7 @@ export default function PokedexView({ searchTargetMon }) {
               </div>
 
               {/* Name */}
-              <h3 style={{ fontSize: '1rem', fontWeight: 800, textAlign: 'center', color: '#fff', marginBottom: '0.25rem' }}>
+              <h3 style={{ fontSize: '1rem', fontWeight: 800, textAlign: 'center', color: 'var(--text-heading)', marginBottom: '0.25rem' }}>
                 {mon.name}
               </h3>
 
@@ -194,7 +194,7 @@ export default function PokedexView({ searchTargetMon }) {
                 color: 'var(--text-muted)',
                 textAlign: 'center',
                 lineHeight: '1.3',
-                background: 'rgba(255, 255, 255, 0.03)',
+                background: 'var(--bg-subtle)',
                 width: '100%',
                 padding: '4px 6px',
                 borderRadius: '6px',
@@ -223,7 +223,7 @@ export default function PokedexView({ searchTargetMon }) {
               <button
                 type="button"
                 onClick={() => setSelectedMonModal(null)}
-                style={{ background: 'transparent', border: 'none', color: '#fff', cursor: 'pointer' }}
+                style={{ background: 'transparent', border: 'none', color: 'var(--text-heading)', cursor: 'pointer' }}
               >
                 <X size={20} />
               </button>
@@ -240,7 +240,7 @@ export default function PokedexView({ searchTargetMon }) {
               />
             </div>
 
-            <h2 style={{ fontSize: '1.5rem', fontWeight: 900, marginBottom: '0.5rem' }}>{selectedMonModal.name}</h2>
+            <h2 style={{ fontSize: '1.5rem', fontWeight: 900, marginBottom: '0.5rem', color: 'var(--text-heading)' }}>{selectedMonModal.name}</h2>
 
             <div style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center', marginBottom: '1.25rem' }}>
               {selectedMonModal.type.map((t) => (
@@ -251,7 +251,7 @@ export default function PokedexView({ searchTargetMon }) {
             </div>
 
             <div style={{
-              background: 'rgba(255, 255, 255, 0.04)',
+              background: 'var(--bg-subtle)',
               borderRadius: 'var(--radius-md)',
               padding: '1rem',
               textAlign: 'left',
@@ -259,23 +259,15 @@ export default function PokedexView({ searchTargetMon }) {
               border: '1px solid var(--border-color)',
               marginBottom: '1rem'
             }}>
-              <strong style={{ color: '#ef4444' }}>Método de Evolução: </strong>
-              <div style={{ marginTop: '0.25rem', color: '#cbd5e1' }}>{selectedMonModal.evo}</div>
+              <strong style={{ color: 'var(--primary)' }}>Método de Evolução: </strong>
+              <div style={{ marginTop: '0.25rem', color: 'var(--text-main)' }}>{selectedMonModal.evo}</div>
             </div>
 
             <button
               type="button"
               onClick={() => setSelectedMonModal(null)}
-              style={{
-                width: '100%',
-                background: '#ef4444',
-                color: '#fff',
-                border: 'none',
-                borderRadius: 'var(--radius-md)',
-                padding: '0.75rem',
-                fontWeight: 700,
-                cursor: 'pointer'
-              }}
+              className="btn-primary-red"
+              style={{ width: '100%' }}
             >
               Fechar
             </button>

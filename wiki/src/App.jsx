@@ -10,6 +10,7 @@ import PokedexView from './components/PokedexView';
 import RoutesView from './components/RoutesView';
 import ItemsView from './components/ItemsView';
 import ControlsView from './components/ControlsView';
+import Footer from './components/Footer';
 import { ArrowUp } from 'lucide-react';
 
 export default function App() {
@@ -17,6 +18,20 @@ export default function App() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
+
+  // Theme state: dark (default) or light
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem('wiki_theme') || 'dark';
+  });
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('wiki_theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'));
+  };
 
   // Navigation targets from search
   const [highlightChapter, setHighlightChapter] = useState(null);
@@ -133,12 +148,16 @@ export default function App() {
     <div className="app-layout">
       {/* Mobile Top Navbar */}
       <Navbar
+        theme={theme}
+        onToggleTheme={toggleTheme}
         onOpenSearch={() => setIsSearchOpen(true)}
         onToggleDrawer={() => setIsDrawerOpen((prev) => !prev)}
       />
 
       {/* Desktop Permanent Sidebar / Mobile Slide Drawer */}
       <SidebarDrawer
+        theme={theme}
+        onToggleTheme={toggleTheme}
         isOpen={isDrawerOpen}
         onClose={() => setIsDrawerOpen(false)}
         activeTab={activeTab}
@@ -187,6 +206,9 @@ export default function App() {
         {activeTab === 'items' && <ItemsView />}
 
         {activeTab === 'controls' && <ControlsView />}
+
+        {/* Bottom Page Footer with Rights and Links */}
+        <Footer />
       </main>
 
       {/* Mobile Bottom Fixed Navigation */}
@@ -205,17 +227,17 @@ export default function App() {
             position: 'fixed',
             bottom: 'calc(68px + env(safe-area-inset-bottom, 0px))',
             right: '16px',
-            width: '44px',
-            height: '44px',
+            width: '42px',
+            height: '42px',
             borderRadius: '50%',
-            background: 'rgba(239, 68, 68, 0.9)',
+            background: 'var(--primary)',
             color: '#fff',
             border: 'none',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             cursor: 'pointer',
-            boxShadow: '0 4px 14px rgba(239, 68, 68, 0.4)',
+            boxShadow: 'var(--shadow-card)',
             zIndex: 80,
             transition: 'transform 0.15s ease'
           }}

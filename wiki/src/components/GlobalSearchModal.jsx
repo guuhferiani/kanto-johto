@@ -38,12 +38,12 @@ export default function GlobalSearchModal({ isOpen, onClose, onNavigate }) {
       if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
         e.preventDefault();
         if (isOpen) onClose();
-        else onNavigate(null); // will be handled in parent
+        else onNavigate(null);
       }
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isOpen, onClose]);
+  }, [isOpen, onClose, onNavigate]);
 
   const results = useMemo(() => {
     const q = cleanStr(query.trim());
@@ -150,9 +150,9 @@ export default function GlobalSearchModal({ isOpen, onClose, onNavigate }) {
           gap: '0.75rem',
           padding: '1rem 1.25rem',
           borderBottom: '1px solid var(--border-color)',
-          background: 'rgba(255, 255, 255, 0.03)'
+          background: 'var(--bg-subtle)'
         }}>
-          <Search size={22} color="#ef4444" />
+          <Search size={20} color="var(--primary)" />
           <input
             ref={inputRef}
             type="text"
@@ -164,8 +164,8 @@ export default function GlobalSearchModal({ isOpen, onClose, onNavigate }) {
               background: 'transparent',
               border: 'none',
               outline: 'none',
-              color: '#fff',
-              fontSize: '1.05rem',
+              color: 'var(--text-heading)',
+              fontSize: '1rem',
               fontFamily: 'inherit'
             }}
           />
@@ -187,13 +187,9 @@ export default function GlobalSearchModal({ isOpen, onClose, onNavigate }) {
           <button
             type="button"
             onClick={onClose}
+            className="kbd-shortcut"
             style={{
-              background: 'rgba(255, 255, 255, 0.08)',
               border: '1px solid var(--border-color)',
-              color: 'var(--text-muted)',
-              borderRadius: '6px',
-              padding: '4px 8px',
-              fontSize: '0.75rem',
               cursor: 'pointer'
             }}
           >
@@ -205,8 +201,8 @@ export default function GlobalSearchModal({ isOpen, onClose, onNavigate }) {
         <div style={{ maxHeight: '65vh', overflowY: 'auto', padding: '1rem' }}>
           {!query.trim() && (
             <div style={{ textAlign: 'center', padding: '2rem 1rem', color: 'var(--text-muted)' }}>
-              <Zap size={32} color="#f59e0b" style={{ margin: '0 auto 0.75rem auto', opacity: 0.8 }} />
-              <p style={{ fontWeight: 600, color: '#f1f5f9', marginBottom: '0.25rem' }}>
+              <Zap size={30} color="var(--accent)" style={{ margin: '0 auto 0.75rem auto', opacity: 0.9 }} />
+              <p style={{ fontWeight: 700, color: 'var(--text-heading)', marginBottom: '0.25rem' }}>
                 Filtro Global Inteligente em Tempo Real
               </p>
               <p style={{ fontSize: '0.85rem' }}>
@@ -228,25 +224,25 @@ export default function GlobalSearchModal({ isOpen, onClose, onNavigate }) {
           )}
 
           {query.trim().length > 0 && query.trim().length < 2 && (
-            <p style={{ textAlign: 'center', padding: '2rem', color: 'var(--text-muted)', fontSize: '0.9rem' }}>
-              Digite pelo menos 2 letras para pesquisar...
-            </p>
+            <div style={{ textAlign: 'center', padding: '2rem 1rem', color: 'var(--text-muted)', fontSize: '0.9rem' }}>
+              Digite ao menos 2 caracteres para iniciar a busca...
+            </div>
           )}
 
           {results && totalResults === 0 && (
             <div style={{ textAlign: 'center', padding: '2.5rem 1rem', color: 'var(--text-muted)' }}>
-              <p style={{ fontSize: '1.05rem', color: '#f1f5f9', marginBottom: '0.5rem' }}>
-                Nenhum resultado encontrado para "<strong>{query}</strong>"
+              <p style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--text-heading)', marginBottom: '0.25rem' }}>
+                Nenhum resultado encontrado para "{query}"
               </p>
               <p style={{ fontSize: '0.85rem' }}>
-                Tente buscar sem acentos, pelo nome em inglês/português ou número da Pokédex.
+                Verifique se digitou o nome correto ou tente termos mais curtos.
               </p>
             </div>
           )}
 
           {results && totalResults > 0 && (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-              {/* Pokémon Results */}
+              {/* Pokemon Results */}
               {results.pokemon.length > 0 && (
                 <div>
                   <div style={{
@@ -256,7 +252,7 @@ export default function GlobalSearchModal({ isOpen, onClose, onNavigate }) {
                     fontSize: '0.8rem',
                     fontWeight: 700,
                     textTransform: 'uppercase',
-                    color: '#ef4444',
+                    color: 'var(--primary)',
                     marginBottom: '0.5rem'
                   }}>
                     <BookOpen size={14} />
@@ -270,25 +266,7 @@ export default function GlobalSearchModal({ isOpen, onClose, onNavigate }) {
                           onNavigate('pokedex', mon.name);
                           onClose();
                         }}
-                        style={{
-                          display: 'flex',
-                          alignItems: 'center',
-                          gap: '0.75rem',
-                          padding: '0.6rem 0.85rem',
-                          background: 'rgba(255, 255, 255, 0.03)',
-                          border: '1px solid var(--border-color)',
-                          borderRadius: 'var(--radius-md)',
-                          cursor: 'pointer',
-                          transition: 'all 0.15s ease'
-                        }}
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.background = 'rgba(239, 68, 68, 0.1)';
-                          e.currentTarget.style.borderColor = 'rgba(239, 68, 68, 0.3)';
-                        }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.background = 'rgba(255, 255, 255, 0.03)';
-                          e.currentTarget.style.borderColor = 'var(--border-color)';
-                        }}
+                        className="search-modal-item"
                       >
                         <img
                           src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${mon.num}.png`}
@@ -298,7 +276,7 @@ export default function GlobalSearchModal({ isOpen, onClose, onNavigate }) {
                         />
                         <div style={{ flex: 1, minWidth: 0 }}>
                           <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                            <span style={{ fontWeight: 700, color: '#fff', fontSize: '0.95rem' }}>
+                            <span className="search-modal-item-title">
                               #{mon.num.toString().padStart(3, '0')} {mon.name}
                             </span>
                             <div style={{ display: 'flex', gap: '4px' }}>
@@ -330,7 +308,7 @@ export default function GlobalSearchModal({ isOpen, onClose, onNavigate }) {
                     fontSize: '0.8rem',
                     fontWeight: 700,
                     textTransform: 'uppercase',
-                    color: '#f59e0b',
+                    color: 'var(--accent)',
                     marginBottom: '0.5rem'
                   }}>
                     <Trophy size={14} />
@@ -344,44 +322,27 @@ export default function GlobalSearchModal({ isOpen, onClose, onNavigate }) {
                           onNavigate('gyms', boss.id);
                           onClose();
                         }}
-                        style={{
-                          display: 'flex',
-                          alignItems: 'center',
-                          gap: '0.75rem',
-                          padding: '0.6rem 0.85rem',
-                          background: 'rgba(255, 255, 255, 0.03)',
-                          border: '1px solid var(--border-color)',
-                          borderRadius: 'var(--radius-md)',
-                          cursor: 'pointer',
-                          transition: 'all 0.15s ease'
-                        }}
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.background = 'rgba(245, 158, 11, 0.1)';
-                          e.currentTarget.style.borderColor = 'rgba(245, 158, 11, 0.3)';
-                        }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.background = 'rgba(255, 255, 255, 0.03)';
-                          e.currentTarget.style.borderColor = 'var(--border-color)';
-                        }}
+                        className="search-modal-item"
                       >
                         <div style={{
                           width: '38px',
                           height: '38px',
                           borderRadius: '8px',
-                          background: '#1e2638',
+                          background: 'var(--bg-card)',
                           display: 'flex',
                           alignItems: 'center',
                           justifyContent: 'center',
-                          fontSize: '1.2rem'
+                          fontSize: '1.2rem',
+                          border: '1px solid var(--border-color)'
                         }}>
                           {boss.badge_icon || '🥊'}
                         </div>
                         <div style={{ flex: 1, minWidth: 0 }}>
                           <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-                            <span style={{ fontWeight: 700, color: '#fff', fontSize: '0.95rem' }}>
+                            <span className="search-modal-item-title">
                               {boss.name}
                             </span>
-                            <span style={{ fontSize: '0.75rem', color: '#f59e0b', fontWeight: 600 }}>
+                            <span style={{ fontSize: '0.75rem', color: 'var(--accent)', fontWeight: 600 }}>
                               • {boss.city} ({boss.badge})
                             </span>
                           </div>
@@ -406,7 +367,7 @@ export default function GlobalSearchModal({ isOpen, onClose, onNavigate }) {
                     fontSize: '0.8rem',
                     fontWeight: 700,
                     textTransform: 'uppercase',
-                    color: '#3b82f6',
+                    color: 'var(--secondary)',
                     marginBottom: '0.5rem'
                   }}>
                     <Compass size={14} />
@@ -420,42 +381,25 @@ export default function GlobalSearchModal({ isOpen, onClose, onNavigate }) {
                           onNavigate(chap.region, chap.id);
                           onClose();
                         }}
-                        style={{
-                          display: 'flex',
-                          alignItems: 'center',
-                          gap: '0.75rem',
-                          padding: '0.6rem 0.85rem',
-                          background: 'rgba(255, 255, 255, 0.03)',
-                          border: '1px solid var(--border-color)',
-                          borderRadius: 'var(--radius-md)',
-                          cursor: 'pointer',
-                          transition: 'all 0.15s ease'
-                        }}
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.background = 'rgba(59, 130, 246, 0.1)';
-                          e.currentTarget.style.borderColor = 'rgba(59, 130, 246, 0.3)';
-                        }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.background = 'rgba(255, 255, 255, 0.03)';
-                          e.currentTarget.style.borderColor = 'var(--border-color)';
-                        }}
+                        className="search-modal-item"
                       >
                         <div style={{
                           width: '38px',
                           height: '38px',
                           borderRadius: '8px',
-                          background: chap.region === 'kanto' ? 'rgba(239, 68, 68, 0.2)' : 'rgba(59, 130, 246, 0.2)',
-                          color: chap.region === 'kanto' ? '#ef4444' : '#3b82f6',
+                          background: chap.region === 'kanto' ? 'var(--primary-subtle)' : 'rgba(37, 99, 235, 0.12)',
+                          color: chap.region === 'kanto' ? 'var(--primary)' : 'var(--secondary)',
                           display: 'flex',
                           alignItems: 'center',
                           justifyContent: 'center',
                           fontWeight: 800,
-                          fontSize: '0.85rem'
+                          fontSize: '0.85rem',
+                          border: '1px solid var(--border-color)'
                         }}>
                           {chap.region === 'kanto' ? `K${chap.num}` : `J${chap.num}`}
                         </div>
                         <div style={{ flex: 1, minWidth: 0 }}>
-                          <span style={{ fontWeight: 700, color: '#fff', fontSize: '0.92rem', display: 'block' }}>
+                          <span className="search-modal-item-title" style={{ display: 'block' }}>
                             {chap.title}
                           </span>
                           <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
@@ -493,28 +437,10 @@ export default function GlobalSearchModal({ isOpen, onClose, onNavigate }) {
                           onNavigate('routes', rt.name);
                           onClose();
                         }}
-                        style={{
-                          display: 'flex',
-                          alignItems: 'center',
-                          gap: '0.75rem',
-                          padding: '0.6rem 0.85rem',
-                          background: 'rgba(255, 255, 255, 0.03)',
-                          border: '1px solid var(--border-color)',
-                          borderRadius: 'var(--radius-md)',
-                          cursor: 'pointer',
-                          transition: 'all 0.15s ease'
-                        }}
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.background = 'rgba(16, 185, 129, 0.1)';
-                          e.currentTarget.style.borderColor = 'rgba(16, 185, 129, 0.3)';
-                        }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.background = 'rgba(255, 255, 255, 0.03)';
-                          e.currentTarget.style.borderColor = 'var(--border-color)';
-                        }}
+                        className="search-modal-item"
                       >
                         <div style={{ flex: 1, minWidth: 0 }}>
-                          <span style={{ fontWeight: 700, color: '#fff', fontSize: '0.92rem', display: 'block' }}>
+                          <span className="search-modal-item-title" style={{ display: 'block' }}>
                             {rt.name}
                           </span>
                           <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
@@ -538,7 +464,7 @@ export default function GlobalSearchModal({ isOpen, onClose, onNavigate }) {
                     fontSize: '0.8rem',
                     fontWeight: 700,
                     textTransform: 'uppercase',
-                    color: '#8b5cf6',
+                    color: 'var(--primary)',
                     marginBottom: '0.5rem'
                   }}>
                     <Gift size={14} />
@@ -552,28 +478,10 @@ export default function GlobalSearchModal({ isOpen, onClose, onNavigate }) {
                           onNavigate('items');
                           onClose();
                         }}
-                        style={{
-                          display: 'flex',
-                          alignItems: 'center',
-                          gap: '0.75rem',
-                          padding: '0.6rem 0.85rem',
-                          background: 'rgba(255, 255, 255, 0.03)',
-                          border: '1px solid var(--border-color)',
-                          borderRadius: 'var(--radius-md)',
-                          cursor: 'pointer',
-                          transition: 'all 0.15s ease'
-                        }}
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.background = 'rgba(139, 92, 246, 0.1)';
-                          e.currentTarget.style.borderColor = 'rgba(139, 92, 246, 0.3)';
-                        }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.background = 'rgba(255, 255, 255, 0.03)';
-                          e.currentTarget.style.borderColor = 'var(--border-color)';
-                        }}
+                        className="search-modal-item"
                       >
                         <div style={{ flex: 1, minWidth: 0 }}>
-                          <span style={{ fontWeight: 700, color: '#fff', fontSize: '0.92rem', display: 'block' }}>
+                          <span className="search-modal-item-title" style={{ display: 'block' }}>
                             {item.hm || item.tm || item.icon} {item.name}
                           </span>
                           <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
