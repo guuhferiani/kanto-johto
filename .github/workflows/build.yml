@@ -142,10 +142,8 @@ jobs:
             Versão oficial atualizada automaticamente a cada commit!
             
             ### 📥 Downloads:
-            - 📱 **`Pokemon_Kanto_Johto.apk`**: Aplicativo completo para celular Android (instale e jogue direto com controles touch na tela!).
             - 💻 **`Pokemon_Kanto_Johto.gba`**: Arquivo de ROM para jogar no PC ou emulador externo.
           files: |
-            dist/Pokemon_Kanto_Johto.apk
             Pokemon_Kanto_Johto.gba
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

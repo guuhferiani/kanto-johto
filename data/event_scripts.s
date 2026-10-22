@@ -1360,3 +1360,9 @@ Text_VoiceRangOutDontRunAway::
 	.include "data/maps/CinnabarIsland_House/scripts.inc"
 
 	.include "data/maps/ViridianForest_Erin_House/scripts.inc"
+
+	.include "data/maps/Route27/scripts.inc"
+
+	.include "data/maps/TohjoFalls/scripts.inc"
+
+	.include "data/maps/NewBarkTown/scripts.inc"

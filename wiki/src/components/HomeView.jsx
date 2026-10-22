@@ -1,5 +1,6 @@
 import React from 'react';
 import { Compass, Sparkles, Trophy, BookOpen, MapPin, Gift, Download, Zap, Heart, ShieldCheck, Flame } from 'lucide-react';
+import coverImg from '../assets/kanto_johto_cover.jpg';
 
 export default function HomeView({ onSelectTab, onOpenSearch }) {
   return (
@@ -8,101 +9,115 @@ export default function HomeView({ onSelectTab, onOpenSearch }) {
       <div 
         className="card"
         style={{
-          background: 'linear-gradient(135deg, rgba(239, 68, 68, 0.15) 0%, rgba(245, 158, 11, 0.1) 50%, rgba(17, 22, 34, 0.9) 100%)',
+          background: 'linear-gradient(135deg, rgba(239, 68, 68, 0.16) 0%, rgba(245, 158, 11, 0.1) 45%, rgba(17, 22, 34, 0.95) 100%)',
           borderColor: 'rgba(239, 68, 68, 0.3)',
           padding: '2rem 1.5rem',
           position: 'relative',
           overflow: 'hidden'
         }}
       >
-        <div style={{ position: 'relative', zIndex: 2, maxWidth: '750px' }}>
-          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', background: 'rgba(239, 68, 68, 0.2)', border: '1px solid rgba(239, 68, 68, 0.4)', color: '#fca5a5', padding: '0.25rem 0.75rem', borderRadius: '9999px', fontSize: '0.8rem', fontWeight: 700, marginBottom: '1rem' }}>
-            <Zap size={14} color="#fca5a5" />
-            <span>Versão Fiel a Pokémon Yellow / Let's Go</span>
+        <div className="hero-banner-grid">
+          {/* Left Column: Info & Action Buttons */}
+          <div style={{ flex: 1, minWidth: 0 }}>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', background: 'rgba(239, 68, 68, 0.2)', border: '1px solid rgba(239, 68, 68, 0.4)', color: '#fca5a5', padding: '0.25rem 0.75rem', borderRadius: '9999px', fontSize: '0.8rem', fontWeight: 700, marginBottom: '1rem' }}>
+              <Zap size={14} color="#fca5a5" />
+              <span>Versão Fiel a Pokémon Yellow / Let's Go</span>
+            </div>
+
+            <h1 style={{ fontSize: 'clamp(1.75rem, 4vw, 2.75rem)', fontWeight: 900, marginBottom: '0.75rem', letterSpacing: '-0.5px' }}>
+              Wiki & Detonado Definitivo <br />
+              <span style={{
+                background: 'linear-gradient(135deg, #f87171, #ef4444, #fbbf24)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent'
+              }}>
+                Pokémon Kanto & Johto
+              </span>
+            </h1>
+
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.98rem', lineHeight: '1.6', marginBottom: '1.5rem' }}>
+              Nesta ROM exclusiva, você começa sua jornada com o <strong>Pikachu Parceiro</strong> que anda fora da Pokébola, enquanto o rival Blue fica com o <strong>Eevee</strong>. Resgate Bulbasaur em Cerulean, Charmander na Rota 24, Squirtle de óculos em Vermilion, derrote os 16 ginásios de Kanto e Johto e desafie o lendário Red no Monte Silver!
+            </p>
+
+            <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
+              <button
+                type="button"
+                onClick={() => onSelectTab('kanto')}
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                  background: 'linear-gradient(135deg, #ef4444, #dc2626)',
+                  color: '#fff',
+                  border: 'none',
+                  borderRadius: 'var(--radius-md)',
+                  padding: '0.75rem 1.4rem',
+                  fontSize: '0.95rem',
+                  fontWeight: 700,
+                  cursor: 'pointer',
+                  boxShadow: '0 4px 14px rgba(239, 68, 68, 0.35)',
+                  transition: 'transform 0.15s ease'
+                }}
+              >
+                <Compass size={18} />
+                <span>Detonado Kanto</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => onSelectTab('johto')}
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                  background: 'linear-gradient(135deg, #3b82f6, #2563eb)',
+                  color: '#fff',
+                  border: 'none',
+                  borderRadius: 'var(--radius-md)',
+                  padding: '0.75rem 1.4rem',
+                  fontSize: '0.95rem',
+                  fontWeight: 700,
+                  cursor: 'pointer',
+                  boxShadow: '0 4px 14px rgba(59, 130, 246, 0.35)',
+                  transition: 'transform 0.15s ease'
+                }}
+              >
+                <Sparkles size={18} />
+                <span>Detonado Johto</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={onOpenSearch}
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                  background: 'rgba(255, 255, 255, 0.08)',
+                  color: '#f1f5f9',
+                  border: '1px solid var(--border-color)',
+                  borderRadius: 'var(--radius-md)',
+                  padding: '0.75rem 1.25rem',
+                  fontSize: '0.95rem',
+                  fontWeight: 600,
+                  cursor: 'pointer'
+                }}
+              >
+                <Zap size={18} color="#f59e0b" />
+                <span>Buscar Palavras (Ctrl+K)</span>
+              </button>
+            </div>
           </div>
 
-          <h1 style={{ fontSize: 'clamp(1.75rem, 4vw, 2.75rem)', fontWeight: 900, marginBottom: '0.75rem', letterSpacing: '-0.5px' }}>
-            Wiki & Detonado Definitivo <br />
-            <span style={{
-              background: 'linear-gradient(135deg, #f87171, #ef4444, #fbbf24)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent'
-            }}>
-              Pokémon Kanto & Johto
-            </span>
-          </h1>
-
-          <p style={{ color: 'var(--text-muted)', fontSize: '1rem', lineHeight: '1.6', marginBottom: '1.5rem' }}>
-            Nesta ROM exclusiva, você começa sua jornada com o <strong>Pikachu Parceiro</strong> que anda fora da Pokébola, enquanto o rival Blue fica com o <strong>Eevee</strong>. Resgate Bulbasaur em Cerulean, Charmander na Rota 24, Squirtle de óculos em Vermilion, derrote os 16 ginásios de Kanto e Johto e desafie o lendário Red no Monte Silver!
-          </p>
-
-          <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
-            <button
-              type="button"
-              onClick={() => onSelectTab('kanto')}
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '0.5rem',
-                background: 'linear-gradient(135deg, #ef4444, #dc2626)',
-                color: '#fff',
-                border: 'none',
-                borderRadius: 'var(--radius-md)',
-                padding: '0.75rem 1.4rem',
-                fontSize: '0.95rem',
-                fontWeight: 700,
-                cursor: 'pointer',
-                boxShadow: '0 4px 14px rgba(239, 68, 68, 0.35)',
-                transition: 'transform 0.15s ease'
-              }}
-            >
-              <Compass size={18} />
-              <span>Detonado Kanto</span>
-            </button>
-
-            <button
-              type="button"
-              onClick={() => onSelectTab('johto')}
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '0.5rem',
-                background: 'linear-gradient(135deg, #3b82f6, #2563eb)',
-                color: '#fff',
-                border: 'none',
-                borderRadius: 'var(--radius-md)',
-                padding: '0.75rem 1.4rem',
-                fontSize: '0.95rem',
-                fontWeight: 700,
-                cursor: 'pointer',
-                boxShadow: '0 4px 14px rgba(59, 130, 246, 0.35)',
-                transition: 'transform 0.15s ease'
-              }}
-            >
-              <Sparkles size={18} />
-              <span>Detonado Johto</span>
-            </button>
-
-            <button
-              type="button"
-              onClick={onOpenSearch}
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '0.5rem',
-                background: 'rgba(255, 255, 255, 0.08)',
-                color: '#f1f5f9',
-                border: '1px solid var(--border-color)',
-                borderRadius: 'var(--radius-md)',
-                padding: '0.75rem 1.25rem',
-                fontSize: '0.95rem',
-                fontWeight: 600,
-                cursor: 'pointer'
-              }}
-            >
-              <Zap size={18} color="#f59e0b" />
-              <span>Buscar Palavras (Ctrl+K)</span>
-            </button>
+          {/* Right Column: Game Cover Artwork */}
+          <div className="hero-cover-wrapper">
+            <div className="hero-cover-glow" />
+            <img 
+              src={coverImg} 
+              alt="Capa Oficial Pokémon Kanto & Johto" 
+              className="hero-cover-img"
+              loading="eager"
+            />
           </div>
         </div>
       </div>
@@ -115,7 +130,7 @@ export default function HomeView({ onSelectTab, onOpenSearch }) {
         marginBottom: '1.5rem'
       }}>
         <div className="card" style={{ padding: '1.25rem', textAlign: 'center', margin: 0 }}>
-          <div style={{ fontSize: '2rem', fontWeight: 900, color: '#ef4444', fontFamily: 'var(--font-heading)' }}>251</div>
+          <div style={{ fontSize: '2rem', fontWeight: 900, color: '#ef4444', fontFamily: 'var(--font-heading)' }}>256</div>
           <div style={{ color: 'var(--text-muted)', fontSize: '0.85rem', fontWeight: 600 }}>Pokémon Nacionais</div>
         </div>
         <div className="card" style={{ padding: '1.25rem', textAlign: 'center', margin: 0 }}>

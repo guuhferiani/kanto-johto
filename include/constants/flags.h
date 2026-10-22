@@ -233,9 +233,9 @@
 #define FLAG_DEFEATED_LEADER_CLAIR          0xD6
 #define FLAG_DEFEATED_ALL_JOHTO_LEADERS     0xD7
 #define FLAG_RECEIVED_JOHTO_HALL_REWARD     0xD8
-#define FLAG_UNUSED_0x0D9      				0xD9
-#define FLAG_UNUSED_0x0DA           		0xDA
-#define FLAG_UNUSED_0x0DB        			0xDB
+#define FLAG_UNLOCKED_JOHTO_JOURNEY         0xD9
+#define FLAG_RECEIVED_TM27                  0xDA
+#define FLAG_ITEM_TOHJO_FALLS_MOON_STONE    0xDB
 #define FLAG_UNUSED_0x0DC                 	0xDC 
 #define FLAG_UNUSED_0x0DD             		0xDD
 #define FLAG_UNUSED_0x0DE         			0xDE

@@ -43,7 +43,7 @@ export default function PokedexView({ searchTargetMon }) {
       .replace(/[\u0300-\u036f]/g, '')
       .toLowerCase();
 
-    return pokedexData.filter((mon) => {
+    return pokedexData.filter((mon) => { 
       const cleanName = mon.name
         .normalize('NFD')
         .replace(/[\u0300-\u036f]/g, '')
@@ -60,7 +60,7 @@ export default function PokedexView({ searchTargetMon }) {
       <div style={{ marginBottom: '1.25rem' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#ef4444', fontWeight: 700, fontSize: '0.9rem', marginBottom: '0.4rem' }}>
           <BookOpen size={18} />
-          <span>Enciclopédia Completa dos 251 Monstros</span>
+          <span>Enciclopédia Completa dos {pokedexData.length} Monstros</span>
         </div>
         <h1 style={{ fontSize: 'clamp(1.5rem, 3.5vw, 2.25rem)', fontWeight: 800, marginBottom: '0.5rem' }}>
           Pokédex Nacional de Kanto & Johto

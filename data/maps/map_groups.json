@@ -553,7 +553,9 @@
     "Route24",
     "Route25",
     "IndigoPlateau_Exterior",
-    "BattleTower_Exterior"
+    "BattleTower_Exterior",
+    "Route27",
+    "NewBarkTown"
   ],
   "gMapGroup_Dungeons": [
     "VictoryRoad_1F",
@@ -637,7 +639,8 @@
     "SeafoamIslands_B2F",
     "SeafoamIslands_B3F",
     "SeafoamIslands_B4F",
-    "VictoryRoad_MoltresCave"
+    "VictoryRoad_MoltresCave",
+    "TohjoFalls"
   ],
   "gMapGroup_SpecialArea": [
     "SafariZone_Center",

@@ -1146,12 +1146,65 @@ PalletTown_ProfessorOaksLab_EventScript_ProfOak::
 	end
 
 PalletTown_ProfessorOaksLab_EventScript_HelloChampion::
+	lock
+	faceplayer
+	goto_if_unset FLAG_UNLOCKED_JOHTO_JOURNEY, PalletTown_ProfessorOaksLab_EventScript_UnlockJohtoScene
 	msgbox PalletTown_ProfessorOaksLab_WonderfulToSeeYou, MSGBOX_NPC
 	waitmessage
 	goto_if_unset FLAG_DEFEATED_SECRET_BATTLE, PalletTown_ProfessorOaksLab_EventScript_NoE42
 	clearflag FLAG_OAK_ADVENTURE_AWAITS
 	release
 	end
+
+PalletTown_ProfessorOaksLab_EventScript_UnlockJohtoScene::
+	msgbox PalletTown_ProfessorOaksLab_Text_OakJohtoIntro, MSGBOX_DEFAULT
+	playfanfare MUS_RG_OBTAIN_KEY_ITEM
+	msgbox PalletTown_ProfessorOaksLab_Text_ReceivedJohtoPass, MSGBOX_DEFAULT
+	waitfanfare
+	closemessage
+	setflag FLAG_UNLOCKED_JOHTO_JOURNEY
+	clearflag FLAG_OAK_ADVENTURE_AWAITS
+	msgbox PalletTown_ProfessorOaksLab_Text_OakJohtoAdvice, MSGBOX_DEFAULT
+	release
+	end
+
+PalletTown_ProfessorOaksLab_Text_OakJohtoIntro:
+	.string "Professor Carvalho: Campeao {PLAYER}!\n"
+	.string "Que alegria imensa ver voce aqui!\p"
+	.string "Sua vitoria monumental no Planalto\n"
+	.string "Indigo ecoou por todo o mundo Pokemon!\p"
+	.string "Mas um verdadeiro mestre nunca descansa...\p"
+	.string "{RIVAL} esteve aqui no meu laboratorio\n"
+	.string "mais cedo. Furioso pela derrota, ele\l"
+	.string "partiu para uma nova regiao ao oeste:\l"
+	.string "a lendaria regiao de Johto!\p"
+	.string "Ele jurou conquistar as 8 Insignias de\n"
+	.string "Johto e te desafiar para uma grande revanche!\p"
+	.string "E alem disso... Meu estimado colega,\n"
+	.string "o Professor Elm de New Bark Town,\l"
+	.string "enviou uma mensagem urgente pedindo nossa\l"
+	.string "ajuda para investigar novas especies!\p"
+	.string "Como seu mentor, preparei sua autorizacao\n"
+	.string "oficial para essa nova jornada!$"
+
+PalletTown_ProfessorOaksLab_Text_ReceivedJohtoPass:
+	.string "{PLAYER} recebeu a Permissao da Fronteira\n"
+	.string "e o Passe Oficial de Johto!$"
+
+PalletTown_ProfessorOaksLab_Text_OakJohtoAdvice:
+	.string "Professor Carvalho: Com essa permissao,\n"
+	.string "os guardas da fronteira na Rota 22\l"
+	.string "liberarao sua passagem rumo a Rota 26\l"
+	.string "e as famosas Cachoeiras de Tohjo!\p"
+	.string "Atravessando a caverna das cachoeiras,\n"
+	.string "voce chegara diretamente em Johto,\l"
+	.string "na pacata cidade de New Bark Town!\p"
+	.string "Ou, se preferir o oceano, o navio\n"
+	.string "S.S. Aqua no porto de Vermilion City\l"
+	.string "tambem estara pronto para a travessia!\p"
+	.string "Va em frente, {PLAYER}!\n"
+	.string "Mostre a toda a regiao de Johto o\l"
+	.string "poder e a coragem do Campeao de Kanto!$"
 
 PalletTown_ProfessorOaksLab_WonderfulToSeeYou:
 	.string "Campeao {PLAYER}!\n"
