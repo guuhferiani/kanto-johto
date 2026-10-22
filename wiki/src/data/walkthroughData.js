@@ -33,7 +33,7 @@ export const kantoChapters = [
     subtitle: "Superando a fraqueza de Pikachu contra o tipo Pedra/Terra",
     banner: "graphics/cities/viridian_forest_banner.jpg",
     badges: [
-      { text: "🪨 Ginásio de Pewter (Brock)", type: "rock" },
+      { text: "⛰️ Ginásio de Pewter (Brock)", type: "rock" },
       { text: "🐒 Mankey na Rota 22 (Low Kick)", type: "fight" },
       { text: "🦋 Butterfree na Floresta (Confusion)", type: "bug" }
     ],
@@ -244,7 +244,7 @@ export const johtoChapters = [
     badges: [
       { text: "🚢 S.S. Aqua de Vermilion", type: "water" },
       { text: "🔔 Sprout Tower & Flash", type: "normal" },
-      { text: "🪶 Ginásio de Falkner (Nível 60)", type: "flying" }
+      { text: "🦅 Ginásio de Falkner (Nível 60)", type: "flying" }
     ],
     content: [
       {
@@ -270,7 +270,7 @@ export const johtoChapters = [
     badges: [
       { text: "🦛 Poço Slowpoke Libertado", type: "water" },
       { text: "🏹 Kurt & Apricorn Balls Especiais", type: "grass" },
-      { text: "🪲 Ginásio de Bugsy (Scizor Lv 62)", type: "bug" }
+      { text: "🐝 Ginásio de Bugsy (Scizor Lv 62)", type: "bug" }
     ],
     content: [
       {
