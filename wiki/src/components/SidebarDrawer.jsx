@@ -101,8 +101,7 @@ export default function SidebarDrawer({
             }}
           >
             <Search size={16} />
-            <span>Buscar palavras...</span>
-            <span className="kbd-shortcut">Ctrl+K</span>
+            <span>Buscar na Wiki...</span>
           </button>
         </div>
 

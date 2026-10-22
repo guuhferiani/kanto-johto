@@ -70,7 +70,7 @@ export default function HomeView({ onSelectTab, onOpenSearch }) {
                 className="btn-subtle"
               >
                 <Search size={17} color="var(--primary)" />
-                <span>Buscar Palavras (Ctrl+K)</span>
+                <span>Buscar na Wiki</span>
               </button>
             </div>
           </div>
