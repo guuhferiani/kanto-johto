@@ -60,14 +60,40 @@ export default function SidebarDrawer({
           borderBottom: '1px solid var(--border-color)',
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'space-between'
+          justifyContent: 'space-between',
+          gap: '0.5rem'
         }}>
           <div className="brand-title">
             <Zap size={22} color="var(--primary)" fill="var(--primary)" />
             <span>Kanto & Johto</span>
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
+            {/* Desktop & Drawer Theme Toggle Icon */}
+            <button
+              type="button"
+              onClick={onToggleTheme}
+              aria-label={theme === 'dark' ? 'Ativar Modo Claro' : 'Ativar Modo Escuro'}
+              title={theme === 'dark' ? 'Modo Claro' : 'Modo Escuro'}
+              style={{
+                background: 'var(--bg-subtle)',
+                border: '1px solid var(--border-color)',
+                color: 'var(--text-heading)',
+                borderRadius: 'var(--radius-md)',
+                width: '34px',
+                height: '34px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                cursor: 'pointer',
+                transition: 'border-color 0.15s ease, background-color 0.15s ease'
+              }}
+              onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'var(--primary)'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'var(--border-color)'; }}
+            >
+              {theme === 'dark' ? <Sun size={17} color="var(--accent)" /> : <Moon size={17} color="var(--primary)" />}
+            </button>
+
             <button 
               type="button"
               onClick={onClose}
@@ -90,7 +116,7 @@ export default function SidebarDrawer({
         </div>
 
         {/* Universal Search Bar Trigger in Sidebar */}
-        <div style={{ padding: '0.85rem 1rem 0.4rem 1rem' }}>
+        <div style={{ padding: '0.85rem 1rem 0.5rem 1rem' }}>
           <button 
             type="button"
             className="search-trigger-btn"
@@ -102,19 +128,6 @@ export default function SidebarDrawer({
           >
             <Search size={16} />
             <span>Buscar na Wiki...</span>
-          </button>
-        </div>
-
-        {/* Theme Toggle Button in Sidebar */}
-        <div style={{ padding: '0.25rem 1rem 0.5rem 1rem' }}>
-          <button
-            type="button"
-            onClick={onToggleTheme}
-            className="theme-toggle-btn"
-            style={{ width: '100%', justifyContent: 'flex-start', padding: '0.6rem 0.85rem' }}
-          >
-            {theme === 'dark' ? <Sun size={17} color="var(--accent)" /> : <Moon size={17} color="var(--primary)" />}
-            <span>{theme === 'dark' ? 'Alternar para Modo Claro' : 'Alternar para Modo Escuro'}</span>
           </button>
         </div>
 
