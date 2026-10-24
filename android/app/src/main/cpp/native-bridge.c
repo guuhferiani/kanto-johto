@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdbool.h>
+#include <dlfcn.h>
 #include <android/log.h>
 #include "libretro.h"
 
@@ -13,7 +14,39 @@
 #define GBA_WIDTH  240
 #define GBA_HEIGHT 160
 
-// Global state
+// Dynamic libretro function pointers
+typedef void (*retro_init_t)(void);
+typedef void (*retro_deinit_t)(void);
+typedef void (*retro_set_environment_t)(retro_environment_t);
+typedef void (*retro_set_video_refresh_t)(retro_video_refresh_t);
+typedef void (*retro_set_audio_sample_t)(retro_audio_sample_t);
+typedef void (*retro_set_audio_sample_batch_t)(retro_audio_sample_batch_t);
+typedef void (*retro_set_input_poll_t)(retro_input_poll_t);
+typedef void (*retro_set_input_state_t)(retro_input_state_t);
+typedef bool (*retro_load_game_t)(const struct retro_game_info *);
+typedef void (*retro_unload_game_t)(void);
+typedef void (*retro_get_system_av_info_t)(struct retro_system_av_info *);
+typedef void (*retro_run_t)(void);
+typedef void *(*retro_get_memory_data_t)(unsigned);
+typedef size_t (*retro_get_memory_size_t)(unsigned);
+
+static void *sCoreHandle = NULL;
+static retro_init_t p_retro_init = NULL;
+static retro_deinit_t p_retro_deinit = NULL;
+static retro_set_environment_t p_retro_set_environment = NULL;
+static retro_set_video_refresh_t p_retro_set_video_refresh = NULL;
+static retro_set_audio_sample_t p_retro_set_audio_sample = NULL;
+static retro_set_audio_sample_batch_t p_retro_set_audio_sample_batch = NULL;
+static retro_set_input_poll_t p_retro_set_input_poll = NULL;
+static retro_set_input_state_t p_retro_set_input_state = NULL;
+static retro_load_game_t p_retro_load_game = NULL;
+static retro_unload_game_t p_retro_unload_game = NULL;
+static retro_get_system_av_info_t p_retro_get_system_av_info = NULL;
+static retro_run_t p_retro_run = NULL;
+static retro_get_memory_data_t p_retro_get_memory_data = NULL;
+static retro_get_memory_size_t p_retro_get_memory_size = NULL;
+
+// Global engine state
 static uint32_t sVideoBuffer[GBA_WIDTH * GBA_HEIGHT];
 static int16_t sAudioBuffer[4096 * 2];
 static size_t sAudioBufferCount = 0;
@@ -97,7 +130,6 @@ static size_t audio_sample_batch_callback(const int16_t *data, size_t frames)
 
 static void input_poll_callback(void)
 {
-    // Polled via sKeyMask updated from Java
 }
 
 static int16_t input_state_callback(unsigned port, unsigned device, unsigned index, unsigned id)
@@ -138,8 +170,9 @@ static bool environment_callback(unsigned cmd, void *data)
 
 static void load_sram(void)
 {
-    void *sram = retro_get_memory_data(RETRO_MEMORY_SAVE_RAM);
-    size_t sram_size = retro_get_memory_size(RETRO_MEMORY_SAVE_RAM);
+    if (!p_retro_get_memory_data || !p_retro_get_memory_size) return;
+    void *sram = p_retro_get_memory_data(RETRO_MEMORY_SAVE_RAM);
+    size_t sram_size = p_retro_get_memory_size(RETRO_MEMORY_SAVE_RAM);
     if (!sram || sram_size == 0 || sSavePath[0] == '\0')
         return;
 
@@ -154,8 +187,9 @@ static void load_sram(void)
 
 static void save_sram(void)
 {
-    void *sram = retro_get_memory_data(RETRO_MEMORY_SAVE_RAM);
-    size_t sram_size = retro_get_memory_size(RETRO_MEMORY_SAVE_RAM);
+    if (!p_retro_get_memory_data || !p_retro_get_memory_size) return;
+    void *sram = p_retro_get_memory_data(RETRO_MEMORY_SAVE_RAM);
+    size_t sram_size = p_retro_get_memory_size(RETRO_MEMORY_SAVE_RAM);
     if (!sram || sram_size == 0 || sSavePath[0] == '\0')
         return;
 
@@ -169,14 +203,14 @@ static void save_sram(void)
 }
 
 // JNI exports
-JNIEXPORT jboolean JNICALL
-Java_com_antigravity_pokemonkantojohto_GBAEngine_nativeInit(JNIEnv *env, jclass clazz, jbyteArray romBytes, jstring savePath)
+JNIEXPORT jstring JNICALL
+Java_com_antigravity_pokemonkantojohto_GBAEngine_nativeInit(JNIEnv *env, jclass clazz, jbyteArray romBytes, jstring savePath, jstring nativeLibDir)
 {
     if (sInitialized)
     {
         save_sram();
-        retro_unload_game();
-        retro_deinit();
+        if (p_retro_unload_game) p_retro_unload_game();
+        if (p_retro_deinit) p_retro_deinit();
         sInitialized = false;
     }
 
@@ -187,14 +221,67 @@ Java_com_antigravity_pokemonkantojohto_GBAEngine_nativeInit(JNIEnv *env, jclass 
         (*env)->ReleaseStringUTFChars(env, savePath, path);
     }
 
-    retro_set_environment(environment_callback);
-    retro_set_video_refresh(video_refresh_callback);
-    retro_set_audio_sample(audio_sample_callback);
-    retro_set_audio_sample_batch(audio_sample_batch_callback);
-    retro_set_input_poll(input_poll_callback);
-    retro_set_input_state(input_state_callback);
+    // 1. Dynamically load libmgba_libretro.so via dlopen
+    if (!sCoreHandle)
+    {
+        char candidate_path[1024] = {0};
+        if (nativeLibDir)
+        {
+            const char *dir = (*env)->GetStringUTFChars(env, nativeLibDir, NULL);
+            snprintf(candidate_path, sizeof(candidate_path), "%s/libmgba_libretro.so", dir);
+            (*env)->ReleaseStringUTFChars(env, nativeLibDir, dir);
+            sCoreHandle = dlopen(candidate_path, RTLD_NOW);
+            LOGI("dlopen candidate '%s' result: %p", candidate_path, sCoreHandle);
+        }
 
-    retro_init();
+        if (!sCoreHandle)
+        {
+            sCoreHandle = dlopen("libmgba_libretro.so", RTLD_NOW);
+            LOGI("dlopen default 'libmgba_libretro.so' result: %p", sCoreHandle);
+        }
+
+        if (!sCoreHandle)
+        {
+            const char *err = dlerror();
+            LOGE("Failed to dlopen libmgba_libretro.so: %s", err ? err : "unknown error");
+            char msg[512];
+            snprintf(msg, sizeof(msg), "dlopen falhou ao carregar libmgba_libretro.so: %s", err ? err : "não encontrado");
+            return (*env)->NewStringUTF(env, msg);
+        }
+
+        #define LOAD_SYM(name) \
+            p_##name = (name##_t)dlsym(sCoreHandle, #name); \
+            if (!p_##name) { \
+                char err_buf[256]; \
+                snprintf(err_buf, sizeof(err_buf), "Simbolo nao encontrado no core: %s", #name); \
+                return (*env)->NewStringUTF(env, err_buf); \
+            }
+
+        LOAD_SYM(retro_init);
+        LOAD_SYM(retro_deinit);
+        LOAD_SYM(retro_set_environment);
+        LOAD_SYM(retro_set_video_refresh);
+        LOAD_SYM(retro_set_audio_sample);
+        LOAD_SYM(retro_set_audio_sample_batch);
+        LOAD_SYM(retro_set_input_poll);
+        LOAD_SYM(retro_set_input_state);
+        LOAD_SYM(retro_load_game);
+        LOAD_SYM(retro_unload_game);
+        LOAD_SYM(retro_get_system_av_info);
+        LOAD_SYM(retro_run);
+        LOAD_SYM(retro_get_memory_data);
+        LOAD_SYM(retro_get_memory_size);
+        #undef LOAD_SYM
+    }
+
+    p_retro_set_environment(environment_callback);
+    p_retro_set_video_refresh(video_refresh_callback);
+    p_retro_set_audio_sample(audio_sample_callback);
+    p_retro_set_audio_sample_batch(audio_sample_batch_callback);
+    p_retro_set_input_poll(input_poll_callback);
+    p_retro_set_input_state(input_state_callback);
+
+    p_retro_init();
 
     jsize rom_len = (*env)->GetArrayLength(env, romBytes);
     jbyte *rom_data = (*env)->GetByteArrayElements(env, romBytes, NULL);
@@ -206,24 +293,24 @@ Java_com_antigravity_pokemonkantojohto_GBAEngine_nativeInit(JNIEnv *env, jclass 
         .meta = ""
     };
 
-    bool loaded = retro_load_game(&game_info);
+    bool loaded = p_retro_load_game(&game_info);
     (*env)->ReleaseByteArrayElements(env, romBytes, rom_data, JNI_ABORT);
 
     if (!loaded)
     {
         LOGE("Failed to load ROM via retro_load_game!");
-        retro_deinit();
-        return JNI_FALSE;
+        p_retro_deinit();
+        return (*env)->NewStringUTF(env, "retro_load_game falhou ao inicializar a ROM.");
     }
 
     struct retro_system_av_info av_info;
-    retro_get_system_av_info(&av_info);
+    p_retro_get_system_av_info(&av_info);
     sSampleRate = av_info.timing.sample_rate;
     LOGI("mGBA initialized successfully! Target FPS: %f, Sample Rate: %f", av_info.timing.fps, sSampleRate);
 
     load_sram();
     sInitialized = true;
-    return JNI_TRUE;
+    return NULL; // Success!
 }
 
 JNIEXPORT void JNICALL
@@ -235,10 +322,10 @@ Java_com_antigravity_pokemonkantojohto_GBAEngine_nativeSetKeys(JNIEnv *env, jcla
 JNIEXPORT jint JNICALL
 Java_com_antigravity_pokemonkantojohto_GBAEngine_nativeStepFrame(JNIEnv *env, jclass clazz, jintArray videoBuffer, jshortArray audioBuffer)
 {
-    if (!sInitialized) return 0;
+    if (!sInitialized || !p_retro_run) return 0;
 
     sAudioBufferCount = 0;
-    retro_run();
+    p_retro_run();
 
     if (videoBuffer)
     {
@@ -272,8 +359,8 @@ Java_com_antigravity_pokemonkantojohto_GBAEngine_nativeDestroy(JNIEnv *env, jcla
     if (sInitialized)
     {
         save_sram();
-        retro_unload_game();
-        retro_deinit();
+        if (p_retro_unload_game) p_retro_unload_game();
+        if (p_retro_deinit) p_retro_deinit();
         sInitialized = false;
         LOGI("mGBA unloaded cleanly.");
     }

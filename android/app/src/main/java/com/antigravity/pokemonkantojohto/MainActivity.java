@@ -40,12 +40,17 @@ public class MainActivity extends Activity {
             // 2. Setup internal save path
             File saveFile = new File(getFilesDir(), "Pokemon_Kanto_Johto.sav");
             String savePath = saveFile.getAbsolutePath();
+            String nativeLibDir = getApplicationInfo().nativeLibraryDir;
 
             // 3. Initialize native mGBA engine
-            boolean ok = GBAEngine.nativeInit(romBytes, savePath);
-            if (!ok) {
-                Toast.makeText(this, "Erro ao inicializar o motor nativo mGBA!", Toast.LENGTH_LONG).show();
-                finish();
+            String initError = GBAEngine.nativeInit(romBytes, savePath, nativeLibDir);
+            if (initError != null) {
+                new android.app.AlertDialog.Builder(this)
+                        .setTitle("Erro")
+                        .setMessage("Falha ao iniciar motor nativo:\n" + initError)
+                        .setPositiveButton("Fechar", (dialog, which) -> finish())
+                        .setCancelable(false)
+                        .show();
                 return;
             }
 

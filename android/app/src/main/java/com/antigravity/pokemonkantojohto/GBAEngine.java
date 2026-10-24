@@ -16,19 +16,10 @@ public class GBAEngine {
     public static final int KEY_R      = 11;
 
     static {
-        try {
-            System.loadLibrary("mgba_libretro");
-        } catch (Throwable t) {
-            android.util.Log.e("GBA-Engine", "Error loading libmgba_libretro.so: " + t.getMessage(), t);
-        }
-        try {
-            System.loadLibrary("gba-native");
-        } catch (Throwable t) {
-            android.util.Log.e("GBA-Engine", "Error loading libgba-native.so: " + t.getMessage(), t);
-        }
+        System.loadLibrary("gba-native");
     }
 
-    public static native boolean nativeInit(byte[] romBytes, String savePath);
+    public static native String nativeInit(byte[] romBytes, String savePath, String nativeLibDir);
     public static native void nativeSetKeys(int keyMask);
     public static native int nativeStepFrame(int[] videoBuffer, short[] audioBuffer);
     public static native void nativeSave();
