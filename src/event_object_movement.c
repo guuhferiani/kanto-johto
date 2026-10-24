@@ -5550,6 +5550,17 @@ bool8 MovementType_FollowPlayer_Active(struct ObjectEvent *objectEvent, struct S
       sprite->data[1] = 2; // movement action sets state to 0
       return TRUE;
     }
+    {
+        s16 deltaX = objectEvent->currentCoords.x - gObjectEvents[gPlayerAvatar.objectEventId].currentCoords.x;
+        s16 deltaY = objectEvent->currentCoords.y - gObjectEvents[gPlayerAvatar.objectEventId].currentCoords.y;
+        if (deltaX < 0) deltaX = -deltaX;
+        if (deltaY < 0) deltaY = -deltaY;
+        if (deltaX + deltaY > 2)
+        {
+            MoveObjectEventToMapCoords(objectEvent, gObjectEvents[gPlayerAvatar.objectEventId].previousCoords.x, gObjectEvents[gPlayerAvatar.objectEventId].previousCoords.y);
+            ClearObjectEventMovement(objectEvent, sprite);
+        }
+    }
     // TODO: Remove dependence on PlayerGetCopyableMovement
     return gFollowPlayerMovementFuncs[PlayerGetCopyableMovement()](objectEvent, sprite, GetPlayerMovementDirection(), NULL);
 }
@@ -5738,18 +5749,22 @@ bool8 FollowablePlayerMovement_GoSpeed4(struct ObjectEvent *objectEvent, struct 
 
 bool8 FollowablePlayerMovement_Jump(struct ObjectEvent *objectEvent, struct Sprite *sprite, u8 playerDirection, bool8 tileCallback(u8))
 {
-    u32 direction;
-    s16 x;
-    s16 y;
+    s16 targetX = gObjectEvents[gPlayerAvatar.objectEventId].previousCoords.x;
+    s16 targetY = gObjectEvents[gPlayerAvatar.objectEventId].previousCoords.y;
+    s16 x = objectEvent->currentCoords.x;
+    s16 y = objectEvent->currentCoords.y;
 
-    direction = playerDirection;
-    x = objectEvent->currentCoords.x;
-    y = objectEvent->currentCoords.y;
-    MoveCoordsInDirection(direction, &x, &y, 2, 2);
-    ObjectEventSetSingleMovement(objectEvent, sprite, GetJump2MovementAction(direction));
-    objectEvent->singleMovementActive = TRUE;
-    sprite->data[1] = 2;
-    return TRUE;
+    if (x == targetX && y == targetY)
+    {
+        ObjectEventSetSingleMovement(objectEvent, sprite, GetJump2MovementAction(playerDirection));
+        objectEvent->singleMovementActive = TRUE;
+        sprite->data[1] = 2;
+        return TRUE;
+    }
+    else
+    {
+        return FollowablePlayerMovement_Step(objectEvent, sprite, playerDirection, tileCallback);
+    }
 }
 
 movement_type_def(MovementType_CopyPlayerInGrass, gMovementTypeFuncs_CopyPlayerInGrass)

@@ -17,11 +17,6 @@
       "direction": "right",
       "offset": -10,
       "map": "MAP_CERULEAN_CITY"
-    },
-    {
-      "direction": "down",
-      "offset": -60,
-      "map": "MAP_ROUTE3"
     }
   ],
   "object_events": [

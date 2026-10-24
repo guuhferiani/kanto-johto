@@ -637,6 +637,7 @@ static void CreateStartMenuTask(TaskFunc followupFunc)
 
     sInitStartMenuData[0] = 0;
     sInitStartMenuData[1] = 0;
+    sStartMenuScrollArrowTaskId = TASK_NONE;
     taskId = CreateTask(StartMenuTask, 0x50);
     SetTaskFuncWithFollowupFunc(taskId, StartMenuTask, followupFunc);
 }
@@ -656,6 +657,7 @@ void ShowReturnToFieldStartMenu(void)
 {
     sInitStartMenuData[0] = 0;
     sInitStartMenuData[1] = 0;
+    sStartMenuScrollArrowTaskId = TASK_NONE;
     gFieldCallback2 = FieldCB_ReturnToFieldStartMenu;
 }
 
@@ -1007,6 +1009,7 @@ static bool8 StartMenuBattlePyramidBagCallback(void)
 
 static bool8 SaveStartCallback(void)
 {
+    RemoveStartMenuScrollArrows();
     InitSave();
     gMenuCallback = SaveCallback;
 
@@ -1026,6 +1029,7 @@ static bool8 SaveCallback(void)
         return FALSE;
     case SAVE_SUCCESS:
     case SAVE_ERROR:    // Close start menu
+        RemoveStartMenuScrollArrows();
         ClearDialogWindowAndFrameToTransparent(0, TRUE);
         ScriptUnfreezeObjectEvents();
         ScriptContext2_Disable();
@@ -1641,6 +1645,14 @@ void AppendToList(u8 *list, u8 *pos, u8 newEntry)
 
 static bool8 StartMenuDexNavCallback(void)
 {
-    CreateTask(Task_OpenDexNavFromStartMenu, 0);
-    return TRUE;
+    if (!gPaletteFade.active)
+    {
+        PlayRainStoppingSoundEffect();
+        RemoveExtraStartMenuWindows();
+        CleanupOverworldWindowsAndTilemaps();
+        CreateTask(Task_OpenDexNavFromStartMenu, 0);
+        return TRUE;
+    }
+
+    return FALSE;
 }

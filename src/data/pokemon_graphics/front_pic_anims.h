@@ -1,4 +1,4 @@
-﻿static const union AnimCmd sAnim_NONE_1[] =
+static const union AnimCmd sAnim_NONE_1[] =
 {
     ANIMCMD_FRAME(0, 30),
     ANIMCMD_FRAME(1, 30),
@@ -7128,6 +7128,26 @@ static const union AnimCmd *const sAnims_MEWTWO_MEGA_Y[] ={
     sAnim_MEWTWO_MEGA_Y_1,
 };
 
+static const union AnimCmd *const sAnims_RIOLU[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_LUCARIO[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_LEAFEON[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_GLACEON[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_SYLVEON[] ={
+    sAnim_GeneralFrame0,
+};
+
 
 #define ANIM_CMD(name)             [SPECIES_##name] = sAnims_##name
 #define ANIM_CMD_FULL(name, anims) [SPECIES_##name] = anims
@@ -7592,6 +7612,11 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(AERODACTYL_MEGA),
     ANIM_CMD(MEWTWO_MEGA_X),
     ANIM_CMD(MEWTWO_MEGA_Y),
+    ANIM_CMD(RIOLU),
+    ANIM_CMD(LUCARIO),
+    ANIM_CMD(LEAFEON),
+    ANIM_CMD(GLACEON),
+    ANIM_CMD(SYLVEON),
 };
 
 #undef ANIM_CMD
