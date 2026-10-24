@@ -79,18 +79,15 @@ jobs:
 
       - name: Prepare Android ROM Asset
         run: |
-          mkdir -p android/app/src/main/assets/www
+          mkdir -p android/app/src/main/assets
           if [ -f "rom_download/Pokemon_Kanto_Johto.gba" ]; then
             cp rom_download/Pokemon_Kanto_Johto.gba android/app/src/main/assets/game.gba
-            cp rom_download/Pokemon_Kanto_Johto.gba android/app/src/main/assets/www/game.gba
             cp rom_download/Pokemon_Kanto_Johto.gba ./Pokemon_Kanto_Johto.gba
           else
             cp rom_download/pokeClassic.gba android/app/src/main/assets/game.gba
-            cp rom_download/pokeClassic.gba android/app/src/main/assets/www/game.gba
             cp rom_download/pokeClassic.gba ./Pokemon_Kanto_Johto.gba
           fi
           ls -la android/app/src/main/assets/
-          ls -la android/app/src/main/assets/www/game.gba
           ls -la ./Pokemon_Kanto_Johto.gba
 
       - name: Set up JDK 17
@@ -141,9 +138,11 @@ jobs:
             
             Versão oficial atualizada automaticamente a cada commit!
             
-            ### 📥 Downloads:
-            - 💻 **`Pokemon_Kanto_Johto.gba`**: Arquivo de ROM para jogar no PC ou emulador externo.
+            ### 📥 Downloads Oficiais:
+            - 💻 **`Pokemon_Kanto_Johto.gba`**: Arquivo de ROM para jogar no PC ou emuladores externos (Pizza Boy, MyBoy, etc.).
+            - 📱 **`Pokemon_Kanto_Johto.apk`**: Aplicativo nativo em C/C++ para Android (instalação direta sem necessidade de emulador).
           files: |
             Pokemon_Kanto_Johto.gba
+            dist/Pokemon_Kanto_Johto.apk
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
