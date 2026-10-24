@@ -59,21 +59,35 @@ public class GBAView extends SurfaceView implements SurfaceHolder.Callback, Runn
         int sampleRate = GBAEngine.nativeGetSampleRate();
         if (sampleRate <= 0) sampleRate = 32768;
 
-        int minBufferSize = AudioTrack.getMinBufferSize(
-                sampleRate,
-                AudioFormat.CHANNEL_OUT_STEREO,
-                AudioFormat.ENCODING_PCM_16BIT
-        );
+        try {
+            int minBufferSize = AudioTrack.getMinBufferSize(
+                    sampleRate,
+                    AudioFormat.CHANNEL_OUT_STEREO,
+                    AudioFormat.ENCODING_PCM_16BIT
+            );
 
-        audioTrack = new AudioTrack(
-                AudioManager.STREAM_MUSIC,
-                sampleRate,
-                AudioFormat.CHANNEL_OUT_STEREO,
-                AudioFormat.ENCODING_PCM_16BIT,
-                Math.max(minBufferSize, 4096 * 2),
-                AudioTrack.MODE_STREAM
-        );
-        audioTrack.play();
+            if (minBufferSize <= 0) {
+                sampleRate = 44100;
+                minBufferSize = AudioTrack.getMinBufferSize(
+                        sampleRate,
+                        AudioFormat.CHANNEL_OUT_STEREO,
+                        AudioFormat.ENCODING_PCM_16BIT
+                );
+            }
+
+            audioTrack = new AudioTrack(
+                    AudioManager.STREAM_MUSIC,
+                    sampleRate,
+                    AudioFormat.CHANNEL_OUT_STEREO,
+                    AudioFormat.ENCODING_PCM_16BIT,
+                    Math.max(minBufferSize, 4096 * 4),
+                    AudioTrack.MODE_STREAM
+            );
+            audioTrack.play();
+        } catch (Throwable t) {
+            android.util.Log.e("GBAView", "AudioTrack failed to initialize: " + t.getMessage(), t);
+            audioTrack = null;
+        }
 
         isRunning = true;
         renderThread = new Thread(this, "GBA-RenderThread");

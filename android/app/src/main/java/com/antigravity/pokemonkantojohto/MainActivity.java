@@ -23,64 +23,76 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-        setImmersiveMode();
+        try {
+            requestWindowFeature(Window.FEATURE_NO_TITLE);
+            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+            setImmersiveMode();
 
-        // 1. Load ROM from internal assets
-        byte[] romBytes = loadRomFromAssets();
-        if (romBytes == null || romBytes.length == 0) {
-            Toast.makeText(this, "Erro: Arquivo do jogo não encontrado!", Toast.LENGTH_LONG).show();
-            finish();
-            return;
+            // 1. Load ROM from internal assets
+            byte[] romBytes = loadRomFromAssets();
+            if (romBytes == null || romBytes.length == 0) {
+                Toast.makeText(this, "Erro: Arquivo do jogo não encontrado!", Toast.LENGTH_LONG).show();
+                finish();
+                return;
+            }
+
+            // 2. Setup internal save path
+            File saveFile = new File(getFilesDir(), "Pokemon_Kanto_Johto.sav");
+            String savePath = saveFile.getAbsolutePath();
+
+            // 3. Initialize native mGBA engine
+            boolean ok = GBAEngine.nativeInit(romBytes, savePath);
+            if (!ok) {
+                Toast.makeText(this, "Erro ao inicializar o motor nativo mGBA!", Toast.LENGTH_LONG).show();
+                finish();
+                return;
+            }
+
+            // 4. Setup Native UI layout
+            FrameLayout rootLayout = new FrameLayout(this);
+            rootLayout.setBackgroundColor(0xFF000000);
+
+            gbaView = new GBAView(this);
+            gamepadView = new VirtualGamepadView(this, gbaView);
+
+            rootLayout.addView(gbaView, new FrameLayout.LayoutParams(
+                    FrameLayout.LayoutParams.MATCH_PARENT,
+                    FrameLayout.LayoutParams.MATCH_PARENT
+            ));
+
+            rootLayout.addView(gamepadView, new FrameLayout.LayoutParams(
+                    FrameLayout.LayoutParams.MATCH_PARENT,
+                    FrameLayout.LayoutParams.MATCH_PARENT
+            ));
+
+            setContentView(rootLayout);
+        } catch (Throwable t) {
+            android.util.Log.e("MainActivity", "Fatal initialization error: " + t.getMessage(), t);
+            new android.app.AlertDialog.Builder(this)
+                    .setTitle("Erro")
+                    .setMessage("Não foi possível iniciar o jogo:\n" + t.toString())
+                    .setPositiveButton("Fechar", (dialog, which) -> finish())
+                    .setCancelable(false)
+                    .show();
         }
-
-        // 2. Setup internal save path
-        File saveFile = new File(getFilesDir(), "Pokemon_Kanto_Johto.sav");
-        String savePath = saveFile.getAbsolutePath();
-
-        // 3. Initialize native mGBA engine
-        boolean ok = GBAEngine.nativeInit(romBytes, savePath);
-        if (!ok) {
-            Toast.makeText(this, "Erro ao inicializar o motor nativo mGBA!", Toast.LENGTH_LONG).show();
-            finish();
-            return;
-        }
-
-        // 4. Setup Native UI layout
-        FrameLayout rootLayout = new FrameLayout(this);
-        rootLayout.setBackgroundColor(0xFF000000);
-
-        gbaView = new GBAView(this);
-        gamepadView = new VirtualGamepadView(this, gbaView);
-
-        rootLayout.addView(gbaView, new FrameLayout.LayoutParams(
-                FrameLayout.LayoutParams.MATCH_PARENT,
-                FrameLayout.LayoutParams.MATCH_PARENT
-        ));
-
-        rootLayout.addView(gamepadView, new FrameLayout.LayoutParams(
-                FrameLayout.LayoutParams.MATCH_PARENT,
-                FrameLayout.LayoutParams.MATCH_PARENT
-        ));
-
-        setContentView(rootLayout);
     }
 
     private byte[] loadRomFromAssets() {
         try {
             InputStream is = getAssets().open("game.gba");
-            ByteArrayOutputStream buffer = new ByteArrayOutputStream();
-            byte[] temp = new byte[65536];
-            int read;
-            while ((read = is.read(temp)) != -1) {
-                buffer.write(temp, 0, read);
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            int offset = 0;
+            while (offset < size) {
+                int read = is.read(buffer, offset, size - offset);
+                if (read <= 0) break;
+                offset += read;
             }
             is.close();
-            return buffer.toByteArray();
+            return buffer;
         } catch (Exception e) {
-            e.printStackTrace();
+            android.util.Log.e("MainActivity", "Error reading ROM asset: " + e.getMessage(), e);
             return null;
         }
     }

@@ -30,6 +30,12 @@ android {
         }
     }
 
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['src/main/jniLibs']
+        }
+    }
+
     signingConfigs {
         release {
             if (file("release.keystore").exists()) {
