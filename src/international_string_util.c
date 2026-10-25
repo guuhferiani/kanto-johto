@@ -88,7 +88,13 @@ int Intl_GetListMenuWidth(const struct ListMenuTemplate *listMenu)
 
 void CopyMonCategoryText(int dexNum, u8 *dest)
 {
-    u8 *str = StringCopy(dest, gPokedexEntries[dexNum].categoryName);
+    const u8 *category = NULL;
+    if (dexNum <= NATIONAL_DEX_COUNT && gPokedexEntries[dexNum].categoryName[0] != EOS && gPokedexEntries[dexNum].categoryName[0] != 0)
+        category = gPokedexEntries[dexNum].categoryName;
+    else
+        category = gText_5MarksPokemon;
+
+    u8 *str = StringCopy(dest, category);
     *str = CHAR_SPACE;
     StringCopy(str + 1, gText_Pokemon);
 }

@@ -1587,3 +1587,33 @@ const u8 gCelebiPokedexText[] = _(
     "vivas, um futuro brilhante e cheio de paz aguarda\n"
     "a humanidade.");
 
+
+const u8 gRioluPokedexText[] = _(
+    "Tem o poder de discernir as emoções das pessoas\n"
+    "e Pokémon na forma de ondas conhecidas como auras.\n"
+    "Seu corpo pequeno é incansável e repleto de vigor.");
+
+
+const u8 gLucarioPokedexText[] = _(
+    "Consegue ler os pensamentos e movimentos do oponente\n"
+    "ao sentir a sua aura. É dito que nenhuma criatura viva\n"
+    "consegue se esconder da visão espiritual de Lucario.");
+
+
+const u8 gLeafeonPokedexText[] = _(
+    "Sua estrutura celular assemelha-se à de uma planta.\n"
+    "Realiza fotossíntese para produzir energia limpa e\n"
+    "purifica o ar ao seu redor com uma brisa suave.");
+
+
+const u8 gGlaceonPokedexText[] = _(
+    "Ao controlar a temperatura de seu corpo, ele pode\n"
+    "congelar o ar ao redor e transformar sua pelagem em\n"
+    "agulhas de gelo afiadas como lâminas para atacar.");
+
+
+const u8 gSylveonPokedexText[] = _(
+    "Emite uma aura tranquilizadora de suas antenas que\n"
+    "parecem fitas para acalmar a hostilidade em batalhas\n"
+    "e neutralizar conflitos instantaneamente.");
+

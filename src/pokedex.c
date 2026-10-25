@@ -3954,6 +3954,12 @@ static void Task_DisplayCaughtMonDexPage(u8 taskId)
     u8 spriteId;
     u16 dexNum = gTasks[taskId].tDexNum;
 
+    if (dexNum == 0 || dexNum > NATIONAL_DEX_COUNT)
+    {
+        DestroyTask(taskId);
+        return;
+    }
+
     switch (gTasks[taskId].tState)
     {
     case 0:
@@ -4139,7 +4145,7 @@ static void PrintMonInfo(u32 num, u32 value, u32 owned, u32 newEntry)
         PrintInfoScreenText(gText_UnkHeight, 0x81, 0x39);
         PrintInfoScreenText(gText_UnkWeight, 0x81, 0x49);
     }
-    if (owned)
+    if (owned && num <= NATIONAL_DEX_COUNT && gPokedexEntries[num].description != NULL)
         description = gPokedexEntries[num].description;
     else
         description = sExpandedPlaceholder_PokedexDescription;

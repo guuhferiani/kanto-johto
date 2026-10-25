@@ -1,4 +1,4 @@
-const struct PokedexEntry gPokedexEntries[] =
+const struct PokedexEntry gPokedexEntries[NATIONAL_DEX_COUNT + 1] =
 {
     [NATIONAL_DEX_NONE] =
     {
@@ -3047,4 +3047,65 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerScale = 256,
         .trainerOffset = 0,
     },
+
+    [NATIONAL_DEX_RIOLU] =
+    {
+        .categoryName = _("Emanação"),
+        .height = 7,
+        .weight = 202,
+        .description = gRioluPokedexText,
+        .pokemonScale = 380,
+        .pokemonOffset = 12,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_LUCARIO] =
+    {
+        .categoryName = _("Aura"),
+        .height = 12,
+        .weight = 540,
+        .description = gLucarioPokedexText,
+        .pokemonScale = 282,
+        .pokemonOffset = 4,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_LEAFEON] =
+    {
+        .categoryName = _("Verdejante"),
+        .height = 10,
+        .weight = 255,
+        .description = gLeafeonPokedexText,
+        .pokemonScale = 290,
+        .pokemonOffset = 6,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_GLACEON] =
+    {
+        .categoryName = _("Neve Fresca"),
+        .height = 8,
+        .weight = 259,
+        .description = gGlaceonPokedexText,
+        .pokemonScale = 310,
+        .pokemonOffset = 8,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
+
+    [NATIONAL_DEX_SYLVEON] =
+    {
+        .categoryName = _("Entrelaçado"),
+        .height = 10,
+        .weight = 235,
+        .description = gSylveonPokedexText,
+        .pokemonScale = 290,
+        .pokemonOffset = 6,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
 };
+
