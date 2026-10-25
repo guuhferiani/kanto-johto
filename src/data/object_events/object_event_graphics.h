@@ -414,6 +414,11 @@ const u32 gObjectEventPic_Groudon[] = INCBIN_U32("graphics/object_events/pics/po
 const u32 gObjectEventPic_Rayquaza[] = INCBIN_U32("graphics/object_events/pics/pokemon/rayquaza.4bpp");
 const u32 gObjectEventPic_Jirachi[] = INCBIN_U32("graphics/object_events/pics/pokemon/jirachi.4bpp");
 const u32 gObjectEventPic_Deoxys[] = INCBIN_U32("graphics/object_events/pics/pokemon/deoxys.4bpp");
+const u32 gObjectEventPic_Riolu[] = INCBIN_U32("graphics/object_events/pics/pokemon/riolu.4bpp");
+const u32 gObjectEventPic_Lucario[] = INCBIN_U32("graphics/object_events/pics/pokemon/lucario.4bpp");
+const u32 gObjectEventPic_Leafeon[] = INCBIN_U32("graphics/object_events/pics/pokemon/leafeon.4bpp");
+const u32 gObjectEventPic_Glaceon[] = INCBIN_U32("graphics/object_events/pics/pokemon/glaceon.4bpp");
+const u32 gObjectEventPic_Sylveon[] = INCBIN_U32("graphics/object_events/pics/pokemon/sylveon.4bpp");
 
 //Old Pokemon
 const u32 gObjectEventPic_DeoxysOld[] = INCBIN_U32("graphics/object_events/pics/pokemon/deoxys_old.4bpp");

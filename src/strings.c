@@ -107,7 +107,7 @@ const u8 gText_RivalNameGeki[] = _("Geki");
 const u8 gText_RivalNameSatoru[] = _("Satoru");
 const u8 gText_RivalNameKen[] = _("Ken");
 
-const u8 gText_ThisIsAPokemon[] = _("This world…{PAUSE 96}\p");
+const u8 gText_ThisIsAPokemon[] = _("Este mundo…{PAUSE 96}\p");
 const u8 gText_5MarksPokemon[] = _("????? Pokémon");
 const u8 gText_UnkHeight[] = _("{CLEAR_TO 0x0C}??'??”");
 const u8 gText_UnkWeight[] = _("????.? lbs.");

@@ -2292,15 +2292,19 @@ static const struct ObjectEventGraphicsInfo * SpeciesToGraphicsInfo(u16 species,
       graphicsInfo = &gPokemonObjectGraphics[SPECIES_MEWTWO];
       break;
     case SPECIES_RIOLU:
-      graphicsInfo = &gPokemonObjectGraphics[SPECIES_TYROGUE];
+      graphicsInfo = &gPokemonObjectGraphics[SPECIES_RIOLU];
       break;
     case SPECIES_LUCARIO:
-      graphicsInfo = &gPokemonObjectGraphics[SPECIES_HITMONCHAN];
+      graphicsInfo = &gPokemonObjectGraphics[SPECIES_LUCARIO];
       break;
     case SPECIES_LEAFEON:
+      graphicsInfo = &gPokemonObjectGraphics[SPECIES_LEAFEON];
+      break;
     case SPECIES_GLACEON:
+      graphicsInfo = &gPokemonObjectGraphics[SPECIES_GLACEON];
+      break;
     case SPECIES_SYLVEON:
-      graphicsInfo = &gPokemonObjectGraphics[SPECIES_EEVEE];
+      graphicsInfo = &gPokemonObjectGraphics[SPECIES_SYLVEON];
       break;
     case SPECIES_CHIMECHO:
       graphicsInfo = &gPokemonObjectGraphics[SPECIES_CHIMECHO];

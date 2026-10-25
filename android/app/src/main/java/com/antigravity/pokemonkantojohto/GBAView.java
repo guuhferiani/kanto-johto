@@ -95,21 +95,46 @@ public class GBAView extends SurfaceView implements SurfaceHolder.Callback, Runn
         renderThread.start();
     }
 
+    public Rect getDstRect() {
+        return dstRect;
+    }
+
+    public interface OnViewportChangedListener {
+        void onViewportChanged(Rect viewport);
+    }
+
+    private OnViewportChangedListener viewportListener;
+
+    public void setOnViewportChangedListener(OnViewportChangedListener listener) {
+        this.viewportListener = listener;
+        if (dstRect != null && !dstRect.isEmpty() && listener != null) {
+            listener.onViewportChanged(dstRect);
+        }
+    }
+
     @Override
     public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
-        // Calculate 3:2 aspect ratio viewport placed in upper portion of screen (above touch controls)
-        int gameAreaHeight = (int) (height * 0.52f);
+        // Expand display to fill edge-to-edge in portrait mode with strict 3:2 GBA aspect ratio
         int targetWidth = width;
         int targetHeight = (width * GBA_HEIGHT) / GBA_WIDTH;
 
-        if (targetHeight > gameAreaHeight) {
-            targetHeight = gameAreaHeight;
-            targetWidth = (gameAreaHeight * GBA_WIDTH) / GBA_HEIGHT;
+        // In landscape or short screens, ensure controls have at least 42% height
+        if (targetHeight > height * 0.58f) {
+            targetHeight = (int) (height * 0.58f);
+            targetWidth = (targetHeight * GBA_WIDTH) / GBA_HEIGHT;
         }
 
         int left = (width - targetWidth) / 2;
-        int top = 20; // Slight top margin
+        int top = 0; // Starts right at top
         dstRect.set(left, top, left + targetWidth, top + targetHeight);
+
+        if (viewportListener != null) {
+            post(() -> {
+                if (viewportListener != null) {
+                    viewportListener.onViewportChanged(dstRect);
+                }
+            });
+        }
     }
 
     @Override
