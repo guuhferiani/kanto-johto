@@ -3765,30 +3765,42 @@ static void Task_LoadSizeScreen(u8 taskId)
         gMain.state++;
         break;
     case 5:
-        spriteId = CreateSizeScreenTrainerPic(PlayerGenderToFrontTrainerPicId(gSaveBlock2Ptr->playerGender), 152, 56, 0);
-        gSprites[spriteId].oam.affineMode = ST_OAM_AFFINE_NORMAL;
-        gSprites[spriteId].oam.matrixNum = 1;
-        gSprites[spriteId].oam.priority = 0;
-        gSprites[spriteId].y2 = gPokedexEntries[sPokedexListItem->dexNum].trainerOffset;
-        SetOamMatrix(1, gPokedexEntries[sPokedexListItem->dexNum].trainerScale, 0, 0, gPokedexEntries[sPokedexListItem->dexNum].trainerScale);
-        LoadPalette(sSizeScreenSilhouette_Pal, (gSprites[spriteId].oam.paletteNum + 16) * 16, 0x20);
-        gTasks[taskId].tTrainerSpriteId = spriteId;
-        gMain.state++;
+        {
+            u16 dexNum = sPokedexListItem->dexNum;
+            if (dexNum == 0 || dexNum > NATIONAL_DEX_COUNT)
+                dexNum = 1;
+
+            spriteId = CreateSizeScreenTrainerPic(PlayerGenderToFrontTrainerPicId(gSaveBlock2Ptr->playerGender), 152, 56, 0);
+            gSprites[spriteId].oam.affineMode = ST_OAM_AFFINE_NORMAL;
+            gSprites[spriteId].oam.matrixNum = 1;
+            gSprites[spriteId].oam.priority = 0;
+            gSprites[spriteId].y2 = gPokedexEntries[dexNum].trainerOffset;
+            SetOamMatrix(1, gPokedexEntries[dexNum].trainerScale, 0, 0, gPokedexEntries[dexNum].trainerScale);
+            LoadPalette(sSizeScreenSilhouette_Pal, (gSprites[spriteId].oam.paletteNum + 16) * 16, 0x20);
+            gTasks[taskId].tTrainerSpriteId = spriteId;
+            gMain.state++;
+        }
         break;
     case 6:
-        spriteId = CreateMonSpriteFromNationalDexNumber(sPokedexListItem->dexNum, 88, 56, 1);
-        gSprites[spriteId].oam.affineMode = ST_OAM_AFFINE_NORMAL;
-        gSprites[spriteId].oam.matrixNum = 2;
-        gSprites[spriteId].oam.priority = 0;
-        gSprites[spriteId].y2 = gPokedexEntries[sPokedexListItem->dexNum].pokemonOffset;
-        SetOamMatrix(2, gPokedexEntries[sPokedexListItem->dexNum].pokemonScale, 0, 0, gPokedexEntries[sPokedexListItem->dexNum].pokemonScale);
-        LoadPalette(sSizeScreenSilhouette_Pal, (gSprites[spriteId].oam.paletteNum + 16) * 16, 0x20);
-        gTasks[taskId].tMonSpriteId = spriteId;
-        CopyWindowToVram(WIN_INFO, COPYWIN_FULL);
-        CopyBgTilemapBufferToVram(1);
-        CopyBgTilemapBufferToVram(2);
-        CopyBgTilemapBufferToVram(3);
-        gMain.state++;
+        {
+            u16 dexNum = sPokedexListItem->dexNum;
+            if (dexNum == 0 || dexNum > NATIONAL_DEX_COUNT)
+                dexNum = 1;
+
+            spriteId = CreateMonSpriteFromNationalDexNumber(dexNum, 88, 56, 1);
+            gSprites[spriteId].oam.affineMode = ST_OAM_AFFINE_NORMAL;
+            gSprites[spriteId].oam.matrixNum = 2;
+            gSprites[spriteId].oam.priority = 0;
+            gSprites[spriteId].y2 = gPokedexEntries[dexNum].pokemonOffset;
+            SetOamMatrix(2, gPokedexEntries[dexNum].pokemonScale, 0, 0, gPokedexEntries[dexNum].pokemonScale);
+            LoadPalette(sSizeScreenSilhouette_Pal, (gSprites[spriteId].oam.paletteNum + 16) * 16, 0x20);
+            gTasks[taskId].tMonSpriteId = spriteId;
+            CopyWindowToVram(WIN_INFO, COPYWIN_FULL);
+            CopyBgTilemapBufferToVram(1);
+            CopyBgTilemapBufferToVram(2);
+            CopyBgTilemapBufferToVram(3);
+            gMain.state++;
+        }
         break;
     case 7:
         BeginNormalPaletteFade(PALETTES_ALL & ~(0x14), 0, 0x10, 0, RGB_BLACK);
@@ -4245,11 +4257,16 @@ static void PrintMonWeight(u16 weight, u8 left, u8 top)
 
 const u8 *GetPokedexCategoryName(u16 dexNum) // unused
 {
+    if (dexNum == 0 || dexNum > NATIONAL_DEX_COUNT)
+        return gPokedexEntries[1].categoryName;
     return gPokedexEntries[dexNum].categoryName;
 }
 
 u16 GetPokedexHeightWeight(u16 dexNum, u8 data)
 {
+    if (dexNum == 0 || dexNum > NATIONAL_DEX_COUNT)
+        dexNum = 1;
+
     switch (data)
     {
     case 0:  // height
@@ -4267,6 +4284,9 @@ s8 GetSetPokedexFlag(u16 nationalDexNo, u8 caseID)
     u8 bit;
     u8 mask;
     s8 retVal;
+
+    if (nationalDexNo == 0 || nationalDexNo > NATIONAL_DEX_COUNT)
+        return 0;
 
     nationalDexNo--;
     index = nationalDexNo / 8;
@@ -4670,6 +4690,8 @@ static u32 GetPokedexMonPersonality(u16 species)
 u16 CreateMonSpriteFromNationalDexNumber(u16 nationalNum, s16 x, s16 y, u16 paletteSlot)
 {
     nationalNum = NationalPokedexNumToSpecies(nationalNum);
+    if (nationalNum == SPECIES_NONE || nationalNum >= NUM_SPECIES)
+        nationalNum = SPECIES_BULBASAUR;
     return CreateMonPicSprite_HandleDeoxys(nationalNum, SHINY_ODDS, GetPokedexMonPersonality(nationalNum), TRUE, x, y, paletteSlot, TAG_NONE);
 }
 

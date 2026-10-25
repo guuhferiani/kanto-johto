@@ -2306,6 +2306,9 @@ void CreateBoxMon(struct BoxPokemon *boxMon, u16 species, u8 level, u8 fixedIV, 
     u32 value;
     u16 checksum;
 
+    if (species == SPECIES_NONE || species >= NUM_SPECIES)
+        species = SPECIES_BULBASAUR;
+
     ZeroBoxMonData(boxMon);
 
     if (hasFixedPersonality)
@@ -2957,9 +2960,13 @@ void CalculateMonStats(struct Pokemon *mon)
     s32 spDefenseIV = GetMonData(mon, MON_DATA_SPDEF_IV, NULL);
     s32 spDefenseEV = GetMonData(mon, MON_DATA_SPDEF_EV, NULL);
     u16 species = GetMonData(mon, MON_DATA_SPECIES, NULL);
-    s32 level = GetLevelFromMonExp(mon);
+    s32 level;
     s32 newMaxHP;
 
+    if (species == SPECIES_NONE || species >= NUM_SPECIES)
+        return;
+
+    level = GetLevelFromMonExp(mon);
     SetMonData(mon, MON_DATA_LEVEL, &level);
 
     if (species == SPECIES_SHEDINJA)
@@ -3028,6 +3035,9 @@ u8 GetLevelFromMonExp(struct Pokemon *mon)
     u32 exp = GetMonData(mon, MON_DATA_EXP, NULL);
     s32 level = 1;
 
+    if (species == SPECIES_NONE || species >= NUM_SPECIES)
+        return 1;
+
     while (level <= MAX_LEVEL && gExperienceTables[gBaseStats[species].growthRate][level] <= exp)
         level++;
 
@@ -3039,6 +3049,9 @@ u8 GetLevelFromBoxMonExp(struct BoxPokemon *boxMon)
     u16 species = GetBoxMonData(boxMon, MON_DATA_SPECIES, NULL);
     u32 exp = GetBoxMonData(boxMon, MON_DATA_EXP, NULL);
     s32 level = 1;
+
+    if (species == SPECIES_NONE || species >= NUM_SPECIES)
+        return 1;
 
     while (level <= MAX_LEVEL && gExperienceTables[gBaseStats[species].growthRate][level] <= exp)
         level++;
@@ -3106,9 +3119,13 @@ void GiveMonInitialMoveset(struct Pokemon *mon)
 void GiveBoxMonInitialMoveset(struct BoxPokemon *boxMon)
 {
     u16 species = GetBoxMonData(boxMon, MON_DATA_SPECIES, NULL);
-    s32 level = GetLevelFromBoxMonExp(boxMon);
+    s32 level;
     s32 i;
 
+    if (species == SPECIES_NONE || species >= NUM_SPECIES)
+        return;
+
+    level = GetLevelFromBoxMonExp(boxMon);
     for (i = 0; gLevelUpLearnsets[species][i].move != LEVEL_UP_END; i++)
     {
         if (gLevelUpLearnsets[species][i].level > level)
@@ -3122,7 +3139,12 @@ u16 MonTryLearningNewMove(struct Pokemon *mon, bool8 firstMove)
 {
     u32 retVal = MOVE_NONE;
     u16 species = GetMonData(mon, MON_DATA_SPECIES, NULL);
-    u8 level = GetMonData(mon, MON_DATA_LEVEL, NULL);
+    u8 level;
+
+    if (species == SPECIES_NONE || species >= NUM_SPECIES)
+        return MOVE_NONE;
+
+    level = GetMonData(mon, MON_DATA_LEVEL, NULL);
 
     // since you can learn more than one move per level
     // the game needs to know whether you decided to
@@ -3273,22 +3295,14 @@ u8 GetBoxMonGender(struct BoxPokemon *boxMon)
     u16 species = GetBoxMonData(boxMon, MON_DATA_SPECIES, NULL);
     u32 personality = GetBoxMonData(boxMon, MON_DATA_PERSONALITY, NULL);
 
-    switch (gBaseStats[species].genderRatio)
-    {
-    case MON_MALE:
-    case MON_FEMALE:
-    case MON_GENDERLESS:
-        return gBaseStats[species].genderRatio;
-    }
-
-    if (gBaseStats[species].genderRatio > (personality & 0xFF))
-        return MON_FEMALE;
-    else
-        return MON_MALE;
+    return GetGenderFromSpeciesAndPersonality(species, personality);
 }
 
 u8 GetGenderFromSpeciesAndPersonality(u16 species, u32 personality)
 {
+    if (species == SPECIES_NONE || species >= NUM_SPECIES)
+        return MON_GENDERLESS;
+
     switch (gBaseStats[species].genderRatio)
     {
     case MON_MALE:
@@ -5715,7 +5729,7 @@ u16 NationalToHoennOrder(u16 nationalNum)
 
 u16 SpeciesToNationalPokedexNum(u16 species)
 {
-    if (!species)
+    if (!species || species >= NUM_SPECIES)
         return 0;
 
     return sSpeciesToNationalPokedexNum[species - 1];
@@ -5723,7 +5737,7 @@ u16 SpeciesToNationalPokedexNum(u16 species)
 
 u16 SpeciesToHoennPokedexNum(u16 species)
 {
-    if (!species)
+    if (!species || species >= NUM_SPECIES)
         return 0;
 
     return sSpeciesToHoennPokedexNum[species - 1];
@@ -5731,7 +5745,7 @@ u16 SpeciesToHoennPokedexNum(u16 species)
 
 u16 HoennToNationalOrder(u16 hoennNum)
 {
-    if (!hoennNum)
+    if (!hoennNum || hoennNum >= NUM_SPECIES)
         return 0;
 
     return sHoennToNationalOrder[hoennNum - 1];
@@ -5744,6 +5758,9 @@ u16 SpeciesToCryId(u16 species)
 
     if (species < SPECIES_TREECKO - 1)
         return SPECIES_UNOWN - 1;
+
+    if (species - (SPECIES_TREECKO - 1) >= ARRAY_COUNT(gSpeciesIdToCryId))
+        return SPECIES_TREECKO - 1;
 
     return gSpeciesIdToCryId[species - (SPECIES_TREECKO - 1)];
 }
