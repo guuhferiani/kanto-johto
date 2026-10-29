@@ -5742,6 +5742,7 @@ extern const u32 gMonFrontPic_Lucario[];
 extern const u32 gMonFrontPic_Leafeon[];
 extern const u32 gMonFrontPic_Glaceon[];
 extern const u32 gMonFrontPic_Sylveon[];
+extern const u32 gMonFrontPic_Chele[];
 extern const u32 gMonBackPic_VenusaurMega[];
 extern const u32 gMonBackPic_CharizardMegaX[];
 extern const u32 gMonBackPic_CharizardMegaY[];
@@ -5762,6 +5763,7 @@ extern const u32 gMonBackPic_Lucario[];
 extern const u32 gMonBackPic_Leafeon[];
 extern const u32 gMonBackPic_Glaceon[];
 extern const u32 gMonBackPic_Sylveon[];
+extern const u32 gMonBackPic_Chele[];
 extern const u32 gMonPalette_VenusaurMega[];
 extern const u32 gMonPalette_CharizardMegaX[];
 extern const u32 gMonPalette_CharizardMegaY[];
@@ -5782,6 +5784,7 @@ extern const u32 gMonPalette_Lucario[];
 extern const u32 gMonPalette_Leafeon[];
 extern const u32 gMonPalette_Glaceon[];
 extern const u32 gMonPalette_Sylveon[];
+extern const u32 gMonPalette_Chele[];
 extern const u32 gMonShinyPalette_VenusaurMega[];
 extern const u32 gMonShinyPalette_CharizardMegaX[];
 extern const u32 gMonShinyPalette_CharizardMegaY[];
@@ -5802,6 +5805,7 @@ extern const u32 gMonShinyPalette_Lucario[];
 extern const u32 gMonShinyPalette_Leafeon[];
 extern const u32 gMonShinyPalette_Glaceon[];
 extern const u32 gMonShinyPalette_Sylveon[];
+extern const u32 gMonShinyPalette_Chele[];
 extern const u8 gMonIcon_VenusaurMega[];
 extern const u8 gMonIcon_CharizardMegaX[];
 extern const u8 gMonIcon_CharizardMegaY[];
@@ -5822,6 +5826,7 @@ extern const u8 gMonIcon_Lucario[];
 extern const u8 gMonIcon_Leafeon[];
 extern const u8 gMonIcon_Glaceon[];
 extern const u8 gMonIcon_Sylveon[];
+extern const u8 gMonIcon_Chele[];
 
 //IV Items
 extern const u32 gItemIcon_IVCandy[];
@@ -5857,5 +5862,6 @@ extern const u8 gMonFootprint_Lucario[];
 extern const u8 gMonFootprint_Leafeon[];
 extern const u8 gMonFootprint_Glaceon[];
 extern const u8 gMonFootprint_Sylveon[];
+extern const u8 gMonFootprint_Chele[];
 
 #endif //GUARD_GRAPHICS_H

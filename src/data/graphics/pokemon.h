@@ -2946,3 +2946,10 @@ const u32 gMonBackPic_Sylveon[] = INCBIN_U32("graphics/pokemon/sylveon/back.4bpp
 const u32 gMonShinyPalette_Sylveon[] = INCBIN_U32("graphics/pokemon/sylveon/shiny.gbapal.lz");
 const u8 gMonIcon_Sylveon[] = INCBIN_U8("graphics/pokemon/sylveon/icon.4bpp");
 const u8 gMonFootprint_Sylveon[] = INCBIN_U8("graphics/pokemon/sylveon/footprint.1bpp");
+
+const u32 gMonFrontPic_Chele[] = INCBIN_U32("graphics/pokemon/chele/front.4bpp.lz");
+const u32 gMonPalette_Chele[] = INCBIN_U32("graphics/pokemon/chele/normal.gbapal.lz");
+const u32 gMonBackPic_Chele[] = INCBIN_U32("graphics/pokemon/chele/back.4bpp.lz");
+const u32 gMonShinyPalette_Chele[] = INCBIN_U32("graphics/pokemon/chele/shiny.gbapal.lz");
+const u8 gMonIcon_Chele[] = INCBIN_U8("graphics/pokemon/chele/icon.4bpp");
+const u8 gMonFootprint_Chele[] = INCBIN_U8("graphics/pokemon/chele/footprint.1bpp");

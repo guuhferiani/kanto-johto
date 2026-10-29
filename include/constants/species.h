@@ -441,8 +441,9 @@
 #define SPECIES_LEAFEON                      FORMS_START + 18
 #define SPECIES_GLACEON                      FORMS_START + 19
 #define SPECIES_SYLVEON                      FORMS_START + 20
+#define SPECIES_CHELE                        FORMS_START + 21
 
-#define SPECIES_EGG SPECIES_SYLVEON + 1 
+#define SPECIES_EGG SPECIES_CHELE + 1 
 #define NUM_SPECIES SPECIES_EGG
 
 #define SPECIES_UNOWN_B (NUM_SPECIES + 1)

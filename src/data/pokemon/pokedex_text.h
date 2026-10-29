@@ -1617,3 +1617,8 @@ const u8 gSylveonPokedexText[] = _(
     "parecem fitas para acalmar a hostilidade em batalhas\n"
     "e neutralizar conflitos instantaneamente.");
 
+const u8 gChelePokedexText[] = _(
+    "Um elegante gatinho preto de olhar cintilante.\n"
+    "Dizem que o brilho de sua estrela traz afeto e\n"
+    "eterna boa sorte para quem ganha seu coração.");
+

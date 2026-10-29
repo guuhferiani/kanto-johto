@@ -142,4 +142,5 @@ const u16 gSpeciesIdToCryId[] =
     [SPECIES_LEAFEON - 277] = 133,
     [SPECIES_GLACEON - 277] = 134,
     [SPECIES_SYLVEON - 277] = 135,
+    [SPECIES_CHELE - 277] = 300,
 };

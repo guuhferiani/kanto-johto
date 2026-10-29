@@ -534,6 +534,7 @@ static const u16 sSpeciesToHoennPokedexNum[NUM_SPECIES - 1] =
     [SPECIES_LEAFEON - 1] = 0,
     [SPECIES_GLACEON - 1] = 0,
     [SPECIES_SYLVEON - 1] = 0,
+    [SPECIES_CHELE - 1] = 0,
 };
 
 // Assigns all species to the National Dex Index (Summary No. for National Dex)
@@ -974,6 +975,7 @@ static const u16 sSpeciesToNationalPokedexNum[NUM_SPECIES - 1] =
     [SPECIES_LEAFEON - 1] = NATIONAL_DEX_LEAFEON,
     [SPECIES_GLACEON - 1] = NATIONAL_DEX_GLACEON,
     [SPECIES_SYLVEON - 1] = NATIONAL_DEX_SYLVEON,
+    [SPECIES_CHELE - 1] = NATIONAL_DEX_CHELE,
 };
 
 // Assigns all Hoenn Dex Indexes to a National Dex Index
@@ -1840,6 +1842,7 @@ static const u8 sMonFrontAnimIdsTable[NUM_SPECIES - 1] =
     [SPECIES_LEAFEON - 1]     = ANIM_V_STRETCH,
     [SPECIES_GLACEON - 1]     = ANIM_V_STRETCH,
     [SPECIES_SYLVEON - 1]     = ANIM_V_SQUISH_AND_BOUNCE,
+    [SPECIES_CHELE - 1]       = ANIM_V_SQUISH_AND_BOUNCE,
 };
 
 static const u8 sMonAnimationDelayTable[NUM_SPECIES - 1] =

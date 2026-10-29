@@ -602,6 +602,7 @@ static const u8 sSpeciesToBackAnimSet[NUM_SPECIES] =
     [SPECIES_LEAFEON]    = BACK_ANIM_CONCAVE_ARC_LARGE,
     [SPECIES_GLACEON]    = BACK_ANIM_CONCAVE_ARC_LARGE,
     [SPECIES_SYLVEON]    = BACK_ANIM_DIP_RIGHT_SIDE,
+    [SPECIES_CHELE]      = BACK_ANIM_DIP_RIGHT_SIDE,
 };
 
 // Equivalent to struct YellowFlashData, but doesn't match as a struct

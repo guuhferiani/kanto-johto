@@ -7148,6 +7148,10 @@ static const union AnimCmd *const sAnims_SYLVEON[] ={
     sAnim_GeneralFrame0,
 };
 
+static const union AnimCmd *const sAnims_CHELE[] ={
+    sAnim_GeneralFrame0,
+};
+
 
 #define ANIM_CMD(name)             [SPECIES_##name] = sAnims_##name
 #define ANIM_CMD_FULL(name, anims) [SPECIES_##name] = anims
@@ -7617,6 +7621,7 @@ const union AnimCmd *const *const gMonFrontAnimsPtrTable[] =
     ANIM_CMD(LEAFEON),
     ANIM_CMD(GLACEON),
     ANIM_CMD(SYLVEON),
+    ANIM_CMD(CHELE),
 };
 
 #undef ANIM_CMD

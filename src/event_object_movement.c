@@ -2306,6 +2306,9 @@ static const struct ObjectEventGraphicsInfo * SpeciesToGraphicsInfo(u16 species,
     case SPECIES_SYLVEON:
       graphicsInfo = &gPokemonObjectGraphics[SPECIES_SYLVEON];
       break;
+    case SPECIES_CHELE:
+      graphicsInfo = &gPokemonObjectGraphics[SPECIES_CHELE];
+      break;
     case SPECIES_CHIMECHO:
       graphicsInfo = &gPokemonObjectGraphics[SPECIES_CHIMECHO];
       break;

@@ -487,6 +487,7 @@ const u8 *const gMonIconTable[] =
     [SPECIES_LEAFEON] = gMonIcon_Leafeon,
     [SPECIES_GLACEON] = gMonIcon_Glaceon,
     [SPECIES_SYLVEON] = gMonIcon_Sylveon,
+    [SPECIES_CHELE] = gMonIcon_Chele,
 };
 
 const u8 gMonIconPaletteIndices[] =
@@ -954,6 +955,7 @@ const u8 gMonIconPaletteIndices[] =
     [SPECIES_LEAFEON] = 1,
     [SPECIES_GLACEON] = 0,
     [SPECIES_SYLVEON] = 1,
+    [SPECIES_CHELE] = 2,
 };
 
 const struct SpritePalette gMonIconPaletteTable[] =

@@ -3107,5 +3107,17 @@ const struct PokedexEntry gPokedexEntries[NATIONAL_DEX_COUNT + 1] =
         .trainerScale = 256,
         .trainerOffset = 0,
     },
+
+    [NATIONAL_DEX_CHELE] =
+    {
+        .categoryName = _("Gato Astral"),
+        .height = 4,
+        .weight = 32,
+        .description = gChelePokedexText,
+        .pokemonScale = 380,
+        .pokemonOffset = 16,
+        .trainerScale = 256,
+        .trainerOffset = 0,
+    },
 };
 
