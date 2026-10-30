@@ -1,0 +1,123 @@
+{
+  "id": "MAP_CIANWOOD_CITY",
+  "name": "CianwoodCity",
+  "layout": "LAYOUT_CIANWOOD_CITY",
+  "music": "MUS_RG_CINNABAR",
+  "region_map_section": "MAPSEC_CIANWOOD_CITY",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_CITY",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "direction": "down",
+      "offset": 0,
+      "map": "MAP_ROUTE40"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+      "x": 27,
+      "y": 37,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CianwoodCity_EventScript_ChucksWife",
+      "flag": "0",
+      "in_connection": ""
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BLACK_BELT",
+      "x": 22,
+      "y": 25,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
+      "movement_range_x": 2,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "CianwoodCity_EventScript_BlackBelt",
+      "flag": "0",
+      "in_connection": ""
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 40,
+      "y": 29,
+      "elevation": 0,
+      "dest_map": "MAP_CIANWOOD_CITY_POKEMON_CENTER_1F",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 18,
+      "y": 24,
+      "elevation": 0,
+      "dest_map": "MAP_CIANWOOD_CITY_PHARMACY",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 28,
+      "y": 36,
+      "elevation": 0,
+      "dest_map": "MAP_CIANWOOD_CITY_GYM",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 29,
+      "y": 26,
+      "elevation": 0,
+      "dest_map": "MAP_WHIRL_ISLANDS",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 15,
+      "y": 31,
+      "elevation": 0,
+      "dest_map": "MAP_CIANWOOD_CITY_PHARMACY",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 21,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_WHIRL_ISLANDS",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 30,
+      "y": 37,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "CianwoodCity_EventScript_GymSign"
+    },
+    {
+      "type": "sign",
+      "x": 36,
+      "y": 32,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "CianwoodCity_EventScript_CitySign"
+    },
+    {
+      "type": "sign",
+      "x": 33,
+      "y": 26,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "CianwoodCity_EventScript_WhirlIslandsSign"
+    }
+  ]
+}

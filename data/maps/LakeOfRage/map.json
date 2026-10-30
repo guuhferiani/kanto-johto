@@ -1,0 +1,69 @@
+{
+  "id": "MAP_LAKE_OF_RAGE",
+  "name": "LakeOfRage",
+  "layout": "LAYOUT_LAKE_OF_RAGE",
+  "music": "MUS_RG_ROUTE24",
+  "region_map_section": "MAPSEC_LAKE_OF_RAGE",
+  "requires_flash": false,
+  "weather": "WEATHER_RAIN",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "direction": "down",
+      "offset": -12,
+      "map": "MAP_MAHOGANY_TOWN"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LANCE",
+      "x": 11,
+      "y": 19,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LakeOfRage_EventScript_Lance",
+      "flag": "0",
+      "in_connection": ""
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_LAPRAS",
+      "x": 11,
+      "y": 15,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LakeOfRage_EventScript_RedGyarados",
+      "flag": "FLAG_CAUGHT_RED_GYARADOS",
+      "in_connection": ""
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 4,
+      "y": 4,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LakeOfRage_EventScript_ItemGyaradosite",
+      "flag": "FLAG_ITEM_LAKE_OF_RAGE_GYARADOSITE",
+      "in_connection": ""
+    }
+  ],
+  "warp_events": [],
+  "coord_events": [],
+  "bg_events": []
+}

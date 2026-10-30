@@ -1,0 +1,160 @@
+{
+  "id": "MAP_MAHOGANY_TOWN",
+  "name": "MahoganyTown",
+  "layout": "LAYOUT_MAHOGANY_TOWN",
+  "music": "MUS_RG_FUCHSIA",
+  "region_map_section": "MAPSEC_MAHOGANY_TOWN",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_TOWN",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "direction": "up",
+      "offset": 12,
+      "map": "MAP_LAKE_OF_RAGE"
+    },
+    {
+      "direction": "right",
+      "offset": 10,
+      "map": "MAP_ROUTE42"
+    },
+    {
+      "direction": "down",
+      "offset": 0,
+      "map": "MAP_BLACKTHORN_CITY"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_NINJA_BOY",
+      "x": 20,
+      "y": 22,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MahoganyTown_EventScript_Ninja",
+      "flag": "0",
+      "in_connection": ""
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN",
+      "x": 26,
+      "y": 25,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "MahoganyTown_EventScript_RageCandyWoman",
+      "flag": "0",
+      "in_connection": ""
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 22,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_MAHOGANY_TOWN_POKEMON_CENTER_1F",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 29,
+      "y": 28,
+      "elevation": 0,
+      "dest_map": "MAP_MAHOGANY_TOWN_MART",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 31,
+      "y": 21,
+      "elevation": 0,
+      "dest_map": "MAP_MAHOGANY_TOWN_GYM",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 1,
+      "y": 12,
+      "elevation": 0,
+      "dest_map": "MAP_ICE_PATH",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 10,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_ICE_PATH",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 30,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_ICE_PATH",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 15,
+      "y": 17,
+      "elevation": 0,
+      "dest_map": "MAP_ROUTE42",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 13,
+      "y": 28,
+      "elevation": 3,
+      "dest_map": "MAP_MAHOGANY_TOWN_MART",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 14,
+      "y": 28,
+      "elevation": 3,
+      "dest_map": "MAP_MAHOGANY_TOWN_MART",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 23,
+      "y": 28,
+      "elevation": 0,
+      "dest_map": "MAP_MAHOGANY_TOWN_POKEMON_CENTER_1F",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 17,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_ICE_PATH",
+      "dest_warp_id": 0
+    }
+  ],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 20,
+      "y": 25,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "MahoganyTown_EventScript_TownSign"
+    },
+    {
+      "type": "sign",
+      "x": 27,
+      "y": 21,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "MahoganyTown_EventScript_GymSign"
+    }
+  ]
+}

@@ -272,130 +272,130 @@ export const johtoChapters = [
   {
     id: "johto-fase2",
     num: 2,
-    title: "Azalea Town, Poço Slowpoke & Bugsy",
-    subtitle: "Expulsando os remanescentes da Equipe Rocket",
+    title: "Rota 32/33, Azalea Town, Poço Slowpoke & Bugsy",
+    subtitle: "Expulsando o Executivo Proton e salvando os Slowpoke",
     banner: null,
     badges: [
-      { text: "🦛 Poço Slowpoke Libertado", type: "water" },
-      { text: "🏹 Kurt & Apricorn Balls Especiais", type: "grass" },
+      { text: "🦛 Poço Slowpoke Libertado (King's Rock)", type: "water" },
+      { text: "🏹 Kurt & Lote de Poké Bolas Especiais", type: "grass" },
       { text: "🐝 Ginásio de Bugsy (Scizor Lv 62)", type: "bug" }
     ],
     content: [
       {
-        heading: "1. A Union Cave e Azalea Town",
-        text: "Atravesse a Union Cave até alcançar a tradicional <b>Azalea Town</b>. A cidade está em pânico porque a Equipe Rocket reapareceu e está cortando as caudas dos Slowpoke no poço local!"
+        heading: "1. Rota 32/33 e Chegada a Azalea Town",
+        text: "Saindo pelo caminho norte de <b>Violet City</b>, atravesse a <b>Rota 32/33</b> (onde vivem Mareep, Flaaffy, Ampharos, Wooper, Quagsire, Girafarig, Stantler, Miltank e Tauros, além do item <b>Shell Bell</b>) até chegar em <b>Azalea Town</b>. A cidade está em alerta porque remanescentes da Equipe Rocket invadiram o Poço dos Slowpoke ao norte!"
       },
       {
-        heading: "2. O Resgate no Slowpoke Well",
-        text: "Fale com o artesão de Pokébolas <b>Kurt</b> e desça ao <b>Slowpoke Well</b>. Derrote todos os Rockets e liberte os dóceis monstrinhos. Kurt ficará eternamente grato e passará a forjar bolas raras (Heavy Ball, Love Ball, Fast Ball) a partir de frutos Apricorn colhidos nas árvores!"
+        heading: "2. O Resgate no Poço dos Slowpoke (Slowpoke Well) & Casa do Kurt",
+        text: "Entre no prédio do <b>Poço dos Slowpoke (Slowpoke Well)</b> ao norte de Azalea Town. Lá dentro, enfrente o <b>Executivo Proton</b> e seu feroz <b>Houndoom (Lv 58)</b> para expulsar a Equipe Rocket e receber a <b>Pedra do Rei (King's Rock)</b>! Em seguida, visite a <b>Casa do Kurt</b> (a nordeste da cidade): em agradecimento por salvar os Slowpoke, Kurt entregará um lote completo de Poké Bolas especiais (<b>5x Net Ball, 5x Nest Ball, 5x Timer Ball e 5x Luxury Ball</b>)!"
       },
       {
-        heading: "3. Ginásio Inseto de Bugsy",
-        text: "No Ginásio de Azalea, <b>Bugsy</b> lidera com seu poderoso <b>Scizor (Lv 62)</b> e <b>Heracross (Lv 63)</b>. Scizor possui tipo Inseto/Aço: imune a praticamente todos os ataques, mas com fraqueza quadruplicada mortal a <b>FOGO</b>! Use o Lança-Chamas do seu Charizard para aniquilá-lo em 1 turno e ganhar a <b>Insígnia da Colmeia</b>."
+        heading: "3. Ginásio Inseto de Bugsy (Insígnia da Colmeia)",
+        text: "No Ginásio de Azalea Town, o Líder <b>Bugsy</b> batalha com <b>Scyther (Lv 60)</b>, <b>Heracross (Lv 61)</b> e seu poderoso <b>Scizor (Lv 62)</b>. Scizor possui a combinação Inseto/Aço com fraqueza quadruplicada (4x) a ataques de <b>Fogo</b>! Vença Bugsy para conquistar a <b>Insígnia da Colmeia (Hive Badge)</b> e o item <b>Silver Powder</b>."
       }
     ]
   },
   {
     id: "johto-fase3",
     num: 3,
-    title: "A Metrópole de Goldenrod & O Terror de Whitney",
-    subtitle: "Enfrentando a lendária Miltank em nível 67+",
+    title: "Floresta Ilex (Celebi), Rota 34 & A Metrópole de Goldenrod",
+    subtitle: "O Santuário do Tempo, a Miltank de Whitney e a Torre de Rádio",
     banner: "graphics/cities/goldenrod_city_banner.jpg",
     badges: [
-      { text: "📻 Torre de Rádio de Johto", type: "electric" },
-      { text: "🚆 Estação do Trem Magnético", type: "steel" },
-      { text: "⭐ Ginásio de Whitney (Miltank Lv 67)", type: "normal" }
+      { text: "🌿 Santuário de Celebi (Lv 50)", type: "grass" },
+      { text: "⭐ Ginásio de Whitney (Miltank Lv 67)", type: "normal" },
+      { text: "📻 Torre de Rádio Libertada (Sacred Ash)", type: "electric" }
     ],
     content: [
       {
-        heading: "1. A Floresta de Ilex e Chegada a Goldenrod",
-        text: "Atravesse a misteriosa <b>Ilex Forest</b> (onde repousa o altar sagrado do mítico Celebi) até alcançar a monumental metrópole de <b>Goldenrod City</b>. A cidade conta com uma Loja de Departamentos gigante de 6 andares, o Cassino de Johto e a Torre de Rádio!"
+        heading: "1. Floresta Ilex (Santuário de Celebi) & Rota 34",
+        text: "Entre pelo portão sudoeste de Azalea Town para adentrar a sombria <b>Floresta Ilex (Ilex Forest)</b>, lar de Pineco, Forretress, Yanma, Murkrow, Misdreavus, Scyther, Pinsir, Heracross e Scizor, além de um <b>Max Revive</b>. No centro da floresta ergue-se o <b>Santuário da Floresta Ilex</b>: tendo conquistado a Insígnia da Colmeia, interaja com o santuário para despertar e capturar o mítico <b>Celebi (Lv 50, segurando Miracle Seed)</b>! Saindo pelo norte da floresta, cruze a <b>Rota 34</b> (onde aparecem Snubbull, Granbull, Ditto, Togetic, Elekid, Magby, Smoochum, Tyrogue, Blissey e Porygon2, além de um <b>Nugget</b>) e caminhe para o oeste até <b>Goldenrod City</b>!"
       },
       {
-        heading: "2. A Batalha Mais Temida: Whitney & Miltank",
-        text: "O Ginásio Normal de <b>Whitney</b> é lendário entre todos os jogadores de Pokémon pelo seu alto nível de frustração! Sua <b>Miltank (Lv 67+)</b> usa a combinação devastadora de <i>Rollout</i> (que dobra de poder a cada turno consecutivo), <i>Attract</i> para apaixonar seus Pokémon masculinos e <i>Milk Drink</i> para recuperar toda a vida instantaneamente!"
+        heading: "2. Goldenrod City & O Ginásio Normal de Whitney",
+        text: "Na metrópole de <b>Goldenrod City</b>, visite o Centro Comercial (que vende todas as <b>Pedras de Evolução, Metal Coat e Up-Grade</b>) e desafie o Ginásio de <b>Whitney</b>! Ela utiliza <b>Clefable (Lv 63)</b>, <b>Ursaring (Lv 64)</b> e sua lendária <b>Miltank (Lv 67)</b>. Use golpes Lutadores como <i>Brick Break</i> ou <i>Cross Chop</i> para derrotá-la e receber a <b>Insígnia da Planície (Plain Badge)</b> e o item <b>Silk Scarf</b>!"
       },
       {
-        heading: "3. Estratégia de Mestre para Vencer a Miltank",
-        text: "Não tente prolongar a luta: use Pokémon do tipo <b>Pedra ou Aço</b> (como Rhydon, Steelix ou Golem) que possuem altíssima resistência aos atropelamentos de Rollout, ou use Pokémon Lutadores velozes (Machamp ou Heracross) com <i>Cross Chop / Dynamic Punch</i> para derrubá-la com dano dobrado antes que o Rollout acumule forças!"
+        heading: "3. Libertando a Torre de Rádio de Goldenrod",
+        text: "No coração de Goldenrod City, entre na <b>Torre de Rádio (Radio Tower)</b>, que foi tomada pela Equipe Rocket! Suba até o Diretor e derrote o <b>Executivo Archer</b> com seu colossal <b>Tyranitar (Lv 65)</b> para dissolver definitivamente a Equipe Rocket em Johto. Em gratidão, o Diretor entregará as relíquias <b>Scope Lens</b> e <b>Sacred Ash (Cinza Sagrada)</b>!"
       }
     ]
   },
   {
     id: "johto-fase4",
     num: 4,
-    title: "Ecruteak City & O Despertar dos Cães Lendários",
-    subtitle: "Raikou, Entei, Suicune e o ginásio fantasma de Morty",
+    title: "Rota 36 (Sudowoodo), Ecruteak City, Burned Tower & Tin Tower",
+    subtitle: "O despertar de Suicune, Raikou, Entei, Ho-Oh e o Ginásio de Morty",
     banner: "graphics/cities/ecruteak_city_banner.jpg",
     badges: [
-      { text: "⚡ Trinca Lendária Desperta", type: "electric" },
-      { text: "💧 Regador SquirtBottle (Sudowoodo)", type: "rock" },
-      { text: "👻 Ginásio de Morty (Gengar Lv 72)", type: "ghost" }
+      { text: "🌳 Sudowoodo (Lv 60) na Rota 36", type: "rock" },
+      { text: "🔥 Burned Tower (Suicune Lv 65) & Tin Tower (Ho-Oh Lv 70)", type: "fire" },
+      { text: "👻 Ginásio de Morty (Gengar Lv 70)", type: "ghost" }
     ],
     content: [
       {
-        heading: "1. O Estranho Arbusto na Rota 36: Sudowoodo",
-        text: "Pegue o regador <b>SquirtBottle</b> na floricultura de Goldenrod e use na árvore que se contorce no cruzamento da Rota 36. Trata-se do <b>Sudowoodo (Lv 20)</b>! Como é um encontro único, capture-o e siga rumo a Ecruteak."
+        heading: "1. Rota 36/37: O Estranho Arbusto Sudowoodo",
+        text: "Saindo pelo caminho oeste de Goldenrod City, entre na <b>Rota 36/37</b> (onde aparecem Stantler, Girafarig, Houndoom, Arcanine, Ninetales, Espeon, Umbreon e Smeargle). Com a Insígnia da Planície conquistada, interaja com a árvore estranha para enfrentar e capturar <b>Sudowoodo (Lv 60, segurando Hard Stone)</b>! Em seguida, passe pelo portão rumo a <b>Ecruteak City</b>."
       },
       {
-        heading: "2. A Mítica Burned Tower (Torre Queimada)",
-        text: "Na cidade dos templos de <b>Ecruteak City</b>, visite a sombria <b>Burned Tower</b>. Ao descer ao subsolo sagrado, as estátuas milenares se quebram e os três cães lendários — <b>Raikou, Entei e Suicune</b> — despertam e disparam em disparada, passando a vagar aleatoriamente pelas rotas de Johto!"
+        heading: "2. Burned Tower (Suicune, Raikou & Entei) e Tin Tower (Ho-Oh)",
+        text: "No centro de <b>Ecruteak City</b>, entre na histórica <b>Burned Tower (Torre Queimada)</b> e fale com Eusine e o altar sagrado: <b>Raikou e Entei (Lv 62-65)</b> dispararão pelas Rotas 36 e 38, enquanto o majestoso <b>Suicune (Lv 65, segurando Mystic Water)</b> permanecerá diante de você para um duelo lendário! Além disso, se você já libertou a Torre de Rádio de Goldenrod, suba na <b>Tin Tower (Torre de Sino)</b> a nordeste de Ecruteak para enfrentar e capturar o lendário <b>Ho-Oh (Lv 70, segurando Sacred Ash)</b>!"
       },
       {
-        heading: "3. Ginásio de Morty e o Chão Invisível",
-        text: "No Ginásio Fantasma, memorize o caminho do chão invisível para não cair no abismo. <b>Morty</b> usa Gengar e Haunter em nível 70 a 72. Golpes do tipo <b>Sombrio</b> (como Crunch de Tyranitar, Houndoom ou Umbreon) ou Psíquicos velozes limpam o ginásio e garantem a <b>Insígnia da Névoa</b>."
+        heading: "3. Ginásio Fantasma de Morty (Insígnia da Névoa)",
+        text: "No Ginásio de Ecruteak (ao sul da Burned Tower), desafie o Líder <b>Morty</b>, que comanda <b>Haunter (Lv 65)</b>, <b>Misdreavus (Lv 66)</b>, <b>Gengar (Lv 68)</b> e seu ás <b>Gengar (Lv 70)</b>! Ataques Sombrios (Crunch/Bite) ou Psíquicos velozes garantem a vitória, rendendo a <b>Insígnia da Névoa (Fog Badge)</b> e a <b>TM30 (Shadow Ball)</b>."
       }
     ]
   },
   {
     id: "johto-fase5",
     num: 5,
-    title: "Cianwood, O Farol de Olivine & Jasmine",
-    subtitle: "Navegação pelos mares e a cura do Ampharos cintilante",
+    title: "Rota 38/39, Porto de Olivine, Cianwood & Whirl Islands (Lugia)",
+    subtitle: "O Farol de Amphy, os Ginásios de Chuck e Jasmine e o Guardião dos Mares",
     banner: null,
     badges: [
-      { text: "💊 Remédio Secreto da Farmácia", type: "poison" },
-      { text: "🥊 Ginásio de Chuck (Lutador Lv 74)", type: "fight" },
-      { text: "⚙️ Ginásio de Jasmine (Steelix Lv 77)", type: "steel" }
+      { text: "💊 Farmácia de Cianwood & Cura de Amphy", type: "electric" },
+      { text: "🥊 Ginásio de Chuck (Lv 75) & 🌊 Lugia (Lv 70)", type: "fight" },
+      { text: "⚙️ Ginásio de Jasmine (Steelix Lv 76)", type: "steel" }
     ],
     content: [
       {
-        heading: "1. O Farol Desesperado de Olivine City",
-        text: "Em <b>Olivine City</b>, a líder Jasmine se recusa a batalhar: seu querido Pokémon <i>Ampharos (Amphy)</i>, farol de navegação dos marinheiros, adoeceu no topo da torre. Você precisará navegar pelo oceano até a isolada <b>Cianwood City</b> para buscar o medicamento tradicional na farmácia centenária."
+        heading: "1. Rota 38/39 (Fazenda Moomoo) & O Farol de Olivine City",
+        text: "Siga pelo norte de Ecruteak através da <b>Rota 38/39</b> (onde a garota da Fazenda Moomoo entrega <b>Moomoo Milk</b> e há um <b>Max Elixir</b>) até chegar à cidade portuária de <b>Olivine City</b> (colete o <b>Metal Coat</b> a sudoeste e visite também o Porto do S.S. Aqua ao sul!). Entre no <b>Farol de Olivine (Glitter Lighthouse)</b> a sudeste: a Líder <b>Jasmine</b> pedirá ajuda para buscar a <i>SecretPotion</i> na Farmácia de Cianwood para curar o Ampharos <b>Amphy</b>."
       },
       {
-        heading: "2. Ginásio de Cianwood & Chuck",
-        text: "Em Cianwood, enfrente o mestre das artes marciais <b>Chuck</b>. Seu Poliwrath e Primeape (Lv 72-74) batem pesado, mas são extremamente vulneráveis aos golpes Voadores (Fly/Wing Attack) e Psíquicos. Pegue o <b>SecretPotion</b> e a <b>HM Voadora</b> na saída."
+        heading: "2. Travessia da Rota 40/41, Cianwood City, Chuck & Lugia nas Whirl Islands",
+        text: "Navegue pelo canal marítimo ao norte de Olivine (<b>Rota 40/41</b>, lar de Mantine, Lanturn, Corsola, Octillery e Kingdra) até alcançar <b>Cianwood City</b>! Visite a <b>Farmácia de 500 Anos</b> a noroeste para receber a <b>SecretPotion</b> e <b>3x Full Restore</b>. Em seguida, desafie o Ginásio de Cianwood e derrote o mestre marcial <b>Chuck</b> (Primeape Lv 71, Hitmontop Lv 72, Machamp Lv 73 e Poliwrath Lv 75) para conquistar a <b>Insígnia da Tempestade (Storm Badge)</b>, a <b>TM01 (Focus Punch)</b> e o item <b>Black Belt</b>! Com a Insígnia da Tempestade em mãos, entre nas <b>Whirl Islands</b> ao norte de Cianwood para despertar e capturar o lendário <b>Lugia (Lv 70)</b>!"
       },
       {
-        heading: "3. Curando Amphy & O Aço de Steelix",
-        text: "Retorne voando a Olivine, suba o Farol e entregue o remédio a Jasmine. Aliviada, ela retorna ao ginásio. Sua equipe de ferro conta com Magnemite e o imenso <b>Steelix (Lv 77)</b>. Golpes especiais de Fogo (Flamethrower/Fire Blast) ou Terremoto derretem sua carcaça mineral, garantindo a <b>Insígnia Mineral</b>!"
+        heading: "3. O Retorno ao Farol & Ginásio Mineral de Jasmine",
+        text: "Volte ao <b>Farol de Olivine</b> e entregue a SecretPotion para Jasmine curar Amphy. Com o Farol iluminado novamente, vá ao <b>Ginásio de Olivine City</b> e enfrente <b>Jasmine</b> (Magneton Lv 72, Skarmory Lv 73, Forretress Lv 74 e Steelix Lv 76) usando golpes de Fogo, Água ou Terra para conquistar a <b>Insígnia Mineral (Mineral Badge)</b> e a <b>TM23 (Iron Tail)</b>!"
       }
     ]
   },
   {
     id: "johto-fase6",
     num: 6,
-    title: "Lago da Fúria, O Gyarados Vermelho & Clair",
-    subtitle: "O lendário Shiny da história e a fúria da donzela dos dragões",
+    title: "Rota 42, Mahogany Town, Lago da Fúria, Ice Path & Blackthorn City",
+    subtitle: "O Gyarados Vermelho, o Ginásio de Pryce, a Caverna de Gelo e a Mestra dos Dragões Clair",
     banner: null,
     badges: [
-      { text: "🔴 Gyarados Vermelho (Shiny Lv 30)", type: "water" },
-      { text: "❄️ Ginásio de Pryce (Insígnia Glaciar)", type: "ice" },
-      { text: "🐉 Ginásio de Clair (Kingdra Lv 85)", type: "dragon" }
+      { text: "🔴 Gyarados Vermelho (Lv 65) + Gyaradosite", type: "water" },
+      { text: "❄️ Ginásio de Pryce (Piloswine Lv 76)", type: "ice" },
+      { text: "🐉 Ginásio de Clair (Lv 78) & Dragon's Den", type: "dragon" }
     ],
     content: [
       {
-        heading: "1. O Fenômeno do Lago da Fúria",
-        text: "Em <b>Mahogany Town</b>, suba até o chuvoso <b>Lake of Rage</b>. No centro das águas está o lendário <b>Gyarados Vermelho (Shiny)</b>! Enfrente-o e capture-o para guardar a lendária Red Scale e desmantelar a base secreta da Rocket com a ajuda de Lance."
+        heading: "1. Rota 42 (Monte Mortar), Mahogany Town & O Lago da Fúria",
+        text: "Siga para o oeste a partir de Ecruteak City pela montanhosa <b>Rota 42</b> (colete o <b>Max Revive</b> e aproveite para capturar Larvitar, Pupitar, Skarmory, Gligar e Heracross) até alcançar <b>Mahogany Town</b>! Na cidade dos ninjas, fale com a vendedora para ganhar a famosa <b>RageCandyBar (Lava Cookie)</b> e suba para o norte até o chuvoso <b>Lago da Fúria (Lake of Rage)</b>. Encontre o Campeão <b>Lance</b> e avance pela ponte central para enfrentar e capturar o lendário <b>Gyarados Vermelho (Lv 65)</b>, recebendo a <b>Red Orb (Escama Vermelha)</b> e a Mega Pedra <b>Gyaradosite</b>!"
       },
       {
-        heading: "2. Ginásio Gelado de Pryce",
-        text: "Deslize sobre as placas de gelo do ginásio de Mahogany e enfrente o veterano <b>Pryce</b>. Seu Piloswine (Gelo/Terra Lv 80) e Dewgong caem facilmente com ataques de Água, Planta, Fogo e Lutador."
+        heading: "2. Ginásio de Mahogany (Líder Pryce) & A Caverna Ice Path",
+        text: "De volta a Mahogany Town, entre no Ginásio local e desafie o veterano <b>Pryce</b> (Dewgong Lv 73, Jynx Lv 74, Lapras Lv 75 e Piloswine Lv 76). Ao vencê-lo com golpes de Fogo, Lutador, Elétrico ou Aço, você conquista a <b>Insígnia da Geleira (Glacier Badge)</b>, a <b>TM13 (Ice Beam)</b> e o item <b>Never-Melt Ice</b>! Em seguida, entre na caverna congelada <b>Ice Path</b> a noroeste de Mahogany (colete mais um <b>Never-Melt Ice</b> e capture Sneasel, Swinub, Piloswine, Delibird e Jynx) ou siga pelo passo da montanha ao sul para chegar a <b>Blackthorn City</b>!"
       },
       {
-        heading: "3. Blackthorn City e o Pesadelo de Kingdra",
-        text: "Atravesse a traiçoeira Ice Path até a montanhosa <b>Blackthorn City</b>. A líder <b>Clair</b> é prima de Lance e comanda o ginásio mais difícil de toda Johto! Seu monstro principal é o terrível <b>Kingdra (Lv 85)</b> — do tipo Água/Dragão, ele anula as fraquezas comuns de água e de dragão, sofrendo dano dobrado <b>APENAS para ataques do tipo Fada e Dragão</b>! Traga Clefable, Togekiss ou um Dragonite veloz com Outrage para conquistar a última insígnia: a <b>Insígnia da Ascensão</b>!"
+        heading: "3. Blackthorn City, Ginásio de Clair & O Santuário Dragon's Den",
+        text: "Em <b>Blackthorn City</b>, colete a <b>Dragon Scale</b> a noroeste e desafie a líder <b>Clair</b> no Ginásio local! Ela comanda Gyarados Lv 75, dois Dragonair Lv 75-76 e seu temível <b>Kingdra (Lv 78)</b> — que só recebe dano super eficaz de golpes do tipo <b>Dragão e Fada</b>. Ao derrotá-la, você conquista a 8ª e última insígnia de Johto: a <b>Insígnia da Ascensão (Rising Badge)</b>, a <b>TM02 (Dragon Claw)</b> e o item <b>Dragon Fang</b>! Depois da vitória, entre na caverna <b>Dragon's Den</b> a noroeste de Blackthorn e fale com o <b>Ancião do Clã dos Dragões</b> para ganhar um <b>Dratini especial (Lv 50)</b> segurando uma <b>Dragon Scale</b>!"
       }
     ]
   },
@@ -403,33 +403,34 @@ export const johtoChapters = [
     id: "johto-fase7",
     num: 7,
     title: "O Cume do Monte Silver: A Batalha Definitiva Contra Red",
-    subtitle: "O maior confronto da história de Pokémon (Nível 95 a 100)",
+    subtitle: "O maior confronto da história de Pokémon (Nível 96 a 100)",
     banner: "graphics/cities/mt_silver_banner.jpg",
     badges: [
       { text: "🏆 16 Insígnias Conquistadas", type: "winner" },
-      { text: "🌨️ Nevasca Contínua no Cume", type: "ice" },
+      { text: "🌨️ Nevasca Contínua no Cume (Lv 65-75)", type: "ice" },
       { text: "👑 Red no Nível Máximo (100)", type: "electric" }
     ],
     content: [
       {
-        heading: "1. A Permissão Especial do Professor Carvalho",
-        text: "Com todas as <b>16 Insígnias</b> de Kanto e Johto em seu estojo, retorne a Pallet Town e fale com o Professor Carvalho. Reconhecendo sua bravura como o maior treinador vivo, ele abre os portões trancados da fronteira oeste rumo ao proibido <b>Monte Silver</b>."
+        heading: "1. O Acesso Liberado ao Monte Silver (Blackthorn City ou Rota 27)",
+        text: "Com todas as <b>16 Insígnias</b> de Kanto e Johto conquistadas, o acesso ao lendário <b>Monte Silver</b> é aberto! Você pode subir ao cume falando com o <b>Guarda de Elite em Blackthorn City</b> (a noroeste da cidade), falando com o <b>Guarda Florestal na Rota 27</b> (próximo às Cachoeiras de Tohjo) ou através do <b>Salão dos Líderes de Johto</b>!"
       },
       {
-        heading: "2. A Escalada pelo Coração da Montanha",
-        text: "O Monte Silver é o local mais perigoso do planeta Pokémon, habitado por criaturas selvagens de nível 50 a 60 (como Larvitar, Ursaring e Donphan). Use Surfe e Cachoeira para navegar pelas quedas d'água internas até emergir no cume a céu aberto, onde cai uma <b>nevasca implacável</b>."
+        heading: "2. A Escalada pelo Coração Nevado da Montanha",
+        text: "O Monte Silver é o local mais selvagem do mundo Pokémon, onde cai uma <b>nevasca contínua</b> e habitam Pokémon poderosos de nível 65 a 75 (incluindo Larvitar, Pupitar, Tyranitar, Sneasel, Ursaring, Donphan, Skarmory, Misdreavus, Steelix, Typhlosion, Feraligatr e Meganium!). Um Guarda Florestal na entrada do cume cura totalmente sua equipe antes da batalha final."
       },
       {
-        heading: "3. O Mestre Silencioso: Red",
-        text: "No ponto mais alto da montanha, de costas para o vento gélido, está <b>Red</b>. Sem dizer uma única palavra ('...'), ele se vira e inicia o duelo definitivo com sua equipe lendária no nível máximo:<br><br>" +
-             "• <b>Pikachu (Lv 100):</b> Equipado com <i>Light Ball</i>, seu ataque e ataque especial são duplicados! Derrube-o com um golpe de Terra veloz (Earthquake) antes que ele possa atacar.<br>" +
-             "• <b>Charizard (Lv 98):</b> Usa Flamethrower e Wing Attack potentes; fraco a Água, Elétrico e sofre 4x para Pedra.<br>" +
-             "• <b>Blastoise (Lv 98):</b> Usa Hydro Pump e Blizzard; fraco a Planta e Elétrico.<br>" +
-             "• <b>Venusaur (Lv 98):</b> Usa SolarBeam e Sludge Bomb; fraco a Fogo, Psíquico, Gelo e Voador.<br>" +
-             "• <b>Snorlax (Lv 97):</b> Um monstro de HP monumental que usa Body Slam e Rest. Requer golpes Lutadores brutais (Machamp/Heracross).<br>" +
-             "• <b>Lapras (Lv 96):</b> Usa Surf e Ice Beam sob a nevasca; use golpes Elétricos e Lutadores."
+        heading: "3. O Mestre Silencioso: Campeão Red",
+        text: "No ponto mais alto do Monte Silver aguarda a lenda viva: <b>Red</b>. Sem dizer uma única palavra (<i>'...'</i>), ele inicia o confronto supremo com sua equipe icônica no nível máximo:<br><br>" +
+             "• <b>Pikachu (Lv 100):</b> Equipado com <i>Light Ball</i>, possui poder ofensivo devastador! Derrube-o com golpes de Terra (Earthquake).<br>" +
+             "• <b>Charizard (Lv 98):</b> Fraco a Água, Elétrico e sofre 4x para Pedra (Rock Slide / AncientPower).<br>" +
+             "• <b>Blastoise (Lv 98):</b> Altíssima defesa; use golpes Elétricos ou de Planta.<br>" +
+             "• <b>Venusaur (Lv 98):</b> Vulnerável a Fogo, Psíquico, Gelo e Voador.<br>" +
+             "• <b>Snorlax (Lv 97):</b> Muralha colossal de HP; use golpes Lutadores fortes (Focus Punch / Cross Chop / Brick Break).<br>" +
+             "• <b>Lapras (Lv 96):</b> Domina o gelo e a água; use golpes Elétricos, Lutadores, Planta ou Pedra.<br><br>" +
+             "Ao vencer Red, você é consagrado <b>Campeão Supremo de Kanto e Johto</b> e recebe <b>1x Master Ball</b>, <b>1x Ability Patch</b> e <b>10x Max Candy</b> (além de poder desafiá-lo novamente sempre que quiser!)."
       }
     ],
-    proTip: "Lembre-se que o granizo constante causará dano no final de cada turno aos Pokémon que não forem do tipo Gelo. Traga uma sacola cheia de Max Revives, Full Restores e esteja com seu time treinado pelo menos no nível 90+ para triunfar!"
+    proTip: "Fale com o Guarda Florestal à esquerda do cume do Monte Silver para curar seus Pokémon gratuitamente antes ou depois de enfrentar Red!"
   }
 ];

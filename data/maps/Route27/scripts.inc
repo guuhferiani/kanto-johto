@@ -66,3 +66,49 @@ Route27_Text_FriendshipWomanPostMsg::
 	.string "O TM27 contem o golpe Retorno (Return)!\n"
 	.string "E a prova viva de que a amizade vence\l"
 	.string "qualquer batalha!$"
+
+
+Route27_EventScript_MtSilverRanger::
+	lock
+	faceplayer
+	goto_if_unset FLAG_DEFEATED_ALL_JOHTO_LEADERS, Route27_EventScript_MtSilverLocked
+	msgbox Route27_Text_MtSilverAskWarp, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route27_EventScript_MtSilverDecline
+	msgbox Route27_Text_MtSilverDeparting, MSGBOX_DEFAULT
+	warp MAP_MT_SILVER, 4, 7
+	waitstate
+	release
+	end
+
+Route27_EventScript_MtSilverLocked::
+	msgbox Route27_Text_MtSilverLocked, MSGBOX_DEFAULT
+	release
+	end
+
+Route27_EventScript_MtSilverDecline::
+	msgbox Route27_Text_MtSilverDecline, MSGBOX_DEFAULT
+	release
+	end
+
+Route27_Text_MtSilverLocked::
+	.string "Guarda Florestal: Eu protejo a\n"
+	.string "trilha secreta para o Monte Silver!\p"
+	.string "Apenas treinadores que conquistaram\n"
+	.string "as 8 Insígnias de Johto têm\l"
+	.string "permissão para subir ao cume onde\l"
+	.string "o lendário Campeão Red treina!$"
+
+Route27_Text_MtSilverAskWarp::
+	.string "Guarda Florestal: Impressionante!\n"
+	.string "Você possui todas as 8 Insígnias\l"
+	.string "de Kanto e as 8 de Johto!\p"
+	.string "Deseja que eu o escolte agora mesmo\n"
+	.string "até o cume nevado do Monte Silver?$"
+
+Route27_Text_MtSilverDeparting::
+	.string "Prepare-se para o frio extremo!\n"
+	.string "Rumo ao Monte Silver!$"
+
+Route27_Text_MtSilverDecline::
+	.string "Estarei aqui sempre que quiser ir\n"
+	.string "ao Monte Silver!$"
