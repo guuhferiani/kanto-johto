@@ -107,12 +107,14 @@ export default function GlobalSearchModal({ isOpen, onClose, onNavigate }) {
     // 4. Routes Matches
     const routes = routesData
       .filter((r) => {
+        const getMonName = (m) => (typeof m === 'string' ? m : m?.name || '');
         const inName = cleanStr(r.name).includes(q);
-        const inDay = r.day?.some((m) => cleanStr(m).includes(q));
-        const inNight = r.night?.some((m) => cleanStr(m).includes(q));
-        const inWater = r.water?.some((m) => cleanStr(m).includes(q));
-        const inHidden = r.hidden?.some((m) => cleanStr(m).includes(q));
-        return inName || inDay || inNight || inWater || inHidden;
+        const inRegion = r.region ? cleanStr(r.region).includes(q) : false;
+        const inDay = r.day?.some((m) => cleanStr(getMonName(m)).includes(q));
+        const inNight = r.night?.some((m) => cleanStr(getMonName(m)).includes(q));
+        const inWater = r.water?.some((m) => cleanStr(getMonName(m)).includes(q));
+        const inHidden = r.hidden?.some((m) => cleanStr(getMonName(m)).includes(q));
+        return inName || inRegion || inDay || inNight || inWater || inHidden;
       })
       .slice(0, 5);
 
@@ -445,7 +447,8 @@ export default function GlobalSearchModal({ isOpen, onClose, onNavigate }) {
                             {rt.name}
                           </span>
                           <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
-                            Dia: {rt.day?.slice(0, 3).join(', ') || 'Nenhum'} | Água: {rt.water?.slice(0, 2).join(', ') || 'Nenhum'}
+                            {rt.region && <strong style={{ color: rt.region === 'Kanto' ? 'var(--primary)' : 'var(--secondary)', marginRight: '6px' }}>[{rt.region}]</strong>}
+                            Dia: {rt.day?.slice(0, 3).map((m) => (typeof m === 'string' ? m : m.name)).join(', ') || 'Nenhum'} | Água: {rt.water?.slice(0, 2).map((m) => (typeof m === 'string' ? m : m.name)).join(', ') || 'Nenhum'}
                           </span>
                         </div>
                         <ChevronRight size={16} color="var(--text-muted)" />
