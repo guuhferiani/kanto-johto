@@ -30,7 +30,7 @@ export default function SidebarDrawer({
     { id: 'home', label: 'Início & Resumo', icon: Home },
     { id: 'kanto', label: 'Detonado Kanto', icon: Compass },
     { id: 'johto', label: 'Detonado Johto', icon: Sparkles },
-    { id: 'gyms', label: 'Líderes & Chefes', icon: Trophy },
+    { id: 'gyms', label: 'Líderes & Insígnias', icon: Trophy },
     { id: 'pokedex', label: 'Pokédex Nacional', icon: BookOpen },
     { id: 'routes', label: 'Rotas & Encontros', icon: MapPin },
     { id: 'items', label: 'TMs, HMs & Itens', icon: Gift },

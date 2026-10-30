@@ -6,7 +6,7 @@ export default function BottomNav({ activeTab, onSelectTab }) {
     { id: 'home', label: 'Início', icon: Home },
     { id: 'kanto', label: 'Kanto', icon: Compass },
     { id: 'johto', label: 'Johto', icon: Sparkles },
-    { id: 'gyms', label: 'Chefes', icon: Trophy },
+    { id: 'gyms', label: 'Insígnias', icon: Trophy },
     { id: 'pokedex', label: 'Pokédex', icon: BookOpen },
     { id: 'routes', label: 'Rotas', icon: MapPin },
   ];

@@ -52,6 +52,7 @@ struct TrainerCardData
     bool8 unused_E;
     bool8 unused_F;
     bool8 hasTrades;
+    u8 badgeRegion;
     u8 badgeCount[NUM_BADGES];
     u8 easyChatProfile[TRAINER_CARD_PROFILE_LENGTH][13];
     u8 textPlayersCard[70];
@@ -127,6 +128,10 @@ static void SetTrainerCardCb2(void);
 static void SetUpTrainerCardTask(void);
 static void InitTrainerCardData(void);
 static u8 GetSetCardType(void);
+static void PrintBadgeRegionLabel(void);
+static void UpdateBadgeCountForRegion(void);
+static void ToggleBadgeRegion(void);
+static u8 GetKantoJohtoStars(struct TrainerCard*);
 static void PrintNameOnCardFront(void);
 static void PrintIdOnCard(void);
 static void PrintMoneyOnCard(void);
@@ -200,6 +205,10 @@ static const u16 sTrainerCardSticker3_Pal[]      = INCBIN_U16("graphics/trainer_
 static const u16 sTrainerCardSticker4_Pal[]      = INCBIN_U16("graphics/trainer_card/stickers_fr4.gbapal");
 static const u32 sHoennTrainerCardBadges_Gfx[]    = INCBIN_U32("graphics/trainer_card/badges_fr.4bpp.lz");
 static const u32 sKantoTrainerCardBadges_Gfx[]   = INCBIN_U32("graphics/trainer_card/badges_fr.4bpp.lz");
+static const u32 sJohtoTrainerCardBadges_Gfx[]   = INCBIN_U32("graphics/trainer_card/badges_johto.4bpp.lz");
+
+static const u8 sText_KantoBadges[] = _("{L_BUTTON}{R_BUTTON} KANTO");
+static const u8 sText_JohtoBadges[] = _("{L_BUTTON}{R_BUTTON} JOHTO");
 
 static const struct BgTemplate sTrainerCardBgTemplates[4] =
 {
@@ -469,17 +478,11 @@ static void Task_TrainerCard(u8 taskId)
             DrawTrainerCardWindow(1);
             sData->timeColonNeedDraw = FALSE;
         }
-        if (JOY_NEW(SELECT_BUTTON))
+        if (JOY_NEW(L_BUTTON | R_BUTTON | DPAD_LEFT | DPAD_RIGHT | SELECT_BUTTON))
         {
-            SetMoney(&gSaveBlock1Ptr->money, 999999);
-            SetCoins(9999);
-            sData->trainerCard.money = 999999;
-            FillWindowPixelRect(1, PIXEL_FILL(0), 16, 54, 130, 16);
-            PrintMoneyOnCard();
-            DrawTrainerCardWindow(1);
-            PlaySE(SE_SHOP);
+            ToggleBadgeRegion();
         }
-        else if ((JOY_NEW(A_BUTTON)) && (FlagGet(FLAG_SYS_FRONTIER_PASS)==TRUE))
+        else if (JOY_NEW(A_BUTTON))
         {
             FlipTrainerCard();
             PlaySE(SE_RG_CARD_FLIP);
@@ -598,8 +601,8 @@ static bool8 LoadCardGfx(void)
         }
         break;
     case 3:
-        if (sData->cardType != CARD_TYPE_FRLG)
-            LZ77UnCompWram(sHoennTrainerCardBadges_Gfx, sData->badgeTiles);
+        if (sData->badgeRegion == 1)
+            LZ77UnCompWram(sJohtoTrainerCardBadges_Gfx, sData->badgeTiles);
         else
             LZ77UnCompWram(sKantoTrainerCardBadges_Gfx, sData->badgeTiles);
         break;
@@ -712,6 +715,33 @@ u32 CountPlayerTrainerStars(void)
     return stars;
 }
 
+static u8 GetKantoJohtoStars(struct TrainerCard *trainerCard)
+{
+    u8 stars = 0;
+
+    // Star 1 (Bronze): Entered Hall of Fame / Defeated Rival Champion
+    if (GetGameStat(GAME_STAT_ENTERED_HOF) || FlagGet(FLAG_DEFEATED_RIVAL_CHAMPION)
+     || trainerCard->hofDebutHours || trainerCard->hofDebutMinutes || trainerCard->hofDebutSeconds)
+        stars++;
+
+    // Star 2 (Silver): Defeated all 8 Johto Gym Leaders
+    if (FlagGet(FLAG_DEFEATED_ALL_JOHTO_LEADERS))
+        stars++;
+
+    // Star 3 (Gold): Defeated Champion Red at Mt. Silver
+    if (FlagGet(FLAG_DEFEATED_CHAMPION_RED))
+        stars++;
+
+    // Star 4 (Crystal/Violet): Complete Pokédex (150+ caught) or Cleared Secret Battle
+    if (trainerCard->caughtMonsCount >= 150 || FlagGet(FLAG_CLEARED_SECRET_BATTLE))
+        stars++;
+
+    if (stars > 4)
+        stars = 4;
+
+    return stars;
+}
+
 static u8 GetRubyTrainerStars(struct TrainerCard *trainerCard)
 {
     u8 stars = 0;
@@ -776,9 +806,7 @@ static void SetPlayerCardData(struct TrainerCard *trainerCard, u8 cardType)
         trainerCard->TowerOpenDoublesRecord = gSaveBlock2Ptr->frontier.towerRecordWinStreaks[FRONTIER_MODE_DOUBLES][FRONTIER_LVL_OPEN];
     // Seems like GF got CARD_TYPE_FRLG and CARD_TYPE_RS wrong.
     case CARD_TYPE_FRLG:
-        if (CountPlayerMuseumPaintings() >= CONTEST_CATEGORIES_COUNT)
-            trainerCard->hasAllPaintings = TRUE;
-        trainerCard->stars = GetRubyTrainerStars(trainerCard);
+        trainerCard->stars = GetKantoJohtoStars(trainerCard);
         break;
     case CARD_TYPE_RS:
         trainerCard->hasAllPaintings = 0;
@@ -790,8 +818,8 @@ static void SetPlayerCardData(struct TrainerCard *trainerCard, u8 cardType)
 static void TrainerCard_GenerateCardForPlayer(struct TrainerCard *trainerCard)
 {
     memset(trainerCard, 0, sizeof(struct TrainerCard));
-    trainerCard->version = GAME_VERSION;
-    SetPlayerCardData(trainerCard, CARD_TYPE_EMERALD);
+    trainerCard->version = VERSION_FIRE_RED;
+    SetPlayerCardData(trainerCard, CARD_TYPE_FRLG);
     trainerCard->hasAllFrontierSymbols = HasAllFrontierSymbols();
     trainerCard->frontierBP = gSaveBlock2Ptr->frontier.cardBattlePoints;
     if (trainerCard->hasAllFrontierSymbols)
@@ -841,11 +869,52 @@ void CopyTrainerCardData(struct TrainerCard *dst, struct TrainerCard *src, u8 ga
     }
 }
 
-static void SetDataFromTrainerCard(void)
+static void UpdateBadgeCountForRegion(void)
 {
     u8 i;
-    u32 badgeFlag;
+    memset(sData->badgeCount, 0, sizeof(sData->badgeCount));
 
+    if (sData->badgeRegion == 0)
+    {
+        for (i = 0; i < NUM_BADGES; i++)
+        {
+            if (FlagGet(FLAG_BADGE01_GET + i))
+                sData->badgeCount[i] = 1;
+        }
+    }
+    else
+    {
+        for (i = 0; i < NUM_BADGES; i++)
+        {
+            if (FlagGet(FLAG_DEFEATED_LEADER_FALKNER + i))
+                sData->badgeCount[i] = 1;
+        }
+    }
+}
+
+static void ToggleBadgeRegion(void)
+{
+    sData->badgeRegion ^= 1;
+
+    if (sData->badgeRegion == 1)
+        LZ77UnCompWram(sJohtoTrainerCardBadges_Gfx, sData->badgeTiles);
+    else
+        LZ77UnCompWram(sKantoTrainerCardBadges_Gfx, sData->badgeTiles);
+
+    LoadBgTiles(3, sData->badgeTiles, ARRAY_COUNT(sData->badgeTiles), 0);
+    UpdateBadgeCountForRegion();
+
+    FillBgTilemapBufferRect(3, 0, 4, 15, 24, 2, 0);
+    DrawStarsAndBadgesOnCard();
+
+    PrintBadgeRegionLabel();
+    DrawTrainerCardWindow(1);
+
+    PlaySE(SE_DEX_PAGE);
+}
+
+static void SetDataFromTrainerCard(void)
+{
     sData->hasPokedex = FALSE;
     sData->hasHofResult = FALSE;
     sData->hasLinkResults = FALSE;
@@ -853,7 +922,9 @@ static void SetDataFromTrainerCard(void)
     sData->unused_E = FALSE;
     sData->unused_F = FALSE;
     sData->hasTrades = FALSE;
-    memset(sData->badgeCount, 0, sizeof(sData->badgeCount));
+    sData->badgeRegion = 0;
+    UpdateBadgeCountForRegion();
+
     if (sData->trainerCard.hasPokedex)
         sData->hasPokedex++;
 
@@ -861,12 +932,6 @@ static void SetDataFromTrainerCard(void)
      || sData->trainerCard.hofDebutMinutes
      || sData->trainerCard.hofDebutSeconds)
         sData->hasHofResult++;
-
-    for (i = 0, badgeFlag = FLAG_BADGE01_GET; badgeFlag < FLAG_BADGE01_GET + NUM_BADGES; badgeFlag++, i++)
-    {
-        if (FlagGet(badgeFlag))
-            sData->badgeCount[i]++;
-    }
 }
 
 static void InitGpuRegs(void)
@@ -962,6 +1027,9 @@ static bool8 PrintAllOnCardFront(void)
         break;
     case 5:
         PrintProfilePhraseOnCard();
+        break;
+    case 6:
+        PrintBadgeRegionLabel();
         break;
     default:
         sData->printState = 0;
@@ -1176,6 +1244,13 @@ static void PrintProfilePhraseOnCard(void)
         AddTextPrinterParameterized3(1, FONT_NORMAL, 8, yOffsetsLine2[sData->isHoenn], sTrainerCardTextColors, TEXT_SKIP_DRAW, sData->easyChatProfile[2]);
         AddTextPrinterParameterized3(1, FONT_NORMAL, GetStringWidth(FONT_NORMAL, sData->easyChatProfile[2], 0) + 14, yOffsetsLine2[sData->isHoenn], sTrainerCardTextColors, TEXT_SKIP_DRAW, sData->easyChatProfile[3]);
     }
+}
+
+static void PrintBadgeRegionLabel(void)
+{
+    const u8 *str = (sData->badgeRegion == 0) ? sText_KantoBadges : sText_JohtoBadges;
+    FillWindowPixelRect(1, PIXEL_FILL(0), 20, 104, 110, 15);
+    AddTextPrinterParameterized3(1, FONT_NORMAL, 20, 104, sTrainerCardTextColors, TEXT_SKIP_DRAW, str);
 }
 
 static void BufferNameForCardBack(void)
@@ -1836,6 +1911,7 @@ static void InitTrainerCardData(void)
     sData->timeColonInvisible = FALSE;
     sData->onBack = FALSE;
     sData->flipBlendY = 0;
+    sData->badgeRegion = 0;
     sData->cardType = GetSetCardType();
     for (i = 0; i < TRAINER_CARD_PROFILE_LENGTH; i++)
         CopyEasyChatWord(sData->easyChatProfile[i], sData->trainerCard.easyChatProfile[i]);
@@ -1845,41 +1921,18 @@ static u8 GetSetCardType(void)
 {
     if (sData == NULL)
     {
-        if (gGameVersion == VERSION_FIRE_RED || gGameVersion == VERSION_LEAF_GREEN)
-            return CARD_TYPE_FRLG;
-        else if (gGameVersion == VERSION_EMERALD)
-            return CARD_TYPE_EMERALD;
-        else
-            return CARD_TYPE_RS;
+        return CARD_TYPE_FRLG;
     }
     else
     {
-        if (sData->trainerCard.version == VERSION_FIRE_RED || sData->trainerCard.version == VERSION_LEAF_GREEN)
-        {
-            sData->isHoenn = FALSE;
-            return CARD_TYPE_FRLG;
-        }
-        else if (sData->trainerCard.version == VERSION_EMERALD)
-        {
-            sData->isHoenn = TRUE;
-            return CARD_TYPE_EMERALD;
-        }
-        else
-        {
-            sData->isHoenn = TRUE;
-            return CARD_TYPE_RS;
-        }
+        sData->isHoenn = FALSE;
+        return CARD_TYPE_FRLG;
     }
 }
 
 static u8 VersionToCardType(u8 version)
 {
-    if (version == VERSION_FIRE_RED || version == VERSION_LEAF_GREEN)
-        return CARD_TYPE_FRLG;
-    else if (version == VERSION_EMERALD)
-        return CARD_TYPE_EMERALD;
-    else
-        return CARD_TYPE_RS;
+    return CARD_TYPE_FRLG;
 }
 
 static void CreateTrainerCardTrainerPic(void)

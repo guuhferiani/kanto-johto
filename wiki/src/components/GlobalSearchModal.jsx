@@ -16,6 +16,12 @@ function cleanStr(s) {
     .toLowerCase();
 }
 
+function stemWord(w) {
+  if (!w) return '';
+  if (w.endsWith('s') && w.length > 3) return w.slice(0, -1);
+  return w;
+}
+
 export default function GlobalSearchModal({ isOpen, onClose, onNavigate }) {
   const [query, setQuery] = useState('');
   const inputRef = useRef(null);
@@ -50,13 +56,17 @@ export default function GlobalSearchModal({ isOpen, onClose, onNavigate }) {
     const q = cleanStr(query.trim());
     if (!q || q.length < 2) return null;
 
+    const stemmed = stemWord(q);
+    const isBadgesSearch = q.includes('insigni') || q.includes('badge') || q.includes('lider') || q.includes('ginasio') || q.includes('chefe');
+
     // 1. Pokédex Matches
     const pokemon = pokedexData
       .filter((p) => {
         return (
           cleanStr(p.name).includes(q) ||
+          cleanStr(p.name).includes(stemmed) ||
           p.num.toString() === q ||
-          p.type.some((t) => cleanStr(t).includes(q)) ||
+          p.type.some((t) => cleanStr(t).includes(q) || cleanStr(t).includes(stemmed)) ||
           cleanStr(p.evo).includes(q)
         );
       })
@@ -65,16 +75,19 @@ export default function GlobalSearchModal({ isOpen, onClose, onNavigate }) {
     // 2. Bosses Matches
     const bosses = gymBossesData
       .filter((b) => {
+        if (isBadgesSearch) return true;
         return (
           cleanStr(b.name).includes(q) ||
+          cleanStr(b.name).includes(stemmed) ||
           cleanStr(b.city).includes(q) ||
           cleanStr(b.badge).includes(q) ||
+          cleanStr(b.badge).includes(stemmed) ||
           cleanStr(b.type).includes(q) ||
           cleanStr(b.strategy).includes(q) ||
-          b.team.some((t) => cleanStr(t.name).includes(q))
+          b.team.some((t) => cleanStr(t.name).includes(q) || cleanStr(t.name).includes(stemmed))
         );
       })
-      .slice(0, 5);
+      .slice(0, isBadgesSearch ? 16 : 6);
 
     // 3. Walkthrough Chapters (Kanto & Johto)
     const kanto = kantoChapters
@@ -307,15 +320,39 @@ export default function GlobalSearchModal({ isOpen, onClose, onNavigate }) {
                   <div style={{
                     display: 'flex',
                     alignItems: 'center',
-                    gap: '0.5rem',
-                    fontSize: '0.8rem',
-                    fontWeight: 700,
-                    textTransform: 'uppercase',
-                    color: 'var(--accent)',
+                    justifyContent: 'space-between',
                     marginBottom: '0.5rem'
                   }}>
-                    <Trophy size={14} />
-                    <span>Líderes de Ginásio & Chefes ({results.bosses.length})</span>
+                    <div style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '0.5rem',
+                      fontSize: '0.8rem',
+                      fontWeight: 700,
+                      textTransform: 'uppercase',
+                      color: 'var(--accent)'
+                    }}>
+                      <Trophy size={14} />
+                      <span>Líderes de Ginásio & Insígnias ({results.bosses.length})</span>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        onNavigate('gyms');
+                        onClose();
+                      }}
+                      style={{
+                        background: 'transparent',
+                        border: 'none',
+                        color: 'var(--accent)',
+                        fontSize: '0.75rem',
+                        fontWeight: 600,
+                        cursor: 'pointer',
+                        padding: '2px 6px'
+                      }}
+                    >
+                      Ver todos no Mural →
+                    </button>
                   </div>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                     {results.bosses.map((boss) => (
@@ -341,12 +378,12 @@ export default function GlobalSearchModal({ isOpen, onClose, onNavigate }) {
                           {boss.badge_icon || '🥊'}
                         </div>
                         <div style={{ flex: 1, minWidth: 0 }}>
-                          <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                          <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', flexWrap: 'wrap' }}>
                             <span className="search-modal-item-title">
                               {boss.name}
                             </span>
                             <span style={{ fontSize: '0.75rem', color: 'var(--accent)', fontWeight: 600 }}>
-                              • {boss.city} ({boss.badge})
+                              • [{boss.region === 'kanto' ? 'Kanto' : boss.region === 'johto' ? 'Johto' : 'Elite'}] {boss.city} ({boss.badge})
                             </span>
                           </div>
                           <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
