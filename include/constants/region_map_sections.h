@@ -217,7 +217,10 @@
 #define MAPSEC_ROUTE_27                     0xD5
 #define MAPSEC_TOHJO_FALLS                  0xD6
 #define MAPSEC_NEW_BARK_TOWN                0xD7
-#define MAPSEC_NONE                         0xD8
+#define MAPSEC_ROUTE_29                     0xD8
+#define MAPSEC_VIOLET_CITY                  0xD9
+#define MAPSEC_SPROUT_TOWER                 0xDA
+#define MAPSEC_NONE                         0xDB
 
 #define METLOC_SPECIAL_EGG                  0xFD
 #define METLOC_IN_GAME_TRADE                0xFE

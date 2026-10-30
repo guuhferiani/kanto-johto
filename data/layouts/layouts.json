@@ -8268,6 +8268,26 @@
       "secondary_tileset": "gTileset_PalletTown",
       "border_filepath": "data/layouts/NewBarkTown/border.bin",
       "blockdata_filepath": "data/layouts/NewBarkTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE29",
+      "name": "Route29_Layout",
+      "width": 24,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_PalletTown",
+      "border_filepath": "data/layouts/Route29/border.bin",
+      "blockdata_filepath": "data/layouts/Route29/map.bin"
+    },
+    {
+      "id": "LAYOUT_VIOLET_CITY",
+      "name": "VioletCity_Layout",
+      "width": 48,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_ViridianCity",
+      "border_filepath": "data/layouts/VioletCity/border.bin",
+      "blockdata_filepath": "data/layouts/VioletCity/map.bin"
     }
   ]
 }

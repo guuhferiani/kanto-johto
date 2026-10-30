@@ -95,7 +95,7 @@ export default function HomeView({ onSelectTab, onOpenSearch }) {
         marginBottom: '1.5rem'
       }}>
         <div className="card" style={{ padding: '1.25rem', textAlign: 'center', margin: 0 }}>
-          <div style={{ fontSize: '2rem', fontWeight: 900, color: 'var(--primary)', fontFamily: 'var(--font-heading)' }}>256</div>
+          <div style={{ fontSize: '2rem', fontWeight: 900, color: 'var(--primary)', fontFamily: 'var(--font-heading)' }}>257</div>
           <div style={{ color: 'var(--text-muted)', fontSize: '0.85rem', fontWeight: 600 }}>Pokémon Nacionais</div>
         </div>
         <div className="card" style={{ padding: '1.25rem', textAlign: 'center', margin: 0 }}>
@@ -184,7 +184,7 @@ export default function HomeView({ onSelectTab, onOpenSearch }) {
             </div>
             <div>
               <h3 style={{ fontSize: '1.15rem' }}>Pokédex Nacional Interativa</h3>
-              <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>251 Criaturas com Sprites Animados</span>
+              <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>257 Criaturas com Sprites Animados</span>
             </div>
           </div>
           <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)' }}>

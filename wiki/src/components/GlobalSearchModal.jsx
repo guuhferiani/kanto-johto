@@ -269,7 +269,7 @@ export default function GlobalSearchModal({ isOpen, onClose, onNavigate }) {
                         className="search-modal-item"
                       >
                         <img
-                          src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${mon.num}.png`}
+                          src={mon.customSprite ? `graphics/pokemon/${mon.folder}/front.png` : `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${mon.num}.png`}
                           alt={mon.name}
                           style={{ width: '38px', height: '38px', imageRendering: 'pixelated' }}
                           loading="lazy"

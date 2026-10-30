@@ -236,10 +236,10 @@
 #define FLAG_UNLOCKED_JOHTO_JOURNEY         0xD9
 #define FLAG_RECEIVED_TM27                  0xDA
 #define FLAG_ITEM_TOHJO_FALLS_MOON_STONE    0xDB
-#define FLAG_UNUSED_0x0DC                 	0xDC 
-#define FLAG_UNUSED_0x0DD             		0xDD
-#define FLAG_UNUSED_0x0DE         			0xDE
-#define FLAG_UNUSED_0x0DF           		0xDF
+#define FLAG_RECEIVED_JOHTO_STARTER         0xDC 
+#define FLAG_BEAT_SPROUT_TOWER_ELDER        0xDD
+#define FLAG_VIOLET_CITY_RARE_CANDY         0xDE
+#define FLAG_ROUTE29_MAX_ETHER              0xDF
 #define FLAG_UNUSED_0x0E0          			0xE0
 #define FLAG_UNUSED_0x0E1              		0xE1
 #define FLAG_UNUSED_0x0E2           		0xE2

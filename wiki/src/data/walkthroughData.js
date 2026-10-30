@@ -67,7 +67,7 @@ export const kantoChapters = [
     content: [
       {
         heading: "1. A Travessia pelo Mt. Moon e Equipe Rocket",
-        text: "Siga pela Rota 3 e entre no <b>Mt. Moon</b>. Compre um <i>Magikarp</i> por 500 PokéDólares com o vendedor no Centro Pokémon se quiser um Gyarados poderoso no Lv 20! Dentro da caverna, recolha a <b>Pedra da Lua</b>, enfrente os primeiros soldados da Equipe Rocket e escolha seu fóssil (Helix Fossil para Omanyte ou Dome Fossil para Kabuto)."
+        text: "Siga pela Rota 3 e entre no <b>Mt. Moon</b>. Compre um <i>Magikarp</i> por 500 PokéDólares com o vendedor no Centro Pokémon se quiser um Gyarados poderoso no Lv 20! No final da caverna, vença o Super Nerd Miguel e escolha seu <b>1º Fóssil</b>: <b>Helix Fossil</b> (Omanyte) ou <b>Dome Fossil</b> (Kabuto) — Miguel ficará com o outro, mas você poderá recuperá-lo mais tarde!"
       },
       {
         heading: "2. Como Obter o Bulbasaur (Cerulean City)",
@@ -107,6 +107,10 @@ export const kantoChapters = [
       {
         heading: "3. Como Obter o Squirtle com a Oficial Jenny",
         text: "No centro de Vermilion City, você verá a <b>Oficial Jenny</b> com um <b>Squirtle travesso</b> ao seu lado que causava confusão na cidade. Fale com ela: ela avisará que o Squirtle precisa de um treinador firme e disciplinado. Como você acabou de conquistar a Insígnia do Trovão de Surge, você mostra sua insígnia comprovando sua autoridade. A policial, aliviada e impressionada, te entrega o <b>Squirtle (Lv 10)</b> — que vem segurando o item especial <b>Black Glasses (Óculos Escuros)</b> em homenagem ao clássico 'Esquadrão Squirtle'!"
+      },
+      {
+        heading: "4. O Segredo do Museu de Pewter: Old Amber (Âmbar Velho) & Chele",
+        text: "Agora que você possui o <b>HM01 (Cortar / Cut)</b>, entre na <b>Diglett's Cave</b> (a leste de Vermilion) para sair diretamente no lado leste da <b>Rota 2</b>! Aproveite para procurar na grama à noite o Pokémon exclusivo <b>Chele (#392, Gato Astral do tipo Sombrio)</b>. Suba até os fundos do <b>Museu de Pewter City</b>, corte o arbusto que bloqueia a entrada lateral secreta e fale com o cientista para ganhar o <b>Old Amber (Âmbar Velho)</b>!"
       }
     ],
     proTip: "Com Pikachu Parceiro, Bulbasaur, Charmander e Squirtle, seu time dos sonhos está 100% reunido e pronto para enfrentar qualquer desafio do jogo!"
@@ -136,7 +140,7 @@ export const kantoChapters = [
         text: "Retorne à Torre Pokémon de Lavender. Com o Silph Scope em mãos, o fantasma aterrador no 6º andar se revelará como a alma inquieta da mãe <b>Marowak</b>. Acalme seu espírito e suba ao último andar para expulsar a Equipe Rocket e salvar o <b>Sr. Fuji</b>. Em agradecimento na casa dele, você receberá a <b>Poké Flute (Poké-Flauta)</b>, capaz de acordar os dois preguiçosos Snorlax que bloqueiam os caminhos de Kanto!"
       }
     ],
-    proTip: "Na Torre Pokémon você pode capturar Gastly e Haunter, ou o tipo Sombrio Umbreon/Murkrow adicionados na ROM!"
+    proTip: "Na Torre Pokémon você pode capturar Gastly, Haunter e o exclusivo Chele (#392, Gato Astral do tipo Sombrio), além de Murkrow e Misdreavus adicionados na ROM!"
   },
   {
     id: "kanto-cap6",
@@ -193,6 +197,10 @@ export const kantoChapters = [
       {
         heading: "3. Ilha de Cinnabar e a Chave da Mansão",
         text: "Ensine Surfe a Squirtle/Blastoise ou Lapras e navegue pelas Rotas 19 e 20 até a <b>Ilha de Cinnabar</b>. A porta do ginásio estará trancada! Entre na sombria <b>Pokémon Mansion</b>, aperte os botões nos olhos das estátuas para destravar portas e colete a <b>Secret Key</b> no subsolo. Agora abra o Ginásio de <b>Blaine</b>: responda as charadas nas máquinas ou duele com os treinadores. Com ataques de Surfe e Terremoto, derrote seu temível Arcanine Lv 47 e fature a <b>Insígnia do Vulcão</b>!"
+      },
+      {
+        heading: "4. Ressuscitando Fósseis em Cinnabar & O 2º Fóssil do Mt. Moon",
+        text: "Entre no <b>Laboratório de Pesquisa de Cinnabar</b> (última sala à direita) e entregue seus fósseis ao cientista para ressuscitá-los: seu <b>1º Fóssil do Mt. Moon</b> vira <b>Omanyte</b> ou <b>Kabuto</b>, e o <b>Old Amber</b> vira o poderoso <b>Aerodactyl</b>! Com o Aerodactyl ressuscitado registrado, use <b>HM02 Fly</b> de volta para <b>Pewter City</b>, entre novamente pela porta lateral dos fundos do <b>Museu de Pewter</b> (usando Cut) e fale com o cientista que te deu o Old Amber: impressionado ao ver o Aerodactyl vivo, ele te presenteará com o <b>2º Fóssil do Mt. Moon</b> (aquele que o Super Nerd Miguel havia levado)! Basta voltar a Cinnabar para ter os 3 fósseis completos!"
       }
     ],
     proTip: "No laboratório de Cinnabar, entregue o Fóssil que você pegou no Mt. Moon e o Old Amber (Âmbar Velho) da Rota 2 para reviver Omanyte/Kabuto e Aerodactyl!"
@@ -248,16 +256,16 @@ export const johtoChapters = [
     ],
     content: [
       {
-        heading: "1. O Embarque no Navio S.S. Aqua & O Grande Salão dos Líderes",
-        text: "Vá até o porto de Vermilion City após se consagrar Campeão e embarque no luxuoso navio transoceânico <b>S.S. Aqua</b>. Ao desembarcar na Costa de Johto, você tem acesso ao monumental <b>Salão dos Líderes de Johto</b>, onde os 8 mestres de ginásio oficiais da região (Falkner, Bugsy, Whitney, Morty, Chuck, Jasmine, Pryce e Clair) aguardam seu desafio com suas equipes em força máxima (níveis 58 a 83)! Derrote todos os 8 para receber 3 PP Max e a bênção para enfrentar o teste supremo: o Campeão Red no cume do Monte Silver!"
+        heading: "1. O Convite de Carvalho em Pallet & Travessia das Tohjo Falls",
+        text: "Após se consagrar Campeão da Liga e acordar em sua casa em <b>Pallet Town</b>, fale com sua mãe e vá até o <b>Laboratório do Prof. Carvalho</b>. Ele celebrará sua conquista ao lado de Rival Blue e te entregará o <b>Passe Oficial de Johto</b>! Com o passe em mãos, você tem duas rotas para entrar em Johto: atravessar a fronteira oeste pela <b>Rota 22 -> Rota 27 -> Tohjo Falls</b> (coletando a <i>Moon Stone</i> nas cachoeiras) até chegar a <b>New Bark Town</b>, ou embarcar no navio <b>S.S. Aqua</b> no porto de Vermilion rumo ao Grande Salão dos Líderes!"
       },
       {
-        heading: "2. Desembarque em New Bark e Sprout Tower",
-        text: "Desembarque na ensolarada <b>New Bark Town</b> e siga pela Rota 29 até <b>Violet City</b>. Visite a histórica <b>Sprout Tower</b>: derrote os monges e o Ancião no topo para receber o item lendário e treinar seu time para os novos patamares de nível de Johto!"
+        heading: "2. New Bark Town (Lab. do Prof. Elm) & Rota 29/30",
+        text: "Em <b>New Bark Town</b>, entre no <b>Laboratório do Professor Elm</b>. Reconhecendo seu título de Campeão de Kanto, o Prof. Elm permitirá que você escolha um dos <b>3 Iniciais de Johto (Chikorita, Cyndaquil ou Totodile no Lv 5)</b> para te acompanhar nessa nova região! Em seguida, suba pelo caminho norte através da <b>Rota 29/30</b> (repleta de Pokémon nativos de Johto como Hoothoot, Sentret, Hoppip, Phanpy e Teddiursa) até alcançar <b>Violet City</b>."
       },
       {
-        heading: "3. Ginásio Aéreo de Falkner",
-        text: "Falkner comanda os céus de Johto com seu Pidgeot e Noctowl em altíssimo nível (Lv 58 a 60+). Ataques Elétricos do seu Pikachu ou golpes de Gelo (Ice Beam) garantem a <b>Insígnia dos Céus (Zephyr Badge)</b>."
+        heading: "3. Sprout Tower & Ginásio Aéreo de Falkner (Violet City)",
+        text: "Em <b>Violet City</b>, cure sua equipe no Centro Pokémon, abasteça-se no Poké Mart e visite a tradicional <b>Sprout Tower</b>: supere os monges e o desafio do <b>Ancião Li</b> no altar para receber os itens místicos <b>Mystic Water</b> e <b>Sharp Beak</b>. Por fim, entre no <b>Ginásio de Violet City</b> e derrote o Líder <b>Falkner</b> (Pidgeotto Lv 58 e Noctowl Lv 60) com ataques Elétricos do seu Pikachu ou Gelo para conquistar a <b>Insígnia dos Céus (Zephyr Badge)</b>!"
       }
     ]
   },

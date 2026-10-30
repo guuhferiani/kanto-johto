@@ -1,0 +1,83 @@
+{
+  "id": "MAP_ROUTE29",
+  "name": "Route29",
+  "layout": "LAYOUT_ROUTE29",
+  "music": "MUS_RG_ROUTE1",
+  "region_map_section": "MAPSEC_ROUTE_29",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_ROUTE",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "connections": [
+    {
+      "direction": "down",
+      "offset": 0,
+      "map": "MAP_NEW_BARK_TOWN"
+    },
+    {
+      "direction": "up",
+      "offset": -12,
+      "map": "MAP_VIOLET_CITY"
+    }
+  ],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_BOY_3",
+      "x": 19,
+      "y": 16,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT_AND_RIGHT",
+      "movement_range_x": 2,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route29_EventScript_Boy",
+      "flag": "0",
+      "in_connection": ""
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_COOL_TRAINER_M",
+      "x": 9,
+      "y": 12,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route29_EventScript_Cooltrainer",
+      "flag": "0",
+      "in_connection": ""
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 6,
+      "y": 28,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route29_EventScript_ItemMaxEther",
+      "flag": "FLAG_ROUTE29_MAX_ETHER",
+      "in_connection": ""
+    }
+  ],
+  "warp_events": [],
+  "coord_events": [],
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 9,
+      "y": 31,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "Route29_EventScript_RouteSign"
+    }
+  ]
+}

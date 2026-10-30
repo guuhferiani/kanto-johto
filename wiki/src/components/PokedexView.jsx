@@ -114,7 +114,7 @@ export default function PokedexView({ searchTargetMon }) {
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: 'var(--text-muted)', fontSize: '0.85rem', padding: '0.5rem' }}>
           <span>Exibindo:</span>
           <strong style={{ color: '#ef4444' }}>{filteredMonList.length}</strong>
-          <span>de 251</span>
+          <span>de {pokedexData.length}</span>
         </div>
       </div>
 
@@ -167,14 +167,14 @@ export default function PokedexView({ searchTargetMon }) {
               <div className="mon-sprite-box">
                 <img
                   className="mon-sprite"
-                  src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${mon.num}.png`}
+                  src={mon.customSprite ? `graphics/pokemon/${mon.folder}/front.png` : `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${mon.num}.png`}
                   alt={mon.name}
                   loading="lazy"
                   onMouseEnter={(e) => {
-                    e.currentTarget.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/${mon.num}.gif`;
+                    e.currentTarget.src = mon.customSprite ? `graphics/pokemon/${mon.folder}/front.png` : `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/${mon.num}.gif`;
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${mon.num}.png`;
+                    e.currentTarget.src = mon.customSprite ? `graphics/pokemon/${mon.folder}/front.png` : `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${mon.num}.png`;
                   }}
                   onError={(e) => {
                     e.currentTarget.onerror = null;
@@ -231,11 +231,11 @@ export default function PokedexView({ searchTargetMon }) {
 
             <div style={{ width: '130px', height: '130px', margin: '0 auto 1rem auto', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <img
-                src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${selectedMonModal.num}.png`}
+                src={selectedMonModal.customSprite ? `graphics/pokemon/${selectedMonModal.folder}/front.png` : `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${selectedMonModal.num}.png`}
                 alt={selectedMonModal.name}
-                style={{ maxWidth: '100%', maxHeight: '100%', filter: 'drop-shadow(0 6px 12px rgba(0,0,0,0.5))' }}
+                style={{ maxWidth: '100%', maxHeight: '100%', width: selectedMonModal.customSprite ? '112px' : undefined, height: selectedMonModal.customSprite ? '112px' : undefined, imageRendering: selectedMonModal.customSprite ? 'pixelated' : undefined, filter: 'drop-shadow(0 6px 12px rgba(0,0,0,0.5))' }}
                 onError={(e) => {
-                  e.currentTarget.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${selectedMonModal.num}.png`;
+                  e.currentTarget.src = selectedMonModal.customSprite ? `graphics/pokemon/${selectedMonModal.folder}/front.png` : `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${selectedMonModal.num}.png`;
                 }}
               />
             </div>

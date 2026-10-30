@@ -201,11 +201,17 @@ static const u8 sMapName_TrainerHill[] = _("Trainer Hill");
 static const u8 sMapName_Route27[] = _("Route 27");
 static const u8 sMapName_TohjoFalls[] = _("Tohjo Falls");
 static const u8 sMapName_NewBarkTown[] = _("New Bark Town");
+static const u8 sMapName_Route29[] = _("Route 29");
+static const u8 sMapName_VioletCity[] = _("Violet City");
+static const u8 sMapName_SproutTower[] = _("Sprout Tower");
 
 const struct RegionMapLocation gRegionMapEntries[] = {
     [MAPSEC_ROUTE_27]                   = {0, 0, 1, 1, sMapName_Route27},
     [MAPSEC_TOHJO_FALLS]                = {0, 0, 1, 1, sMapName_TohjoFalls},
     [MAPSEC_NEW_BARK_TOWN]              = {0, 0, 1, 1, sMapName_NewBarkTown},
+    [MAPSEC_ROUTE_29]                   = {0, 0, 1, 1, sMapName_Route29},
+    [MAPSEC_VIOLET_CITY]                = {0, 0, 1, 1, sMapName_VioletCity},
+    [MAPSEC_SPROUT_TOWER]               = {0, 0, 1, 1, sMapName_SproutTower},
     [MAPSEC_ABANDONED_SHIP]             = {0, 0, 1, 1, sMapName_AbandonedShip},
     [MAPSEC_ALTERING_CAVE]              = {0, 0, 1, 1, sMapName_AlteringCave},
     [MAPSEC_ALTERING_CAVE_FRLG]         = {0, 0, 1, 1, sMapName_AlteringCave},

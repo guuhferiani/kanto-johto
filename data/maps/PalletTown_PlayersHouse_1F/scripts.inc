@@ -212,6 +212,7 @@ PlayersHouse_1F_EventScript_Gameclear::
 	call_if_eq VAR_TEMP_1, 2, PlayersHouse_1F_EventScript_MoveMomToTable2
 	waitmovement 1
 	setvar VAR_ADVENTURE_BEGINS, 8
+	setflag FLAG_OAK_ADVENTURE_AWAITS
 	releaseall
 	end
 

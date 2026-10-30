@@ -1366,3 +1366,10 @@ Text_VoiceRangOutDontRunAway::
 	.include "data/maps/TohjoFalls/scripts.inc"
 
 	.include "data/maps/NewBarkTown/scripts.inc"
+	.include "data/maps/NewBarkTown_ProfessorElmsLab/scripts.inc"
+	.include "data/maps/Route29/scripts.inc"
+	.include "data/maps/VioletCity/scripts.inc"
+	.include "data/maps/VioletCity_PokemonCenter_1F/scripts.inc"
+	.include "data/maps/VioletCity_Mart/scripts.inc"
+	.include "data/maps/SproutTower/scripts.inc"
+	.include "data/maps/VioletCity_Gym/scripts.inc"

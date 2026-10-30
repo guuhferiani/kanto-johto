@@ -513,7 +513,11 @@
     "BattlePyramidSquare14",
     "BattlePyramidSquare15",
     "BattlePyramidSquare16",
-    "UnionRoom"
+    "UnionRoom",
+    "NewBarkTown_ProfessorElmsLab",
+    "VioletCity_PokemonCenter_1F",
+    "VioletCity_Mart",
+    "VioletCity_Gym"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PalletTown",
@@ -555,7 +559,9 @@
     "IndigoPlateau_Exterior",
     "BattleTower_Exterior",
     "Route27",
-    "NewBarkTown"
+    "NewBarkTown",
+    "Route29",
+    "VioletCity"
   ],
   "gMapGroup_Dungeons": [
     "VictoryRoad_1F",
@@ -640,7 +646,8 @@
     "SeafoamIslands_B3F",
     "SeafoamIslands_B4F",
     "VictoryRoad_MoltresCave",
-    "TohjoFalls"
+    "TohjoFalls",
+    "SproutTower"
   ],
   "gMapGroup_SpecialArea": [
     "SafariZone_Center",
