@@ -567,6 +567,39 @@ static const union AnimCmd *const sAnims_CoolCouple[] ={
     sAnim_GeneralFrame0,
 };
 
+static const union AnimCmd *const sAnims_LeaderFalkner[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_LeaderBugsy[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_LeaderWhitney[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_LeaderMorty[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_LeaderChuck[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_LeaderJasmine[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_LeaderPryce[] ={
+    sAnim_GeneralFrame0,
+};
+
+static const union AnimCmd *const sAnims_LeaderClair[] ={
+    sAnim_GeneralFrame0,
+};
+
+
 const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
 {
     [TRAINER_PIC_HIKER] = sAnims_Hiker,
@@ -708,4 +741,12 @@ const union AnimCmd *const *const gTrainerFrontAnimsPtrTable[] =
     [TRAINER_PIC_TAMER] = sAnims_Tamer,
     [TRAINER_PIC_ENGINEER] = sAnims_Engineer,
     [TRAINER_PIC_COOL_COUPLE] = sAnims_CoolCouple,
+    [TRAINER_PIC_LEADER_FALKNER] = sAnims_LeaderFalkner,
+    [TRAINER_PIC_LEADER_BUGSY] = sAnims_LeaderBugsy,
+    [TRAINER_PIC_LEADER_WHITNEY] = sAnims_LeaderWhitney,
+    [TRAINER_PIC_LEADER_MORTY] = sAnims_LeaderMorty,
+    [TRAINER_PIC_LEADER_CHUCK] = sAnims_LeaderChuck,
+    [TRAINER_PIC_LEADER_JASMINE] = sAnims_LeaderJasmine,
+    [TRAINER_PIC_LEADER_PRYCE] = sAnims_LeaderPryce,
+    [TRAINER_PIC_LEADER_CLAIR] = sAnims_LeaderClair,
 };

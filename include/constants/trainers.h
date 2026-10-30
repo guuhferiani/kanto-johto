@@ -157,6 +157,14 @@
 #define TRAINER_PIC_TAMER 				  136
 #define TRAINER_PIC_ENGINEER 			  137
 #define TRAINER_PIC_COOL_COUPLE 		  138
+#define TRAINER_PIC_LEADER_FALKNER        139
+#define TRAINER_PIC_LEADER_BUGSY          140
+#define TRAINER_PIC_LEADER_WHITNEY        141
+#define TRAINER_PIC_LEADER_MORTY          142
+#define TRAINER_PIC_LEADER_CHUCK          143
+#define TRAINER_PIC_LEADER_JASMINE        144
+#define TRAINER_PIC_LEADER_PRYCE          145
+#define TRAINER_PIC_LEADER_CLAIR          146
 
 
 // The player back pics are assumed to alternate according to the gender values (MALE/FEMALE)

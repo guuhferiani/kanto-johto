@@ -2,7 +2,7 @@
   "id": "MAP_ROUTE42",
   "name": "Route42",
   "layout": "LAYOUT_ROUTE42",
-  "music": "MUS_RG_ROUTE3",
+  "music": "MUS_RG_SEVII_45",
   "region_map_section": "MAPSEC_ROUTE_42",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",

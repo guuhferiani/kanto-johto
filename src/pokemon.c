@@ -6510,9 +6510,11 @@ u16 GetBattleBGM(void)
         case SPECIES_ARTICUNO:
         case SPECIES_ZAPDOS:
         case SPECIES_MOLTRES:
+            return MUS_RG_VS_LEGEND;
         case SPECIES_RAIKOU:
         case SPECIES_ENTEI:
         case SPECIES_SUICUNE:
+            return MUS_C_VS_LEGEND_BEAST;
         case SPECIES_LUGIA:
         case SPECIES_HO_OH:
         case SPECIES_CELEBI:
@@ -6544,6 +6546,8 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_MAGMA_ADMIN:
             return MUS_VS_AQUA_MAGMA;
         case TRAINER_CLASS_LEADER:
+            if (gTrainerBattleOpponent_A >= TRAINER_LEADER_FALKNER && gTrainerBattleOpponent_A <= TRAINER_LEADER_CLAIR)
+                return MUS_VS_GYM_LEADER;
             return MUS_RG_VS_GYM_LEADER;
         case TRAINER_CLASS_CHAMPION:
             return MUS_RG_VS_CHAMPION;

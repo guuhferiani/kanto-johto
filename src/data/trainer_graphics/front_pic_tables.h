@@ -139,7 +139,14 @@ const struct MonCoords gTrainerFrontPicCoords[] =
     [TRAINER_PIC_TAMER]          = {.size = 8, .y_offset = 1},
     [TRAINER_PIC_ENGINEER]       = {.size = 8, .y_offset = 1},
     [TRAINER_PIC_COOL_COUPLE]    = {.size = 8, .y_offset = 1},
-
+    [TRAINER_PIC_LEADER_FALKNER] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_LEADER_BUGSY]   = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_LEADER_WHITNEY] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_LEADER_MORTY]   = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_LEADER_CHUCK]   = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_LEADER_JASMINE] = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_LEADER_PRYCE]   = {.size = 8, .y_offset = 1},
+    [TRAINER_PIC_LEADER_CLAIR]   = {.size = 8, .y_offset = 1},
 };
 
 #define TRAINER_SPRITE(trainerPic, sprite, size) [TRAINER_PIC_##trainerPic] = {sprite, size, TRAINER_PIC_##trainerPic}
@@ -285,6 +292,14 @@ const struct CompressedSpriteSheet gTrainerFrontPicTable[] =
     TRAINER_SPRITE(TAMER, gTrainerFrontPic_Tamer, 0x800),
     TRAINER_SPRITE(ENGINEER, gTrainerFrontPic_Engineer, 0x800),
     TRAINER_SPRITE(COOL_COUPLE, gTrainerFrontPic_CoolCouple, 0x800),
+    TRAINER_SPRITE(LEADER_FALKNER, gTrainerFrontPic_LeaderFalkner, 0x800),
+    TRAINER_SPRITE(LEADER_BUGSY, gTrainerFrontPic_LeaderBugsy, 0x800),
+    TRAINER_SPRITE(LEADER_WHITNEY, gTrainerFrontPic_LeaderWhitney, 0x800),
+    TRAINER_SPRITE(LEADER_MORTY, gTrainerFrontPic_LeaderMorty, 0x800),
+    TRAINER_SPRITE(LEADER_CHUCK, gTrainerFrontPic_LeaderChuck, 0x800),
+    TRAINER_SPRITE(LEADER_JASMINE, gTrainerFrontPic_LeaderJasmine, 0x800),
+    TRAINER_SPRITE(LEADER_PRYCE, gTrainerFrontPic_LeaderPryce, 0x800),
+    TRAINER_SPRITE(LEADER_CLAIR, gTrainerFrontPic_LeaderClair, 0x800),
 };
 
 #define TRAINER_PAL(trainerPic, pal) [TRAINER_PIC_##trainerPic] = {pal, TRAINER_PIC_##trainerPic}
@@ -430,4 +445,12 @@ const struct CompressedSpritePalette gTrainerFrontPicPaletteTable[] =
     TRAINER_PAL(TAMER, gTrainerPalette_Tamer),
     TRAINER_PAL(ENGINEER, gTrainerPalette_Engineer),
     TRAINER_PAL(COOL_COUPLE, gTrainerPalette_CoolCouple),
+    TRAINER_PAL(LEADER_FALKNER, gTrainerPalette_LeaderFalkner),
+    TRAINER_PAL(LEADER_BUGSY, gTrainerPalette_LeaderBugsy),
+    TRAINER_PAL(LEADER_WHITNEY, gTrainerPalette_LeaderWhitney),
+    TRAINER_PAL(LEADER_MORTY, gTrainerPalette_LeaderMorty),
+    TRAINER_PAL(LEADER_CHUCK, gTrainerPalette_LeaderChuck),
+    TRAINER_PAL(LEADER_JASMINE, gTrainerPalette_LeaderJasmine),
+    TRAINER_PAL(LEADER_PRYCE, gTrainerPalette_LeaderPryce),
+    TRAINER_PAL(LEADER_CLAIR, gTrainerPalette_LeaderClair),
 };
