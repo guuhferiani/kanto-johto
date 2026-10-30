@@ -5,6 +5,7 @@ import { gymBossesData } from '../data/gymBossesData';
 import { kantoChapters, johtoChapters } from '../data/walkthroughData';
 import { routesData } from '../data/routesData';
 import { hmsData, tmsData, stonesData } from '../data/itemsData';
+import chele3DImg from '../assets/chele/chele_3d.png';
 
 function cleanStr(s) {
   if (!s) return '';
@@ -209,7 +210,7 @@ export default function GlobalSearchModal({ isOpen, onClose, onNavigate }) {
                 Digite o nome de qualquer Pokémon, Chefe de Ginásio, Capítulo do Detonado, Rota ou TM!
               </p>
               <div style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center', flexWrap: 'wrap', marginTop: '1rem' }}>
-                {['Pikachu', 'Bulbasaur', 'Brock', 'Squirtle', 'Misty', 'Surge', 'Cortar', 'Monte Silver'].map((sug) => (
+                {['Chele', 'Pikachu', 'Bulbasaur', 'Brock', 'Squirtle', 'Misty', 'Surge', 'Monte Silver'].map((sug) => (
                   <button
                     key={sug}
                     type="button"
@@ -269,7 +270,7 @@ export default function GlobalSearchModal({ isOpen, onClose, onNavigate }) {
                         className="search-modal-item"
                       >
                         <img
-                          src={mon.customSprite ? `graphics/pokemon/${mon.folder}/front.png` : `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${mon.num}.png`}
+                          src={mon.customSprite ? chele3DImg : `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${mon.num}.png`}
                           alt={mon.name}
                           style={{ width: '38px', height: '38px', imageRendering: 'pixelated' }}
                           loading="lazy"
