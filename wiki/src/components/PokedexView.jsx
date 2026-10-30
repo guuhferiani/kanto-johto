@@ -198,7 +198,7 @@ export default function PokedexView({ searchTargetMon }) {
                     }}
                     onError={(e) => {
                       e.currentTarget.onerror = null;
-                      e.currentTarget.src = isChele ? cheleFrontImg : `graphics/pokemon/${mon.folder}/front.png`;
+                      e.currentTarget.src = isChele ? './assets/chele/chele_3d.png' : `graphics/pokemon/${mon.folder}/front.png`;
                     }}
                   />
                 </div>
