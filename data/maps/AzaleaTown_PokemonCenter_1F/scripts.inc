@@ -5,7 +5,7 @@ AzaleaTown_PokemonCenter_1F_MapScripts::
 	.byte 0
 
 AzaleaTown_PokemonCenter_1F_OnTransition:
-	setrespawn HEAL_LOCATION_PALLET_TOWN
+	setrespawn HEAL_LOCATION_AZALEA_TOWN
 	end
 
 AzaleaTown_PokemonCenter_1F_EventScript_Nurse::

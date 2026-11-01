@@ -1,7 +1,13 @@
 .set LOCALID_RED_GYARADOS, 2
 
 LakeOfRage_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, LakeOfRage_OnTransition
 	.byte 0
+
+LakeOfRage_OnTransition:
+	setflag FLAG_VISITED_LAKE_OF_RAGE
+	end
+
 
 LakeOfRage_EventScript_Lance::
 	lock

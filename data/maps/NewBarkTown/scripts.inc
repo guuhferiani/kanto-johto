@@ -1,11 +1,18 @@
 NewBarkTown_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, NewBarkTown_OnTransition
 	.byte 0
+
+NewBarkTown_OnTransition:
+	setflag FLAG_VISITED_NEW_BARK_TOWN
+	end
+
 
 NewBarkTown_EventScript_ElmAide::
 	lock
 	faceplayer
 	msgbox NewBarkTown_Text_ElmAide, MSGBOX_DEFAULT
 	call Common_EventScript_OutOfCenterPartyHeal
+	setrespawn HEAL_LOCATION_NEW_BARK_TOWN
 	msgbox NewBarkTown_Text_ElmAideAfter, MSGBOX_DEFAULT
 	release
 	end

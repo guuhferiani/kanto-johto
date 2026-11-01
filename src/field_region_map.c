@@ -151,9 +151,6 @@ static void FieldUpdateRegionMap(void)
             break;
         case 1:
             DrawStdFrameWithCustomTileAndPalette(1, FALSE, 0x27, 0xd);
-            offset = GetStringCenterAlignXOffset(FONT_NORMAL, gText_Kanto, 0x38);
-            AddTextPrinterParameterized(1, FONT_NORMAL, gText_Kanto, offset, 1, 0, NULL);
-            ScheduleBgCopyTilemapToVram(0);
             DrawStdFrameWithCustomTileAndPalette(0, FALSE, 0x27, 0xd);
             PrintRegionMapSecName();
             BeginNormalPaletteFade(PALETTES_ALL, 0, 16, 0, RGB_BLACK);
@@ -201,6 +198,15 @@ static void FieldUpdateRegionMap(void)
 
 static void PrintRegionMapSecName(void)
 {
+    u8 offset;
+    static const u8 sText_Johto[] = _("JOHTO");
+    const u8 *regionText = (sFieldRegionMapHandler->regionMap.selectedRegion == 0) ? gText_Kanto : sText_Johto;
+
+    FillWindowPixelBuffer(1, PIXEL_FILL(1));
+    offset = GetStringCenterAlignXOffset(FONT_NORMAL, regionText, 0x38);
+    AddTextPrinterParameterized(1, FONT_NORMAL, regionText, offset, 1, 0, NULL);
+    ScheduleBgCopyTilemapToVram(0);
+
     if (sFieldRegionMapHandler->regionMap.mapSecType != MAPSECTYPE_NONE)
     {
         FillWindowPixelBuffer(0, PIXEL_FILL(1));
