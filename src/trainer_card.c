@@ -1249,9 +1249,8 @@ static void PrintProfilePhraseOnCard(void)
 static void PrintBadgeRegionLabel(void)
 {
     const u8 *str = (sData->badgeRegion == 0) ? sText_KantoBadges : sText_JohtoBadges;
-    u32 x = GetStringRightAlignXOffset(FONT_NORMAL, str, 214);
-    FillWindowPixelRect(1, PIXEL_FILL(0), 120, 104, 96, 15);
-    AddTextPrinterParameterized3(1, FONT_NORMAL, x, 104, sTrainerCardTextColors, TEXT_SKIP_DRAW, str);
+    FillWindowPixelRect(1, PIXEL_FILL(0), 16, 98, 120, 15);
+    AddTextPrinterParameterized3(1, FONT_NORMAL, 16, 98, sTrainerCardTextColors, TEXT_SKIP_DRAW, str);
 }
 
 static void BufferNameForCardBack(void)
