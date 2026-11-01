@@ -1984,8 +1984,8 @@ const u8 gText_SoldOut[] = _("Sinto muito, mas esse item está esgotado.\p");
 const u8 gText_SoldOut2[] = _("ESGOTADO");
 
 //Exp
-const u8 gOtherText_ExpShareOn[] = _("Exp. Share ativado.\pA equipe agora receberá uma parte\ndos Pontos de Experiência.{PAUSE_UNTIL_PRESS}");
-const u8 gOtherText_ExpShareOff[] = _("Exp. Share desativado.\pA equipe não receberá mais uma parte\ndos Pontos de Experiência.{PAUSE_UNTIL_PRESS}");
+const u8 gOtherText_ExpShareOn[] = _("Exp. Share ATIVADO!\pToda a equipe receberá pontos de\nexperiência após as batalhas.{PAUSE_UNTIL_PRESS}");
+const u8 gOtherText_ExpShareOff[] = _("Exp. Share DESATIVADO.\pApenas os Pokémon que lutarem\nreceberão experiência.{PAUSE_UNTIL_PRESS}");
 
 //LGPE Premier Balls
 const u8 gText_ThrowInPremierBalls[] = _("Vou incluir algumas Bolas de Estreia também.{PAUSE_UNTIL_PRESS}");

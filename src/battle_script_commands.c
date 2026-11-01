@@ -3950,7 +3950,7 @@ static void Cmd_getexp(void)
                 if (gSaveBlock2Ptr->expShare) // exp share is turned on
                 {
                     *exp = calculatedExp;
-                    gExpShareExp = calculatedExp / 4;
+                    gExpShareExp = calculatedExp / 2;
                     if (gExpShareExp == 0)
                         gExpShareExp = 1;
                 }

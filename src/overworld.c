@@ -1872,6 +1872,8 @@ void CB2_ContinueSavedGame(void)
     UnfreezeObjectEvents();
     DoTimeBasedEvents();
     UpdateMiscOverworldStates();
+    if (!CheckBagHasItem(ITEM_EXP_SHARE, 1))
+        AddBagItem(ITEM_EXP_SHARE, 1);
     if (gMapHeader.mapLayoutId == LAYOUT_BATTLE_FRONTIER_BATTLE_PYRAMID_FLOOR)
         InitBattlePyramidMap(TRUE);
     else if (trainerHillMapId != 0)
