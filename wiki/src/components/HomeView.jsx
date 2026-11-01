@@ -149,6 +149,27 @@ export default function HomeView({ onSelectTab, onOpenSearch }) {
               Os TMs nunca quebram e você pode usá-los quantas vezes quiser! HMs como Cortar ativam com toque de botão 'A' direto no mapa.
             </p>
           </div>
+
+          <div className="feature-subcard">
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem', fontWeight: 700, color: 'var(--text-heading)' }}>
+              <MapPin size={18} color="#10b981" />
+              <span>Fly & Mapa Multi-Região</span>
+            </div>
+            <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>
+              Voe livremente entre Kanto e as 11 cidades e marcos de Johto! Pressione L, R ou SELECT no mapa de Voo para alternar entre as regiões.
+            </p>
+          </div>
+
+          <div className="feature-subcard">
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem', fontWeight: 700, color: 'var(--text-heading)' }}>
+              <Trophy size={18} color="var(--accent)" />
+              <span>16 Insígnias no Cartão</span>
+            </div>
+            <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>
+              Alterne entre suas 8 insígnias de Kanto e as 8 insígnias de Johto com L e R no Trainer Card, com alinhamento perfeito dos badges.
+            </p>
+          </div>
+
         </div>
       </div>
 

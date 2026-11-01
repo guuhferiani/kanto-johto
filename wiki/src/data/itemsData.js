@@ -13,7 +13,7 @@ export const hmsData = [
     type: "Voador",
     location: "Rota 16 — Casa reclusa no bosque ao norte (corte o arbusto com HM01)",
     badge: "Insígnia Trovão (Lt. Surge)",
-    desc: "Permite viajar instantaneamente para qualquer cidade ou Centro Pokémon já visitado."
+    desc: "Permite viajar instantaneamente para qualquer cidade ou Centro Pokémon já visitado em Kanto ou Johto (alterne livremente entre as duas regiões no mapa com L, R ou SELECT)."
   },
   {
     hm: "HM03",

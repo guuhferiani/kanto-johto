@@ -1,5 +1,5 @@
 import React from 'react';
-import { Gamepad2, Smartphone, Monitor, ShieldCheck, Download } from 'lucide-react';
+import { Gamepad2, Smartphone, Monitor, ShieldCheck, Download, Award, MapPin, Zap } from 'lucide-react';
 
 export default function ControlsView() {
   return (
@@ -113,6 +113,35 @@ export default function ControlsView() {
           </div>
         </div>
       </div>
+
+      {/* Special Shortcuts & QoL */}
+      <div className="card" style={{ marginTop: '1.25rem', borderLeft: '4px solid var(--primary)' }}>
+        <h3 style={{ fontSize: '1.15rem', fontWeight: 800, marginBottom: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <Zap size={18} color="var(--primary)" />
+          <span>Atalhos Rápidos & Recursos Especiais</span>
+        </h3>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem', fontSize: '0.88rem' }}>
+          <div className="feature-subcard">
+            <div style={{ fontWeight: 700, color: 'var(--text-heading)', marginBottom: '0.35rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+              <Award size={16} color="var(--accent)" />
+              <span>Alternar Insígnias (Kanto / Johto)</span>
+            </div>
+            <p style={{ color: 'var(--text-muted)' }}>
+              No <strong>Cartão de Treinador</strong> (Trainer Card), pressione <span className="kbd-shortcut">L</span>, <span className="kbd-shortcut">R</span> ou <span className="kbd-shortcut">SELECT</span> para alternar instantaneamente entre suas 8 insígnias de Kanto e 8 insígnias de Johto!
+            </p>
+          </div>
+          <div className="feature-subcard">
+            <div style={{ fontWeight: 700, color: 'var(--text-heading)', marginBottom: '0.35rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+              <MapPin size={16} color="#10b981" />
+              <span>Fly & Mapa Multi-Região</span>
+            </div>
+            <p style={{ color: 'var(--text-muted)' }}>
+              Ao usar a <strong>HM02 Voar (Fly)</strong> ou o <strong>Town Map</strong> (PokeNav), pressione <span className="kbd-shortcut">L</span>, <span className="kbd-shortcut">R</span> ou <span className="kbd-shortcut">SELECT</span> para transitar entre os mapas completos de Kanto e Johto e voar para qualquer cidade visitada!
+            </p>
+          </div>
+        </div>
+      </div>
+
     </div>
   );
 }
