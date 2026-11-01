@@ -1,5 +1,9 @@
 EventScript_UseSurf::
-	goto_if_unset FLAG_BADGE05_GET, EventScript_ScarySeas
+	goto_if_set FLAG_BADGE05_GET, EventScript_HasSurfBadge
+	goto_if_set FLAG_DEFEATED_LEADER_MORTY, EventScript_HasSurfBadge
+	goto EventScript_ScarySeas
+
+EventScript_HasSurfBadge::
 	checkpartymove MOVE_SURF
 	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_EndUseSurf
 	bufferpartymonnick STR_VAR_1, VAR_RESULT

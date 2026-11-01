@@ -2527,6 +2527,31 @@ static void SetPartyMonSelectionActions(struct Pokemon *mons, u8 slotId, u8 acti
     }
 }
 
+static bool8 HasBadgeForPartyFieldMove(u8 fieldMove)
+{
+    switch (fieldMove)
+    {
+    case FIELD_MOVE_FLASH:
+        return FlagGet(FLAG_BADGE01_GET) || FlagGet(FLAG_BADGE02_GET) || FlagGet(FLAG_DEFEATED_LEADER_FALKNER);
+    case FIELD_MOVE_CUT:
+        return FlagGet(FLAG_BADGE01_GET) || FlagGet(FLAG_BADGE02_GET) || FlagGet(FLAG_DEFEATED_LEADER_BUGSY);
+    case FIELD_MOVE_FLY:
+        return FlagGet(FLAG_BADGE03_GET) || FlagGet(FLAG_BADGE06_GET) || FlagGet(FLAG_DEFEATED_LEADER_CHUCK);
+    case FIELD_MOVE_STRENGTH:
+        return FlagGet(FLAG_BADGE04_GET) || FlagGet(FLAG_DEFEATED_LEADER_JASMINE);
+    case FIELD_MOVE_SURF:
+        return FlagGet(FLAG_BADGE05_GET) || FlagGet(FLAG_DEFEATED_LEADER_MORTY);
+    case FIELD_MOVE_ROCK_SMASH:
+        return FlagGet(FLAG_BADGE03_GET) || FlagGet(FLAG_BADGE06_GET) || FlagGet(FLAG_DEFEATED_LEADER_WHITNEY);
+    case FIELD_MOVE_DIVE:
+        return FlagGet(FLAG_BADGE07_GET);
+    case FIELD_MOVE_WATERFALL:
+        return FlagGet(FLAG_BADGE07_GET) || FlagGet(FLAG_BADGE08_GET) || FlagGet(FLAG_DEFEATED_LEADER_CLAIR);
+    default:
+        return TRUE;
+    }
+}
+
 static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
 {
     u32 i, j;
@@ -2579,23 +2604,32 @@ static void SetPartyMonFieldSelectionActions(struct Pokemon *mons, u8 slotId)
     //Sweet Scent   = 13
     //
     // If player has FLY HM and player has the associated Badge, add FLY to action list
-    if (sPartyMenuInternal->numActions < 5 && CheckBagHasItem(ITEM_HM02_FLY, 1) && FlagGet(FLAG_BADGE03_GET) == TRUE)
-        AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, 2 + MENU_FIELD_MOVES);
-    // If player has FLASH HM, add FLASH to action list
-    if (sPartyMenuInternal->numActions < 5 && CheckBagHasItem(ITEM_HM05_FLASH, 1)) 
-        AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, 0 + MENU_FIELD_MOVES);
-    // If player has CUT HM and Cascade Badge, add CUT to action list
-    if (sPartyMenuInternal->numActions < 5 && CheckBagHasItem(ITEM_HM01_CUT, 1) && FlagGet(FLAG_BADGE01_GET) == TRUE) 
-        AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, 1 + MENU_FIELD_MOVES);
+    if (sPartyMenuInternal->numActions < 5 && (CheckBagHasItem(ITEM_HM02_FLY, 1) || HasBadgeForPartyFieldMove(FIELD_MOVE_FLY)))
+        AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, FIELD_MOVE_FLY + MENU_FIELD_MOVES);
+    // If player has FLASH HM or Badge, add FLASH to action list
+    if (sPartyMenuInternal->numActions < 5 && (CheckBagHasItem(ITEM_HM05_FLASH, 1) || HasBadgeForPartyFieldMove(FIELD_MOVE_FLASH))) 
+        AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, FIELD_MOVE_FLASH + MENU_FIELD_MOVES);
+    // If player has CUT HM or Badge, add CUT to action list
+    if (sPartyMenuInternal->numActions < 5 && (CheckBagHasItem(ITEM_HM01_CUT, 1) || HasBadgeForPartyFieldMove(FIELD_MOVE_CUT))) 
+        AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, FIELD_MOVE_CUT + MENU_FIELD_MOVES);
+    // If player has SURF HM or Badge, add SURF to action list
+    if (sPartyMenuInternal->numActions < 5 && (CheckBagHasItem(ITEM_HM03_SURF, 1) || HasBadgeForPartyFieldMove(FIELD_MOVE_SURF))) 
+        AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, FIELD_MOVE_SURF + MENU_FIELD_MOVES);
+    // If player has STRENGTH HM or Badge, add STRENGTH to action list
+    if (sPartyMenuInternal->numActions < 5 && (CheckBagHasItem(ITEM_HM04_STRENGTH, 1) || HasBadgeForPartyFieldMove(FIELD_MOVE_STRENGTH))) 
+        AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, FIELD_MOVE_STRENGTH + MENU_FIELD_MOVES);
+    // If player has ROCK SMASH HM or Badge, add ROCK SMASH to action list
+    if (sPartyMenuInternal->numActions < 5 && (CheckBagHasItem(ITEM_HM06_ROCK_SMASH, 1) || HasBadgeForPartyFieldMove(FIELD_MOVE_ROCK_SMASH))) 
+        AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, FIELD_MOVE_ROCK_SMASH + MENU_FIELD_MOVES);
+    // If player has WATERFALL HM or Badge, add WATERFALL to action list
+    if (sPartyMenuInternal->numActions < 5 && (CheckBagHasItem(ITEM_HM07_WATERFALL, 1) || HasBadgeForPartyFieldMove(FIELD_MOVE_WATERFALL))) 
+        AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, FIELD_MOVE_WATERFALL + MENU_FIELD_MOVES);
     // If player has DIG TM, add DIG to action list
     if (sPartyMenuInternal->numActions < 5 && (CheckBagHasItem(ITEM_TM28, 1) || FlagGet(FLAG_RECOVERED_STOLEN_TM) == TRUE))
-        AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, 9 + MENU_FIELD_MOVES);
+        AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, FIELD_MOVE_DIG + MENU_FIELD_MOVES);
     // If Mon can learn TM29 (is a Psychic type and could therefore learn Teleport) and action list consists of < 4 moves, add TELEPORT to action list
     if (sPartyMenuInternal->numActions < 5 && CanMonLearnTMHM(&mons[slotId], ITEM_TM29 - ITEM_TM01))
-        AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, 8 + MENU_FIELD_MOVES);
-    // If player has ROCK SMASH HM and Badge, add ROCK SMASH to action list
-	if (sPartyMenuInternal->numActions < 5 && CheckBagHasItem(ITEM_HM06_ROCK_SMASH, 1) && FlagGet(FLAG_BADGE06_GET) == TRUE) 
-		AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, 5 + MENU_FIELD_MOVES);
+        AppendToList(sPartyMenuInternal->actions, &sPartyMenuInternal->numActions, FIELD_MOVE_TELEPORT + MENU_FIELD_MOVES);
 	
 	if (!InBattlePike())
     {
@@ -3695,7 +3729,7 @@ static void CursorCb_FieldMove(u8 taskId)
     else
     {
         // All field moves before WATERFALL are HMs.
-        if (fieldMove <= FIELD_MOVE_WATERFALL && FlagGet(FLAG_BADGE01_GET + fieldMove) != TRUE)
+        if (fieldMove <= FIELD_MOVE_WATERFALL && !HasBadgeForPartyFieldMove(fieldMove))
         {
             DisplayPartyMenuMessage(gText_CantUseUntilNewBadge, TRUE);
             gTasks[taskId].func = Task_ReturnToChooseMonAfterText;

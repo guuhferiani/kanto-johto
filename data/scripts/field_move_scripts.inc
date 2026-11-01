@@ -1,7 +1,12 @@
 @ Interact with cuttable tree
 EventScript_CutTree::
 	lockall
-	goto_if_unset FLAG_BADGE01_GET, EventScript_CheckTreeCantCut
+	goto_if_set FLAG_BADGE01_GET, EventScript_HasCutBadge
+	goto_if_set FLAG_BADGE02_GET, EventScript_HasCutBadge
+	goto_if_set FLAG_DEFEATED_LEADER_BUGSY, EventScript_HasCutBadge
+	goto EventScript_CheckTreeCantCut
+
+EventScript_HasCutBadge::
 	checkpartymove MOVE_CUT
 	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CheckTreeCantCut
 	setfieldeffectargument 0, VAR_RESULT
@@ -61,7 +66,12 @@ Text_CantCut:
 @ Interact with smashable rock
 EventScript_RockSmash::
 	lockall
-	goto_if_unset FLAG_BADGE06_GET, EventScript_CantSmashRock
+	goto_if_set FLAG_BADGE03_GET, EventScript_HasSmashBadge
+	goto_if_set FLAG_BADGE06_GET, EventScript_HasSmashBadge
+	goto_if_set FLAG_DEFEATED_LEADER_WHITNEY, EventScript_HasSmashBadge
+	goto EventScript_CantSmashRock
+
+EventScript_HasSmashBadge::
 	checkpartymove MOVE_ROCK_SMASH
 	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantSmashRock
 	setfieldeffectargument 0, VAR_RESULT
@@ -219,11 +229,17 @@ Text_CantSmash:
 
 EventScript_StrengthBoulder::
 	lockall
-	goto_if_unset FLAG_BADGE04_GET, EventScript_CantStrength
 	goto_if_set FLAG_SYS_USE_STRENGTH, EventScript_CheckActivatedBoulder
+	goto_if_set FLAG_BADGE04_GET, EventScript_HasStrengthBadge
+	goto_if_set FLAG_DEFEATED_LEADER_JASMINE, EventScript_HasStrengthBadge
+	goto EventScript_CantStrength
+
+EventScript_HasStrengthBadge::
 	checkpartymove MOVE_STRENGTH
 	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantStrength
 	setfieldeffectargument 0, VAR_RESULT
+	bufferpartymonnick STR_VAR_1, VAR_RESULT
+	buffermovename STR_VAR_2, MOVE_STRENGTH
 	msgbox Text_WantToStrength, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, EventScript_CancelStrength
 	closemessage
@@ -280,6 +296,12 @@ Text_StrengthActivated:
 
 EventScript_UseWaterfall::
 	lockall
+	goto_if_set FLAG_BADGE07_GET, EventScript_HasWaterfallBadge
+	goto_if_set FLAG_BADGE08_GET, EventScript_HasWaterfallBadge
+	goto_if_set FLAG_DEFEATED_LEADER_CLAIR, EventScript_HasWaterfallBadge
+	goto EventScript_CantWaterfall
+
+EventScript_HasWaterfallBadge::
 	checkpartymove MOVE_WATERFALL
 	goto_if_eq VAR_RESULT, PARTY_SIZE, EventScript_CantWaterfall
 	bufferpartymonnick STR_VAR_1, VAR_RESULT

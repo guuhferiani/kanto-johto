@@ -1761,6 +1761,31 @@ bool8 ScrCmd_setmonmove(struct ScriptContext *ctx)
     return FALSE;
 }
 
+static bool8 HasBadgeForFieldMove(u16 move)
+{
+    switch (move)
+    {
+    case MOVE_CUT:
+        return FlagGet(FLAG_BADGE01_GET) || FlagGet(FLAG_BADGE02_GET) || FlagGet(FLAG_DEFEATED_LEADER_BUGSY);
+    case MOVE_FLASH:
+        return FlagGet(FLAG_BADGE01_GET) || FlagGet(FLAG_BADGE02_GET) || FlagGet(FLAG_DEFEATED_LEADER_FALKNER);
+    case MOVE_ROCK_SMASH:
+        return FlagGet(FLAG_BADGE03_GET) || FlagGet(FLAG_BADGE06_GET) || FlagGet(FLAG_DEFEATED_LEADER_WHITNEY);
+    case MOVE_STRENGTH:
+        return FlagGet(FLAG_BADGE04_GET) || FlagGet(FLAG_DEFEATED_LEADER_JASMINE);
+    case MOVE_SURF:
+        return FlagGet(FLAG_BADGE05_GET) || FlagGet(FLAG_DEFEATED_LEADER_MORTY);
+    case MOVE_FLY:
+        return FlagGet(FLAG_BADGE03_GET) || FlagGet(FLAG_BADGE06_GET) || FlagGet(FLAG_DEFEATED_LEADER_CHUCK);
+    case MOVE_WATERFALL:
+        return FlagGet(FLAG_BADGE07_GET) || FlagGet(FLAG_BADGE08_GET) || FlagGet(FLAG_DEFEATED_LEADER_CLAIR);
+    case MOVE_DIVE:
+        return FlagGet(FLAG_BADGE07_GET);
+    default:
+        return TRUE;
+    }
+}
+
 bool8 ScrCmd_checkpartymove(struct ScriptContext *ctx)
 {
     u8 i;
@@ -1780,32 +1805,37 @@ bool8 ScrCmd_checkpartymove(struct ScriptContext *ctx)
             break;
         }
     }
-    if (gSpecialVar_Result == PARTY_SIZE && (CheckBagHasItem(MoveToHM(moveId), 1)))
+    if (gSpecialVar_Result == PARTY_SIZE)
     {
-        // First, check if any mon naturally can learn it
-        for (i = 0; i < PARTY_SIZE; i++)
+        u16 hmItem = MoveToHM(moveId);
+        bool8 hasPermission = (hmItem && CheckBagHasItem(hmItem, 1)) || HasBadgeForFieldMove(moveId);
+        if (hasPermission)
         {
-            u16 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES, NULL);
-            if (!species)
-                break;
-            if (!GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG) && CanMonLearnTMHM(&gPlayerParty[i], MoveToHM(moveId) - ITEM_TM01))
+            // First, check if any mon naturally can learn it
+            for (i = 0; i < PARTY_SIZE; i++)
             {
-                gSpecialVar_Result = i;
-                gSpecialVar_0x8004 = species;
-                return FALSE;
+                u16 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES, NULL);
+                if (!species)
+                    break;
+                if (!GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG) && hmItem && CanMonLearnTMHM(&gPlayerParty[i], hmItem - ITEM_TM01))
+                {
+                    gSpecialVar_Result = i;
+                    gSpecialVar_0x8004 = species;
+                    return FALSE;
+                }
             }
-        }
-        // If none is naturally compatible, any non-egg party member can perform it (no HM slave required!)
-        for (i = 0; i < PARTY_SIZE; i++)
-        {
-            u16 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES, NULL);
-            if (!species)
-                break;
-            if (!GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG))
+            // If none is naturally compatible, any non-egg party member can perform it (no HM slave required!)
+            for (i = 0; i < PARTY_SIZE; i++)
             {
-                gSpecialVar_Result = i;
-                gSpecialVar_0x8004 = species;
-                return FALSE;
+                u16 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES, NULL);
+                if (!species)
+                    break;
+                if (!GetMonData(&gPlayerParty[i], MON_DATA_IS_EGG))
+                {
+                    gSpecialVar_Result = i;
+                    gSpecialVar_0x8004 = species;
+                    return FALSE;
+                }
             }
         }
     }
