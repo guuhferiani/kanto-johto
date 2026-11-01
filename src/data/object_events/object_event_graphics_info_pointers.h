@@ -357,6 +357,14 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Sabrina;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Koga;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Blaine;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Janine;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Falkner;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bugsy;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Whitney;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Morty;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Chuck;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Jasmine;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Pryce;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Clair;
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Mom2;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Biker;
@@ -864,7 +872,15 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_AERODACTYL] =                     &gObjectEventGraphicsInfo_Aerodactyl,
     [OBJ_EVENT_GFX_ARCANINE] =                       &gObjectEventGraphicsInfo_Arcanine,
     [OBJ_EVENT_GFX_UMBREON] =                        &gObjectEventGraphicsInfo_Umbreon,
-    [OBJ_EVENT_GFX_TANGELA] =                        &gObjectEventGraphicsInfo_Tangela
+    [OBJ_EVENT_GFX_TANGELA] =                        &gObjectEventGraphicsInfo_Tangela,
+    [OBJ_EVENT_GFX_FALKNER] =                        &gObjectEventGraphicsInfo_Falkner,
+    [OBJ_EVENT_GFX_BUGSY] =                          &gObjectEventGraphicsInfo_Bugsy,
+    [OBJ_EVENT_GFX_WHITNEY] =                        &gObjectEventGraphicsInfo_Whitney,
+    [OBJ_EVENT_GFX_MORTY] =                          &gObjectEventGraphicsInfo_Morty,
+    [OBJ_EVENT_GFX_CHUCK] =                          &gObjectEventGraphicsInfo_Chuck,
+    [OBJ_EVENT_GFX_JASMINE] =                        &gObjectEventGraphicsInfo_Jasmine,
+    [OBJ_EVENT_GFX_PRYCE] =                          &gObjectEventGraphicsInfo_Pryce,
+    [OBJ_EVENT_GFX_CLAIR] =                          &gObjectEventGraphicsInfo_Clair
 };
 
 

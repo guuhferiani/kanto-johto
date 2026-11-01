@@ -1181,6 +1181,30 @@ const u16 gObjectEventPal_Koga[] = INCBIN_U16("graphics/object_events/palettes/k
 const u32 gObjectEventPic_Blaine[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/blaine.4bpp");
 const u16 gObjectEventPal_Blaine[] = INCBIN_U16("graphics/object_events/palettes/blaine.gbapal");
 
+const u32 gObjectEventPic_Falkner[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/falkner.4bpp");
+const u16 gObjectEventPal_Falkner[] = INCBIN_U16("graphics/object_events/palettes/falkner.gbapal");
+
+const u32 gObjectEventPic_Bugsy[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/bugsy.4bpp");
+const u16 gObjectEventPal_Bugsy[] = INCBIN_U16("graphics/object_events/palettes/bugsy.gbapal");
+
+const u32 gObjectEventPic_Whitney[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/whitney.4bpp");
+const u16 gObjectEventPal_Whitney[] = INCBIN_U16("graphics/object_events/palettes/whitney.gbapal");
+
+const u32 gObjectEventPic_Morty[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/morty.4bpp");
+const u16 gObjectEventPal_Morty[] = INCBIN_U16("graphics/object_events/palettes/morty.gbapal");
+
+const u32 gObjectEventPic_Chuck[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/chuck.4bpp");
+const u16 gObjectEventPal_Chuck[] = INCBIN_U16("graphics/object_events/palettes/chuck.gbapal");
+
+const u32 gObjectEventPic_Jasmine[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/jasmine.4bpp");
+const u16 gObjectEventPal_Jasmine[] = INCBIN_U16("graphics/object_events/palettes/jasmine.gbapal");
+
+const u32 gObjectEventPic_Pryce[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/pryce.4bpp");
+const u16 gObjectEventPal_Pryce[] = INCBIN_U16("graphics/object_events/palettes/pryce.gbapal");
+
+const u32 gObjectEventPic_Clair[] = INCBIN_U32("graphics/object_events/pics/people/gym_leaders/clair.4bpp");
+const u16 gObjectEventPal_Clair[] = INCBIN_U16("graphics/object_events/palettes/clair.gbapal");
+
 const u32 gObjectEventPic_Lorelei[] = INCBIN_U32("graphics/object_events/pics/people/elite_four/lorelei.4bpp");
 const u16 gObjectEventPal_Lorelei[] = INCBIN_U16("graphics/object_events/palettes/lorelei.gbapal");
 

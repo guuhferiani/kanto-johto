@@ -661,6 +661,14 @@ const u8 gInitialMovementTypeFacingDirections[] = {
 #define OBJ_EVENT_PAL_TAG_ARCANINE                0x11E4
 #define OBJ_EVENT_PAL_TAG_UMBREON                 0x11E5
 #define OBJ_EVENT_PAL_TAG_TANGELA                 0x11E6
+#define OBJ_EVENT_PAL_TAG_FALKNER                 0x11E7
+#define OBJ_EVENT_PAL_TAG_BUGSY                   0x11E8
+#define OBJ_EVENT_PAL_TAG_WHITNEY                 0x11E9
+#define OBJ_EVENT_PAL_TAG_MORTY                   0x11EA
+#define OBJ_EVENT_PAL_TAG_CHUCK                   0x11EB
+#define OBJ_EVENT_PAL_TAG_JASMINE                 0x11EC
+#define OBJ_EVENT_PAL_TAG_PRYCE                   0x11ED
+#define OBJ_EVENT_PAL_TAG_CLAIR                   0x11EE
 
 #define OBJ_EVENT_PAL_TAG_NONE 0x128D
 
@@ -907,6 +915,14 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Janine,                OBJ_EVENT_PAL_TAG_JANINE},
     {gObjectEventPal_RangerM,               OBJ_EVENT_PAL_TAG_RANGER_M},
     {gObjectEventPal_RangerF,               OBJ_EVENT_PAL_TAG_RANGER_F},
+    {gObjectEventPal_Falkner,               OBJ_EVENT_PAL_TAG_FALKNER},
+    {gObjectEventPal_Bugsy,                 OBJ_EVENT_PAL_TAG_BUGSY},
+    {gObjectEventPal_Whitney,               OBJ_EVENT_PAL_TAG_WHITNEY},
+    {gObjectEventPal_Morty,                 OBJ_EVENT_PAL_TAG_MORTY},
+    {gObjectEventPal_Chuck,                 OBJ_EVENT_PAL_TAG_CHUCK},
+    {gObjectEventPal_Jasmine,               OBJ_EVENT_PAL_TAG_JASMINE},
+    {gObjectEventPal_Pryce,                 OBJ_EVENT_PAL_TAG_PRYCE},
+    {gObjectEventPal_Clair,                 OBJ_EVENT_PAL_TAG_CLAIR},
     {NULL,                  0x0000},
 };
 

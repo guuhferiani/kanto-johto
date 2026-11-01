@@ -904,7 +904,7 @@ static void ToggleBadgeRegion(void)
     LoadBgTiles(3, sData->badgeTiles, ARRAY_COUNT(sData->badgeTiles), 0);
     UpdateBadgeCountForRegion();
 
-    FillBgTilemapBufferRect(3, 0, 4, 15, 24, 2, 0);
+    FillBgTilemapBufferRect(3, 0, 4, 16, 24, 2, 0);
     DrawStarsAndBadgesOnCard();
 
     PrintBadgeRegionLabel();
@@ -1249,8 +1249,9 @@ static void PrintProfilePhraseOnCard(void)
 static void PrintBadgeRegionLabel(void)
 {
     const u8 *str = (sData->badgeRegion == 0) ? sText_KantoBadges : sText_JohtoBadges;
-    FillWindowPixelRect(1, PIXEL_FILL(0), 20, 104, 110, 15);
-    AddTextPrinterParameterized3(1, FONT_NORMAL, 20, 104, sTrainerCardTextColors, TEXT_SKIP_DRAW, str);
+    u32 x = GetStringRightAlignXOffset(FONT_NORMAL, str, 214);
+    FillWindowPixelRect(1, PIXEL_FILL(0), 120, 104, 96, 15);
+    AddTextPrinterParameterized3(1, FONT_NORMAL, x, 104, sTrainerCardTextColors, TEXT_SKIP_DRAW, str);
 }
 
 static void BufferNameForCardBack(void)
@@ -1600,10 +1601,10 @@ static void DrawStarsAndBadgesOnCard(void)
         {
             if (sData->badgeCount[i])
             {
-                FillBgTilemapBufferRect(3, tileNum, x, 15, 1, 1, palNum);
-                FillBgTilemapBufferRect(3, tileNum + 1, x + 1, 15, 1, 1, palNum);
-                FillBgTilemapBufferRect(3, tileNum + 16, x, 16, 1, 1, palNum);
-                FillBgTilemapBufferRect(3, tileNum + 17, x + 1, 16, 1, 1, palNum);
+                FillBgTilemapBufferRect(3, tileNum, x, 16, 1, 1, palNum);
+                FillBgTilemapBufferRect(3, tileNum + 1, x + 1, 16, 1, 1, palNum);
+                FillBgTilemapBufferRect(3, tileNum + 16, x, 17, 1, 1, palNum);
+                FillBgTilemapBufferRect(3, tileNum + 17, x + 1, 17, 1, 1, palNum);
             }
         }
     }

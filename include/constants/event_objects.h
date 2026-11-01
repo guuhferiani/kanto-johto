@@ -501,7 +501,18 @@
 #define OBJ_EVENT_GFX_UNUSED_PIKACHU_DOLL       DECORATION_GFX + 50
 #define OBJ_EVENT_GFX_UNUSED_PORYGON2_DOLL      DECORATION_GFX + 51
 
-#define NUM_OBJ_EVENT_GFX						DECORATION_GFX + 52 
+#define JOHTO_LEADER_GFX                        DECORATION_GFX + 52
+
+#define OBJ_EVENT_GFX_FALKNER                   (JOHTO_LEADER_GFX + 0)
+#define OBJ_EVENT_GFX_BUGSY                     (JOHTO_LEADER_GFX + 1)
+#define OBJ_EVENT_GFX_WHITNEY                   (JOHTO_LEADER_GFX + 2)
+#define OBJ_EVENT_GFX_MORTY                     (JOHTO_LEADER_GFX + 3)
+#define OBJ_EVENT_GFX_CHUCK                     (JOHTO_LEADER_GFX + 4)
+#define OBJ_EVENT_GFX_JASMINE                   (JOHTO_LEADER_GFX + 5)
+#define OBJ_EVENT_GFX_PRYCE                     (JOHTO_LEADER_GFX + 6)
+#define OBJ_EVENT_GFX_CLAIR                     (JOHTO_LEADER_GFX + 7)
+
+#define NUM_OBJ_EVENT_GFX						(JOHTO_LEADER_GFX + 8) 
 
 // NOTE: By default, the max value for NUM_OBJ_EVENT_GFX is 239.
 //
