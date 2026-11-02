@@ -4902,6 +4902,42 @@ static const union AnimCmd sAnim_MEWTWO_MEGA_Y_1[] =
     ANIMCMD_END,
 };
 
+static const union AnimCmd sAnim_RIOLU_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_LUCARIO_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_LEAFEON_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_GLACEON_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_SYLVEON_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
+static const union AnimCmd sAnim_CHELE_1[] =
+{
+    ANIMCMD_FRAME(0, 1),
+    ANIMCMD_END,
+};
+
 static const union AnimCmd *const sAnims_NONE[] ={
     sAnim_GeneralFrame0,
     sAnim_NONE_1,
@@ -7130,26 +7166,32 @@ static const union AnimCmd *const sAnims_MEWTWO_MEGA_Y[] ={
 
 static const union AnimCmd *const sAnims_RIOLU[] ={
     sAnim_GeneralFrame0,
+    sAnim_RIOLU_1,
 };
 
 static const union AnimCmd *const sAnims_LUCARIO[] ={
     sAnim_GeneralFrame0,
+    sAnim_LUCARIO_1,
 };
 
 static const union AnimCmd *const sAnims_LEAFEON[] ={
     sAnim_GeneralFrame0,
+    sAnim_LEAFEON_1,
 };
 
 static const union AnimCmd *const sAnims_GLACEON[] ={
     sAnim_GeneralFrame0,
+    sAnim_GLACEON_1,
 };
 
 static const union AnimCmd *const sAnims_SYLVEON[] ={
     sAnim_GeneralFrame0,
+    sAnim_SYLVEON_1,
 };
 
 static const union AnimCmd *const sAnims_CHELE[] ={
     sAnim_GeneralFrame0,
+    sAnim_CHELE_1,
 };
 
 
