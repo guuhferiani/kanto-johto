@@ -6545,9 +6545,9 @@
                 "species": "SPECIES_PIDGEY"
               },
               {
-                "min_level": 16,
-                "max_level": 18,
-                "species": "SPECIES_SYLVEON"
+                "min_level": 13,
+                "max_level": 17,
+                "species": "SPECIES_PIDGEY"
               },
               {
                 "min_level": 13,
@@ -6665,9 +6665,9 @@
             "encounter_rate": 0,
             "mons": [
               {
-                "min_level": 16,
-                "max_level": 18,
-                "species": "SPECIES_SYLVEON"
+                "min_level": 12,
+                "max_level": 15,
+                "species": "SPECIES_BELLSPROUT"
               },
               {
                 "min_level": 12,
@@ -6675,9 +6675,9 @@
                 "species": "SPECIES_EEVEE"
               },
               {
-                "min_level": 16,
-                "max_level": 18,
-                "species": "SPECIES_ESPEON"
+                "min_level": 10,
+                "max_level": 14,
+                "species": "SPECIES_ABRA"
               }
             ]
           }
@@ -6849,9 +6849,9 @@
                 "species": "SPECIES_EEVEE"
               },
               {
-                "min_level": 16,
-                "max_level": 18,
-                "species": "SPECIES_UMBREON"
+                "min_level": 13,
+                "max_level": 17,
+                "species": "SPECIES_VENONAT"
               }
             ]
           }

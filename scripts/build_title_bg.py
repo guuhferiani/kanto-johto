@@ -11,6 +11,12 @@ def build_title_background():
     rock_source = crop.crop((1150, 920, 1375, 1050))
     crop.paste(rock_source, (1350, 920))
 
+    # Remover badge de versao "0.15.1" no centro inferior
+    water_source = crop.crop((440, 890, 680, 1020))
+    crop.paste(water_source, (700, 890))
+    blur_badge = crop.crop((680, 875, 960, 1035)).filter(ImageFilter.GaussianBlur(radius=3))
+    crop.paste(blur_badge, (680, 875))
+
     # Suavizar o céu no topo (X=0..1575, Y=0..220)
     sky_colors = []
     for x in range(1575):
@@ -44,7 +50,9 @@ def build_title_background():
 
     # Redimensionar para 240x160
     resized = crop.resize((240, 160), Image.Resampling.LANCZOS)
-    resized.save('tools/scripts/bg_240x160_preview.png')
+    import os
+    os.makedirs('scratch', exist_ok=True)
+    resized.save('scratch/bg_240x160_preview.png')
 
     # 2. Quantizar para 15 cores
     quant_15 = resized.quantize(colors=15, method=Image.Resampling.LANCZOS, dither=Image.Dither.FLOYDSTEINBERG)
@@ -70,7 +78,7 @@ def build_title_background():
     img_indexed = Image.new('P', (240, 160))
     img_indexed.putpalette(flat_pal)
     img_indexed.putdata(mapped_pixels)
-    img_indexed.save('tools/scripts/bg_indexed_preview.png')
+    img_indexed.save('scratch/bg_indexed_preview.png')
 
     # 3. Converter para tiles 8x8 e deduplicar
     # Tilemap GBA text mode é 32x32 tiles

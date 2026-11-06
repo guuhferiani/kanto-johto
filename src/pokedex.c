@@ -2742,7 +2742,7 @@ static u16 GetPokemonSpriteToDisplay(u16 species)
     else if (sPokedexView->pokedexList[species].seen)
         return sPokedexView->pokedexList[species].dexNum;
     else
-        return 0;
+        return 0xFFFF;
 }
 
 static u32 CreatePokedexMonSprite(u16 num, s16 x, s16 y)
