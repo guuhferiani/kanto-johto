@@ -1,5 +1,5 @@
 import React from 'react';
-import { Compass, Sparkles, Trophy, BookOpen, MapPin, Gift, Zap, Heart, ShieldCheck, Flame, Search } from 'lucide-react';
+import { Compass, Sparkles, Trophy, BookOpen, MapPin, Gift, Zap, Heart, ShieldCheck, Flame, Search, RefreshCw, Eye } from 'lucide-react';
 import coverImg from '../assets/kanto_johto_cover.jpg';
 
 export default function HomeView({ onSelectTab, onOpenSearch }) {
@@ -167,6 +167,36 @@ export default function HomeView({ onSelectTab, onOpenSearch }) {
             </div>
             <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>
               Alterne entre suas 8 insígnias de Kanto e as 8 insígnias de Johto com L e R no Trainer Card, com alinhamento perfeito dos badges.
+            </p>
+          </div>
+
+          <div className="feature-subcard">
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem', fontWeight: 700, color: 'var(--text-heading)' }}>
+              <Sparkles size={18} color="var(--secondary)" />
+              <span>Interface de Batalha Clean (Gen 5)</span>
+            </div>
+            <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>
+              HUD e caixas de vida (Healthboxes) redesenhados no estilo moderno chanfrado de Pokémon Black & White, tanto para batalhas individuais (Singles) quanto em dupla (Doubles)!
+            </p>
+          </div>
+
+          <div className="feature-subcard">
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem', fontWeight: 700, color: 'var(--text-heading)' }}>
+              <RefreshCw size={18} color="#10b981" />
+              <span>Respawn Diário de Lendários</span>
+            </div>
+            <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>
+              Proteção anti-perda garantida: Articuno, Zapdos, Moltres, Mewtwo, Mew, Lugia, Ho-Oh, Celebi, Suicune, Raikou, Entei, Snorlax e Sudowoodo voltam no dia seguinte se derrotados!
+            </p>
+          </div>
+
+          <div className="feature-subcard">
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem', fontWeight: 700, color: 'var(--text-heading)' }}>
+              <Eye size={18} color="var(--primary)" />
+              <span>Medidor de Amizade no Sumário</span>
+            </div>
+            <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>
+              Pressione 'A' na tela de Perícias do Sumário para abrir o visor de Felicidade com medidor gráfico e pontuação exata de 0 a 255 pts (ideal para Sylveon, Espeon, Umbreon e Lucario).
             </p>
           </div>
 

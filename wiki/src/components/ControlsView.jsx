@@ -1,5 +1,5 @@
 import React from 'react';
-import { Gamepad2, Smartphone, Monitor, ShieldCheck, Download, Award, MapPin, Zap } from 'lucide-react';
+import { Gamepad2, Smartphone, Monitor, ShieldCheck, Download, Award, MapPin, Zap, Heart, Sparkles } from 'lucide-react';
 
 export default function ControlsView() {
   return (
@@ -137,6 +137,24 @@ export default function ControlsView() {
             </div>
             <p style={{ color: 'var(--text-muted)' }}>
               Ao usar a <strong>HM02 Voar (Fly)</strong> ou o <strong>Town Map</strong> (PokeNav), pressione <span className="kbd-shortcut">L</span>, <span className="kbd-shortcut">R</span> ou <span className="kbd-shortcut">SELECT</span> para transitar entre os mapas completos de Kanto e Johto e voar para qualquer cidade visitada!
+            </p>
+          </div>
+          <div className="feature-subcard">
+            <div style={{ fontWeight: 700, color: 'var(--text-heading)', marginBottom: '0.35rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+              <Heart size={16} color="var(--primary)" fill="var(--primary)" />
+              <span>Medidor de Amizade no Sumário</span>
+            </div>
+            <p style={{ color: 'var(--text-muted)' }}>
+              No <strong>Sumário do Pokémon</strong>, abra a aba de <strong>Perícias (Skills)</strong> e aperte <span className="kbd-shortcut">A</span> para exibir a tela de Felicidade com barra gráfica e pontuação numérica (0 a 255 pts), perfeita para monitorar evoluções como Sylveon, Espeon, Umbreon e Lucario!
+            </p>
+          </div>
+          <div className="feature-subcard">
+            <div style={{ fontWeight: 700, color: 'var(--text-heading)', marginBottom: '0.35rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+              <Sparkles size={16} color="var(--secondary)" />
+              <span>Interface de Batalha Clean Gen 5</span>
+            </div>
+            <p style={{ color: 'var(--text-muted)' }}>
+              A interface de batalha conta com o visual minimalista e chanfrado de Pokémon Black & White para <strong>Singles e Doubles</strong>, com barras de vida de alto contraste e atributos traduzidos em batalha (<code style={{ color: 'var(--primary)' }}>POD:</code> Poder, <code style={{ color: 'var(--secondary)' }}>PRE:</code> Precisão, <code style={{ color: 'var(--accent)' }}>PRI:</code> Prioridade).
             </p>
           </div>
         </div>

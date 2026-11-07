@@ -157,7 +157,7 @@ export const kantoChapters = [
     content: [
       {
         heading: "1. O Eevee Secreto da Celadon Mansion",
-        text: "Em Celadon City, dê a volta pelo beco de trás da grande <b>Celadon Mansion</b> e suba todas as escadas até a cabana no terraço. Em cima da mesa estará uma Pokébola abandonada contendo um <b>Eevee (Lv 25)</b> de graça! Você pode usar as pedras da Loja de Departamentos para evoluí-lo em Vaporeon, Jolteon ou Flareon (ou de noite/dia para Umbreon/Espeon)."
+        text: "Em Celadon City, dê a volta pelo beco de trás da grande <b>Celadon Mansion</b> e suba todas as escadas até a cabana no terraço. Em cima da mesa estará uma Pokébola abandonada contendo um <b>Eevee (Lv 25)</b> de graça! Você pode usar as pedras elementais para evoluí-lo em Vaporeon, Jolteon, Flareon ou Leafeon, Never-Melt Ice para Glaceon, ou por Amizade alta para Espeon (Dia), Umbreon (Noite) ou Sylveon (conhecendo golpe Fada como Baby-Doll Eyes)."
       },
       {
         heading: "2. O Ginásio Natural de Erika",
@@ -223,7 +223,7 @@ export const kantoChapters = [
       },
       {
         heading: "2. A Victory Road e o Pássaro Lendário Moltres",
-        text: "Siga a oeste pela Rota 22, apresente suas 8 insígnias aos guardas e adentre a cavernosa <b>Victory Road</b>. Empurre as pedras usando Força para acionar botões no chão e liberar passagens. No andar superior, encontre e capture a ave lendária de fogo <b>Moltres (Lv 50)</b>!"
+        text: "Siga a oeste pela Rota 22, apresente suas 8 insígnias aos guardas e adentre a cavernosa <b>Victory Road</b>. Empurre as pedras usando Força para acionar botões no chão e liberar passagens. No andar superior, encontre e capture a ave lendária de fogo <b>Moltres (Lv 50)</b>! <i>(Nota: Todas as aves lendárias — Articuno em Seafoam, Zapdos na Usina e Moltres — possuem Proteção Anti-Perda e Respawn Diário: se derrotados acidentalmente, reaparecem no dia seguinte!)</i>"
       },
       {
         heading: "3. A Elite dos Quatro no Planalto Índigo",
@@ -335,11 +335,11 @@ export const johtoChapters = [
     content: [
       {
         heading: "1. Rota 36/37: O Estranho Arbusto Sudowoodo",
-        text: "Saindo pelo caminho oeste de Goldenrod City, entre na <b>Rota 36/37</b> (onde aparecem Stantler, Girafarig, Houndoom, Arcanine, Ninetales, Espeon, Umbreon e Smeargle). Com a Insígnia da Planície conquistada, interaja com a árvore estranha para enfrentar e capturar <b>Sudowoodo (Lv 60, segurando Hard Stone)</b>! Em seguida, passe pelo portão rumo a <b>Ecruteak City</b>."
+        text: "Saindo pelo caminho oeste de Goldenrod City, entre na <b>Rota 36/37</b> (onde aparecem Stantler, Girafarig, Houndoom, Arcanine, Ninetales e Smeargle). Com a Insígnia da Planície conquistada, interaja com a árvore estranha para enfrentar e capturar <b>Sudowoodo (Lv 60, segurando Hard Stone)</b>! <i>(Possui Proteção Anti-Perda: se derrotado sem capturar, retorna no dia seguinte!)</i> Em seguida, passe pelo portão rumo a <b>Ecruteak City</b>."
       },
       {
         heading: "2. Burned Tower (Suicune, Raikou & Entei) e Tin Tower (Ho-Oh)",
-        text: "No centro de <b>Ecruteak City</b>, entre na histórica <b>Burned Tower (Torre Queimada)</b> e fale com Eusine e o altar sagrado: <b>Raikou e Entei (Lv 62-65)</b> dispararão pelas Rotas 36 e 38, enquanto o majestoso <b>Suicune (Lv 65, segurando Mystic Water)</b> permanecerá diante de você para um duelo lendário! Além disso, se você já libertou a Torre de Rádio de Goldenrod, suba na <b>Tin Tower (Torre de Sino)</b> a nordeste de Ecruteak para enfrentar e capturar o lendário <b>Ho-Oh (Lv 70, segurando Sacred Ash)</b>!"
+        text: "No centro de <b>Ecruteak City</b>, adentre a lendária <b>Burned Tower (Torre Queimada)</b> para presenciar o evento canônico: <b>Raikou e Entei (Lv 62-65)</b> despertam e cruzam as rotas de Johto, enquanto o nobre <b>Suicune (Lv 65, segurando Mystic Water)</b> aguarda para um confronto direto! A nordeste, na <b>Tin Tower (Torre de Sino)</b>, o lendário <b>Ho-Oh (Lv 70, segurando Sacred Ash)</b> aguarda no topo. <i>(Lembrando: todos os lendários e Sudowoodo contam com Respawn Diário caso derrotados acidentalmente!)</i>"
       },
       {
         heading: "3. Ginásio Fantasma de Morty (Insígnia da Névoa)",

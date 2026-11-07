@@ -1421,13 +1421,6 @@ export const routesData = [
         "isChele": false
       },
       {
-        "name": "Leafeon",
-        "minLv": 10,
-        "maxLv": 14,
-        "dexNum": 470,
-        "isChele": false
-      },
-      {
         "name": "Ledyba",
         "minLv": 3,
         "maxLv": 6,
@@ -1542,13 +1535,6 @@ export const routesData = [
         "minLv": 3,
         "maxLv": 6,
         "dexNum": 10,
-        "isChele": false
-      },
-      {
-        "name": "Leafeon",
-        "minLv": 10,
-        "maxLv": 14,
-        "dexNum": 470,
         "isChele": false
       },
       {
@@ -2333,13 +2319,6 @@ export const routesData = [
         "maxLv": 10,
         "dexNum": 120,
         "isChele": false
-      },
-      {
-        "name": "Vaporeon",
-        "minLv": 30,
-        "maxLv": 38,
-        "dexNum": 134,
-        "isChele": false
       }
     ],
     "hidden": [
@@ -2356,13 +2335,6 @@ export const routesData = [
         "maxLv": 8,
         "dexNum": 7,
         "isChele": false
-      },
-      {
-        "name": "Vaporeon",
-        "minLv": 30,
-        "maxLv": 38,
-        "dexNum": 134,
-        "isChele": false
       }
     ]
   },
@@ -2372,13 +2344,6 @@ export const routesData = [
     "region": "Kanto",
     "type": "Caverna",
     "day": [
-      {
-        "name": "Glaceon",
-        "minLv": 32,
-        "maxLv": 38,
-        "dexNum": 471,
-        "isChele": false
-      },
       {
         "name": "Golbat",
         "minLv": 27,
@@ -2437,13 +2402,6 @@ export const routesData = [
       }
     ],
     "night": [
-      {
-        "name": "Glaceon",
-        "minLv": 32,
-        "maxLv": 38,
-        "dexNum": 471,
-        "isChele": false
-      },
       {
         "name": "Golbat",
         "minLv": 27,
@@ -2561,13 +2519,6 @@ export const routesData = [
     ],
     "hidden": [
       {
-        "name": "Glaceon",
-        "minLv": 32,
-        "maxLv": 38,
-        "dexNum": 471,
-        "isChele": false
-      },
-      {
         "name": "Lapras",
         "minLv": 30,
         "maxLv": 30,
@@ -2589,13 +2540,6 @@ export const routesData = [
     "region": "Kanto",
     "type": "Mansão",
     "day": [
-      {
-        "name": "Flareon",
-        "minLv": 34,
-        "maxLv": 38,
-        "dexNum": 136,
-        "isChele": false
-      },
       {
         "name": "Grimer",
         "minLv": 30,
@@ -2648,13 +2592,6 @@ export const routesData = [
     ],
     "night": [
       {
-        "name": "Flareon",
-        "minLv": 34,
-        "maxLv": 38,
-        "dexNum": 136,
-        "isChele": false
-      },
-      {
         "name": "Grimer",
         "minLv": 30,
         "maxLv": 32,
@@ -2706,13 +2643,6 @@ export const routesData = [
     ],
     "water": [],
     "hidden": [
-      {
-        "name": "Flareon",
-        "minLv": 34,
-        "maxLv": 38,
-        "dexNum": 136,
-        "isChele": false
-      },
       {
         "name": "Koffing",
         "minLv": 30,
@@ -6420,13 +6350,6 @@ export const routesData = [
         "isChele": false
       },
       {
-        "name": "Sylveon",
-        "minLv": 16,
-        "maxLv": 18,
-        "dexNum": 700,
-        "isChele": false
-      },
-      {
         "name": "Weepinbell",
         "minLv": 14,
         "maxLv": 14,
@@ -6552,31 +6475,10 @@ export const routesData = [
         "isChele": false
       },
       {
-        "name": "Espeon",
-        "minLv": 16,
-        "maxLv": 18,
-        "dexNum": 196,
-        "isChele": false
-      },
-      {
         "name": "Oddish",
         "minLv": 12,
         "maxLv": 14,
         "dexNum": 43,
-        "isChele": false
-      },
-      {
-        "name": "Sylveon",
-        "minLv": 16,
-        "maxLv": 18,
-        "dexNum": 700,
-        "isChele": false
-      },
-      {
-        "name": "Umbreon",
-        "minLv": 16,
-        "maxLv": 18,
-        "dexNum": 197,
         "isChele": false
       }
     ]
@@ -7472,24 +7374,10 @@ export const routesData = [
         "isChele": false
       },
       {
-        "name": "Espeon",
-        "minLv": 22,
-        "maxLv": 26,
-        "dexNum": 196,
-        "isChele": false
-      },
-      {
         "name": "Growlithe",
         "minLv": 15,
         "maxLv": 18,
         "dexNum": 58,
-        "isChele": false
-      },
-      {
-        "name": "Umbreon",
-        "minLv": 22,
-        "maxLv": 26,
-        "dexNum": 197,
         "isChele": false
       },
       {
@@ -7756,13 +7644,6 @@ export const routesData = [
         "maxLv": 23,
         "dexNum": 198,
         "isChele": false
-      },
-      {
-        "name": "Umbreon",
-        "minLv": 20,
-        "maxLv": 25,
-        "dexNum": 197,
-        "isChele": false
       }
     ],
     "night": [
@@ -7800,13 +7681,6 @@ export const routesData = [
         "maxLv": 23,
         "dexNum": 198,
         "isChele": false
-      },
-      {
-        "name": "Umbreon",
-        "minLv": 20,
-        "maxLv": 25,
-        "dexNum": 197,
-        "isChele": false
       }
     ],
     "water": [],
@@ -7823,13 +7697,6 @@ export const routesData = [
         "minLv": 19,
         "maxLv": 23,
         "dexNum": 200,
-        "isChele": false
-      },
-      {
-        "name": "Umbreon",
-        "minLv": 20,
-        "maxLv": 25,
-        "dexNum": 197,
         "isChele": false
       }
     ]
@@ -8355,13 +8222,6 @@ export const routesData = [
         "isChele": false
       },
       {
-        "name": "Jolteon",
-        "minLv": 34,
-        "maxLv": 38,
-        "dexNum": 135,
-        "isChele": false
-      },
-      {
         "name": "Magnemite",
         "minLv": 30,
         "maxLv": 35,
@@ -8420,13 +8280,6 @@ export const routesData = [
         "isChele": false
       },
       {
-        "name": "Jolteon",
-        "minLv": 34,
-        "maxLv": 38,
-        "dexNum": 135,
-        "isChele": false
-      },
-      {
         "name": "Magnemite",
         "minLv": 30,
         "maxLv": 35,
@@ -8469,13 +8322,6 @@ export const routesData = [
         "minLv": 22,
         "maxLv": 26,
         "dexNum": 239,
-        "isChele": false
-      },
-      {
-        "name": "Jolteon",
-        "minLv": 34,
-        "maxLv": 38,
-        "dexNum": 135,
         "isChele": false
       },
       {
@@ -8557,13 +8403,6 @@ export const routesData = [
         "isChele": false
       },
       {
-        "name": "Sylveon",
-        "minLv": 25,
-        "maxLv": 30,
-        "dexNum": 700,
-        "isChele": false
-      },
-      {
         "name": "Tangela",
         "minLv": 22,
         "maxLv": 22,
@@ -8636,13 +8475,6 @@ export const routesData = [
         "isChele": false
       },
       {
-        "name": "Sylveon",
-        "minLv": 25,
-        "maxLv": 30,
-        "dexNum": 700,
-        "isChele": false
-      },
-      {
         "name": "Tangela",
         "minLv": 22,
         "maxLv": 22,
@@ -8705,13 +8537,6 @@ export const routesData = [
         "minLv": 20,
         "maxLv": 40,
         "dexNum": 79,
-        "isChele": false
-      },
-      {
-        "name": "Vaporeon",
-        "minLv": 25,
-        "maxLv": 35,
-        "dexNum": 134,
         "isChele": false
       }
     ],
@@ -10959,13 +10784,6 @@ export const routesData = [
         "isChele": false
       },
       {
-        "name": "Espeon",
-        "minLv": 56,
-        "maxLv": 60,
-        "dexNum": 196,
-        "isChele": false
-      },
-      {
         "name": "Girafarig",
         "minLv": 55,
         "maxLv": 58,
@@ -11019,13 +10837,6 @@ export const routesData = [
         "minLv": 58,
         "maxLv": 62,
         "dexNum": 185,
-        "isChele": false
-      },
-      {
-        "name": "Umbreon",
-        "minLv": 56,
-        "maxLv": 60,
-        "dexNum": 197,
         "isChele": false
       }
     ],
@@ -11045,13 +10856,6 @@ export const routesData = [
         "isChele": false
       },
       {
-        "name": "Espeon",
-        "minLv": 56,
-        "maxLv": 60,
-        "dexNum": 196,
-        "isChele": false
-      },
-      {
         "name": "Girafarig",
         "minLv": 55,
         "maxLv": 58,
@@ -11105,13 +10909,6 @@ export const routesData = [
         "minLv": 58,
         "maxLv": 62,
         "dexNum": 185,
-        "isChele": false
-      },
-      {
-        "name": "Umbreon",
-        "minLv": 56,
-        "maxLv": 60,
-        "dexNum": 197,
         "isChele": false
       }
     ],
