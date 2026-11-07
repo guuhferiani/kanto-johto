@@ -1903,7 +1903,7 @@
               {
                 "min_level": 22,
                 "max_level": 26,
-                "species": "SPECIES_ESPEON"
+                "species": "SPECIES_ABRA"
               },
               {
                 "min_level": 15,
@@ -1992,7 +1992,7 @@
               {
                 "min_level": 22,
                 "max_level": 26,
-                "species": "SPECIES_UMBREON"
+                "species": "SPECIES_ABRA"
               },
               {
                 "min_level": 15,
@@ -6900,7 +6900,7 @@
               {
                 "min_level": 10,
                 "max_level": 14,
-                "species": "SPECIES_LEAFEON"
+                "species": "SPECIES_KAKUNA"
               },
               {
                 "min_level": 4,
@@ -6930,7 +6930,7 @@
               {
                 "min_level": 10,
                 "max_level": 14,
-                "species": "SPECIES_LEAFEON"
+                "species": "SPECIES_WEEDLE"
               },
               {
                 "min_level": 3,
@@ -7390,7 +7390,7 @@
               {
                 "min_level": 30,
                 "max_level": 38,
-                "species": "SPECIES_VAPOREON"
+                "species": "SPECIES_SEEL"
               },
               {
                 "min_level": 30,
@@ -7460,7 +7460,7 @@
               {
                 "min_level": 30,
                 "max_level": 38,
-                "species": "SPECIES_VAPOREON"
+                "species": "SPECIES_SLOWPOKE"
               },
               {
                 "min_level": 37,
@@ -7539,7 +7539,7 @@
               {
                 "min_level": 32,
                 "max_level": 38,
-                "species": "SPECIES_GLACEON"
+                "species": "SPECIES_SEEL"
               }
             ]
           },
@@ -7634,7 +7634,7 @@
               {
                 "min_level": 32,
                 "max_level": 38,
-                "species": "SPECIES_GLACEON"
+                "species": "SPECIES_SHELLDER"
               },
               {
                 "min_level": 20,
@@ -8358,7 +8358,7 @@
               {
                 "min_level": 34,
                 "max_level": 38,
-                "species": "SPECIES_JOLTEON"
+                "species": "SPECIES_ELECTABUZZ"
               }
             ]
           },
@@ -8378,7 +8378,7 @@
               {
                 "min_level": 34,
                 "max_level": 38,
-                "species": "SPECIES_JOLTEON"
+                "species": "SPECIES_MAGNEMITE"
               }
             ]
           }
@@ -8635,7 +8635,7 @@
               {
                 "min_level": 20,
                 "max_level": 25,
-                "species": "SPECIES_UMBREON"
+                "species": "SPECIES_GASTLY"
               },
               {
                 "min_level": 20,
@@ -8670,7 +8670,7 @@
               {
                 "min_level": 20,
                 "max_level": 25,
-                "species": "SPECIES_UMBREON"
+                "species": "SPECIES_HAUNTER"
               },
               {
                 "min_level": 20,
@@ -9011,7 +9011,7 @@
               {
                 "min_level": 34,
                 "max_level": 38,
-                "species": "SPECIES_FLAREON"
+                "species": "SPECIES_MAGMAR"
               }
             ]
           },
@@ -9031,7 +9031,7 @@
               {
                 "min_level": 34,
                 "max_level": 38,
-                "species": "SPECIES_FLAREON"
+                "species": "SPECIES_KOFFING"
               }
             ]
           }
@@ -11380,7 +11380,7 @@
               {
                 "min_level": 25,
                 "max_level": 30,
-                "species": "SPECIES_SYLVEON"
+                "species": "SPECIES_PARAS"
               },
               {
                 "min_level": 7,
@@ -11415,7 +11415,7 @@
               {
                 "min_level": 25,
                 "max_level": 35,
-                "species": "SPECIES_VAPOREON"
+                "species": "SPECIES_PSYDUCK"
               }
             ]
           },
@@ -13575,12 +13575,12 @@
               {
                 "min_level": 56,
                 "max_level": 60,
-                "species": "SPECIES_ESPEON"
+                "species": "SPECIES_STANTLER"
               },
               {
                 "min_level": 56,
                 "max_level": 60,
-                "species": "SPECIES_UMBREON"
+                "species": "SPECIES_GIRAFARIG"
               },
               {
                 "min_level": 58,

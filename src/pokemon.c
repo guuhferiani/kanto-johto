@@ -5637,6 +5637,21 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 mode, u16 evolutionItem)
                 if (gEvolutionTable[species][i].param <= beauty)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
+            case EVO_MOVE_TYPE:
+                {
+                    u16 j;
+                    for (j = 0; j < MAX_MON_MOVES; j++)
+                    {
+                        u16 move = GetMonData(mon, MON_DATA_MOVE1 + j, 0);
+                        if (move != MOVE_NONE && gBattleMoves[move].type == gEvolutionTable[species][i].param)
+                        {
+                            if (friendship >= 220)
+                                targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                            break;
+                        }
+                    }
+                }
+                break;
             }
         }
         break;

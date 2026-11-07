@@ -1003,11 +1003,13 @@ const u8 sText_TitleContestMoves[] = _("Golpes Concurso");
 const u8 sText_TitleRibbons[] = _("Fitas");
 const u8 sText_TitleIVs[] = _("IVs Pokémon");
 const u8 sText_TitleEVs[] = _("EVs Pokémon");
+const u8 sText_TitleFriendship[] = _("Amizade");
 const u8 sText_TitlePage[] = _("{DPAD_LEFTRIGHT}Pág.");
 const u8 sText_TitlePageDetail[] = _("{DPAD_LEFTRIGHT}Pág. {A_BUTTON}Detalhes");
 const u8 sText_TitlePickSwitch[] = _("{DPAD_UPDOWN}Sel. {A_BUTTON}Trocar");
 const u8 sText_TitlePageIVs[] = _("{DPAD_LEFTRIGHT}Pág. {A_BUTTON}IVs");
 const u8 sText_TitlePageEVs[] = _("{DPAD_LEFTRIGHT}Pág. {A_BUTTON}EVs");
+const u8 sText_TitlePageFriendship[] = _("{DPAD_LEFTRIGHT}Pág. {A_BUTTON}Amizade");
 const u8 sText_TitlePageStats[] = _("{DPAD_LEFTRIGHT}Pág. {A_BUTTON}Stats");
 #else
 const u8 sText_TitleInfo[] = _("INFO POKéMON");
@@ -1019,11 +1021,13 @@ const u8 sText_TitleContestMoves[] = _("GOLPES CONCURSO");
 const u8 sText_TitleRibbons[] = _("FITAS");
 const u8 sText_TitleIVs[] = _("IVS POKéMON");
 const u8 sText_TitleEVs[] = _("EVS POKéMON");
+const u8 sText_TitleFriendship[] = _("AMIZADE");
 const u8 sText_TitlePage[] = _("{DPAD_LEFTRIGHT}PÁG.");
 const u8 sText_TitlePageDetail[] = _("{DPAD_LEFTRIGHT}PÁG. {A_BUTTON}DETALHES");
 const u8 sText_TitlePickSwitch[] = _("{DPAD_UPDOWN}SEL. {A_BUTTON}TROCAR");
 const u8 sText_TitlePageIVs[] = _("{DPAD_LEFTRIGHT}PÁG. {A_BUTTON}IVS");
 const u8 sText_TitlePageEVs[] = _("{DPAD_LEFTRIGHT}PÁG. {A_BUTTON}EVS");
+const u8 sText_TitlePageFriendship[] = _("{DPAD_LEFTRIGHT}PÁG. {A_BUTTON}AMIZADE");
 const u8 sText_TitlePageStats[] = _("{DPAD_LEFTRIGHT}PÁG. {A_BUTTON}STATS");
 #endif
 #if CONFIG_DECAPITALIZE_MENU_STRINGS
@@ -1051,6 +1055,17 @@ const u8 sText_Cute[] = _("Fofura");
 const u8 sText_Smart[] = _("Esperteza");
 const u8 sText_Tough[] = _("Dureza");
 const u8 sText_HeldItem[] = _("Item");
+const u8 sText_FriendshipLevel[] = _("Amizade:");
+const u8 sText_FriendshipStatus[] = _("Estado:");
+const u8 sText_FriendshipReadyEvo[] = _("Evolução: Pronta!");
+const u8 sText_FriendshipNeedMore[] = _("Evolução: Falta amizade");
+const u8 sText_FriendshipTier6[] = _("Não poderia te amar mais!");
+const u8 sText_FriendshipTier5[] = _("Parece muito feliz!");
+const u8 sText_FriendshipTier4[] = _("Bastante apegado a você.");
+const u8 sText_FriendshipTier3[] = _("Começando a gostar de você.");
+const u8 sText_FriendshipTier2[] = _("Ainda não se acostumou.");
+const u8 sText_FriendshipTier1[] = _("Olha desconfiado pra você.");
+const u8 sText_FriendshipTier0[] = _("Parece não gostar de você.");
 #else
 const u8 sText_None[] = _("NENHUM");
 const u8 sText_Cancel[] = _("CANCELAR");
@@ -1076,6 +1091,17 @@ const u8 sText_Cute[] = _("FOFURA");
 const u8 sText_Smart[] = _("ESPERTEZA");
 const u8 sText_Tough[] = _("DUREZA");
 const u8 sText_HeldItem[] = _("ITEM");
+const u8 sText_FriendshipLevel[] = _("AMIZADE:");
+const u8 sText_FriendshipStatus[] = _("ESTADO:");
+const u8 sText_FriendshipReadyEvo[] = _("EVOLUÇÃO: PRONTA!");
+const u8 sText_FriendshipNeedMore[] = _("EVOLUÇÃO: FALTA AMIZADE");
+const u8 sText_FriendshipTier6[] = _("NÃO PODERIA TE AMAR MAIS!");
+const u8 sText_FriendshipTier5[] = _("PARECE MUITO FELIZ!");
+const u8 sText_FriendshipTier4[] = _("BASTANTE APEGADO A VOCÊ.");
+const u8 sText_FriendshipTier3[] = _("COMEÇANDO A GOSTAR DE VOCÊ.");
+const u8 sText_FriendshipTier2[] = _("AINDA NÃO SE ACOSTUMOU.");
+const u8 sText_FriendshipTier1[] = _("OLHA DESCONFIADO PRA VOCÊ.");
+const u8 sText_FriendshipTier0[] = _("PARECE NÃO GOSTAR DE VOCÊ.");
 #endif
 
 #if CONFIG_PHYSICAL_SPECIAL_SPLIT || CONFIG_SHOW_ICONS_FOR_OLD_SPLIT
@@ -1689,7 +1715,7 @@ static void ChangeStatTask(u8 taskId)
     switch (data[0])
     {
         case 0:
-            sMonSummaryScreen->currStatIndex = (sMonSummaryScreen->currStatIndex + 1) % 3;
+            sMonSummaryScreen->currStatIndex = (sMonSummaryScreen->currStatIndex + 1) % 4;
             ClearWindowTilemap(PSS_LABEL_PANE_RIGHT);
             ScheduleBgCopyTilemapToVram(0);
             data[0]++;
@@ -3241,6 +3267,63 @@ static void PrintSkillsPage(void)
 
     FillWindowPixelBuffer(PSS_LABEL_PANE_RIGHT, PIXEL_FILL(0));
 
+    if (sMonSummaryScreen->currStatIndex == 3)
+    {
+        const u8 *statusText;
+
+        for (i = 0; i < HP_BAR_SPRITES_COUNT; i++)
+            sHealthBar->sprites[i]->invisible = TRUE;
+
+        // Amizade numérica: "XXX / 255"
+        PrintTextOnWindow(PSS_LABEL_PANE_RIGHT, sText_FriendshipLevel, 12, 12, 0, PSS_COLOR_WHITE_BLACK_SHADOW);
+        ConvertIntToDecimalStringN(gStringVar1, summary->friendship, STR_CONV_MODE_LEFT_ALIGN, 3);
+        StringAppend(gStringVar1, gText_Slash);
+        ConvertIntToDecimalStringN(gStringVar2, 255, STR_CONV_MODE_LEFT_ALIGN, 3);
+        StringAppend(gStringVar1, gStringVar2);
+        x = GetStringCenterAlignXOffset(1, gStringVar1, 60) + 76;
+        PrintTextOnWindow(PSS_LABEL_PANE_RIGHT, gStringVar1, x, 12, 0, PSS_COLOR_BLACK_GRAY_SHADOW);
+
+        // Indicador de evolução por amizade
+        if (summary->friendship >= 220)
+            PrintTextOnWindow(PSS_LABEL_PANE_RIGHT, sText_FriendshipReadyEvo, 12, 38, 0, PSS_COLOR_WHITE_BLACK_SHADOW);
+        else
+            PrintTextOnWindow(PSS_LABEL_PANE_RIGHT, sText_FriendshipNeedMore, 12, 38, 0, PSS_COLOR_WHITE_BLACK_SHADOW);
+
+        // Estado/Sentimento
+        PrintTextOnWindow(PSS_LABEL_PANE_RIGHT, sText_FriendshipStatus, 12, 64, 0, PSS_COLOR_WHITE_BLACK_SHADOW);
+
+        if (summary->friendship == 255)
+            statusText = sText_FriendshipTier6;
+        else if (summary->friendship >= 200)
+            statusText = sText_FriendshipTier5;
+        else if (summary->friendship >= 150)
+            statusText = sText_FriendshipTier4;
+        else if (summary->friendship >= 100)
+            statusText = sText_FriendshipTier3;
+        else if (summary->friendship >= 50)
+            statusText = sText_FriendshipTier2;
+        else if (summary->friendship >= 1)
+            statusText = sText_FriendshipTier1;
+        else
+            statusText = sText_FriendshipTier0;
+
+        PrintTextOnWindow(PSS_LABEL_PANE_RIGHT, statusText, 12, 80, 0, PSS_COLOR_BLACK_GRAY_SHADOW);
+
+        PrintTextOnWindow(PSS_LABEL_PANE_RIGHT, sText_Ability, 8, 112, 0, PSS_COLOR_WHITE_BLACK_SHADOW);
+        StringCopy(gStringVar1, gAbilityNames[GetAbilityBySpecies(sMonSummaryScreen->summary.species, summary->abilityNum)]);
+        x = GetStringCenterAlignXOffset(1, gStringVar1, 88) + 58;
+        PrintTextOnWindow(PSS_LABEL_PANE_RIGHT, gStringVar1, x, 112, 0, PSS_COLOR_BLACK_GRAY_SHADOW);
+        StringCopy(gStringVar1, gAbilityDescriptionPointers[GetAbilityBySpecies(sMonSummaryScreen->summary.species, summary->abilityNum)]);
+        PrintTextOnWindow(PSS_LABEL_PANE_RIGHT, gStringVar1, 8, 128, 0, PSS_COLOR_BLACK_GRAY_SHADOW);
+
+        ScheduleBgCopyTilemapToVram(0);
+        PutWindowTilemap(PSS_LABEL_PANE_RIGHT);
+        return;
+    }
+
+    for (i = 0; i < HP_BAR_SPRITES_COUNT; i++)
+        sHealthBar->sprites[i]->invisible = FALSE;
+
     PrintTextOnWindow(PSS_LABEL_PANE_RIGHT, gText_HP3, 12, 1, 0, PSS_COLOR_WHITE_BLACK_SHADOW);
     if (sMonSummaryScreen->currStatIndex == 0)
     {
@@ -4303,7 +4386,7 @@ static void DestroyHealthBarSprites(void)
 static void SetHealthBarSprites(void)
 {
     u8 i;
-    if (sMonSummaryScreen->currPageIndex == PSS_PAGE_SKILLS)
+    if (sMonSummaryScreen->currPageIndex == PSS_PAGE_SKILLS && sMonSummaryScreen->currStatIndex != 3)
     {
         for (i = 0; i < HP_BAR_SPRITES_COUNT; i++)
             sHealthBar->sprites[i]->invisible = FALSE;
@@ -4479,9 +4562,14 @@ static void PrintInfoBar(u8 pageIndex, bool8 detailsShown)
                 StringCopy(gStringVar1, sText_TitleIVs);
                 StringCopy(gStringVar2, sText_TitlePageEVs);
             }
-            else
+            else if (sMonSummaryScreen->currStatIndex == 2)
             {
                 StringCopy(gStringVar1, sText_TitleEVs);
+                StringCopy(gStringVar2, sText_TitlePageFriendship);
+            }
+            else
+            {
+                StringCopy(gStringVar1, sText_TitleFriendship);
                 StringCopy(gStringVar2, sText_TitlePageStats);
             }
             break;
