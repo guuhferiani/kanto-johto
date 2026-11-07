@@ -1,20 +1,80 @@
 .set LOCALID_CELEBI, 1
 
 IlexForest_MapScripts::
+	map_script MAP_SCRIPT_ON_RESUME, IlexForest_OnResume
+	map_script MAP_SCRIPT_ON_TRANSITION, IlexForest_OnTransition
 	.byte 0
+
+IlexForest_OnResume::
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, IlexForest_EventScript_TryRemoveCelebi
+	end
+
+IlexForest_EventScript_TryRemoveCelebi::
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_Return
+	removeobject LOCALID_CELEBI
+	return
+
+IlexForest_OnTransition::
+	call_if_unset FLAG_CAUGHT_ILEX_CELEBI, IlexForest_EventScript_TryShowCelebi
+	end
+
+IlexForest_EventScript_TryShowCelebi::
+	clearflag FLAG_DAILY_CELEBI
+	return
 
 IlexForest_EventScript_CelebiShrine::
 	lock
 	faceplayer
 	goto_if_unset FLAG_DEFEATED_LEADER_BUGSY, IlexForest_EventScript_ShrineQuiet
+	goto_if_set FLAG_CAUGHT_ILEX_CELEBI, IlexForest_EventScript_CelebiDaily
 	playmoncry SPECIES_CELEBI, CRY_MODE_ENCOUNTER
 	msgbox IlexForest_Text_CelebiAppeared, MSGBOX_DEFAULT
 	waitmoncry
 	setwildbattle SPECIES_CELEBI, 50, ITEM_MIRACLE_SEED
-	dowildbattle
-	removeobject LOCALID_CELEBI
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, IlexForest_EventScript_DefeatedCelebi
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, IlexForest_EventScript_RanFromCelebi
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, IlexForest_EventScript_RanFromCelebi
 	setflag FLAG_CAUGHT_ILEX_CELEBI
+	setflag FLAG_DAILY_CELEBI
 	release
+	end
+
+IlexForest_EventScript_CelebiDaily::
+	goto_if_set FLAG_DAILY_CELEBI, IlexForest_EventScript_CelebiRestedDaily
+	playmoncry SPECIES_CELEBI, CRY_MODE_ENCOUNTER
+	waitmoncry
+	setwildbattle SPECIES_CELEBI, 50, ITEM_MIRACLE_SEED
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	setflag FLAG_DAILY_CELEBI
+	release
+	end
+
+IlexForest_EventScript_CelebiRestedDaily::
+	msgbox IlexForest_Text_CelebiRested, MSGBOX_DEFAULT
+	release
+	end
+
+IlexForest_Text_CelebiRested::
+	.string "O Santuário está silencioso.\n"
+	.string "Celebi está viajando pelas eras do tempo!$"
+
+IlexForest_EventScript_DefeatedCelebi::
+	setvar VAR_0x8004, SPECIES_CELEBI
+	goto Common_EventScript_LegendaryFlewAway
+	end
+
+IlexForest_EventScript_RanFromCelebi::
+	setvar VAR_0x8004, SPECIES_CELEBI
+	goto Common_EventScript_LegendaryFlewAway
 	end
 
 IlexForest_EventScript_ShrineQuiet::

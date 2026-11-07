@@ -261,11 +261,11 @@
 #define FLAG_ITEM_ICE_PATH_NEVER_MELT_ICE   0xF2
 #define FLAG_ITEM_BLACKTHORN_DRAGON_SCALE   0xF3
 #define FLAG_ITEM_ROUTE42_MAX_REVIVE        0xF4
-#define FLAG_UNUSED_0x0F5           		0xF5
-#define FLAG_UNUSED_0x0F6 					0xF6
-#define FLAG_UNUSED_0x0F7      				0xF7
-#define FLAG_UNUSED_0x0F8           		0xF8
-#define FLAG_UNUSED_0x0F9          			0xF9
+#define FLAG_CAUGHT_SUICUNE                 0xF5
+#define FLAG_CAUGHT_RAIKOU                  0xF6
+#define FLAG_CAUGHT_ENTEI                   0xF7
+#define FLAG_CAUGHT_ROUTE12_SNORLAX         0xF8
+#define FLAG_CAUGHT_ROUTE16_SNORLAX         0xF9
 #define FLAG_UNUSED_0x0FA          			0xFA
 #define FLAG_UNUSED_0x0FB            		0xFB
 #define FLAG_UNUSED_0x0FC            		0xFC
@@ -1614,15 +1614,15 @@
 #define FLAG_DAILY_MOLTRES                          (DAILY_FLAGS_START + 0x1F) // Legendary daily encounter, higher shiny odds. Moltres
 #define FLAG_DAILY_ZAPDOS                           (DAILY_FLAGS_START + 0x20) // Legendary daily encounter, higher shiny odds. Zapdos
 #define FLAG_DAILY_ARTICUNO                         (DAILY_FLAGS_START + 0x21) // Legendary daily encounter, higher shiny odds. Articuno
-#define FLAG_UNUSED_0x942                           (DAILY_FLAGS_START + 0x22) // Unused Flag
-#define FLAG_UNUSED_0x943                           (DAILY_FLAGS_START + 0x23) // Unused Flag
-#define FLAG_UNUSED_0x944                           (DAILY_FLAGS_START + 0x24) // Unused Flag
-#define FLAG_UNUSED_0x945                           (DAILY_FLAGS_START + 0x25) // Unused Flag
-#define FLAG_UNUSED_0x946                           (DAILY_FLAGS_START + 0x26) // Unused Flag
-#define FLAG_UNUSED_0x947                           (DAILY_FLAGS_START + 0x27) // Unused Flag
-#define FLAG_UNUSED_0x948                           (DAILY_FLAGS_START + 0x28) // Unused Flag
-#define FLAG_UNUSED_0x949                           (DAILY_FLAGS_START + 0x29) // Unused Flag
-#define FLAG_UNUSED_0x94A                           (DAILY_FLAGS_START + 0x2A) // Unused Flag
+#define FLAG_DAILY_LUGIA                            (DAILY_FLAGS_START + 0x22)
+#define FLAG_DAILY_HO_OH                            (DAILY_FLAGS_START + 0x23)
+#define FLAG_DAILY_CELEBI                           (DAILY_FLAGS_START + 0x24)
+#define FLAG_DAILY_SUICUNE                          (DAILY_FLAGS_START + 0x25)
+#define FLAG_DAILY_RAIKOU                           (DAILY_FLAGS_START + 0x26)
+#define FLAG_DAILY_ENTEI                            (DAILY_FLAGS_START + 0x27)
+#define FLAG_DAILY_SUDOWOODO                        (DAILY_FLAGS_START + 0x28)
+#define FLAG_DAILY_ROUTE12_SNORLAX                  (DAILY_FLAGS_START + 0x29)
+#define FLAG_DAILY_ROUTE16_SNORLAX                  (DAILY_FLAGS_START + 0x2A)
 #define FLAG_UNUSED_0x94B                           (DAILY_FLAGS_START + 0x2B) // Unused Flag
 #define FLAG_UNUSED_0x94C                           (DAILY_FLAGS_START + 0x2C) // Unused Flag
 #define FLAG_UNUSED_0x94D                           (DAILY_FLAGS_START + 0x2D) // Unused Flag

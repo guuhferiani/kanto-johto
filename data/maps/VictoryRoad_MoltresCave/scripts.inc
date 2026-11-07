@@ -2,6 +2,7 @@
 
 VictoryRoad_MoltresCave_MapScripts::
 	map_script MAP_SCRIPT_ON_RESUME, VictoryRoad_MoltresCave_OnResume
+	map_script MAP_SCRIPT_ON_TRANSITION, VictoryRoad_MoltresCave_OnTransition
 	.byte 0
 
 VictoryRoad_MoltresCave_HeatRock::
