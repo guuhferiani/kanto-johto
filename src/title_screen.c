@@ -414,15 +414,7 @@ static void CreatePressStartBanner(s16 x, s16 y)
 
 static void CreateCopyrightBanner(s16 x, s16 y)
 {
-    u8 i;
-    u8 spriteId;
-
-    x -= 64;
-    for (i = 0; i < 5; i++, x += 32)
-    {
-        spriteId = CreateSprite(&sStartCopyrightBannerSpriteTemplate, x, y, 0);
-        StartSpriteAnim(&gSprites[spriteId], i + 5);
-    }
+    // Removido banner de versao 0.15.1
 }
 
 static void SpriteCB_PokemonLogoShine(struct Sprite *sprite)
