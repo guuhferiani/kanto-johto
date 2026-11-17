@@ -13121,7 +13121,7 @@
               {
                 "min_level": 42,
                 "max_level": 46,
-                "species": "SPECIES_RATICATE"
+                "species": "SPECIES_SHUCKLE"
               },
               {
                 "min_level": 43,
@@ -13573,9 +13573,9 @@
                 "species": "SPECIES_NINETALES"
               },
               {
-                "min_level": 56,
-                "max_level": 60,
-                "species": "SPECIES_STANTLER"
+                "min_level": 55,
+                "max_level": 58,
+                "species": "SPECIES_UNOWN"
               },
               {
                 "min_level": 56,
@@ -13696,9 +13696,9 @@
                 "species": "SPECIES_CORSOLA"
               },
               {
-                "min_level": 56,
-                "max_level": 62,
-                "species": "SPECIES_OCTILLERY"
+                "min_level": 55,
+                "max_level": 60,
+                "species": "SPECIES_QWILFISH"
               },
               {
                 "min_level": 58,
