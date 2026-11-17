@@ -266,7 +266,7 @@
 #define FLAG_CAUGHT_ENTEI                   0xF7
 #define FLAG_CAUGHT_ROUTE12_SNORLAX         0xF8
 #define FLAG_CAUGHT_ROUTE16_SNORLAX         0xF9
-#define FLAG_UNUSED_0x0FA          			0xFA
+#define FLAG_RECEIVED_TOGEPI_EGG            0xFA
 #define FLAG_UNUSED_0x0FB            		0xFB
 #define FLAG_UNUSED_0x0FC            		0xFC
 #define FLAG_UNUSED_0x0FD         		    0xFD
