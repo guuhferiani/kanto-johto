@@ -320,23 +320,19 @@ static void BuildNormalStartMenu(void)
         AddStartMenuAction(MENU_ACTION_POKEDEX);
     
     if (FlagGet(FLAG_SYS_POKEMON_GET) == TRUE)
-    {
         AddStartMenuAction(MENU_ACTION_POKEMON);
-        AddStartMenuAction(MENU_ACTION_PC);
-    }
 
     AddStartMenuAction(MENU_ACTION_BAG);
+
+    if (FlagGet(FLAG_SYS_POKEMON_GET) == TRUE)
+        AddStartMenuAction(MENU_ACTION_PC);
 
     if (FlagGet(FLAG_SYS_POKENAV_GET) == TRUE)
         AddStartMenuAction(MENU_ACTION_POKENAV);
 
-    if (FlagGet(FLAG_SYS_DEXNAV_GET) == TRUE)
-        AddStartMenuAction(MENU_ACTION_DEXNAV);
-
     AddStartMenuAction(MENU_ACTION_PLAYER);
     AddStartMenuAction(MENU_ACTION_SAVE);
     AddStartMenuAction(MENU_ACTION_OPTION);
-    AddStartMenuAction(MENU_ACTION_EXIT);
 }
 
 static void BuildDebugStartMenu(void)
@@ -463,7 +459,7 @@ static void ShowPyramidFloorWindow(void)
     CopyWindowToVram(sBattlePyramidFloorWindowId, COPYWIN_GFX);
 }
 
-#define MAX_START_MENU_ACTIONS_SHOWN 7
+#define MAX_START_MENU_ACTIONS_SHOWN 8
 #define TAG_START_MENU_SCROLL_ARROW  0x13F0
 
 static void RemoveStartMenuScrollArrows(void)
@@ -858,7 +854,8 @@ static bool8 StartMenuPCCallback(void)
         PlayRainStoppingSoundEffect();
         RemoveExtraStartMenuWindows();
         CleanupOverworldWindowsAndTilemaps();
-        CreateTask(Task_WaitFadeAccessPC, 0);
+        ScriptContext2_Enable();
+        ScriptContext1_SetupScript(EventScript_PortablePC);
         return TRUE;
     }
 

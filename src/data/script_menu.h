@@ -897,6 +897,17 @@ static const struct MenuAction MultichoiceList_SSAquaJohto[] =
     {gText_Cancel2},
 };
 
+static const u8 sText_PortablePC_Boxes[] = _("Boxes do Bill");
+static const u8 sText_PortablePC_Relearn[] = _("Lembrar Golpe");
+static const u8 sText_PortablePC_Delete[] = _("Apagar Golpe");
+static const struct MenuAction MultichoiceList_PortablePC[] =
+{
+    {sText_PortablePC_Boxes},
+    {sText_PortablePC_Relearn},
+    {sText_PortablePC_Delete},
+    {gText_Cancel2},
+};
+
 struct MultichoiceListStruct
 {
     const struct MenuAction *list;
@@ -1025,6 +1036,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_BATTLE_MODE_2]              = MULTICHOICE(MultichoiceList_BattleMode2),
     [MULTI_SS_AQUA_VERMILION]          = MULTICHOICE(MultichoiceList_SSAquaVermilion),
     [MULTI_SS_AQUA_JOHTO]              = MULTICHOICE(MultichoiceList_SSAquaJohto),
+    [MULTI_PORTABLE_PC]                = MULTICHOICE(MultichoiceList_PortablePC),
 };
 
 const u8 *const gStdStrings[] =

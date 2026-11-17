@@ -57,6 +57,40 @@ EventScript_TurnOffPC::
 	releaseall
 	end
 
+EventScript_PortablePC::
+	lockall
+	playse SE_PC_LOGIN
+	message gText_WhichPCShouldBeAccessed
+	waitmessage
+	multichoice 0, 0, MULTI_PORTABLE_PC, FALSE
+	switch VAR_RESULT
+	case 0, EventScript_PortablePC_Boxes
+	case 1, EventScript_PortablePC_Relearn
+	case 2, EventScript_PortablePC_Delete
+	case 3, EventScript_PortablePC_Close
+	case MULTI_B_PRESSED, EventScript_PortablePC_Close
+	end
+
+EventScript_PortablePC_Boxes::
+	setflag FLAG_SYS_PC_FROM_DEBUG_MENU
+	special ShowPokemonStorageSystemPC
+	waitstate
+	releaseall
+	end
+
+EventScript_PortablePC_Relearn::
+	goto PkmnLeague_Services_EventScript_ChooseMon
+	end
+
+EventScript_PortablePC_Delete::
+	goto PkmnLeague_Services_ChooseMonAndMoveToForget
+	end
+
+EventScript_PortablePC_Close::
+	playse SE_PC_OFF
+	releaseall
+	end
+
 EventScript_AccessHallOfFame::
 	goto_if_unset FLAG_SYS_GAME_CLEAR, EventScript_TurnOffPC
 	playse SE_PC_LOGIN
