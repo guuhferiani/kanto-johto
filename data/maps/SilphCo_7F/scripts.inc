@@ -89,7 +89,7 @@ SilphCo_7F_EventScript_NoRoomForLapras::
 
 SilphCo_7F_Text_NoRoomForMorePokemon::
 	.string "Oh! Você não tem espaço para mais\n"
-	.string "nenhum Pokémon!"
+	.string "nenhum Pokémon!$"
 
 SilphCo_7F_EventScript_RivalTriggerTop::
 	lockall

@@ -799,8 +799,8 @@
                 "species": "SPECIES_RATTATA"
               },
               {
-                "min_level": 9,
-                "max_level": 5,
+                "min_level": 8,
+                "max_level": 10,
                 "species": "SPECIES_MANKEY"
               },
               {

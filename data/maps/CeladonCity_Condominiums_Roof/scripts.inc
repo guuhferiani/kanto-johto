@@ -161,7 +161,7 @@ Movement_BlockPlayerEscape:
 	.string "de entrega secreto? Era segredo!\p"
 	.string "Jessie: Alguem na base deve ter\n"
 	.string "aberto o bico!\p"
-	.string ""
+	.string "$"
 
 CeladonCity_Condominiums_Roof_Text_RocketDuoIntro::
 	.string "Jessie: Como você descobriu nosso\n"
